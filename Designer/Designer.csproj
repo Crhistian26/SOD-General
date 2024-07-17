@@ -41,8 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="botonTexto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="botonTexto.Designer.cs">
+      <DependentUpon>botonTexto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="FR_CombBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="botonTexto.resx">
+      <DependentUpon>botonTexto.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
