@@ -16,5 +16,10 @@ namespace SOD_General
         {
             InitializeComponent();
         }
+
+        private void AppVistaGeneral_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
