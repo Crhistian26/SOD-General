@@ -100,5 +100,19 @@
   <ItemGroup>
     <Folder Include="Apartado de taller\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controladores\Controladores.csproj">
+      <Project>{e0979393-66b0-4d9b-885f-e7387b7196e4}</Project>
+      <Name>Controladores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Disenos\Disenos.csproj">
+      <Project>{058c2ea7-c633-452e-a092-02865e4b8618}</Project>
+      <Name>Disenos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{4b11446b-6628-48d7-b409-3529bf36aaa0}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
