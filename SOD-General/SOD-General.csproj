@@ -66,6 +66,12 @@
     <Compile Include="VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas Taller\Vista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Taller\Vista.Designer.cs">
+      <DependentUpon>Vista.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AppVistaGeneral.resx">
       <DependentUpon>AppVistaGeneral.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,8 +103,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Apartado de taller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
