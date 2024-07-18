@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-
+            this.fR_CombBox1 = new Designer.FR_CombBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-     
+            this.panel1.Controls.Add(this.fR_CombBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -49,9 +49,15 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // texc1
+            // fR_CombBox1
             // 
- 
+            this.fR_CombBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_CombBox1.Location = new System.Drawing.Point(158, 83);
+            this.fR_CombBox1.MaximumSize = new System.Drawing.Size(245, 32);
+            this.fR_CombBox1.Name = "fR_CombBox1";
+            this.fR_CombBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.fR_CombBox1.Size = new System.Drawing.Size(245, 32);
+            this.fR_CombBox1.TabIndex = 0;
             // 
             // VistaPrincipal
             // 
@@ -72,6 +78,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
-     
+        private Designer.FR_CombBox fR_CombBox1;
     }
 }

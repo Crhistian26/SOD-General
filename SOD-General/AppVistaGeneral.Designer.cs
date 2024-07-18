@@ -143,10 +143,10 @@
             // fR_CombBox1
             // 
             this.fR_CombBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_CombBox1.Location = new System.Drawing.Point(12, 140);
+            this.fR_CombBox1.Location = new System.Drawing.Point(68, 163);
             this.fR_CombBox1.Name = "fR_CombBox1";
             this.fR_CombBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.fR_CombBox1.Size = new System.Drawing.Size(394, 57);
+            this.fR_CombBox1.Size = new System.Drawing.Size(348, 34);
             this.fR_CombBox1.TabIndex = 5;
             // 
             // AppVistaGeneral
