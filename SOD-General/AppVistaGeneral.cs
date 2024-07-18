@@ -39,6 +39,8 @@ namespace SOD_General
         public void AbrirFormulario(Form formulario)
         {
             MessageBox.Show("hola");
+            MessageBox.Show("mi prota");
+
             if (this.panel1.Controls.Count > 0)
             {
                 panel1.Controls.Clear();
