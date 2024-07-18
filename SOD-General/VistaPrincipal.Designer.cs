@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.SuspendLayout();
             // 
             // panel1
@@ -38,6 +39,12 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // VistaPrincipal
             // 
@@ -56,5 +63,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
     }
 }
