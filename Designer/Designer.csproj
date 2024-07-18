@@ -47,6 +47,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="FR_ComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="FR_TextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
