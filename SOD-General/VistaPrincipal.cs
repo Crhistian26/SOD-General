@@ -17,20 +17,37 @@ namespace SOD_General
             InitializeComponent();
         }
         
+
+        public void AbrirFormulario(Form formulario)
+        {
+            if (this.panel1.Controls.Count > 0)
+            {
+                panel1.Controls.Clear();
+                panel1.Tag = null;
+            }
+
+            Form formula = formulario;
+            formula.TopLevel = false;
+            formula.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(formula);
+            this.panel1.Tag = formula;
+            formula.Show();
+
+        }
+
+        public void AbrirVistaGeneral(AppVistaGeneral formulario)
+        {
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.WindowState = FormWindowState.Maximized;
+            AbrirFormulario(formulario);
+        }
+
         private void VistaPrincipal_Load(object sender, EventArgs e)
         {
-            var Item = new ToolStripMenuItem("Saludos");
-            var item2 = new ToolStripMenuItem("Hola");
-            item2.Click += new EventHandler(hola);
-            var item3 = new ToolStripMenuItem("Hola2");
-            item3.Click += new EventHandler(hola);
-            Item.DropDownItems.Add(item2);
-            Item.DropDownItems.Add(item3);
-            menuStrip1.Items.Add(Item);
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            AbrirFormulario(new Login(this));
+            this.Size = new Size(463, 284);
         }
-        private void hola(object sender, EventArgs e)
-        {
-            MessageBox.Show("funicon");
-        }
+        
     }
 }
