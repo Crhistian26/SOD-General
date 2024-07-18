@@ -56,7 +56,7 @@
     <Compile Include="Taller\Petition.cs" />
     <Compile Include="Taller\Quotation.cs" />
     <Compile Include="Taller\QuotationDetails.cs" />
-    <Compile Include="Usuarios_Empleados\Control de usuario\Authorization.cs" />
+    <Compile Include="Usuarios_Empleados\Control de usuario\MAuthorization.cs" />
     <Compile Include="Usuarios_Empleados\Control de usuario\DepartAuthorization.cs" />
     <Compile Include="Usuarios_Empleados\Control de usuario\User.cs" />
     <Compile Include="Usuarios_Empleados\Control de usuario\UserAuthorization.cs" />

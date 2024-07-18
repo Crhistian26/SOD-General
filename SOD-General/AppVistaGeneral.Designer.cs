@@ -34,6 +34,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fR_ComboBox1 = new Designer.FR_ComboBox();
+            this.fR_TextBox1 = new Designer.FR_TextBox();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,6 +69,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.botones_Nuevos1);
+            this.panel1.Controls.Add(this.fR_TextBox1);
             this.panel1.Controls.Add(this.fR_ComboBox1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -85,13 +89,54 @@
             // 
             // fR_ComboBox1
             // 
-            this.fR_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_ComboBox1.Location = new System.Drawing.Point(64, 73);
+            this.fR_ComboBox1.BackColor = System.Drawing.Color.White;
+            this.fR_ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_ComboBox1.BorderSize = 2;
+            this.fR_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.fR_ComboBox1.IconColor = System.Drawing.Color.White;
+            this.fR_ComboBox1.ListBackColor = System.Drawing.Color.Blue;
+            this.fR_ComboBox1.ListTextColor = System.Drawing.Color.Black;
+            this.fR_ComboBox1.Location = new System.Drawing.Point(125, 91);
             this.fR_ComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
             this.fR_ComboBox1.Name = "fR_ComboBox1";
             this.fR_ComboBox1.Padding = new System.Windows.Forms.Padding(2);
             this.fR_ComboBox1.Size = new System.Drawing.Size(200, 30);
             this.fR_ComboBox1.TabIndex = 1;
+            this.fR_ComboBox1.Texto = "";
+            // 
+            // fR_TextBox1
+            // 
+            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox1.BorderColor = System.Drawing.Color.Teal;
+            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
+            this.fR_TextBox1.BorderSize = 2;
+            this.fR_TextBox1.Location = new System.Drawing.Point(81, 132);
+            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox1.Multiline = true;
+            this.fR_TextBox1.Name = "fR_TextBox1";
+            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox1.PasswordChar = false;
+            this.fR_TextBox1.Size = new System.Drawing.Size(270, 30);
+            this.fR_TextBox1.TabIndex = 2;
+            this.fR_TextBox1.texts = "";
+            this.fR_TextBox1.UnderlinedStyle = false;
+            // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(125, 173);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.TabIndex = 3;
+            this.botones_Nuevos1.Text = "botones_Nuevos1";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
             // AppVistaGeneral
             // 
@@ -121,6 +166,8 @@
         private System.Windows.Forms.ToolStripMenuItem verPeticionesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
+        private Designer.FR_TextBox fR_TextBox1;
         private Designer.FR_ComboBox fR_ComboBox1;
     }
 }

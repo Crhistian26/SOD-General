@@ -111,6 +111,7 @@ namespace Designer
             {
                 borderSize = value;
                 this.Padding = new Padding(borderSize);
+                AdjustComboBoxDimensions();
             }
         }
 
