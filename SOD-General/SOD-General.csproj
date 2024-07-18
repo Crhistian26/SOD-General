@@ -72,11 +72,11 @@
     <Compile Include="VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas Taller\Vista.cs">
+    <Compile Include="Vistas Taller\Taller Recepcion\VisualizarPeticiones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas Taller\Vista.Designer.cs">
-      <DependentUpon>Vista.cs</DependentUpon>
+    <Compile Include="Vistas Taller\Taller Recepcion\VisualizarPeticiones.Designer.cs">
+      <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AppVistaGeneral.resx">
       <DependentUpon>AppVistaGeneral.cs</DependentUpon>
@@ -99,8 +99,8 @@
     <EmbeddedResource Include="VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas Taller\Vista.resx">
-      <DependentUpon>Vista.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas Taller\Taller Recepcion\VisualizarPeticiones.resx">
+      <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
