@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace SOD_General
         public VistaPrincipal()
         {
             InitializeComponent();
+            
         }
         
 
@@ -45,11 +47,11 @@ namespace SOD_General
 
         private void VistaPrincipal_Load(object sender, EventArgs e)
         {
+
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             AbrirFormulario(new Login(this));
             this.Size = new Size(463, 284);
-            
-            
+
         }
         
     }
