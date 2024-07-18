@@ -12,6 +12,7 @@ namespace SOD_General
 {
     public partial class AppVistaGeneral : Form
     {
+        
         public AppVistaGeneral()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace SOD_General
             var Item = new ToolStripMenuItem("Saludos");
             var item2 = new ToolStripMenuItem("Hola");
             item2.Click += new EventHandler(hola);
+            //WQRQWR
             var item3 = new ToolStripMenuItem("Hola2");
             item3.Click += new EventHandler(hola);
             Item.DropDownItems.Add(item2);
