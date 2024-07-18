@@ -47,11 +47,20 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="FR_TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FR_TextBox.Designer.cs">
+      <DependentUpon>FR_TextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Botones_Nuevos.resx">
       <DependentUpon>Botones_Nuevos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FR_TextBox.resx">
+      <DependentUpon>FR_TextBox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
