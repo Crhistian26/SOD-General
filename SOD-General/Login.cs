@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace SOD_General
     public partial class Login : Form
     {
         VistaPrincipal principal { get; set; }
-        List<Permisos> Permisos = new List<Permisos>();
+        LoginController control = new LoginController();
 
         public Login(VistaPrincipal principal)
         {
@@ -24,12 +25,13 @@ namespace SOD_General
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            principal.AbrirVistaGeneral(new AppVistaGeneral());
+            principal.AbrirVistaGeneral(new AppVistaGeneral(control.Ingresar(textBox1.Text, textBox2.Text)));
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+           
         }
     }
-    public class Permisos
-    {
-        public string Authorization { get; set; }
-        public string AuthorizationType { get; set; }
-    }
+
 }

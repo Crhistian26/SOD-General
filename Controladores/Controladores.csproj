@@ -47,5 +47,15 @@
     <Compile Include="LoginController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Designer\Designer.csproj">
+      <Project>{cd3416cc-d457-4ce1-9657-f129ab229a86}</Project>
+      <Name>Designer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{4b11446b-6628-48d7-b409-3529bf36aaa0}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

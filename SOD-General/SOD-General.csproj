@@ -73,10 +73,10 @@
     <Compile Include="VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas Taller\Taller Recepcion\VisualizarPeticiones.cs">
+    <Compile Include="Vistas Taller\Registro peticiones\VisualizarPeticiones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas Taller\Taller Recepcion\VisualizarPeticiones.Designer.cs">
+    <Compile Include="Vistas Taller\Registro peticiones\VisualizarPeticiones.Designer.cs">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AppVistaGeneral.resx">
@@ -100,7 +100,7 @@
     <EmbeddedResource Include="VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas Taller\Taller Recepcion\VisualizarPeticiones.resx">
+    <EmbeddedResource Include="Vistas Taller\Registro peticiones\VisualizarPeticiones.resx">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -124,6 +124,10 @@
     <ProjectReference Include="..\Designer\Designer.csproj">
       <Project>{cd3416cc-d457-4ce1-9657-f129ab229a86}</Project>
       <Name>Designer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{4b11446b-6628-48d7-b409-3529bf36aaa0}</Project>
+      <Name>Modelos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
