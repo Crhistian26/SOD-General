@@ -1,5 +1,4 @@
-﻿using Controladores;
-using Modelos.Usuarios_Empleados;
+﻿using Modelos.Usuarios_Empleados;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
@@ -16,21 +15,30 @@ namespace SOD_General
     public partial class AppVistaGeneral : Form
     {
         List<MAuthorization> authorizations = new List<MAuthorization>();
-        VistaGeneralController control = new VistaGeneralController();
         public AppVistaGeneral( List<MAuthorization> authorizations)
         {
             InitializeComponent();
             this.authorizations = authorizations;
+            
         }
 
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
+            //this.WindowState = FormWindowState.Maximized;
+            //var Item = new ToolStripMenuItem("Saludos");
+            //var item2 = new ToolStripMenuItem("Hola");
+            //item2.Click += new EventHandler(hola);
+            //var item3 = new ToolStripMenuItem("Hola2");
+            //item3.Click += new EventHandler(hola);
+            //Item.DropDownItems.Add(item2);
+            //Item.DropDownItems.Add(item3);
+            //menuStrip1.Items.Add(Item);
+
             
             foreach (MAuthorization auth in authorizations)
             {
                 MessageBox.Show(auth._Authorization);
             }
-            control.Permisos(authorizations, this.menuStrip1);
         }
 
         private void hola(object sender, EventArgs e)
@@ -64,6 +72,21 @@ namespace SOD_General
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void fR_ComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fR_ComboBox1_Load(object sender, EventArgs e)
         {
 
         }

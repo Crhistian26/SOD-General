@@ -2,17 +2,18 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using System.Windows.Forms;
 
 namespace Designer
-{
-    [DefaultEvent("OnSelectedIndexChanged")]
+{ 
     public class FR_ComboBox : UserControl
     {
         //campos
         private Color backColor = Color.White;
         private Color iconColor = Color.White;
-        private Color listBackColor = Color.Blue;
+        private Color listBackColor = Color.LightBlue;
         private Color listTextColor = Color.Black;
         private Color borderColor = Color.FromArgb(39, 123, 134);
         private int borderSize = 2;
@@ -22,89 +23,103 @@ namespace Designer
         private Label lblText;
         private Button btnIcon;
 
+        //datos
+        //public ComboBox.ObjectCollection Items
+        //{
+        //    get
+        //    {
+        //        return combList.Items;
+        //    }
+        //}
+
+        //[AttributeProvider(typeof(IListSource))]
+
+
+
+
         public new Color BackColor
-        { 
+        {
             get
             {
                 return backColor;
-            }       
-            
+            }
+
             set
             {
                 backColor = value;
                 lblText.BackColor = backColor;
-                btnIcon.BackColor = backColor;
+               // btnIcon.BackColor = backColor;
             }
-                
+
         }
 
-        public Color IconColor 
+        public Color IconColor
         {
             get
             {
                 return iconColor;
-            } 
-            
+            }
+
             set
             {
                 iconColor = value;
-                this.Invalidate();
+                btnIcon.Invalidate();
             }
-                
+
         }
 
-        public Color ListBackColor 
-        { 
+        public Color ListBackColor
+        {
             get
             {
                 return listBackColor;
             }
-                 
+
             set
             {
                 listBackColor = value;
                 combList.BackColor = listBackColor;
-            } 
-                 
+            }
+
         }
 
-        public Color ListTextColor 
+        public Color ListTextColor
         {
             get
             {
                 return listTextColor;
-            } 
-                 
+            }
+
 
             set
             {
                 listTextColor = value;
                 combList.ForeColor = listTextColor;
-            } 
-                 
-            
+            }
+
+
         }
 
-        public Color BorderColor 
+        public Color BorderColor
         {
             get
             {
                 return borderColor;
-            } 
-                
+            }
+
             set
             {
                 borderColor = value;
                 base.BackColor = borderColor;
             }
-                 
+
         }
 
-        public int BorderSize 
-        { 
+        public int BorderSize
+        {
             get
             {
-               return borderSize;
+                return borderSize;
             }
 
             set
@@ -115,18 +130,18 @@ namespace Designer
             }
         }
 
-        public override Color ForeColor 
-        { 
+        public override Color ForeColor
+        {
             get
             {
-              return base.ForeColor;
-            } 
-            
+                return base.ForeColor;
+            }
+
             set
             {
                 base.ForeColor = value;
                 lblText.ForeColor = value;
-            } 
+            }
         }
 
         public override Font Font
@@ -218,14 +233,27 @@ namespace Designer
             this.ResumeLayout();
             AdjustComboBoxDimensions();
         }
+        //Datos
+
+
+
+
+
 
         //metodos privados
         private void AdjustComboBoxDimensions()
         {
+            //combList.Width = lblText.Width;
+            //combList.Location = new Point()
+            //{
+            //    X = this.Width - this.Padding.Right - combList.Width,
+            //    Y = lblText.Bottom - combList.Height
+            //};
+
             combList.Width = lblText.Width;
             combList.Location = new Point()
             {
-                X = this.Width - this.Padding.Right - combList.Width,
+                X = Math.Max(0, this.Width - this.Padding.Right - combList.Width),
                 Y = lblText.Bottom - combList.Height
             };
         }
@@ -292,7 +320,7 @@ namespace Designer
             // FR_ComboBox
             // 
             this.Name = "FR_ComboBox";
-            this.Size = new System.Drawing.Size(314, 135);
+            this.Size = new System.Drawing.Size(200, 30);
             this.ResumeLayout(false);
 
         }
