@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fR_TextBox1 = new Designer.FR_TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.fR_TextBox1);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker2);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -67,13 +69,19 @@
             this.splitContainer1.SplitterDistance = 106;
             this.splitContainer1.TabIndex = 0;
             // 
-            // comboBox1
+            // dateTimePicker2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.dateTimePicker2.Location = new System.Drawing.Point(365, 34);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 3;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(159, 34);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // label1
             // 
@@ -84,19 +92,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cliente";
             // 
-            // dateTimePicker1
+            // comboBox1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(159, 34);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(365, 34);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 3;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 34);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -154,6 +156,23 @@
             this.Details.Name = "Details";
             this.Details.ReadOnly = true;
             // 
+            // fR_TextBox1
+            // 
+            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox1.BorderColor = System.Drawing.Color.Teal;
+            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
+            this.fR_TextBox1.BorderSize = 2;
+            this.fR_TextBox1.Location = new System.Drawing.Point(575, 34);
+            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox1.Multiline = true;
+            this.fR_TextBox1.Name = "fR_TextBox1";
+            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox1.PasswordChar = false;
+            this.fR_TextBox1.Size = new System.Drawing.Size(270, 30);
+            this.fR_TextBox1.TabIndex = 4;
+            this.fR_TextBox1.texts = "";
+            this.fR_TextBox1.UnderlinedStyle = false;
+            // 
             // VisualizarPeticiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,5 +205,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Details;
+        private Designer.FR_TextBox fR_TextBox1;
     }
 }
