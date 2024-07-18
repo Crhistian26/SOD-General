@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +48,8 @@ namespace SOD_General
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             AbrirFormulario(new Login(this));
             this.Size = new Size(463, 284);
+            
+            
         }
         
     }
