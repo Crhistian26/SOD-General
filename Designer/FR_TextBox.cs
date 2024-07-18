@@ -14,10 +14,10 @@ namespace Designer
     public partial class FR_TextBox : UserControl
     {
         private int borderSize = 2;
-        private Color borderColor = Color.Teal;
+        private Color borderColor = Color.FromArgb(39, 123, 134);
         private bool underlinedStyle = false;
 
-        private Color borderFocusColor = Color.Red;
+        private Color borderFocusColor = Color.Blue;
         private bool isFocused = false;
 
         public FR_TextBox()

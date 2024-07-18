@@ -51,6 +51,10 @@ namespace SOD_General
             
             
         }
-        
+
+        private void texc1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

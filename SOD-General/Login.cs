@@ -30,7 +30,20 @@ namespace SOD_General
 
         private void Login_Load(object sender, EventArgs e)
         {
-           
+            //texc1.AddCombo("Hola men");
+            //texc1.AddCombo("Hola funciono");
+            //texc2.AddCombo("Hola men");
+            //texc2.AddCombo("Hola funciono");
+        }
+
+        private void texc2__holaPAPA(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hola bro soy el primero");
+        }
+
+        private void texc1__holaPAPA(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hola bro soy el segundo");
         }
     }
 

@@ -19,9 +19,14 @@ namespace SOD_General
         {
             InitializeComponent();
             this.authorizations = authorizations;
-            
+            combo();
         }
 
+        public void combo()
+        {
+
+            //fR_ComboBox2.
+        }
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Maximized;
@@ -89,6 +94,11 @@ namespace SOD_General
         private void fR_ComboBox1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void texc1__holaPAPA(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tu vieja");
         }
     }
 }

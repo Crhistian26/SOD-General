@@ -48,8 +48,17 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="datagrid.cs" />
-    <Compile Include="FR_ComboBox.cs">
+    <Compile Include="FR_CheckBox.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FR_CheckBox.Designer.cs">
+      <DependentUpon>FR_CheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FR_CombBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FR_CombBox.Designer.cs">
+      <DependentUpon>FR_CombBox.cs</DependentUpon>
     </Compile>
     <Compile Include="FR_TextBox.cs">
       <SubType>UserControl</SubType>
@@ -63,8 +72,11 @@
     <EmbeddedResource Include="Botones_Nuevos.resx">
       <DependentUpon>Botones_Nuevos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FR_ComboBox.resx">
-      <DependentUpon>FR_ComboBox.cs</DependentUpon>
+    <EmbeddedResource Include="FR_CheckBox.resx">
+      <DependentUpon>FR_CheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FR_CombBox.resx">
+      <DependentUpon>FR_CombBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FR_TextBox.resx">
       <DependentUpon>FR_TextBox.cs</DependentUpon>

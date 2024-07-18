@@ -33,11 +33,10 @@
             this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.fR_TextBox2 = new Designer.FR_TextBox();
             this.fR_TextBox1 = new Designer.FR_TextBox();
-            this.fR_ComboBox1 = new Designer.FR_ComboBox();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.fR_CombBox1 = new Designer.FR_CombBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -79,10 +78,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.fR_ComboBox1);
-            this.panel1.Controls.Add(this.botones_Nuevos1);
+            this.panel1.Controls.Add(this.fR_CombBox1);
             this.panel1.Controls.Add(this.fR_TextBox2);
             this.panel1.Controls.Add(this.fR_TextBox1);
+            this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
@@ -90,14 +89,39 @@
             this.panel1.Size = new System.Drawing.Size(800, 426);
             this.panel1.TabIndex = 1;
             // 
-            // comboBox1
+            // fR_TextBox2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(302, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.fR_TextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox2.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox2.BorderSize = 2;
+            this.fR_TextBox2.Location = new System.Drawing.Point(90, 283);
+            this.fR_TextBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox2.Multiline = true;
+            this.fR_TextBox2.Name = "fR_TextBox2";
+            this.fR_TextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox2.PasswordChar = false;
+            this.fR_TextBox2.Size = new System.Drawing.Size(270, 30);
+            this.fR_TextBox2.TabIndex = 4;
+            this.fR_TextBox2.texts = "";
+            this.fR_TextBox2.UnderlinedStyle = false;
+            // 
+            // fR_TextBox1
+            // 
+            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox1.BorderSize = 2;
+            this.fR_TextBox1.Location = new System.Drawing.Point(117, 208);
+            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox1.Multiline = true;
+            this.fR_TextBox1.Name = "fR_TextBox1";
+            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox1.PasswordChar = false;
+            this.fR_TextBox1.Size = new System.Drawing.Size(270, 30);
+            this.fR_TextBox1.TabIndex = 3;
+            this.fR_TextBox1.texts = "";
+            this.fR_TextBox1.UnderlinedStyle = false;
             // 
             // botones_Nuevos1
             // 
@@ -109,71 +133,27 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(233, 192);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(90, 94);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(175, 39);
-            this.botones_Nuevos1.TabIndex = 4;
+            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.TabIndex = 2;
             this.botones_Nuevos1.Text = "botones_Nuevos1";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
-            // fR_TextBox2
+            // fR_CombBox1
             // 
-            this.fR_TextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox2.BorderColor = System.Drawing.Color.Teal;
-            this.fR_TextBox2.BorderFocusColor = System.Drawing.Color.Red;
-            this.fR_TextBox2.BorderSize = 2;
-            this.fR_TextBox2.Location = new System.Drawing.Point(237, 157);
-            this.fR_TextBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox2.Multiline = true;
-            this.fR_TextBox2.Name = "fR_TextBox2";
-            this.fR_TextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox2.PasswordChar = false;
-            this.fR_TextBox2.Size = new System.Drawing.Size(175, 30);
-            this.fR_TextBox2.TabIndex = 3;
-            this.fR_TextBox2.texts = "";
-            this.fR_TextBox2.UnderlinedStyle = false;
-            // 
-            // fR_TextBox1
-            // 
-            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox1.BorderColor = System.Drawing.Color.Teal;
-            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Location = new System.Drawing.Point(25, 157);
-            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox1.Multiline = true;
-            this.fR_TextBox1.Name = "fR_TextBox1";
-            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(175, 30);
-            this.fR_TextBox1.TabIndex = 2;
-            this.fR_TextBox1.texts = "";
-            this.fR_TextBox1.UnderlinedStyle = false;
-            // 
-            // fR_ComboBox1
-            // 
-            this.fR_ComboBox1.BackColor = System.Drawing.Color.White;
-            this.fR_ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_ComboBox1.BorderSize = 2;
-            this.fR_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.fR_ComboBox1.IconColor = System.Drawing.Color.White;
-            this.fR_ComboBox1.ListBackColor = System.Drawing.Color.LightBlue;
-            this.fR_ComboBox1.ListTextColor = System.Drawing.Color.Black;
-            this.fR_ComboBox1.Location = new System.Drawing.Point(63, 50);
-            this.fR_ComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.fR_ComboBox1.Name = "fR_ComboBox1";
-            this.fR_ComboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.fR_ComboBox1.Size = new System.Drawing.Size(200, 30);
-            this.fR_ComboBox1.TabIndex = 5;
-            this.fR_ComboBox1.Texto = "";
-            this.fR_ComboBox1.Load += new System.EventHandler(this.fR_ComboBox1_Load);
+            this.fR_CombBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_CombBox1.Location = new System.Drawing.Point(12, 140);
+            this.fR_CombBox1.Name = "fR_CombBox1";
+            this.fR_CombBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.fR_CombBox1.Size = new System.Drawing.Size(394, 57);
+            this.fR_CombBox1.TabIndex = 5;
             // 
             // AppVistaGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -200,7 +180,6 @@
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private Designer.FR_TextBox fR_TextBox2;
         private Designer.FR_TextBox fR_TextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private Designer.FR_ComboBox fR_ComboBox1;
+        private Designer.FR_CombBox fR_CombBox1;
     }
 }

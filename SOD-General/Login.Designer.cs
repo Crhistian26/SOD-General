@@ -33,6 +33,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+
             this.SuspendLayout();
             // 
             // botones_Nuevos1
@@ -87,6 +88,11 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
+            // texc1
+            // 
+// 
+            // texc2
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,5 +120,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+
     }
 }
