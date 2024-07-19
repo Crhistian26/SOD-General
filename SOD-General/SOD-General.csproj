@@ -47,6 +47,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacen\Agregar equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Agregar equipos.Designer.cs">
+      <DependentUpon>Agregar equipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Retirar equipos Conduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Retirar equipos Conduce.Designer.cs">
+      <DependentUpon>Retirar equipos Conduce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Retirar equipos Renta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Retirar equipos Renta.Designer.cs">
+      <DependentUpon>Retirar equipos Renta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Retirar equipos Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Retirar equipos Venta.Designer.cs">
+      <DependentUpon>Retirar equipos Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Vista de Conduces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Vista de Conduces.Designer.cs">
+      <DependentUpon>Vista de Conduces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Vista de Rentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Vista de Rentas.Designer.cs">
+      <DependentUpon>Vista de Rentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Vista de Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Vista de Ventas.Designer.cs">
+      <DependentUpon>Vista de Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Visualizar equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\Visualizar equipos.Designer.cs">
+      <DependentUpon>Visualizar equipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppVistaGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,12 +121,15 @@
     <Compile Include="VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas Taller\Registro peticiones\VisualizarPeticiones.cs">
+    <Compile Include="Taller\Registro peticiones\VisualizarPeticiones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas Taller\Registro peticiones\VisualizarPeticiones.Designer.cs">
+    <Compile Include="Taller\Registro peticiones\VisualizarPeticiones.Designer.cs">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Almacen\Agregar equipos.resx">
+      <DependentUpon>Agregar equipos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppVistaGeneral.resx">
       <DependentUpon>AppVistaGeneral.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,7 +151,7 @@
     <EmbeddedResource Include="VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas Taller\Registro peticiones\VisualizarPeticiones.resx">
+    <EmbeddedResource Include="Taller\Registro peticiones\VisualizarPeticiones.resx">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -129,6 +180,11 @@
       <Project>{4b11446b-6628-48d7-b409-3529bf36aaa0}</Project>
       <Name>Modelos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos Humanos\" />
+    <Folder Include="Renta\a\" />
+    <Folder Include="Ventas\Apartado de tareas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
