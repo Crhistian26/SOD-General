@@ -196,6 +196,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Taller\Registro peticiones\AgregarPeticiones.resx">
+      <DependentUpon>AgregarPeticiones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
