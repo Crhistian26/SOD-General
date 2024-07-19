@@ -15,6 +15,7 @@ namespace SOD_General
     public partial class Login : Form
     {
         VistaPrincipal principal { get; set; }
+
         LoginController control = new LoginController();
 
         public Login(VistaPrincipal principal)

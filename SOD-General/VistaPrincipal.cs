@@ -33,7 +33,6 @@ namespace SOD_General
             this.panel1.Controls.Add(formula);
             this.panel1.Tag = formula;
             formula.Show();
-
         }
 
         public void AbrirVistaGeneral(AppVistaGeneral formulario)
