@@ -73,26 +73,6 @@
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
-<<<<<<< Updated upstream
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.textBox2.BorderFocusColor = System.Drawing.Color.Blue;
-            this.textBox2.BorderSize = 2;
-            this.textBox2.Location = new System.Drawing.Point(75, 107);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox2.PasswordChar = false;
-            this.textBox2.Size = new System.Drawing.Size(259, 22);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.texts = "adf";
-            this.textBox2.UnderlinedStyle = false;
-            // 
-=======
->>>>>>> Stashed changes
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
