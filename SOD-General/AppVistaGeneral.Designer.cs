@@ -32,7 +32,7 @@
             this.tallerRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fR_Titulos1 = new Designer.FR_Titulos();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fR_SubTitulo1 = new Designer.FR_SubTitulo();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.fR_CheckBox1 = new Designer.FR_CheckBox();
@@ -42,8 +42,7 @@
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.fR_Panel1 = new Designer.FR_Panel();
             this.fR_TextBox2 = new Designer.FR_TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.fR_Titulos1 = new Designer.FR_Titulos();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,7 +76,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.fR_Titulos1);
             this.panel1.Controls.Add(this.fR_SubTitulo1);
             this.panel1.Controls.Add(this.botones_Nuevos1);
@@ -95,15 +93,13 @@
             this.panel1.Size = new System.Drawing.Size(800, 426);
             this.panel1.TabIndex = 1;
             // 
-            // fR_Titulos1
+            // dataGridView1
             // 
-            this.fR_Titulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.fR_Titulos1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.fR_Titulos1.Location = new System.Drawing.Point(325, 0);
-            this.fR_Titulos1.Name = "fR_Titulos1";
-            this.fR_Titulos1.Padding = new System.Windows.Forms.Padding(2);
-            this.fR_Titulos1.Size = new System.Drawing.Size(123, 59);
-            this.fR_Titulos1.TabIndex = 28;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
+            this.dataGridView1.TabIndex = 0;
             // 
             // fR_SubTitulo1
             // 
@@ -221,23 +217,15 @@
             this.fR_TextBox2.texts = "";
             this.fR_TextBox2.UnderlinedStyle = false;
             // 
-            // dataGridView1
+            // fR_Titulos1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(595, 238);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 29;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.fR_Titulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.fR_Titulos1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.fR_Titulos1.Location = new System.Drawing.Point(325, 0);
+            this.fR_Titulos1.Name = "fR_Titulos1";
+            this.fR_Titulos1.Padding = new System.Windows.Forms.Padding(2);
+            this.fR_Titulos1.Size = new System.Drawing.Size(123, 59);
+            this.fR_Titulos1.TabIndex = 28;
             // 
             // AppVistaGeneral
             // 
@@ -254,7 +242,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,6 +265,5 @@
         private Designer.FR_CheckBox fR_CheckBox1;
         private Designer.FR_SubTitulo fR_SubTitulo1;
         private Designer.FR_Titulos fR_Titulos1;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
