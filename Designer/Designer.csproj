@@ -59,6 +59,12 @@
     <Compile Include="FR_CombBox.Designer.cs">
       <DependentUpon>FR_CombBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FR_SubTitulo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FR_SubTitulo.Designer.cs">
+      <DependentUpon>FR_SubTitulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FR_TextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FR_CombBox.resx">
       <DependentUpon>FR_CombBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FR_SubTitulo.resx">
+      <DependentUpon>FR_SubTitulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FR_TextBox.resx">
       <DependentUpon>FR_TextBox.cs</DependentUpon>
