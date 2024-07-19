@@ -59,6 +59,12 @@
     <Compile Include="FR_CombBox.Designer.cs">
       <DependentUpon>FR_CombBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FR_DateTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FR_DateTime.Designer.cs">
+      <DependentUpon>FR_DateTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="FR_LineaDivisora.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FR_CombBox.resx">
       <DependentUpon>FR_CombBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FR_DateTime.resx">
+      <DependentUpon>FR_DateTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FR_LineaDivisora.resx">
       <DependentUpon>FR_LineaDivisora.cs</DependentUpon>

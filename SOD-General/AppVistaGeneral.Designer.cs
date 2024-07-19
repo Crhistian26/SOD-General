@@ -197,7 +197,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fR_Panel1.Location = new System.Drawing.Point(-14, 4);
             this.fR_Panel1.Name = "fR_Panel1";
-            this.fR_Panel1.Size = new System.Drawing.Size(811, 397);
+            this.fR_Panel1.Size = new System.Drawing.Size(811, 419);
             this.fR_Panel1.TabIndex = 5;
             // 
             // fR_TextBox2
