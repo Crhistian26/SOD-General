@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.textBox2 = new Designer.FR_TextBox();
             this.textBox1 = new Designer.FR_TextBox();
-            this.fR_TextBox1 = new Designer.FR_TextBox();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.SuspendLayout();
             // 
             // label1
@@ -55,23 +55,22 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
-            // botones_Nuevos1
+            // textBox2
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(144, 180);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 41);
-            this.botones_Nuevos1.TabIndex = 0;
-            this.botones_Nuevos1.Text = "Ingresar";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.textBox2.BorderFocusColor = System.Drawing.Color.Blue;
+            this.textBox2.BorderSize = 2;
+            this.textBox2.Location = new System.Drawing.Point(75, 118);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.textBox2.PasswordChar = false;
+            this.textBox2.Size = new System.Drawing.Size(270, 30);
+            this.textBox2.TabIndex = 8;
+            this.textBox2.texts = "";
+            this.textBox2.UnderlinedStyle = false;
             // 
             // textBox1
             // 
@@ -90,22 +89,23 @@
             this.textBox1.texts = "fdsf";
             this.textBox1.UnderlinedStyle = false;
             // 
-            // fR_TextBox1
+            // botones_Nuevos1
             // 
-            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Location = new System.Drawing.Point(75, 118);
-            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox1.Multiline = true;
-            this.fR_TextBox1.Name = "fR_TextBox1";
-            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(270, 30);
-            this.fR_TextBox1.TabIndex = 8;
-            this.fR_TextBox1.texts = "";
-            this.fR_TextBox1.UnderlinedStyle = false;
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(144, 180);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 41);
+            this.botones_Nuevos1.TabIndex = 0;
+            this.botones_Nuevos1.Text = "Ingresar";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // Login
             // 
@@ -113,7 +113,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(452, 238);
-            this.Controls.Add(this.fR_TextBox1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,6 +133,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Designer.FR_TextBox textBox1;
-        private Designer.FR_TextBox fR_TextBox1;
+        private Designer.FR_TextBox textBox2;
     }
 }
