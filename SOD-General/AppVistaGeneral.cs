@@ -100,5 +100,10 @@ namespace SOD_General
         {
             MessageBox.Show("Tu vieja");
         }
+
+        private void fR_Titulos1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

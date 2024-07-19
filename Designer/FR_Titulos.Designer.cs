@@ -33,11 +33,14 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 30F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(5, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 52);
             this.label1.TabIndex = 0;
@@ -47,13 +50,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(75)))), ((int)(((byte)(95)))));
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "FR_Titulos";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(108, 57);
+            this.Size = new System.Drawing.Size(123, 59);
             this.ResumeLayout(false);
             this.PerformLayout();
 
