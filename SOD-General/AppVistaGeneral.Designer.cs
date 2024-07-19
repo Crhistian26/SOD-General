@@ -32,8 +32,6 @@
             this.tallerRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.soD_CheckBox1 = new SOD_CheckBox();
             this.fR_Titulos1 = new Designer.FR_Titulos();
             this.fR_SubTitulo1 = new Designer.FR_SubTitulo();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
@@ -44,6 +42,7 @@
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.fR_Panel1 = new Designer.FR_Panel();
             this.fR_TextBox2 = new Designer.FR_TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,7 +76,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.soD_CheckBox1);
             this.panel1.Controls.Add(this.fR_Titulos1);
             this.panel1.Controls.Add(this.fR_SubTitulo1);
             this.panel1.Controls.Add(this.botones_Nuevos1);
@@ -94,27 +92,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 426);
             this.panel1.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // soD_CheckBox1
-            // 
-            this.soD_CheckBox1.AutoSize = true;
-            this.soD_CheckBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.soD_CheckBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soD_CheckBox1.ForeColor = System.Drawing.Color.White;
-            this.soD_CheckBox1.Location = new System.Drawing.Point(559, 191);
-            this.soD_CheckBox1.Name = "soD_CheckBox1";
-            this.soD_CheckBox1.Size = new System.Drawing.Size(149, 25);
-            this.soD_CheckBox1.TabIndex = 29;
-            this.soD_CheckBox1.Text = "soD_CheckBox1";
-            this.soD_CheckBox1.UseVisualStyleBackColor = false;
             // 
             // fR_Titulos1
             // 
@@ -242,6 +219,14 @@
             this.fR_TextBox2.texts = "";
             this.fR_TextBox2.UnderlinedStyle = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // AppVistaGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +242,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,6 +265,5 @@
         private Designer.FR_CheckBox fR_CheckBox1;
         private Designer.FR_SubTitulo fR_SubTitulo1;
         private Designer.FR_Titulos fR_Titulos1;
-        private SOD_CheckBox soD_CheckBox1;
     }
 }
