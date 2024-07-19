@@ -33,10 +33,11 @@
             this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fR_CheckBox1 = new Designer.FR_CheckBox();
+            this.fR_CombBox1 = new Designer.FR_CombBox();
             this.fR_TextBox2 = new Designer.FR_TextBox();
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.fR_CombBox1 = new Designer.FR_CombBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,13 +72,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(422, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(417, 128);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.fR_CheckBox1);
             this.panel1.Controls.Add(this.fR_CombBox1);
             this.panel1.Controls.Add(this.fR_TextBox2);
             this.panel1.Controls.Add(this.fR_TextBox1);
@@ -88,6 +90,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 426);
             this.panel1.TabIndex = 1;
+            // 
+            // fR_CheckBox1
+            // 
+            this.fR_CheckBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(134)))), ((int)(((byte)(144)))));
+            this.fR_CheckBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fR_CheckBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fR_CheckBox1.Location = new System.Drawing.Point(251, 128);
+            this.fR_CheckBox1.MaximumSize = new System.Drawing.Size(400, 35);
+            this.fR_CheckBox1.Name = "fR_CheckBox1";
+            this.fR_CheckBox1.Padding = new System.Windows.Forms.Padding(10, 2, 5, 2);
+            this.fR_CheckBox1.Size = new System.Drawing.Size(150, 31);
+            this.fR_CheckBox1.TabIndex = 6;
+            // 
+            // fR_CombBox1
+            // 
+            this.fR_CombBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_CombBox1.Location = new System.Drawing.Point(68, 163);
+            this.fR_CombBox1.MaximumSize = new System.Drawing.Size(245, 32);
+            this.fR_CombBox1.Name = "fR_CombBox1";
+            this.fR_CombBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.fR_CombBox1.Size = new System.Drawing.Size(245, 32);
+            this.fR_CombBox1.TabIndex = 5;
             // 
             // fR_TextBox2
             // 
@@ -133,21 +157,12 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(90, 94);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(95, 119);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos1.TabIndex = 2;
             this.botones_Nuevos1.Text = "botones_Nuevos1";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            // 
-            // fR_CombBox1
-            // 
-            this.fR_CombBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_CombBox1.Location = new System.Drawing.Point(68, 163);
-            this.fR_CombBox1.Name = "fR_CombBox1";
-            this.fR_CombBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.fR_CombBox1.Size = new System.Drawing.Size(348, 34);
-            this.fR_CombBox1.TabIndex = 5;
             // 
             // AppVistaGeneral
             // 
@@ -181,5 +196,6 @@
         private Designer.FR_TextBox fR_TextBox2;
         private Designer.FR_TextBox fR_TextBox1;
         private Designer.FR_CombBox fR_CombBox1;
+        private Designer.FR_CheckBox fR_CheckBox1;
     }
 }

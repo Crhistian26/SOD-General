@@ -47,7 +47,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="datagrid.cs" />
     <Compile Include="FR_CheckBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -66,7 +65,18 @@
     <Compile Include="FR_TextBox.Designer.cs">
       <DependentUpon>FR_TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FR_Titulos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FR_Titulos.Designer.cs">
+      <DependentUpon>FR_Titulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Botones_Nuevos.resx">
@@ -80,6 +90,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FR_TextBox.resx">
       <DependentUpon>FR_TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FR_Titulos.resx">
+      <DependentUpon>FR_Titulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
