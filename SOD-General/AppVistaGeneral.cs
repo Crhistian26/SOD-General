@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,8 @@ namespace SOD_General
     public partial class AppVistaGeneral : Form
     {
         List<MAuthorization> authorizations = new List<MAuthorization>();
+        string prueba;
+
         public AppVistaGeneral( List<MAuthorization> authorizations)
         {
             InitializeComponent();
@@ -69,6 +72,8 @@ namespace SOD_General
             this.panel1.Tag = formula;
             formula.Show();
 
+
+            
         }
 
         private void verPeticionesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,6 +109,16 @@ namespace SOD_General
         private void fR_Titulos1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void chechear()
+        {
+            
+
+        }
+        private void fR_CheckBox2__CheckedChanged(object sender, EventArgs e)
+        {
+            prueba = "me  dio click";
         }
     }
 }

@@ -83,6 +83,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.Padding = new System.Windows.Forms.Padding(7);
             this.textBox2.PasswordChar = false;
             this.textBox2.Size = new System.Drawing.Size(259, 22);
             this.textBox2.TabIndex = 6;

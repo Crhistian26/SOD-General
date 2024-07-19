@@ -32,7 +32,7 @@
             this.tallerRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fR_Titulos1 = new Designer.FR_Titulos();
             this.fR_SubTitulo1 = new Designer.FR_SubTitulo();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
@@ -43,8 +43,7 @@
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.fR_Panel1 = new Designer.FR_Panel();
             this.fR_TextBox2 = new Designer.FR_TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.soD_CheckBox1 = new SOD_CheckBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,8 +77,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.soD_CheckBox1);
             this.panel1.Controls.Add(this.fR_Titulos1);
             this.panel1.Controls.Add(this.fR_SubTitulo1);
             this.panel1.Controls.Add(this.botones_Nuevos1);
@@ -97,15 +95,13 @@
             this.panel1.Size = new System.Drawing.Size(800, 426);
             this.panel1.TabIndex = 1;
             // 
-            // checkBox1
+            // dataGridView1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(595, 238);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 29;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
+            this.dataGridView1.TabIndex = 0;
             // 
             // fR_Titulos1
             // 
@@ -233,22 +229,18 @@
             this.fR_TextBox2.texts = "";
             this.fR_TextBox2.UnderlinedStyle = false;
             // 
-            // dataGridView1
+            // soD_CheckBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(520, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.soD_CheckBox1.AutoSize = true;
+            this.soD_CheckBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.soD_CheckBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soD_CheckBox1.ForeColor = System.Drawing.Color.White;
+            this.soD_CheckBox1.Location = new System.Drawing.Point(580, 178);
+            this.soD_CheckBox1.Name = "soD_CheckBox1";
+            this.soD_CheckBox1.Size = new System.Drawing.Size(149, 25);
+            this.soD_CheckBox1.TabIndex = 29;
+            this.soD_CheckBox1.Text = "soD_CheckBox1";
+            this.soD_CheckBox1.UseVisualStyleBackColor = false;
             // 
             // AppVistaGeneral
             // 
@@ -289,7 +281,6 @@
         private Designer.FR_CheckBox fR_CheckBox1;
         private Designer.FR_SubTitulo fR_SubTitulo1;
         private Designer.FR_Titulos fR_Titulos1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private SOD_CheckBox soD_CheckBox1;
     }
 }
