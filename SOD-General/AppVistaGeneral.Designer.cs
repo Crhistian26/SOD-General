@@ -31,19 +31,20 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tallerRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fR_SubTitulo1 = new Designer.FR_SubTitulo();
-            this.fR_TextBox4 = new Designer.FR_TextBox();
-            this.fR_CheckBox1 = new Designer.FR_CheckBox();
-            this.fR_CombBox1 = new Designer.FR_CombBox();
-            this.fR_TextBox2 = new Designer.FR_TextBox();
-            this.fR_TextBox1 = new Designer.FR_TextBox();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fR_Titulos1 = new Designer.FR_Titulos();
+            this.fR_CheckBox1 = new Designer.FR_CheckBox();
+            this.fR_CombBox2 = new Designer.FR_CombBox();
+            this.fR_SubTitulo1 = new Designer.FR_SubTitulo();
+            this.fR_TextBox3 = new Designer.FR_TextBox();
+            this.fR_TextBox1 = new Designer.FR_TextBox();
+            this.fR_Panel1 = new Designer.FR_Panel();
+            this.fR_TextBox2 = new Designer.FR_TextBox();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -72,24 +73,17 @@
             this.verPeticionesToolStripMenuItem.Text = "Ver peticiones";
             this.verPeticionesToolStripMenuItem.Click += new System.EventHandler(this.verPeticionesToolStripMenuItem_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(417, 128);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.fR_Titulos1);
-            this.panel1.Controls.Add(this.fR_SubTitulo1);
-            this.panel1.Controls.Add(this.fR_TextBox4);
-            this.panel1.Controls.Add(this.fR_CheckBox1);
-            this.panel1.Controls.Add(this.fR_CombBox1);
-            this.panel1.Controls.Add(this.fR_TextBox2);
-            this.panel1.Controls.Add(this.fR_TextBox1);
             this.panel1.Controls.Add(this.botones_Nuevos1);
+            this.panel1.Controls.Add(this.fR_Titulos1);
+            this.panel1.Controls.Add(this.fR_CheckBox1);
+            this.panel1.Controls.Add(this.fR_CombBox2);
+            this.panel1.Controls.Add(this.fR_SubTitulo1);
+            this.panel1.Controls.Add(this.fR_TextBox3);
+            this.panel1.Controls.Add(this.fR_TextBox1);
+            this.panel1.Controls.Add(this.fR_Panel1);
+            this.panel1.Controls.Add(this.fR_TextBox2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
@@ -97,52 +91,95 @@
             this.panel1.Size = new System.Drawing.Size(800, 426);
             this.panel1.TabIndex = 1;
             // 
-            // fR_SubTitulo1
+            // dataGridView1
             // 
-            this.fR_SubTitulo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_SubTitulo1.Location = new System.Drawing.Point(191, 63);
-            this.fR_SubTitulo1.Name = "fR_SubTitulo1";
-            this.fR_SubTitulo1.Size = new System.Drawing.Size(451, 43);
-            this.fR_SubTitulo1.TabIndex = 12;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // fR_TextBox4
+            // fR_Titulos1
             // 
-            this.fR_TextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox4.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox4.BorderSize = 2;
-            this.fR_TextBox4.Location = new System.Drawing.Point(112, 286);
-            this.fR_TextBox4.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox4.Multiline = true;
-            this.fR_TextBox4.Name = "fR_TextBox4";
-            this.fR_TextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox4.PasswordChar = false;
-            this.fR_TextBox4.Size = new System.Drawing.Size(270, 30);
-            this.fR_TextBox4.TabIndex = 10;
-            this.fR_TextBox4.texts = "";
-            this.fR_TextBox4.UnderlinedStyle = false;
+            this.fR_Titulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(75)))), ((int)(((byte)(95)))));
+            this.fR_Titulos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fR_Titulos1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.fR_Titulos1.Location = new System.Drawing.Point(284, 4);
+            this.fR_Titulos1.Name = "fR_Titulos1";
+            this.fR_Titulos1.Padding = new System.Windows.Forms.Padding(2);
+            this.fR_Titulos1.Size = new System.Drawing.Size(108, 57);
+            this.fR_Titulos1.TabIndex = 17;
             // 
             // fR_CheckBox1
             // 
-            this.fR_CheckBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(134)))), ((int)(((byte)(144)))));
+            this.fR_CheckBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.fR_CheckBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.fR_CheckBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fR_CheckBox1.Location = new System.Drawing.Point(180, 128);
+            this.fR_CheckBox1.Location = new System.Drawing.Point(284, 186);
             this.fR_CheckBox1.MaximumSize = new System.Drawing.Size(400, 35);
             this.fR_CheckBox1.Name = "fR_CheckBox1";
             this.fR_CheckBox1.Padding = new System.Windows.Forms.Padding(10, 2, 5, 2);
-            this.fR_CheckBox1.Size = new System.Drawing.Size(150, 31);
-            this.fR_CheckBox1.TabIndex = 6;
+            this.fR_CheckBox1.Size = new System.Drawing.Size(145, 31);
+            this.fR_CheckBox1.TabIndex = 16;
             // 
-            // fR_CombBox1
+            // fR_CombBox2
             // 
-            this.fR_CombBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_CombBox1.Location = new System.Drawing.Point(49, 195);
-            this.fR_CombBox1.MaximumSize = new System.Drawing.Size(245, 32);
-            this.fR_CombBox1.Name = "fR_CombBox1";
-            this.fR_CombBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.fR_CombBox1.Size = new System.Drawing.Size(245, 32);
-            this.fR_CombBox1.TabIndex = 5;
+            this.fR_CombBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.fR_CombBox2.Location = new System.Drawing.Point(28, 185);
+            this.fR_CombBox2.MaximumSize = new System.Drawing.Size(245, 32);
+            this.fR_CombBox2.Name = "fR_CombBox2";
+            this.fR_CombBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.fR_CombBox2.Size = new System.Drawing.Size(245, 32);
+            this.fR_CombBox2.TabIndex = 15;
+            // 
+            // fR_SubTitulo1
+            // 
+            this.fR_SubTitulo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(75)))), ((int)(((byte)(95)))));
+            this.fR_SubTitulo1.Location = new System.Drawing.Point(132, 67);
+            this.fR_SubTitulo1.Name = "fR_SubTitulo1";
+            this.fR_SubTitulo1.Size = new System.Drawing.Size(461, 45);
+            this.fR_SubTitulo1.TabIndex = 14;
+            // 
+            // fR_TextBox3
+            // 
+            this.fR_TextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox3.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox3.BorderSize = 2;
+            this.fR_TextBox3.Location = new System.Drawing.Point(30, 358);
+            this.fR_TextBox3.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox3.Multiline = true;
+            this.fR_TextBox3.Name = "fR_TextBox3";
+            this.fR_TextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox3.PasswordChar = false;
+            this.fR_TextBox3.Size = new System.Drawing.Size(399, 24);
+            this.fR_TextBox3.TabIndex = 12;
+            this.fR_TextBox3.texts = "";
+            this.fR_TextBox3.UnderlinedStyle = true;
+            // 
+            // fR_TextBox1
+            // 
+            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox1.BorderSize = 2;
+            this.fR_TextBox1.Location = new System.Drawing.Point(28, 238);
+            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox1.Multiline = true;
+            this.fR_TextBox1.Name = "fR_TextBox1";
+            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox1.PasswordChar = false;
+            this.fR_TextBox1.Size = new System.Drawing.Size(401, 104);
+            this.fR_TextBox1.TabIndex = 11;
+            this.fR_TextBox1.texts = "";
+            this.fR_TextBox1.UnderlinedStyle = false;
+            // 
+            // fR_Panel1
+            // 
+            this.fR_Panel1.Location = new System.Drawing.Point(-14, 4);
+            this.fR_Panel1.Name = "fR_Panel1";
+            this.fR_Panel1.Size = new System.Drawing.Size(758, 397);
+            this.fR_Panel1.TabIndex = 5;
             // 
             // fR_TextBox2
             // 
@@ -161,26 +198,9 @@
             this.fR_TextBox2.texts = "";
             this.fR_TextBox2.UnderlinedStyle = false;
             // 
-            // fR_TextBox1
-            // 
-            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Location = new System.Drawing.Point(98, 240);
-            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox1.Multiline = true;
-            this.fR_TextBox1.Name = "fR_TextBox1";
-            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(270, 30);
-            this.fR_TextBox1.TabIndex = 3;
-            this.fR_TextBox1.texts = "";
-            this.fR_TextBox1.UnderlinedStyle = true;
-            // 
             // botones_Nuevos1
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
             this.botones_Nuevos1.BorderRadius = 40;
             this.botones_Nuevos1.BorderSize = 0;
@@ -188,23 +208,12 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(24, 128);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(443, 332);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
-            this.botones_Nuevos1.TabIndex = 2;
+            this.botones_Nuevos1.TabIndex = 18;
             this.botones_Nuevos1.Text = "botones_Nuevos1";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            // 
-            // fR_Titulos1
-            // 
-            this.fR_Titulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_Titulos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fR_Titulos1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.fR_Titulos1.Location = new System.Drawing.Point(332, 0);
-            this.fR_Titulos1.Name = "fR_Titulos1";
-            this.fR_Titulos1.Padding = new System.Windows.Forms.Padding(2);
-            this.fR_Titulos1.Size = new System.Drawing.Size(108, 57);
-            this.fR_Titulos1.TabIndex = 13;
             // 
             // AppVistaGeneral
             // 
@@ -220,8 +229,8 @@
             this.Load += new System.EventHandler(this.AppVistaGeneral_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,15 +241,16 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tallerRecepcionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verPeticionesToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
-        private Designer.FR_TextBox fR_TextBox1;
         private Designer.FR_TextBox fR_TextBox2;
-        private Designer.FR_CombBox fR_CombBox1;
-        private Designer.FR_CheckBox fR_CheckBox1;
-        private Designer.FR_TextBox fR_TextBox4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Designer.FR_Panel fR_Panel1;
+        private Designer.FR_TextBox fR_TextBox3;
+        private Designer.FR_TextBox fR_TextBox1;
         private Designer.FR_SubTitulo fR_SubTitulo1;
+        private Designer.FR_CombBox fR_CombBox2;
+        private Designer.FR_CheckBox fR_CheckBox1;
         private Designer.FR_Titulos fR_Titulos1;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
     }
 }

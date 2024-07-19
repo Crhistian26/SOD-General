@@ -67,7 +67,7 @@ namespace Diseños
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;
             this.Size = new Size(150, 40);
-            this.BackColor = Color.FromArgb(39, 123, 134);
+            this.BackColor = Color.FromArgb(22, 90, 114);
             this.ForeColor = Color.White;
             this.Font = new Font("Microsoft YaHei UI", 12, FontStyle.Bold);
         }

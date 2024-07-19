@@ -59,6 +59,12 @@
     <Compile Include="FR_CombBox.Designer.cs">
       <DependentUpon>FR_CombBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FR_Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FR_Panel.Designer.cs">
+      <DependentUpon>FR_Panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FR_SubTitulo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FR_CombBox.resx">
       <DependentUpon>FR_CombBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FR_Panel.resx">
+      <DependentUpon>FR_Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FR_SubTitulo.resx">
       <DependentUpon>FR_SubTitulo.cs</DependentUpon>
