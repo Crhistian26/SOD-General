@@ -38,25 +38,31 @@ namespace Controladores
                 cmd.Parameters.AddWithValue("@password", password);
                 conex.Open();
                 SqlDataReader lector = cmd.ExecuteReader();
-                while (lector.Read())
+                if(lector.FieldCount > 2)
                 {
-                    int id = lector.GetInt32(0);
-                    string Autorizacion = lector.GetString(1);
-                    string TipoAutorizacion = lector.GetString(2);
+                    while (lector.Read())
+                    {
+                        int id = lector.GetInt32(0);
+                        string Autorizacion = lector.GetString(1);
+                        string TipoAutorizacion = lector.GetString(2);
 
-                    MAuthorization autorizacion = new MAuthorization(id, Autorizacion, TipoAutorizacion);
-                    list.Add(autorizacion);
+                        MAuthorization autorizacion = new MAuthorization(id, Autorizacion, TipoAutorizacion);
+                        list.Add(autorizacion);
+                    }
+                }
+                else
+                {
+                    throw new Exception("Ese usuario no existe o no tiene autorizaciones para el sistema.");
                 }
                 conex.Close();
                 return list;
             }
-            catch(SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
             catch(Exception ex)
             {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
                 MessageBox.Show(ex.Message);
                 return null;
             }

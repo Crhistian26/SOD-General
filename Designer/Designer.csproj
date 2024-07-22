@@ -46,7 +46,6 @@
     <Compile Include="Botones_Nuevos.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="CR_DataGriedView.cs">
       <SubType>Component</SubType>
     </Compile>

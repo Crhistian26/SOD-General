@@ -53,7 +53,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(880, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // tallerRecepcionToolStripMenuItem
             // 
@@ -67,9 +66,9 @@
             // verPeticionesToolStripMenuItem
             // 
             this.verPeticionesToolStripMenuItem.Name = "verPeticionesToolStripMenuItem";
-            this.verPeticionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verPeticionesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.verPeticionesToolStripMenuItem.Text = "Ver peticiones";
-            this.verPeticionesToolStripMenuItem.Click += new System.EventHandler(this.verPeticionesToolStripMenuItem_Click);
+           
             // 
             // panel1
             // 
@@ -88,11 +87,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::SOD_General.Properties.Resources.logo_sod_soluciones_diaz_fixed;
             this.pictureBox1.Location = new System.Drawing.Point(289, 181);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(301, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.fR_Titulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
@@ -154,7 +156,6 @@
             this.Text = "AppVistaGeneal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AppVistaGeneral_Load);
-            this.Resize += new System.EventHandler(this.AppVistaGeneral_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

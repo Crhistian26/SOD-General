@@ -1,4 +1,5 @@
 ﻿using Controladores;
+using Modelos.Usuarios_Empleados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,27 +15,41 @@ namespace SOD_General
     
     public partial class Login : Form
     {
+        //Esta es la VistaPrincipal para ejecutar sus metodos desde aca.
         VistaPrincipal principal { get; set; }
 
+        //Este es el controlador para usar sus funciones .
         LoginController control = new LoginController();
 
+
+        //Su constructor donde recibe la vistaprincipal.
         public Login(VistaPrincipal principal)
         {
             InitializeComponent();
             this.principal = principal;
         }
 
+        //El boton de login.
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-         //   principal.AbrirVistaGeneral(new AppVistaGeneral(control.Ingresar(textBox1.Text, textBox2.Text)));
+            //Aca me captura las autorizaciones del usuario con el metodo Ingresar.
+            List<MAuthorization> Autorizaciones = control.Ingresar(textBox1.Text, textBox2.Text);
+            
+            //Me limpia los textboxs
+            textBox1.texts = null;
+            textBox2.texts = null;
+
+            //En caso que sea nulo me ejecuta la funcion desde la VistaPrincipal
+            if(Autorizaciones != null)
+            {
+                principal.AbrirVistaGeneral(Autorizaciones);
+            }
+            
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            //texc1.AddCombo("Hola men");
-            //texc1.AddCombo("Hola funciono");
-            //texc2.AddCombo("Hola men");
-            //texc2.AddCombo("Hola funciono");
+
         }
 
         private void texc2__holaPAPA(object sender, EventArgs e)
@@ -45,6 +60,11 @@ namespace SOD_General
         private void texc1__holaPAPA(object sender, EventArgs e)
         {
             MessageBox.Show("Hola bro soy el segundo");
+        }
+
+        private void textBox1__TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

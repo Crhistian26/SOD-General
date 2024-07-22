@@ -88,6 +88,7 @@
             this.textBox1.TabIndex = 7;
             this.textBox1.texts = "fdsf";
             this.textBox1.UnderlinedStyle = false;
+            this.textBox1._TextChanged += new System.EventHandler(this.textBox1__TextChanged);
             // 
             // botones_Nuevos1
             // 
@@ -134,6 +135,6 @@
         private System.Windows.Forms.Label label2;
         private Designer.FR_TextBox textBox1;
         private Designer.FR_TextBox textBox2;
-        private CR_MenuStrip cR_MenuStrip1;
+
     }
 }
