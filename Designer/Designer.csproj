@@ -64,12 +64,6 @@
     <Compile Include="CR_Subtitulos.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FR_CombBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FR_CombBox.Designer.cs">
-      <DependentUpon>FR_CombBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="FR_DateTime.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,13 +109,16 @@
     <Compile Include="SOD_CheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SOD_ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOD_TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Botones_Nuevos.resx">
       <DependentUpon>Botones_Nuevos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FR_CombBox.resx">
-      <DependentUpon>FR_CombBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FR_DateTime.resx">
       <DependentUpon>FR_DateTime.cs</DependentUpon>
