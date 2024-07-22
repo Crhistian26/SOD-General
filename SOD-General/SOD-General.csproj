@@ -196,6 +196,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Taller\Control calidad\VisualizarControles.resx">
+      <DependentUpon>VisualizarControles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Taller\Registro peticiones\AgregarPeticiones.resx">
       <DependentUpon>AgregarPeticiones.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,5 +16,10 @@ namespace SOD_General.Taller.Control_calidad
         {
             InitializeComponent();
         }
+
+        private void fR_SubTitulo1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
