@@ -28,6 +28,7 @@ namespace SOD_General
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             AbrirFormulario(new Login(this));
             this.Size = new Size(463, 284);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         //La funcion que se encarga de abrirme los formularios.

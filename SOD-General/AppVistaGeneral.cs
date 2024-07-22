@@ -1,4 +1,5 @@
 ﻿using Modelos.Usuarios_Empleados;
+using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,32 @@ namespace SOD_General
             
         }
 
+        public void AbrirFormulario(Form formulario)
+        {
+            if (this.panel1.Controls.Count > 0)
+            {
+                panel1.Controls.Clear();
+                panel1.Tag = null;
+            }
+
+            Form formula = formulario;
+            formula.TopLevel = false;
+            formula.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(formula);
+            this.panel1.Tag = formula;
+            formula.Show();
+        }
+
         public event EventHandler ReajustarSize;
 
+        private void holaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void hoalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new Visual_Empleados());
+        }
     }
 }

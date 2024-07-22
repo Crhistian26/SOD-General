@@ -28,41 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tallerRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
+            this.cR_MenuStrip1 = new CR_MenuStrip();
+            this.hoalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cR_MenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tallerRecepcionToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(880, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tallerRecepcionToolStripMenuItem
-            // 
-            this.tallerRecepcionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verPeticionesToolStripMenuItem});
-            this.tallerRecepcionToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tallerRecepcionToolStripMenuItem.Name = "tallerRecepcionToolStripMenuItem";
-            this.tallerRecepcionToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.tallerRecepcionToolStripMenuItem.Text = "Taller Recepcion";
-            // 
-            // verPeticionesToolStripMenuItem
-            // 
-            this.verPeticionesToolStripMenuItem.Name = "verPeticionesToolStripMenuItem";
-            this.verPeticionesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.verPeticionesToolStripMenuItem.Text = "Ver peticiones";
             // 
             // panel1
             // 
@@ -88,34 +61,49 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // cR_MenuStrip1
+            // 
+            this.cR_MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hoalToolStripMenuItem});
+            this.cR_MenuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.cR_MenuStrip1.Name = "cR_MenuStrip1";
+            this.cR_MenuStrip1.Size = new System.Drawing.Size(880, 24);
+            this.cR_MenuStrip1.TabIndex = 2;
+            this.cR_MenuStrip1.Text = "cR_MenuStrip1";
+            // 
+            // hoalToolStripMenuItem
+            // 
+            this.hoalToolStripMenuItem.Name = "hoalToolStripMenuItem";
+            this.hoalToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.hoalToolStripMenuItem.Text = "Hoal";
+            this.hoalToolStripMenuItem.Click += new System.EventHandler(this.hoalToolStripMenuItem_Click);
+            // 
             // AppVistaGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 465);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.cR_MenuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "AppVistaGeneral";
             this.Text = "AppVistaGeneal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AppVistaGeneral_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cR_MenuStrip1.ResumeLayout(false);
+            this.cR_MenuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tallerRecepcionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verPeticionesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private CR_MenuStrip cR_MenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem hoalToolStripMenuItem;
     }
 }
