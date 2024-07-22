@@ -145,6 +145,12 @@
     <Compile Include="Taller\Inventario\VisualizarPiezas.Designer.cs">
       <DependentUpon>VisualizarPiezas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Taller\Registro peticiones\Agregar Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\Registro peticiones\Agregar Empleado.Designer.cs">
+      <DependentUpon>Agregar Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Taller\Registro peticiones\AgregarCotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Taller\Control calidad\VisualizarControles.resx">
       <DependentUpon>VisualizarControles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\Registro peticiones\Agregar Empleado.resx">
+      <DependentUpon>Agregar Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Taller\Registro peticiones\AgregarPeticiones.resx">
       <DependentUpon>AgregarPeticiones.cs</DependentUpon>

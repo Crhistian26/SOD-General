@@ -33,6 +33,11 @@
             this.verPeticionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fR_Titulos1 = new Designer.FR_Titulos();
+            this.fR_SubTitulo1 = new Designer.FR_SubTitulo();
+            this.fR_LineaDivisora1 = new Designer.FR_LineaDivisora();
+            this.fR_Panel1 = new Designer.FR_Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +75,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.fR_Titulos1);
+            this.panel1.Controls.Add(this.fR_SubTitulo1);
+            this.panel1.Controls.Add(this.fR_LineaDivisora1);
+            this.panel1.Controls.Add(this.fR_Panel1);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
@@ -85,6 +95,51 @@
             this.pictureBox1.Size = new System.Drawing.Size(301, 78);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.fR_Titulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.fR_Titulos1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.fR_Titulos1.Location = new System.Drawing.Point(325, 0);
+            this.fR_Titulos1.Name = "fR_Titulos1";
+            this.fR_Titulos1.Padding = new System.Windows.Forms.Padding(2);
+            this.fR_Titulos1.Size = new System.Drawing.Size(123, 59);
+            this.fR_Titulos1.TabIndex = 28;
+            // 
+            // fR_SubTitulo1
+            // 
+            this.fR_SubTitulo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.fR_SubTitulo1.Location = new System.Drawing.Point(162, 53);
+            this.fR_SubTitulo1.Name = "fR_SubTitulo1";
+            this.fR_SubTitulo1.Size = new System.Drawing.Size(461, 45);
+            this.fR_SubTitulo1.TabIndex = 27;
+            // 
+            // fR_LineaDivisora1
+            // 
+            this.fR_LineaDivisora1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.fR_LineaDivisora1.Location = new System.Drawing.Point(0, -12);
+            this.fR_LineaDivisora1.Name = "fR_LineaDivisora1";
+            this.fR_LineaDivisora1.Size = new System.Drawing.Size(797, 123);
+            this.fR_LineaDivisora1.TabIndex = 21;
+            // 
+            // fR_Panel1
+            // 
+            this.fR_Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fR_Panel1.Location = new System.Drawing.Point(-14, 4);
+            this.fR_Panel1.Name = "fR_Panel1";
+            this.fR_Panel1.Size = new System.Drawing.Size(811, 419);
+            this.fR_Panel1.TabIndex = 5;
+            // 
+            // fR_TextBox2
+            // 
+            
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(473, 238);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(399, 217);
+            this.dataGridView1.TabIndex = 0;
             // 
             // AppVistaGeneral
             // 
@@ -116,5 +171,10 @@
         private System.Windows.Forms.ToolStripMenuItem verPeticionesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Designer.FR_Panel fR_Panel1;
+        private Designer.FR_LineaDivisora fR_LineaDivisora1;
+        private Designer.FR_SubTitulo fR_SubTitulo1;
+        private Designer.FR_Titulos fR_Titulos1;
     }
 }

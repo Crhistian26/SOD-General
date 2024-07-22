@@ -26,7 +26,7 @@ namespace SOD_General
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            //principal.AbrirVistaGeneral(new AppVistaGeneral(control.Ingresar(textBox1.Text, textBox2.Text)));
+         //   principal.AbrirVistaGeneral(new AppVistaGeneral(control.Ingresar(textBox1.Text, textBox2.Text)));
         }
 
         private void Login_Load(object sender, EventArgs e)
