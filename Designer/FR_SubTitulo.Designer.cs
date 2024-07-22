@@ -38,11 +38,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(451, 36);
+            this.label1.Size = new System.Drawing.Size(370, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enterprise Management System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,7 +54,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
             this.Controls.Add(this.label1);
             this.Name = "FR_SubTitulo";
-            this.Size = new System.Drawing.Size(461, 45);
+            this.Size = new System.Drawing.Size(389, 41);
             this.ResumeLayout(false);
             this.PerformLayout();
 
