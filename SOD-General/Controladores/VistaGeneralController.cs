@@ -27,7 +27,7 @@ namespace Controladores
             ToolStripMenuItem item = new ToolStripMenuItem();
             item.Text = vista.Departamento;
             item.Click += new EventHandler(Hola);
-            
+            vista.cR_MenuStrip1.Items.Add(item);
         }
 
         //Esta parte de aca se borrara luego de la demostracion
