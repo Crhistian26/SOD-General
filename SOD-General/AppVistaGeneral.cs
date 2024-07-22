@@ -1,4 +1,5 @@
-﻿using Modelos.Usuarios_Empleados;
+﻿using Controladores;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
@@ -16,21 +17,25 @@ namespace SOD_General
 {
     public partial class AppVistaGeneral : Form
     {
-
+        VistaGeneralController controller = new VistaGeneralController();
         //La lista de autorizaciones.
         List<MAuthorization> authorizations = new List<MAuthorization>();
 
+        //El departamento para la demostracion.
+        string Departamento;
+
         //El constructor que captura la lista y la llena.
-        public AppVistaGeneral(List<MAuthorization> authorizations)
+        public AppVistaGeneral(string Departamento)
         {
             InitializeComponent();
-            this.authorizations = authorizations;
+            this.Departamento = Departamento;
         }
 
         //La aplicacion cargando.
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
-            
+            ToolStripMenuItem item = controller.Comprobar_Autorizaciones(cR_MenuStrip1, Departamento);
+            cR_MenuStrip1.Items.Add(item);
         }
 
         public void AbrirFormulario(Form formulario)
@@ -49,21 +54,5 @@ namespace SOD_General
             formula.Show();
         }
 
-        public event EventHandler ReajustarSize;
-
-        private void holaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void hoalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(new Visual_Empleados());
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

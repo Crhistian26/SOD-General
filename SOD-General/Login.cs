@@ -33,18 +33,25 @@ namespace SOD_General
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
             //Aca me captura las autorizaciones del usuario con el metodo Ingresar.
-            List<MAuthorization> Autorizaciones = control.Ingresar(textBox1.texts, textBox2.texts);
+            //List<MAuthorization> Autorizaciones = control.Ingresar(textBox1.texts, textBox2.texts);
             
             //Me limpia los textboxs.
-            textBox1.texts = null;
-            textBox2.texts = null;
+            
 
             //En caso que sea nulo me ejecuta la funcion desde la VistaPrincipal.
-            if(Autorizaciones != null)
+            //if(Autorizaciones != null)
+            //{
+            //    principal.AbrirVistaGeneral(Autorizaciones);
+            //}
+            string depart;
+            depart = control.Ingresar(textBox1.texts,textBox2.texts,1);
+
+            if(depart != null)
             {
-                principal.AbrirVistaGeneral(Autorizaciones);
+                principal.AbrirVistaGeneral(depart);
             }
-            
+            textBox1.texts = null;
+            textBox2.texts = null;
         }
 
     }

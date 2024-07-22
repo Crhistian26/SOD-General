@@ -33,8 +33,6 @@
             this.cR_Label2 = new CR_LabelUp();
             this.textBox1 = new Designer.FR_TextBox();
             this.textBox2 = new Designer.FR_TextBox();
-            this.soD_TextBox1 = new SOD_TextBox();
-            this.soD_TextBox2 = new SOD_TextBox();
             this.SuspendLayout();
             // 
             // botones_Nuevos1
@@ -93,7 +91,7 @@
             this.textBox1.PasswordChar = false;
             this.textBox1.Size = new System.Drawing.Size(270, 30);
             this.textBox1.TabIndex = 7;
-            this.textBox1.texts = "fdsf";
+            this.textBox1.texts = "";
             this.textBox1.UnderlinedStyle = false;
             // 
             // textBox2
@@ -113,38 +111,12 @@
             this.textBox2.texts = "";
             this.textBox2.UnderlinedStyle = false;
             // 
-            // soD_TextBox1
-            // 
-            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox1.BorderSize = 2;
-            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox1.Location = new System.Drawing.Point(23, 180);
-            this.soD_TextBox1.Name = "soD_TextBox1";
-            this.soD_TextBox1.Size = new System.Drawing.Size(100, 21);
-            this.soD_TextBox1.TabIndex = 12;
-            // 
-            // soD_TextBox2
-            // 
-            this.soD_TextBox2.BorderColor = System.Drawing.Color.MediumSpringGreen;
-            this.soD_TextBox2.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox2.BorderSize = 2;
-            this.soD_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox2.Location = new System.Drawing.Point(320, 189);
-            this.soD_TextBox2.Name = "soD_TextBox2";
-            this.soD_TextBox2.Size = new System.Drawing.Size(100, 21);
-            this.soD_TextBox2.TabIndex = 13;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(452, 238);
-            this.Controls.Add(this.soD_TextBox2);
-            this.Controls.Add(this.soD_TextBox1);
             this.Controls.Add(this.cR_Label2);
             this.Controls.Add(this.cR_Label1);
             this.Controls.Add(this.textBox2);
@@ -165,7 +137,5 @@
         private CR_LabelUp cR_Label2;
         private Designer.FR_TextBox textBox1;
         private Designer.FR_TextBox textBox2;
-        private SOD_TextBox soD_TextBox1;
-        private SOD_TextBox soD_TextBox2;
     }
 }

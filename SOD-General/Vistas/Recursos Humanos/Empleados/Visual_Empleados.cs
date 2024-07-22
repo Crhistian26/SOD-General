@@ -25,7 +25,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         private void Visual_Empleados_Load(object sender, EventArgs e)
         {
-            cR_DataGriedView1.Rows.Add("Hola men");
+            
         }
     }
 }

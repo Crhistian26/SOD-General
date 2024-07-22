@@ -84,7 +84,23 @@ namespace Controladores
             }
             
         }
-    }
 
-    
+        //Esto se borrara luego de la demostracion
+        public string Ingresar(string username, string password, int? y = null)
+        {
+            string Query = "select _Department from Employees E inner join Users U on U.EmployeeId = E.IdEmployee inner join Departments D on D.IdDepartment = E.DepartmentId where _User = @user and _Password = @pass;";
+            SqlCommand cmd = new SqlCommand(Query, conex);
+            cmd.Parameters.AddWithValue("@user", username);
+            cmd.Parameters.AddWithValue("@pass", password);
+            string departamento = null;
+            conex.Open();
+            SqlDataReader lector = cmd.ExecuteReader();
+            if (lector.Read())
+            {
+                departamento = lector.GetString(0);
+            }
+            conex.Close();
+            return departamento;
+        }
+    }
 }

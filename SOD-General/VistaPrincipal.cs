@@ -50,17 +50,25 @@ namespace SOD_General
 
         //Este es un metodo que me abrira la vista general y le enviara sus autorizaciones.
         //Esta se ejecutara desde el Login no desde aqui.
-        public void AbrirVistaGeneral(List<MAuthorization> autorizaciones)
+        //public void AbrirVistaGeneral(List<MAuthorization> autorizaciones)
+        //{
+        //    this.FormBorderStyle = FormBorderStyle.Sizable;
+        //    this.WindowState = FormWindowState.Maximized;
+
+        //    _appVistaGeneral = new AppVistaGeneral(autorizaciones);
+            
+        //    AbrirFormulario(_appVistaGeneral);
+        //}
+
+        public void AbrirVistaGeneral(string hola)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;
 
-            _appVistaGeneral = new AppVistaGeneral(autorizaciones);
-            
+            _appVistaGeneral = new AppVistaGeneral(hola);
+
             AbrirFormulario(_appVistaGeneral);
         }
-
-        
         private void VistaPrincipal_Resize(object sender, EventArgs e)
         {
             if (_appVistaGeneral != null)

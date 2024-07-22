@@ -243,10 +243,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controladores\" />
     <Folder Include="Recursos Humanos\Motivos\" />
     <Folder Include="Recursos Humanos\Registros\" />
     <Folder Include="Renta\a\" />
     <Folder Include="Ventas\Apartado de tareas\" />
+    <Folder Include="Vistas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-sod-soluciones-diaz-fixed.png" />
