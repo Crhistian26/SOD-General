@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.fR_TextBox1 = new Designer.FR_TextBox();
             this.cR_Subtitulos4 = new CR_Subtitulos();
-            this.cR_Subtitulos2 = new CR_Subtitulos();
-            this.fR_TextBox2 = new Designer.FR_TextBox();
-            this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.fR_TextBox6 = new Designer.FR_TextBox();
+            this.fR_TextBox3 = new Designer.FR_TextBox();
+            this.cR_Subtitulos8 = new CR_Subtitulos();
+            this.cR_Subtitulos7 = new CR_Subtitulos();
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.cR_Subtitulos5 = new CR_Subtitulos();
             this.fR_TextBox5 = new Designer.FR_TextBox();
             this.cR_Subtitulos6 = new CR_Subtitulos();
-            this.cR_Subtitulos7 = new CR_Subtitulos();
-            this.cR_Subtitulos8 = new CR_Subtitulos();
-            this.fR_TextBox3 = new Designer.FR_TextBox();
-            this.fR_TextBox6 = new Designer.FR_TextBox();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.fR_TextBox1 = new Designer.FR_TextBox();
+            this.cR_Subtitulos2 = new CR_Subtitulos();
+            this.fR_TextBox2 = new Designer.FR_TextBox();
+            this.cR_Subtitulos1 = new CR_Subtitulos();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,26 +80,11 @@
             this.splitContainer1.SplitterDistance = 99;
             this.splitContainer1.TabIndex = 0;
             // 
-            // fR_TextBox1
-            // 
-            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fR_TextBox1.Location = new System.Drawing.Point(7, 39);
-            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox1.Multiline = true;
-            this.fR_TextBox1.Name = "fR_TextBox1";
-            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(165, 39);
-            this.fR_TextBox1.TabIndex = 28;
-            this.fR_TextBox1.texts = "fafa";
-            this.fR_TextBox1.UnderlinedStyle = false;
-            // 
             // cR_Subtitulos4
             // 
+            this.cR_Subtitulos4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Subtitulos4.AutoSize = true;
             this.cR_Subtitulos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos4.Font = new System.Drawing.Font("Microsoft YaHei", 16F);
@@ -110,47 +95,88 @@
             this.cR_Subtitulos4.TabIndex = 27;
             this.cR_Subtitulos4.Text = "Editar Cliente\r\n";
             // 
-            // cR_Subtitulos2
+            // botones_Nuevos1
             // 
-            this.cR_Subtitulos2.AutoSize = true;
-            this.cR_Subtitulos2.BackColor = System.Drawing.Color.Transparent;
-            this.cR_Subtitulos2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cR_Subtitulos2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos2.Location = new System.Drawing.Point(181, 6);
-            this.cR_Subtitulos2.Name = "cR_Subtitulos2";
-            this.cR_Subtitulos2.Size = new System.Drawing.Size(96, 25);
-            this.cR_Subtitulos2.TabIndex = 23;
-            this.cR_Subtitulos2.Text = "Apellidos";
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(201, 261);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(162, 59);
+            this.botones_Nuevos1.TabIndex = 38;
+            this.botones_Nuevos1.Text = "Editar\r\n";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
-            // fR_TextBox2
+            // fR_TextBox6
             // 
-            this.fR_TextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox2.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox2.BorderSize = 2;
-            this.fR_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fR_TextBox2.Location = new System.Drawing.Point(186, 39);
-            this.fR_TextBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox2.Multiline = true;
-            this.fR_TextBox2.Name = "fR_TextBox2";
-            this.fR_TextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox2.PasswordChar = false;
-            this.fR_TextBox2.Size = new System.Drawing.Size(177, 39);
-            this.fR_TextBox2.TabIndex = 22;
-            this.fR_TextBox2.texts = "fafa";
-            this.fR_TextBox2.UnderlinedStyle = false;
+            this.fR_TextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox6.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox6.BorderSize = 2;
+            this.fR_TextBox6.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fR_TextBox6.Location = new System.Drawing.Point(315, 211);
+            this.fR_TextBox6.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox6.Multiline = true;
+            this.fR_TextBox6.Name = "fR_TextBox6";
+            this.fR_TextBox6.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox6.PasswordChar = false;
+            this.fR_TextBox6.Size = new System.Drawing.Size(186, 39);
+            this.fR_TextBox6.TabIndex = 36;
+            this.fR_TextBox6.texts = "fafa";
+            this.fR_TextBox6.UnderlinedStyle = false;
             // 
-            // cR_Subtitulos1
+            // fR_TextBox3
             // 
-            this.cR_Subtitulos1.AutoSize = true;
-            this.cR_Subtitulos1.BackColor = System.Drawing.Color.Transparent;
-            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(9, 6);
-            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(96, 25);
-            this.cR_Subtitulos1.TabIndex = 21;
-            this.cR_Subtitulos1.Text = "Nombres";
+            this.fR_TextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox3.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox3.BorderSize = 2;
+            this.fR_TextBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fR_TextBox3.Location = new System.Drawing.Point(81, 211);
+            this.fR_TextBox3.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox3.Multiline = true;
+            this.fR_TextBox3.Name = "fR_TextBox3";
+            this.fR_TextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox3.PasswordChar = false;
+            this.fR_TextBox3.Size = new System.Drawing.Size(186, 39);
+            this.fR_TextBox3.TabIndex = 35;
+            this.fR_TextBox3.texts = "fafa";
+            this.fR_TextBox3.UnderlinedStyle = false;
+            // 
+            // cR_Subtitulos8
+            // 
+            this.cR_Subtitulos8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos8.AutoSize = true;
+            this.cR_Subtitulos8.BackColor = System.Drawing.Color.Transparent;
+            this.cR_Subtitulos8.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_Subtitulos8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos8.Location = new System.Drawing.Point(392, 6);
+            this.cR_Subtitulos8.Name = "cR_Subtitulos8";
+            this.cR_Subtitulos8.Size = new System.Drawing.Size(96, 25);
+            this.cR_Subtitulos8.TabIndex = 34;
+            this.cR_Subtitulos8.Text = "Contacto";
+            // 
+            // cR_Subtitulos7
+            // 
+            this.cR_Subtitulos7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos7.AutoSize = true;
+            this.cR_Subtitulos7.BackColor = System.Drawing.Color.Transparent;
+            this.cR_Subtitulos7.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_Subtitulos7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos7.Location = new System.Drawing.Point(310, 178);
+            this.cR_Subtitulos7.Name = "cR_Subtitulos7";
+            this.cR_Subtitulos7.Size = new System.Drawing.Size(104, 25);
+            this.cR_Subtitulos7.TabIndex = 33;
+            this.cR_Subtitulos7.Text = "Numero 2";
             // 
             // fR_TextBox4
             // 
@@ -172,6 +198,9 @@
             // 
             // cR_Subtitulos5
             // 
+            this.cR_Subtitulos5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Subtitulos5.AutoSize = true;
             this.cR_Subtitulos5.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos5.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,6 +231,9 @@
             // 
             // cR_Subtitulos6
             // 
+            this.cR_Subtitulos6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Subtitulos6.AutoSize = true;
             this.cR_Subtitulos6.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,82 +244,71 @@
             this.cR_Subtitulos6.TabIndex = 29;
             this.cR_Subtitulos6.Text = "Direccion";
             // 
-            // cR_Subtitulos7
+            // fR_TextBox1
             // 
-            this.cR_Subtitulos7.AutoSize = true;
-            this.cR_Subtitulos7.BackColor = System.Drawing.Color.Transparent;
-            this.cR_Subtitulos7.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cR_Subtitulos7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos7.Location = new System.Drawing.Point(310, 178);
-            this.cR_Subtitulos7.Name = "cR_Subtitulos7";
-            this.cR_Subtitulos7.Size = new System.Drawing.Size(104, 25);
-            this.cR_Subtitulos7.TabIndex = 33;
-            this.cR_Subtitulos7.Text = "Numero 2";
+            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox1.BorderSize = 2;
+            this.fR_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fR_TextBox1.Location = new System.Drawing.Point(7, 39);
+            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox1.Multiline = true;
+            this.fR_TextBox1.Name = "fR_TextBox1";
+            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox1.PasswordChar = false;
+            this.fR_TextBox1.Size = new System.Drawing.Size(165, 39);
+            this.fR_TextBox1.TabIndex = 28;
+            this.fR_TextBox1.texts = "fafa";
+            this.fR_TextBox1.UnderlinedStyle = false;
             // 
-            // cR_Subtitulos8
+            // cR_Subtitulos2
             // 
-            this.cR_Subtitulos8.AutoSize = true;
-            this.cR_Subtitulos8.BackColor = System.Drawing.Color.Transparent;
-            this.cR_Subtitulos8.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cR_Subtitulos8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos8.Location = new System.Drawing.Point(392, 6);
-            this.cR_Subtitulos8.Name = "cR_Subtitulos8";
-            this.cR_Subtitulos8.Size = new System.Drawing.Size(96, 25);
-            this.cR_Subtitulos8.TabIndex = 34;
-            this.cR_Subtitulos8.Text = "Contacto";
+            this.cR_Subtitulos2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos2.AutoSize = true;
+            this.cR_Subtitulos2.BackColor = System.Drawing.Color.Transparent;
+            this.cR_Subtitulos2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_Subtitulos2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos2.Location = new System.Drawing.Point(181, 6);
+            this.cR_Subtitulos2.Name = "cR_Subtitulos2";
+            this.cR_Subtitulos2.Size = new System.Drawing.Size(96, 25);
+            this.cR_Subtitulos2.TabIndex = 23;
+            this.cR_Subtitulos2.Text = "Apellidos";
             // 
-            // fR_TextBox3
+            // fR_TextBox2
             // 
-            this.fR_TextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox3.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox3.BorderSize = 2;
-            this.fR_TextBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fR_TextBox3.Location = new System.Drawing.Point(81, 211);
-            this.fR_TextBox3.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox3.Multiline = true;
-            this.fR_TextBox3.Name = "fR_TextBox3";
-            this.fR_TextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox3.PasswordChar = false;
-            this.fR_TextBox3.Size = new System.Drawing.Size(186, 39);
-            this.fR_TextBox3.TabIndex = 35;
-            this.fR_TextBox3.texts = "fafa";
-            this.fR_TextBox3.UnderlinedStyle = false;
+            this.fR_TextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox2.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox2.BorderSize = 2;
+            this.fR_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fR_TextBox2.Location = new System.Drawing.Point(186, 39);
+            this.fR_TextBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox2.Multiline = true;
+            this.fR_TextBox2.Name = "fR_TextBox2";
+            this.fR_TextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox2.PasswordChar = false;
+            this.fR_TextBox2.Size = new System.Drawing.Size(177, 39);
+            this.fR_TextBox2.TabIndex = 22;
+            this.fR_TextBox2.texts = "fafa";
+            this.fR_TextBox2.UnderlinedStyle = false;
             // 
-            // fR_TextBox6
+            // cR_Subtitulos1
             // 
-            this.fR_TextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox6.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox6.BorderSize = 2;
-            this.fR_TextBox6.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fR_TextBox6.Location = new System.Drawing.Point(315, 211);
-            this.fR_TextBox6.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox6.Multiline = true;
-            this.fR_TextBox6.Name = "fR_TextBox6";
-            this.fR_TextBox6.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox6.PasswordChar = false;
-            this.fR_TextBox6.Size = new System.Drawing.Size(186, 39);
-            this.fR_TextBox6.TabIndex = 36;
-            this.fR_TextBox6.texts = "fafa";
-            this.fR_TextBox6.UnderlinedStyle = false;
-            // 
-            // botones_Nuevos1
-            // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(201, 261);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(162, 59);
-            this.botones_Nuevos1.TabIndex = 38;
-            this.botones_Nuevos1.Text = "Editar\r\n";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos1.AutoSize = true;
+            this.cR_Subtitulos1.BackColor = System.Drawing.Color.Transparent;
+            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(9, 6);
+            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(96, 25);
+            this.cR_Subtitulos1.TabIndex = 21;
+            this.cR_Subtitulos1.Text = "Nombres";
             // 
             // AgregarPeticiones
             // 
@@ -297,6 +318,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "AgregarPeticiones";
             this.Text = "Editar Clientes";
+            this.Load += new System.EventHandler(this.AgregarPeticiones_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

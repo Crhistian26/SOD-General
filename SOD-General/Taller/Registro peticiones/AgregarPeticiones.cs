@@ -21,5 +21,10 @@ namespace SOD_General.Taller.Registro_peticiones
         {
 
         }
+
+        private void AgregarPeticiones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.fR_TextBox1 = new Designer.FR_TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fR_TextBox1 = new Designer.FR_TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.fR_TextBox1);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker2);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker1);
@@ -68,6 +70,23 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 106;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // fR_TextBox1
+            // 
+            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox1.BorderColor = System.Drawing.Color.Teal;
+            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
+            this.fR_TextBox1.BorderSize = 2;
+            this.fR_TextBox1.Location = new System.Drawing.Point(256, 69);
+            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox1.Multiline = true;
+            this.fR_TextBox1.Name = "fR_TextBox1";
+            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox1.PasswordChar = false;
+            this.fR_TextBox1.Size = new System.Drawing.Size(270, 30);
+            this.fR_TextBox1.TabIndex = 4;
+            this.fR_TextBox1.texts = "";
+            this.fR_TextBox1.UnderlinedStyle = false;
             // 
             // dateTimePicker2
             // 
@@ -156,22 +175,12 @@
             this.Details.Name = "Details";
             this.Details.ReadOnly = true;
             // 
-            // fR_TextBox1
+            // textBox1
             // 
-            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox1.BorderColor = System.Drawing.Color.Teal;
-            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Location = new System.Drawing.Point(575, 34);
-            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox1.Multiline = true;
-            this.fR_TextBox1.Name = "fR_TextBox1";
-            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(270, 30);
-            this.fR_TextBox1.TabIndex = 4;
-            this.fR_TextBox1.texts = "";
-            this.fR_TextBox1.UnderlinedStyle = false;
+            this.textBox1.Location = new System.Drawing.Point(591, 69);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
             // 
             // VisualizarPeticiones
             // 
@@ -206,5 +215,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Details;
         private Designer.FR_TextBox fR_TextBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

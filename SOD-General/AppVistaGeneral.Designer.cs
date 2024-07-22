@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cR_MenuStrip1 = new CR_MenuStrip();
             this.hoalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cR_MenuStrip1.SuspendLayout();
@@ -40,6 +41,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
@@ -79,6 +81,14 @@
             this.hoalToolStripMenuItem.Text = "Hoal";
             this.hoalToolStripMenuItem.Click += new System.EventHandler(this.hoalToolStripMenuItem_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(332, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
             // AppVistaGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +102,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AppVistaGeneral_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cR_MenuStrip1.ResumeLayout(false);
             this.cR_MenuStrip1.PerformLayout();
@@ -105,5 +116,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private CR_MenuStrip cR_MenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hoalToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

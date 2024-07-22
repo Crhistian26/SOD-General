@@ -60,5 +60,10 @@ namespace SOD_General
         {
             AbrirFormulario(new Visual_Empleados());
         }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
