@@ -52,6 +52,9 @@
     <Compile Include="CR_MenuStrip.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CR_SplitContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CR_Subtitulos.cs">
       <SubType>Component</SubType>
     </Compile>
