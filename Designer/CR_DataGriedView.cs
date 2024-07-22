@@ -20,9 +20,7 @@ public class CR_DataGriedView : DataGridView
 
 
         this.ColumnHeadersDefaultCellStyle = data;
-
-
-
+        this.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
     }
 }
 

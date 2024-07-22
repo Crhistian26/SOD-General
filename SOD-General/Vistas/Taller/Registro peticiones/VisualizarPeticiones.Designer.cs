@@ -30,10 +30,14 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.cR_LabelUp1 = new CR_LabelUp();
+            this.Cliente = new CR_LabelUp();
             this.soD_ComboBox1 = new SOD_ComboBox();
-            this.fR_DateTime1 = new Designer.FR_DateTime();
+            this.cR_LabelUp2 = new CR_LabelUp();
+            this.cR_LabelUp1 = new CR_LabelUp();
+            this.cR_DateTimePicker2 = new CR_DateTimePicker();
+            this.cR_DateTimePicker1 = new CR_DateTimePicker();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.cR_Subtitulos1 = new CR_Subtitulos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -52,16 +56,80 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.fR_DateTime1);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.Cliente);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_ComboBox1);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp1);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_DateTimePicker2);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_DateTimePicker1);
             // 
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(927, 450);
-            this.cR_SplitContainer1.SplitterDistance = 129;
+            this.cR_SplitContainer1.SplitterDistance = 130;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // Cliente
+            // 
+            this.Cliente.AutoSize = true;
+            this.Cliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.Cliente.ForeColor = System.Drawing.Color.White;
+            this.Cliente.Location = new System.Drawing.Point(13, 59);
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Size = new System.Drawing.Size(56, 20);
+            this.Cliente.TabIndex = 8;
+            this.Cliente.Text = "Cliente";
+            // 
+            // soD_ComboBox1
+            // 
+            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox1.FormattingEnabled = true;
+            this.soD_ComboBox1.Location = new System.Drawing.Point(12, 85);
+            this.soD_ComboBox1.Name = "soD_ComboBox1";
+            this.soD_ComboBox1.Size = new System.Drawing.Size(200, 27);
+            this.soD_ComboBox1.TabIndex = 7;
+            // 
+            // cR_LabelUp2
+            // 
+            this.cR_LabelUp2.AutoSize = true;
+            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp2.Location = new System.Drawing.Point(646, 59);
+            this.cR_LabelUp2.Name = "cR_LabelUp2";
+            this.cR_LabelUp2.Size = new System.Drawing.Size(47, 20);
+            this.cR_LabelUp2.TabIndex = 6;
+            this.cR_LabelUp2.Text = "Hasta";
+            // 
+            // cR_LabelUp1
+            // 
+            this.cR_LabelUp1.AutoSize = true;
+            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp1.Location = new System.Drawing.Point(346, 59);
+            this.cR_LabelUp1.Name = "cR_LabelUp1";
+            this.cR_LabelUp1.Size = new System.Drawing.Size(51, 20);
+            this.cR_LabelUp1.TabIndex = 5;
+            this.cR_LabelUp1.Text = "Desde";
+            // 
+            // cR_DateTimePicker2
+            // 
+            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(346, 85);
+            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
+            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker2.TabIndex = 4;
+            // 
+            // cR_DateTimePicker1
+            // 
+            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(650, 85);
+            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker1.TabIndex = 3;
             // 
             // cR_DataGriedView1
             // 
@@ -78,36 +146,23 @@
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(927, 317);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(927, 316);
             this.cR_DataGriedView1.TabIndex = 0;
             // 
-            // cR_LabelUp1
+            // cR_Subtitulos1
             // 
-            this.cR_LabelUp1.AutoSize = true;
-            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(12, 9);
-            this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(77, 20);
-            this.cR_LabelUp1.TabIndex = 0;
-            this.cR_LabelUp1.Text = "Empleado";
-            // 
-            // soD_ComboBox1
-            // 
-            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Location = new System.Drawing.Point(16, 32);
-            this.soD_ComboBox1.Name = "soD_ComboBox1";
-            this.soD_ComboBox1.Size = new System.Drawing.Size(112, 27);
-            this.soD_ComboBox1.TabIndex = 1;
-            // 
-            // fR_DateTime1
-            // 
-            this.fR_DateTime1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fR_DateTime1.Location = new System.Drawing.Point(182, 70);
-            this.fR_DateTime1.Name = "fR_DateTime1";
-            this.fR_DateTime1.Size = new System.Drawing.Size(371, 34);
-            this.fR_DateTime1.TabIndex = 2;
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos1.AutoSize = true;
+            this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(13, 13);
+            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(311, 31);
+            this.cR_Subtitulos1.TabIndex = 9;
+            this.cR_Subtitulos1.Text = "Peticiones de reparacion";
             // 
             // VisualizarPeticiones
             // 
@@ -133,8 +188,12 @@
 
         private CR_SplitContainer cR_SplitContainer1;
         private CR_DataGriedView cR_DataGriedView1;
-        private Designer.FR_DateTime fR_DateTime1;
+        private CR_DateTimePicker cR_DateTimePicker2;
+        private CR_DateTimePicker cR_DateTimePicker1;
+        private CR_LabelUp Cliente;
         private SOD_ComboBox soD_ComboBox1;
+        private CR_LabelUp cR_LabelUp2;
         private CR_LabelUp cR_LabelUp1;
+        private CR_Subtitulos cR_Subtitulos1;
     }
 }
