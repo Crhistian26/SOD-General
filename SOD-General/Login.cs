@@ -19,7 +19,7 @@ namespace SOD_General
         VistaPrincipal principal { get; set; }
 
         //Este es el controlador para usar sus funciones.
-        LoginController control = new LoginController();
+        LoginController controller = new LoginController();
 
 
         //Su constructor donde recibe la vistaprincipal.
@@ -44,7 +44,7 @@ namespace SOD_General
             //    principal.AbrirVistaGeneral(Autorizaciones);
             //}
             string depart;
-            depart = control.Ingresar(textBox1.texts,textBox2.texts,1);
+            depart = controller.Ingresar(textBox1.texts,textBox2.texts,1);
 
             if(depart != null)
             {
@@ -54,6 +54,10 @@ namespace SOD_General
             textBox2.texts = null;
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

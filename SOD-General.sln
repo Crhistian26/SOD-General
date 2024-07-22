@@ -5,8 +5,6 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOD-General", "SOD-General\SOD-General.csproj", "{7E3053FD-63EF-4307-8D4B-956FE9450E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controladores", "Controladores\Controladores.csproj", "{E0979393-66B0-4D9B-885F-E7387B7196E4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.csproj", "{4B11446B-6628-48D7-B409-3529BF36AAA0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Designer", "Designer\Designer.csproj", "{CD3416CC-D457-4CE1-9657-F129AB229A86}"
@@ -21,10 +19,6 @@ Global
 		{7E3053FD-63EF-4307-8D4B-956FE9450E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E3053FD-63EF-4307-8D4B-956FE9450E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E3053FD-63EF-4307-8D4B-956FE9450E54}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0979393-66B0-4D9B-885F-E7387B7196E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0979393-66B0-4D9B-885F-E7387B7196E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0979393-66B0-4D9B-885F-E7387B7196E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0979393-66B0-4D9B-885F-E7387B7196E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B11446B-6628-48D7-B409-3529BF36AAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4B11446B-6628-48D7-B409-3529BF36AAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B11446B-6628-48D7-B409-3529BF36AAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU

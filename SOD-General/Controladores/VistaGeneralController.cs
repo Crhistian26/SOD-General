@@ -1,4 +1,5 @@
 ﻿using Modelos.Usuarios_Empleados;
+using SOD_General;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,17 +14,20 @@ namespace Controladores
 {
     public class VistaGeneralController
     {
-        
-        //cadena de conexion y la propia conexion.
-        static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
-        SqlConnection conex = new SqlConnection(cadena);
 
-        public ToolStripMenuItem Comprobar_Autorizaciones(MenuStrip menu, string departamento)
+        AppVistaGeneral vista;
+
+        public VistaGeneralController(AppVistaGeneral vista)
+        {
+            this.vista = vista;
+        }
+
+        public void Comprobar_Autorizaciones()
         {
             ToolStripMenuItem item = new ToolStripMenuItem();
-            item.Text = departamento;
+            item.Text = vista.Departamento;
             item.Click += new EventHandler(Hola);
-            return item;
+            
         }
 
         //Esta parte de aca se borrara luego de la demostracion

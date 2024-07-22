@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
@@ -47,52 +48,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Almacen\Agregar equipos.cs">
+    <Compile Include="Controladores\LoginController.cs" />
+    <Compile Include="Controladores\VistaGeneralController.cs" />
+    <Compile Include="Vistas\Almacen\Agregar equipos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Agregar equipos.Designer.cs">
+    <Compile Include="Vistas\Almacen\Agregar equipos.Designer.cs">
       <DependentUpon>Agregar equipos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\Retirar equipos Conduce.cs">
+    <Compile Include="Vistas\Almacen\Retirar equipos Conduce.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Retirar equipos Conduce.Designer.cs">
+    <Compile Include="Vistas\Almacen\Retirar equipos Conduce.Designer.cs">
       <DependentUpon>Retirar equipos Conduce.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\Retirar equipos Renta.cs">
+    <Compile Include="Vistas\Almacen\Retirar equipos Renta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Retirar equipos Renta.Designer.cs">
+    <Compile Include="Vistas\Almacen\Retirar equipos Renta.Designer.cs">
       <DependentUpon>Retirar equipos Renta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\Retirar equipos Venta.cs">
+    <Compile Include="Vistas\Almacen\Retirar equipos Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Retirar equipos Venta.Designer.cs">
+    <Compile Include="Vistas\Almacen\Retirar equipos Venta.Designer.cs">
       <DependentUpon>Retirar equipos Venta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\Vista de Conduces.cs">
+    <Compile Include="Vistas\Almacen\Vista de Conduces.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Vista de Conduces.Designer.cs">
+    <Compile Include="Vistas\Almacen\Vista de Conduces.Designer.cs">
       <DependentUpon>Vista de Conduces.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\Vista de Rentas.cs">
+    <Compile Include="Vistas\Almacen\Vista de Rentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Vista de Rentas.Designer.cs">
+    <Compile Include="Vistas\Almacen\Vista de Rentas.Designer.cs">
       <DependentUpon>Vista de Rentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\Vista de Ventas.cs">
+    <Compile Include="Vistas\Almacen\Vista de Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Vista de Ventas.Designer.cs">
+    <Compile Include="Vistas\Almacen\Vista de Ventas.Designer.cs">
       <DependentUpon>Vista de Ventas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Almacen\Visualizar equipos.cs">
+    <Compile Include="Vistas\Almacen\Visualizar equipos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Almacen\Visualizar equipos.Designer.cs">
+    <Compile Include="Vistas\Almacen\Visualizar equipos.Designer.cs">
       <DependentUpon>Visualizar equipos.cs</DependentUpon>
     </Compile>
     <Compile Include="AppVistaGeneral.cs">
@@ -109,58 +112,58 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recursos Humanos\Empleados\Visual_Empleados.cs">
+    <Compile Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recursos Humanos\Empleados\Visual_Empleados.Designer.cs">
+    <Compile Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.Designer.cs">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Control calidad\AgregarControles.cs">
+    <Compile Include="Vistas\Taller\Control calidad\AgregarControles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Control calidad\AgregarControles.Designer.cs">
+    <Compile Include="Vistas\Taller\Control calidad\AgregarControles.Designer.cs">
       <DependentUpon>AgregarControles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Control calidad\EditarControles.cs">
+    <Compile Include="Vistas\Taller\Control calidad\EditarControles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Control calidad\EditarControles.Designer.cs">
+    <Compile Include="Vistas\Taller\Control calidad\EditarControles.Designer.cs">
       <DependentUpon>EditarControles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Control calidad\VisualizarControles.cs">
+    <Compile Include="Vistas\Taller\Control calidad\VisualizarControles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Control calidad\VisualizarControles.Designer.cs">
+    <Compile Include="Vistas\Taller\Control calidad\VisualizarControles.Designer.cs">
       <DependentUpon>VisualizarControles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Inventario\AgregarPiezas.cs">
+    <Compile Include="Vistas\Taller\Inventario\AgregarPiezas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Inventario\AgregarPiezas.Designer.cs">
+    <Compile Include="Vistas\Taller\Inventario\AgregarPiezas.Designer.cs">
       <DependentUpon>AgregarPiezas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Inventario\VisualizarPiezas.cs">
+    <Compile Include="Vistas\Taller\Inventario\VisualizarPiezas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Inventario\VisualizarPiezas.Designer.cs">
+    <Compile Include="Vistas\Taller\Inventario\VisualizarPiezas.Designer.cs">
       <DependentUpon>VisualizarPiezas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\AgregarCotizaciones.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\AgregarCotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\AgregarCotizaciones.Designer.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\AgregarCotizaciones.Designer.cs">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\AgregarEntradas.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\AgregarEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\AgregarEntradas.Designer.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\AgregarEntradas.Designer.cs">
       <DependentUpon>AgregarEntradas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\AgregarPeticiones.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\AgregarPeticiones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\AgregarPeticiones.Designer.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\AgregarPeticiones.Designer.cs">
       <DependentUpon>AgregarPeticiones.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaPrincipal.cs">
@@ -169,13 +172,13 @@
     <Compile Include="VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\VisualizarPeticiones.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\VisualizarPeticiones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\Registro peticiones\VisualizarPeticiones.Designer.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\VisualizarPeticiones.Designer.cs">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Almacen\Agregar equipos.resx">
+    <EmbeddedResource Include="Vistas\Almacen\Agregar equipos.resx">
       <DependentUpon>Agregar equipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppVistaGeneral.resx">
@@ -194,25 +197,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Recursos Humanos\Empleados\Visual_Empleados.resx">
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.resx">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Taller\Control calidad\AgregarControles.resx">
+    <EmbeddedResource Include="Vistas\Taller\Control calidad\AgregarControles.resx">
       <DependentUpon>AgregarControles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Taller\Control calidad\EditarControles.resx">
+    <EmbeddedResource Include="Vistas\Taller\Control calidad\EditarControles.resx">
       <DependentUpon>EditarControles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Taller\Control calidad\VisualizarControles.resx">
+    <EmbeddedResource Include="Vistas\Taller\Control calidad\VisualizarControles.resx">
       <DependentUpon>VisualizarControles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Taller\Registro peticiones\AgregarPeticiones.resx">
+    <EmbeddedResource Include="Vistas\Taller\Registro peticiones\AgregarPeticiones.resx">
       <DependentUpon>AgregarPeticiones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Taller\Registro peticiones\VisualizarPeticiones.resx">
+    <EmbeddedResource Include="Vistas\Taller\Registro peticiones\VisualizarPeticiones.resx">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -229,10 +232,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controladores\Controladores.csproj">
-      <Project>{e0979393-66b0-4d9b-885f-e7387b7196e4}</Project>
-      <Name>Controladores</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Designer\Designer.csproj">
       <Project>{cd3416cc-d457-4ce1-9657-f129ab229a86}</Project>
       <Name>Designer</Name>
@@ -243,12 +242,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controladores\" />
-    <Folder Include="Recursos Humanos\Motivos\" />
-    <Folder Include="Recursos Humanos\Registros\" />
-    <Folder Include="Renta\a\" />
-    <Folder Include="Ventas\Apartado de tareas\" />
-    <Folder Include="Vistas\" />
+    <Folder Include="Vistas\Recursos Humanos\Motivos\" />
+    <Folder Include="Vistas\Recursos Humanos\Registros\" />
+    <Folder Include="Vistas\Renta\a\" />
+    <Folder Include="Vistas\Ventas\Apartado de tareas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-sod-soluciones-diaz-fixed.png" />

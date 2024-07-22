@@ -35,7 +35,7 @@ namespace SOD_General
         //La aplicacion cargando.
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
-            controller.Comprobar_Autorizaciones(this);
+            controller.Comprobar_Autorizaciones();
         }
 
         public void AbrirFormulario(Form formulario)
