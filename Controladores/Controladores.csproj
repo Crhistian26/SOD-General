@@ -46,6 +46,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="LoginController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VistaGeneralController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Designer\Designer.csproj">

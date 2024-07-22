@@ -29,14 +29,6 @@ namespace SOD_General
         //La aplicacion cargando.
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
-
-            if(authorizations != null)
-            {
-                foreach (MAuthorization auth in authorizations)
-                {
-                    MessageBox.Show(auth._Authorization);
-                }
-            }
             
         }
 

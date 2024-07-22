@@ -14,6 +14,6 @@ namespace Controladores
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
 
-        public void 
+        
     }
 }

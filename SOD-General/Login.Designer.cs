@@ -88,7 +88,6 @@
             this.textBox1.TabIndex = 7;
             this.textBox1.texts = "fdsf";
             this.textBox1.UnderlinedStyle = false;
-            this.textBox1._TextChanged += new System.EventHandler(this.textBox1__TextChanged);
             // 
             // botones_Nuevos1
             // 
@@ -122,7 +121,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
