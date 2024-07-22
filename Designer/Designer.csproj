@@ -49,6 +49,9 @@
     <Compile Include="CR_DataGriedView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CR_DateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CR_LabelDown.cs">
       <SubType>Component</SubType>
     </Compile>
