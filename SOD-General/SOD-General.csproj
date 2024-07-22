@@ -195,6 +195,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Taller\Control calidad\AgregarControles.resx">
       <DependentUpon>AgregarControles.cs</DependentUpon>
@@ -242,6 +243,9 @@
     <Folder Include="Recursos Humanos\" />
     <Folder Include="Renta\a\" />
     <Folder Include="Ventas\Apartado de tareas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-sod-soluciones-diaz-fixed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

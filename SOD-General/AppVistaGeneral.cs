@@ -18,10 +18,10 @@ namespace SOD_General
         List<MAuthorization> authorizations = new List<MAuthorization>();
         string prueba;
 
-        public AppVistaGeneral( List<MAuthorization> authorizations)
+        public AppVistaGeneral( )
         {
             InitializeComponent();
-            this.authorizations = authorizations;
+            
             combo();
         }
 
@@ -119,6 +119,14 @@ namespace SOD_General
         private void fR_CheckBox2__CheckedChanged(object sender, EventArgs e)
         {
             prueba = "me  dio click";
+        }
+
+        private void AppVistaGeneral_Resize(object sender, EventArgs e)
+        {
+            int PosX = (panel1.Width - pictureBox1.Width) / 2;
+            int PosY = (panel1.Height - pictureBox1.Height) / 2;
+
+            pictureBox1.Location = new Point(PosX,PosY);
         }
     }
 }

@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(452, 238);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -134,5 +134,6 @@
         private System.Windows.Forms.Label label2;
         private Designer.FR_TextBox textBox1;
         private Designer.FR_TextBox textBox2;
+        private CR_MenuStrip cR_MenuStrip1;
     }
 }

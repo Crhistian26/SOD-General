@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.cR_MenuStrip1 = new CR_MenuStrip();
+            this.holaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adfafdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adfafToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
+            this.cR_MenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -47,39 +48,42 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
+            this.splitContainer1.Panel1.Controls.Add(this.cR_MenuStrip1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 111;
+            this.splitContainer1.SplitterDistance = 110;
             this.splitContainer1.TabIndex = 0;
             // 
-            // cR_Subtitulos1
+            // cR_MenuStrip1
             // 
-            this.cR_Subtitulos1.AutoSize = true;
-            this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 16F);
-            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(12, 9);
-            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(229, 30);
-            this.cR_Subtitulos1.TabIndex = 0;
-            this.cR_Subtitulos1.Text = "Controles de calidad";
+            this.cR_MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.holaToolStripMenuItem});
+            this.cR_MenuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.cR_MenuStrip1.Name = "cR_MenuStrip1";
+            this.cR_MenuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.cR_MenuStrip1.TabIndex = 0;
+            this.cR_MenuStrip1.Text = "cR_MenuStrip1";
             // 
-            // cR_DataGriedView1
+            // holaToolStripMenuItem
             // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(800, 335);
-            this.cR_DataGriedView1.TabIndex = 0;
+            this.holaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adfafdToolStripMenuItem,
+            this.adfafToolStripMenuItem});
+            this.holaToolStripMenuItem.Name = "holaToolStripMenuItem";
+            this.holaToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.holaToolStripMenuItem.Text = "Hola";
+            // 
+            // adfafdToolStripMenuItem
+            // 
+            this.adfafdToolStripMenuItem.Name = "adfafdToolStripMenuItem";
+            this.adfafdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adfafdToolStripMenuItem.Text = "adfafd";
+            // 
+            // adfafToolStripMenuItem
+            // 
+            this.adfafToolStripMenuItem.Name = "adfafToolStripMenuItem";
+            this.adfafToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adfafToolStripMenuItem.Text = "adfaf";
             // 
             // VisualizarControles
             // 
@@ -88,14 +92,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
+            this.MainMenuStrip = this.cR_MenuStrip1;
             this.Name = "VisualizarControles";
             this.Text = "VisualizarControles";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
+            this.cR_MenuStrip1.ResumeLayout(false);
+            this.cR_MenuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -103,7 +108,9 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private CR_Subtitulos cR_Subtitulos1;
-        private CR_DataGriedView cR_DataGriedView1;
+        private CR_MenuStrip cR_MenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem holaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adfafdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adfafToolStripMenuItem;
     }
 }
