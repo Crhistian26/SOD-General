@@ -33,7 +33,7 @@ namespace SOD_General
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
             //Aca me captura las autorizaciones del usuario con el metodo Ingresar.
-            List<MAuthorization> Autorizaciones = control.Ingresar(textBox1.Text, textBox2.Text);
+            List<MAuthorization> Autorizaciones = control.Ingresar(textBox1.texts, textBox2.texts);
             
             //Me limpia los textboxs
             textBox1.texts = null;
