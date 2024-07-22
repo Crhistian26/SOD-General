@@ -53,12 +53,6 @@
     <Compile Include="CR_Subtitulos.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FR_CheckBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FR_CheckBox.Designer.cs">
-      <DependentUpon>FR_CheckBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="FR_CombBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,9 +108,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Botones_Nuevos.resx">
       <DependentUpon>Botones_Nuevos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FR_CheckBox.resx">
-      <DependentUpon>FR_CheckBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FR_CombBox.resx">
       <DependentUpon>FR_CombBox.cs</DependentUpon>

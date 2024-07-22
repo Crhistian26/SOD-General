@@ -35,7 +35,6 @@
             this.fR_Titulos1 = new Designer.FR_Titulos();
             this.fR_SubTitulo1 = new Designer.FR_SubTitulo();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.fR_CheckBox1 = new Designer.FR_CheckBox();
             this.fR_CombBox1 = new Designer.FR_CombBox();
             this.fR_LineaDivisora1 = new Designer.FR_LineaDivisora();
             this.fR_TextBox3 = new Designer.FR_TextBox();
@@ -79,7 +78,6 @@
             this.panel1.Controls.Add(this.fR_Titulos1);
             this.panel1.Controls.Add(this.fR_SubTitulo1);
             this.panel1.Controls.Add(this.botones_Nuevos1);
-            this.panel1.Controls.Add(this.fR_CheckBox1);
             this.panel1.Controls.Add(this.fR_CombBox1);
             this.panel1.Controls.Add(this.fR_LineaDivisora1);
             this.panel1.Controls.Add(this.fR_TextBox3);
@@ -127,18 +125,6 @@
             this.botones_Nuevos1.TabIndex = 25;
             this.botones_Nuevos1.Text = "botones_Nuevos1";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            // 
-            // fR_CheckBox1
-            // 
-            this.fR_CheckBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.fR_CheckBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.fR_CheckBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fR_CheckBox1.Location = new System.Drawing.Point(283, 172);
-            this.fR_CheckBox1.MaximumSize = new System.Drawing.Size(400, 35);
-            this.fR_CheckBox1.Name = "fR_CheckBox1";
-            this.fR_CheckBox1.Padding = new System.Windows.Forms.Padding(10, 2, 5, 2);
-            this.fR_CheckBox1.Size = new System.Drawing.Size(145, 31);
-            this.fR_CheckBox1.TabIndex = 24;
             // 
             // fR_CombBox1
             // 
@@ -262,7 +248,6 @@
         private Designer.FR_LineaDivisora fR_LineaDivisora1;
         private Designer.FR_CombBox fR_CombBox1;
         private Diseños.Botones_Nuevos botones_Nuevos1;
-        private Designer.FR_CheckBox fR_CheckBox1;
         private Designer.FR_SubTitulo fR_SubTitulo1;
         private Designer.FR_Titulos fR_Titulos1;
     }
