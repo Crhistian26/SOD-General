@@ -74,7 +74,6 @@
             this.hoalToolStripMenuItem.Name = "hoalToolStripMenuItem";
             this.hoalToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.hoalToolStripMenuItem.Text = "Hoal";
-            this.hoalToolStripMenuItem.Click += new System.EventHandler(this.hoalToolStripMenuItem_Click);
             // 
             // AppVistaGeneral
             // 

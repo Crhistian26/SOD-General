@@ -17,25 +17,25 @@ namespace SOD_General
 {
     public partial class AppVistaGeneral : Form
     {
-        VistaGeneralController controller = new VistaGeneralController();
+        VistaGeneralController controller;
         //La lista de autorizaciones.
         List<MAuthorization> authorizations = new List<MAuthorization>();
 
         //El departamento para la demostracion.
-        string Departamento;
+        public string Departamento;
 
         //El constructor que captura la lista y la llena.
         public AppVistaGeneral(string Departamento)
         {
             InitializeComponent();
             this.Departamento = Departamento;
+            this.controller = new VistaGeneralController(this);
         }
 
         //La aplicacion cargando.
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
-            ToolStripMenuItem item = controller.Comprobar_Autorizaciones(cR_MenuStrip1, Departamento);
-            cR_MenuStrip1.Items.Add(item);
+            controller.Comprobar_Autorizaciones(this);
         }
 
         public void AbrirFormulario(Form formulario)
