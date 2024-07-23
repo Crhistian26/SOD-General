@@ -16,7 +16,7 @@ namespace SOD_General
     {
        
         private AppVistaGeneral _appVistaGeneral;
-
+        private Form formu;
         public VistaPrincipal()
         {
             InitializeComponent();
@@ -43,9 +43,10 @@ namespace SOD_General
             Form formula = formulario;
             formula.TopLevel = false;
             formula.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(formula);
-            this.panel1.Tag = formula;
-            formula.Show();
+            this.formu = formula;
+            this.panel1.Controls.Add(this.formu);
+            this.panel1.Tag = this.formu;
+            this.formu.Show();
         }
 
         //Este es un metodo que me abrira la vista general y le enviara sus autorizaciones.
@@ -71,11 +72,8 @@ namespace SOD_General
         }
         private void VistaPrincipal_Resize(object sender, EventArgs e)
         {
-            if (_appVistaGeneral != null)
-            {
-                _appVistaGeneral.Size = panel1.Size;
-            }
-            
+            this.formu.Size = panel1.Size;
+            AbrirFormulario(formu);
         }
     }
 }

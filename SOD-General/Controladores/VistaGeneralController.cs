@@ -1,5 +1,7 @@
 ﻿using Modelos.Usuarios_Empleados;
 using SOD_General;
+using SOD_General.Recursos_Humanos.Empleados;
+using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
@@ -46,9 +48,10 @@ namespace Controladores
 
 
                 case "Recursos Humanos":
-                    ToolStripMenuItem elemento3 = null;
+                    ToolStripMenuItem elemento3;
 
-                    elemento = LlenarMenu(null);
+                    List<ToolStripMenuItem> elementos3 = Recursos_Humanos();
+                    elemento3 = LlenarMenu(elementos3);
 
                     vista.cR_MenuStrip1.Items.Add(elemento3);
                     break;
@@ -105,12 +108,42 @@ namespace Controladores
             return lista;
         }
 
-        
+        public List<ToolStripMenuItem> Recursos_Humanos()
+        {
+            //La lista que retornara
+            List<ToolStripMenuItem> lista = new List<ToolStripMenuItem>();
+
+            //El elemento de el menustrip abrira el empleados.
+            ToolStripMenuItem Emp = new ToolStripMenuItem();
+            Emp.Text = "Empleados";
+            Emp.Click += Empleados_Click;
+            lista.Add(Emp);
+
+            ToolStripMenuItem registros = new ToolStripMenuItem();
+            registros.Text = "Registros generales";
+            registros.Click += Registros_Click;
+            lista.Add(registros);
+
+            return lista;
+        }
+
+
         //La funcion que tendra el elemento peticiones
         private void Peticiones_Click(object sender, EventArgs e)
         {
-           
             vista.AbrirFormulario(new VisualizarPeticiones());
         }
+
+        private void Empleados_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new Visual_Empleados());
+        }
+
+        private void Registros_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new Registros_Generales());
+        }
+
+
     }
 }

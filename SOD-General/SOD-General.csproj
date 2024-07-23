@@ -125,6 +125,12 @@
     <Compile Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.Designer.cs">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_Generales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_Generales.Designer.cs">
+      <DependentUpon>Registros_Generales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Control calidad\AgregarControles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.resx">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_Generales.resx">
+      <DependentUpon>Registros_Generales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Control calidad\AgregarControles.resx">
       <DependentUpon>AgregarControles.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,7 +265,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Vistas\Recursos Humanos\Motivos\" />
-    <Folder Include="Vistas\Recursos Humanos\Registros\" />
     <Folder Include="Vistas\Renta\a\" />
     <Folder Include="Vistas\Ventas\Apartado de tareas\" />
   </ItemGroup>

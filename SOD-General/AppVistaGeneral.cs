@@ -26,6 +26,7 @@ namespace SOD_General
         //El departamento para la demostracion.
         public string Departamento;
 
+        public Form formu;
         //El constructor que captura la lista y la llena.
         public AppVistaGeneral(string Departamento)
         {
@@ -51,16 +52,22 @@ namespace SOD_General
             Form formula = formulario;
             formula.TopLevel = false;
             formula.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(formula);
-            this.panel1.Tag = formula;
-            formula.Show();
+            this.formu = formula;
+            this.panel1.Controls.Add(this.formu);
+            this.panel1.Tag = this.formu;
+            this.formu.Show();
+
+
         }
+
 
 
 
         private void AppVistaGeneral_Resize(object sender, EventArgs e)
         {
             pictureBox1.Location = _size.CentrarElementosXY(pictureBox1.Size, panel1.Size);
+
         }
     }
 }
+

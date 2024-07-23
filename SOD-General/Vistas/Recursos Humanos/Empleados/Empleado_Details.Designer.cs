@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
@@ -42,11 +43,18 @@
             this.cR_Checkbox1 = new CR_Checkbox();
             this.cR_Checkbox2 = new CR_Checkbox();
             this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.Empleados_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleados_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleados_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleados_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleados_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -66,6 +74,7 @@
             // 
             // cR_SplitContainer1.Panel2
             // 
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
             this.cR_SplitContainer1.SplitterDistance = 100;
@@ -105,6 +114,7 @@
             this.botones_Nuevos1.TabIndex = 1;
             this.botones_Nuevos1.Text = "Ver registros";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_Subtitulos1
             // 
@@ -245,6 +255,71 @@
             this.botones_Nuevos3.Text = "Guardar cambios";
             this.botones_Nuevos3.UseVisualStyleBackColor = false;
             // 
+            // cR_DataGriedView1
+            // 
+            this.cR_DataGriedView1.AllowUserToAddRows = false;
+            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Empleados_Date1,
+            this.Empleados_Date2,
+            this.Empleados_Reason,
+            this.Empleados_Description,
+            this.Empleados_Time});
+            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
+            this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(800, 346);
+            this.cR_DataGriedView1.TabIndex = 1;
+            this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
+            // 
+            // Empleados_Date1
+            // 
+            this.Empleados_Date1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Empleados_Date1.HeaderText = "Desde";
+            this.Empleados_Date1.Name = "Empleados_Date1";
+            this.Empleados_Date1.ReadOnly = true;
+            this.Empleados_Date1.Width = 76;
+            // 
+            // Empleados_Date2
+            // 
+            this.Empleados_Date2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Empleados_Date2.HeaderText = "Hasta";
+            this.Empleados_Date2.Name = "Empleados_Date2";
+            this.Empleados_Date2.ReadOnly = true;
+            this.Empleados_Date2.Width = 72;
+            // 
+            // Empleados_Reason
+            // 
+            this.Empleados_Reason.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Empleados_Reason.HeaderText = "Motivo";
+            this.Empleados_Reason.Name = "Empleados_Reason";
+            this.Empleados_Reason.ReadOnly = true;
+            this.Empleados_Reason.Width = 82;
+            // 
+            // Empleados_Description
+            // 
+            this.Empleados_Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Empleados_Description.HeaderText = "Descripcion";
+            this.Empleados_Description.Name = "Empleados_Description";
+            this.Empleados_Description.ReadOnly = true;
+            // 
+            // Empleados_Time
+            // 
+            this.Empleados_Time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Empleados_Time.HeaderText = "Tiempo";
+            this.Empleados_Time.Name = "Empleados_Time";
+            this.Empleados_Time.ReadOnly = true;
+            this.Empleados_Time.Width = 85;
+            // 
             // Empleado_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,6 +338,7 @@
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,5 +359,11 @@
         private Diseños.Botones_Nuevos botones_Nuevos3;
         private CR_Checkbox cR_Checkbox2;
         private CR_Checkbox cR_Checkbox1;
+        private CR_DataGriedView cR_DataGriedView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Date1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Date2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Reason;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Time;
     }
 }

@@ -54,9 +54,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::SOD_General.Properties.Resources.logo_sod_soluciones_diaz_fixed;
             this.pictureBox1.Location = new System.Drawing.Point(289, 181);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(300, 76);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(300, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
