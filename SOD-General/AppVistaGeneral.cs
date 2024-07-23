@@ -56,7 +56,7 @@ namespace SOD_General
             this.panel1.Controls.Add(this.formu);
             this.panel1.Tag = this.formu;
             this.formu.Show();
-
+            this.MinimumSize = formu.MinimumSize;
 
         }
 

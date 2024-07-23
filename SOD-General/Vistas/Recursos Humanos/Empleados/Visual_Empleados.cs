@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -17,6 +18,8 @@ namespace SOD_General.Recursos_Humanos.Empleados
     public partial class Visual_Empleados : Form
     {
         SizesGenerales _size = new SizesGenerales();
+
+        Size tam;
         public Visual_Empleados()
         {
             InitializeComponent();
@@ -33,7 +36,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
             cR_DataGriedView1.Rows.Add(1,"Fernando","Gutierrez","Recursos Humanos",DateTime.Now.AddYears(-2).ToString("D"));
             cR_DataGriedView1.Rows.Add(1, "Maria", "Veltran", "Recursos Humanos", DateTime.Now.AddYears(-2).ToString("D"));
             cR_DataGriedView1.Rows.Add(1, "Rodrigo", "Carrasco", "Recursos Humanos", DateTime.Now.AddYears(-2).ToString("D"));
-
+            tam = this.Size;
             Point localA = cR_Subtitulos1.Location;
             cR_Subtitulos1.Location = _size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
         }
@@ -59,6 +62,8 @@ namespace SOD_General.Recursos_Humanos.Empleados
         {
             Point localA = cR_Subtitulos1.Location;
             cR_Subtitulos1.Location =_size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
+
+
         }
     }
 }
