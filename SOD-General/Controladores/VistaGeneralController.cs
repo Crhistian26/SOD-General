@@ -121,7 +121,7 @@ namespace Controladores
 
             ToolStripMenuItem registrosA = new ToolStripMenuItem();
             registrosA.Text = "Registro de asistencias";
-            registrosA.Click += RegistrosA_Click; ;
+            registrosA.Click += RegistrosA_Click; 
             lista.Add(registrosA);
 
             //El elemento de el menustrip abrira el empleados.

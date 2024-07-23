@@ -19,6 +19,7 @@ namespace SOD_General
     public partial class AppVistaGeneral : Form
     {
         VistaGeneralController controller;
+
         SizesGenerales _size = new SizesGenerales();
         //La lista de autorizaciones.
         List<MAuthorization> authorizations = new List<MAuthorization>();
@@ -32,6 +33,7 @@ namespace SOD_General
         {
             InitializeComponent();
             this.Departamento = Departamento;
+
             this.controller = new VistaGeneralController(this);
         }
 
@@ -59,9 +61,6 @@ namespace SOD_General
             this.formu.Show();
 
         }
-
-
-
 
         private void AppVistaGeneral_Resize(object sender, EventArgs e)
         {

@@ -33,6 +33,7 @@
             this.textBox2 = new Designer.FR_TextBox();
             this.textBox1 = new Designer.FR_TextBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cR_Label2
@@ -111,12 +112,28 @@
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Libreta Casio Gris",
+            "Libreta Casio Verde",
+            "Libreta Eduart Azul",
+            "Libreta Eduart Gris"});
+            this.comboBox1.Location = new System.Drawing.Point(317, 159);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 12;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(450, 240);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cR_Label2);
             this.Controls.Add(this.cR_Label1);
             this.Controls.Add(this.textBox2);
@@ -139,5 +156,6 @@
         private CR_LabelUp cR_Label2;
         private Designer.FR_TextBox textBox1;
         private Designer.FR_TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
