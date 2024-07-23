@@ -28,33 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
+            this.cR_Checkbox2 = new CR_Checkbox();
+            this.cR_Checkbox1 = new CR_Checkbox();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.soD_TextBox2 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.soD_TextBox1 = new SOD_TextBox();
-            this.cR_Checkbox1 = new CR_Checkbox();
-            this.cR_Checkbox2 = new CR_Checkbox();
-            this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.Empleado_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.botones_Nuevos4 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -68,6 +70,7 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos4);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
@@ -76,12 +79,13 @@
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.cR_SplitContainer1.SplitterDistance = 100;
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(704, 431);
+            this.cR_SplitContainer1.SplitterDistance = 143;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // botones_Nuevos2
             // 
+            this.botones_Nuevos2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
             this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
             this.botones_Nuevos2.BorderRadius = 40;
@@ -90,7 +94,7 @@
             this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(532, 47);
+            this.botones_Nuevos2.Location = new System.Drawing.Point(521, 90);
             this.botones_Nuevos2.Name = "botones_Nuevos2";
             this.botones_Nuevos2.Size = new System.Drawing.Size(171, 40);
             this.botones_Nuevos2.TabIndex = 2;
@@ -108,7 +112,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(128, 47);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 90);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos1.TabIndex = 1;
@@ -130,6 +134,34 @@
             this.cR_Subtitulos1.Size = new System.Drawing.Size(114, 31);
             this.cR_Subtitulos1.TabIndex = 0;
             this.cR_Subtitulos1.Text = "Nombre";
+            this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cR_DataGriedView1
+            // 
+            this.cR_DataGriedView1.AllowUserToAddRows = false;
+            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Empleado_RecordId,
+            this.Empleados_Date1,
+            this.Empleados_Date2,
+            this.Empleados_Reason,
+            this.Empleados_Description,
+            this.Empleados_Time});
+            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
+            this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(704, 284);
+            this.cR_DataGriedView1.TabIndex = 1;
+            this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
             // 
             // panel1
             // 
@@ -146,6 +178,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 320);
             this.panel1.TabIndex = 0;
+            // 
+            // botones_Nuevos3
+            // 
+            this.botones_Nuevos3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos3.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos3.BorderRadius = 40;
+            this.botones_Nuevos3.BorderSize = 0;
+            this.botones_Nuevos3.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos3.Location = new System.Drawing.Point(103, 253);
+            this.botones_Nuevos3.Name = "botones_Nuevos3";
+            this.botones_Nuevos3.Size = new System.Drawing.Size(175, 40);
+            this.botones_Nuevos3.TabIndex = 8;
+            this.botones_Nuevos3.Text = "Guardar cambios";
+            this.botones_Nuevos3.UseVisualStyleBackColor = false;
+            // 
+            // cR_Checkbox2
+            // 
+            this.cR_Checkbox2.AutoSize = true;
+            this.cR_Checkbox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox2.Location = new System.Drawing.Point(231, 223);
+            this.cR_Checkbox2.Name = "cR_Checkbox2";
+            this.cR_Checkbox2.Size = new System.Drawing.Size(101, 24);
+            this.cR_Checkbox2.TabIndex = 7;
+            this.cR_Checkbox2.Text = "Despedido";
+            this.cR_Checkbox2.UseVisualStyleBackColor = true;
+            // 
+            // cR_Checkbox1
+            // 
+            this.cR_Checkbox1.AutoSize = true;
+            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox1.Location = new System.Drawing.Point(37, 223);
+            this.cR_Checkbox1.Name = "cR_Checkbox1";
+            this.cR_Checkbox1.Size = new System.Drawing.Size(105, 24);
+            this.cR_Checkbox1.TabIndex = 6;
+            this.cR_Checkbox1.Text = "Trabajando";
+            this.cR_Checkbox1.UseVisualStyleBackColor = true;
             // 
             // cR_LabelDown3
             // 
@@ -213,73 +287,12 @@
             this.soD_TextBox1.Size = new System.Drawing.Size(295, 21);
             this.soD_TextBox1.TabIndex = 0;
             // 
-            // cR_Checkbox1
+            // Empleado_RecordId
             // 
-            this.cR_Checkbox1.AutoSize = true;
-            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(37, 223);
-            this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(105, 24);
-            this.cR_Checkbox1.TabIndex = 6;
-            this.cR_Checkbox1.Text = "Trabajando";
-            this.cR_Checkbox1.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox2
-            // 
-            this.cR_Checkbox2.AutoSize = true;
-            this.cR_Checkbox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox2.Location = new System.Drawing.Point(231, 223);
-            this.cR_Checkbox2.Name = "cR_Checkbox2";
-            this.cR_Checkbox2.Size = new System.Drawing.Size(101, 24);
-            this.cR_Checkbox2.TabIndex = 7;
-            this.cR_Checkbox2.Text = "Despedido";
-            this.cR_Checkbox2.UseVisualStyleBackColor = true;
-            // 
-            // botones_Nuevos3
-            // 
-            this.botones_Nuevos3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos3.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos3.BorderRadius = 40;
-            this.botones_Nuevos3.BorderSize = 0;
-            this.botones_Nuevos3.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos3.Location = new System.Drawing.Point(103, 253);
-            this.botones_Nuevos3.Name = "botones_Nuevos3";
-            this.botones_Nuevos3.Size = new System.Drawing.Size(175, 40);
-            this.botones_Nuevos3.TabIndex = 8;
-            this.botones_Nuevos3.Text = "Guardar cambios";
-            this.botones_Nuevos3.UseVisualStyleBackColor = false;
-            // 
-            // cR_DataGriedView1
-            // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Empleados_Date1,
-            this.Empleados_Date2,
-            this.Empleados_Reason,
-            this.Empleados_Description,
-            this.Empleados_Time});
-            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(800, 346);
-            this.cR_DataGriedView1.TabIndex = 1;
-            this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
+            this.Empleado_RecordId.HeaderText = "IdRegistro";
+            this.Empleado_RecordId.Name = "Empleado_RecordId";
+            this.Empleado_RecordId.ReadOnly = true;
+            this.Empleado_RecordId.Visible = false;
             // 
             // Empleados_Date1
             // 
@@ -320,12 +333,30 @@
             this.Empleados_Time.ReadOnly = true;
             this.Empleados_Time.Width = 85;
             // 
+            // botones_Nuevos4
+            // 
+            this.botones_Nuevos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos4.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos4.BorderRadius = 40;
+            this.botones_Nuevos4.BorderSize = 0;
+            this.botones_Nuevos4.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos4.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos4.Location = new System.Drawing.Point(255, 90);
+            this.botones_Nuevos4.Name = "botones_Nuevos4";
+            this.botones_Nuevos4.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos4.TabIndex = 3;
+            this.botones_Nuevos4.Text = "Exportar";
+            this.botones_Nuevos4.UseVisualStyleBackColor = false;
+            // 
             // Empleado_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(704, 431);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Empleado_Details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado_Details";
@@ -336,9 +367,9 @@
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,10 +391,12 @@
         private CR_Checkbox cR_Checkbox2;
         private CR_Checkbox cR_Checkbox1;
         private CR_DataGriedView cR_DataGriedView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado_RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Date2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Reason;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Time;
+        private Diseños.Botones_Nuevos botones_Nuevos4;
     }
 }

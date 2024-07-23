@@ -1,6 +1,7 @@
 ﻿using Modelos.Usuarios_Empleados;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
+using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
@@ -113,18 +114,28 @@ namespace Controladores
             //La lista que retornara
             List<ToolStripMenuItem> lista = new List<ToolStripMenuItem>();
 
+            ToolStripMenuItem registros = new ToolStripMenuItem();
+            registros.Text = "Registros generales";
+            registros.Click += Registros_Click;
+            lista.Add(registros);
+
             //El elemento de el menustrip abrira el empleados.
             ToolStripMenuItem Emp = new ToolStripMenuItem();
             Emp.Text = "Empleados";
             Emp.Click += Empleados_Click;
             lista.Add(Emp);
 
-            ToolStripMenuItem registros = new ToolStripMenuItem();
-            registros.Text = "Registros generales";
-            registros.Click += Registros_Click;
-            lista.Add(registros);
+            ToolStripMenuItem motivos = new ToolStripMenuItem();
+            motivos.Text = "Motivos";
+            motivos.Click += Motivos_Click; ;
+            lista.Add(motivos);
 
             return lista;
+        }
+
+        private void Motivos_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new Visual_Motivos());
         }
 
 

@@ -1,5 +1,6 @@
 ﻿using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
+using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;

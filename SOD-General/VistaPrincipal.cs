@@ -46,7 +46,9 @@ namespace SOD_General
             this.formu = formula;
             this.panel1.Controls.Add(this.formu);
             this.panel1.Tag = this.formu;
+            this.MinimumSize = formu.MinimumSize;
             this.formu.Show();
+            
         }
 
         //Este es un metodo que me abrira la vista general y le enviara sus autorizaciones.
