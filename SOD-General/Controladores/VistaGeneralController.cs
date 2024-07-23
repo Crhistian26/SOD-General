@@ -114,10 +114,15 @@ namespace Controladores
             //La lista que retornara
             List<ToolStripMenuItem> lista = new List<ToolStripMenuItem>();
 
-            ToolStripMenuItem registros = new ToolStripMenuItem();
-            registros.Text = "Registro de permisos";
-            registros.Click += Registros_Click;
-            lista.Add(registros);
+            ToolStripMenuItem registrosP = new ToolStripMenuItem();
+            registrosP.Text = "Registro de permisos";
+            registrosP.Click += RegistrosP_Click;
+            lista.Add(registrosP);
+
+            ToolStripMenuItem registrosA = new ToolStripMenuItem();
+            registrosA.Text = "Registro de asistencias";
+            registrosA.Click += RegistrosA_Click; ;
+            lista.Add(registrosA);
 
             //El elemento de el menustrip abrira el empleados.
             ToolStripMenuItem Emp = new ToolStripMenuItem();
@@ -131,6 +136,11 @@ namespace Controladores
             lista.Add(motivos);
 
             return lista;
+        }
+
+        private void RegistrosA_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new Registros_GeneralesAsistencias());
         }
 
         private void Motivos_Click(object sender, EventArgs e)
@@ -150,7 +160,7 @@ namespace Controladores
             vista.AbrirFormulario(new Visual_Empleados());
         }
 
-        private void Registros_Click(object sender, EventArgs e)
+        private void RegistrosP_Click(object sender, EventArgs e)
         {
             vista.AbrirFormulario(new Registros_GeneralesPermisos());
         }
