@@ -1,4 +1,5 @@
-﻿using SOD_General.Vistas_Taller.Taller_Recepcion;
+﻿using SOD_General.Vistas.Recursos_Humanos.Empleados;
+using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace SOD_General
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VisualizarPeticiones());
+            Application.Run(new Empleado_Details());
         }
     }
 }
