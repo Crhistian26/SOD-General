@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.cR_DataGriedView2 = new CR_DataGriedView();
@@ -78,6 +78,8 @@
             this.cR_LabelUp3 = new CR_LabelUp();
             this.soD_ComboBox8 = new SOD_ComboBox();
             this.cR_Checkbox1 = new CR_Checkbox();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -142,10 +144,10 @@
             this.cR_DataGriedView2.AllowUserToAddRows = false;
             this.cR_DataGriedView2.AllowUserToDeleteRows = false;
             this.cR_DataGriedView2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Peticiones_Client,
@@ -153,7 +155,9 @@
             this.Peticiones_Contact,
             this.Column1,
             this.Peticiones_Date,
-            this.Peticiones_Details});
+            this.Peticiones_Details,
+            this.Column3,
+            this.Column4});
             this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView2.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView2.Location = new System.Drawing.Point(0, 0);
@@ -747,12 +751,24 @@
             this.cR_Checkbox1.AutoSize = true;
             this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox1.ForeColor = System.Drawing.Color.White;
-            this.cR_Checkbox1.Location = new System.Drawing.Point(576, 77);
+            this.cR_Checkbox1.Location = new System.Drawing.Point(554, 74);
             this.cR_Checkbox1.Name = "cR_Checkbox1";
             this.cR_Checkbox1.Size = new System.Drawing.Size(106, 24);
             this.cR_Checkbox1.TabIndex = 36;
             this.cR_Checkbox1.Text = "Aun validas";
             this.cR_Checkbox1.UseVisualStyleBackColor = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Entrada";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Editar";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // VisualizarCotizacion
             // 
@@ -831,5 +847,7 @@
         private CR_DateTimePicker cR_DateTimePicker2;
         private CR_DateTimePicker cR_DateTimePicker1;
         private CR_Checkbox cR_Checkbox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
