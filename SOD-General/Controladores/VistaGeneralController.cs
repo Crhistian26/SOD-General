@@ -115,7 +115,7 @@ namespace Controladores
             List<ToolStripMenuItem> lista = new List<ToolStripMenuItem>();
 
             ToolStripMenuItem registros = new ToolStripMenuItem();
-            registros.Text = "Registros generales";
+            registros.Text = "Registro de permisos";
             registros.Click += Registros_Click;
             lista.Add(registros);
 
@@ -152,7 +152,7 @@ namespace Controladores
 
         private void Registros_Click(object sender, EventArgs e)
         {
-            vista.AbrirFormulario(new Registros_Generales());
+            vista.AbrirFormulario(new Registros_GeneralesPermisos());
         }
 
 

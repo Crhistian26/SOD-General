@@ -131,17 +131,29 @@
     <Compile Include="Vistas\Recursos Humanos\Motivos\Visual_Motivos.Designer.cs">
       <DependentUpon>Visual_Motivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_Generales.cs">
+    <Compile Include="Vistas\Recursos Humanos\Registros\Agregar permisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_Generales.Designer.cs">
-      <DependentUpon>Registros_Generales.cs</DependentUpon>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Agregar permisos.Designer.cs">
+      <DependentUpon>Agregar permisos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Registro_Details.cs">
+    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Registro_Details.Designer.cs">
-      <DependentUpon>Registro_Details.cs</DependentUpon>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.Designer.cs">
+      <DependentUpon>Registros_GeneralesPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Permiso_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Permiso_Details.Designer.cs">
+      <DependentUpon>Permiso_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.Designer.cs">
+      <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Control calidad\AgregarControles.cs">
       <SubType>Form</SubType>
@@ -249,11 +261,14 @@
     <EmbeddedResource Include="Vistas\Recursos Humanos\Motivos\Visual_Motivos.resx">
       <DependentUpon>Visual_Motivos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_Generales.resx">
-      <DependentUpon>Registros_Generales.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.resx">
+      <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registro_Details.resx">
-      <DependentUpon>Registro_Details.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.resx">
+      <DependentUpon>Registros_GeneralesPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Permiso_Details.resx">
+      <DependentUpon>Permiso_Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Control calidad\AgregarControles.resx">
       <DependentUpon>AgregarControles.cs</DependentUpon>

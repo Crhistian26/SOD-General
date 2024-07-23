@@ -1,6 +1,6 @@
 ﻿namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
-    partial class Registros_Generales
+    partial class Registros_GeneralesPermisos
     {
         /// <summary>
         /// Required designer variable.

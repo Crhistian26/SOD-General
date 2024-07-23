@@ -30,6 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.cR_LabelUp3 = new CR_LabelUp();
+            this.cR_LabelUp2 = new CR_LabelUp();
+            this.cR_DateTimePicker2 = new CR_DateTimePicker();
+            this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -39,10 +43,6 @@
             this.Empleados_Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cR_DateTimePicker1 = new CR_DateTimePicker();
-            this.cR_DateTimePicker2 = new CR_DateTimePicker();
-            this.cR_LabelUp2 = new CR_LabelUp();
-            this.cR_LabelUp3 = new CR_LabelUp();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -76,6 +76,50 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(772, 340);
             this.cR_SplitContainer1.SplitterDistance = 116;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // cR_LabelUp3
+            // 
+            this.cR_LabelUp3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_LabelUp3.AutoSize = true;
+            this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp3.Location = new System.Drawing.Point(491, 48);
+            this.cR_LabelUp3.Name = "cR_LabelUp3";
+            this.cR_LabelUp3.Size = new System.Drawing.Size(48, 20);
+            this.cR_LabelUp3.TabIndex = 6;
+            this.cR_LabelUp3.Text = "hasta:";
+            // 
+            // cR_LabelUp2
+            // 
+            this.cR_LabelUp2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_LabelUp2.AutoSize = true;
+            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp2.Location = new System.Drawing.Point(220, 48);
+            this.cR_LabelUp2.Name = "cR_LabelUp2";
+            this.cR_LabelUp2.Size = new System.Drawing.Size(106, 20);
+            this.cR_LabelUp2.TabIndex = 5;
+            this.cR_LabelUp2.Text = "Ingreso desde:";
+            // 
+            // cR_DateTimePicker2
+            // 
+            this.cR_DateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(224, 72);
+            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
+            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker2.TabIndex = 4;
+            // 
+            // cR_DateTimePicker1
+            // 
+            this.cR_DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(495, 72);
+            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker1.TabIndex = 3;
             // 
             // cR_Subtitulos1
             // 
@@ -173,50 +217,6 @@
             this.Empleados_Entry.Name = "Empleados_Entry";
             this.Empleados_Entry.ReadOnly = true;
             this.Empleados_Entry.Width = 84;
-            // 
-            // cR_DateTimePicker1
-            // 
-            this.cR_DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(495, 72);
-            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
-            this.cR_DateTimePicker1.TabIndex = 3;
-            // 
-            // cR_DateTimePicker2
-            // 
-            this.cR_DateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(224, 72);
-            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
-            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
-            this.cR_DateTimePicker2.TabIndex = 4;
-            // 
-            // cR_LabelUp2
-            // 
-            this.cR_LabelUp2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_LabelUp2.AutoSize = true;
-            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(220, 48);
-            this.cR_LabelUp2.Name = "cR_LabelUp2";
-            this.cR_LabelUp2.Size = new System.Drawing.Size(106, 20);
-            this.cR_LabelUp2.TabIndex = 5;
-            this.cR_LabelUp2.Text = "Ingreso desde:";
-            // 
-            // cR_LabelUp3
-            // 
-            this.cR_LabelUp3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_LabelUp3.AutoSize = true;
-            this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp3.Location = new System.Drawing.Point(491, 48);
-            this.cR_LabelUp3.Name = "cR_LabelUp3";
-            this.cR_LabelUp3.Size = new System.Drawing.Size(48, 20);
-            this.cR_LabelUp3.TabIndex = 6;
-            this.cR_LabelUp3.Text = "hasta:";
             // 
             // Visual_Empleados
             // 

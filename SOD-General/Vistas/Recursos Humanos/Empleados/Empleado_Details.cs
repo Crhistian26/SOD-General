@@ -48,9 +48,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             panel1.Location = _size.CentrarElementosXY(size, panel);
             cR_DataGriedView1.Visible = false;
 
-            size = botones_Nuevos1.Size;
-            punto = botones_Nuevos1.Location;
-            botones_Nuevos4.Location = _size.CentrarElementosX(punto, size, this.Size);
 
 
         }
@@ -61,10 +58,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             Point punto = cR_Subtitulos1.Location;
             cR_Subtitulos1.Location = _size.CentrarElementosX(punto, size, this.Size);
 
-            size = botones_Nuevos1.Size;
-            punto = botones_Nuevos1.Location;
-            botones_Nuevos4.Location = _size.CentrarElementosX(punto,size, this.Size);
-
 
             size = panel1.Size;
             Size panel = new Size(cR_SplitContainer1.Width,(cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
@@ -74,6 +67,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         private void botones_Nuevos2_Click(object sender, EventArgs e)
         {
             cR_DataGriedView1.Visible=false;
+            cR_DataGriedView2.Visible = false;
         }
 
         private void cR_DataGriedView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,6 +78,13 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
             cR_DataGriedView1.Visible = true;
+            cR_DataGriedView2.Visible=false;
+        }
+
+        private void botones_Nuevos5_Click(object sender, EventArgs e)
+        {
+            cR_DataGriedView2.Visible = true;
+            cR_DataGriedView1.Visible = false;
         }
     }
 }

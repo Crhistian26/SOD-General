@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
-    public partial class Registro_Details : Form
+    public partial class Permiso_Details : Form
     {
         SizesGenerales _size = new SizesGenerales();
-        public Registro_Details()
+        public Permiso_Details()
         {
             InitializeComponent();
         }
