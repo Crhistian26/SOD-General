@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\LoginController.cs" />
+    <Compile Include="Controladores\SizesGenerales.cs" />
     <Compile Include="Controladores\VistaGeneralController.cs" />
     <Compile Include="Vistas\Almacen\Agregar equipos.cs">
       <SubType>Form</SubType>
@@ -154,6 +155,12 @@
     <Compile Include="Vistas\Taller\Inventario\VisualizarPiezas.Designer.cs">
       <DependentUpon>VisualizarPiezas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Clientes\AgregarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\AgregarClientes.Designer.cs">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Registro peticiones\AgregarCotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Control calidad\VisualizarControles.resx">
       <DependentUpon>VisualizarControles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Clientes\AgregarClientes.resx">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Registro peticiones\AgregarCotizaciones.resx">
+      <DependentUpon>AgregarCotizaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registro peticiones\AgregarPeticiones.resx">
       <DependentUpon>AgregarPeticiones.cs</DependentUpon>

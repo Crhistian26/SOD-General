@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.cR_Subtitulos1 = new CR_Subtitulos();
             this.Cliente = new CR_LabelUp();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_LabelUp2 = new CR_LabelUp();
@@ -37,7 +38,6 @@
             this.cR_DateTimePicker2 = new CR_DateTimePicker();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.cR_Subtitulos1 = new CR_Subtitulos();
             this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peticiones_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +75,21 @@
             this.cR_SplitContainer1.SplitterDistance = 130;
             this.cR_SplitContainer1.SplitterWidth = 2;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // cR_Subtitulos1
+            // 
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos1.AutoSize = true;
+            this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(13, 13);
+            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(311, 31);
+            this.cR_Subtitulos1.TabIndex = 9;
+            this.cR_Subtitulos1.Text = "Peticiones de reparacion";
             // 
             // Cliente
             // 
@@ -156,23 +171,9 @@
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cR_DataGriedView1.Size = new System.Drawing.Size(927, 318);
             this.cR_DataGriedView1.TabIndex = 0;
-            // 
-            // cR_Subtitulos1
-            // 
-            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_Subtitulos1.AutoSize = true;
-            this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(13, 13);
-            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(311, 31);
-            this.cR_Subtitulos1.TabIndex = 9;
-            this.cR_Subtitulos1.Text = "Peticiones de reparacion";
             // 
             // Peticiones_Client
             // 

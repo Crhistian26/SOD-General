@@ -16,5 +16,10 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
