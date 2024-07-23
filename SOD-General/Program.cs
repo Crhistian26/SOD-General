@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOD_General.Vistas_Taller.Taller_Recepcion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace SOD_General
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VistaPrincipal());
+            Application.Run(new VisualizarPeticiones());
         }
     }
 }

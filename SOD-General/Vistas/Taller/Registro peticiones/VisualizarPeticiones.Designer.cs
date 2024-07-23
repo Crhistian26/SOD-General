@@ -38,6 +38,10 @@
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peticiones_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peticiones_Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -69,6 +73,7 @@
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(927, 450);
             this.cR_SplitContainer1.SplitterDistance = 130;
+            this.cR_SplitContainer1.SplitterWidth = 2;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // Cliente
@@ -141,12 +146,17 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Peticiones_Client,
+            this.Peticiones_Contact,
+            this.Peticiones_Date,
+            this.Peticiones_Details});
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(927, 316);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(927, 318);
             this.cR_DataGriedView1.TabIndex = 0;
             // 
             // cR_Subtitulos1
@@ -163,6 +173,37 @@
             this.cR_Subtitulos1.Size = new System.Drawing.Size(311, 31);
             this.cR_Subtitulos1.TabIndex = 9;
             this.cR_Subtitulos1.Text = "Peticiones de reparacion";
+            // 
+            // Peticiones_Client
+            // 
+            this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Client.HeaderText = "Cliente";
+            this.Peticiones_Client.Name = "Peticiones_Client";
+            this.Peticiones_Client.ReadOnly = true;
+            this.Peticiones_Client.Width = 81;
+            // 
+            // Peticiones_Contact
+            // 
+            this.Peticiones_Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Contact.HeaderText = "Contacto";
+            this.Peticiones_Contact.Name = "Peticiones_Contact";
+            this.Peticiones_Contact.ReadOnly = true;
+            this.Peticiones_Contact.Width = 95;
+            // 
+            // Peticiones_Date
+            // 
+            this.Peticiones_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Date.HeaderText = "Fecha";
+            this.Peticiones_Date.Name = "Peticiones_Date";
+            this.Peticiones_Date.ReadOnly = true;
+            this.Peticiones_Date.Width = 73;
+            // 
+            // Peticiones_Details
+            // 
+            this.Peticiones_Details.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Peticiones_Details.HeaderText = "Detalles";
+            this.Peticiones_Details.Name = "Peticiones_Details";
+            this.Peticiones_Details.ReadOnly = true;
             // 
             // VisualizarPeticiones
             // 
@@ -195,5 +236,9 @@
         private CR_LabelUp cR_LabelUp2;
         private CR_LabelUp cR_LabelUp1;
         private CR_Subtitulos cR_Subtitulos1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Client;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Details;
     }
 }
