@@ -40,7 +40,6 @@ namespace Controladores
                 case "Reparacion taller":
                     ToolStripMenuItem elemento2 = null;
 
-                    elemento = LlenarMenu(null);
 
                     vista.cR_MenuStrip1.Items.Add(elemento2);
                     break;

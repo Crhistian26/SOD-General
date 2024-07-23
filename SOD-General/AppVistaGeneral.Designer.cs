@@ -87,6 +87,7 @@
             this.Text = "AppVistaGeneal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AppVistaGeneral_Load);
+            this.Resize += new System.EventHandler(this.AppVistaGeneral_Resize);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

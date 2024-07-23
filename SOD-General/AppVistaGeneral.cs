@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.Usuarios_Empleados;
+using SOD_General.Controladores;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
@@ -18,6 +19,7 @@ namespace SOD_General
     public partial class AppVistaGeneral : Form
     {
         VistaGeneralController controller;
+        SizesGenerales _size = new SizesGenerales();
         //La lista de autorizaciones.
         List<MAuthorization> authorizations = new List<MAuthorization>();
 
@@ -54,5 +56,11 @@ namespace SOD_General
             formula.Show();
         }
 
+
+
+        private void AppVistaGeneral_Resize(object sender, EventArgs e)
+        {
+            pictureBox1.Location = _size.CentrarElementosXY(pictureBox1.Size, panel1.Size);
+        }
     }
 }
