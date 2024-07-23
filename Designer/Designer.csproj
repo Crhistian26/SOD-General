@@ -46,6 +46,9 @@
     <Compile Include="Botones_Nuevos.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CR_Checkbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CR_DataGriedView.cs">
       <SubType>Component</SubType>
     </Compile>
