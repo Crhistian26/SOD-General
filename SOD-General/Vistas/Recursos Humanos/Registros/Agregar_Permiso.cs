@@ -35,7 +35,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             CentrarElementos();
         }
 
-        private void cR_SplitContainer1_Panel1_Resize(object sender, EventArgs e)
+        private void soD_ComboBox4_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Agregar_Permiso_Resize(object sender, EventArgs e)
         {
             CentrarElementos();
         }

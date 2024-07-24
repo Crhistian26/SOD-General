@@ -125,6 +125,11 @@ namespace Controladores
             registrosA.Click += RegistrosA_Click; 
             lista.Add(registrosA);
 
+            ToolStripMenuItem AgregarA = new ToolStripMenuItem();
+            AgregarA.Text = "Agregar asistencia";
+            AgregarA.Click += AgregarA_Click; ;
+            lista.Add(AgregarA);
+
             ToolStripMenuItem Agregar = new ToolStripMenuItem();
             Agregar.Text = "Agregar permiso";
             Agregar.Click += Agregar_Click; ;
@@ -147,6 +152,11 @@ namespace Controladores
         private void Agregar_Click(object sender, EventArgs e)
         {
             vista.AbrirFormulario(new Agregar_Permiso());
+        }
+
+        private void AgregarA_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new Agregar_Asistencias());
         }
 
         private void RegistrosA_Click(object sender, EventArgs e)

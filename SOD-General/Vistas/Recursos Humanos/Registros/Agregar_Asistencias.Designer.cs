@@ -28,12 +28,505 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.soD_ComboBox5 = new SOD_ComboBox();
+            this.cR_LabelDown9 = new CR_LabelDown();
+            this.soD_TextBox7 = new SOD_TextBox();
+            this.soD_TextBox8 = new SOD_TextBox();
+            this.cR_LabelDown10 = new CR_LabelDown();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.soD_ComboBox3 = new SOD_ComboBox();
+            this.cR_LabelDown5 = new CR_LabelDown();
+            this.soD_TextBox5 = new SOD_TextBox();
+            this.soD_TextBox6 = new SOD_TextBox();
+            this.cR_LabelDown8 = new CR_LabelDown();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.soD_ComboBox2 = new SOD_ComboBox();
+            this.cR_LabelDown3 = new CR_LabelDown();
+            this.soD_TextBox1 = new SOD_TextBox();
+            this.soD_TextBox2 = new SOD_TextBox();
+            this.cR_LabelDown4 = new CR_LabelDown();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.soD_ComboBox4 = new SOD_ComboBox();
+            this.cR_LabelDown7 = new CR_LabelDown();
+            this.soD_TextBox3 = new SOD_TextBox();
+            this.soD_TextBox4 = new SOD_TextBox();
+            this.cR_LabelDown6 = new CR_LabelDown();
+            this.cR_LabelDown2 = new CR_LabelDown();
+            this.soD_ComboBox1 = new SOD_ComboBox();
+            this.cR_DateTimePicker1 = new CR_DateTimePicker();
+            this.cR_LabelDown1 = new CR_LabelDown();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
+            this.cR_SplitContainer1.Panel1.SuspendLayout();
+            this.cR_SplitContainer1.Panel2.SuspendLayout();
+            this.cR_SplitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // cR_SplitContainer1
+            // 
+            this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.cR_SplitContainer1.Name = "cR_SplitContainer1";
+            this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // cR_SplitContainer1.Panel1
+            // 
+            this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
+            // 
+            // cR_SplitContainer1.Panel2
+            // 
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 600);
+            this.cR_SplitContainer1.SplitterDistance = 86;
+            this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // cR_Subtitulos1
+            // 
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos1.AutoSize = true;
+            this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(262, 9);
+            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(279, 31);
+            this.cR_Subtitulos1.TabIndex = 0;
+            this.cR_Subtitulos1.Text = "Control de asistencias";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.botones_Nuevos1);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.cR_LabelDown2);
+            this.panel1.Controls.Add(this.soD_ComboBox1);
+            this.panel1.Controls.Add(this.cR_DateTimePicker1);
+            this.panel1.Controls.Add(this.cR_LabelDown1);
+            this.panel1.Location = new System.Drawing.Point(12, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(506, 365);
+            this.panel1.TabIndex = 3;
+            // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(173, 307);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.TabIndex = 25;
+            this.botones_Nuevos1.Text = "Agregar";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.soD_ComboBox5);
+            this.panel5.Controls.Add(this.cR_LabelDown9);
+            this.panel5.Controls.Add(this.soD_TextBox7);
+            this.panel5.Controls.Add(this.soD_TextBox8);
+            this.panel5.Controls.Add(this.cR_LabelDown10);
+            this.panel5.Location = new System.Drawing.Point(283, 217);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 66);
+            this.panel5.TabIndex = 24;
+            // 
+            // soD_ComboBox5
+            // 
+            this.soD_ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox5.FormattingEnabled = true;
+            this.soD_ComboBox5.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox5.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox5.Name = "soD_ComboBox5";
+            this.soD_ComboBox5.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox5.TabIndex = 21;
+            // 
+            // cR_LabelDown9
+            // 
+            this.cR_LabelDown9.AutoSize = true;
+            this.cR_LabelDown9.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown9.Location = new System.Drawing.Point(12, 0);
+            this.cR_LabelDown9.Name = "cR_LabelDown9";
+            this.cR_LabelDown9.Size = new System.Drawing.Size(100, 20);
+            this.cR_LabelDown9.TabIndex = 22;
+            this.cR_LabelDown9.Text = "Fin de receso:";
+            // 
+            // soD_TextBox7
+            // 
+            this.soD_TextBox7.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox7.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox7.BorderSize = 2;
+            this.soD_TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox7.Location = new System.Drawing.Point(12, 33);
+            this.soD_TextBox7.Name = "soD_TextBox7";
+            this.soD_TextBox7.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox7.TabIndex = 18;
+            // 
+            // soD_TextBox8
+            // 
+            this.soD_TextBox8.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox8.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox8.BorderSize = 2;
+            this.soD_TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox8.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox8.Location = new System.Drawing.Point(78, 33);
+            this.soD_TextBox8.Name = "soD_TextBox8";
+            this.soD_TextBox8.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox8.TabIndex = 19;
+            // 
+            // cR_LabelDown10
+            // 
+            this.cR_LabelDown10.AutoSize = true;
+            this.cR_LabelDown10.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown10.Location = new System.Drawing.Point(60, 33);
+            this.cR_LabelDown10.Name = "cR_LabelDown10";
+            this.cR_LabelDown10.Size = new System.Drawing.Size(12, 20);
+            this.cR_LabelDown10.TabIndex = 20;
+            this.cR_LabelDown10.Text = ":";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.soD_ComboBox3);
+            this.panel4.Controls.Add(this.cR_LabelDown5);
+            this.panel4.Controls.Add(this.soD_TextBox5);
+            this.panel4.Controls.Add(this.soD_TextBox6);
+            this.panel4.Controls.Add(this.cR_LabelDown8);
+            this.panel4.Location = new System.Drawing.Point(16, 217);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 66);
+            this.panel4.TabIndex = 24;
+            // 
+            // soD_ComboBox3
+            // 
+            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox3.FormattingEnabled = true;
+            this.soD_ComboBox3.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox3.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox3.Name = "soD_ComboBox3";
+            this.soD_ComboBox3.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox3.TabIndex = 21;
+            // 
+            // cR_LabelDown5
+            // 
+            this.cR_LabelDown5.AutoSize = true;
+            this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown5.Location = new System.Drawing.Point(12, 0);
+            this.cR_LabelDown5.Name = "cR_LabelDown5";
+            this.cR_LabelDown5.Size = new System.Drawing.Size(117, 20);
+            this.cR_LabelDown5.TabIndex = 22;
+            this.cR_LabelDown5.Text = "Inicio de receso:";
+            // 
+            // soD_TextBox5
+            // 
+            this.soD_TextBox5.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox5.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox5.BorderSize = 2;
+            this.soD_TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox5.Location = new System.Drawing.Point(12, 33);
+            this.soD_TextBox5.Name = "soD_TextBox5";
+            this.soD_TextBox5.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox5.TabIndex = 18;
+            // 
+            // soD_TextBox6
+            // 
+            this.soD_TextBox6.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox6.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox6.BorderSize = 2;
+            this.soD_TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox6.Location = new System.Drawing.Point(78, 33);
+            this.soD_TextBox6.Name = "soD_TextBox6";
+            this.soD_TextBox6.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox6.TabIndex = 19;
+            // 
+            // cR_LabelDown8
+            // 
+            this.cR_LabelDown8.AutoSize = true;
+            this.cR_LabelDown8.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown8.Location = new System.Drawing.Point(60, 33);
+            this.cR_LabelDown8.Name = "cR_LabelDown8";
+            this.cR_LabelDown8.Size = new System.Drawing.Size(12, 20);
+            this.cR_LabelDown8.TabIndex = 20;
+            this.cR_LabelDown8.Text = ":";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.soD_ComboBox2);
+            this.panel3.Controls.Add(this.cR_LabelDown3);
+            this.panel3.Controls.Add(this.soD_TextBox1);
+            this.panel3.Controls.Add(this.soD_TextBox2);
+            this.panel3.Controls.Add(this.cR_LabelDown4);
+            this.panel3.Location = new System.Drawing.Point(283, 134);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 66);
+            this.panel3.TabIndex = 24;
+            // 
+            // soD_ComboBox2
+            // 
+            this.soD_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox2.FormattingEnabled = true;
+            this.soD_ComboBox2.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox2.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox2.Name = "soD_ComboBox2";
+            this.soD_ComboBox2.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox2.TabIndex = 21;
+            // 
+            // cR_LabelDown3
+            // 
+            this.cR_LabelDown3.AutoSize = true;
+            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown3.Location = new System.Drawing.Point(12, 0);
+            this.cR_LabelDown3.Name = "cR_LabelDown3";
+            this.cR_LabelDown3.Size = new System.Drawing.Size(109, 20);
+            this.cR_LabelDown3.TabIndex = 22;
+            this.cR_LabelDown3.Text = "Hora de salida:";
+            // 
+            // soD_TextBox1
+            // 
+            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox1.BorderSize = 2;
+            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox1.Location = new System.Drawing.Point(12, 33);
+            this.soD_TextBox1.Name = "soD_TextBox1";
+            this.soD_TextBox1.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox1.TabIndex = 18;
+            // 
+            // soD_TextBox2
+            // 
+            this.soD_TextBox2.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox2.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox2.BorderSize = 2;
+            this.soD_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox2.Location = new System.Drawing.Point(78, 33);
+            this.soD_TextBox2.Name = "soD_TextBox2";
+            this.soD_TextBox2.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox2.TabIndex = 19;
+            // 
+            // cR_LabelDown4
+            // 
+            this.cR_LabelDown4.AutoSize = true;
+            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown4.Location = new System.Drawing.Point(60, 33);
+            this.cR_LabelDown4.Name = "cR_LabelDown4";
+            this.cR_LabelDown4.Size = new System.Drawing.Size(12, 20);
+            this.cR_LabelDown4.TabIndex = 20;
+            this.cR_LabelDown4.Text = ":";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.soD_ComboBox4);
+            this.panel2.Controls.Add(this.cR_LabelDown7);
+            this.panel2.Controls.Add(this.soD_TextBox3);
+            this.panel2.Controls.Add(this.soD_TextBox4);
+            this.panel2.Controls.Add(this.cR_LabelDown6);
+            this.panel2.Location = new System.Drawing.Point(16, 134);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 66);
+            this.panel2.TabIndex = 23;
+            // 
+            // soD_ComboBox4
+            // 
+            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox4.FormattingEnabled = true;
+            this.soD_ComboBox4.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox4.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox4.Name = "soD_ComboBox4";
+            this.soD_ComboBox4.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox4.TabIndex = 21;
+            // 
+            // cR_LabelDown7
+            // 
+            this.cR_LabelDown7.AutoSize = true;
+            this.cR_LabelDown7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown7.Location = new System.Drawing.Point(12, 0);
+            this.cR_LabelDown7.Name = "cR_LabelDown7";
+            this.cR_LabelDown7.Size = new System.Drawing.Size(122, 20);
+            this.cR_LabelDown7.TabIndex = 22;
+            this.cR_LabelDown7.Text = "Hora de entrada:";
+            // 
+            // soD_TextBox3
+            // 
+            this.soD_TextBox3.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox3.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox3.BorderSize = 2;
+            this.soD_TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox3.Location = new System.Drawing.Point(12, 33);
+            this.soD_TextBox3.Name = "soD_TextBox3";
+            this.soD_TextBox3.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox3.TabIndex = 18;
+            // 
+            // soD_TextBox4
+            // 
+            this.soD_TextBox4.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox4.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox4.BorderSize = 2;
+            this.soD_TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox4.Location = new System.Drawing.Point(78, 33);
+            this.soD_TextBox4.Name = "soD_TextBox4";
+            this.soD_TextBox4.Size = new System.Drawing.Size(42, 21);
+            this.soD_TextBox4.TabIndex = 19;
+            // 
+            // cR_LabelDown6
+            // 
+            this.cR_LabelDown6.AutoSize = true;
+            this.cR_LabelDown6.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown6.Location = new System.Drawing.Point(60, 33);
+            this.cR_LabelDown6.Name = "cR_LabelDown6";
+            this.cR_LabelDown6.Size = new System.Drawing.Size(12, 20);
+            this.cR_LabelDown6.TabIndex = 20;
+            this.cR_LabelDown6.Text = ":";
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(12, 4);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(103, 20);
+            this.cR_LabelDown2.TabIndex = 3;
+            this.cR_LabelDown2.Text = "Dia a registrar";
+            // 
+            // soD_ComboBox1
+            // 
+            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox1.FormattingEnabled = true;
+            this.soD_ComboBox1.Location = new System.Drawing.Point(16, 87);
+            this.soD_ComboBox1.Name = "soD_ComboBox1";
+            this.soD_ComboBox1.Size = new System.Drawing.Size(279, 27);
+            this.soD_ComboBox1.TabIndex = 2;
+            // 
+            // cR_DateTimePicker1
+            // 
+            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(16, 27);
+            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker1.TabIndex = 1;
+            // 
+            // cR_LabelDown1
+            // 
+            this.cR_LabelDown1.AutoSize = true;
+            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown1.Location = new System.Drawing.Point(12, 64);
+            this.cR_LabelDown1.Name = "cR_LabelDown1";
+            this.cR_LabelDown1.Size = new System.Drawing.Size(77, 20);
+            this.cR_LabelDown1.TabIndex = 0;
+            this.cR_LabelDown1.Text = "Empleado";
+            // 
+            // Agregar_Asistencias
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.cR_SplitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(800, 550);
+            this.Name = "Agregar_Asistencias";
             this.Text = "Agregar_Asistencias";
+            this.Load += new System.EventHandler(this.Agregar_Asistencias_Load);
+            this.Resize += new System.EventHandler(this.Agregar_Asistencias_Resize);
+            this.cR_SplitContainer1.Panel1.ResumeLayout(false);
+            this.cR_SplitContainer1.Panel1.PerformLayout();
+            this.cR_SplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
+            this.cR_SplitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private CR_SplitContainer cR_SplitContainer1;
+        private CR_Subtitulos cR_Subtitulos1;
+        private CR_DateTimePicker cR_DateTimePicker1;
+        private CR_LabelDown cR_LabelDown1;
+        private System.Windows.Forms.Panel panel1;
+        private CR_LabelDown cR_LabelDown2;
+        private SOD_ComboBox soD_ComboBox1;
+        private System.Windows.Forms.Panel panel3;
+        private SOD_ComboBox soD_ComboBox2;
+        private CR_LabelDown cR_LabelDown3;
+        private SOD_TextBox soD_TextBox1;
+        private SOD_TextBox soD_TextBox2;
+        private CR_LabelDown cR_LabelDown4;
+        private System.Windows.Forms.Panel panel2;
+        private SOD_ComboBox soD_ComboBox4;
+        private CR_LabelDown cR_LabelDown7;
+        private SOD_TextBox soD_TextBox3;
+        private SOD_TextBox soD_TextBox4;
+        private CR_LabelDown cR_LabelDown6;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
+        private System.Windows.Forms.Panel panel5;
+        private SOD_ComboBox soD_ComboBox5;
+        private CR_LabelDown cR_LabelDown9;
+        private SOD_TextBox soD_TextBox7;
+        private SOD_TextBox soD_TextBox8;
+        private CR_LabelDown cR_LabelDown10;
+        private System.Windows.Forms.Panel panel4;
+        private SOD_ComboBox soD_ComboBox3;
+        private CR_LabelDown cR_LabelDown5;
+        private SOD_TextBox soD_TextBox5;
+        private SOD_TextBox soD_TextBox6;
+        private CR_LabelDown cR_LabelDown8;
     }
 }
