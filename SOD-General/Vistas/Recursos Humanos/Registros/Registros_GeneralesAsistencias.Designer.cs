@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
-            this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
+            this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView2 = new CR_DataGriedView();
             this.Asistencias_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -56,6 +57,7 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_DateTimePicker1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             // 
@@ -65,6 +67,15 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 470);
             this.cR_SplitContainer1.SplitterDistance = 102;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // cR_DateTimePicker1
+            // 
+            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(264, 66);
+            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker1.TabIndex = 1;
             // 
             // cR_Subtitulos1
             // 
@@ -81,24 +92,15 @@
             this.cR_Subtitulos1.TabIndex = 0;
             this.cR_Subtitulos1.Text = "Registro de asistencias";
             // 
-            // cR_DateTimePicker1
-            // 
-            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(264, 66);
-            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
-            this.cR_DateTimePicker1.TabIndex = 1;
-            // 
             // cR_DataGriedView2
             // 
             this.cR_DataGriedView2.AllowUserToAddRows = false;
             this.cR_DataGriedView2.AllowUserToDeleteRows = false;
             this.cR_DataGriedView2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Asistencias_RecordId,
@@ -114,7 +116,6 @@
             this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cR_DataGriedView2.Size = new System.Drawing.Size(800, 364);
             this.cR_DataGriedView2.TabIndex = 3;
-            this.cR_DataGriedView2.Visible = false;
             // 
             // Asistencias_RecordId
             // 
@@ -151,11 +152,29 @@
             this.Asistencias_Hours.Name = "Asistencias_Hours";
             this.Asistencias_Hours.ReadOnly = true;
             // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 12);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(176, 40);
+            this.botones_Nuevos1.TabIndex = 2;
+            this.botones_Nuevos1.Text = "Agregar asistencias";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
+            // 
             // Registros_GeneralesAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 470);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(720, 470);
@@ -184,5 +203,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Asitencias_Entry;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Hours;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
     }
 }

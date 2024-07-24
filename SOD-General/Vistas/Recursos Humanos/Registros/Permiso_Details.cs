@@ -14,7 +14,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
     public partial class Permiso_Details : Form
     {
         SizesGenerales _size = new SizesGenerales();
-
+        Registros_Controller control = new Registros_Controller();
         private void CentrarElementos()
         {
             Point SubL = cR_Subtitulos1.Location;
@@ -41,6 +41,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             CentrarElementos();
         }
 
-       
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            control.AgregarPermiso();
+            this.Close();
+        }
     }
 }

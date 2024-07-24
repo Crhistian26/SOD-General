@@ -51,6 +51,7 @@
     <Compile Include="Controladores\Empleados_Controller.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\Motivos_Controller.cs" />
+    <Compile Include="Controladores\Registros_Controller.cs" />
     <Compile Include="Controladores\SizesGenerales.cs" />
     <Compile Include="Controladores\VistaGeneralController.cs" />
     <Compile Include="Vistas\Almacen\Agregar equipos.cs">
@@ -359,6 +360,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Vistas\Recursos Humanos\Exportar\" />
     <Folder Include="Vistas\Renta\a\" />
     <Folder Include="Vistas\Ventas\Apartado de tareas\" />
   </ItemGroup>

@@ -13,6 +13,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
     public partial class Registros_GeneralesPermisos : Form
     {
+        Registros_Controller control = new Registros_Controller();
         SizesGenerales _sizes = new SizesGenerales();
         public Registros_GeneralesPermisos()
         {
@@ -40,6 +41,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 Permiso_Details ver = new Permiso_Details();
                 ver.Show();
             }
+        }
+
+        private void botones_Nuevos5_Click(object sender, EventArgs e)
+        {
+            control.AgregarPermiso();
         }
     }
 }

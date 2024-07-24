@@ -87,7 +87,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 600);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(720, 470);
             this.cR_SplitContainer1.SplitterDistance = 86;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -119,7 +119,7 @@
             this.panel1.Controls.Add(this.cR_LabelDown1);
             this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 365);
+            this.panel1.Size = new System.Drawing.Size(500, 365);
             this.panel1.TabIndex = 3;
             // 
             // botones_Nuevos1
@@ -467,10 +467,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(720, 470);
             this.Controls.Add(this.cR_SplitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(800, 550);
+            this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Agregar_Asistencias";
             this.Text = "Agregar_Asistencias";
             this.Load += new System.EventHandler(this.Agregar_Asistencias_Load);

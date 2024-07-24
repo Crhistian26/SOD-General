@@ -71,7 +71,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 600);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(720, 470);
             this.cR_SplitContainer1.SplitterDistance = 75;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -317,10 +317,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(720, 470);
             this.Controls.Add(this.cR_SplitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(800, 550);
+            this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Agregar_Permiso";
             this.Text = "Agregar_Permiso";
             this.Load += new System.EventHandler(this.Agregar_Permiso_Load);

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_LabelUp2 = new CR_LabelUp();
@@ -48,6 +48,7 @@
             this.Registros_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -67,6 +68,7 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos5);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.comboBox2);
@@ -239,10 +241,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registros_RecordId,
@@ -295,6 +297,24 @@
             this.Registros_Date2.Name = "Registros_Date2";
             this.Registros_Date2.ReadOnly = true;
             // 
+            // botones_Nuevos5
+            // 
+            this.botones_Nuevos5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos5.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos5.BorderRadius = 40;
+            this.botones_Nuevos5.BorderSize = 0;
+            this.botones_Nuevos5.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos5.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos5.Location = new System.Drawing.Point(16, 13);
+            this.botones_Nuevos5.Name = "botones_Nuevos5";
+            this.botones_Nuevos5.Size = new System.Drawing.Size(175, 40);
+            this.botones_Nuevos5.TabIndex = 6;
+            this.botones_Nuevos5.Text = "Agregar permisos";
+            this.botones_Nuevos5.UseVisualStyleBackColor = false;
+            this.botones_Nuevos5.Click += new System.EventHandler(this.botones_Nuevos5_Click);
+            // 
             // Registros_GeneralesPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Reason;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date2;
+        private Diseños.Botones_Nuevos botones_Nuevos5;
     }
 }

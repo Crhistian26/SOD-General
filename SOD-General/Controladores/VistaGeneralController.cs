@@ -125,16 +125,6 @@ namespace Controladores
             registrosA.Click += RegistrosA_Click; 
             lista.Add(registrosA);
 
-            ToolStripMenuItem AgregarA = new ToolStripMenuItem();
-            AgregarA.Text = "Agregar asistencia";
-            AgregarA.Click += AgregarA_Click; ;
-            lista.Add(AgregarA);
-
-            ToolStripMenuItem Agregar = new ToolStripMenuItem();
-            Agregar.Text = "Agregar permiso";
-            Agregar.Click += Agregar_Click; ;
-            lista.Add(Agregar);
-
             //El elemento de el menustrip abrira el empleados.
             ToolStripMenuItem Emp = new ToolStripMenuItem();
             Emp.Text = "Empleados";

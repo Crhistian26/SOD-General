@@ -14,6 +14,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
     public partial class Registros_GeneralesAsistencias : Form
     {
         SizesGenerales _size = new SizesGenerales();
+        Registros_Controller control = new Registros_Controller();
         public Registros_GeneralesAsistencias()
         {
             InitializeComponent();
@@ -27,7 +28,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             punto = cR_DateTimePicker1.Location;
             cR_DateTimePicker1.Location = _size.CentrarElementosX(punto,cR_DateTimePicker1.Size,this.Size);
 
-            cR_DataGriedView2.Rows.Add(1, "Eduardo Brito");
+                cR_DataGriedView2.Rows.Add(1, "Eduardo Brito", "8:25 AM", "5:50 PM", "8 horas y 10 min.");
+
         }
 
         private void Registros_GeneralesAsistencias_Resize(object sender, EventArgs e)
@@ -37,6 +39,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             punto = cR_DateTimePicker1.Location;
             cR_DateTimePicker1.Location = _size.CentrarElementosX(punto, cR_DateTimePicker1.Size, this.Size);
+        }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            control.AgregarAsistencia();
         }
     }
 }

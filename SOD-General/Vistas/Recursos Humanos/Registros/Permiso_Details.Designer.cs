@@ -133,6 +133,7 @@
             this.botones_Nuevos1.TabIndex = 10;
             this.botones_Nuevos1.Text = "Editar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // soD_TextBox5
             // 
