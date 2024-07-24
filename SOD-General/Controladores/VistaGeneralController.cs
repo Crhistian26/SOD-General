@@ -3,6 +3,7 @@ using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
+using SOD_General.Vistas.Taller.Registro_peticiones;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
@@ -124,6 +125,11 @@ namespace Controladores
             registrosA.Click += RegistrosA_Click; 
             lista.Add(registrosA);
 
+            ToolStripMenuItem Agregar = new ToolStripMenuItem();
+            Agregar.Text = "Agregar permiso";
+            Agregar.Click += Agregar_Click; ;
+            lista.Add(Agregar);
+
             //El elemento de el menustrip abrira el empleados.
             ToolStripMenuItem Emp = new ToolStripMenuItem();
             Emp.Text = "Empleados";
@@ -136,6 +142,11 @@ namespace Controladores
             lista.Add(motivos);
 
             return lista;
+        }
+
+        private void Agregar_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new Agregar_Permiso());
         }
 
         private void RegistrosA_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
-    partial class Agregar_permisos
+    partial class Agregar_Asistencias
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Agregar_permisos";
+            this.Text = "Agregar_Asistencias";
         }
 
         #endregion

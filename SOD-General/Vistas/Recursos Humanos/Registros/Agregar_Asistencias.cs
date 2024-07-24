@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
-    public partial class Agregar_permisos : Form
+    public partial class Agregar_Asistencias : Form
     {
-        public Agregar_permisos()
+        public Agregar_Asistencias()
         {
             InitializeComponent();
         }

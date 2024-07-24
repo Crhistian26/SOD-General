@@ -19,6 +19,8 @@ namespace SOD_General.Recursos_Humanos.Empleados
     {
         SizesGenerales _size = new SizesGenerales();
 
+        Empleados_Controller control = new Empleados_Controller();
+
         Size tam;
         public Visual_Empleados()
         {
@@ -64,6 +66,11 @@ namespace SOD_General.Recursos_Humanos.Empleados
             cR_Subtitulos1.Location =_size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
 
 
+        }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            control.AbrirEditar();
         }
     }
 }
