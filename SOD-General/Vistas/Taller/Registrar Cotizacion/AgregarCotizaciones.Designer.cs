@@ -119,7 +119,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(638, 81);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(657, 70);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(188, 46);
             this.botones_Nuevos1.TabIndex = 99;

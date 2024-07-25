@@ -351,8 +351,17 @@
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\AplicarControl.resx">
       <DependentUpon>AplicarControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\EditarControlEquipo.resx">
+      <DependentUpon>EditarControlEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposControl.resx">
+      <DependentUpon>VisualizarEquiposControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposReparados.resx">
       <DependentUpon>VisualizarEquiposReparados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Inventario\AgregarPiezas.resx">
+      <DependentUpon>AgregarPiezas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.resx">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>

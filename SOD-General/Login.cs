@@ -53,6 +53,7 @@ namespace SOD_General
             string depart;
            
             depart = controller.Ingresar(textBox1.texts,textBox2.texts,1);
+            MessageBox.Show(depart.ToString());
 
             if(depart != null)
             {

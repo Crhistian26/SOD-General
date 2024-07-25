@@ -1,8 +1,12 @@
 ﻿using Modelos.Usuarios_Empleados;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
+using SOD_General.Taller.Control_calidad;
+using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
+using SOD_General.Vistas.Taller.Controles_de_Equipo;
+using SOD_General.Vistas.Taller.Registrar_Cotizacion;
 using SOD_General.Vistas.Taller.Registro_peticiones;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
@@ -28,7 +32,7 @@ namespace Controladores
         /// </summary>
         AppVistaGeneral vista;
 
-        
+
         public VistaGeneralController(AppVistaGeneral vista)
         {
             this.vista = vista;
@@ -37,7 +41,7 @@ namespace Controladores
         public void Comprobar_Autorizaciones()
         {
             string depart = vista.Departamento;
-            switch(depart)
+            switch (depart)
             {
                 case "Recepcion taller":
                     ToolStripMenuItem elemento;
@@ -48,9 +52,11 @@ namespace Controladores
                     break;
 
 
-                case "Reparacion taller":
-                    ToolStripMenuItem elemento2 = null;
-
+                //Frandy
+                case "Reparaciones taller":
+                    ToolStripMenuItem elemento2;
+                    List<ToolStripMenuItem> elementos22 = Reparacion_Taller();
+                    elemento2 = LlenarMenu(elementos22);
 
                     vista.cR_MenuStrip1.Items.Add(elemento2);
                     break;
@@ -117,6 +123,44 @@ namespace Controladores
             return lista;
         }
 
+        //El apartado de taller, en caso que sea reparacion taller se ejecutara este.
+        public List<ToolStripMenuItem> Reparacion_Taller()
+        {
+            //La lista que retornara
+            List<ToolStripMenuItem> lista = new List<ToolStripMenuItem>();
+
+
+            //El elemento de el menustrip abrira el ver peticiones.- Framdy
+            ToolStripMenuItem Controles = new ToolStripMenuItem();
+            Controles.Text = "Cotizaciones";
+            Controles.Click += Peticiones1_Click;
+            lista.Add(Controles);
+
+            //Frandy
+            ToolStripMenuItem Controles3 = new ToolStripMenuItem();
+            Controles3.Text = "Ver Cotizaciones";
+            Controles3.Click += Peticiones4_Click;
+            lista.Add(Controles3);
+
+            //Frandy
+            ToolStripMenuItem Controles1 = new ToolStripMenuItem();
+            Controles1.Text = "Ver Controles de calidad";
+            Controles1.Click += Peticiones2_Click;
+            lista.Add(Controles);
+
+            //Frandy
+            ToolStripMenuItem Controles2 = new ToolStripMenuItem();
+            Controles2.Text = "Confirmar controles";
+            Controles2.Click += Peticiones3_Click;
+            lista.Add(Controles2);
+
+           
+
+
+
+            return lista;
+        }
+
         public List<ToolStripMenuItem> Recursos_Humanos()
         {
             //La lista que retornara
@@ -129,7 +173,7 @@ namespace Controladores
 
             ToolStripMenuItem registrosA = new ToolStripMenuItem();
             registrosA.Text = "Registro de asistencias";
-            registrosA.Click += RegistrosA_Click; 
+            registrosA.Click += RegistrosA_Click;
             lista.Add(registrosA);
 
             //El elemento de el menustrip abrira el empleados.
@@ -183,6 +227,25 @@ namespace Controladores
             vista.AbrirFormulario(new Registros_GeneralesPermisos());
         }
 
+        //funciones del area de reparacion - Frandy
+        private void Peticiones1_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new AgregarCotizaciones());
+        }
 
+        private void Peticiones2_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new VisualizarControles());
+        }
+
+        private void Peticiones3_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new VisualizarEquiposReparados());
+        }
+
+        private void Peticiones4_Click(object sender, EventArgs e)
+        {
+            vista.AbrirFormulario(new VisualizarCotizacion());
+        }
     }
 }
