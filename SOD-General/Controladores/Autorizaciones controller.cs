@@ -50,12 +50,21 @@ namespace SOD_General.Controladores
         /// <param name="authorizations">La lista de autorizaciones a introducir.</param>
         public void elementos(List<MAuthorization> authorizations)
         {
+            //Este es 
             var DepartamentosExtra = from aut in authorizations
                                 orderby aut._AuthotizationType descending
                                 where aut._AuthotizationType != department
-                                group aut by aut._AuthotizationType;
+                                group aut by aut._AuthotizationType.ToList();
 
-            List<string> DepartExtFiltrados = DepartamentosExtra.Select(a => a.Key).ToList();
+            List<string> DepartExtFiltrados = new List<string>();
+            List<string> autorizaciones = new List<string>();
+            foreach(var a in DepartamentosExtra)
+            {
+                for(int i = 0; i < a.Count(); i++)
+                {
+                    
+                }
+            }
 
             List<ToolStripMenuItem> items = new List<ToolStripMenuItem>();
 
