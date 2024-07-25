@@ -82,12 +82,12 @@ namespace SOD_General
         /// pasandole el atributo de la clase AppVistaGeneral
         /// </summary>
         /// <param name="hola"></param>
-        public void AbrirVistaGeneral(string hola)
+        public void AbrirVistaGeneral(List<MAuthorization> authorizations)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;
 
-            _appVistaGeneral = new AppVistaGeneral(hola);
+            _appVistaGeneral = new AppVistaGeneral(authorizations);
 
             AbrirFormulario(_appVistaGeneral);
         }

@@ -33,7 +33,7 @@ namespace Controladores
                 List<MAuthorization> list = new List<MAuthorization>();
 
                 //El query con su procedimiento y sus parametros.
-                string Query = "Exec GetInto @User, @password";
+                string Query = "Exec GetAuthorizations @User, @password";
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 cmd.Parameters.AddWithValue("@User", username);
                 cmd.Parameters.AddWithValue("@password", password);
@@ -43,32 +43,35 @@ namespace Controladores
                 //El lector.
                 SqlDataReader lector = cmd.ExecuteReader();
 
-                //En caso que la cantidad de columnas devueltas sea menor a tres me causara un error.
-                //Se supone que esto se hace solo en el procedimiento almacenado pero por algun motivo el error desde haya no se me ejecuta.
-                if(lector.FieldCount < 3)
-                {
-                    throw new Exception("Ese usuario no existe o no tiene autorizaciones para el sistema.");
-                }
-
-                //Si no hay error y el lector lee.
                 while (lector.Read())
                 {
                     //Capturar datos.
                     int id = lector.GetInt32(0);
                     string Autorizacion = lector.GetString(1);
                     string TipoAutorizacion = lector.GetString(2);
-                    
+
                     //Creacion de objeto autorizacion.
                     MAuthorization autorizacion = new MAuthorization(id, Autorizacion, TipoAutorizacion);
 
                     //Lo agrega a la lista.
                     list.Add(autorizacion);
                 }
-
                 //La conexion se cierra.
                 conex.Close();
                 //Me retorna la lista.
                 return list;
+            }
+            catch(SqlException ex)
+            {
+                //Si la conexion no esta cerrada la cierra.
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                //El mensaje de error de Sql en caso de no existir el usuario.
+                MessageBox.Show(ex.Message);
+                //Debe retornar algo.
+                return null;
             }
             catch(Exception ex)
             {
@@ -77,30 +80,12 @@ namespace Controladores
                 {
                     conex.Close();
                 }
-                //El mensaje de error.
+                //El mensaje de error de C# por si ocurre algo.
                 MessageBox.Show(ex.Message);
                 //Debe retornar algo.
                 return null;
             }
             
-        }
-
-        //Esto se borrara luego de la demostracion
-        public string Ingresar(string username, string password, int? y = null)
-        {
-            string Query = "select _Department from Employees E inner join Users U on U.EmployeeId = E.IdEmployee inner join Departments D on D.IdDepartment = E.DepartmentId where _User = @user and _Password = @pass;";
-            SqlCommand cmd = new SqlCommand(Query, conex);
-            cmd.Parameters.AddWithValue("@user", username);
-            cmd.Parameters.AddWithValue("@pass", password);
-            string departamento = null;
-            conex.Open();
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
-            {
-                departamento = lector.GetString(0);
-            }
-            conex.Close();
-            return departamento;
-        }
+        } 
     }
 }

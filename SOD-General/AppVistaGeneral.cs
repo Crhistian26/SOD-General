@@ -40,10 +40,10 @@ namespace SOD_General
         /// antes y le pasa al atributo Controller una nueva instancia del controlador y aeste le pasa una instancia de si mismo
         /// </summary>
         /// <param name="Departamento"></param>
-        public AppVistaGeneral(string Departamento)
+        public AppVistaGeneral(List<MAuthorization> authorizations)
         {
             InitializeComponent();
-            this.Departamento = Departamento;
+            this.authorizations = authorizations;
             this.controller = new VistaGeneralController(this);
         }
 

@@ -49,6 +49,9 @@
     <Compile Include="CR_Checkbox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Cr_ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CR_DataGriedView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -68,6 +71,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CR_Subtitulos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cr_Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="FR_DateTime.cs">

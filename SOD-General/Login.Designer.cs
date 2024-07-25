@@ -30,9 +30,9 @@
         {
             this.cR_Label2 = new CR_LabelUp();
             this.cR_Label1 = new CR_LabelUp();
-            this.textBox2 = new Designer.FR_TextBox();
-            this.textBox1 = new Designer.FR_TextBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cr_Textbox2 = new Cr_Textbox();
             this.SuspendLayout();
             // 
             // cR_Label2
@@ -59,40 +59,6 @@
             this.cR_Label1.TabIndex = 10;
             this.cR_Label1.Text = "Contraseña";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.textBox2.BorderFocusColor = System.Drawing.Color.Blue;
-            this.textBox2.BorderSize = 2;
-            this.textBox2.Location = new System.Drawing.Point(75, 118);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox2.PasswordChar = false;
-            this.textBox2.Size = new System.Drawing.Size(270, 30);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.texts = "";
-            this.textBox2.UnderlinedStyle = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.textBox1.BorderFocusColor = System.Drawing.Color.Blue;
-            this.textBox1.BorderSize = 2;
-            this.textBox1.Location = new System.Drawing.Point(75, 48);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox1.PasswordChar = false;
-            this.textBox1.Size = new System.Drawing.Size(270, 30);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.texts = "";
-            this.textBox1.UnderlinedStyle = false;
-            // 
             // botones_Nuevos1
             // 
             this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
@@ -111,16 +77,34 @@
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(79, 41);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox1.TabIndex = 12;
+            // 
+            // cr_Textbox2
+            // 
+            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox2.Location = new System.Drawing.Point(79, 113);
+            this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox2.TabIndex = 13;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(450, 240);
+            this.Controls.Add(this.cr_Textbox2);
+            this.Controls.Add(this.cr_Textbox1);
             this.Controls.Add(this.cR_Label2);
             this.Controls.Add(this.cR_Label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.botones_Nuevos1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(450, 240);
@@ -137,7 +121,7 @@
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private CR_LabelUp cR_Label1;
         private CR_LabelUp cR_Label2;
-        private Designer.FR_TextBox textBox1;
-        private Designer.FR_TextBox textBox2;
+        private Cr_Textbox cr_Textbox1;
+        private Cr_Textbox cr_Textbox2;
     }
 }
