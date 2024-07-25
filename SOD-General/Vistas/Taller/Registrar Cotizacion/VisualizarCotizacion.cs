@@ -15,6 +15,14 @@ namespace SOD_General.Vistas.Taller.Registrar_Cotizacion
         public VisualizarCotizacion()
         {
             InitializeComponent();
+            cR_DataGriedView2.Rows.Add(1000, "Impresora", "Tonel", 1, 500, DateTime.Now.ToString("dd-MM-yyyy"), "No imprimia");
+
+        }
+
+        private void Click_Editar(object sender, DataGridViewCellEventArgs e)
+        {
+            EditarCotizaciones editarCotiza = new EditarCotizaciones();
+            editarCotiza.Show();
         }
     }
 }

@@ -16,5 +16,11 @@ namespace SOD_General.Taller.Control_calidad
         {
             InitializeComponent();
         }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nuevo control agregado con exito");
+             
+        }
     }
 }

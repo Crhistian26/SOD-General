@@ -248,6 +248,12 @@
     <Compile Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.Designer.cs">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Registrar Cotizacion\EditarCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Registrar Cotizacion\EditarCotizaciones.Designer.cs">
+      <DependentUpon>EditarCotizaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.resx">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\EditarCotizaciones.resx">
+      <DependentUpon>EditarCotizaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacion.resx">
       <DependentUpon>VisualizarCotizacion.cs</DependentUpon>
