@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\Autorizaciones controller.cs" />
     <Compile Include="Controladores\Empleados_Controller.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\Motivos_Controller.cs" />
@@ -351,8 +352,17 @@
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\AplicarControl.resx">
       <DependentUpon>AplicarControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\EditarControlEquipo.resx">
+      <DependentUpon>EditarControlEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposControl.resx">
+      <DependentUpon>VisualizarEquiposControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposReparados.resx">
       <DependentUpon>VisualizarEquiposReparados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Inventario\AgregarPiezas.resx">
+      <DependentUpon>AgregarPiezas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.resx">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>

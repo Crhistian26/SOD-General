@@ -39,10 +39,12 @@ namespace SOD_General
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
             List<MAuthorization> authorizations;
-            authorizations = controller.Ingresar(cr_Textbox1.Text,cr_Textbox2.Text);
+            string department = "";
+            (authorizations,department) = controller.Ingresar(cr_Textbox1.Text,cr_Textbox2.Text);
+
             if(authorizations != null)
             {
-                principal.AbrirVistaGeneral(authorizations);
+                principal.AbrirVistaGeneral(authorizations,department);
             }
             cr_Textbox1.Clear();
             cr_Textbox2.Clear();

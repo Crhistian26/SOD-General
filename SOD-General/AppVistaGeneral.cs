@@ -4,6 +4,7 @@ using SOD_General.Controladores;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,8 @@ namespace SOD_General
         //La lista de autorizaciones.
         List<MAuthorization> authorizations = new List<MAuthorization>();
 
+        Autorizaciones_controller control;
+
         //El departamento para la demostracion.
         /// <summary>
         /// atributo para almacenar lo departamentos
@@ -40,17 +43,30 @@ namespace SOD_General
         /// antes y le pasa al atributo Controller una nueva instancia del controlador y aeste le pasa una instancia de si mismo
         /// </summary>
         /// <param name="Departamento"></param>
-        public AppVistaGeneral(List<MAuthorization> authorizations)
+        public AppVistaGeneral(List<MAuthorization> authorizations, string department)
         {
             InitializeComponent();
             this.authorizations = authorizations;
-            this.controller = new VistaGeneralController(this);
+            this.Departamento = department;
+            this.control = new Autorizaciones_controller(this, this.Departamento);
         }
 
         //La aplicacion cargando.
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
-            controller.Comprobar_Autorizaciones();
+            //controller.Comprobar_Autorizaciones();
+            List<MAuthorization> lista = control.Filtrar(authorizations);
+
+
+            string hola = "";
+
+            foreach (MAuthorization auth in lista)
+            {
+                hola += $"\n {auth.IdAuthorization}: {auth._Authorization}({auth._AuthotizationType})";
+            }
+            MessageBox.Show(hola);
+
+            control.elementos(authorizations);
         }
 
         public void AbrirFormulario(Form formulario)
@@ -79,6 +95,17 @@ namespace SOD_General
         {
             pictureBox1.Location = _size.CentrarElementosXY(pictureBox1.Size, panel1.Size);
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            List<MAuthorization> lista = control.Filtrar(authorizations);
+            string hola = "";
+            foreach (MAuthorization auth in lista)
+            {
+                hola += $"\n {auth.IdAuthorization}: {auth._Authorization}({auth._AuthotizationType})";
+            }
+            MessageBox.Show(hola);
         }
     }
 }

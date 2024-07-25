@@ -25,13 +25,13 @@ namespace Controladores
         /// <param name="username">Su nombre de usuario</param>
         /// <param name="password">Su contraseña</param>
         /// <returns>Devuelve una lista de las autorizaciones hecha a base de la clase <seealso cref="MAuthorization"/></returns>
-        public List<MAuthorization> Ingresar(string username, string password)
+        public (List<MAuthorization>,string) Ingresar(string username, string password)
         {
             try
             {
                 //Crea la lista que devolvera al final.
                 List<MAuthorization> list = new List<MAuthorization>();
-
+                string department ="";
                 //El query con su procedimiento y sus parametros.
                 string Query = "Exec GetAuthorizations @User, @password";
                 SqlCommand cmd = new SqlCommand(Query, conex);
@@ -58,8 +58,22 @@ namespace Controladores
                 }
                 //La conexion se cierra.
                 conex.Close();
-                //Me retorna la lista.
-                return list;
+
+
+                Query = "select _Department from Users U\r\ninner join Employees E on E.IdEmployee = U.EmployeeId\r\ninner join Departments D on D.IdDepartment = E.DepartmentId\r\nwhere _User =@user and _Password=@pass;";
+                cmd = new SqlCommand(Query, conex);
+                cmd.Parameters.AddWithValue("@user", username);
+                cmd.Parameters.AddWithValue("@pass", password);
+
+                conex.Open();
+                lector = cmd.ExecuteReader();
+                if(lector.Read())
+                {
+                    department = lector.GetString(0);
+                }
+                conex.Close();
+                //Me retorna la lista y el departamento.
+                return (list,department);
             }
             catch(SqlException ex)
             {
@@ -71,7 +85,7 @@ namespace Controladores
                 //El mensaje de error de Sql en caso de no existir el usuario.
                 MessageBox.Show(ex.Message);
                 //Debe retornar algo.
-                return null;
+                return (null,null);
             }
             catch(Exception ex)
             {
@@ -83,7 +97,7 @@ namespace Controladores
                 //El mensaje de error de C# por si ocurre algo.
                 MessageBox.Show(ex.Message);
                 //Debe retornar algo.
-                return null;
+                return (null, null);
             }
             
         } 
