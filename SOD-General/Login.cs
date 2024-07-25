@@ -38,28 +38,17 @@ namespace SOD_General
         //El boton de login.
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            //Aca me captura las autorizaciones del usuario con el metodo Ingresar.
-            //List<MAuthorization> Autorizaciones = control.Ingresar(textBox1.texts, textBox2.texts);
 
-            //Me limpia los textboxs.
+            List<MAuthorization> lista;
+            string department;
+            (lista,department) = controller.Ingresar(cr_Textbox1.Text,cr_Textbox2.Text);
 
-
-            //En caso que sea nulo me ejecuta la funcion desde la VistaPrincipal.
-            //if(Autorizaciones != null)
-            //{
-            //    principal.AbrirVistaGeneral(Autorizaciones);
-            //}
-
-            string depart;
-           
-            depart = controller.Ingresar(textBox1.texts,textBox2.texts,1);
-
-            if(depart != null)
+            if(lista != null)
             {
-                principal.AbrirVistaGeneral(depart);
+                principal.AbrirVistaGeneral(lista,department);
             }
-            textBox1.texts = null;
-            textBox2.texts = null;
+            cr_Textbox1.Clear();
+            cr_Textbox2.Clear();
         }
 
         private void Login_Load(object sender, EventArgs e)
