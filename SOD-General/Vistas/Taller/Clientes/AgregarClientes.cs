@@ -16,5 +16,10 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         {
             InitializeComponent();
         }
+
+        private void fR_TextBox7__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

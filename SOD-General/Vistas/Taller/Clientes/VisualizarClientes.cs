@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SOD_General.Taller.Registro_peticiones
+namespace SOD_General.Vistas.Taller.Clientes
 {
-    public partial class AgregarEntradas : Form
+    public partial class VisualizarClientes : Form
     {
-        public AgregarEntradas()
+        public VisualizarClientes()
         {
             InitializeComponent();
         }

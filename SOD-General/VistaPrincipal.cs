@@ -14,8 +14,11 @@ namespace SOD_General
 {
     public partial class VistaPrincipal : Form
     {
-       
+       /// <summary>
+       /// atributo del form AppVistaGeneral (se hacen validaciones de autorizacion y demas)
+       /// </summary>
         private AppVistaGeneral _appVistaGeneral;
+
         private Form formu;
         public VistaPrincipal()
         {
@@ -23,6 +26,11 @@ namespace SOD_General
         }
 
         //Cuando el formulario se carga aca me cambia su diseño y lo primero que me abre es el login.
+       /// <summary>
+       /// carga los estilos para que el primer formulario se adapte y presente el login
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void VistaPrincipal_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -32,6 +40,10 @@ namespace SOD_General
         }
 
         //La funcion que se encarga de abrirme los formularios.
+        /// <summary>
+        /// metodo que le da estilos al form que reciba como parametro
+        /// </summary>
+        /// <param name="formulario"></param>
         public void AbrirFormulario(Form formulario)
         {
             if (this.panel1.Controls.Count > 0)
@@ -63,6 +75,13 @@ namespace SOD_General
         //    AbrirFormulario(_appVistaGeneral);
         //}
 
+        /// <summary>
+        /// metodo para dar estilos adicionales al form y recibe un string como 
+        /// parametro, llama al atributo de AppVistGen y le pasa el parametro 
+        /// definido en el metodo y carga el metodo para abrir formulario, 
+        /// pasandole el atributo de la clase AppVistaGeneral
+        /// </summary>
+        /// <param name="hola"></param>
         public void AbrirVistaGeneral(string hola)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;

@@ -12,7 +12,7 @@ namespace Modelos.Usuarios_Empleados
         public int DepartmentId { get; set; }
         public int AuthorizationId { get; set; }
 
-        /// <summary>
+        ///// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="DepartAuthorization"/>.
         /// </summary>
         /// <param name="idDepartAutho">ID de la autorización del departamento.</param>

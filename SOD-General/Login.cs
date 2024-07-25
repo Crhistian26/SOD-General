@@ -15,10 +15,16 @@ namespace SOD_General
     
     public partial class Login : Form
     {
-        //Esta es la VistaPrincipal para ejecutar sus metodos desde aca.
+        /// <summary>
+        /// Este es el atributo de tipo VistaPrincipal para ejecutar sus 
+        /// metodos desde aca, .
+        /// </summary>
         VistaPrincipal principal { get; set; }
 
-        //Este es el controlador para usar sus funciones.
+        /// <summary>
+        /// Este es el controlador para usar las funciones de 
+        /// la clase LoginController
+        /// </summary>
         LoginController controller = new LoginController();
 
 
@@ -34,16 +40,18 @@ namespace SOD_General
         {
             //Aca me captura las autorizaciones del usuario con el metodo Ingresar.
             //List<MAuthorization> Autorizaciones = control.Ingresar(textBox1.texts, textBox2.texts);
-            
+
             //Me limpia los textboxs.
-            
+
 
             //En caso que sea nulo me ejecuta la funcion desde la VistaPrincipal.
             //if(Autorizaciones != null)
             //{
             //    principal.AbrirVistaGeneral(Autorizaciones);
             //}
+
             string depart;
+           
             depart = controller.Ingresar(textBox1.texts,textBox2.texts,1);
 
             if(depart != null)

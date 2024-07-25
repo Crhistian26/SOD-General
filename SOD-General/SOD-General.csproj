@@ -176,6 +176,12 @@
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.Designer.cs">
       <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Clientes\VisualizarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\VisualizarClientes.Designer.cs">
+      <DependentUpon>VisualizarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Control calidad\AgregarControles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,16 +230,10 @@
     <Compile Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacion.Designer.cs">
       <DependentUpon>VisualizarCotizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Taller\Registrar entrada\AgregarEntradas.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\VisualizarEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Taller\Registrar entrada\AgregarEntradas.Designer.cs">
-      <DependentUpon>AgregarEntradas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Taller\Registrar entrada\VisualizarEntradas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Taller\Registrar entrada\VisualizarEntradas.Designer.cs">
+    <Compile Include="Vistas\Taller\Registro peticiones\VisualizarEntradas.Designer.cs">
       <DependentUpon>VisualizarEntradas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Registro peticiones\AgregarPeticiones.cs">
@@ -247,6 +247,12 @@
     </Compile>
     <Compile Include="VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Registro peticiones\RegistrarSolicitudEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Registro peticiones\RegistrarSolicitudEquipo.Designer.cs">
+      <DependentUpon>RegistrarSolicitudEquipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Registro peticiones\VisualizarPeticiones.cs">
       <SubType>Form</SubType>
@@ -303,6 +309,9 @@
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Permiso_Details.resx">
       <DependentUpon>Permiso_Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Clientes\VisualizarClientes.resx">
+      <DependentUpon>VisualizarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Control calidad\AgregarControles.resx">
       <DependentUpon>AgregarControles.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,10 +330,7 @@
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacion.resx">
       <DependentUpon>VisualizarCotizacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Registrar entrada\AgregarEntradas.resx">
-      <DependentUpon>AgregarEntradas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Registrar entrada\VisualizarEntradas.resx">
+    <EmbeddedResource Include="Vistas\Taller\Registro peticiones\VisualizarEntradas.resx">
       <DependentUpon>VisualizarEntradas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registro peticiones\AgregarPeticiones.resx">
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Registro peticiones\RegistrarSolicitudEquipo.resx">
+      <DependentUpon>RegistrarSolicitudEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registro peticiones\VisualizarPeticiones.resx">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>

@@ -18,6 +18,9 @@ namespace SOD_General
 {
     public partial class AppVistaGeneral : Form
     {
+        /// <summary>
+        /// atributo Controller de tipo VisGenContr que guardara una instancia del controlador 
+        /// </summary>
         VistaGeneralController controller;
 
         SizesGenerales _size = new SizesGenerales();
@@ -25,15 +28,22 @@ namespace SOD_General
         List<MAuthorization> authorizations = new List<MAuthorization>();
 
         //El departamento para la demostracion.
+        /// <summary>
+        /// atributo para almacenar lo departamentos
+        /// </summary>
         public string Departamento;
 
         public Form formu;
         //El constructor que captura la lista y la llena.
+        /// <summary>
+        /// Constructor de la clase ApViGe, que acepta como parametro un string y luego ese param llenara el atributo definido 
+        /// antes y le pasa al atributo Controller una nueva instancia del controlador y aeste le pasa una instancia de si mismo
+        /// </summary>
+        /// <param name="Departamento"></param>
         public AppVistaGeneral(string Departamento)
         {
             InitializeComponent();
             this.Departamento = Departamento;
-
             this.controller = new VistaGeneralController(this);
         }
 
@@ -61,6 +71,9 @@ namespace SOD_General
             this.formu.Show();
 
         }
+
+
+
 
         private void AppVistaGeneral_Resize(object sender, EventArgs e)
         {

@@ -16,5 +16,10 @@ namespace SOD_General.Vistas.Taller.Registrar_entrada
         {
             InitializeComponent();
         }
+
+        private void cR_DataGriedView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

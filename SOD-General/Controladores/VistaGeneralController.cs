@@ -17,11 +17,18 @@ using System.Windows.Forms;
 
 namespace Controladores
 {
+    /// <summary>
+    /// clase encargada de filtrar y llenar los comboBox segun las autorizaciones
+    /// </summary>
     public class VistaGeneralController
     {
-
+        /// <summary>
+        /// atributo para almacenar la instancia de AppVisGen atraves 
+        /// de un parametro en el constructor de la clase
+        /// </summary>
         AppVistaGeneral vista;
 
+        
         public VistaGeneralController(AppVistaGeneral vista)
         {
             this.vista = vista;
