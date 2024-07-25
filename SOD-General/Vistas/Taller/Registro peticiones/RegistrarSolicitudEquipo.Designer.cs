@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.soD_ComboBox4 = new SOD_ComboBox();
+            this.cR_LabelUp1 = new CR_LabelUp();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos4 = new CR_Subtitulos();
-            this.cR_LabelUp1 = new CR_LabelUp();
-            this.soD_ComboBox4 = new SOD_ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,6 +101,26 @@
             this.splitContainer1.SplitterDistance = 68;
             this.splitContainer1.TabIndex = 1;
             // 
+            // soD_ComboBox4
+            // 
+            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox4.FormattingEnabled = true;
+            this.soD_ComboBox4.Location = new System.Drawing.Point(86, 23);
+            this.soD_ComboBox4.Name = "soD_ComboBox4";
+            this.soD_ComboBox4.Size = new System.Drawing.Size(121, 27);
+            this.soD_ComboBox4.TabIndex = 48;
+            // 
+            // cR_LabelUp1
+            // 
+            this.cR_LabelUp1.AutoSize = true;
+            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp1.Location = new System.Drawing.Point(6, 26);
+            this.cR_LabelUp1.Name = "cR_LabelUp1";
+            this.cR_LabelUp1.Size = new System.Drawing.Size(74, 19);
+            this.cR_LabelUp1.TabIndex = 47;
+            this.cR_LabelUp1.Text = "Tecnicos";
+            // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
@@ -151,26 +171,6 @@
             this.cR_Subtitulos4.TabIndex = 27;
             this.cR_Subtitulos4.Text = "REGISTRAR SOLICITUD";
             // 
-            // cR_LabelUp1
-            // 
-            this.cR_LabelUp1.AutoSize = true;
-            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(6, 26);
-            this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(74, 19);
-            this.cR_LabelUp1.TabIndex = 47;
-            this.cR_LabelUp1.Text = "Tecnicos";
-            // 
-            // soD_ComboBox4
-            // 
-            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox4.FormattingEnabled = true;
-            this.soD_ComboBox4.Location = new System.Drawing.Point(86, 23);
-            this.soD_ComboBox4.Name = "soD_ComboBox4";
-            this.soD_ComboBox4.Size = new System.Drawing.Size(121, 27);
-            this.soD_ComboBox4.TabIndex = 48;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cR_DataGriedView1);
@@ -184,10 +184,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -412,7 +412,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(270, 281);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(287, 262);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(246, 50);
             this.botones_Nuevos1.TabIndex = 85;
