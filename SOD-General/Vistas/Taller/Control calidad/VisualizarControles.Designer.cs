@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
-            this.cR_LabelUp1 = new CR_LabelUp();
-            this.soD_ComboBox1 = new SOD_ComboBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView1 = new CR_DataGriedView();
@@ -56,41 +54,18 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp1);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_ComboBox1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             // 
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(989, 450);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
             this.cR_SplitContainer1.SplitterDistance = 91;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
-            // cR_LabelUp1
-            // 
-            this.cR_LabelUp1.AutoSize = true;
-            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(12, 57);
-            this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(63, 21);
-            this.cR_LabelUp1.TabIndex = 3;
-            this.cR_LabelUp1.Text = "Equipo";
-            // 
-            // soD_ComboBox1
-            // 
-            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Location = new System.Drawing.Point(81, 56);
-            this.soD_ComboBox1.Name = "soD_ComboBox1";
-            this.soD_ComboBox1.Size = new System.Drawing.Size(121, 27);
-            this.soD_ComboBox1.TabIndex = 2;
-            // 
             // botones_Nuevos1
             // 
-            this.botones_Nuevos1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
             this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
             this.botones_Nuevos1.BorderRadius = 40;
@@ -99,22 +74,23 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(811, 43);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(632, 30);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(156, 40);
             this.botones_Nuevos1.TabIndex = 1;
             this.botones_Nuevos1.Text = "Crear nuevo control";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_Subtitulos1
             // 
-            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Subtitulos1.AutoSize = true;
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(11, 9);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(315, 30);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(182, 31);
             this.cR_Subtitulos1.TabIndex = 0;
@@ -140,9 +116,8 @@
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(989, 355);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(800, 355);
             this.cR_DataGriedView1.TabIndex = 2;
-            this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
             // 
             // Column1
             // 
@@ -169,12 +144,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(989, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(810, 450);
             this.Name = "VisualizarControles";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisualizarControles";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
@@ -195,7 +168,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
-        private CR_LabelUp cR_LabelUp1;
-        private SOD_ComboBox soD_ComboBox1;
     }
 }

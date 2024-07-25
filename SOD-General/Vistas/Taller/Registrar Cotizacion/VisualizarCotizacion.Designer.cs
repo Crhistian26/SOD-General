@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cR_Checkbox2 = new CR_Checkbox();
             this.cR_Checkbox1 = new CR_Checkbox();
             this.cR_LabelUp3 = new CR_LabelUp();
             this.soD_ComboBox8 = new SOD_ComboBox();
@@ -80,7 +79,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -95,7 +94,6 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -103,7 +101,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.splitContainer1.Panel1.Controls.Add(this.cR_Checkbox2);
             this.splitContainer1.Panel1.Controls.Add(this.cR_Checkbox1);
             this.splitContainer1.Panel1.Controls.Add(this.cR_LabelUp3);
             this.splitContainer1.Panel1.Controls.Add(this.soD_ComboBox8);
@@ -123,34 +120,20 @@
             this.splitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1075, 450);
+            this.splitContainer1.Size = new System.Drawing.Size(1070, 450);
             this.splitContainer1.SplitterDistance = 117;
             this.splitContainer1.TabIndex = 3;
             // 
-            // cR_Checkbox2
-            // 
-            this.cR_Checkbox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_Checkbox2.AutoSize = true;
-            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox2.ForeColor = System.Drawing.Color.White;
-            this.cR_Checkbox2.Location = new System.Drawing.Point(460, 58);
-            this.cR_Checkbox2.Name = "cR_Checkbox2";
-            this.cR_Checkbox2.Size = new System.Drawing.Size(76, 24);
-            this.cR_Checkbox2.TabIndex = 37;
-            this.cR_Checkbox2.Text = "Validas";
-            this.cR_Checkbox2.UseVisualStyleBackColor = true;
-            // 
             // cR_Checkbox1
             // 
-            this.cR_Checkbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Checkbox1.AutoSize = true;
             this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox1.ForeColor = System.Drawing.Color.White;
-            this.cR_Checkbox1.Location = new System.Drawing.Point(460, 88);
+            this.cR_Checkbox1.Location = new System.Drawing.Point(465, 77);
             this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(87, 24);
+            this.cR_Checkbox1.Size = new System.Drawing.Size(106, 24);
             this.cR_Checkbox1.TabIndex = 36;
-            this.cR_Checkbox1.Text = "Invalidas";
+            this.cR_Checkbox1.Text = "Aun validas";
             this.cR_Checkbox1.UseVisualStyleBackColor = true;
             // 
             // cR_LabelUp3
@@ -195,11 +178,10 @@
             // 
             // cR_LabelUp2
             // 
-            this.cR_LabelUp2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_LabelUp2.AutoSize = true;
             this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(744, 88);
+            this.cR_LabelUp2.Location = new System.Drawing.Point(749, 88);
             this.cR_LabelUp2.Name = "cR_LabelUp2";
             this.cR_LabelUp2.Size = new System.Drawing.Size(47, 20);
             this.cR_LabelUp2.TabIndex = 31;
@@ -207,11 +189,10 @@
             // 
             // cR_LabelUp1
             // 
-            this.cR_LabelUp1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_LabelUp1.AutoSize = true;
             this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(744, 47);
+            this.cR_LabelUp1.Location = new System.Drawing.Point(749, 40);
             this.cR_LabelUp1.Name = "cR_LabelUp1";
             this.cR_LabelUp1.Size = new System.Drawing.Size(51, 20);
             this.cR_LabelUp1.TabIndex = 30;
@@ -219,20 +200,18 @@
             // 
             // cR_DateTimePicker2
             // 
-            this.cR_DateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(797, 47);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(802, 40);
             this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
             this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker2.TabIndex = 29;
             // 
             // cR_DateTimePicker1
             // 
-            this.cR_DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(797, 88);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(802, 88);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
             this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker1.TabIndex = 28;
@@ -246,7 +225,7 @@
             this.cR_Subtitulos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos4.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos4.Location = new System.Drawing.Point(441, 9);
+            this.cR_Subtitulos4.Location = new System.Drawing.Point(359, 9);
             this.cR_Subtitulos4.Name = "cR_Subtitulos4";
             this.cR_Subtitulos4.Size = new System.Drawing.Size(333, 28);
             this.cR_Subtitulos4.TabIndex = 27;
@@ -277,9 +256,8 @@
             this.cR_DataGriedView2.Name = "cR_DataGriedView2";
             this.cR_DataGriedView2.ReadOnly = true;
             this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView2.Size = new System.Drawing.Size(1075, 329);
+            this.cR_DataGriedView2.Size = new System.Drawing.Size(1070, 329);
             this.cR_DataGriedView2.TabIndex = 79;
-            this.cR_DataGriedView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Click_Editar);
             // 
             // panel4
             // 
@@ -740,10 +718,10 @@
             // Peticiones_Client
             // 
             this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Client.HeaderText = "# de orden";
+            this.Peticiones_Client.HeaderText = "Cliente";
             this.Peticiones_Client.Name = "Peticiones_Client";
             this.Peticiones_Client.ReadOnly = true;
-            this.Peticiones_Client.Width = 108;
+            this.Peticiones_Client.Width = 81;
             // 
             // Column2
             // 
@@ -791,17 +769,13 @@
             this.Column4.HeaderText = "Editar";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // VisualizarCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 450);
+            this.ClientSize = new System.Drawing.Size(1070, 450);
             this.Controls.Add(this.splitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1070, 450);
             this.Name = "VisualizarCotizacion";
             this.Text = "Cotizaciones Registradas";
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -867,7 +841,6 @@
         private CR_DateTimePicker cR_DateTimePicker2;
         private CR_DateTimePicker cR_DateTimePicker1;
         private CR_Checkbox cR_Checkbox1;
-        private CR_Checkbox cR_Checkbox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Contact;
@@ -875,6 +848,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

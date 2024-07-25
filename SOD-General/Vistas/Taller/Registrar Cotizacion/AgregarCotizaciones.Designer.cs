@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,7 +58,6 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -87,7 +86,6 @@
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
@@ -99,7 +97,6 @@
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
@@ -114,7 +111,6 @@
             // 
             // botones_Nuevos1
             // 
-            this.botones_Nuevos1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
             this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
             this.botones_Nuevos1.BorderRadius = 40;
@@ -129,11 +125,9 @@
             this.botones_Nuevos1.TabIndex = 99;
             this.botones_Nuevos1.Text = "Guardar Cotizacion";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_LabelUp3
             // 
-            this.cR_LabelUp3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_LabelUp3.AutoSize = true;
             this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
@@ -145,7 +139,6 @@
             // 
             // cR_LabelUp2
             // 
-            this.cR_LabelUp2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_LabelUp2.AutoSize = true;
             this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
@@ -157,12 +150,10 @@
             // 
             // cR_LabelUp1
             // 
-            this.cR_LabelUp1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_LabelUp1.AutoSize = true;
             this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(12, 53);
+            this.cR_LabelUp1.Location = new System.Drawing.Point(12, 35);
             this.cR_LabelUp1.Name = "cR_LabelUp1";
             this.cR_LabelUp1.Size = new System.Drawing.Size(132, 20);
             this.cR_LabelUp1.TabIndex = 96;
@@ -170,7 +161,6 @@
             // 
             // fR_TextBox3
             // 
-            this.fR_TextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fR_TextBox3.BackColor = System.Drawing.SystemColors.Window;
             this.fR_TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
             this.fR_TextBox3.BorderFocusColor = System.Drawing.Color.Blue;
@@ -189,27 +179,24 @@
             // 
             // fR_TextBox2
             // 
-            this.fR_TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.fR_TextBox2.BackColor = System.Drawing.SystemColors.Window;
             this.fR_TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
             this.fR_TextBox2.BorderFocusColor = System.Drawing.Color.Blue;
             this.fR_TextBox2.BorderSize = 2;
             this.fR_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.fR_TextBox2.Location = new System.Drawing.Point(7, 81);
+            this.fR_TextBox2.Location = new System.Drawing.Point(7, 63);
             this.fR_TextBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.fR_TextBox2.Multiline = true;
             this.fR_TextBox2.Name = "fR_TextBox2";
             this.fR_TextBox2.Padding = new System.Windows.Forms.Padding(7);
             this.fR_TextBox2.PasswordChar = false;
-            this.fR_TextBox2.Size = new System.Drawing.Size(137, 51);
+            this.fR_TextBox2.Size = new System.Drawing.Size(203, 69);
             this.fR_TextBox2.TabIndex = 93;
             this.fR_TextBox2.texts = "fafa";
             this.fR_TextBox2.UnderlinedStyle = false;
             // 
             // fR_TextBox1
             // 
-            this.fR_TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
             this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
@@ -238,13 +225,14 @@
             // 
             // cR_Subtitulos4
             // 
-            this.cR_Subtitulos4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cR_Subtitulos4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Subtitulos4.AutoSize = true;
             this.cR_Subtitulos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos4.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos4.Location = new System.Drawing.Point(90, 9);
+            this.cR_Subtitulos4.Location = new System.Drawing.Point(314, 9);
             this.cR_Subtitulos4.Name = "cR_Subtitulos4";
             this.cR_Subtitulos4.Size = new System.Drawing.Size(225, 28);
             this.cR_Subtitulos4.TabIndex = 27;
@@ -255,10 +243,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -324,7 +312,6 @@
             this.ClientSize = new System.Drawing.Size(857, 434);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(857, 434);
             this.Name = "AgregarCotizaciones";
             this.Text = "AgregarCotizaciones";
             this.splitContainer1.Panel1.ResumeLayout(false);

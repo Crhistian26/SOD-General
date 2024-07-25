@@ -1,5 +1,4 @@
-﻿using SOD_General.Vistas.Taller.Registrar_Cotizacion;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +20,6 @@ namespace SOD_General.Taller.Registro_peticiones
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void botones_Nuevos1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Cotizacion Guardada con exito");
         }
     }
 }

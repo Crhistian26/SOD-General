@@ -146,7 +146,7 @@ namespace Controladores
             ToolStripMenuItem Controles1 = new ToolStripMenuItem();
             Controles1.Text = "Ver Controles de calidad";
             Controles1.Click += Peticiones2_Click;
-            lista.Add(Controles1);
+            lista.Add(Controles);
 
             //Frandy
             ToolStripMenuItem Controles2 = new ToolStripMenuItem();
