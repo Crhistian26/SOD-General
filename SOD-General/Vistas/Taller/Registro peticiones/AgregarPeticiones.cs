@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOD_General.Vistas.Taller.Registro_peticiones;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,12 @@ namespace SOD_General.Taller.Registro_peticiones
         private void AgregarPeticiones_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            RegistrarSolicitudEquipo RegSolEqu = new RegistrarSolicitudEquipo();
+            RegSolEqu.Show();
         }
     }
 }

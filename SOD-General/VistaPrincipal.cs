@@ -35,8 +35,10 @@ namespace SOD_General
         private void VistaPrincipal_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+
             AbrirFormulario(new Login(this));
             this.Size = new Size(463, 284);
+
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -48,7 +50,7 @@ namespace SOD_General
         public void AbrirFormulario(Form formulario)
         {
             if (this.panel1.Controls.Count > 0)
-            {
+            {   
                 panel1.Controls.Clear();
                 panel1.Tag = null;
             }

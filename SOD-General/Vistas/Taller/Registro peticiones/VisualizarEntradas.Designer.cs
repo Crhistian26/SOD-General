@@ -35,13 +35,10 @@
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
@@ -133,13 +130,10 @@
             this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Peticiones_Client,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Peticiones_Date,
             this.Column6});
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
@@ -150,20 +144,6 @@
             this.cR_DataGriedView1.Size = new System.Drawing.Size(1105, 366);
             this.cR_DataGriedView1.TabIndex = 1;
             this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tecnico";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Peticiones_Client
-            // 
-            this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Client.HeaderText = "Cliente";
-            this.Peticiones_Client.Name = "Peticiones_Client";
-            this.Peticiones_Client.ReadOnly = true;
-            this.Peticiones_Client.Width = 81;
             // 
             // Column2
             // 
@@ -188,14 +168,6 @@
             this.Column5.HeaderText = "Serial";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            // 
-            // Peticiones_Date
-            // 
-            this.Peticiones_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Date.HeaderText = "Fecha";
-            this.Peticiones_Date.Name = "Peticiones_Date";
-            this.Peticiones_Date.ReadOnly = true;
-            this.Peticiones_Date.Width = 73;
             // 
             // Column6
             // 
@@ -231,13 +203,10 @@
         private CR_DataGriedView cR_DataGriedView1;
         private SOD_ComboBox soD_ComboBox1;
         private SOD_TextBox soD_TextBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

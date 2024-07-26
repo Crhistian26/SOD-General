@@ -42,12 +42,14 @@
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.cR_LabelUp4 = new CR_LabelUp();
+            this.fR_TextBox4 = new Designer.FR_TextBox();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,6 +67,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.splitContainer1.Panel1.Controls.Add(this.fR_TextBox4);
+            this.splitContainer1.Panel1.Controls.Add(this.cR_LabelUp4);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.botones_Nuevos1);
@@ -119,7 +123,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(638, 81);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(657, 81);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(188, 46);
             this.botones_Nuevos1.TabIndex = 99;
@@ -131,7 +135,7 @@
             this.cR_LabelUp3.AutoSize = true;
             this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp3.Location = new System.Drawing.Point(421, 53);
+            this.cR_LabelUp3.Location = new System.Drawing.Point(419, 69);
             this.cR_LabelUp3.Name = "cR_LabelUp3";
             this.cR_LabelUp3.Size = new System.Drawing.Size(76, 20);
             this.cR_LabelUp3.TabIndex = 98;
@@ -142,7 +146,7 @@
             this.cR_LabelUp2.AutoSize = true;
             this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(220, 53);
+            this.cR_LabelUp2.Location = new System.Drawing.Point(218, 69);
             this.cR_LabelUp2.Name = "cR_LabelUp2";
             this.cR_LabelUp2.Size = new System.Drawing.Size(70, 20);
             this.cR_LabelUp2.TabIndex = 97;
@@ -155,9 +159,9 @@
             this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
             this.cR_LabelUp1.Location = new System.Drawing.Point(12, 35);
             this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(132, 20);
+            this.cR_LabelUp1.Size = new System.Drawing.Size(175, 20);
             this.cR_LabelUp1.TabIndex = 96;
-            this.cR_LabelUp1.Text = "Material o servicio";
+            this.cR_LabelUp1.Text = "Material, servicio o pieza";
             // 
             // fR_TextBox3
             // 
@@ -166,13 +170,13 @@
             this.fR_TextBox3.BorderFocusColor = System.Drawing.Color.Blue;
             this.fR_TextBox3.BorderSize = 2;
             this.fR_TextBox3.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.fR_TextBox3.Location = new System.Drawing.Point(224, 81);
+            this.fR_TextBox3.Location = new System.Drawing.Point(222, 97);
             this.fR_TextBox3.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.fR_TextBox3.Multiline = true;
             this.fR_TextBox3.Name = "fR_TextBox3";
             this.fR_TextBox3.Padding = new System.Windows.Forms.Padding(7);
             this.fR_TextBox3.PasswordChar = false;
-            this.fR_TextBox3.Size = new System.Drawing.Size(187, 30);
+            this.fR_TextBox3.Size = new System.Drawing.Size(174, 30);
             this.fR_TextBox3.TabIndex = 95;
             this.fR_TextBox3.texts = "fafa";
             this.fR_TextBox3.UnderlinedStyle = false;
@@ -202,13 +206,13 @@
             this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
             this.fR_TextBox1.BorderSize = 2;
             this.fR_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.fR_TextBox1.Location = new System.Drawing.Point(425, 81);
+            this.fR_TextBox1.Location = new System.Drawing.Point(423, 97);
             this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.fR_TextBox1.Multiline = true;
             this.fR_TextBox1.Name = "fR_TextBox1";
             this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
             this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(187, 30);
+            this.fR_TextBox1.Size = new System.Drawing.Size(72, 30);
             this.fR_TextBox1.TabIndex = 90;
             this.fR_TextBox1.texts = "fafa";
             this.fR_TextBox1.UnderlinedStyle = false;
@@ -250,11 +254,11 @@
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
+            this.Column5,
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Peticiones_Date,
-            this.Column5});
+            this.Peticiones_Date});
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
@@ -265,11 +269,46 @@
             this.cR_DataGriedView1.Size = new System.Drawing.Size(857, 290);
             this.cR_DataGriedView1.TabIndex = 3;
             // 
+            // cR_LabelUp4
+            // 
+            this.cR_LabelUp4.AutoSize = true;
+            this.cR_LabelUp4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_LabelUp4.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp4.Location = new System.Drawing.Point(532, 69);
+            this.cR_LabelUp4.Name = "cR_LabelUp4";
+            this.cR_LabelUp4.Size = new System.Drawing.Size(51, 21);
+            this.cR_LabelUp4.TabIndex = 102;
+            this.cR_LabelUp4.Text = "Serial";
+            // 
+            // fR_TextBox4
+            // 
+            this.fR_TextBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox4.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox4.BorderSize = 2;
+            this.fR_TextBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.fR_TextBox4.Location = new System.Drawing.Point(536, 98);
+            this.fR_TextBox4.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox4.Multiline = true;
+            this.fR_TextBox4.Name = "fR_TextBox4";
+            this.fR_TextBox4.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox4.PasswordChar = false;
+            this.fR_TextBox4.Size = new System.Drawing.Size(72, 30);
+            this.fR_TextBox4.TabIndex = 103;
+            this.fR_TextBox4.texts = "fafa";
+            this.fR_TextBox4.UnderlinedStyle = false;
+            // 
             // Column4
             // 
-            this.Column4.HeaderText = "Numero de Orden";
+            this.Column4.HeaderText = "# de Orden";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Serial";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column1
             // 
@@ -298,12 +337,6 @@
             this.Peticiones_Date.HeaderText = "Fecha";
             this.Peticiones_Date.Name = "Peticiones_Date";
             this.Peticiones_Date.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Reparado";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // AgregarCotizaciones
             // 
@@ -339,11 +372,13 @@
         private Designer.FR_TextBox fR_TextBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private CR_LabelUp cR_LabelUp4;
+        private Designer.FR_TextBox fR_TextBox4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Date;
-        private System.Windows.Forms.DataGridViewButtonColumn Column5;
     }
 }

@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cR_Checkbox1 = new CR_Checkbox();
             this.cR_LabelUp3 = new CR_LabelUp();
             this.soD_ComboBox8 = new SOD_ComboBox();
-            this.Cliente = new CR_LabelUp();
-            this.soD_ComboBox7 = new SOD_ComboBox();
             this.cR_LabelUp2 = new CR_LabelUp();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.cR_DateTimePicker2 = new CR_DateTimePicker();
@@ -72,6 +70,7 @@
             this.cR_Subtitulos5 = new CR_Subtitulos();
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.fR_TextBox3 = new Designer.FR_TextBox();
+            this.cR_Checkbox2 = new CR_Checkbox();
             this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peticiones_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,7 +78,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_LabelUp4 = new CR_LabelUp();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -101,11 +103,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.splitContainer1.Panel1.Controls.Add(this.cR_LabelUp4);
+            this.splitContainer1.Panel1.Controls.Add(this.cr_Textbox1);
+            this.splitContainer1.Panel1.Controls.Add(this.cR_Checkbox2);
             this.splitContainer1.Panel1.Controls.Add(this.cR_Checkbox1);
             this.splitContainer1.Panel1.Controls.Add(this.cR_LabelUp3);
             this.splitContainer1.Panel1.Controls.Add(this.soD_ComboBox8);
-            this.splitContainer1.Panel1.Controls.Add(this.Cliente);
-            this.splitContainer1.Panel1.Controls.Add(this.soD_ComboBox7);
             this.splitContainer1.Panel1.Controls.Add(this.cR_LabelUp2);
             this.splitContainer1.Panel1.Controls.Add(this.cR_LabelUp1);
             this.splitContainer1.Panel1.Controls.Add(this.cR_DateTimePicker2);
@@ -129,11 +132,11 @@
             this.cR_Checkbox1.AutoSize = true;
             this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox1.ForeColor = System.Drawing.Color.White;
-            this.cR_Checkbox1.Location = new System.Drawing.Point(465, 77);
+            this.cR_Checkbox1.Location = new System.Drawing.Point(519, 75);
             this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(106, 24);
+            this.cR_Checkbox1.Size = new System.Drawing.Size(98, 24);
             this.cR_Checkbox1.TabIndex = 36;
-            this.cR_Checkbox1.Text = "Aun validas";
+            this.cR_Checkbox1.Text = "No validas";
             this.cR_Checkbox1.UseVisualStyleBackColor = true;
             // 
             // cR_LabelUp3
@@ -141,7 +144,7 @@
             this.cR_LabelUp3.AutoSize = true;
             this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp3.Location = new System.Drawing.Point(229, 51);
+            this.cR_LabelUp3.Location = new System.Drawing.Point(171, 49);
             this.cR_LabelUp3.Name = "cR_LabelUp3";
             this.cR_LabelUp3.Size = new System.Drawing.Size(61, 20);
             this.cR_LabelUp3.TabIndex = 35;
@@ -151,30 +154,10 @@
             // 
             this.soD_ComboBox8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox8.FormattingEnabled = true;
-            this.soD_ComboBox8.Location = new System.Drawing.Point(233, 74);
+            this.soD_ComboBox8.Location = new System.Drawing.Point(175, 72);
             this.soD_ComboBox8.Name = "soD_ComboBox8";
             this.soD_ComboBox8.Size = new System.Drawing.Size(215, 27);
             this.soD_ComboBox8.TabIndex = 34;
-            // 
-            // Cliente
-            // 
-            this.Cliente.AutoSize = true;
-            this.Cliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.Cliente.ForeColor = System.Drawing.Color.White;
-            this.Cliente.Location = new System.Drawing.Point(7, 51);
-            this.Cliente.Name = "Cliente";
-            this.Cliente.Size = new System.Drawing.Size(56, 20);
-            this.Cliente.TabIndex = 33;
-            this.Cliente.Text = "Cliente";
-            // 
-            // soD_ComboBox7
-            // 
-            this.soD_ComboBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox7.FormattingEnabled = true;
-            this.soD_ComboBox7.Location = new System.Drawing.Point(8, 73);
-            this.soD_ComboBox7.Name = "soD_ComboBox7";
-            this.soD_ComboBox7.Size = new System.Drawing.Size(185, 27);
-            this.soD_ComboBox7.TabIndex = 32;
             // 
             // cR_LabelUp2
             // 
@@ -236,10 +219,10 @@
             this.cR_DataGriedView2.AllowUserToAddRows = false;
             this.cR_DataGriedView2.AllowUserToDeleteRows = false;
             this.cR_DataGriedView2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Peticiones_Client,
@@ -249,6 +232,7 @@
             this.Column3,
             this.Peticiones_Date,
             this.Column1,
+            this.Column6,
             this.Column4});
             this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView2.EnableHeadersVisualStyles = false;
@@ -715,6 +699,18 @@
             this.fR_TextBox3.texts = "fafa";
             this.fR_TextBox3.UnderlinedStyle = false;
             // 
+            // cR_Checkbox2
+            // 
+            this.cR_Checkbox2.AutoSize = true;
+            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox2.ForeColor = System.Drawing.Color.White;
+            this.cR_Checkbox2.Location = new System.Drawing.Point(407, 75);
+            this.cR_Checkbox2.Name = "cR_Checkbox2";
+            this.cR_Checkbox2.Size = new System.Drawing.Size(106, 24);
+            this.cR_Checkbox2.TabIndex = 37;
+            this.cR_Checkbox2.Text = "Aun validas";
+            this.cR_Checkbox2.UseVisualStyleBackColor = true;
+            // 
             // Peticiones_Client
             // 
             this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -764,11 +760,39 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Aprobar";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // Column4
             // 
             this.Column4.HeaderText = "Editar";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(14, 74);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(140, 25);
+            this.cr_Textbox1.TabIndex = 38;
+            // 
+            // cR_LabelUp4
+            // 
+            this.cR_LabelUp4.AutoSize = true;
+            this.cR_LabelUp4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_LabelUp4.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp4.Location = new System.Drawing.Point(7, 51);
+            this.cR_LabelUp4.Name = "cR_LabelUp4";
+            this.cR_LabelUp4.Size = new System.Drawing.Size(74, 21);
+            this.cR_LabelUp4.TabIndex = 39;
+            this.cR_LabelUp4.Text = "# orden:";
             // 
             // VisualizarCotizacion
             // 
@@ -834,13 +858,12 @@
         private Designer.FR_TextBox fR_TextBox3;
         private CR_LabelUp cR_LabelUp3;
         private SOD_ComboBox soD_ComboBox8;
-        private CR_LabelUp Cliente;
-        private SOD_ComboBox soD_ComboBox7;
         private CR_LabelUp cR_LabelUp2;
         private CR_LabelUp cR_LabelUp1;
         private CR_DateTimePicker cR_DateTimePicker2;
         private CR_DateTimePicker cR_DateTimePicker1;
         private CR_Checkbox cR_Checkbox1;
+        private CR_Checkbox cR_Checkbox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Contact;
@@ -848,6 +871,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private CR_LabelUp cR_LabelUp4;
+        private Cr_Textbox cr_Textbox1;
     }
 }

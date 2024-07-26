@@ -16,5 +16,10 @@ namespace SOD_General.Vistas.Taller.Registrar_Cotizacion
         {
             InitializeComponent();
         }
+
+        private void soD_TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

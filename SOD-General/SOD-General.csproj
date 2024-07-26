@@ -48,12 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ControlOperaciones.cs" />
     <Compile Include="Controladores\Empleados_Controller.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\Motivos_Controller.cs" />
     <Compile Include="Controladores\Registros_Controller.cs" />
     <Compile Include="Controladores\SizesGenerales.cs" />
-    <Compile Include="Controladores\ControlOperaciones.cs" />
     <Compile Include="Vistas\Almacen\Agregar equipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +242,30 @@
     <Compile Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposReparados.Designer.cs">
       <DependentUpon>VisualizarEquiposReparados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Equipos\AgregarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\AgregarEquipo.Designer.cs">
+      <DependentUpon>AgregarEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\AgregarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\AgregarMarcas.Designer.cs">
+      <DependentUpon>AgregarMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\AgregarTipoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\AgregarTipoEquipo.Designer.cs">
+      <DependentUpon>AgregarTipoEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\VisualizacionEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\VisualizacionEquipo.Designer.cs">
+      <DependentUpon>VisualizacionEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Inventario\AgregarPiezas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,11 +290,23 @@
     <Compile Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.Designer.cs">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Registrar Cotizacion\EditarCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Registrar Cotizacion\EditarCotizacion.Designer.cs">
+      <DependentUpon>EditarCotizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacion.Designer.cs">
       <DependentUpon>VisualizarCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacionesAprobadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacionesAprobadas.Designer.cs">
+      <DependentUpon>VisualizarCotizacionesAprobadas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Registro peticiones\VisualizarEntradas.cs">
       <SubType>Form</SubType>
@@ -378,14 +414,38 @@
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\AplicarControl.resx">
       <DependentUpon>AplicarControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\EditarControlEquipo.resx">
+      <DependentUpon>EditarControlEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposControl.resx">
+      <DependentUpon>VisualizarEquiposControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposReparados.resx">
       <DependentUpon>VisualizarEquiposReparados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Equipos\AgregarEquipo.resx">
+      <DependentUpon>AgregarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Equipos\AgregarMarcas.resx">
+      <DependentUpon>AgregarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Equipos\AgregarTipoEquipo.resx">
+      <DependentUpon>AgregarTipoEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Equipos\VisualizacionEquipo.resx">
+      <DependentUpon>VisualizacionEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.resx">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\EditarCotizacion.resx">
+      <DependentUpon>EditarCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacion.resx">
       <DependentUpon>VisualizarCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\VisualizarCotizacionesAprobadas.resx">
+      <DependentUpon>VisualizarCotizacionesAprobadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registro peticiones\VisualizarEntradas.resx">
       <DependentUpon>VisualizarEntradas.cs</DependentUpon>
@@ -427,8 +487,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Vistas\Recursos Humanos\Exportar\" />
-    <Folder Include="Vistas\Renta\a\" />
-    <Folder Include="Vistas\Ventas\Apartado de tareas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-sod-soluciones-diaz-fixed.png" />

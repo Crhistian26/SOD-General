@@ -31,21 +31,21 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cR_LabelDown5 = new CR_LabelDown();
+            this.cR_DateTimePicker2 = new CR_DateTimePicker();
+            this.cR_Checkbox2 = new CR_Checkbox();
+            this.cR_Checkbox1 = new CR_Checkbox();
+            this.cR_LabelDown4 = new CR_LabelDown();
+            this.cR_DateTimePicker1 = new CR_DateTimePicker();
+            this.soD_TextBox2 = new SOD_TextBox();
+            this.cR_LabelDown2 = new CR_LabelDown();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.soD_ComboBox2 = new SOD_ComboBox();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.soD_TextBox2 = new SOD_TextBox();
-            this.cR_LabelDown2 = new CR_LabelDown();
-            this.cR_DateTimePicker1 = new CR_DateTimePicker();
-            this.cR_LabelDown4 = new CR_LabelDown();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cR_Checkbox1 = new CR_Checkbox();
-            this.cR_Checkbox2 = new CR_Checkbox();
-            this.cR_DateTimePicker2 = new CR_DateTimePicker();
-            this.cR_LabelDown5 = new CR_LabelDown();
-            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -84,7 +84,7 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(269, 9);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(269, 24);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(158, 31);
             this.cR_Subtitulos1.TabIndex = 1;
@@ -106,6 +106,116 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 275);
             this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.cR_Checkbox2);
+            this.panel2.Controls.Add(this.cR_Checkbox1);
+            this.panel2.Location = new System.Drawing.Point(19, 131);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(643, 79);
+            this.panel2.TabIndex = 15;
+            this.panel2.Visible = false;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cR_LabelDown5);
+            this.panel3.Controls.Add(this.cR_DateTimePicker2);
+            this.panel3.Location = new System.Drawing.Point(340, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(286, 66);
+            this.panel3.TabIndex = 16;
+            this.panel3.Visible = false;
+            // 
+            // cR_LabelDown5
+            // 
+            this.cR_LabelDown5.AutoSize = true;
+            this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown5.Location = new System.Drawing.Point(8, 8);
+            this.cR_LabelDown5.Name = "cR_LabelDown5";
+            this.cR_LabelDown5.Size = new System.Drawing.Size(127, 20);
+            this.cR_LabelDown5.TabIndex = 16;
+            this.cR_LabelDown5.Text = "Fecha de despido";
+            // 
+            // cR_DateTimePicker2
+            // 
+            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker2.Enabled = false;
+            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(8, 31);
+            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
+            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker2.TabIndex = 16;
+            // 
+            // cR_Checkbox2
+            // 
+            this.cR_Checkbox2.AutoSize = true;
+            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox2.Location = new System.Drawing.Point(188, 29);
+            this.cR_Checkbox2.Name = "cR_Checkbox2";
+            this.cR_Checkbox2.Size = new System.Drawing.Size(101, 24);
+            this.cR_Checkbox2.TabIndex = 1;
+            this.cR_Checkbox2.Text = "Despedido";
+            this.cR_Checkbox2.UseVisualStyleBackColor = true;
+            // 
+            // cR_Checkbox1
+            // 
+            this.cR_Checkbox1.AutoSize = true;
+            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox1.Location = new System.Drawing.Point(16, 29);
+            this.cR_Checkbox1.Name = "cR_Checkbox1";
+            this.cR_Checkbox1.Size = new System.Drawing.Size(105, 24);
+            this.cR_Checkbox1.TabIndex = 0;
+            this.cR_Checkbox1.Text = "Trabajando";
+            this.cR_Checkbox1.UseVisualStyleBackColor = true;
+            // 
+            // cR_LabelDown4
+            // 
+            this.cR_LabelDown4.AutoSize = true;
+            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown4.Location = new System.Drawing.Point(359, 65);
+            this.cR_LabelDown4.Name = "cR_LabelDown4";
+            this.cR_LabelDown4.Size = new System.Drawing.Size(225, 20);
+            this.cR_LabelDown4.TabIndex = 14;
+            this.cR_LabelDown4.Text = "Fecha de ingreso a la compañia:";
+            // 
+            // cR_DateTimePicker1
+            // 
+            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(359, 89);
+            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker1.TabIndex = 13;
+            // 
+            // soD_TextBox2
+            // 
+            this.soD_TextBox2.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox2.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox2.BorderSize = 2;
+            this.soD_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox2.Location = new System.Drawing.Point(19, 89);
+            this.soD_TextBox2.Name = "soD_TextBox2";
+            this.soD_TextBox2.Size = new System.Drawing.Size(312, 21);
+            this.soD_TextBox2.TabIndex = 12;
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(15, 66);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(72, 20);
+            this.cR_LabelDown2.TabIndex = 11;
+            this.cR_LabelDown2.Text = "Apellidos";
             // 
             // botones_Nuevos1
             // 
@@ -166,116 +276,6 @@
             this.cR_LabelDown1.Size = new System.Drawing.Size(70, 20);
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Nombres";
-            // 
-            // soD_TextBox2
-            // 
-            this.soD_TextBox2.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox2.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox2.BorderSize = 2;
-            this.soD_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox2.Location = new System.Drawing.Point(19, 89);
-            this.soD_TextBox2.Name = "soD_TextBox2";
-            this.soD_TextBox2.Size = new System.Drawing.Size(312, 21);
-            this.soD_TextBox2.TabIndex = 12;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(15, 66);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(72, 20);
-            this.cR_LabelDown2.TabIndex = 11;
-            this.cR_LabelDown2.Text = "Apellidos";
-            // 
-            // cR_DateTimePicker1
-            // 
-            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(359, 89);
-            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
-            this.cR_DateTimePicker1.TabIndex = 13;
-            // 
-            // cR_LabelDown4
-            // 
-            this.cR_LabelDown4.AutoSize = true;
-            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(359, 65);
-            this.cR_LabelDown4.Name = "cR_LabelDown4";
-            this.cR_LabelDown4.Size = new System.Drawing.Size(225, 20);
-            this.cR_LabelDown4.TabIndex = 14;
-            this.cR_LabelDown4.Text = "Fecha de ingreso a la compañia:";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.cR_Checkbox2);
-            this.panel2.Controls.Add(this.cR_Checkbox1);
-            this.panel2.Location = new System.Drawing.Point(19, 131);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(643, 79);
-            this.panel2.TabIndex = 15;
-            this.panel2.Visible = false;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // cR_Checkbox1
-            // 
-            this.cR_Checkbox1.AutoSize = true;
-            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(16, 29);
-            this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(105, 24);
-            this.cR_Checkbox1.TabIndex = 0;
-            this.cR_Checkbox1.Text = "Trabajando";
-            this.cR_Checkbox1.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox2
-            // 
-            this.cR_Checkbox2.AutoSize = true;
-            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox2.Location = new System.Drawing.Point(188, 29);
-            this.cR_Checkbox2.Name = "cR_Checkbox2";
-            this.cR_Checkbox2.Size = new System.Drawing.Size(101, 24);
-            this.cR_Checkbox2.TabIndex = 1;
-            this.cR_Checkbox2.Text = "Despedido";
-            this.cR_Checkbox2.UseVisualStyleBackColor = true;
-            // 
-            // cR_DateTimePicker2
-            // 
-            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker2.Enabled = false;
-            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(8, 31);
-            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
-            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
-            this.cR_DateTimePicker2.TabIndex = 16;
-            // 
-            // cR_LabelDown5
-            // 
-            this.cR_LabelDown5.AutoSize = true;
-            this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown5.Location = new System.Drawing.Point(8, 8);
-            this.cR_LabelDown5.Name = "cR_LabelDown5";
-            this.cR_LabelDown5.Size = new System.Drawing.Size(127, 20);
-            this.cR_LabelDown5.TabIndex = 16;
-            this.cR_LabelDown5.Text = "Fecha de despido";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.cR_LabelDown5);
-            this.panel3.Controls.Add(this.cR_DateTimePicker2);
-            this.panel3.Location = new System.Drawing.Point(340, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(286, 66);
-            this.panel3.TabIndex = 16;
-            this.panel3.Visible = false;
             // 
             // AgregarEditar_Empleados
             // 

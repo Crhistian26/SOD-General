@@ -28,12 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cr_Textbox2 = new Cr_Textbox();
+            this.cr_Textbox1 = new Cr_Textbox();
             this.cR_Label2 = new CR_LabelUp();
             this.cR_Label1 = new CR_LabelUp();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cr_Textbox2 = new Cr_Textbox();
             this.SuspendLayout();
+            // 
+            // cr_Textbox2
+            // 
+            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox2.Location = new System.Drawing.Point(79, 113);
+            this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox2.TabIndex = 13;
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(79, 41);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox1.TabIndex = 12;
             // 
             // cR_Label2
             // 
@@ -76,24 +94,6 @@
             this.botones_Nuevos1.Text = "Ingresar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(79, 41);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(284, 25);
-            this.cr_Textbox1.TabIndex = 12;
-            // 
-            // cr_Textbox2
-            // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(79, 113);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
-            this.cr_Textbox2.TabIndex = 13;
             // 
             // Login
             // 

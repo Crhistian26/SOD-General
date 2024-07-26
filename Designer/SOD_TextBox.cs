@@ -6,14 +6,14 @@ public class SOD_TextBox : TextBox
 {
     private bool isFocused = false;
     private Color borderColorFocus = Color.Red;
-    private Color borderColor = Color.Yellow;
-    private int borderSize = 2;
+    private Color borderColor = Color.Orange;
+    private int borderSize = 3;
 
     public SOD_TextBox()
     {
         this.BorderStyle = BorderStyle.None;
         this.Font = new Font("Microsoft YaHei UI", 12, FontStyle.Regular);
-        this.Padding = new Padding(2,2,2,2); // Para dar espacio para el borde
+        this.Padding = new Padding(borderSize); // Para dar espacio para el borde
 
         this.Enter += SOD_TextBox_Enter;
         this.Leave += SOD_TextBox_Leave;

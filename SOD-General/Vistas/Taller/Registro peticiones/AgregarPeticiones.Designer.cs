@@ -315,6 +315,7 @@
             this.botones_Nuevos1.TabIndex = 67;
             this.botones_Nuevos1.Text = "Guardar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_Subtitulos6
             // 
@@ -388,6 +389,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 351);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AgregarPeticiones";
             this.Text = "Agregar Orden de entrada";
             this.Load += new System.EventHandler(this.AgregarPeticiones_Load);
