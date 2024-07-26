@@ -64,7 +64,7 @@ namespace Controladores
                     {
                         ToolStripMenuItem item = new ToolStripMenuItem();
                         item.Text = ope2._Operation;
-                        EventHandler evento = Eventos(item);
+                        EventHandler evento = Eventos(ope2);
                         if (evento != null)
                         {
                             item.Click += evento;
@@ -92,7 +92,6 @@ namespace Controladores
                 return false;
             }
         }
-
         public bool OperacionEnMenuStrip(C_Operation operacion)
         {
             int? id = operacion.Id;
@@ -109,13 +108,43 @@ namespace Controladores
                 {
                     return false;
                 }
+
+                if(id == 13)
+                {
+                    return false;
+                }
+
+                if (id == 14)
+                {
+                    return false;
+                }
+
+                if (id == 16)
+                {
+                    return false;
+                }
+
+                if (id == 17)
+                {
+                    return false;
+                }
+
+                if (id == 19)
+                {
+                    return false;
+                }
+
+                if(id == 20)
+                {
+                    return false;
+                }
             }
 
             return true;
         }
-        public EventHandler Eventos(ToolStripMenuItem item)
+        public EventHandler Eventos(C_Operation ope)
         {
-            if (item.Text == "Control de empleados")
+            if (ope.Id == 5)
             {
                 EventHandler evento = delegate (object sender, EventArgs e)
                 {
@@ -126,7 +155,7 @@ namespace Controladores
                 return evento;
             }
 
-            if (item.Text == "Reporte de computadoras")
+            if (ope.Id == 10)
             {
                 EventHandler evento = delegate (object sender, EventArgs e)
                 {
@@ -137,7 +166,38 @@ namespace Controladores
                 return evento;
             }
 
+            if(ope.Id == 15)
+            {
+                EventHandler evento = delegate (object sender, EventArgs e)
+                {
+                    Visual_Empleados ventana = new Visual_Empleados(vista);
+                    vista.AbrirFormulario(ventana);
+                };
 
+                return evento;
+            }
+
+            if (ope.Id == 12)
+            {
+                EventHandler evento = delegate (object sender, EventArgs e)
+                {
+                    Registros_GeneralesAsistencias ventana = new Registros_GeneralesAsistencias(vista);
+                    vista.AbrirFormulario(ventana);
+                };
+
+                return evento;
+            }
+
+            if (ope.Id == 18)
+            {
+                EventHandler evento = delegate (object sender, EventArgs e)
+                {
+                    Registros_GeneralesPermisos ventana = new Registros_GeneralesPermisos(vista);
+                    vista.AbrirFormulario(ventana);
+                };
+
+                return evento;
+            }
             return null;
         }
 

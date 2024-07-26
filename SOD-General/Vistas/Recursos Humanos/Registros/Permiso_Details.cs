@@ -31,6 +31,15 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             InitializeComponent();
         }
 
+        public Permiso_Details(int y)
+        {
+            InitializeComponent();
+            botones_Nuevos1.Visible = false;
+            botones_Nuevos2.Visible = false;
+
+
+        }
+
         private void Registro_Details_Load(object sender, EventArgs e)
         {
             CentrarElementos();

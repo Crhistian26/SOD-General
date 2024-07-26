@@ -38,8 +38,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             MessageBox.Show("Edito papa");
         }
 
-        
+        private void AgregarEditar_Motivos_Load(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }

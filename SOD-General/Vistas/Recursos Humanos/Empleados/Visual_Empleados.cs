@@ -1,4 +1,5 @@
-﻿using Modelos.Usuarios_Empleados;
+﻿using Controladores;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using System;
@@ -22,12 +23,19 @@ namespace SOD_General.Recursos_Humanos.Empleados
         Empleados_Controller control = new Empleados_Controller();
 
         Size tam;
-        public Visual_Empleados()
+
+        ControlOperaciones operaciones;
+        public Visual_Empleados(AppVistaGeneral app)
         {
             InitializeComponent();
+            operaciones = new ControlOperaciones(app);
         }
 
-
+        public void CentrarElementos()
+        {
+            Point localA = cR_Subtitulos1.Location;
+            cR_Subtitulos1.Location = _size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
+        }
         private void cR_DataGriedView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("Junciona");
@@ -38,9 +46,8 @@ namespace SOD_General.Recursos_Humanos.Empleados
             cR_DataGriedView1.Rows.Add(1,"Fernando","Gutierrez","Recursos Humanos",DateTime.Now.AddYears(-2).ToString("D"));
             cR_DataGriedView1.Rows.Add(1, "Maria", "Veltran", "Recursos Humanos", DateTime.Now.AddYears(-2).ToString("D"));
             cR_DataGriedView1.Rows.Add(1, "Rodrigo", "Carrasco", "Recursos Humanos", DateTime.Now.AddYears(-2).ToString("D"));
-            tam = this.Size;
-            Point localA = cR_Subtitulos1.Location;
-            cR_Subtitulos1.Location = _size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
+
+            CentrarElementos();
         }
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -62,10 +69,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         private void cR_SplitContainer1_Panel1_Resize(object sender, EventArgs e)
         {
-            Point localA = cR_Subtitulos1.Location;
-            cR_Subtitulos1.Location =_size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
-
-
+            CentrarElementos();
         }
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)

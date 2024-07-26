@@ -31,17 +31,17 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_LabelDown1 = new CR_LabelDown();
-            this.soD_TextBox1 = new SOD_TextBox();
-            this.soD_ComboBox1 = new SOD_ComboBox();
-            this.cR_LabelDown2 = new CR_LabelDown();
-            this.cR_LabelDown3 = new CR_LabelDown();
-            this.soD_ComboBox2 = new SOD_ComboBox();
-            this.cR_LabelDown4 = new CR_LabelDown();
-            this.soD_ComboBox3 = new SOD_ComboBox();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.soD_TextBox2 = new SOD_TextBox();
             this.cR_LabelDown5 = new CR_LabelDown();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.cR_LabelDown4 = new CR_LabelDown();
+            this.soD_ComboBox3 = new SOD_ComboBox();
+            this.cR_LabelDown3 = new CR_LabelDown();
+            this.soD_ComboBox2 = new SOD_ComboBox();
+            this.cR_LabelDown2 = new CR_LabelDown();
+            this.soD_ComboBox1 = new SOD_ComboBox();
+            this.soD_TextBox1 = new SOD_TextBox();
+            this.cR_LabelDown1 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -102,88 +102,22 @@
             this.panel1.Size = new System.Drawing.Size(680, 329);
             this.panel1.TabIndex = 0;
             // 
-            // cR_LabelDown1
+            // botones_Nuevos1
             // 
-            this.cR_LabelDown1.AutoSize = true;
-            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(15, 8);
-            this.cR_LabelDown1.Name = "cR_LabelDown1";
-            this.cR_LabelDown1.Size = new System.Drawing.Size(60, 20);
-            this.cR_LabelDown1.TabIndex = 0;
-            this.cR_LabelDown1.Text = "Motivo:";
-            // 
-            // soD_TextBox1
-            // 
-            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox1.BorderSize = 2;
-            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox1.Location = new System.Drawing.Point(19, 31);
-            this.soD_TextBox1.Name = "soD_TextBox1";
-            this.soD_TextBox1.Size = new System.Drawing.Size(256, 21);
-            this.soD_TextBox1.TabIndex = 1;
-            // 
-            // soD_ComboBox1
-            // 
-            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Location = new System.Drawing.Point(19, 101);
-            this.soD_ComboBox1.Name = "soD_ComboBox1";
-            this.soD_ComboBox1.Size = new System.Drawing.Size(191, 27);
-            this.soD_ComboBox1.TabIndex = 2;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(19, 75);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(76, 20);
-            this.cR_LabelDown2.TabIndex = 3;
-            this.cR_LabelDown2.Text = "Medida 1:";
-            // 
-            // cR_LabelDown3
-            // 
-            this.cR_LabelDown3.AutoSize = true;
-            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(19, 143);
-            this.cR_LabelDown3.Name = "cR_LabelDown3";
-            this.cR_LabelDown3.Size = new System.Drawing.Size(76, 20);
-            this.cR_LabelDown3.TabIndex = 5;
-            this.cR_LabelDown3.Text = "Medida 2:";
-            // 
-            // soD_ComboBox2
-            // 
-            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox2.FormattingEnabled = true;
-            this.soD_ComboBox2.Location = new System.Drawing.Point(19, 169);
-            this.soD_ComboBox2.Name = "soD_ComboBox2";
-            this.soD_ComboBox2.Size = new System.Drawing.Size(191, 27);
-            this.soD_ComboBox2.TabIndex = 4;
-            // 
-            // cR_LabelDown4
-            // 
-            this.cR_LabelDown4.AutoSize = true;
-            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(401, 75);
-            this.cR_LabelDown4.Name = "cR_LabelDown4";
-            this.cR_LabelDown4.Size = new System.Drawing.Size(84, 20);
-            this.cR_LabelDown4.TabIndex = 7;
-            this.cR_LabelDown4.Text = "Tipo limite:";
-            // 
-            // soD_ComboBox3
-            // 
-            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox3.FormattingEnabled = true;
-            this.soD_ComboBox3.Location = new System.Drawing.Point(401, 101);
-            this.soD_ComboBox3.Name = "soD_ComboBox3";
-            this.soD_ComboBox3.Size = new System.Drawing.Size(191, 27);
-            this.soD_ComboBox3.TabIndex = 6;
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(259, 254);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.TabIndex = 10;
+            this.botones_Nuevos1.Text = "botones_Nuevos1";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
             // soD_TextBox2
             // 
@@ -208,22 +142,88 @@
             this.cR_LabelDown5.TabIndex = 8;
             this.cR_LabelDown5.Text = "Limite:";
             // 
-            // botones_Nuevos1
+            // cR_LabelDown4
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(259, 254);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
-            this.botones_Nuevos1.TabIndex = 10;
-            this.botones_Nuevos1.Text = "botones_Nuevos1";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.cR_LabelDown4.AutoSize = true;
+            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown4.Location = new System.Drawing.Point(401, 75);
+            this.cR_LabelDown4.Name = "cR_LabelDown4";
+            this.cR_LabelDown4.Size = new System.Drawing.Size(84, 20);
+            this.cR_LabelDown4.TabIndex = 7;
+            this.cR_LabelDown4.Text = "Tipo limite:";
+            // 
+            // soD_ComboBox3
+            // 
+            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox3.FormattingEnabled = true;
+            this.soD_ComboBox3.Location = new System.Drawing.Point(401, 101);
+            this.soD_ComboBox3.Name = "soD_ComboBox3";
+            this.soD_ComboBox3.Size = new System.Drawing.Size(191, 27);
+            this.soD_ComboBox3.TabIndex = 6;
+            // 
+            // cR_LabelDown3
+            // 
+            this.cR_LabelDown3.AutoSize = true;
+            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown3.Location = new System.Drawing.Point(19, 143);
+            this.cR_LabelDown3.Name = "cR_LabelDown3";
+            this.cR_LabelDown3.Size = new System.Drawing.Size(76, 20);
+            this.cR_LabelDown3.TabIndex = 5;
+            this.cR_LabelDown3.Text = "Medida 2:";
+            // 
+            // soD_ComboBox2
+            // 
+            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox2.FormattingEnabled = true;
+            this.soD_ComboBox2.Location = new System.Drawing.Point(19, 169);
+            this.soD_ComboBox2.Name = "soD_ComboBox2";
+            this.soD_ComboBox2.Size = new System.Drawing.Size(191, 27);
+            this.soD_ComboBox2.TabIndex = 4;
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(19, 75);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(76, 20);
+            this.cR_LabelDown2.TabIndex = 3;
+            this.cR_LabelDown2.Text = "Medida 1:";
+            // 
+            // soD_ComboBox1
+            // 
+            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox1.FormattingEnabled = true;
+            this.soD_ComboBox1.Location = new System.Drawing.Point(19, 101);
+            this.soD_ComboBox1.Name = "soD_ComboBox1";
+            this.soD_ComboBox1.Size = new System.Drawing.Size(191, 27);
+            this.soD_ComboBox1.TabIndex = 2;
+            // 
+            // soD_TextBox1
+            // 
+            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox1.BorderSize = 2;
+            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox1.Location = new System.Drawing.Point(19, 31);
+            this.soD_TextBox1.Name = "soD_TextBox1";
+            this.soD_TextBox1.Size = new System.Drawing.Size(256, 21);
+            this.soD_TextBox1.TabIndex = 1;
+            // 
+            // cR_LabelDown1
+            // 
+            this.cR_LabelDown1.AutoSize = true;
+            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown1.Location = new System.Drawing.Point(15, 8);
+            this.cR_LabelDown1.Name = "cR_LabelDown1";
+            this.cR_LabelDown1.Size = new System.Drawing.Size(60, 20);
+            this.cR_LabelDown1.TabIndex = 0;
+            this.cR_LabelDown1.Text = "Motivo:";
             // 
             // AgregarEditar_Motivos
             // 
@@ -234,6 +234,7 @@
             this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "AgregarEditar_Motivos";
             this.Text = "AgregarEditar_Motivos";
+            this.Load += new System.EventHandler(this.AgregarEditar_Motivos_Load);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
