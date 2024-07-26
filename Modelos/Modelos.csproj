@@ -71,10 +71,8 @@
     <Compile Include="Taller\Petition.cs" />
     <Compile Include="Taller\Quotation.cs" />
     <Compile Include="Taller\QuotationDetails.cs" />
-    <Compile Include="Usuarios_Empleados\Control de usuario\MAuthorization.cs" />
-    <Compile Include="Usuarios_Empleados\Control de usuario\DepartAuthorization.cs" />
+    <Compile Include="Usuarios_Empleados\Control de usuario\C_Operation.cs" />
     <Compile Include="Usuarios_Empleados\Control de usuario\User.cs" />
-    <Compile Include="Usuarios_Empleados\Control de usuario\UserAuthorization.cs" />
     <Compile Include="Usuarios_Empleados\Empleados\Department.cs" />
     <Compile Include="Usuarios_Empleados\Empleados\Employee.cs" />
   </ItemGroup>
@@ -92,6 +90,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control de usuarios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

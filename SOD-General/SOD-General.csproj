@@ -48,13 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controladores\Autorizaciones controller.cs" />
     <Compile Include="Controladores\Empleados_Controller.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\Motivos_Controller.cs" />
     <Compile Include="Controladores\Registros_Controller.cs" />
     <Compile Include="Controladores\SizesGenerales.cs" />
-    <Compile Include="Controladores\VistaGeneralController.cs" />
+    <Compile Include="Controladores\ControlOperaciones.cs" />
     <Compile Include="Vistas\Almacen\Agregar equipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +116,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Pruebas\Agregar empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Pruebas\Agregar empleado.Designer.cs">
+      <DependentUpon>Agregar empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Pruebas\Computo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Pruebas\Computo.Designer.cs">
+      <DependentUpon>Computo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Pruebas\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Pruebas\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Recursos Humanos\Empleados\AgregarEditar_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +321,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\Pruebas\Agregar empleado.resx">
+      <DependentUpon>Agregar empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Pruebas\Computo.resx">
+      <DependentUpon>Computo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Pruebas\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\AgregarEditar_Empleados.resx">
       <DependentUpon>AgregarEditar_Empleados.cs</DependentUpon>
     </EmbeddedResource>

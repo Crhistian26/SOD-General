@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.Usuarios_Empleados;
+using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
@@ -22,19 +23,18 @@ namespace SOD_General
         /// <summary>
         /// atributo Controller de tipo VisGenContr que guardara una instancia del controlador 
         /// </summary>
-        VistaGeneralController controller;
+        ControlOperaciones controller;
 
         SizesGenerales _size = new SizesGenerales();
         //La lista de autorizaciones.
-        List<MAuthorization> authorizations = new List<MAuthorization>();
+        public List<C_Operation> operations = new List<C_Operation>();
 
-        Autorizaciones_controller control;
+        
 
         //El departamento para la demostracion.
         /// <summary>
         /// atributo para almacenar lo departamentos
         /// </summary>
-        public string Departamento;
 
         public Form formu;
         //El constructor que captura la lista y la llena.
@@ -43,30 +43,18 @@ namespace SOD_General
         /// antes y le pasa al atributo Controller una nueva instancia del controlador y aeste le pasa una instancia de si mismo
         /// </summary>
         /// <param name="Departamento"></param>
-        public AppVistaGeneral(List<MAuthorization> authorizations, string department)
+        public AppVistaGeneral(List<C_Operation> operations)
         {
             InitializeComponent();
-            this.authorizations = authorizations;
-            this.Departamento = department;
-            this.control = new Autorizaciones_controller(this, this.Departamento);
+            this.operations = operations;
+            controller = new ControlOperaciones(this);
         }
 
         //La aplicacion cargando.
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
-            //controller.Comprobar_Autorizaciones();
-            List<MAuthorization> lista = control.Filtrar(authorizations);
-
-
-            string hola = "";
-
-            foreach (MAuthorization auth in lista)
-            {
-                hola += $"\n {auth.IdAuthorization}: {auth._Authorization}({auth._AuthotizationType})";
-            }
-            MessageBox.Show(hola);
-
-            control.elementos(authorizations);
+            controller.ImprimirOperaciones();
+            controller.Agregar_Items();
         }
 
         public void AbrirFormulario(Form formulario)
@@ -99,13 +87,6 @@ namespace SOD_General
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            List<MAuthorization> lista = control.Filtrar(authorizations);
-            string hola = "";
-            foreach (MAuthorization auth in lista)
-            {
-                hola += $"\n {auth.IdAuthorization}: {auth._Authorization}({auth._AuthotizationType})";
-            }
-            MessageBox.Show(hola);
         }
     }
 }

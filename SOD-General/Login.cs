@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.Usuarios_Empleados;
+using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace SOD_General
     {
         /// <summary>
         /// Este es el atributo de tipo VistaPrincipal para ejecutar sus 
-        /// metodos desde aca, .
+        /// metodos desde aca.
         /// </summary>
         VistaPrincipal principal { get; set; }
 
@@ -39,13 +40,12 @@ namespace SOD_General
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
 
-            List<MAuthorization> lista;
-            string department;
-            (lista,department) = controller.Ingresar(cr_Textbox1.Text,cr_Textbox2.Text);
+            List<C_Operation> lista;
+            lista = controller.Ingresar(cr_Textbox1.Text,cr_Textbox2.Text);
 
             if(lista != null)
             {
-                principal.AbrirVistaGeneral(lista,department);
+                principal.AbrirVistaGeneral(lista);
             }
             cr_Textbox1.Clear();
             cr_Textbox2.Clear();

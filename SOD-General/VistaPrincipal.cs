@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.Usuarios_Empleados;
+using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,19 +76,13 @@ namespace SOD_General
         //    AbrirFormulario(_appVistaGeneral);
         //}
 
-        /// <summary>
-        /// metodo para dar estilos adicionales al form y recibe un string como 
-        /// parametro, llama al atributo de AppVistGen y le pasa el parametro 
-        /// definido en el metodo y carga el metodo para abrir formulario, 
-        /// pasandole el atributo de la clase AppVistaGeneral
-        /// </summary>
-        /// <param name="hola"></param>
-        public void AbrirVistaGeneral(List<MAuthorization> authorizations,string department)
+        
+        public void AbrirVistaGeneral(List<C_Operation> operations)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;
 
-            _appVistaGeneral = new AppVistaGeneral(authorizations,department);
+            _appVistaGeneral = new AppVistaGeneral(operations);
 
             AbrirFormulario(_appVistaGeneral);
         }
