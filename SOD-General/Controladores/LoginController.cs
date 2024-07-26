@@ -33,7 +33,7 @@ namespace Controladores
                 List<MAuthorization> list = new List<MAuthorization>();
                 string department ="";
                 //El query con su procedimiento y sus parametros.
-                string Query = "Exec GetAuthorizations @User, @password";
+                string Query = "Exec GetInto @User, @password";
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 cmd.Parameters.AddWithValue("@User", username);
                 cmd.Parameters.AddWithValue("@password", password);
