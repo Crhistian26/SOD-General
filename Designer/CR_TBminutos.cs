@@ -27,9 +27,9 @@ public class CR_TBminutos : TextBox
             {
                 this.Text = "1";
             }
-            else if (hora > 60)
+            else if (hora > 59)
             {
-                this.Text = "60";
+                this.Text = "59";
             }
         }
 
