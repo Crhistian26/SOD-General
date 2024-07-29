@@ -41,6 +41,7 @@
             this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cr_Textbox2.Location = new System.Drawing.Point(79, 113);
             this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.PasswordChar = '*';
             this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
             this.cr_Textbox2.TabIndex = 13;
             // 

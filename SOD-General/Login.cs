@@ -55,6 +55,11 @@ namespace SOD_General
         {
 
         }
+
+        private void cR_TBhora1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 
 }

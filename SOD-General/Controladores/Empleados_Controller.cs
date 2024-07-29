@@ -17,10 +17,8 @@ namespace SOD_General.Controladores
         }
         public void AbrirEditar(int y)
         {
-
                 AgregarEditar_Empleados hola = new AgregarEditar_Empleados(y);
                 hola.Show();
-
         }
         public void AbrirEditar(string y)
         {

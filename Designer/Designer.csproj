@@ -73,7 +73,16 @@
     <Compile Include="CR_Subtitulos.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CR_TBhora.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_TBminutos.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Cr_Textbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_TextBoxtNumerico.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="FR_DateTime.cs">

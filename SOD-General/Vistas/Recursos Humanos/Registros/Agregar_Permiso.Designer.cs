@@ -34,8 +34,6 @@
             this.cR_LabelDown7 = new CR_LabelDown();
             this.soD_ComboBox4 = new SOD_ComboBox();
             this.cR_LabelDown6 = new CR_LabelDown();
-            this.soD_TextBox4 = new SOD_TextBox();
-            this.soD_TextBox3 = new SOD_TextBox();
             this.cR_LabelDown5 = new CR_LabelDown();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
@@ -43,11 +41,13 @@
             this.soD_TextBox2 = new SOD_TextBox();
             this.soD_ComboBox3 = new SOD_ComboBox();
             this.cR_LabelDown3 = new CR_LabelDown();
-            this.soD_TextBox1 = new SOD_TextBox();
             this.soD_ComboBox2 = new SOD_ComboBox();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
+            this.cR_TBhora1 = new CR_TBhora();
+            this.cR_TBminutos1 = new CR_TBminutos();
+            this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -92,11 +92,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_TextBoxNumerico1);
+            this.panel1.Controls.Add(this.cR_TBminutos1);
+            this.panel1.Controls.Add(this.cR_TBhora1);
             this.panel1.Controls.Add(this.cR_LabelDown7);
             this.panel1.Controls.Add(this.soD_ComboBox4);
             this.panel1.Controls.Add(this.cR_LabelDown6);
-            this.panel1.Controls.Add(this.soD_TextBox4);
-            this.panel1.Controls.Add(this.soD_TextBox3);
             this.panel1.Controls.Add(this.cR_LabelDown5);
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_DateTimePicker1);
@@ -104,7 +105,6 @@
             this.panel1.Controls.Add(this.soD_TextBox2);
             this.panel1.Controls.Add(this.soD_ComboBox3);
             this.panel1.Controls.Add(this.cR_LabelDown3);
-            this.panel1.Controls.Add(this.soD_TextBox1);
             this.panel1.Controls.Add(this.soD_ComboBox2);
             this.panel1.Controls.Add(this.soD_ComboBox1);
             this.panel1.Controls.Add(this.cR_LabelDown2);
@@ -151,32 +151,6 @@
             this.cR_LabelDown6.TabIndex = 15;
             this.cR_LabelDown6.Text = ":";
             this.cR_LabelDown6.Resize += new System.EventHandler(this.soD_ComboBox4_Resize);
-            // 
-            // soD_TextBox4
-            // 
-            this.soD_TextBox4.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox4.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox4.BorderSize = 2;
-            this.soD_TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox4.Location = new System.Drawing.Point(461, 35);
-            this.soD_TextBox4.Name = "soD_TextBox4";
-            this.soD_TextBox4.Size = new System.Drawing.Size(42, 21);
-            this.soD_TextBox4.TabIndex = 14;
-            this.soD_TextBox4.Resize += new System.EventHandler(this.soD_ComboBox4_Resize);
-            // 
-            // soD_TextBox3
-            // 
-            this.soD_TextBox3.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox3.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox3.BorderSize = 2;
-            this.soD_TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox3.Location = new System.Drawing.Point(395, 35);
-            this.soD_TextBox3.Name = "soD_TextBox3";
-            this.soD_TextBox3.Size = new System.Drawing.Size(42, 21);
-            this.soD_TextBox3.TabIndex = 13;
-            this.soD_TextBox3.Resize += new System.EventHandler(this.soD_ComboBox4_Resize);
             // 
             // cR_LabelDown5
             // 
@@ -245,7 +219,7 @@
             // 
             this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox3.FormattingEnabled = true;
-            this.soD_ComboBox3.Location = new System.Drawing.Point(157, 225);
+            this.soD_ComboBox3.Location = new System.Drawing.Point(82, 226);
             this.soD_ComboBox3.Name = "soD_ComboBox3";
             this.soD_ComboBox3.Size = new System.Drawing.Size(121, 27);
             this.soD_ComboBox3.TabIndex = 7;
@@ -260,18 +234,6 @@
             this.cR_LabelDown3.Size = new System.Drawing.Size(60, 20);
             this.cR_LabelDown3.TabIndex = 6;
             this.cR_LabelDown3.Text = "Tiempo";
-            // 
-            // soD_TextBox1
-            // 
-            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox1.BorderSize = 2;
-            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox1.Location = new System.Drawing.Point(3, 226);
-            this.soD_TextBox1.Name = "soD_TextBox1";
-            this.soD_TextBox1.Size = new System.Drawing.Size(143, 21);
-            this.soD_TextBox1.TabIndex = 5;
             // 
             // soD_ComboBox2
             // 
@@ -313,6 +275,36 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
+            // cR_TBhora1
+            // 
+            this.cR_TBhora1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBhora1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBhora1.Location = new System.Drawing.Point(395, 34);
+            this.cR_TBhora1.MaxLength = 2;
+            this.cR_TBhora1.Name = "cR_TBhora1";
+            this.cR_TBhora1.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBhora1.TabIndex = 18;
+            // 
+            // cR_TBminutos1
+            // 
+            this.cR_TBminutos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBminutos1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBminutos1.Location = new System.Drawing.Point(461, 33);
+            this.cR_TBminutos1.MaxLength = 2;
+            this.cR_TBminutos1.Name = "cR_TBminutos1";
+            this.cR_TBminutos1.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBminutos1.TabIndex = 19;
+            // 
+            // cR_TextBoxNumerico1
+            // 
+            this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(8, 226);
+            this.cR_TextBoxNumerico1.MaxLength = 2;
+            this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
+            this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(68, 25);
+            this.cR_TextBoxNumerico1.TabIndex = 20;
+            // 
             // Agregar_Permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,7 +334,6 @@
         private System.Windows.Forms.Panel panel1;
         private SOD_ComboBox soD_ComboBox3;
         private CR_LabelDown cR_LabelDown3;
-        private SOD_TextBox soD_TextBox1;
         private SOD_ComboBox soD_ComboBox2;
         private SOD_ComboBox soD_ComboBox1;
         private CR_LabelDown cR_LabelDown2;
@@ -355,7 +346,8 @@
         private CR_LabelDown cR_LabelDown7;
         private SOD_ComboBox soD_ComboBox4;
         private CR_LabelDown cR_LabelDown6;
-        private SOD_TextBox soD_TextBox4;
-        private SOD_TextBox soD_TextBox3;
+        private CR_TBminutos cR_TBminutos1;
+        private CR_TBhora cR_TBhora1;
+        private CR_TextBoxNumerico cR_TextBoxNumerico1;
     }
 }

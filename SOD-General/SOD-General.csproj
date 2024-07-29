@@ -152,6 +152,12 @@
     <Compile Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.Designer.cs">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Exportar\ExportarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Exportar\ExportarReportes.Designer.cs">
+      <DependentUpon>ExportarReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Recursos Humanos\Motivos\AgregarEditar_Motivos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.resx">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Exportar\ExportarReportes.resx">
+      <DependentUpon>ExportarReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Motivos\AgregarEditar_Motivos.resx">
       <DependentUpon>AgregarEditar_Motivos.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,9 +494,7 @@
       <Name>Modelos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Vistas\Recursos Humanos\Exportar\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\logo-sod-soluciones-diaz-fixed.png" />
   </ItemGroup>

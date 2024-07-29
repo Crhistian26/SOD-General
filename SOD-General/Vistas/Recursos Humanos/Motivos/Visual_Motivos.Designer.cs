@@ -165,7 +165,7 @@
             // Motivos_Each
             // 
             this.Motivos_Each.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Motivos_Each.HeaderText = "Cada tanto";
+            this.Motivos_Each.HeaderText = "Cada";
             this.Motivos_Each.Name = "Motivos_Each";
             this.Motivos_Each.ReadOnly = true;
             // 
