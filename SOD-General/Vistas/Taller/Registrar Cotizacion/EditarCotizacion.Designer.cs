@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.soD_TextBox5 = new SOD_TextBox();
             this.soD_TextBox4 = new SOD_TextBox();
@@ -36,15 +38,12 @@
             this.soD_TextBox2 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.cR_LabelDown5 = new CR_LabelDown();
-            this.cR_LabelDown6 = new CR_LabelDown();
             this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.soD_TextBox3 = new SOD_TextBox();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown2 = new CR_LabelDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -75,7 +74,6 @@
             this.cR_SplitContainer1.Panel2.Controls.Add(this.soD_TextBox2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown5);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown6);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.soD_TextBox3);
@@ -85,6 +83,31 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(352, 330);
             this.cR_SplitContainer1.SplitterDistance = 60;
             this.cR_SplitContainer1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox2.Location = new System.Drawing.Point(307, 29);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(41, 28);
+            this.textBox2.TabIndex = 103;
+            this.textBox2.Text = "0";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(285, 32);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(24, 20);
+            this.textBox1.TabIndex = 102;
+            this.textBox1.Text = "#:";
             // 
             // cR_Subtitulos1
             // 
@@ -172,17 +195,6 @@
             this.cR_LabelDown5.TabIndex = 20;
             this.cR_LabelDown5.Text = "Cantidad";
             // 
-            // cR_LabelDown6
-            // 
-            this.cR_LabelDown6.AutoSize = true;
-            this.cR_LabelDown6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cR_LabelDown6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown6.Location = new System.Drawing.Point(179, 49);
-            this.cR_LabelDown6.Name = "cR_LabelDown6";
-            this.cR_LabelDown6.Size = new System.Drawing.Size(86, 21);
-            this.cR_LabelDown6.TabIndex = 19;
-            this.cR_LabelDown6.Text = "Subtitulos";
-            // 
             // botones_Nuevos2
             // 
             this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
@@ -266,31 +278,6 @@
             this.cR_LabelDown2.TabIndex = 2;
             this.cR_LabelDown2.Text = "Equipo";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(307, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(41, 28);
-            this.textBox2.TabIndex = 103;
-            this.textBox2.Text = "0";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(285, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(24, 20);
-            this.textBox1.TabIndex = 102;
-            this.textBox1.Text = "#:";
-            // 
             // EditarCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,7 +308,6 @@
         private CR_LabelDown cR_LabelDown2;
         private CR_LabelDown cR_LabelDown1;
         private CR_LabelDown cR_LabelDown5;
-        private CR_LabelDown cR_LabelDown6;
         private SOD_TextBox soD_TextBox2;
         private SOD_TextBox soD_TextBox5;
         private SOD_TextBox soD_TextBox4;

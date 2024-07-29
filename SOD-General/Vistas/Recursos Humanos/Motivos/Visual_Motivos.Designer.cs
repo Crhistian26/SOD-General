@@ -96,9 +96,9 @@
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
             this.cR_Subtitulos1.Location = new System.Drawing.Point(232, 9);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(438, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(26, 31);
             this.cR_Subtitulos1.TabIndex = 0;
-            this.cR_Subtitulos1.Text = "Motivos de inasistencia y permisos";
+            this.cR_Subtitulos1.Text = "s";
             // 
             // cR_DataGriedView1
             // 

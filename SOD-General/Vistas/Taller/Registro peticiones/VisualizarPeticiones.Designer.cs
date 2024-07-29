@@ -97,7 +97,7 @@
             this.Cliente.AutoSize = true;
             this.Cliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.Cliente.ForeColor = System.Drawing.Color.White;
-            this.Cliente.Location = new System.Drawing.Point(61, 76);
+            this.Cliente.Location = new System.Drawing.Point(13, 75);
             this.Cliente.Name = "Cliente";
             this.Cliente.Size = new System.Drawing.Size(56, 20);
             this.Cliente.TabIndex = 8;
@@ -107,7 +107,7 @@
             // 
             this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Location = new System.Drawing.Point(123, 76);
+            this.soD_ComboBox1.Location = new System.Drawing.Point(75, 75);
             this.soD_ComboBox1.Name = "soD_ComboBox1";
             this.soD_ComboBox1.Size = new System.Drawing.Size(200, 27);
             this.soD_ComboBox1.TabIndex = 7;

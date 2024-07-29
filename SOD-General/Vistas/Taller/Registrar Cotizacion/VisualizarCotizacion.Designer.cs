@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.cR_LabelUp4 = new CR_LabelUp();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_Checkbox2 = new CR_Checkbox();
             this.cR_Checkbox1 = new CR_Checkbox();
             this.cR_LabelUp3 = new CR_LabelUp();
             this.soD_ComboBox8 = new SOD_ComboBox();
@@ -39,6 +42,15 @@
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.cR_DataGriedView2 = new CR_DataGriedView();
+            this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peticiones_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cR_Subtitulos12 = new CR_Subtitulos();
             this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
@@ -70,18 +82,6 @@
             this.cR_Subtitulos5 = new CR_Subtitulos();
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.fR_TextBox3 = new Designer.FR_TextBox();
-            this.cR_Checkbox2 = new CR_Checkbox();
-            this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peticiones_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cR_LabelUp4 = new CR_LabelUp();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -127,12 +127,44 @@
             this.splitContainer1.SplitterDistance = 117;
             this.splitContainer1.TabIndex = 3;
             // 
+            // cR_LabelUp4
+            // 
+            this.cR_LabelUp4.AutoSize = true;
+            this.cR_LabelUp4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cR_LabelUp4.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp4.Location = new System.Drawing.Point(9, 54);
+            this.cR_LabelUp4.Name = "cR_LabelUp4";
+            this.cR_LabelUp4.Size = new System.Drawing.Size(74, 21);
+            this.cR_LabelUp4.TabIndex = 39;
+            this.cR_LabelUp4.Text = "# orden:";
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(16, 77);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(93, 25);
+            this.cr_Textbox1.TabIndex = 38;
+            // 
+            // cR_Checkbox2
+            // 
+            this.cR_Checkbox2.AutoSize = true;
+            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox2.ForeColor = System.Drawing.Color.White;
+            this.cR_Checkbox2.Location = new System.Drawing.Point(364, 78);
+            this.cR_Checkbox2.Name = "cR_Checkbox2";
+            this.cR_Checkbox2.Size = new System.Drawing.Size(106, 24);
+            this.cR_Checkbox2.TabIndex = 37;
+            this.cR_Checkbox2.Text = "Aun validas";
+            this.cR_Checkbox2.UseVisualStyleBackColor = true;
+            // 
             // cR_Checkbox1
             // 
             this.cR_Checkbox1.AutoSize = true;
             this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox1.ForeColor = System.Drawing.Color.White;
-            this.cR_Checkbox1.Location = new System.Drawing.Point(519, 75);
+            this.cR_Checkbox1.Location = new System.Drawing.Point(473, 77);
             this.cR_Checkbox1.Name = "cR_Checkbox1";
             this.cR_Checkbox1.Size = new System.Drawing.Size(98, 24);
             this.cR_Checkbox1.TabIndex = 36;
@@ -144,7 +176,7 @@
             this.cR_LabelUp3.AutoSize = true;
             this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp3.Location = new System.Drawing.Point(171, 49);
+            this.cR_LabelUp3.Location = new System.Drawing.Point(114, 52);
             this.cR_LabelUp3.Name = "cR_LabelUp3";
             this.cR_LabelUp3.Size = new System.Drawing.Size(61, 20);
             this.cR_LabelUp3.TabIndex = 35;
@@ -154,7 +186,7 @@
             // 
             this.soD_ComboBox8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox8.FormattingEnabled = true;
-            this.soD_ComboBox8.Location = new System.Drawing.Point(175, 72);
+            this.soD_ComboBox8.Location = new System.Drawing.Point(118, 75);
             this.soD_ComboBox8.Name = "soD_ComboBox8";
             this.soD_ComboBox8.Size = new System.Drawing.Size(215, 27);
             this.soD_ComboBox8.TabIndex = 34;
@@ -219,10 +251,10 @@
             this.cR_DataGriedView2.AllowUserToAddRows = false;
             this.cR_DataGriedView2.AllowUserToDeleteRows = false;
             this.cR_DataGriedView2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Peticiones_Client,
@@ -242,6 +274,69 @@
             this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cR_DataGriedView2.Size = new System.Drawing.Size(1070, 329);
             this.cR_DataGriedView2.TabIndex = 79;
+            // 
+            // Peticiones_Client
+            // 
+            this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Client.HeaderText = "Cliente";
+            this.Peticiones_Client.Name = "Peticiones_Client";
+            this.Peticiones_Client.ReadOnly = true;
+            this.Peticiones_Client.Width = 81;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Equipo";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Peticiones_Contact
+            // 
+            this.Peticiones_Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Contact.HeaderText = "Material";
+            this.Peticiones_Contact.Name = "Peticiones_Contact";
+            this.Peticiones_Contact.ReadOnly = true;
+            this.Peticiones_Contact.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Cant de materiales";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Coste";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Peticiones_Date
+            // 
+            this.Peticiones_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Date.HeaderText = "Fecha";
+            this.Peticiones_Date.Name = "Peticiones_Date";
+            this.Peticiones_Date.ReadOnly = true;
+            this.Peticiones_Date.Width = 73;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Detalle";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Aprobar";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Editar";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // panel4
             // 
@@ -698,101 +793,6 @@
             this.fR_TextBox3.TabIndex = 65;
             this.fR_TextBox3.texts = "fafa";
             this.fR_TextBox3.UnderlinedStyle = false;
-            // 
-            // cR_Checkbox2
-            // 
-            this.cR_Checkbox2.AutoSize = true;
-            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox2.ForeColor = System.Drawing.Color.White;
-            this.cR_Checkbox2.Location = new System.Drawing.Point(407, 75);
-            this.cR_Checkbox2.Name = "cR_Checkbox2";
-            this.cR_Checkbox2.Size = new System.Drawing.Size(106, 24);
-            this.cR_Checkbox2.TabIndex = 37;
-            this.cR_Checkbox2.Text = "Aun validas";
-            this.cR_Checkbox2.UseVisualStyleBackColor = true;
-            // 
-            // Peticiones_Client
-            // 
-            this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Client.HeaderText = "Cliente";
-            this.Peticiones_Client.Name = "Peticiones_Client";
-            this.Peticiones_Client.ReadOnly = true;
-            this.Peticiones_Client.Width = 81;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Equipo";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Peticiones_Contact
-            // 
-            this.Peticiones_Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Contact.HeaderText = "Material";
-            this.Peticiones_Contact.Name = "Peticiones_Contact";
-            this.Peticiones_Contact.ReadOnly = true;
-            this.Peticiones_Contact.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Cant de materiales";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Coste";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Peticiones_Date
-            // 
-            this.Peticiones_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Date.HeaderText = "Fecha";
-            this.Peticiones_Date.Name = "Peticiones_Date";
-            this.Peticiones_Date.ReadOnly = true;
-            this.Peticiones_Date.Width = 73;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Detalle";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Aprobar";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Editar";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(14, 74);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(140, 25);
-            this.cr_Textbox1.TabIndex = 38;
-            // 
-            // cR_LabelUp4
-            // 
-            this.cR_LabelUp4.AutoSize = true;
-            this.cR_LabelUp4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cR_LabelUp4.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp4.Location = new System.Drawing.Point(7, 51);
-            this.cR_LabelUp4.Name = "cR_LabelUp4";
-            this.cR_LabelUp4.Size = new System.Drawing.Size(74, 21);
-            this.cR_LabelUp4.TabIndex = 39;
-            this.cR_LabelUp4.Text = "# orden:";
             // 
             // VisualizarCotizacion
             // 
