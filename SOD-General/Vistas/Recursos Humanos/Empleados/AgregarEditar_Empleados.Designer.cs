@@ -287,6 +287,7 @@
             this.Name = "AgregarEditar_Empleados";
             this.Text = "AgregarEditar_Empleados";
             this.Load += new System.EventHandler(this.AgregarEditar_Empleados_Load);
+            this.Resize += new System.EventHandler(this.AgregarEditar_Empleados_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);

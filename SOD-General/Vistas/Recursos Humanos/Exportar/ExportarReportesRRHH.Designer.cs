@@ -298,6 +298,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExportarReportesRRHH";
             this.Text = "ExportarReportesRRHH";
+            this.Load += new System.EventHandler(this.ExportarReportesRRHH_Load);
             this.Resize += new System.EventHandler(this.ExportarReportesRRHH_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();

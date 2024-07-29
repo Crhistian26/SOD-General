@@ -31,6 +31,8 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
+            this.soD_ComboBox4 = new SOD_ComboBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown5 = new CR_LabelDown();
             this.cR_LabelDown4 = new CR_LabelDown();
@@ -41,8 +43,6 @@
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.soD_ComboBox4 = new SOD_ComboBox();
-            this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -103,6 +103,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 329);
             this.panel1.TabIndex = 0;
+            // 
+            // cR_TextBoxNumerico1
+            // 
+            this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(401, 171);
+            this.cR_TextBoxNumerico1.MaxLength = 2;
+            this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
+            this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(65, 25);
+            this.cR_TextBoxNumerico1.TabIndex = 12;
+            // 
+            // soD_ComboBox4
+            // 
+            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox4.FormattingEnabled = true;
+            this.soD_ComboBox4.Items.AddRange(new object[] {
+            "Minutos",
+            "Horas",
+            "Dias",
+            "Semanas",
+            "Meses",
+            "Ningun limite"});
+            this.soD_ComboBox4.Location = new System.Drawing.Point(491, 169);
+            this.soD_ComboBox4.Name = "soD_ComboBox4";
+            this.soD_ComboBox4.Size = new System.Drawing.Size(101, 27);
+            this.soD_ComboBox4.TabIndex = 11;
             // 
             // botones_Nuevos1
             // 
@@ -215,32 +241,6 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Motivo:";
             // 
-            // soD_ComboBox4
-            // 
-            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox4.FormattingEnabled = true;
-            this.soD_ComboBox4.Items.AddRange(new object[] {
-            "Minutos",
-            "Horas",
-            "Dias",
-            "Semanas",
-            "Meses",
-            "Ningun limite"});
-            this.soD_ComboBox4.Location = new System.Drawing.Point(491, 169);
-            this.soD_ComboBox4.Name = "soD_ComboBox4";
-            this.soD_ComboBox4.Size = new System.Drawing.Size(101, 27);
-            this.soD_ComboBox4.TabIndex = 11;
-            // 
-            // cR_TextBoxNumerico1
-            // 
-            this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(401, 171);
-            this.cR_TextBoxNumerico1.MaxLength = 2;
-            this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
-            this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(65, 25);
-            this.cR_TextBoxNumerico1.TabIndex = 12;
-            // 
             // AgregarEditar_Motivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +251,7 @@
             this.Name = "AgregarEditar_Motivos";
             this.Text = "AgregarEditar_Motivos";
             this.Load += new System.EventHandler(this.AgregarEditar_Motivos_Load);
+            this.Resize += new System.EventHandler(this.AgregarEditar_Motivos_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);

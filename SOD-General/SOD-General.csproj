@@ -54,54 +54,6 @@
     <Compile Include="Controladores\Motivos_Controller.cs" />
     <Compile Include="Controladores\Registros_Controller.cs" />
     <Compile Include="Controladores\SizesGenerales.cs" />
-    <Compile Include="Vistas\Almacen\Agregar equipos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Agregar equipos.Designer.cs">
-      <DependentUpon>Agregar equipos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Retirar equipos Conduce.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Retirar equipos Conduce.Designer.cs">
-      <DependentUpon>Retirar equipos Conduce.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Retirar equipos Renta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Retirar equipos Renta.Designer.cs">
-      <DependentUpon>Retirar equipos Renta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Retirar equipos Venta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Retirar equipos Venta.Designer.cs">
-      <DependentUpon>Retirar equipos Venta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Vista de Conduces.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Vista de Conduces.Designer.cs">
-      <DependentUpon>Vista de Conduces.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Vista de Rentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Vista de Rentas.Designer.cs">
-      <DependentUpon>Vista de Rentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Vista de Ventas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Vista de Ventas.Designer.cs">
-      <DependentUpon>Vista de Ventas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Visualizar equipos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Almacen\Visualizar equipos.Designer.cs">
-      <DependentUpon>Visualizar equipos.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppVistaGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,11 +104,11 @@
     <Compile Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.Designer.cs">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Exportar\ExportarReportes.cs">
+    <Compile Include="Vistas\Recursos Humanos\Exportar\ExportarReportesRRHH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Exportar\ExportarReportes.Designer.cs">
-      <DependentUpon>ExportarReportes.cs</DependentUpon>
+    <Compile Include="Vistas\Recursos Humanos\Exportar\ExportarReportesRRHH.Designer.cs">
+      <DependentUpon>ExportarReportesRRHH.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Recursos Humanos\Motivos\AgregarEditar_Motivos.cs">
       <SubType>Form</SubType>
@@ -344,9 +296,6 @@
     <Compile Include="Vistas\Taller\Registro peticiones\VisualizarPeticiones.Designer.cs">
       <DependentUpon>VisualizarPeticiones.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\Almacen\Agregar equipos.resx">
-      <DependentUpon>Agregar equipos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppVistaGeneral.resx">
       <DependentUpon>AppVistaGeneral.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,8 +330,8 @@
     <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\Visual_Empleados.resx">
       <DependentUpon>Visual_Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Recursos Humanos\Exportar\ExportarReportes.resx">
-      <DependentUpon>ExportarReportes.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Exportar\ExportarReportesRRHH.resx">
+      <DependentUpon>ExportarReportesRRHH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Motivos\AgregarEditar_Motivos.resx">
       <DependentUpon>AgregarEditar_Motivos.cs</DependentUpon>
@@ -494,7 +443,10 @@
       <Name>Modelos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Vistas\Administrador\" />
+    <Folder Include="Vistas\Programador\Usuarios\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-sod-soluciones-diaz-fixed.png" />
   </ItemGroup>
