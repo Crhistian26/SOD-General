@@ -25,5 +25,12 @@ namespace SOD_General.Controladores
                 AgregarEditar_Empleados hola = new AgregarEditar_Empleados(y);
                 hola.Show();
         }
+
+        //Frandy
+        public void AbrirForm(int x, int z)
+        {
+            
+        }
+        
     }
 }

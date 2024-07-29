@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos4 = new CR_Subtitulos();
+            this.cR_LabelDown4 = new CR_LabelDown();
+            this.fR_TextBox4 = new Designer.FR_TextBox();
+            this.cR_LabelDown3 = new CR_LabelDown();
+            this.cR_LabelDown2 = new CR_LabelDown();
+            this.cR_LabelDown1 = new CR_LabelDown();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.fR_TextBox3 = new Designer.FR_TextBox();
             this.fR_TextBox2 = new Designer.FR_TextBox();
             this.fR_TextBox1 = new Designer.FR_TextBox();
-            this.cR_LabelDown1 = new CR_LabelDown();
-            this.cR_LabelDown2 = new CR_LabelDown();
-            this.cR_LabelDown3 = new CR_LabelDown();
-            this.cR_LabelDown4 = new CR_LabelDown();
-            this.fR_TextBox4 = new Designer.FR_TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -65,6 +70,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.cR_LabelDown4);
             this.splitContainer1.Panel2.Controls.Add(this.fR_TextBox4);
             this.splitContainer1.Panel2.Controls.Add(this.cR_LabelDown3);
@@ -75,7 +81,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.fR_TextBox2);
             this.splitContainer1.Panel2.Controls.Add(this.fR_TextBox1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(354, 390);
+            this.splitContainer1.Size = new System.Drawing.Size(816, 390);
             this.splitContainer1.SplitterDistance = 57;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -84,7 +90,7 @@
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(284, 20);
+            this.textBox2.Location = new System.Drawing.Point(743, 20);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(61, 28);
             this.textBox2.TabIndex = 101;
@@ -97,7 +103,7 @@
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(263, 21);
+            this.textBox1.Location = new System.Drawing.Point(722, 21);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(24, 28);
@@ -123,11 +129,73 @@
             this.cR_Subtitulos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos4.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos4.Location = new System.Drawing.Point(12, 20);
+            this.cR_Subtitulos4.Location = new System.Drawing.Point(279, 18);
             this.cR_Subtitulos4.Name = "cR_Subtitulos4";
             this.cR_Subtitulos4.Size = new System.Drawing.Size(225, 28);
             this.cR_Subtitulos4.TabIndex = 27;
             this.cR_Subtitulos4.Text = "Registrar Cotizacion";
+            // 
+            // cR_LabelDown4
+            // 
+            this.cR_LabelDown4.AutoSize = true;
+            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown4.Location = new System.Drawing.Point(252, 23);
+            this.cR_LabelDown4.Name = "cR_LabelDown4";
+            this.cR_LabelDown4.Size = new System.Drawing.Size(46, 20);
+            this.cR_LabelDown4.TabIndex = 114;
+            this.cR_LabelDown4.Text = "Serial";
+            // 
+            // fR_TextBox4
+            // 
+            this.fR_TextBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox4.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox4.BorderSize = 2;
+            this.fR_TextBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.fR_TextBox4.Location = new System.Drawing.Point(239, 51);
+            this.fR_TextBox4.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.fR_TextBox4.Multiline = true;
+            this.fR_TextBox4.Name = "fR_TextBox4";
+            this.fR_TextBox4.Padding = new System.Windows.Forms.Padding(7);
+            this.fR_TextBox4.PasswordChar = false;
+            this.fR_TextBox4.Size = new System.Drawing.Size(72, 30);
+            this.fR_TextBox4.TabIndex = 113;
+            this.fR_TextBox4.texts = "fafa";
+            this.fR_TextBox4.UnderlinedStyle = false;
+            // 
+            // cR_LabelDown3
+            // 
+            this.cR_LabelDown3.AutoSize = true;
+            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown3.Location = new System.Drawing.Point(235, 180);
+            this.cR_LabelDown3.Name = "cR_LabelDown3";
+            this.cR_LabelDown3.Size = new System.Drawing.Size(76, 20);
+            this.cR_LabelDown3.TabIndex = 111;
+            this.cR_LabelDown3.Text = "Costo P/U";
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(235, 102);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(70, 20);
+            this.cR_LabelDown2.TabIndex = 110;
+            this.cR_LabelDown2.Text = "Cantidad";
+            // 
+            // cR_LabelDown1
+            // 
+            this.cR_LabelDown1.AutoSize = true;
+            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown1.Location = new System.Drawing.Point(19, 22);
+            this.cR_LabelDown1.Name = "cR_LabelDown1";
+            this.cR_LabelDown1.Size = new System.Drawing.Size(175, 20);
+            this.cR_LabelDown1.TabIndex = 109;
+            this.cR_LabelDown1.Text = "Material, servicio o Pieza";
             // 
             // botones_Nuevos1
             // 
@@ -139,9 +207,9 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(89, 258);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(16, 258);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(188, 46);
+            this.botones_Nuevos1.Size = new System.Drawing.Size(295, 46);
             this.botones_Nuevos1.TabIndex = 107;
             this.botones_Nuevos1.Text = "Guardar Cotizacion";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
@@ -200,73 +268,38 @@
             this.fR_TextBox1.texts = "fafa";
             this.fR_TextBox1.UnderlinedStyle = false;
             // 
-            // cR_LabelDown1
+            // panel1
             // 
-            this.cR_LabelDown1.AutoSize = true;
-            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(19, 22);
-            this.cR_LabelDown1.Name = "cR_LabelDown1";
-            this.cR_LabelDown1.Size = new System.Drawing.Size(175, 20);
-            this.cR_LabelDown1.TabIndex = 109;
-            this.cR_LabelDown1.Text = "Material, servicio o Pieza";
+            this.panel1.Controls.Add(this.cR_DataGriedView1);
+            this.panel1.Location = new System.Drawing.Point(339, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(474, 326);
+            this.panel1.TabIndex = 115;
             // 
-            // cR_LabelDown2
+            // cR_DataGriedView1
             // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(235, 102);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(70, 20);
-            this.cR_LabelDown2.TabIndex = 110;
-            this.cR_LabelDown2.Text = "Cantidad";
-            // 
-            // cR_LabelDown3
-            // 
-            this.cR_LabelDown3.AutoSize = true;
-            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(235, 180);
-            this.cR_LabelDown3.Name = "cR_LabelDown3";
-            this.cR_LabelDown3.Size = new System.Drawing.Size(76, 20);
-            this.cR_LabelDown3.TabIndex = 111;
-            this.cR_LabelDown3.Text = "Costo P/U";
-            // 
-            // cR_LabelDown4
-            // 
-            this.cR_LabelDown4.AutoSize = true;
-            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(252, 23);
-            this.cR_LabelDown4.Name = "cR_LabelDown4";
-            this.cR_LabelDown4.Size = new System.Drawing.Size(46, 20);
-            this.cR_LabelDown4.TabIndex = 114;
-            this.cR_LabelDown4.Text = "Serial";
-            // 
-            // fR_TextBox4
-            // 
-            this.fR_TextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox4.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox4.BorderSize = 2;
-            this.fR_TextBox4.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.fR_TextBox4.Location = new System.Drawing.Point(239, 51);
-            this.fR_TextBox4.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox4.Multiline = true;
-            this.fR_TextBox4.Name = "fR_TextBox4";
-            this.fR_TextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox4.PasswordChar = false;
-            this.fR_TextBox4.Size = new System.Drawing.Size(72, 30);
-            this.fR_TextBox4.TabIndex = 113;
-            this.fR_TextBox4.texts = "fafa";
-            this.fR_TextBox4.UnderlinedStyle = false;
+            this.cR_DataGriedView1.AllowUserToAddRows = false;
+            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
+            this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(474, 326);
+            this.cR_DataGriedView1.TabIndex = 0;
             // 
             // AgregarCotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 390);
+            this.ClientSize = new System.Drawing.Size(816, 390);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AgregarCotizaciones";
@@ -277,6 +310,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +332,7 @@
         private CR_LabelDown cR_LabelDown1;
         private CR_LabelDown cR_LabelDown4;
         private Designer.FR_TextBox fR_TextBox4;
+        private System.Windows.Forms.Panel panel1;
+        private CR_DataGriedView cR_DataGriedView1;
     }
 }

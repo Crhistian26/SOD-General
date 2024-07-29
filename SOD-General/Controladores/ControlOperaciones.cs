@@ -2,9 +2,11 @@
 using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
+using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
+using SOD_General.Vistas.Taller.Registrar_Cotizacion;
 using SOD_General.Vistas.Taller.Registro_peticiones;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
@@ -13,6 +15,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -59,7 +62,8 @@ namespace Controladores
             Pasamos de (agregar,editar,ver y ver) a (Empleados,Permisos)
              */
             var Seleccion = operations.GroupBy(a => a.Module_Name).Select(a => a).ToList();
-
+            
+            
             //Este foreach me recorre las listas anteriores (Empleados,Permisos).
             foreach (var operation in Seleccion)
             {
@@ -67,6 +71,9 @@ namespace Controladores
                 ToolStripMenuItem headitem = new ToolStripMenuItem();
                 //le pone el nombre del modulo. Ej: Empleados
                 headitem.Text = operation.Key;
+
+                //almacena el modulo actual
+                string selec = headitem.Text;
 
                 /*
                 Me recorre el elemento de operation que es Empleados
@@ -77,14 +84,14 @@ namespace Controladores
                 foreach (var ope2 in operation)
                 {
                     //Funcion encargada de filtrar si la operacion estara o no en el menu strip
-                    if(OperacionEnMenuStrip(ope2))
+                    if(OperacionEnMenuStrip(selec,ope2))
                     {
                         //El item del menustrip
                         ToolStripMenuItem item = new ToolStripMenuItem();
                         //El nombre que sera la misma operacion.
                         item.Text = ope2._Operation;
                         //El evento que lo ubicara en la funcion eventos.
-                        EventHandler evento = Eventos(ope2);
+                        EventHandler evento = Eventos(selec, ope2);
                         //En caso que tenga evento se le agregara el mismo al darle click al item
                         if (evento != null)
                         {
@@ -125,121 +132,181 @@ namespace Controladores
 
         //Esta es la lista negra de las operaciones
         //Te devuelve un bool dependiendo de su estancia en la lista
-        public bool OperacionEnMenuStrip(C_Operation operacion)
+        public bool OperacionEnMenuStrip(string selecc, C_Operation operacion)
         {
-            //El id de la operacion.
-            int? id = operacion.Id;
+            //booleano que se retornara al final para ver el resultado
+            bool a = true;
 
-            //En caso de tener id la operacion pasara a la ejecucion de los if
-            if(id != null)
-            {
-                //Si esta es igual a 6 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
-                if(id == 6)
+                //para hacer la validacion de la lista negra segun por modulo
+                //El id de la operacion.
+                int? id = operacion.Id;
+                if (selecc == "Administrador de empleados")
                 {
-                    return false;
+                    //En caso de tener id la operacion pasara a la ejecucion de los if
+                    if (id != null)
+                    {
+                        //Si esta es igual a 6 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
+                        if (id == 6)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 7)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 13)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 14)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 16)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 17)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 19)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 20)
+                        {
+                            a = false;
+                        }
+                    }
                 }
-                //Lo mismo
-                if(id == 7)
+
+                else if (selecc == "Cotizacion")
                 {
-                    return false;
+                    if (id == 17)
+                    {
+                        a = false;
+                    }
+
                 }
-                //Lo mismo
-                if (id == 13)
+
+                else if (selecc == "Recepcion")
                 {
-                    return false;
+                    if (id == 14)
+                    {
+                        a = false;
+                    }
+
                 }
-                //Lo mismo
-                if (id == 14)
-                {
-                    return false;
-                }
-                //Lo mismo
-                if (id == 16)
-                {
-                    return false;
-                }
-                //Lo mismo
-                if (id == 17)
-                {
-                    return false;
-                }
-                //Lo mismo
-                if (id == 19)
-                {
-                    return false;
-                }
-                //Lo mismo
-                if (id == 20)
-                {
-                    return false;
-                }
-            }
-            //Si no esta en la lista negra, se devolvera un true que significa que ira al menustrip.
-            return true;
+            //en caso de que no se ejecutara la lista negra a sera igual al valor con el que fue definida (true)
+            return a;
         }
 
         //Esto es un metodo el cual te devuelve un evento, dependiendo del id de la operacion.
-        public EventHandler Eventos(C_Operation ope)
+        public EventHandler Eventos(string selec, C_Operation ope)
         {
-            //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
-            if (ope.Id == 5)
+            MessageBox.Show(selec.ToString());
+            if(selec == "Administrador de empleados")
             {
-                //El evento.
-                EventHandler evento = delegate (object sender, EventArgs e)
+                //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
+                if (ope.Id == 5)
                 {
-                    //El metodo que tiene el evento.
-                    Empleados ventana = new Empleados(vista);
-                    vista.AbrirFormulario(ventana);
-                };
+                    //El evento.
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        //El metodo que tiene el evento.
+                        Empleados ventana = new Empleados(vista);
+                        vista.AbrirFormulario(ventana);
+                    };
 
-                //Se retorna el evento.
-                return evento;
+                    //Se retorna el evento.
+                    return evento;
+                }
+
+
+                if (ope.Id == 10)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        Computo ventana = new Computo();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+                if (ope.Id == 15)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        Visual_Empleados ventana = new Visual_Empleados(vista);
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+                if (ope.Id == 12)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        Registros_GeneralesAsistencias ventana = new Registros_GeneralesAsistencias(vista);
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+                if (ope.Id == 18)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        Registros_GeneralesPermisos ventana = new Registros_GeneralesPermisos(vista);
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
             }
-
             
-            if (ope.Id == 10)
+            if (selec == "Cotizacion")
             {
-                EventHandler evento = delegate (object sender, EventArgs e)
+                if (ope.Id == 15)
                 {
-                    Computo ventana = new Computo();
-                    vista.AbrirFormulario(ventana);
-                };
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        AgregarCotizaciones ventana = new AgregarCotizaciones();
+                        vista.AbrirFormulario(ventana);
 
-                return evento;
+                    };
+
+                    return evento;
+                }
+
+                if (ope.Id == 16)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        VisualizarCotizacion ventana = new VisualizarCotizacion();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
             }
 
-            if(ope.Id == 15)
+            if (selec == "Recepcion")
             {
-                EventHandler evento = delegate (object sender, EventArgs e)
-                {
-                    Visual_Empleados ventana = new Visual_Empleados(vista);
-                    vista.AbrirFormulario(ventana);
-                };
 
-                return evento;
             }
-
-            if (ope.Id == 12)
-            {
-                EventHandler evento = delegate (object sender, EventArgs e)
-                {
-                    Registros_GeneralesAsistencias ventana = new Registros_GeneralesAsistencias(vista);
-                    vista.AbrirFormulario(ventana);
-                };
-
-                return evento;
-            }
-
-            if (ope.Id == 18)
-            {
-                EventHandler evento = delegate (object sender, EventArgs e)
-                {
-                    Registros_GeneralesPermisos ventana = new Registros_GeneralesPermisos(vista);
-                    vista.AbrirFormulario(ventana);
-                };
-
-                return evento;
-            }
+           
             return null;
         }
 
