@@ -48,113 +48,155 @@ namespace Controladores
             }
         }
 
-
+        //Esta es la funcion que se encarga de agregar los items al menustrip.
         public void Agregar_Items()
         {
+            /*
+            Esta es la lista de agrupaciones por modulo.
+            Por ejemplo: tenemos Empleados(agregar,editar, ver) y Permisos(ver)
+            En lugar de verse todo junto(agregar,editar,ver y ver)     
+            Me crea un objeto que contenga cada uno de sus elementos
+            Pasamos de (agregar,editar,ver y ver) a (Empleados,Permisos)
+             */
             var Seleccion = operations.GroupBy(a => a.Module_Name).Select(a => a).ToList();
 
+            //Este foreach me recorre las listas anteriores (Empleados,Permisos).
             foreach (var operation in Seleccion)
             {
+                //Me crea el encabezado.
                 ToolStripMenuItem headitem = new ToolStripMenuItem();
+                //le pone el nombre del modulo. Ej: Empleados
                 headitem.Text = operation.Key;
 
+                /*
+                Me recorre el elemento de operation que es Empleados
+                Recordemos que esto no es una lista comun (agregar,editar,ver y ver).
+                Sino que la lista nueva (Empleados,Permisos) es basicamente una lista para las listas
+                Osea Empleados contiene (agregar,editar y ver) y cuando este pase por Permisos tendra (ver)
+                */
                 foreach (var ope2 in operation)
                 {
+                    //Funcion encargada de filtrar si la operacion estara o no en el menu strip
                     if(OperacionEnMenuStrip(ope2))
                     {
+                        //El item del menustrip
                         ToolStripMenuItem item = new ToolStripMenuItem();
+                        //El nombre que sera la misma operacion.
                         item.Text = ope2._Operation;
+                        //El evento que lo ubicara en la funcion eventos.
                         EventHandler evento = Eventos(ope2);
+                        //En caso que tenga evento se le agregara el mismo al darle click al item
                         if (evento != null)
                         {
                             item.Click += evento;
-
                         }
+                        //Se agrega al encabezado.
                         headitem.DropDownItems.Add(item);
                     }
                 }
-                vista.cR_MenuStrip1.Items.Add(headitem);
+                //Siempre y cuando tenga objetos dentro del mismo el encabezado se agregara.
+                if(headitem.DropDownItems != null)
+                {
+                    //Se agrega el encabezado con todos sus items al menustrip
+                    vista.cR_MenuStrip1.Items.Add(headitem);
+                }
             }
         }
 
+        //Se encarga crear un booleano con la informacion de la operacion
         public bool BuscarAutorizacion(int IdAutorizacion)
         {
+            //Se encarga de buscar la operacion por su ID entre la lista de operaciones.
             var ope = from a in operations
                               where a.Id == IdAutorizacion
                               select a;
 
+            //En caso de encontrar alguna similitud es verdadero.
             if( ope.Count() != 0)
             {
                 return true;
             }
+            //En caso de no encontrala es falso.
             else
             {
                 return false;
             }
         }
+
+        //Esta es la lista negra de las operaciones
+        //Te devuelve un bool dependiendo de su estancia en la lista
         public bool OperacionEnMenuStrip(C_Operation operacion)
         {
+            //El id de la operacion.
             int? id = operacion.Id;
 
+            //En caso de tener id la operacion pasara a la ejecucion de los if
             if(id != null)
             {
-                //Id de la operacion Agregar Empleados
+                //Si esta es igual a 6 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
                 if(id == 6)
                 {
                     return false;
                 }
-
+                //Lo mismo
                 if(id == 7)
                 {
                     return false;
                 }
-
-                if(id == 13)
+                //Lo mismo
+                if (id == 13)
                 {
                     return false;
                 }
-
+                //Lo mismo
                 if (id == 14)
                 {
                     return false;
                 }
-
+                //Lo mismo
                 if (id == 16)
                 {
                     return false;
                 }
-
+                //Lo mismo
                 if (id == 17)
                 {
                     return false;
                 }
-
+                //Lo mismo
                 if (id == 19)
                 {
                     return false;
                 }
-
-                if(id == 20)
+                //Lo mismo
+                if (id == 20)
                 {
                     return false;
                 }
             }
-
+            //Si no esta en la lista negra, se devolvera un true que significa que ira al menustrip.
             return true;
         }
+
+        //Esto es un metodo el cual te devuelve un evento, dependiendo del id de la operacion.
         public EventHandler Eventos(C_Operation ope)
         {
+            //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
             if (ope.Id == 5)
             {
+                //El evento.
                 EventHandler evento = delegate (object sender, EventArgs e)
                 {
+                    //El metodo que tiene el evento.
                     Empleados ventana = new Empleados(vista);
                     vista.AbrirFormulario(ventana);
                 };
 
+                //Se retorna el evento.
                 return evento;
             }
 
+            
             if (ope.Id == 10)
             {
                 EventHandler evento = delegate (object sender, EventArgs e)
