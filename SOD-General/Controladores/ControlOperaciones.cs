@@ -4,6 +4,7 @@ using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Pruebas;
+using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas.Taller.Clientes;
@@ -142,62 +143,55 @@ namespace Controladores
                 //para hacer la validacion de la lista negra segun por modulo
                 //El id de la operacion.
                 int? id = operacion.Id;
-                if (selecc == "Administrador de empleados")
+                if (selecc == "Empleados")
                 {
                     //En caso de tener id la operacion pasara a la ejecucion de los if
                     if (id != null)
                     {
-                        //Si esta es igual a 6 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
+                        //Si esta es igual a 2 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
+                        if (id == 2)
+                        {
+                            a = false;
+                        }
+                        //Lo mismo
+                        if (id == 3)
+                        {
+                            a = false;
+                        }
+                    }
+                }
+
+                else if (selecc == "Asistencias")
+                {
+                    if (id != null)
+                    {
+                        if (id == 5)
+                        {
+                            a = false;
+                        }
+
                         if (id == 6)
                         {
                             a = false;
                         }
-                        //Lo mismo
-                        if (id == 7)
-                        {
-                            a = false;
-                        }
-                        //Lo mismo
-                        if (id == 13)
-                        {
-                            a = false;
-                        }
-                        //Lo mismo
-                        if (id == 14)
-                        {
-                            a = false;
-                        }
-                        //Lo mismo
-                        if (id == 16)
-                        {
-                            a = false;
-                        }
-                        //Lo mismo
-                        if (id == 17)
-                        {
-                            a = false;
-                        }
-                        //Lo mismo
-                        if (id == 19)
-                        {
-                            a = false;
-                        }
-                        //Lo mismo
-                        if (id == 20)
-                        {
-                            a = false;
-                        }
                     }
                 }
 
-                else if (selecc == "Cotizacion")
-                {
-                    if (id == 17)
+                 else if (selecc == "Permisos")
+                 {
+                    if (id != null)
                     {
-                        a = false;
-                    }
+                        if (id == 8)
+                        {
+                            a = false;
+                        }
 
-                }
+                        if (id == 9)
+                        {
+                            a = false;
+                        }
+                    }
+                 }
 
                 //Id de la operacion
                 else if (selecc == "Recepcion")
@@ -220,11 +214,16 @@ namespace Controladores
         //Esto es un metodo el cual te devuelve un evento, dependiendo del id de la operacion.
         public EventHandler Eventos(string selec, C_Operation ope)
         {
+<<<<<<< Updated upstream
            
             if(selec == "Administrador de empleados")
+=======
+            MessageBox.Show(selec.ToString());
+            if(selec == "Empleados")
+>>>>>>> Stashed changes
             {
                 //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
-                if (ope.Id == 5)
+                if (ope.Id == 23)
                 {
                     //El evento.
                     EventHandler evento = delegate (object sender, EventArgs e)
@@ -238,19 +237,7 @@ namespace Controladores
                     return evento;
                 }
 
-
-                if (ope.Id == 10)
-                {
-                    EventHandler evento = delegate (object sender, EventArgs e)
-                    {
-                        Computo ventana = new Computo();
-                        vista.AbrirFormulario(ventana);
-                    };
-
-                    return evento;
-                }
-
-                if (ope.Id == 15)
+                if (ope.Id == 1)
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -261,27 +248,6 @@ namespace Controladores
                     return evento;
                 }
 
-                if (ope.Id == 12)
-                {
-                    EventHandler evento = delegate (object sender, EventArgs e)
-                    {
-                        Registros_GeneralesAsistencias ventana = new Registros_GeneralesAsistencias(vista);
-                        vista.AbrirFormulario(ventana);
-                    };
-
-                    return evento;
-                }
-
-                if (ope.Id == 18)
-                {
-                    EventHandler evento = delegate (object sender, EventArgs e)
-                    {
-                        Registros_GeneralesPermisos ventana = new Registros_GeneralesPermisos(vista);
-                        vista.AbrirFormulario(ventana);
-                    };
-
-                    return evento;
-                }
             }
             
             if (selec == "Cotizacion")
@@ -358,6 +324,48 @@ namespace Controladores
                 }
             }
            
+            if (selec == "Asistencias")
+            {
+                if (ope.Id == 4)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        Registros_GeneralesAsistencias ventana = new Registros_GeneralesAsistencias(vista);
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+            }
+
+            if (selec == "Permisos")
+            {
+                if (ope.Id == 7)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        Registros_GeneralesPermisos ventana = new Registros_GeneralesPermisos(vista);
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+            }
+
+            if (selec == "Reportes de RRHH")
+            {
+                if (ope.Id == 10)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        ExportarReportesRRHH ventana = new ExportarReportesRRHH();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+            }
             return null;
         }
 

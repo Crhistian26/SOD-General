@@ -116,6 +116,7 @@
             // 
             // soD_ComboBox4
             // 
+            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox4.FormattingEnabled = true;
             this.soD_ComboBox4.Items.AddRange(new object[] {
@@ -171,8 +172,15 @@
             // 
             // soD_ComboBox3
             // 
+            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox3.FormattingEnabled = true;
+            this.soD_ComboBox3.Items.AddRange(new object[] {
+            "Sin limites",
+            "Al año",
+            "Al mes",
+            "A la semana",
+            "Unico"});
             this.soD_ComboBox3.Location = new System.Drawing.Point(401, 101);
             this.soD_ComboBox3.Name = "soD_ComboBox3";
             this.soD_ComboBox3.Size = new System.Drawing.Size(191, 27);
@@ -191,8 +199,13 @@
             // 
             // soD_ComboBox2
             // 
+            this.soD_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox2.FormattingEnabled = true;
+            this.soD_ComboBox2.Items.AddRange(new object[] {
+            "Minutos",
+            "Horas",
+            "Dias"});
             this.soD_ComboBox2.Location = new System.Drawing.Point(19, 169);
             this.soD_ComboBox2.Name = "soD_ComboBox2";
             this.soD_ComboBox2.Size = new System.Drawing.Size(191, 27);
@@ -211,8 +224,13 @@
             // 
             // soD_ComboBox1
             // 
+            this.soD_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox1.FormattingEnabled = true;
+            this.soD_ComboBox1.Items.AddRange(new object[] {
+            "Minutos",
+            "Horas",
+            "Dias"});
             this.soD_ComboBox1.Location = new System.Drawing.Point(19, 101);
             this.soD_ComboBox1.Name = "soD_ComboBox1";
             this.soD_ComboBox1.Size = new System.Drawing.Size(191, 27);

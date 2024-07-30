@@ -34,7 +34,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             cR_DataGriedView1.Rows.Add(1, "Fernando Acosta", "Enfermedad", "Lunes 27 de mayo", "Jueves 30 de mayo");
             cR_DataGriedView1.Rows.Add(1, "Maria Fernandez", "Diligencia", "Lunes 27 de mayo (10:30)", "Lunes 27 de mayo (2:15)");
 
-            if (operaciones.BuscarAutorizacion(19))
+            if (operaciones.BuscarAutorizacion(6))
             {
                 botones_Nuevos5.Visible = true;
             }

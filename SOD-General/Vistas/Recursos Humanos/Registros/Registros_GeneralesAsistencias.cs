@@ -36,7 +36,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             CentrarElementos();
             cR_DataGriedView2.Rows.Add(1, "Eduardo Brito", "8:25 AM", "5:50 PM", "8 horas y 10 min.");
 
-            if(operaciones.BuscarAutorizacion(14))
+            if(operaciones.BuscarAutorizacion(5))
             {
                 botones_Nuevos1.Visible = true;
             }

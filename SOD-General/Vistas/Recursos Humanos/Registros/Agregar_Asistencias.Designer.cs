@@ -33,33 +33,33 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.soD_ComboBox5 = new SOD_ComboBox();
+            this.cR_TBminutos4 = new CR_TBminutos();
+            this.cR_TBhora4 = new CR_TBhora();
             this.cR_LabelDown9 = new CR_LabelDown();
             this.cR_LabelDown10 = new CR_LabelDown();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.soD_ComboBox3 = new SOD_ComboBox();
+            this.cR_TBminutos3 = new CR_TBminutos();
+            this.cR_TBhora3 = new CR_TBhora();
             this.cR_LabelDown5 = new CR_LabelDown();
             this.cR_LabelDown8 = new CR_LabelDown();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.soD_ComboBox2 = new SOD_ComboBox();
+            this.cR_TBminutos2 = new CR_TBminutos();
+            this.cR_TBhora2 = new CR_TBhora();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.soD_ComboBox4 = new SOD_ComboBox();
+            this.cR_TBminutos1 = new CR_TBminutos();
+            this.cR_TBhora1 = new CR_TBhora();
             this.cR_LabelDown7 = new CR_LabelDown();
             this.cR_LabelDown6 = new CR_LabelDown();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.cR_TBhora1 = new CR_TBhora();
-            this.cR_TBhora2 = new CR_TBhora();
-            this.cR_TBhora3 = new CR_TBhora();
-            this.cR_TBhora4 = new CR_TBhora();
-            this.cR_TBminutos1 = new CR_TBminutos();
-            this.cR_TBminutos2 = new CR_TBminutos();
-            this.cR_TBminutos3 = new CR_TBminutos();
-            this.cR_TBminutos4 = new CR_TBminutos();
+            this.soD_ComboBox5 = new SOD_ComboBox();
+            this.soD_ComboBox2 = new SOD_ComboBox();
+            this.soD_ComboBox3 = new SOD_ComboBox();
+            this.soD_ComboBox4 = new SOD_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -151,18 +151,25 @@
             this.panel5.Size = new System.Drawing.Size(200, 66);
             this.panel5.TabIndex = 24;
             // 
-            // soD_ComboBox5
+            // cR_TBminutos4
             // 
-            this.soD_ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox5.FormattingEnabled = true;
-            this.soD_ComboBox5.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox5.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox5.Name = "soD_ComboBox5";
-            this.soD_ComboBox5.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox5.TabIndex = 21;
+            this.cR_TBminutos4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBminutos4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBminutos4.Location = new System.Drawing.Point(78, 31);
+            this.cR_TBminutos4.MaxLength = 2;
+            this.cR_TBminutos4.Name = "cR_TBminutos4";
+            this.cR_TBminutos4.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBminutos4.TabIndex = 27;
+            // 
+            // cR_TBhora4
+            // 
+            this.cR_TBhora4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBhora4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBhora4.Location = new System.Drawing.Point(12, 31);
+            this.cR_TBhora4.MaxLength = 2;
+            this.cR_TBhora4.Name = "cR_TBhora4";
+            this.cR_TBhora4.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBhora4.TabIndex = 26;
             // 
             // cR_LabelDown9
             // 
@@ -198,18 +205,25 @@
             this.panel4.Size = new System.Drawing.Size(200, 66);
             this.panel4.TabIndex = 24;
             // 
-            // soD_ComboBox3
+            // cR_TBminutos3
             // 
-            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox3.FormattingEnabled = true;
-            this.soD_ComboBox3.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox3.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox3.Name = "soD_ComboBox3";
-            this.soD_ComboBox3.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox3.TabIndex = 21;
+            this.cR_TBminutos3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBminutos3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBminutos3.Location = new System.Drawing.Point(78, 31);
+            this.cR_TBminutos3.MaxLength = 2;
+            this.cR_TBminutos3.Name = "cR_TBminutos3";
+            this.cR_TBminutos3.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBminutos3.TabIndex = 26;
+            // 
+            // cR_TBhora3
+            // 
+            this.cR_TBhora3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBhora3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBhora3.Location = new System.Drawing.Point(12, 31);
+            this.cR_TBhora3.MaxLength = 2;
+            this.cR_TBhora3.Name = "cR_TBhora3";
+            this.cR_TBhora3.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBhora3.TabIndex = 25;
             // 
             // cR_LabelDown5
             // 
@@ -245,18 +259,25 @@
             this.panel3.Size = new System.Drawing.Size(200, 66);
             this.panel3.TabIndex = 24;
             // 
-            // soD_ComboBox2
+            // cR_TBminutos2
             // 
-            this.soD_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox2.FormattingEnabled = true;
-            this.soD_ComboBox2.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox2.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox2.Name = "soD_ComboBox2";
-            this.soD_ComboBox2.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox2.TabIndex = 21;
+            this.cR_TBminutos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBminutos2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBminutos2.Location = new System.Drawing.Point(78, 32);
+            this.cR_TBminutos2.MaxLength = 2;
+            this.cR_TBminutos2.Name = "cR_TBminutos2";
+            this.cR_TBminutos2.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBminutos2.TabIndex = 25;
+            // 
+            // cR_TBhora2
+            // 
+            this.cR_TBhora2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBhora2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBhora2.Location = new System.Drawing.Point(12, 33);
+            this.cR_TBhora2.MaxLength = 2;
+            this.cR_TBhora2.Name = "cR_TBhora2";
+            this.cR_TBhora2.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBhora2.TabIndex = 24;
             // 
             // cR_LabelDown3
             // 
@@ -292,18 +313,25 @@
             this.panel2.Size = new System.Drawing.Size(200, 66);
             this.panel2.TabIndex = 23;
             // 
-            // soD_ComboBox4
+            // cR_TBminutos1
             // 
-            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox4.FormattingEnabled = true;
-            this.soD_ComboBox4.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox4.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox4.Name = "soD_ComboBox4";
-            this.soD_ComboBox4.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox4.TabIndex = 21;
+            this.cR_TBminutos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBminutos1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBminutos1.Location = new System.Drawing.Point(78, 32);
+            this.cR_TBminutos1.MaxLength = 2;
+            this.cR_TBminutos1.Name = "cR_TBminutos1";
+            this.cR_TBminutos1.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBminutos1.TabIndex = 24;
+            // 
+            // cR_TBhora1
+            // 
+            this.cR_TBhora1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBhora1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBhora1.Location = new System.Drawing.Point(12, 32);
+            this.cR_TBhora1.MaxLength = 2;
+            this.cR_TBhora1.Name = "cR_TBhora1";
+            this.cR_TBhora1.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBhora1.TabIndex = 23;
             // 
             // cR_LabelDown7
             // 
@@ -367,85 +395,57 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
-            // cR_TBhora1
+            // soD_ComboBox5
             // 
-            this.cR_TBhora1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBhora1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBhora1.Location = new System.Drawing.Point(12, 32);
-            this.cR_TBhora1.MaxLength = 2;
-            this.cR_TBhora1.Name = "cR_TBhora1";
-            this.cR_TBhora1.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBhora1.TabIndex = 23;
+            this.soD_ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox5.FormattingEnabled = true;
+            this.soD_ComboBox5.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox5.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox5.Name = "soD_ComboBox5";
+            this.soD_ComboBox5.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox5.TabIndex = 21;
             // 
-            // cR_TBhora2
+            // soD_ComboBox2
             // 
-            this.cR_TBhora2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBhora2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBhora2.Location = new System.Drawing.Point(12, 33);
-            this.cR_TBhora2.MaxLength = 2;
-            this.cR_TBhora2.Name = "cR_TBhora2";
-            this.cR_TBhora2.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBhora2.TabIndex = 24;
+            this.soD_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox2.FormattingEnabled = true;
+            this.soD_ComboBox2.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox2.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox2.Name = "soD_ComboBox2";
+            this.soD_ComboBox2.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox2.TabIndex = 21;
             // 
-            // cR_TBhora3
+            // soD_ComboBox3
             // 
-            this.cR_TBhora3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBhora3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBhora3.Location = new System.Drawing.Point(12, 31);
-            this.cR_TBhora3.MaxLength = 2;
-            this.cR_TBhora3.Name = "cR_TBhora3";
-            this.cR_TBhora3.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBhora3.TabIndex = 25;
+            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox3.FormattingEnabled = true;
+            this.soD_ComboBox3.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox3.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox3.Name = "soD_ComboBox3";
+            this.soD_ComboBox3.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox3.TabIndex = 21;
             // 
-            // cR_TBhora4
+            // soD_ComboBox4
             // 
-            this.cR_TBhora4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBhora4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBhora4.Location = new System.Drawing.Point(12, 31);
-            this.cR_TBhora4.MaxLength = 2;
-            this.cR_TBhora4.Name = "cR_TBhora4";
-            this.cR_TBhora4.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBhora4.TabIndex = 26;
-            // 
-            // cR_TBminutos1
-            // 
-            this.cR_TBminutos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBminutos1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBminutos1.Location = new System.Drawing.Point(78, 32);
-            this.cR_TBminutos1.MaxLength = 2;
-            this.cR_TBminutos1.Name = "cR_TBminutos1";
-            this.cR_TBminutos1.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBminutos1.TabIndex = 24;
-            // 
-            // cR_TBminutos2
-            // 
-            this.cR_TBminutos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBminutos2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBminutos2.Location = new System.Drawing.Point(78, 32);
-            this.cR_TBminutos2.MaxLength = 2;
-            this.cR_TBminutos2.Name = "cR_TBminutos2";
-            this.cR_TBminutos2.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBminutos2.TabIndex = 25;
-            // 
-            // cR_TBminutos3
-            // 
-            this.cR_TBminutos3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBminutos3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBminutos3.Location = new System.Drawing.Point(78, 31);
-            this.cR_TBminutos3.MaxLength = 2;
-            this.cR_TBminutos3.Name = "cR_TBminutos3";
-            this.cR_TBminutos3.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBminutos3.TabIndex = 26;
-            // 
-            // cR_TBminutos4
-            // 
-            this.cR_TBminutos4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBminutos4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBminutos4.Location = new System.Drawing.Point(78, 31);
-            this.cR_TBminutos4.MaxLength = 2;
-            this.cR_TBminutos4.Name = "cR_TBminutos4";
-            this.cR_TBminutos4.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBminutos4.TabIndex = 27;
+            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox4.FormattingEnabled = true;
+            this.soD_ComboBox4.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox4.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox4.Name = "soD_ComboBox4";
+            this.soD_ComboBox4.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox4.TabIndex = 21;
             // 
             // Agregar_Asistencias
             // 
@@ -487,20 +487,16 @@
         private CR_LabelDown cR_LabelDown2;
         private SOD_ComboBox soD_ComboBox1;
         private System.Windows.Forms.Panel panel3;
-        private SOD_ComboBox soD_ComboBox2;
         private CR_LabelDown cR_LabelDown3;
         private CR_LabelDown cR_LabelDown4;
         private System.Windows.Forms.Panel panel2;
-        private SOD_ComboBox soD_ComboBox4;
         private CR_LabelDown cR_LabelDown7;
         private CR_LabelDown cR_LabelDown6;
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private System.Windows.Forms.Panel panel5;
-        private SOD_ComboBox soD_ComboBox5;
         private CR_LabelDown cR_LabelDown9;
         private CR_LabelDown cR_LabelDown10;
         private System.Windows.Forms.Panel panel4;
-        private SOD_ComboBox soD_ComboBox3;
         private CR_LabelDown cR_LabelDown5;
         private CR_LabelDown cR_LabelDown8;
         private CR_TBminutos cR_TBminutos4;
@@ -511,5 +507,9 @@
         private CR_TBhora cR_TBhora2;
         private CR_TBminutos cR_TBminutos1;
         private CR_TBhora cR_TBhora1;
+        private SOD_ComboBox soD_ComboBox5;
+        private SOD_ComboBox soD_ComboBox3;
+        private SOD_ComboBox soD_ComboBox2;
+        private SOD_ComboBox soD_ComboBox4;
     }
 }
