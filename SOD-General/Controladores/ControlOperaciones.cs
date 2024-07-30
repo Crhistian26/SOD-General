@@ -214,13 +214,13 @@ namespace Controladores
         //Esto es un metodo el cual te devuelve un evento, dependiendo del id de la operacion.
         public EventHandler Eventos(string selec, C_Operation ope)
         {
-<<<<<<< Updated upstream
+
            
             if(selec == "Administrador de empleados")
-=======
+
             MessageBox.Show(selec.ToString());
             if(selec == "Empleados")
->>>>>>> Stashed changes
+
             {
                 //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
                 if (ope.Id == 23)
