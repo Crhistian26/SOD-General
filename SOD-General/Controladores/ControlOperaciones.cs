@@ -6,7 +6,9 @@ using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
+using SOD_General.Vistas.Taller.Clientes;
 using SOD_General.Vistas.Taller.Registrar_Cotizacion;
+using SOD_General.Vistas.Taller.Registrar_entrada;
 using SOD_General.Vistas.Taller.Registro_peticiones;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
@@ -197,6 +199,7 @@ namespace Controladores
 
                 }
 
+                //Id de la operacion
                 else if (selecc == "Recepcion")
                 {
                     if (id == 14)
@@ -204,7 +207,12 @@ namespace Controladores
                         a = false;
                     }
 
-                }
+                    if (id == 23)
+                    {
+                        a = false;
+                    }
+
+            }
             //en caso de que no se ejecutara la lista negra a sera igual al valor con el que fue definida (true)
             return a;
         }
@@ -212,7 +220,7 @@ namespace Controladores
         //Esto es un metodo el cual te devuelve un evento, dependiendo del id de la operacion.
         public EventHandler Eventos(string selec, C_Operation ope)
         {
-            MessageBox.Show(selec.ToString());
+           
             if(selec == "Administrador de empleados")
             {
                 //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
@@ -304,7 +312,50 @@ namespace Controladores
 
             if (selec == "Recepcion")
             {
+                if (ope.Id == 12)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        AgregarPeticiones ventana = new AgregarPeticiones();
+                        vista.AbrirFormulario(ventana);
 
+                    };
+
+                    return evento;
+                }
+
+                if (ope.Id == 13)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        VisualizarEntradas ventana = new VisualizarEntradas();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+                if(ope.Id == 21)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        AgregarClientes ventana = new AgregarClientes();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+                if (ope.Id == 22)
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        VisualizarClientes ventana = new VisualizarClientes();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
             }
            
             return null;

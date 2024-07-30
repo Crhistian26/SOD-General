@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.soD_TextBox1 = new SOD_TextBox();
+            this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,8 +39,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soD_TextBox1 = new SOD_TextBox();
-            this.soD_ComboBox1 = new SOD_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -68,6 +68,32 @@
             this.cR_SplitContainer1.SplitterDistance = 93;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
+            // soD_TextBox1
+            // 
+            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox1.BorderSize = 2;
+            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox1.Location = new System.Drawing.Point(139, 58);
+            this.soD_TextBox1.Name = "soD_TextBox1";
+            this.soD_TextBox1.Size = new System.Drawing.Size(100, 21);
+            this.soD_TextBox1.TabIndex = 4;
+            // 
+            // soD_ComboBox1
+            // 
+            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox1.FormattingEnabled = true;
+            this.soD_ComboBox1.Items.AddRange(new object[] {
+            "Entidad",
+            "Nombre del cliente",
+            "RNC"});
+            this.soD_ComboBox1.Location = new System.Drawing.Point(12, 54);
+            this.soD_ComboBox1.Name = "soD_ComboBox1";
+            this.soD_ComboBox1.Size = new System.Drawing.Size(121, 27);
+            this.soD_ComboBox1.TabIndex = 3;
+            this.soD_ComboBox1.Text = "Buscar por:";
+            // 
             // cR_Subtitulos1
             // 
             this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -89,10 +115,10 @@
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -139,38 +165,13 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // soD_TextBox1
-            // 
-            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox1.BorderSize = 2;
-            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox1.Location = new System.Drawing.Point(139, 58);
-            this.soD_TextBox1.Name = "soD_TextBox1";
-            this.soD_TextBox1.Size = new System.Drawing.Size(100, 21);
-            this.soD_TextBox1.TabIndex = 4;
-            // 
-            // soD_ComboBox1
-            // 
-            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Items.AddRange(new object[] {
-            "Entidad",
-            "Nombre del cliente",
-            "RNC"});
-            this.soD_ComboBox1.Location = new System.Drawing.Point(12, 54);
-            this.soD_ComboBox1.Name = "soD_ComboBox1";
-            this.soD_ComboBox1.Size = new System.Drawing.Size(121, 27);
-            this.soD_ComboBox1.TabIndex = 3;
-            this.soD_ComboBox1.Text = "Buscar por:";
-            // 
             // VisualizarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VisualizarClientes";
             this.Text = "VisualizarClientes";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

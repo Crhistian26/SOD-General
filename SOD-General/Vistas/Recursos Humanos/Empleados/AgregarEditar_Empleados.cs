@@ -61,5 +61,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         {
             CentrarElementos();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

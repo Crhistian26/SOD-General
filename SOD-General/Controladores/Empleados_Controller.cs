@@ -26,11 +26,7 @@ namespace SOD_General.Controladores
                 hola.Show();
         }
 
-        //Frandy
-        public void AbrirForm(int x, int z)
-        {
-            
-        }
+       
         
     }
 }
