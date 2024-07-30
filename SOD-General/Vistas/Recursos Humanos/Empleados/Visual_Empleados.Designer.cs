@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelUp3 = new CR_LabelUp();
             this.cR_LabelUp2 = new CR_LabelUp();
             this.cR_DateTimePicker2 = new CR_DateTimePicker();
@@ -43,7 +44,6 @@
             this.Empleados_Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -75,9 +75,27 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(772, 340);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(770, 340);
             this.cR_SplitContainer1.SplitterDistance = 116;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 8);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(183, 40);
+            this.botones_Nuevos1.TabIndex = 7;
+            this.botones_Nuevos1.Text = "Agregar empleado";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_LabelUp3
             // 
@@ -85,7 +103,7 @@
             this.cR_LabelUp3.AutoSize = true;
             this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp3.Location = new System.Drawing.Point(491, 48);
+            this.cR_LabelUp3.Location = new System.Drawing.Point(489, 48);
             this.cR_LabelUp3.Name = "cR_LabelUp3";
             this.cR_LabelUp3.Size = new System.Drawing.Size(48, 20);
             this.cR_LabelUp3.TabIndex = 6;
@@ -97,7 +115,7 @@
             this.cR_LabelUp2.AutoSize = true;
             this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(220, 48);
+            this.cR_LabelUp2.Location = new System.Drawing.Point(218, 48);
             this.cR_LabelUp2.Name = "cR_LabelUp2";
             this.cR_LabelUp2.Size = new System.Drawing.Size(106, 20);
             this.cR_LabelUp2.TabIndex = 5;
@@ -108,7 +126,7 @@
             this.cR_DateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(224, 72);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(222, 72);
             this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
             this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker2.TabIndex = 4;
@@ -118,7 +136,7 @@
             this.cR_DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(495, 72);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(493, 72);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
             this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker1.TabIndex = 3;
@@ -162,10 +180,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Empleados_Id,
@@ -179,7 +197,7 @@
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(772, 220);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(770, 220);
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
             // 
@@ -220,29 +238,11 @@
             this.Empleados_Entry.ReadOnly = true;
             this.Empleados_Entry.Width = 84;
             // 
-            // botones_Nuevos1
-            // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 8);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(183, 40);
-            this.botones_Nuevos1.TabIndex = 7;
-            this.botones_Nuevos1.Text = "Agregar empleado";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
-            // 
             // Visual_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 340);
+            this.ClientSize = new System.Drawing.Size(770, 340);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(770, 340);

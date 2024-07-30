@@ -1,6 +1,7 @@
 ﻿using Controladores;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
+using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using System;
 using System.Collections.Generic;
@@ -22,32 +23,51 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         Empleados_Controller control = new Empleados_Controller();
 
-        Size tam;
-
         ControlOperaciones operaciones;
+
+        List<Employee> Empleados;
+
+
+
         public Visual_Empleados(AppVistaGeneral app)
         {
             InitializeComponent();
             operaciones = new ControlOperaciones(app);
         }
 
+        private void Visual_Empleados_Load(object sender, EventArgs e)
+        {
+            Empleados = control.ListaGeneralEmpleados();
+            CentrarElementos();
+            LlenarDataGried();
+
+        }
+
+
         public void CentrarElementos()
         {
             Point localA = cR_Subtitulos1.Location;
             cR_Subtitulos1.Location = _size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
         }
+
+        public void LlenarDataGried()
+        {
+            foreach (Employee empleado in Empleados)
+            {
+                int id = empleado.IdEmployee;
+                string name = empleado._Name;
+                string lastname = empleado._Lastname;
+                string department = empleado.Department;
+                DateTime date = empleado.Admission_date;
+
+                cR_DataGriedView1.Rows.Add(id, name, lastname,department, date.ToString("D"));
+            }
+        }
+
+
         private void cR_DataGriedView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("Junciona");
-        }
-
-        private void Visual_Empleados_Load(object sender, EventArgs e)
-        {
-            cR_DataGriedView1.Rows.Add(1,"Fernando","Gutierrez","Recursos Humanos",DateTime.Now.AddYears(-2).ToString("D"));
-            cR_DataGriedView1.Rows.Add(1, "Maria", "Veltran", "Recursos Humanos", DateTime.Now.AddYears(-2).ToString("D"));
-            cR_DataGriedView1.Rows.Add(1, "Rodrigo", "Carrasco", "Recursos Humanos", DateTime.Now.AddYears(-2).ToString("D"));
-
-            CentrarElementos();
         }
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -56,14 +76,9 @@ namespace SOD_General.Recursos_Humanos.Empleados
             {
                 DataGridViewRow fila = cR_DataGriedView1.Rows[e.RowIndex];
                 int id = Convert.ToInt32(fila.Cells[0].Value);
-                string name = fila.Cells[1].Value.ToString();
-                string lastname = fila.Cells[2].Value.ToString();
-                DateTime fecha = Convert.ToDateTime(fila.Cells[4].Value);
-                Employee emp = new Employee(id, 1, name, lastname, fecha, null, true);
 
-
-                Empleado_Details empleado = new Empleado_Details(emp);
-                empleado.Show();
+                Empleado_Details vista = new Empleado_Details(id);
+                vista.Show();
             }
         }
 

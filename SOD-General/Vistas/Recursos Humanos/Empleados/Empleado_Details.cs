@@ -19,10 +19,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         private SizesGenerales _size = new SizesGenerales();
         private Employee employee;
         Empleados_Controller control = new Empleados_Controller();
-        public Empleado_Details(Employee emp)
+        public Empleado_Details(int id)
         {
             InitializeComponent();
-            employee = emp;
+            
         }
 
 
