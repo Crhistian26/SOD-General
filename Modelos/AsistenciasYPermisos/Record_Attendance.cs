@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos.AsistenciasYPermisos
 {
-    internal class Record_Attendance
+    public class Record_Attendance
     {
         public int IdRecord { get; set; }
         public int IdEmployee { get; set; }

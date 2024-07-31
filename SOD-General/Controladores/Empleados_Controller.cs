@@ -1,10 +1,12 @@
 ﻿using Modelos.Usuarios_Empleados;
+using Modelos.AsistenciasYPermisos;
 using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -67,7 +69,30 @@ namespace SOD_General.Controladores
             }
         }
 
-        
+        public Dictionary<DateTime,Record_Attendance> ListaAsistenciasEmpleado(int id)
+        {
+            Dictionary<DateTime,Record_Attendance> diccionario = new Dictionary<DateTime, Record_Attendance>();
+            Record_Attendance record;
+            string Query = "Exec Get_EmployeeAttendance @IdEmpleado";
+            SqlCommand  cmd = new SqlCommand(Query);
+            cmd.Parameters.AddWithValue("@IdEmpleado", id);
+            conex.Open();
+            SqlDataReader lector = cmd.ExecuteReader();
+            while(lector.Read())
+            {
+                int IdRecord = lector.GetInt32(0);
+                int IdEmployee = lector.GetInt32(1);
+                DateTime entry = lector.GetDateTime(2);
+                DateTime exit = lector.GetDateTime(3);
+                DateTime lunchS = lector.GetDateTime(4);
+                DateTime lunchF = lector.GetDateTime(5);
+                DateTime record_Date = lector.GetDateTime(6);
+
+                record = new Record_Attendance(IdRecord,IdEmployee,entry,exit,lunchS,lunchF,record_Date);
+                diccionario.Add(record_Date, record);
+            }
+            return diccionario;
+        }
 
         public void AbrirEditar()
         {

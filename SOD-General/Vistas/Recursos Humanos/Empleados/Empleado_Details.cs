@@ -1,4 +1,5 @@
-﻿using Modelos.Usuarios_Empleados;
+﻿using Modelos.AsistenciasYPermisos;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -19,21 +20,27 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         private SizesGenerales _size = new SizesGenerales();
         private Employee employee;
         Empleados_Controller control = new Empleados_Controller();
-        //Dictionary<DateTime, Record_Attendance> Fecha = new Dictionary<DateTime, Record_Attendance>();
+        Dictionary<DateTime, Record_Attendance> Asistencias = new Dictionary<DateTime, Record_Attendance>();
         public Empleado_Details(int id)
         {
             InitializeComponent();
-            
+            Asistencias = control.ListaAsistenciasEmpleado(id);
         }
 
 
         private void Empleado_Details_Load(object sender, EventArgs e)
         {
-
             Size size = cR_Subtitulos1.Size;
             Point punto = cR_Subtitulos1.Location;
             cR_Subtitulos1.Location = _size.CentrarElementosX(punto, size, this.Size);
-
+            if(Asistencias.Count > 0)
+            {
+                foreach(var asist in Asistencias)
+                {
+                    Record_Attendance asistencia = asist.Value;
+                    cR_DataGriedView1.Rows.Add(asistencia.Entry.ToString("H:m"), asistencia.Exit.ToString("H:m"), asistencia.DateAttendance.ToString("D"));
+                }
+            }
         }
 
         private void Empleado_Details_Resize(object sender, EventArgs e)

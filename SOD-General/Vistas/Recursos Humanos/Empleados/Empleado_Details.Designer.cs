@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.cR_DataGriedView2 = new CR_DataGriedView();
+            this.Asistencias_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.Empleado_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,18 +48,12 @@
             this.Empleados_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cR_DataGriedView2 = new CR_DataGriedView();
-            this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -151,6 +151,67 @@
             this.cR_Subtitulos1.Text = "Nombre";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // cR_DataGriedView2
+            // 
+            this.cR_DataGriedView2.AllowUserToAddRows = false;
+            this.cR_DataGriedView2.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView2.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Asistencias_RecordId,
+            this.Asitencias_Entry,
+            this.Asistencias_Exit,
+            this.Asistencias_Date,
+            this.Asistencias_Hours});
+            this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_DataGriedView2.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView2.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView2.Name = "cR_DataGriedView2";
+            this.cR_DataGriedView2.ReadOnly = true;
+            this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView2.Size = new System.Drawing.Size(704, 284);
+            this.cR_DataGriedView2.TabIndex = 2;
+            this.cR_DataGriedView2.Visible = false;
+            // 
+            // Asistencias_RecordId
+            // 
+            this.Asistencias_RecordId.HeaderText = "Id";
+            this.Asistencias_RecordId.Name = "Asistencias_RecordId";
+            this.Asistencias_RecordId.ReadOnly = true;
+            this.Asistencias_RecordId.Visible = false;
+            // 
+            // Asitencias_Entry
+            // 
+            this.Asitencias_Entry.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asitencias_Entry.HeaderText = "Entrada";
+            this.Asitencias_Entry.Name = "Asitencias_Entry";
+            this.Asitencias_Entry.ReadOnly = true;
+            // 
+            // Asistencias_Exit
+            // 
+            this.Asistencias_Exit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asistencias_Exit.HeaderText = "Salida";
+            this.Asistencias_Exit.Name = "Asistencias_Exit";
+            this.Asistencias_Exit.ReadOnly = true;
+            // 
+            // Asistencias_Date
+            // 
+            this.Asistencias_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asistencias_Date.HeaderText = "Fecha";
+            this.Asistencias_Date.Name = "Asistencias_Date";
+            this.Asistencias_Date.ReadOnly = true;
+            // 
+            // Asistencias_Hours
+            // 
+            this.Asistencias_Hours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asistencias_Hours.HeaderText = "Horas laborales";
+            this.Asistencias_Hours.Name = "Asistencias_Hours";
+            this.Asistencias_Hours.ReadOnly = true;
+            // 
             // cR_DataGriedView1
             // 
             this.cR_DataGriedView1.AllowUserToAddRows = false;
@@ -224,67 +285,6 @@
             this.Empleados_Time.ReadOnly = true;
             this.Empleados_Time.Width = 85;
             // 
-            // cR_DataGriedView2
-            // 
-            this.cR_DataGriedView2.AllowUserToAddRows = false;
-            this.cR_DataGriedView2.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Asistencias_RecordId,
-            this.Asitencias_Entry,
-            this.Asistencias_Exit,
-            this.Asistencias_Date,
-            this.Asistencias_Hours});
-            this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_DataGriedView2.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView2.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView2.Name = "cR_DataGriedView2";
-            this.cR_DataGriedView2.ReadOnly = true;
-            this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView2.Size = new System.Drawing.Size(704, 284);
-            this.cR_DataGriedView2.TabIndex = 2;
-            this.cR_DataGriedView2.Visible = false;
-            // 
-            // Asistencias_Hours
-            // 
-            this.Asistencias_Hours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Hours.HeaderText = "Horas laborales";
-            this.Asistencias_Hours.Name = "Asistencias_Hours";
-            this.Asistencias_Hours.ReadOnly = true;
-            // 
-            // Asistencias_Date
-            // 
-            this.Asistencias_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Date.HeaderText = "Fecha";
-            this.Asistencias_Date.Name = "Asistencias_Date";
-            this.Asistencias_Date.ReadOnly = true;
-            // 
-            // Asistencias_Exit
-            // 
-            this.Asistencias_Exit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Exit.HeaderText = "Salida";
-            this.Asistencias_Exit.Name = "Asistencias_Exit";
-            this.Asistencias_Exit.ReadOnly = true;
-            // 
-            // Asitencias_Entry
-            // 
-            this.Asitencias_Entry.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asitencias_Entry.HeaderText = "Entrada";
-            this.Asitencias_Entry.Name = "Asitencias_Entry";
-            this.Asitencias_Entry.ReadOnly = true;
-            // 
-            // Asistencias_RecordId
-            // 
-            this.Asistencias_RecordId.HeaderText = "Id";
-            this.Asistencias_RecordId.Name = "Asistencias_RecordId";
-            this.Asistencias_RecordId.ReadOnly = true;
-            this.Asistencias_RecordId.Visible = false;
-            // 
             // Empleado_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,8 +302,8 @@
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.ResumeLayout(false);
 
         }
