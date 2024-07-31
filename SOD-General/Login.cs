@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,11 +30,13 @@ namespace SOD_General
         LoginController controller = new LoginController();
 
 
+       
         //Su constructor donde recibe la vistaprincipal.
         public Login(VistaPrincipal principal)
         {
             InitializeComponent();
             this.principal = principal;
+            
         }
 
         //El boton de login.
@@ -53,13 +56,15 @@ namespace SOD_General
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void cR_TBhora1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
+
+       
     }
 
 }

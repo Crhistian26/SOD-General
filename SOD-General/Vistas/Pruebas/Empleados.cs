@@ -27,7 +27,7 @@ namespace SOD_General.Vistas.Pruebas
             cR_DataGriedView1.Rows.Add("Pedrito");
             cR_DataGriedView1.Rows.Add("Pancho");
 
-            if (controller.BuscarAutorizacion(6))
+            if (controller.BuscarAutorizacion("Agregar empleados"))
             {
                 button1.Visible = true;
             }
@@ -39,7 +39,7 @@ namespace SOD_General.Vistas.Pruebas
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (controller.BuscarAutorizacion(6))
+            if (controller.BuscarAutorizacion("Editar empleados"))
             {
                 Agregar_empleado vista = new Agregar_empleado(1);
                 vista.Show();

@@ -34,7 +34,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             cR_DataGriedView1.Rows.Add(1, "Fernando Acosta", "Enfermedad", "Lunes 27 de mayo", "Jueves 30 de mayo");
             cR_DataGriedView1.Rows.Add(1, "Maria Fernandez", "Diligencia", "Lunes 27 de mayo (10:30)", "Lunes 27 de mayo (2:15)");
 
-            if (operaciones.BuscarAutorizacion(6))
+            if (operaciones.BuscarAutorizacion("Agregar permisos"))
             {
                 botones_Nuevos5.Visible = true;
             }
@@ -53,7 +53,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             if(e.RowIndex != -1)
             {
-                if (operaciones.BuscarAutorizacion(20))
+                if (operaciones.BuscarAutorizacion("Editar permisos"))
                 {
                     Permiso_Details ver = new Permiso_Details();
                     ver.Show();

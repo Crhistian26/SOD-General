@@ -19,6 +19,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         private SizesGenerales _size = new SizesGenerales();
         private Employee employee;
         Empleados_Controller control = new Empleados_Controller();
+        //Dictionary<DateTime, Record_Attendance> Fecha = new Dictionary<DateTime, Record_Attendance>();
         public Empleado_Details(int id)
         {
             InitializeComponent();

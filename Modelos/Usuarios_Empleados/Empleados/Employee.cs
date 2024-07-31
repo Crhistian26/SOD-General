@@ -26,32 +26,7 @@ namespace Modelos.Usuarios_Empleados
             this.Department = Department;
             this.Admission_date = Admission_Date;
         }
-        //public Employee(int DepartmentId, string Name, string Lastname)
-        //{
 
-        //    this.DepartmentId = DepartmentId;
-        //    this._Name = Name;
-        //    this._Lastname = Lastname;
-        //}
-
-        //public Employee(int DepartmentId,string Department, string Name, string Lastname)
-        //    :this(DepartmentId,Name,Lastname)
-        //{
-        //    this.Department = Department;
-        //}
-
-        //public Employee(int DepartmentId, string Department, string Name, string Lastname, DateTime Admission_Date)
-        //    :this(DepartmentId,Department, Name, Lastname)
-        //{
-        //    this.Admission_date = Admission_Date;
-        //}
-
-        //public Employee(int DepartmentId, string Department, string Name, string Lastname, DateTime Admission_Date, DateTime? Dismissal_Date, bool Enabled, bool JobState)
-        //    : this(DepartmentId, Department, Name, Lastname,Admission_Date)
-        //{
-        //    this.Dismissal_date = Dismissal_Date;
-        //    this._Enabled = Enabled;
-        //    this.Job_State = JobState;
-        //}
+        
     }
 }

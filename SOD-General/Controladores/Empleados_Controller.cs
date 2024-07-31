@@ -67,7 +67,7 @@ namespace SOD_General.Controladores
             }
         }
 
-
+        
 
         public void AbrirEditar()
         {

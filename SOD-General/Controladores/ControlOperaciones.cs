@@ -114,11 +114,11 @@ namespace Controladores
         }
 
         //Se encarga crear un booleano con la informacion de la operacion
-        public bool BuscarAutorizacion(int IdAutorizacion)
+        public bool BuscarAutorizacion(string Operation_Name)
         {
             //Se encarga de buscar la operacion por su ID entre la lista de operaciones.
             var ope = from a in operations
-                              where a.Id == IdAutorizacion
+                              where a._Operation == Operation_Name
                               select a;
 
             //En caso de encontrar alguna similitud es verdadero.
@@ -142,19 +142,19 @@ namespace Controladores
 
                 //para hacer la validacion de la lista negra segun por modulo
                 //El id de la operacion.
-                int? id = operacion.Id;
+                string id = operacion._Operation;
                 if (selecc == "Empleados")
                 {
                     //En caso de tener id la operacion pasara a la ejecucion de los if
                     if (id != null)
                     {
                         //Si esta es igual a 2 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
-                        if (id == 2)
+                        if (id == "Agregar empleados")
                         {
                             a = false;
                         }
                         //Lo mismo
-                        if (id == 3)
+                        if (id == "Editar empleados")
                         {
                             a = false;
                         }
@@ -165,12 +165,12 @@ namespace Controladores
                 {
                     if (id != null)
                     {
-                        if (id == 5)
+                        if (id == "Agregar asistencias")
                         {
                             a = false;
                         }
 
-                        if (id == 6)
+                        if (id == "Editar asistencias")
                         {
                             a = false;
                         }
@@ -181,12 +181,12 @@ namespace Controladores
                  {
                     if (id != null)
                     {
-                        if (id == 8)
+                        if (id == "Agregar permisos")
                         {
                             a = false;
                         }
 
-                        if (id == 9)
+                        if (id == "Editar permisos")
                         {
                             a = false;
                         }
@@ -196,15 +196,7 @@ namespace Controladores
                 //Id de la operacion
                 else if (selecc == "Recepcion")
                 {
-                    if (id == 14)
-                    {
-                        a = false;
-                    }
-
-                    if (id == 23)
-                    {
-                        a = false;
-                    }
+                    
 
             }
             //en caso de que no se ejecutara la lista negra a sera igual al valor con el que fue definida (true)
@@ -237,7 +229,7 @@ namespace Controladores
                     return evento;
                 }
 
-                if (ope.Id == 1)
+                if (ope._Operation == "Ver empleados")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -326,7 +318,7 @@ namespace Controladores
            
             if (selec == "Asistencias")
             {
-                if (ope.Id == 4)
+                if (ope._Operation == "Ver asistencias")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -341,7 +333,7 @@ namespace Controladores
 
             if (selec == "Permisos")
             {
-                if (ope.Id == 7)
+                if (ope._Operation == "Ver permisos")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -355,7 +347,7 @@ namespace Controladores
 
             if (selec == "Reportes de RRHH")
             {
-                if (ope.Id == 10)
+                if (ope._Operation == "Exportar reporte" && ope.Module_Name == "Reportes de RRHH")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
