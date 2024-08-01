@@ -71,7 +71,8 @@ namespace Controladores
                     conex.Close();
                 }
                 //El mensaje de error de Sql en caso de no existir el usuario.
-                MessageBox.Show(ex.Message);
+                Clipboard.SetText(ex.ToString());
+                MessageBox.Show(ex.ToString());
                 //Debe retornar algo.
                 return null;
             }
