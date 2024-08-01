@@ -1,20 +1,12 @@
 ﻿using Controladores;
-using Modelos.Usuarios_Empleados;
 using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General
 {
-    
+
     public partial class Login : Form
     {
         /// <summary>
@@ -30,13 +22,13 @@ namespace SOD_General
         LoginController controller = new LoginController();
 
 
-       
+
         //Su constructor donde recibe la vistaprincipal.
         public Login(VistaPrincipal principal)
         {
             InitializeComponent();
             this.principal = principal;
-            
+
         }
 
         //El boton de login.
@@ -44,9 +36,9 @@ namespace SOD_General
         {
 
             List<C_Operation> lista;
-            lista = controller.Ingresar(cr_Textbox1.Text,cr_Textbox2.Text);
+            lista = controller.Ingresar(cr_Textbox1.Text, cr_Textbox2.Text);
 
-            if(lista != null)
+            if (lista != null)
             {
                 principal.AbrirVistaGeneral(lista);
             }
@@ -56,7 +48,7 @@ namespace SOD_General
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cR_TBhora1_KeyPress(object sender, KeyPressEventArgs e)
@@ -64,7 +56,7 @@ namespace SOD_General
 
         }
 
-       
+
     }
 
 }

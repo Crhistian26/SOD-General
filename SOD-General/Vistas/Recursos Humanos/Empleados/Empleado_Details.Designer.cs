@@ -30,7 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleado_Details));
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.cR_Subtitulos2 = new CR_Subtitulos();
             this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
@@ -45,6 +47,8 @@
             this.Empleados_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inicio_de_almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fin_de_almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
@@ -66,6 +70,7 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos5);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos1);
@@ -76,8 +81,24 @@
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(704, 431);
-            this.cR_SplitContainer1.SplitterDistance = 143;
+            this.cR_SplitContainer1.SplitterDistance = 187;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // cR_Subtitulos2
+            // 
+            this.cR_Subtitulos2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos2.AutoSize = true;
+            this.cR_Subtitulos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos2.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cR_Subtitulos2.ForeColor = System.Drawing.Color.White;
+            this.cR_Subtitulos2.Location = new System.Drawing.Point(254, 146);
+            this.cR_Subtitulos2.Name = "cR_Subtitulos2";
+            this.cR_Subtitulos2.Size = new System.Drawing.Size(193, 31);
+            this.cR_Subtitulos2.TabIndex = 5;
+            this.cR_Subtitulos2.Text = "cR_Subtitulos2";
+            this.cR_Subtitulos2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // botones_Nuevos5
             // 
@@ -163,6 +184,8 @@
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Asitencias_Entry,
             this.Asistencias_Exit,
+            this.Inicio_de_almuerzo,
+            this.Fin_de_almuerzo,
             this.Asistencias_Date,
             this.Asistencias_Hours});
             this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -171,7 +194,7 @@
             this.cR_DataGriedView2.Name = "cR_DataGriedView2";
             this.cR_DataGriedView2.ReadOnly = true;
             this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView2.Size = new System.Drawing.Size(704, 284);
+            this.cR_DataGriedView2.Size = new System.Drawing.Size(704, 240);
             this.cR_DataGriedView2.TabIndex = 2;
             this.cR_DataGriedView2.Visible = false;
             // 
@@ -198,7 +221,7 @@
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(704, 284);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(704, 240);
             this.cR_DataGriedView1.TabIndex = 1;
             this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
             // 
@@ -262,6 +285,18 @@
             this.Asistencias_Exit.Name = "Asistencias_Exit";
             this.Asistencias_Exit.ReadOnly = true;
             // 
+            // Inicio_de_almuerzo
+            // 
+            this.Inicio_de_almuerzo.HeaderText = "Inicio de almuerzo";
+            this.Inicio_de_almuerzo.Name = "Inicio_de_almuerzo";
+            this.Inicio_de_almuerzo.ReadOnly = true;
+            // 
+            // Fin_de_almuerzo
+            // 
+            this.Fin_de_almuerzo.HeaderText = "Fin de almuerzo";
+            this.Fin_de_almuerzo.Name = "Fin_de_almuerzo";
+            this.Fin_de_almuerzo.ReadOnly = true;
+            // 
             // Asistencias_Date
             // 
             this.Asistencias_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -272,7 +307,7 @@
             // Asistencias_Hours
             // 
             this.Asistencias_Hours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Hours.HeaderText = "Horas laborales";
+            this.Asistencias_Hours.HeaderText = "Horas laboradas";
             this.Asistencias_Hours.Name = "Asistencias_Hours";
             this.Asistencias_Hours.ReadOnly = true;
             // 
@@ -282,10 +317,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 431);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Empleado_Details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Empleado detalles";
+            this.Text = "Registros de: ";
             this.Load += new System.EventHandler(this.Empleado_Details_Load);
             this.Resize += new System.EventHandler(this.Empleado_Details_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
@@ -314,8 +350,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Time;
         private Diseños.Botones_Nuevos botones_Nuevos5;
         private CR_DataGriedView cR_DataGriedView2;
+        private CR_Subtitulos cR_Subtitulos2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asitencias_Entry;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Exit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inicio_de_almuerzo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fin_de_almuerzo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Hours;
     }

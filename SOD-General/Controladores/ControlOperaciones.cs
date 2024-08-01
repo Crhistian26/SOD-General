@@ -1,36 +1,27 @@
-﻿using Modelos.Usuarios_Empleados;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
+﻿using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
-using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas.Taller.Clientes;
 using SOD_General.Vistas.Taller.Registrar_Cotizacion;
 using SOD_General.Vistas.Taller.Registrar_entrada;
 using SOD_General.Vistas.Taller.Registro_peticiones;
-using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Controladores
 {
     public class ControlOperaciones
     {
-       
+
         AppVistaGeneral vista;
         List<C_Operation> operations;
-        
+
         public ControlOperaciones(AppVistaGeneral vista)
         {
             this.vista = vista;
@@ -65,8 +56,8 @@ namespace Controladores
             Pasamos de (agregar,editar,ver y ver) a (Empleados,Permisos)
              */
             var Seleccion = operations.GroupBy(a => a.Module_Name).Select(a => a).ToList();
-            
-            
+
+
             //Este foreach me recorre las listas anteriores (Empleados,Permisos).
             foreach (var operation in Seleccion)
             {
@@ -87,7 +78,7 @@ namespace Controladores
                 foreach (var ope2 in operation)
                 {
                     //Funcion encargada de filtrar si la operacion estara o no en el menu strip
-                    if(OperacionEnMenuStrip(selec,ope2))
+                    if (OperacionEnMenuStrip(selec, ope2))
                     {
                         //El item del menustrip
                         ToolStripMenuItem item = new ToolStripMenuItem();
@@ -105,7 +96,7 @@ namespace Controladores
                     }
                 }
                 //Siempre y cuando tenga objetos dentro del mismo el encabezado se agregara.
-                if(headitem.DropDownItems != null)
+                if (headitem.DropDownItems != null)
                 {
                     //Se agrega el encabezado con todos sus items al menustrip
                     vista.cR_MenuStrip1.Items.Add(headitem);
@@ -118,11 +109,11 @@ namespace Controladores
         {
             //Se encarga de buscar la operacion por su ID entre la lista de operaciones.
             var ope = from a in operations
-                              where a._Operation == Operation_Name
-                              select a;
+                      where a._Operation == Operation_Name
+                      select a;
 
             //En caso de encontrar alguna similitud es verdadero.
-            if( ope.Count() != 0)
+            if (ope.Count() != 0)
             {
                 return true;
             }
@@ -140,63 +131,63 @@ namespace Controladores
             //booleano que se retornara al final para ver el resultado
             bool a = true;
 
-                //para hacer la validacion de la lista negra segun por modulo
-                //El id de la operacion.
-                string id = operacion._Operation;
-                if (selecc == "Empleados")
+            //para hacer la validacion de la lista negra segun por modulo
+            //El id de la operacion.
+            string id = operacion._Operation;
+            if (selecc == "Empleados")
+            {
+                //En caso de tener id la operacion pasara a la ejecucion de los if
+                if (id != null)
                 {
-                    //En caso de tener id la operacion pasara a la ejecucion de los if
-                    if (id != null)
+                    //Si esta es igual a 2 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
+                    if (id == "Agregar empleados")
                     {
-                        //Si esta es igual a 2 el id de agregar empleados, devolvera false para decir que este no ira al menustrip.
-                        if (id == "Agregar empleados")
-                        {
-                            a = false;
-                        }
-                        //Lo mismo
-                        if (id == "Editar empleados")
-                        {
-                            a = false;
-                        }
+                        a = false;
+                    }
+                    //Lo mismo
+                    if (id == "Editar empleados")
+                    {
+                        a = false;
                     }
                 }
+            }
 
-                else if (selecc == "Asistencias")
+            else if (selecc == "Asistencias")
+            {
+                if (id != null)
                 {
-                    if (id != null)
+                    if (id == "Agregar asistencias")
                     {
-                        if (id == "Agregar asistencias")
-                        {
-                            a = false;
-                        }
+                        a = false;
+                    }
 
-                        if (id == "Editar asistencias")
-                        {
-                            a = false;
-                        }
+                    if (id == "Editar asistencias")
+                    {
+                        a = false;
                     }
                 }
+            }
 
-                 else if (selecc == "Permisos")
-                 {
-                    if (id != null)
-                    {
-                        if (id == "Agregar permisos")
-                        {
-                            a = false;
-                        }
-
-                        if (id == "Editar permisos")
-                        {
-                            a = false;
-                        }
-                    }
-                 }
-
-                //Id de la operacion
-                else if (selecc == "Recepcion")
+            else if (selecc == "Permisos")
+            {
+                if (id != null)
                 {
-                    
+                    if (id == "Agregar permisos")
+                    {
+                        a = false;
+                    }
+
+                    if (id == "Editar permisos")
+                    {
+                        a = false;
+                    }
+                }
+            }
+
+            //Id de la operacion
+            else if (selecc == "Recepcion")
+            {
+
 
             }
             //en caso de que no se ejecutara la lista negra a sera igual al valor con el que fue definida (true)
@@ -207,11 +198,11 @@ namespace Controladores
         public EventHandler Eventos(string selec, C_Operation ope)
         {
 
-           
-            if(selec == "Administrador de empleados")
 
-            MessageBox.Show(selec.ToString());
-            if(selec == "Empleados")
+            if (selec == "Administrador de empleados")
+
+                MessageBox.Show(selec.ToString());
+            if (selec == "Empleados")
 
             {
                 //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
@@ -241,7 +232,7 @@ namespace Controladores
                 }
 
             }
-            
+
             if (selec == "Cotizacion")
             {
                 if (ope.Id == 15)
@@ -293,7 +284,7 @@ namespace Controladores
                     return evento;
                 }
 
-                if(ope.Id == 21)
+                if (ope.Id == 21)
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -315,7 +306,7 @@ namespace Controladores
                     return evento;
                 }
             }
-           
+
             if (selec == "Asistencias")
             {
                 if (ope._Operation == "Ver asistencias")

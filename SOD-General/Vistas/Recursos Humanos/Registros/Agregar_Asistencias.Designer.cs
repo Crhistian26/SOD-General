@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Asistencias));
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -35,31 +36,31 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.cR_TBminutos4 = new CR_TBminutos();
             this.cR_TBhora4 = new CR_TBhora();
+            this.soD_ComboBox5 = new SOD_ComboBox();
             this.cR_LabelDown9 = new CR_LabelDown();
             this.cR_LabelDown10 = new CR_LabelDown();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cR_TBminutos3 = new CR_TBminutos();
             this.cR_TBhora3 = new CR_TBhora();
+            this.soD_ComboBox3 = new SOD_ComboBox();
             this.cR_LabelDown5 = new CR_LabelDown();
             this.cR_LabelDown8 = new CR_LabelDown();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cR_TBminutos2 = new CR_TBminutos();
             this.cR_TBhora2 = new CR_TBhora();
+            this.soD_ComboBox2 = new SOD_ComboBox();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cR_TBminutos1 = new CR_TBminutos();
             this.cR_TBhora1 = new CR_TBhora();
+            this.soD_ComboBox4 = new SOD_ComboBox();
             this.cR_LabelDown7 = new CR_LabelDown();
             this.cR_LabelDown6 = new CR_LabelDown();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.soD_ComboBox5 = new SOD_ComboBox();
-            this.soD_ComboBox2 = new SOD_ComboBox();
-            this.soD_ComboBox3 = new SOD_ComboBox();
-            this.soD_ComboBox4 = new SOD_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -102,9 +103,9 @@
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
             this.cR_Subtitulos1.Location = new System.Drawing.Point(262, 9);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(279, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(249, 31);
             this.cR_Subtitulos1.TabIndex = 0;
-            this.cR_Subtitulos1.Text = "Control de asistencias";
+            this.cR_Subtitulos1.Text = "Agregar asistencias";
             // 
             // panel1
             // 
@@ -171,6 +172,19 @@
             this.cR_TBhora4.Size = new System.Drawing.Size(42, 25);
             this.cR_TBhora4.TabIndex = 26;
             // 
+            // soD_ComboBox5
+            // 
+            this.soD_ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox5.FormattingEnabled = true;
+            this.soD_ComboBox5.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox5.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox5.Name = "soD_ComboBox5";
+            this.soD_ComboBox5.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox5.TabIndex = 21;
+            // 
             // cR_LabelDown9
             // 
             this.cR_LabelDown9.AutoSize = true;
@@ -224,6 +238,19 @@
             this.cR_TBhora3.Name = "cR_TBhora3";
             this.cR_TBhora3.Size = new System.Drawing.Size(42, 25);
             this.cR_TBhora3.TabIndex = 25;
+            // 
+            // soD_ComboBox3
+            // 
+            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox3.FormattingEnabled = true;
+            this.soD_ComboBox3.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox3.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox3.Name = "soD_ComboBox3";
+            this.soD_ComboBox3.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox3.TabIndex = 21;
             // 
             // cR_LabelDown5
             // 
@@ -279,6 +306,19 @@
             this.cR_TBhora2.Size = new System.Drawing.Size(42, 25);
             this.cR_TBhora2.TabIndex = 24;
             // 
+            // soD_ComboBox2
+            // 
+            this.soD_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox2.FormattingEnabled = true;
+            this.soD_ComboBox2.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox2.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox2.Name = "soD_ComboBox2";
+            this.soD_ComboBox2.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox2.TabIndex = 21;
+            // 
             // cR_LabelDown3
             // 
             this.cR_LabelDown3.AutoSize = true;
@@ -332,6 +372,19 @@
             this.cR_TBhora1.Name = "cR_TBhora1";
             this.cR_TBhora1.Size = new System.Drawing.Size(42, 25);
             this.cR_TBhora1.TabIndex = 23;
+            // 
+            // soD_ComboBox4
+            // 
+            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox4.FormattingEnabled = true;
+            this.soD_ComboBox4.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.soD_ComboBox4.Location = new System.Drawing.Point(126, 30);
+            this.soD_ComboBox4.Name = "soD_ComboBox4";
+            this.soD_ComboBox4.Size = new System.Drawing.Size(61, 27);
+            this.soD_ComboBox4.TabIndex = 21;
             // 
             // cR_LabelDown7
             // 
@@ -395,67 +448,16 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
-            // soD_ComboBox5
-            // 
-            this.soD_ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox5.FormattingEnabled = true;
-            this.soD_ComboBox5.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox5.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox5.Name = "soD_ComboBox5";
-            this.soD_ComboBox5.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox5.TabIndex = 21;
-            // 
-            // soD_ComboBox2
-            // 
-            this.soD_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox2.FormattingEnabled = true;
-            this.soD_ComboBox2.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox2.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox2.Name = "soD_ComboBox2";
-            this.soD_ComboBox2.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox2.TabIndex = 21;
-            // 
-            // soD_ComboBox3
-            // 
-            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox3.FormattingEnabled = true;
-            this.soD_ComboBox3.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox3.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox3.Name = "soD_ComboBox3";
-            this.soD_ComboBox3.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox3.TabIndex = 21;
-            // 
-            // soD_ComboBox4
-            // 
-            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox4.FormattingEnabled = true;
-            this.soD_ComboBox4.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.soD_ComboBox4.Location = new System.Drawing.Point(126, 30);
-            this.soD_ComboBox4.Name = "soD_ComboBox4";
-            this.soD_ComboBox4.Size = new System.Drawing.Size(61, 27);
-            this.soD_ComboBox4.TabIndex = 21;
-            // 
             // Agregar_Asistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 470);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Agregar_Asistencias";
-            this.Text = "Agregar_Asistencias";
+            this.Text = "Control de asistencias";
             this.Load += new System.EventHandler(this.Agregar_Asistencias_Load);
             this.Resize += new System.EventHandler(this.Agregar_Asistencias_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

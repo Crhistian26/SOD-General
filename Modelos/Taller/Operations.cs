@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelos.Taller
 {
@@ -12,21 +8,21 @@ namespace Modelos.Taller
     /// </summary>
     public class Operations
     {
-        
+
         public string Modulo { get; set; }
 
         public string Operaciones { get; set; }
 
-        public EventHandler Evento {  get; set; }
+        public EventHandler Evento { get; set; }
 
         public Operations(string Modulo, string Operaciones, EventHandler Evento)
         {
             this.Modulo = Modulo;
             this.Operaciones = Operaciones;
-            this.Evento = Evento;   
+            this.Evento = Evento;
         }
     }
 
 
-    
+
 }

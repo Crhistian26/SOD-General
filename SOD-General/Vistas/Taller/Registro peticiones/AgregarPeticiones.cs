@@ -1,14 +1,7 @@
 ﻿using SOD_General.Controladores;
 using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Taller.Registro_peticiones
@@ -21,7 +14,7 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             InitializeComponent();
             soD_ComboBox1.Items.Add("Pedro");
-            
+
         }
         private void CentrarElementos()
         {

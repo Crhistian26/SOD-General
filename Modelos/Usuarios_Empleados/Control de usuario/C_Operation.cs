@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelos.Usuarios_Empleados.Control_de_usuario
+﻿namespace Modelos.Usuarios_Empleados.Control_de_usuario
 {
     public class C_Operation
     {

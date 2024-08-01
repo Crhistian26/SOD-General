@@ -63,6 +63,16 @@ namespace SOD_General.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_de_la_app {
+            get {
+                object obj = ResourceManager.GetObject("Logo_de_la_app", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_sod_soluciones_diaz_fixed {
             get {
                 object obj = ResourceManager.GetObject("logo-sod-soluciones-diaz-fixed", resourceCulture);

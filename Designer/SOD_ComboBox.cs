@@ -1,7 +1,6 @@
 ﻿
-using System.Windows.Forms;
 using System.Drawing;
-using System.Runtime.Remoting.Channels;
+using System.Windows.Forms;
 public class SOD_ComboBox : ComboBox
 {
     public SOD_ComboBox()
@@ -9,7 +8,7 @@ public class SOD_ComboBox : ComboBox
 
 
         this.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
-        
+
     }
 
 

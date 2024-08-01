@@ -1,12 +1,6 @@
 ﻿using SOD_General.Controladores;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Motivos
@@ -27,7 +21,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
 
             punto = botones_Nuevos1.Location;
             botones_Nuevos1.Location = _size.CentrarElementosX(punto, botones_Nuevos1.Size, this.Size);
-            cR_DataGriedView1.Rows.Add(1,"Enfermedad","Dias","Meses","5 meses","Al año");
+            cR_DataGriedView1.Rows.Add(1, "Enfermedad", "Dias", "Meses", "5 meses", "Al año");
         }
 
         private void Visual_Motivos_Resize(object sender, EventArgs e)
@@ -46,7 +40,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex != -1)
+            if (e.RowIndex != -1)
             {
                 control.AbrirEditar(1);
             }

@@ -1,18 +1,11 @@
-﻿using Modelos.Usuarios_Empleados;
-using Modelos.AsistenciasYPermisos;
-using SOD_General.Vistas.Pruebas;
+﻿using Modelos.AsistenciasYPermisos;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
-using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace SOD_General.Controladores
 {
@@ -22,7 +15,7 @@ namespace SOD_General.Controladores
         SqlConnection conex = new SqlConnection(cadena);
 
 
-        
+
 
         //Area de visual_empleados
 
@@ -32,7 +25,7 @@ namespace SOD_General.Controladores
             {
                 List<Employee> empleados = new List<Employee>();
                 string Query = "Exec Get_Employees";
-                SqlCommand cmd = new SqlCommand(Query,conex);
+                SqlCommand cmd = new SqlCommand(Query, conex);
                 conex.Open();
 
                 SqlDataReader lector = cmd.ExecuteReader();
@@ -51,16 +44,16 @@ namespace SOD_General.Controladores
                     string department = lector.GetString(3);
                     DateTime date = lector.GetDateTime(4);
 
-                    empleado = new Employee(id,name,lastname,department,date);
+                    empleado = new Employee(id, name, lastname, department, date);
                     empleados.Add(empleado);
                 }
-                
+
                 conex.Close();
                 return empleados;
             }
             catch (Exception ex)
             {
-                if(conex.State != System.Data.ConnectionState.Closed)
+                if (conex.State != System.Data.ConnectionState.Closed)
                 {
                     conex.Close();
                 }
@@ -69,13 +62,12 @@ namespace SOD_General.Controladores
                 return null;
             }
         }
-
-        public Dictionary<DateTime,Record_Attendance> ListaAsistenciasEmpleado(int id)
+        public Dictionary<DateTime, Record_Attendance> ListaAsistenciasEmpleado(int id)
         {
-            Dictionary<DateTime,Record_Attendance> diccionario = new Dictionary<DateTime, Record_Attendance>();
+            Dictionary<DateTime, Record_Attendance> diccionario = new Dictionary<DateTime, Record_Attendance>();
             Record_Attendance record;
             string Query = "Exec Get_EmployeeAttendance @IdEmpleado";
-            SqlCommand  cmd = new SqlCommand(Query,conex);
+            SqlCommand cmd = new SqlCommand(Query, conex);
             cmd.Parameters.AddWithValue("@IdEmpleado", id);
 
             conex.Open();
@@ -85,18 +77,20 @@ namespace SOD_General.Controladores
             {
                 int IdRecord = lector.GetInt32(0);
                 int IdEmployee = lector.GetInt32(1);
-                TimeSpan entry = lector.GetTimeSpan(2);
-                TimeSpan exit = lector.GetTimeSpan(3);
-                TimeSpan lunchS = lector.GetTimeSpan(4);
-                TimeSpan lunchF = lector.GetTimeSpan(5);
-                DateTime record_Date = lector.GetDateTime(6);
+                string Name = lector.GetString(2);
+                TimeSpan entry = lector.GetTimeSpan(3);
+                TimeSpan exit = lector.GetTimeSpan(4);
+                TimeSpan lunchS = lector.GetTimeSpan(5);
+                TimeSpan lunchF = lector.GetTimeSpan(6);
+                DateTime record_Date = lector.GetDateTime(7);
 
-                record = new Record_Attendance(IdRecord, IdEmployee, entry, exit, lunchS, lunchF, record_Date);
+                record = new Record_Attendance(IdRecord, IdEmployee,Name, entry, exit, lunchS, lunchF, record_Date);
                 diccionario.Add(record_Date, record);
             }
             conex.Close();
             return diccionario;
         }
+
         #region Sql server
         public Employee ObtenerEmpleado(int id)
         {
@@ -105,11 +99,11 @@ namespace SOD_General.Controladores
                 Employee empleado = null;
                 string Query = "exec Get_OneEmployee @Id";
 
-                SqlCommand cmd = new SqlCommand(Query,conex);
+                SqlCommand cmd = new SqlCommand(Query, conex);
                 cmd.Parameters.AddWithValue("@Id", id);
                 conex.Open();
                 SqlDataReader lector = cmd.ExecuteReader();
-                if(lector.Read())
+                if (lector.Read())
                 {
                     int IdEmployee = lector.GetInt32(0);
                     string Depart = lector.GetString(2);
@@ -117,9 +111,9 @@ namespace SOD_General.Controladores
                     string Lastname = lector.GetString(4);
                     DateTime Addmision = lector.GetDateTime(5);
 
-                    empleado = new Employee(IdEmployee, Name, Lastname,Depart, Addmision);
+                    empleado = new Employee(IdEmployee, Name, Lastname, Depart, Addmision);
                     conex.Close();
-                    
+
                 }
 
                 return empleado;
@@ -136,14 +130,14 @@ namespace SOD_General.Controladores
             }
             catch (Exception ex)
             {
-                if(conex.State != System.Data.ConnectionState.Closed)
+                if (conex.State != System.Data.ConnectionState.Closed)
                 {
                     conex.Close();
                 }
                 MessageBox.Show(ex.Message);
                 return null;
             }
-            
+
         }
         #endregion
         public void AbrirEditar()

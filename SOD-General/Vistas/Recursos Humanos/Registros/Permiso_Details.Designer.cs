@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Permiso_Details));
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.soD_TextBox5 = new SOD_TextBox();
             this.cR_LabelDown5 = new CR_LabelDown();
@@ -43,7 +45,6 @@
             this.cR_LabelDown2 = new CR_LabelDown();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -94,9 +95,9 @@
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
             this.cR_Subtitulos1.Location = new System.Drawing.Point(309, 9);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(237, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(113, 31);
             this.cR_Subtitulos1.TabIndex = 0;
-            this.cR_Subtitulos1.Text = "Registro detallado";
+            this.cR_Subtitulos1.Text = "Permiso";
             // 
             // panel1
             // 
@@ -116,6 +117,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(649, 280);
             this.panel1.TabIndex = 0;
+            // 
+            // botones_Nuevos2
+            // 
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(303, 224);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos2.TabIndex = 11;
+            this.botones_Nuevos2.Text = "Eliminar";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
             // 
             // botones_Nuevos1
             // 
@@ -251,32 +269,16 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Motivo:";
             // 
-            // botones_Nuevos2
-            // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(303, 224);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
-            this.botones_Nuevos2.TabIndex = 11;
-            this.botones_Nuevos2.Text = "Eliminar";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
-            // 
             // Permiso_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 431);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Permiso_Details";
-            this.Text = "Permiso detalles";
+            this.Text = "Permiso detallado";
             this.Load += new System.EventHandler(this.Registro_Details_Load);
             this.Resize += new System.EventHandler(this.Registro_Details_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

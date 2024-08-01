@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelos.Usuarios_Empleados
 {
@@ -28,8 +24,8 @@ namespace Modelos.Usuarios_Empleados
             this.Admission_date = Admission_Date;
         }
 
-        public Employee(int idEmployee,int departmentId,string department,string name,string lastname,DateTime admissionDate,DateTime? dismissalDate,bool enabled,bool jobState)
-            :this(idEmployee,name,lastname,department,admissionDate)
+        public Employee(int idEmployee, int departmentId, string department, string name, string lastname, DateTime admissionDate, DateTime? dismissalDate, bool enabled, bool jobState)
+            : this(idEmployee, name, lastname, department, admissionDate)
         {
             DepartmentId = departmentId;
             Dismissal_date = dismissalDate;

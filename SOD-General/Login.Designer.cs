@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.cr_Textbox2 = new Cr_Textbox();
             this.cr_Textbox1 = new Cr_Textbox();
             this.cR_Label2 = new CR_LabelUp();
@@ -108,6 +109,7 @@
             this.Controls.Add(this.cR_Label1);
             this.Controls.Add(this.botones_Nuevos1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 240);
             this.Name = "Login";
             this.Text = "Login";

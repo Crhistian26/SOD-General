@@ -1,8 +1,6 @@
 ﻿
 
 using System.Drawing;
-using System.Drawing.Text;
-using System.Runtime.Remoting.Channels;
 using System.Windows.Forms;
 
 public class SOD_CheckBox : CheckBox
@@ -14,22 +12,22 @@ public class SOD_CheckBox : CheckBox
         //this.Size = new System.Drawing.Size(100,20);
         this.Font = new System.Drawing.Font("Microsoft YaHei UI", 12, System.Drawing.FontStyle.Regular);
         this.Paint += new PaintEventHandler(this.OnPaint);
-        this.Padding = new Padding(4,2,0,2);
+        this.Padding = new Padding(4, 2, 0, 2);
     }
 
     private void OnPaint(object sender, PaintEventArgs e)
     {
         CheckBox btn = sender as CheckBox;
-        if(btn != null )
+        if (btn != null)
         {
             Color borderColor = Color.White;
             int borderWidth = 1;
 
-            ControlPaint.DrawBorder(e.Graphics,btn.ClientRectangle, 
+            ControlPaint.DrawBorder(e.Graphics, btn.ClientRectangle,
                                     borderColor, borderWidth, ButtonBorderStyle.Solid,
                                     borderColor, borderWidth, ButtonBorderStyle.Solid,
                                     borderColor, borderWidth, ButtonBorderStyle.Solid,
                                     borderColor, borderWidth, ButtonBorderStyle.Solid);
         }
     }
-}       
+}

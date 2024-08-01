@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView2 = new CR_DataGriedView();
             this.Asistencias_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inicio_Receso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fin_Receso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -67,6 +69,24 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 470);
             this.cR_SplitContainer1.SplitterDistance = 102;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 12);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(176, 40);
+            this.botones_Nuevos1.TabIndex = 2;
+            this.botones_Nuevos1.Text = "Agregar asistencias";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_DateTimePicker1
             // 
@@ -97,15 +117,17 @@
             this.cR_DataGriedView2.AllowUserToAddRows = false;
             this.cR_DataGriedView2.AllowUserToDeleteRows = false;
             this.cR_DataGriedView2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Asistencias_RecordId,
             this.Asistencias_Employee,
             this.Asitencias_Entry,
+            this.Inicio_Receso,
+            this.Fin_Receso,
             this.Asistencias_Exit,
             this.Asistencias_Hours});
             this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -138,6 +160,20 @@
             this.Asitencias_Entry.Name = "Asitencias_Entry";
             this.Asitencias_Entry.ReadOnly = true;
             // 
+            // Inicio_Receso
+            // 
+            this.Inicio_Receso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Inicio_Receso.HeaderText = "Inicio de almuerzo";
+            this.Inicio_Receso.Name = "Inicio_Receso";
+            this.Inicio_Receso.ReadOnly = true;
+            // 
+            // Fin_Receso
+            // 
+            this.Fin_Receso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fin_Receso.HeaderText = "Fin de almuerzo";
+            this.Fin_Receso.Name = "Fin_Receso";
+            this.Fin_Receso.ReadOnly = true;
+            // 
             // Asistencias_Exit
             // 
             this.Asistencias_Exit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -151,24 +187,6 @@
             this.Asistencias_Hours.HeaderText = "Horas laborales";
             this.Asistencias_Hours.Name = "Asistencias_Hours";
             this.Asistencias_Hours.ReadOnly = true;
-            // 
-            // botones_Nuevos1
-            // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 12);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(176, 40);
-            this.botones_Nuevos1.TabIndex = 2;
-            this.botones_Nuevos1.Text = "Agregar asistencias";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // Registros_GeneralesAsistencias
             // 
@@ -198,11 +216,13 @@
         private CR_Subtitulos cR_Subtitulos1;
         private CR_DateTimePicker cR_DateTimePicker1;
         private CR_DataGriedView cR_DataGriedView2;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asitencias_Entry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inicio_Receso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fin_Receso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Hours;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
     }
 }

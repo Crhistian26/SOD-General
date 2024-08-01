@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-public class CR_DateTimePicker: DateTimePicker
+public class CR_DateTimePicker : DateTimePicker
 {
     public CR_DateTimePicker()
     {

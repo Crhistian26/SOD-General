@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Permiso));
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
+            this.cR_TBminutos1 = new CR_TBminutos();
+            this.cR_TBhora1 = new CR_TBhora();
             this.cR_LabelDown7 = new CR_LabelDown();
             this.soD_ComboBox4 = new SOD_ComboBox();
             this.cR_LabelDown6 = new CR_LabelDown();
@@ -45,9 +49,6 @@
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.cR_TBhora1 = new CR_TBhora();
-            this.cR_TBminutos1 = new CR_TBminutos();
-            this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -113,6 +114,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 336);
             this.panel1.TabIndex = 0;
+            // 
+            // cR_TextBoxNumerico1
+            // 
+            this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(8, 226);
+            this.cR_TextBoxNumerico1.MaxLength = 2;
+            this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
+            this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(68, 25);
+            this.cR_TextBoxNumerico1.TabIndex = 20;
+            // 
+            // cR_TBminutos1
+            // 
+            this.cR_TBminutos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBminutos1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBminutos1.Location = new System.Drawing.Point(461, 33);
+            this.cR_TBminutos1.MaxLength = 2;
+            this.cR_TBminutos1.Name = "cR_TBminutos1";
+            this.cR_TBminutos1.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBminutos1.TabIndex = 19;
+            // 
+            // cR_TBhora1
+            // 
+            this.cR_TBhora1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBhora1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBhora1.Location = new System.Drawing.Point(395, 34);
+            this.cR_TBhora1.MaxLength = 2;
+            this.cR_TBhora1.Name = "cR_TBhora1";
+            this.cR_TBhora1.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBhora1.TabIndex = 18;
             // 
             // cR_LabelDown7
             // 
@@ -275,45 +306,16 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
-            // cR_TBhora1
-            // 
-            this.cR_TBhora1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBhora1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBhora1.Location = new System.Drawing.Point(395, 34);
-            this.cR_TBhora1.MaxLength = 2;
-            this.cR_TBhora1.Name = "cR_TBhora1";
-            this.cR_TBhora1.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBhora1.TabIndex = 18;
-            // 
-            // cR_TBminutos1
-            // 
-            this.cR_TBminutos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBminutos1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBminutos1.Location = new System.Drawing.Point(461, 33);
-            this.cR_TBminutos1.MaxLength = 2;
-            this.cR_TBminutos1.Name = "cR_TBminutos1";
-            this.cR_TBminutos1.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBminutos1.TabIndex = 19;
-            // 
-            // cR_TextBoxNumerico1
-            // 
-            this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(8, 226);
-            this.cR_TextBoxNumerico1.MaxLength = 2;
-            this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
-            this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(68, 25);
-            this.cR_TextBoxNumerico1.TabIndex = 20;
-            // 
             // Agregar_Permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 470);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Agregar_Permiso";
-            this.Text = "Agregar_Permiso";
+            this.Text = "Control de permisos";
             this.Load += new System.EventHandler(this.Agregar_Permiso_Load);
             this.Resize += new System.EventHandler(this.Agregar_Permiso_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

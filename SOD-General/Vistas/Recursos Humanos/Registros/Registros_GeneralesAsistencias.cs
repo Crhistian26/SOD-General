@@ -1,12 +1,9 @@
 ﻿using Controladores;
+using Modelos.AsistenciasYPermisos;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +14,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller control = new Registros_Controller();
         ControlOperaciones operaciones;
+        List<Record_Attendance> Asistencias;
         public Registros_GeneralesAsistencias(AppVistaGeneral app)
         {
             InitializeComponent();
@@ -31,12 +29,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             punto = cR_DateTimePicker1.Location;
             cR_DateTimePicker1.Location = _size.CentrarElementosX(punto, cR_DateTimePicker1.Size, this.Size);
         }
-        private void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
+        private async void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
         {
+            Task llenarlista = new Task(() => { Asistencias = control.Obtener_Asistencias(); });
+            llenarlista.Start();
             CentrarElementos();
-            cR_DataGriedView2.Rows.Add(1, "Eduardo Brito", "8:25 AM", "5:50 PM", "8 horas y 10 min.");
-
-            if(operaciones.BuscarAutorizacion("Agregar asistencias"))
+            if (operaciones.BuscarAutorizacion("Agregar asistencias"))
             {
                 botones_Nuevos1.Visible = true;
             }
@@ -44,6 +42,26 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 botones_Nuevos1.Visible = false;
             }
+
+            await llenarlista;
+            if(Asistencias != null)
+            {
+                foreach (var registro in Asistencias)
+                {
+                    cR_DataGriedView2.Rows.Add(
+                        registro.IdRecord,
+                        registro._Name,
+                        registro.Entry.ToString(),
+                        registro.LunchS.ToString(),
+                        registro.LunchF.ToString(),
+                        registro.Exit.ToString(),
+                        registro.Job_Hours.ToString()
+                        );
+
+                }
+            }
+            
+            
         }
 
         private void Registros_GeneralesAsistencias_Resize(object sender, EventArgs e)

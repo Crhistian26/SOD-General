@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarEditar_Motivos));
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -265,9 +266,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 431);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "AgregarEditar_Motivos";
-            this.Text = "AgregarEditar_Motivos";
+            this.Text = "Control de motivos";
             this.Load += new System.EventHandler(this.AgregarEditar_Motivos_Load);
             this.Resize += new System.EventHandler(this.AgregarEditar_Motivos_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

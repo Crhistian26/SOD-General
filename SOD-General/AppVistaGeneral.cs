@@ -1,19 +1,8 @@
 ﻿using Controladores;
-using Modelos.Usuarios_Empleados;
 using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
-using SOD_General.Recursos_Humanos.Empleados;
-using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General
@@ -29,7 +18,7 @@ namespace SOD_General
         //La lista de autorizaciones.
         public List<C_Operation> operations = new List<C_Operation>();
 
-        
+
 
         //El departamento para la demostracion.
         /// <summary>

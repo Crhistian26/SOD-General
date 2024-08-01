@@ -1,13 +1,7 @@
 ﻿using Controladores;
 using SOD_General.Controladores;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
@@ -51,7 +45,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex != -1)
+            if (e.RowIndex != -1)
             {
                 if (operaciones.BuscarAutorizacion("Editar permisos"))
                 {
@@ -63,7 +57,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     Permiso_Details ver = new Permiso_Details(0);
                     ver.Show();
                 }
-                
+
             }
         }
 

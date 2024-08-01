@@ -1,13 +1,6 @@
 ﻿using Modelos.Taller;
 using SOD_General.Controladores;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -26,7 +19,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             InitializeComponent();
         }
 
-        
+
 
         private void fR_TextBox7__TextChanged(object sender, EventArgs e)
         {
@@ -39,7 +32,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             if (txtSucursal.Text.Trim().Length == 0)
             {
                 string Sucursal = "No especificado";
-                cliente = new Client(null, Sucursal,txtNombre.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
+                cliente = new Client(null, Sucursal, txtNombre.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
                 clientContr.AgregarCliente(cliente);
             }
             else
@@ -47,7 +40,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 cliente = new Client(null, txtSucursal.Text, txtNombre.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
                 clientContr.AgregarCliente(cliente);
             }
-            
+
         }
 
         private void txtContacto_TextChanged(object sender, EventArgs e)

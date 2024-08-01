@@ -1,15 +1,8 @@
-﻿
-using Modelos.Usuarios_Empleados;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
+﻿using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -50,9 +43,9 @@ namespace Controladores
                     string Modulo = lector.GetString(0);
                     int id = lector.GetInt32(1);
                     string Operacion = lector.GetString(2);
-                    
+
                     //Creacion de objeto autorizacion.
-                    C_Operation operacion = new C_Operation(id,Operacion,Modulo);
+                    C_Operation operacion = new C_Operation(id, Operacion, Modulo);
 
                     //Lo agrega a la lista.
                     list.Add(operacion);
@@ -63,7 +56,7 @@ namespace Controladores
                 //Me retorna la lista y el departamento.
                 return list;
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 //Si la conexion no esta cerrada la cierra.
                 if (conex.State != System.Data.ConnectionState.Closed)
@@ -71,12 +64,11 @@ namespace Controladores
                     conex.Close();
                 }
                 //El mensaje de error de Sql en caso de no existir el usuario.
-                Clipboard.SetText(ex.ToString());
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
                 //Debe retornar algo.
                 return null;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //Si la conexion no esta cerrada la cierra.
                 if (conex.State != System.Data.ConnectionState.Closed)
@@ -88,7 +80,7 @@ namespace Controladores
                 //Debe retornar algo.
                 return null;
             }
-            
-        } 
+
+        }
     }
 }

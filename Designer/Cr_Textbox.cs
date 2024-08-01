@@ -7,6 +7,6 @@ public class Cr_Textbox : TextBox
     {
         this.BorderStyle = BorderStyle.FixedSingle;
         this.Font = new Font("Microsoft YaHei", 10);
-        
+
     }
 }

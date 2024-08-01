@@ -1,7 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
 using System.Drawing;
-using System;
-using System.Drawing.Text;
+using System.Windows.Forms;
 public class SOD_TextBox : TextBox
 {
     private bool isFocused = false;
@@ -69,5 +68,5 @@ public class SOD_TextBox : TextBox
 
 
 
-   
-        
+
+

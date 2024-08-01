@@ -32,6 +32,6 @@ public class CR_TBhora : TextBox
                 this.Text = "12";
             }
         }
-        
+
     }
 }

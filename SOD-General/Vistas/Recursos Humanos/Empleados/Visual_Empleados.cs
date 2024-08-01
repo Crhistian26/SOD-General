@@ -1,18 +1,10 @@
 ﻿using Controladores;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
-using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
 
 namespace SOD_General.Recursos_Humanos.Empleados
@@ -60,7 +52,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
                 string department = empleado.Department;
                 DateTime date = empleado.Admission_date;
 
-                cR_DataGriedView1.Rows.Add(id, name, lastname,department, date.ToString("D"));
+                cR_DataGriedView1.Rows.Add(id, name, lastname, department, date.ToString("D"));
             }
         }
 

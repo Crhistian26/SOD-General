@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 public class CR_DataGriedView : DataGridView
 {
-    public CR_DataGriedView() 
+    public CR_DataGriedView()
     {
         this.BackgroundColor = System.Drawing.Color.White;
         this.Dock = DockStyle.Fill;
