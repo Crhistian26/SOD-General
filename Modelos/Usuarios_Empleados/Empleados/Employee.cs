@@ -18,7 +18,8 @@ namespace Modelos.Usuarios_Empleados
         public bool _Enabled { get; set; }
         public bool Job_State { get; set; }
 
-        public Employee(int IdEmployee,string Name,string Lastname, string Department, DateTime Admission_Date)
+
+        public Employee(int IdEmployee, string Name, string Lastname, string Department, DateTime Admission_Date)
         {
             this.IdEmployee = IdEmployee;
             this._Name = Name;
@@ -27,6 +28,14 @@ namespace Modelos.Usuarios_Empleados
             this.Admission_date = Admission_Date;
         }
 
-        
+        public Employee(int idEmployee,int departmentId,string department,string name,string lastname,DateTime admissionDate,DateTime? dismissalDate,bool enabled,bool jobState)
+            :this(idEmployee,name,lastname,department,admissionDate)
+        {
+            DepartmentId = departmentId;
+            Dismissal_date = dismissalDate;
+            _Enabled = enabled;
+            Job_State = jobState;
+        }
+
     }
 }

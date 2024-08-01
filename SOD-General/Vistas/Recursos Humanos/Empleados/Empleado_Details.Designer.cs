@@ -36,11 +36,6 @@
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView2 = new CR_DataGriedView();
-            this.Asistencias_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.Empleado_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +43,10 @@
             this.Empleados_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -162,7 +161,6 @@
             this.cR_DataGriedView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Asistencias_RecordId,
             this.Asitencias_Entry,
             this.Asistencias_Exit,
             this.Asistencias_Date,
@@ -176,41 +174,6 @@
             this.cR_DataGriedView2.Size = new System.Drawing.Size(704, 284);
             this.cR_DataGriedView2.TabIndex = 2;
             this.cR_DataGriedView2.Visible = false;
-            // 
-            // Asistencias_RecordId
-            // 
-            this.Asistencias_RecordId.HeaderText = "Id";
-            this.Asistencias_RecordId.Name = "Asistencias_RecordId";
-            this.Asistencias_RecordId.ReadOnly = true;
-            this.Asistencias_RecordId.Visible = false;
-            // 
-            // Asitencias_Entry
-            // 
-            this.Asitencias_Entry.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asitencias_Entry.HeaderText = "Entrada";
-            this.Asitencias_Entry.Name = "Asitencias_Entry";
-            this.Asitencias_Entry.ReadOnly = true;
-            // 
-            // Asistencias_Exit
-            // 
-            this.Asistencias_Exit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Exit.HeaderText = "Salida";
-            this.Asistencias_Exit.Name = "Asistencias_Exit";
-            this.Asistencias_Exit.ReadOnly = true;
-            // 
-            // Asistencias_Date
-            // 
-            this.Asistencias_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Date.HeaderText = "Fecha";
-            this.Asistencias_Date.Name = "Asistencias_Date";
-            this.Asistencias_Date.ReadOnly = true;
-            // 
-            // Asistencias_Hours
-            // 
-            this.Asistencias_Hours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Hours.HeaderText = "Horas laborales";
-            this.Asistencias_Hours.Name = "Asistencias_Hours";
-            this.Asistencias_Hours.ReadOnly = true;
             // 
             // cR_DataGriedView1
             // 
@@ -285,6 +248,34 @@
             this.Empleados_Time.ReadOnly = true;
             this.Empleados_Time.Width = 85;
             // 
+            // Asitencias_Entry
+            // 
+            this.Asitencias_Entry.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asitencias_Entry.HeaderText = "Entrada";
+            this.Asitencias_Entry.Name = "Asitencias_Entry";
+            this.Asitencias_Entry.ReadOnly = true;
+            // 
+            // Asistencias_Exit
+            // 
+            this.Asistencias_Exit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asistencias_Exit.HeaderText = "Salida";
+            this.Asistencias_Exit.Name = "Asistencias_Exit";
+            this.Asistencias_Exit.ReadOnly = true;
+            // 
+            // Asistencias_Date
+            // 
+            this.Asistencias_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asistencias_Date.HeaderText = "Fecha";
+            this.Asistencias_Date.Name = "Asistencias_Date";
+            this.Asistencias_Date.ReadOnly = true;
+            // 
+            // Asistencias_Hours
+            // 
+            this.Asistencias_Hours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asistencias_Hours.HeaderText = "Horas laborales";
+            this.Asistencias_Hours.Name = "Asistencias_Hours";
+            this.Asistencias_Hours.ReadOnly = true;
+            // 
             // Empleado_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,7 +314,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Time;
         private Diseños.Botones_Nuevos botones_Nuevos5;
         private CR_DataGriedView cR_DataGriedView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asitencias_Entry;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Date;

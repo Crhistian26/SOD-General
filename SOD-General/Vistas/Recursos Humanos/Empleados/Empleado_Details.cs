@@ -25,29 +25,35 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         {
             InitializeComponent();
             Asistencias = control.ListaAsistenciasEmpleado(id);
+            employee = control.ObtenerEmpleado(id);
         }
 
-
-        private void Empleado_Details_Load(object sender, EventArgs e)
+        public void CentrarElementos()
         {
             Size size = cR_Subtitulos1.Size;
             Point punto = cR_Subtitulos1.Location;
             cR_Subtitulos1.Location = _size.CentrarElementosX(punto, size, this.Size);
+        }
+        private void Empleado_Details_Load(object sender, EventArgs e)
+        {
+            CentrarElementos();
+            cR_Subtitulos1.Text = employee._Name+"\n"+employee._Lastname;
             if(Asistencias.Count > 0)
             {
                 foreach(var asist in Asistencias)
                 {
                     Record_Attendance asistencia = asist.Value;
-                    cR_DataGriedView1.Rows.Add(asistencia.Entry.ToString("H:m"), asistencia.Exit.ToString("H:m"), asistencia.DateAttendance.ToString("D"));
+                    cR_DataGriedView2.Rows.Add(asistencia.Entry.ToString(),
+                        asistencia.Exit.ToString(), 
+                        asistencia.DateAttendance.ToString("D"), 
+                        asistencia.Job_Hours.ToString());
                 }
             }
         }
 
         private void Empleado_Details_Resize(object sender, EventArgs e)
         {
-            Size size = cR_Subtitulos1.Size;
-            Point punto = cR_Subtitulos1.Location;
-            cR_Subtitulos1.Location = _size.CentrarElementosX(punto, size, this.Size);
+            CentrarElementos();
 
         }
 

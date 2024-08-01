@@ -10,13 +10,14 @@ namespace Modelos.AsistenciasYPermisos
     {
         public int IdRecord { get; set; }
         public int IdEmployee { get; set; }
-        public DateTime Entry { get; set; }
-        public DateTime Exit { get; set; }
-        public DateTime LunchS { get; set; }
-        public DateTime LunchF { get; set; }
+        public TimeSpan Entry { get; set; }
+        public TimeSpan Exit { get; set; }
+        public TimeSpan LunchS { get; set; }
+        public TimeSpan LunchF { get; set; }
         public DateTime DateAttendance { get; set; }
+        public TimeSpan Job_Hours { get; set; }
 
-        public Record_Attendance(int idRecord, int idEmployee, DateTime entry, DateTime exit, DateTime lunchS, DateTime lunchF, DateTime dateAttendance)
+        public Record_Attendance(int idRecord, int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
         {
             IdRecord = idRecord;
             IdEmployee = idEmployee;
@@ -25,6 +26,9 @@ namespace Modelos.AsistenciasYPermisos
             LunchS = lunchS;
             LunchF = lunchF;
             DateAttendance = dateAttendance;
+
+            Job_Hours = (exit - entry) - (lunchF - lunchS);
+
         }
 
     }

@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace SOD_General.Controladores
 {
@@ -74,26 +75,77 @@ namespace SOD_General.Controladores
             Dictionary<DateTime,Record_Attendance> diccionario = new Dictionary<DateTime, Record_Attendance>();
             Record_Attendance record;
             string Query = "Exec Get_EmployeeAttendance @IdEmpleado";
-            SqlCommand  cmd = new SqlCommand(Query);
+            SqlCommand  cmd = new SqlCommand(Query,conex);
             cmd.Parameters.AddWithValue("@IdEmpleado", id);
+
             conex.Open();
+
             SqlDataReader lector = cmd.ExecuteReader();
-            while(lector.Read())
+            while (lector.Read())
             {
                 int IdRecord = lector.GetInt32(0);
                 int IdEmployee = lector.GetInt32(1);
-                DateTime entry = lector.GetDateTime(2);
-                DateTime exit = lector.GetDateTime(3);
-                DateTime lunchS = lector.GetDateTime(4);
-                DateTime lunchF = lector.GetDateTime(5);
+                TimeSpan entry = lector.GetTimeSpan(2);
+                TimeSpan exit = lector.GetTimeSpan(3);
+                TimeSpan lunchS = lector.GetTimeSpan(4);
+                TimeSpan lunchF = lector.GetTimeSpan(5);
                 DateTime record_Date = lector.GetDateTime(6);
 
-                record = new Record_Attendance(IdRecord,IdEmployee,entry,exit,lunchS,lunchF,record_Date);
+                record = new Record_Attendance(IdRecord, IdEmployee, entry, exit, lunchS, lunchF, record_Date);
                 diccionario.Add(record_Date, record);
             }
+            conex.Close();
             return diccionario;
         }
+        #region Sql server
+        public Employee ObtenerEmpleado(int id)
+        {
+            try
+            {
+                Employee empleado = null;
+                string Query = "exec Get_OneEmployee @Id";
 
+                SqlCommand cmd = new SqlCommand(Query,conex);
+                cmd.Parameters.AddWithValue("@Id", id);
+                conex.Open();
+                SqlDataReader lector = cmd.ExecuteReader();
+                if(lector.Read())
+                {
+                    int IdEmployee = lector.GetInt32(0);
+                    string Depart = lector.GetString(2);
+                    string Name = lector.GetString(3);
+                    string Lastname = lector.GetString(4);
+                    DateTime Addmision = lector.GetDateTime(5);
+
+                    empleado = new Employee(IdEmployee, Name, Lastname,Depart, Addmision);
+                    conex.Close();
+                    
+                }
+
+                return empleado;
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if(conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            
+        }
+        #endregion
         public void AbrirEditar()
         {
             AgregarEditar_Empleados hola = new AgregarEditar_Empleados();
