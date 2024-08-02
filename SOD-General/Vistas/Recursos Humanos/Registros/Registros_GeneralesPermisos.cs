@@ -45,28 +45,46 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         public void OrganizarDataGriedFecha()
         {
             cR_DataGriedView1.Rows.Clear();
-            if (comboBox1.Text != "Todos los departamentos")
+            List<Record_Permission> data = null;
+            if (comboBox1.Text != "Todos los empleados")
             {
                 cR_DataGriedView1.Rows.Clear();
-                var data = permisos.Select(a => a).Where(a => a.Permission_Date <= cR_DateTimePicker2.Value && a.Permission_Date >= cR_DateTimePicker1.Value).ToList();
-
-                if (data.Count > 0)
-                {
-                    foreach(Record_Permission Record in data)
-                    {
-                        cR_DataGriedView1.Rows.Add(
-                        Record.IdRecord,
-                        Record._Name,
-                        Record._Reason,
-                        Record.Count_Time +" "+ Record.Mesure_Time,
-                        Record.Permission_Date.ToString("D")
-                        );
-                    }
-                }
+                data = 
+                    permisos.Select(a => a)
+                    .Where
+                    (
+                    a => a.Permission_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
+                    && a.Permission_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
+                    )
+                    .OrderBy(a => a.Permission_Date)
+                    .ToList();
             }
             else
             {
-
+                cR_DataGriedView1.Rows.Clear();
+                data =
+                    permisos.Select(a => a)
+                    .Where
+                    (
+                    a => a.Permission_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
+                    && a.Permission_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
+                    && a._Name == comboBox1.Text
+                    )
+                    .OrderBy(a => a.Permission_Date)
+                    .ToList();
+            }
+            if (data.Count > 0)
+            {
+                foreach (Record_Permission Record in data)
+                {
+                    cR_DataGriedView1.Rows.Add(
+                    Record.IdRecord,
+                    Record._Name,
+                    Record._Reason,
+                    Record.Count_Time + " " + Record.Mesure_Time,
+                    Record.Permission_Date.ToString("D")
+                    );
+                }
             }
         }
 
@@ -84,8 +102,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 botones_Nuevos5.Visible = false;
             }
             LlenarComboEmpleados();
-            cR_DateTimePicker1.Value = DateTime.Now;
-            cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
+            OrganizarDataGriedFecha();
         }
 
         private void Registros_Generales_Resize(object sender, EventArgs e)
@@ -128,31 +145,31 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 case "Sunday":
                     cR_DateTimePicker1.Value = DateTime.Now.AddDays(-6);
-                    cR_DateTimePicker2.Value.AddMinutes(2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
                     break;
                 case "Monday":
                     cR_DateTimePicker1.Value = DateTime.Now.AddDays(0);
-                    cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
                     break;
                 case "Tuesday":
                     cR_DateTimePicker1.Value = DateTime.Now.AddDays(-1);
-                    cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
                     break;
                 case "Wednesday":
                     cR_DateTimePicker1.Value = DateTime.Now.AddDays(-2);
-                    cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
                     break;
                 case "Thursday":
                     cR_DateTimePicker1.Value = DateTime.Now.AddDays(-3);
-                    cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
                     break;
                 case "Friday":
                     cR_DateTimePicker1.Value = DateTime.Now.AddDays(-4);
-                    cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
                     break;
                 case "Saturday":
                     cR_DateTimePicker1.Value = DateTime.Now.AddDays(-5);
-                    cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
                     break;
 
             }
@@ -186,9 +203,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             if (cR_DateTimePicker1.Value > cR_DateTimePicker2.Value)
             {
-                cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
-                cR_DateTimePicker1.Value = DateTime.Now.AddMinutes(-1);
-                MessageBox.Show("La primera fecha introducida no puede ser mayor a la segunda.");
+                cR_DateTimePicker2.Value = DateTime.Now;
+                cR_DateTimePicker1.Value = DateTime.Now;
+                MessageBox.Show("La primera fecha introducida no puede ser menor a la primera.");
             }
             else
             {
@@ -200,9 +217,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             if (cR_DateTimePicker1.Value > cR_DateTimePicker2.Value)
             {
-                cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
                 cR_DateTimePicker1.Value = DateTime.Now.AddMinutes(-1);
+                cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
                 MessageBox.Show("La primera fecha introducida no puede ser mayor a la segunda.");
+                
             }
             else
             {
