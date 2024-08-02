@@ -1,6 +1,8 @@
 ﻿using Controladores;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,10 +13,13 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         Registros_Controller control = new Registros_Controller();
         SizesGenerales _sizes = new SizesGenerales();
         ControlOperaciones operaciones;
+        List<Employee> empleados;
+
         public Registros_GeneralesPermisos(AppVistaGeneral app)
         {
             InitializeComponent();
             operaciones = new ControlOperaciones(app);
+            empleados = control.Obtener_Empleados();
         }
 
         public void CentrarElementos()
@@ -22,12 +27,23 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             Point punto = cR_Subtitulos1.Location;
             cR_Subtitulos1.Location = _sizes.CentrarElementosX(punto, cR_Subtitulos1.Size, this.Size);
         }
+
+        private void LlenarComboEmpleados()
+        {
+            comboBox1.Items.Add("Todos los empleados");
+            foreach (Employee emp in empleados)
+            {
+                comboBox1.Items.Add(emp._Name + " " + emp._Lastname);
+            }
+            comboBox1.SelectedIndex = 0;
+        }
+
+        
         private void Registros_Generales_Load(object sender, EventArgs e)
         {
             CentrarElementos();
             cR_DataGriedView1.Rows.Add(1, "Fernando Acosta", "Enfermedad", "Lunes 27 de mayo", "Jueves 30 de mayo");
             cR_DataGriedView1.Rows.Add(1, "Maria Fernandez", "Diligencia", "Lunes 27 de mayo (10:30)", "Lunes 27 de mayo (2:15)");
-
             if (operaciones.BuscarAutorizacion("Agregar permisos"))
             {
                 botones_Nuevos5.Visible = true;
@@ -36,6 +52,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 botones_Nuevos5.Visible = false;
             }
+            LlenarComboEmpleados();
         }
 
         private void Registros_Generales_Resize(object sender, EventArgs e)
@@ -64,6 +81,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         private void botones_Nuevos5_Click(object sender, EventArgs e)
         {
             control.AgregarPermiso();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

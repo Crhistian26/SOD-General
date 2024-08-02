@@ -118,7 +118,6 @@
             this.panel2.Size = new System.Drawing.Size(643, 79);
             this.panel2.TabIndex = 15;
             this.panel2.Visible = false;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -248,6 +247,7 @@
             // 
             // soD_ComboBox2
             // 
+            this.soD_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox2.FormattingEnabled = true;
             this.soD_ComboBox2.Location = new System.Drawing.Point(359, 30);

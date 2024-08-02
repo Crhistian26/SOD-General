@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_LabelUp2 = new CR_LabelUp();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -48,7 +49,6 @@
             this.Registros_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -82,6 +82,24 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(960, 490);
             this.cR_SplitContainer1.SplitterDistance = 161;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // botones_Nuevos5
+            // 
+            this.botones_Nuevos5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos5.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos5.BorderRadius = 40;
+            this.botones_Nuevos5.BorderSize = 0;
+            this.botones_Nuevos5.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos5.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos5.Location = new System.Drawing.Point(16, 13);
+            this.botones_Nuevos5.Name = "botones_Nuevos5";
+            this.botones_Nuevos5.Size = new System.Drawing.Size(175, 40);
+            this.botones_Nuevos5.TabIndex = 6;
+            this.botones_Nuevos5.Text = "Agregar permisos";
+            this.botones_Nuevos5.UseVisualStyleBackColor = false;
+            this.botones_Nuevos5.Click += new System.EventHandler(this.botones_Nuevos5_Click);
             // 
             // cR_Subtitulos1
             // 
@@ -230,11 +248,13 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 83);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(245, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // cR_DataGriedView1
             // 
@@ -296,24 +316,6 @@
             this.Registros_Date2.HeaderText = "Hasta el";
             this.Registros_Date2.Name = "Registros_Date2";
             this.Registros_Date2.ReadOnly = true;
-            // 
-            // botones_Nuevos5
-            // 
-            this.botones_Nuevos5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos5.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos5.BorderRadius = 40;
-            this.botones_Nuevos5.BorderSize = 0;
-            this.botones_Nuevos5.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos5.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos5.Location = new System.Drawing.Point(16, 13);
-            this.botones_Nuevos5.Name = "botones_Nuevos5";
-            this.botones_Nuevos5.Size = new System.Drawing.Size(175, 40);
-            this.botones_Nuevos5.TabIndex = 6;
-            this.botones_Nuevos5.Text = "Agregar permisos";
-            this.botones_Nuevos5.UseVisualStyleBackColor = false;
-            this.botones_Nuevos5.Click += new System.EventHandler(this.botones_Nuevos5_Click);
             // 
             // Registros_GeneralesPermisos
             // 

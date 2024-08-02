@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace SOD_General.Controladores
 {
@@ -41,6 +42,22 @@ namespace SOD_General.Controladores
             Point punto = new Point();
             punto = new Point(posicion, ElementoP.Y);
             return punto;
+        }
+
+        public string FiltarHoras(TimeSpan hora)
+        {
+            if(hora.Hours > 12)
+            {
+                return $"{hora.Hours - 12}:{hora.Minutes} PM";
+            }
+            else if(hora.Hours == 12)
+            {
+                return $"{hora.Hours}:{hora.Minutes} PM";
+            }
+            else
+            {
+                return $"{hora.Hours}:{hora.Minutes} AM";
+            }
         }
     }
 }

@@ -421,6 +421,7 @@
             // 
             // soD_ComboBox1
             // 
+            this.soD_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox1.FormattingEnabled = true;
             this.soD_ComboBox1.Location = new System.Drawing.Point(16, 87);

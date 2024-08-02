@@ -1,10 +1,13 @@
 ﻿using Controladores;
+using Modelos.AsistenciasYPermisos;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
+using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SOD_General.Recursos_Humanos.Empleados
@@ -13,29 +16,21 @@ namespace SOD_General.Recursos_Humanos.Empleados
     {
         SizesGenerales _size = new SizesGenerales();
 
-        Empleados_Controller control = new Empleados_Controller();
+        Empleados_Controller controlEmpleados = new Empleados_Controller();
+        Registros_Controller controlRegistros = new Registros_Controller();
 
         ControlOperaciones operaciones;
 
         List<Employee> Empleados;
 
-
+        List<Department> departamentos;
 
         public Visual_Empleados(AppVistaGeneral app)
         {
             InitializeComponent();
             operaciones = new ControlOperaciones(app);
+            departamentos = controlRegistros.Obtener_Departamentos();
         }
-
-        private void Visual_Empleados_Load(object sender, EventArgs e)
-        {
-            Empleados = control.ListaGeneralEmpleados();
-            CentrarElementos();
-            LlenarDataGried();
-
-        }
-
-
         public void CentrarElementos()
         {
             Point localA = cR_Subtitulos1.Location;
@@ -44,6 +39,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         public void LlenarDataGried()
         {
+            
             foreach (Employee empleado in Empleados)
             {
                 int id = empleado.IdEmployee;
@@ -56,6 +52,51 @@ namespace SOD_General.Recursos_Humanos.Empleados
             }
         }
 
+        private void LlenarComboDepartamentos()
+        {
+            comboBox1.Items.Add("Todos los departamentos");
+            foreach (Department depa in departamentos)
+            {
+                comboBox1.Items.Add(depa._Department);
+            }
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void Visual_Empleados_Load(object sender, EventArgs e)
+        {
+            Empleados = controlEmpleados.ListaGeneralEmpleados();
+            CentrarElementos();
+            LlenarDataGried();
+            LlenarComboDepartamentos();
+        }
+
+        public void OrganizarDataGriedDepartamento()
+        {
+            cR_DataGriedView1.Rows.Clear();
+            if (comboBox1.Text != "Todos los departamentos")
+            {
+                cR_DataGriedView1.Rows.Clear();
+                var data = Empleados.Select(a => a).Where(a => a.Department == comboBox1.Text).ToList();
+
+                if (data.Count > 0)
+                {
+                    foreach (Employee empleado in data)
+                    {
+                        cR_DataGriedView1.Rows.Add(
+                        empleado.IdEmployee,
+                        empleado._Name,
+                        empleado._Lastname,
+                        empleado.Department,
+                        empleado.Admission_date.ToString("D")
+                        );
+                    }
+                }
+            }
+            else
+            {
+                LlenarDataGried();
+            }
+        }
 
         private void cR_DataGriedView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -81,7 +122,12 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            control.AbrirEditar();
+            controlEmpleados.AbrirEditar();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OrganizarDataGriedDepartamento();
         }
     }
 }

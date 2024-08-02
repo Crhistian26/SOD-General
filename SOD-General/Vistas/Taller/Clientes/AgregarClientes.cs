@@ -32,12 +32,12 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             if (txtSucursal.Text.Trim().Length == 0)
             {
                 string Sucursal = "No especificado";
-                cliente = new Client(null, Sucursal, txtNombre.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
+                cliente = new Client(null, Sucursal, cr_Textbox1.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
                 clientContr.AgregarCliente(cliente);
             }
             else
             {
-                cliente = new Client(null, txtSucursal.Text, txtNombre.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
+                cliente = new Client(null, txtSucursal.Text, cr_Textbox1.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
                 clientContr.AgregarCliente(cliente);
             }
 

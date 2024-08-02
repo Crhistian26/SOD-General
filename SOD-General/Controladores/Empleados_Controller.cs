@@ -62,9 +62,9 @@ namespace SOD_General.Controladores
                 return null;
             }
         }
-        public Dictionary<DateTime, Record_Attendance> ListaAsistenciasEmpleado(int id)
+        public List<Record_Attendance> ListaAsistenciasEmpleado(int id)
         {
-            Dictionary<DateTime, Record_Attendance> diccionario = new Dictionary<DateTime, Record_Attendance>();
+            List<Record_Attendance> diccionario = new List<Record_Attendance>();
             Record_Attendance record;
             string Query = "Exec Get_EmployeeAttendance @IdEmpleado";
             SqlCommand cmd = new SqlCommand(Query, conex);
@@ -77,15 +77,14 @@ namespace SOD_General.Controladores
             {
                 int IdRecord = lector.GetInt32(0);
                 int IdEmployee = lector.GetInt32(1);
-                string Name = lector.GetString(2);
-                TimeSpan entry = lector.GetTimeSpan(3);
-                TimeSpan exit = lector.GetTimeSpan(4);
-                TimeSpan lunchS = lector.GetTimeSpan(5);
-                TimeSpan lunchF = lector.GetTimeSpan(6);
-                DateTime record_Date = lector.GetDateTime(7);
+                TimeSpan entry = lector.GetTimeSpan(2);
+                TimeSpan exit = lector.GetTimeSpan(3);
+                TimeSpan lunchS = lector.GetTimeSpan(4);
+                TimeSpan lunchF = lector.GetTimeSpan(5);
+                DateTime record_Date = lector.GetDateTime(6);
 
-                record = new Record_Attendance(IdRecord, IdEmployee,Name, entry, exit, lunchS, lunchF, record_Date);
-                diccionario.Add(record_Date, record);
+                record = new Record_Attendance(IdRecord, IdEmployee, entry, exit, lunchS, lunchF, record_Date);
+                diccionario.Add(record);
             }
             conex.Close();
             return diccionario;

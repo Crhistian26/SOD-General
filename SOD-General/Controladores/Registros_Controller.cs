@@ -1,4 +1,5 @@
 ﻿using Modelos.AsistenciasYPermisos;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,17 @@ namespace SOD_General.Controladores
 {
     internal class Registros_Controller
     {
+        //La cadena de conexion
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
 
         #region Asistencias
+        public void AgregarAsistencia()
+        {
+            Agregar_Asistencias vista = new Agregar_Asistencias();
+            vista.Show();
+        }
+
         public List<Record_Attendance> Obtener_Asistencias()
         {
             try
@@ -67,19 +75,106 @@ namespace SOD_General.Controladores
         #endregion
 
         #region Permisos
-        #endregion
-
         public void AgregarPermiso()
         {
             Agregar_Permiso vista = new Agregar_Permiso();
             vista.Show();
         }
 
-        public void AgregarAsistencia()
+        #endregion
+
+        public List<Employee> Obtener_Empleados()
         {
-            Agregar_Asistencias vista = new Agregar_Asistencias();
-            vista.Show();
+            try
+            {
+                //La lista a retornar.
+                List<Employee> empleados = new List<Employee>();
+                //El query.
+                string Query = "select IdEmployee,_Name,_Lastname from Employees order by _Name;";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    string lastname = reader.GetString(2);
+
+                    Employee emp = new Employee(id, name, lastname);
+                    empleados.Add(emp);
+                }
+                conex.Close();
+                return empleados;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
+
+        public List<Department> Obtener_Departamentos()
+        {
+            try
+            {
+                //La lista a retornar.
+                List<Department> departamentos = new List<Department>();
+                //El query.
+                string Query = "select IdDeparment,_Department from Departments order by IdDeparment;";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
+                    string depart = reader.GetString(1);
+
+                    Department depa = new Department(id, depart);
+                    departamentos.Add(depa);
+                }
+                conex.Close();
+                return departamentos;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+       
 
     }
 }

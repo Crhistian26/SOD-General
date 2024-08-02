@@ -14,14 +14,19 @@ namespace Modelos.Usuarios_Empleados
         public bool _Enabled { get; set; }
         public bool Job_State { get; set; }
 
-
-        public Employee(int IdEmployee, string Name, string Lastname, string Department, DateTime Admission_Date)
+        public Employee(int IdEmployee, string Name, string Lastname)
         {
             this.IdEmployee = IdEmployee;
             this._Name = Name;
             this._Lastname = Lastname;
-            this.Department = Department;
+        }
+
+        public Employee(int IdEmployee, string Name, string Lastname, string Department, DateTime Admission_Date)
+            :this(IdEmployee,Name,Lastname)
+        {
             this.Admission_date = Admission_Date;
+            this.Department = Department;
+
         }
 
         public Employee(int idEmployee, int departmentId, string department, string name, string lastname, DateTime admissionDate, DateTime? dismissalDate, bool enabled, bool jobState)

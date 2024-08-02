@@ -277,12 +277,14 @@
             // 
             // soD_ComboBox1
             // 
+            this.soD_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.soD_ComboBox1.FormattingEnabled = true;
             this.soD_ComboBox1.Location = new System.Drawing.Point(3, 92);
             this.soD_ComboBox1.Name = "soD_ComboBox1";
             this.soD_ComboBox1.Size = new System.Drawing.Size(280, 27);
             this.soD_ComboBox1.TabIndex = 3;
+            this.soD_ComboBox1.SelectedIndexChanged += new System.EventHandler(this.soD_ComboBox1_SelectedIndexChanged);
             // 
             // cR_LabelDown2
             // 

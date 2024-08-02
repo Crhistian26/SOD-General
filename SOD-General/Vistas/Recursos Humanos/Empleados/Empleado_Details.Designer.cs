@@ -46,11 +46,11 @@
             this.Empleados_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asitencias_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inicio_de_almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fin_de_almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencias_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencias_Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencias_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -183,11 +183,11 @@
             this.cR_DataGriedView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Asitencias_Entry,
-            this.Asistencias_Exit,
             this.Inicio_de_almuerzo,
             this.Fin_de_almuerzo,
-            this.Asistencias_Date,
-            this.Asistencias_Hours});
+            this.Asistencias_Exit,
+            this.Asistencias_Hours,
+            this.Asistencias_Date});
             this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView2.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView2.Location = new System.Drawing.Point(0, 0);
@@ -278,6 +278,20 @@
             this.Asitencias_Entry.Name = "Asitencias_Entry";
             this.Asitencias_Entry.ReadOnly = true;
             // 
+            // Inicio_de_almuerzo
+            // 
+            this.Inicio_de_almuerzo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Inicio_de_almuerzo.HeaderText = "Inicio de almuerzo";
+            this.Inicio_de_almuerzo.Name = "Inicio_de_almuerzo";
+            this.Inicio_de_almuerzo.ReadOnly = true;
+            // 
+            // Fin_de_almuerzo
+            // 
+            this.Fin_de_almuerzo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fin_de_almuerzo.HeaderText = "Fin de almuerzo";
+            this.Fin_de_almuerzo.Name = "Fin_de_almuerzo";
+            this.Fin_de_almuerzo.ReadOnly = true;
+            // 
             // Asistencias_Exit
             // 
             this.Asistencias_Exit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -285,17 +299,12 @@
             this.Asistencias_Exit.Name = "Asistencias_Exit";
             this.Asistencias_Exit.ReadOnly = true;
             // 
-            // Inicio_de_almuerzo
+            // Asistencias_Hours
             // 
-            this.Inicio_de_almuerzo.HeaderText = "Inicio de almuerzo";
-            this.Inicio_de_almuerzo.Name = "Inicio_de_almuerzo";
-            this.Inicio_de_almuerzo.ReadOnly = true;
-            // 
-            // Fin_de_almuerzo
-            // 
-            this.Fin_de_almuerzo.HeaderText = "Fin de almuerzo";
-            this.Fin_de_almuerzo.Name = "Fin_de_almuerzo";
-            this.Fin_de_almuerzo.ReadOnly = true;
+            this.Asistencias_Hours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Asistencias_Hours.HeaderText = "Horas laboradas";
+            this.Asistencias_Hours.Name = "Asistencias_Hours";
+            this.Asistencias_Hours.ReadOnly = true;
             // 
             // Asistencias_Date
             // 
@@ -303,13 +312,6 @@
             this.Asistencias_Date.HeaderText = "Fecha";
             this.Asistencias_Date.Name = "Asistencias_Date";
             this.Asistencias_Date.ReadOnly = true;
-            // 
-            // Asistencias_Hours
-            // 
-            this.Asistencias_Hours.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Asistencias_Hours.HeaderText = "Horas laboradas";
-            this.Asistencias_Hours.Name = "Asistencias_Hours";
-            this.Asistencias_Hours.ReadOnly = true;
             // 
             // Empleado_Details
             // 
@@ -352,10 +354,10 @@
         private CR_DataGriedView cR_DataGriedView2;
         private CR_Subtitulos cR_Subtitulos2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asitencias_Entry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Inicio_de_almuerzo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fin_de_almuerzo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Hours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Date;
     }
 }

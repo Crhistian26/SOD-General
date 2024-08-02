@@ -14,11 +14,10 @@ namespace Modelos.AsistenciasYPermisos
         public DateTime DateAttendance { get; set; }
         public TimeSpan Job_Hours { get; set; }
 
-        public Record_Attendance(int idRecord, int idEmployee,string Name, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
+        public Record_Attendance(int idRecord, int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
         {
             IdRecord = idRecord;
             IdEmployee = idEmployee;
-            _Name = Name;
             Entry = entry;
             Exit = exit;
             LunchS = lunchS;
@@ -29,5 +28,13 @@ namespace Modelos.AsistenciasYPermisos
 
         }
 
+        public Record_Attendance(int idRecord, int idEmployee, string Name, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
+           :this(idRecord,idEmployee,entry,exit,lunchS,lunchF,dateAttendance)
+        {
+
+            _Name = Name;
+
+
+        }
     }
 }

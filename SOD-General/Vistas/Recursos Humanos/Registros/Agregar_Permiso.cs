@@ -1,16 +1,23 @@
-﻿using SOD_General.Controladores;
+﻿using Modelos.Usuarios_Empleados;
+using SOD_General.Controladores;
+using SOD_General.Vistas.Pruebas;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
     public partial class Agregar_Permiso : Form
     {
         SizesGenerales _size = new SizesGenerales();
+        Registros_Controller control = new Registros_Controller();
+        List<Employee> empleados;
         public Agregar_Permiso()
         {
             InitializeComponent();
+            empleados = control.Obtener_Empleados();
         }
 
         private void CentrarElementos()
@@ -22,10 +29,19 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
 
-
+        private void LlenarComboEmpleados()
+        {
+            soD_ComboBox1.Items.Add("Todos los empleados");
+            foreach (Employee emp in empleados)
+            {
+                soD_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
+            }
+            soD_ComboBox1.SelectedIndex = 0;
+        }
         private void Agregar_Permiso_Load(object sender, EventArgs e)
         {
             CentrarElementos();
+            LlenarComboEmpleados();
         }
 
         private void soD_ComboBox4_Resize(object sender, EventArgs e)
@@ -36,6 +52,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         private void Agregar_Permiso_Resize(object sender, EventArgs e)
         {
             CentrarElementos();
+        }
+
+        private void soD_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

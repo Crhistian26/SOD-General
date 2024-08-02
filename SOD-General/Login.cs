@@ -40,8 +40,16 @@ namespace SOD_General
 
             if (lista != null)
             {
-                principal.AbrirVistaGeneral(lista);
+                if(lista.Count > 0)
+                {
+                    principal.AbrirVistaGeneral(lista);
+                }
+                else
+                {
+                    MessageBox.Show("Sus permisos en la aplicacion fueron revocados.");
+                }
             }
+            
             cr_Textbox1.Clear();
             cr_Textbox2.Clear();
         }
