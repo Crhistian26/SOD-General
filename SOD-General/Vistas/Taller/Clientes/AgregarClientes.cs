@@ -29,15 +29,19 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
         {
 
-            if (txtSucursal.Text.Trim().Length == 0)
+            if (txtCliente.Text.Trim().Length == 0)
             {
                 string Sucursal = "No especificado";
-                cliente = new Client(null, Sucursal, cr_Textbox1.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
+                cliente = new Client(null, Sucursal, txtSucursal.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
                 clientContr.AgregarCliente(cliente);
             }
             else
             {
-                cliente = new Client(null, txtSucursal.Text, cr_Textbox1.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
+
+                cliente = new Client(null, txtSucursal.Text, txtCliente.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
+
+                cliente = new Client(null, txtCliente.Text, txtSucursal.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
+
                 clientContr.AgregarCliente(cliente);
             }
 

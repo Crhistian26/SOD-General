@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.cR_LabelUp3 = new CR_LabelUp();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_LabelUp2 = new CR_LabelUp();
+            this.cR_LabelUp1 = new CR_LabelUp();
+            this.cR_DateTimePicker2 = new CR_DateTimePicker();
+            this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,12 +45,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cR_LabelUp2 = new CR_LabelUp();
-            this.cR_LabelUp1 = new CR_LabelUp();
-            this.cR_DateTimePicker2 = new CR_DateTimePicker();
-            this.cR_DateTimePicker1 = new CR_DateTimePicker();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cR_LabelUp3 = new CR_LabelUp();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -78,6 +78,66 @@
             this.cR_SplitContainer1.SplitterDistance = 96;
             this.cR_SplitContainer1.TabIndex = 1;
             // 
+            // cR_LabelUp3
+            // 
+            this.cR_LabelUp3.AutoSize = true;
+            this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp3.Location = new System.Drawing.Point(12, 59);
+            this.cR_LabelUp3.Name = "cR_LabelUp3";
+            this.cR_LabelUp3.Size = new System.Drawing.Size(64, 20);
+            this.cR_LabelUp3.TabIndex = 50;
+            this.cR_LabelUp3.Text = "# Orden";
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(82, 59);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(100, 25);
+            this.cr_Textbox1.TabIndex = 49;
+            // 
+            // cR_LabelUp2
+            // 
+            this.cR_LabelUp2.AutoSize = true;
+            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp2.Location = new System.Drawing.Point(640, 69);
+            this.cR_LabelUp2.Name = "cR_LabelUp2";
+            this.cR_LabelUp2.Size = new System.Drawing.Size(47, 20);
+            this.cR_LabelUp2.TabIndex = 42;
+            this.cR_LabelUp2.Text = "Hasta";
+            // 
+            // cR_LabelUp1
+            // 
+            this.cR_LabelUp1.AutoSize = true;
+            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp1.Location = new System.Drawing.Point(640, 39);
+            this.cR_LabelUp1.Name = "cR_LabelUp1";
+            this.cR_LabelUp1.Size = new System.Drawing.Size(51, 20);
+            this.cR_LabelUp1.TabIndex = 41;
+            this.cR_LabelUp1.Text = "Desde";
+            // 
+            // cR_DateTimePicker2
+            // 
+            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(693, 39);
+            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
+            this.cR_DateTimePicker2.Size = new System.Drawing.Size(248, 24);
+            this.cR_DateTimePicker2.TabIndex = 40;
+            // 
+            // cR_DateTimePicker1
+            // 
+            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
+            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(693, 69);
+            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(248, 24);
+            this.cR_DateTimePicker1.TabIndex = 39;
+            // 
             // cR_Subtitulos1
             // 
             this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -98,10 +158,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column8,
@@ -163,72 +223,13 @@
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
-            // cR_LabelUp2
-            // 
-            this.cR_LabelUp2.AutoSize = true;
-            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(640, 69);
-            this.cR_LabelUp2.Name = "cR_LabelUp2";
-            this.cR_LabelUp2.Size = new System.Drawing.Size(47, 20);
-            this.cR_LabelUp2.TabIndex = 42;
-            this.cR_LabelUp2.Text = "Hasta";
-            // 
-            // cR_LabelUp1
-            // 
-            this.cR_LabelUp1.AutoSize = true;
-            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(640, 39);
-            this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(51, 20);
-            this.cR_LabelUp1.TabIndex = 41;
-            this.cR_LabelUp1.Text = "Desde";
-            // 
-            // cR_DateTimePicker2
-            // 
-            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(693, 39);
-            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
-            this.cR_DateTimePicker2.Size = new System.Drawing.Size(248, 24);
-            this.cR_DateTimePicker2.TabIndex = 40;
-            // 
-            // cR_DateTimePicker1
-            // 
-            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(693, 69);
-            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(248, 24);
-            this.cR_DateTimePicker1.TabIndex = 39;
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(82, 59);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(100, 25);
-            this.cr_Textbox1.TabIndex = 49;
-            // 
-            // cR_LabelUp3
-            // 
-            this.cR_LabelUp3.AutoSize = true;
-            this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp3.Location = new System.Drawing.Point(12, 59);
-            this.cR_LabelUp3.Name = "cR_LabelUp3";
-            this.cR_LabelUp3.Size = new System.Drawing.Size(64, 20);
-            this.cR_LabelUp3.TabIndex = 50;
-            this.cR_LabelUp3.Text = "# Orden";
-            // 
             // VisualizarEquiposControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 450);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VisualizarEquiposControl";
             this.Text = "VisualizarEquiposControl";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

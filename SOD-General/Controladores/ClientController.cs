@@ -40,6 +40,9 @@ namespace SOD_General.Controladores
                 MessageBox.Show("Cliente no registrado: " + ex.ToString());
             }
         }
+
+      
+      
     }
 
 

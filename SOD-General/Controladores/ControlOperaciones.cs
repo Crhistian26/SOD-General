@@ -6,6 +6,7 @@ using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas.Taller.Clientes;
+using SOD_General.Vistas.Taller.Controles_de_Equipo;
 using SOD_General.Vistas.Taller.Registrar_Cotizacion;
 using SOD_General.Vistas.Taller.Registrar_entrada;
 using SOD_General.Vistas.Taller.Registro_peticiones;
@@ -188,6 +189,37 @@ namespace Controladores
             else if (selecc == "Recepcion")
             {
 
+                if(id != null)
+                {
+                    if (id == "Editar Entrada")
+                    {
+                        a = false;
+                    }
+
+                    if ( id == "Editar Clientes") 
+                    {
+                        a = false;
+                    }
+                }
+            }
+
+            else if(selecc == "Cotizacion")
+            {
+                if (id == "Editar Cotizacion")
+                {
+                    a = false;
+                }
+
+                if (id == "Editar equipos aprobados")
+                {
+                    a = false;
+                }
+
+                if (id == "Aprobar control de calidad")
+                {
+                    a = false;
+                }
+
 
             }
             //en caso de que no se ejecutara la lista negra a sera igual al valor con el que fue definida (true)
@@ -235,7 +267,7 @@ namespace Controladores
 
             if (selec == "Cotizacion")
             {
-                if (ope.Id == 15)
+                if (ope._Operation == "Añadir Cotizacion")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -247,7 +279,7 @@ namespace Controladores
                     return evento;
                 }
 
-                if (ope.Id == 16)
+                if (ope._Operation == "Ver Cotizacion")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -257,11 +289,22 @@ namespace Controladores
 
                     return evento;
                 }
+
+                if (ope._Operation == "Ver Equipos aprobados")
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        VisualizarEquiposControl ventana = new VisualizarEquiposControl();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
             }
 
             if (selec == "Recepcion")
             {
-                if (ope.Id == 12)
+                if (ope._Operation == "Añadir Entrada")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -273,7 +316,7 @@ namespace Controladores
                     return evento;
                 }
 
-                if (ope.Id == 13)
+                if (ope._Operation == "Ver Entrada")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -284,7 +327,7 @@ namespace Controladores
                     return evento;
                 }
 
-                if (ope.Id == 21)
+                if (ope._Operation == "Añadir Clientes")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -295,7 +338,7 @@ namespace Controladores
                     return evento;
                 }
 
-                if (ope.Id == 22)
+                if (ope._Operation == "Ver Clientes")
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
@@ -305,6 +348,8 @@ namespace Controladores
 
                     return evento;
                 }
+
+
             }
 
             if (selec == "Asistencias")
