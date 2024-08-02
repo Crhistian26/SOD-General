@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cR_LabelUp3 = new CR_LabelUp();
-            this.cR_LabelUp2 = new CR_LabelUp();
-            this.cR_DateTimePicker2 = new CR_DateTimePicker();
-            this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -63,10 +59,6 @@
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos1);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp3);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp2);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_DateTimePicker2);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_DateTimePicker1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.comboBox1);
@@ -96,50 +88,6 @@
             this.botones_Nuevos1.Text = "Agregar empleado";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
-            // 
-            // cR_LabelUp3
-            // 
-            this.cR_LabelUp3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_LabelUp3.AutoSize = true;
-            this.cR_LabelUp3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp3.Location = new System.Drawing.Point(489, 48);
-            this.cR_LabelUp3.Name = "cR_LabelUp3";
-            this.cR_LabelUp3.Size = new System.Drawing.Size(48, 20);
-            this.cR_LabelUp3.TabIndex = 6;
-            this.cR_LabelUp3.Text = "hasta:";
-            // 
-            // cR_LabelUp2
-            // 
-            this.cR_LabelUp2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_LabelUp2.AutoSize = true;
-            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(218, 48);
-            this.cR_LabelUp2.Name = "cR_LabelUp2";
-            this.cR_LabelUp2.Size = new System.Drawing.Size(106, 20);
-            this.cR_LabelUp2.TabIndex = 5;
-            this.cR_LabelUp2.Text = "Ingreso desde:";
-            // 
-            // cR_DateTimePicker2
-            // 
-            this.cR_DateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(222, 72);
-            this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
-            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
-            this.cR_DateTimePicker2.TabIndex = 4;
-            // 
-            // cR_DateTimePicker1
-            // 
-            this.cR_DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
-            this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(493, 72);
-            this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
-            this.cR_DateTimePicker1.TabIndex = 3;
             // 
             // cR_Subtitulos1
             // 
@@ -182,10 +130,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Empleados_Id,
@@ -273,10 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Department;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Entry;
-        private CR_LabelUp cR_LabelUp3;
-        private CR_LabelUp cR_LabelUp2;
-        private CR_DateTimePicker cR_DateTimePicker2;
-        private CR_DateTimePicker cR_DateTimePicker1;
         private Diseños.Botones_Nuevos botones_Nuevos1;
     }
 }

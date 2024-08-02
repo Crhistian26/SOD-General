@@ -167,12 +167,13 @@
             this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
             this.cr_ComboBox2.FormattingEnabled = true;
             this.cr_ComboBox2.Location = new System.Drawing.Point(17, 98);
             this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(337, 29);
+            this.cr_ComboBox2.Size = new System.Drawing.Size(338, 29);
             this.cr_ComboBox2.TabIndex = 4;
             // 
             // cR_LabelDown2
@@ -270,6 +271,7 @@
             this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
             this.cr_ComboBox1.FormattingEnabled = true;

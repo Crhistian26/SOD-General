@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsistenciasYPermisos\Reason.cs" />
     <Compile Include="AsistenciasYPermisos\Record_Attendance.cs" />
     <Compile Include="AsistenciasYPermisos\Record_Permission.cs" />
     <Compile Include="Class1.cs" />

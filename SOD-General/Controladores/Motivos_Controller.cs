@@ -5,10 +5,7 @@ namespace SOD_General.Controladores
     internal class Motivos_Controller
     {
 
-        public Motivos_Controller()
-        {
-
-        }
+        
         public void AbrirEditar(int? y)
         {
             if (y is null)

@@ -48,15 +48,37 @@ namespace SOD_General.Controladores
         {
             if(hora.Hours > 12)
             {
-                return $"{hora.Hours - 12}:{hora.Minutes} PM";
+                if(hora.Minutes == 0)
+                {
+                    return $"{hora.Hours - 12}:{hora.Minutes}0 PM";
+                }
+                else
+                {
+                    return $"{hora.Hours - 12}:{hora.Minutes} PM";
+                }
+               
             }
             else if(hora.Hours == 12)
             {
-                return $"{hora.Hours}:{hora.Minutes} PM";
+                if (hora.Minutes == 0)
+                {
+                    return $"{hora.Hours}:{hora.Minutes}0 PM";
+                }
+                else
+                {
+                    return $"{hora.Hours}:{hora.Minutes} PM";
+                }
             }
             else
             {
-                return $"{hora.Hours}:{hora.Minutes} AM";
+                if (hora.Minutes == 0)
+                {
+                    return $"{hora.Hours}:{hora.Minutes}0 AM";
+                }
+                else
+                {
+                    return $"{hora.Hours}:{hora.Minutes} AM";
+                }
             }
         }
     }

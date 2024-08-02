@@ -81,6 +81,57 @@ namespace SOD_General.Controladores
             vista.Show();
         }
 
+        public List<Record_Permission> Obtener_Permisos()
+        {
+            try
+            {
+                List<Record_Permission> permisos = new List<Record_Permission>();
+                Record_Permission record;
+                //El query.
+                string Query = "exec Get_All_Permission";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int IdRecord = reader.GetInt32(0);
+                    string Name = reader.GetString(1);
+                    string Reason = reader.GetString(2);
+                    int Count = reader.GetInt32(3);
+                    string Mesure = reader.GetString(4);
+                    DateTime record_Date = reader.GetDateTime(5);
+
+                    record = new Record_Permission(IdRecord,Name,Reason,Count,Mesure, record_Date);
+                    permisos.Add(record);
+                }
+                conex.Close();
+
+                
+                return permisos;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         #endregion
 
         public List<Employee> Obtener_Empleados()
@@ -174,7 +225,50 @@ namespace SOD_General.Controladores
             }
         }
 
-       
+        public List<Reason> Obtener_Razones()
+        {
+            try
+            {
+                //La lista a retornar.
+                List<Reason> razones = new List<Reason>();
+                //El query.
+                string Query = "select IdReason,_Reason from Departments order by IdReason;";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
+                    string reason = reader.GetString(1);
+
+                    Reason rea = new Reason(id, reason);
+                    razones.Add(rea);
+                }
+                conex.Close();
+                return razones;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
 
     }
 }

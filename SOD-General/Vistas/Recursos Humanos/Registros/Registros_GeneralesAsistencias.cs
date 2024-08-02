@@ -33,6 +33,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         public void OrganizarDataGriedFecha()
         {
+            cR_DataGriedView2.Rows.Clear();
+
             var data = Asistencias.Select(a => a)
                 .Where(
                     a => a.DateAttendance.Date.Day == cR_DateTimePicker1.Value.Date.Day 
@@ -43,10 +45,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             if(data.Count > 0)
             {
-                cR_DataGriedView2.Rows.Clear();
+                
                 foreach (Record_Attendance registro in data)
                 {
-                   
                     cR_DataGriedView2.Rows.Add(
                         registro.IdRecord,
                         registro._Name,
@@ -54,7 +55,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                         _size.FiltarHoras(registro.LunchS),
                         _size.FiltarHoras(registro.LunchF),
                         _size.FiltarHoras(registro.Exit),
-                        registro.Job_Hours.ToString().Substring(0, 5)
+                        registro.Job_Hours.ToString().Substring(0, 5)+ " Horas"
                         );
                     
                 }
@@ -102,9 +103,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         private async void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
         {
             Task llenarlista = new Task(() => { Asistencias = control.Obtener_Asistencias(); });
-
+            Task centrar = new Task(() => { CentrarElementos(); });
             llenarlista.Start();
-            CentrarElementos();
+            centrar.Start();
             if (operaciones.BuscarAutorizacion("Agregar asistencias"))
             {
                 botones_Nuevos1.Visible = true;
@@ -113,7 +114,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 botones_Nuevos1.Visible = false;
             }
-
+            await centrar;
             await llenarlista;
             OrganizarDataGriedFecha();      
         }
@@ -130,7 +131,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void cR_DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            OrganizarDataGried();
+            OrganizarDataGriedFecha();
         }
     }
 }

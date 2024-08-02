@@ -45,7 +45,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                         _size.FiltarHoras(registro.LunchS),
                         _size.FiltarHoras(registro.LunchF),
                         _size.FiltarHoras(registro.Exit),
-                        registro.Job_Hours.ToString().Substring(0, 5),
+                        registro.Job_Hours.ToString().Substring(0, 5)+" Horas",
                         registro.DateAttendance.ToString("D")
                         );
                 }

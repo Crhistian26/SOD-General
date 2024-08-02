@@ -32,7 +32,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 soD_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
             }
-            soD_ComboBox1.SelectedIndex = 0;
         }
         private void Agregar_Asistencias_Load(object sender, EventArgs e)
         {

@@ -31,12 +31,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void LlenarComboEmpleados()
         {
-            soD_ComboBox1.Items.Add("Todos los empleados");
             foreach (Employee emp in empleados)
             {
                 soD_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
             }
-            soD_ComboBox1.SelectedIndex = 0;
         }
         private void Agregar_Permiso_Load(object sender, EventArgs e)
         {

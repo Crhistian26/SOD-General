@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
@@ -165,6 +165,7 @@
             this.botones_Nuevos4.TabIndex = 5;
             this.botones_Nuevos4.Text = "Este año";
             this.botones_Nuevos4.UseVisualStyleBackColor = false;
+            this.botones_Nuevos4.Click += new System.EventHandler(this.botones_Nuevos4_Click);
             // 
             // botones_Nuevos3
             // 
@@ -182,6 +183,7 @@
             this.botones_Nuevos3.TabIndex = 4;
             this.botones_Nuevos3.Text = "Estos 3 meses";
             this.botones_Nuevos3.UseVisualStyleBackColor = false;
+            this.botones_Nuevos3.Click += new System.EventHandler(this.botones_Nuevos3_Click);
             // 
             // botones_Nuevos2
             // 
@@ -199,6 +201,7 @@
             this.botones_Nuevos2.TabIndex = 3;
             this.botones_Nuevos2.Text = "Este mes";
             this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.botones_Nuevos2.Click += new System.EventHandler(this.botones_Nuevos2_Click);
             // 
             // botones_Nuevos1
             // 
@@ -216,6 +219,7 @@
             this.botones_Nuevos1.TabIndex = 2;
             this.botones_Nuevos1.Text = "Esta semana";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_DateTimePicker2
             // 
@@ -225,6 +229,7 @@
             this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
             this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker2.TabIndex = 1;
+            this.cR_DateTimePicker2.ValueChanged += new System.EventHandler(this.cR_DateTimePicker2_ValueChanged);
             // 
             // cR_DateTimePicker1
             // 
@@ -234,6 +239,7 @@
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
             this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker1.TabIndex = 0;
+            this.cR_DateTimePicker1.ValueChanged += new System.EventHandler(this.cR_DateTimePicker1_ValueChanged);
             // 
             // cR_LabelUp1
             // 
@@ -261,10 +267,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registros_RecordId,

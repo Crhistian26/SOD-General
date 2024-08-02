@@ -49,12 +49,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void LlenarComboDepartamentos()
         {
-            soD_ComboBox2.Items.Add("Todos los departamentos");
             foreach (Department depa in departamentos)
             {
                 soD_ComboBox2.Items.Add(depa._Department);
             }
-            soD_ComboBox2.SelectedIndex = 0;
         }
 
 
