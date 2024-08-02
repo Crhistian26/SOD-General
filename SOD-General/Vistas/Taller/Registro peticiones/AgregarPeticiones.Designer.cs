@@ -31,6 +31,8 @@
             this.cR_SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_Subtitulos8 = new CR_Subtitulos();
+            this.fR_TextBox5 = new Designer.FR_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             this.soD_ComboBox2 = new SOD_ComboBox();
@@ -48,8 +50,6 @@
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
-            this.cR_Subtitulos8 = new CR_Subtitulos();
-            this.fR_TextBox5 = new Designer.FR_TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -113,6 +113,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 270);
             this.panel1.TabIndex = 0;
+            // 
+            // cR_Subtitulos8
+            // 
+            this.cR_Subtitulos8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos8.AutoSize = true;
+            this.cR_Subtitulos8.BackColor = System.Drawing.Color.Transparent;
+            this.cR_Subtitulos8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cR_Subtitulos8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos8.Location = new System.Drawing.Point(461, 9);
+            this.cR_Subtitulos8.Name = "cR_Subtitulos8";
+            this.cR_Subtitulos8.Size = new System.Drawing.Size(156, 21);
+            this.cR_Subtitulos8.TabIndex = 100;
+            this.cR_Subtitulos8.Text = "Sucursal (Opcional)";
+            // 
+            // fR_TextBox5
+            // 
+            this.fR_TextBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.fR_TextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.fR_TextBox5.BorderFocusColor = System.Drawing.Color.Blue;
+            this.fR_TextBox5.BorderSize = 2;
+            this.fR_TextBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.fR_TextBox5.Location = new System.Drawing.Point(463, 36);
+            this.fR_TextBox5.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.fR_TextBox5.Multiline = true;
+            this.fR_TextBox5.Name = "fR_TextBox5";
+            this.fR_TextBox5.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.fR_TextBox5.PasswordChar = false;
+            this.fR_TextBox5.Size = new System.Drawing.Size(110, 30);
+            this.fR_TextBox5.TabIndex = 99;
+            this.fR_TextBox5.texts = "fafa";
+            this.fR_TextBox5.UnderlinedStyle = false;
             // 
             // cR_LabelDown1
             // 
@@ -314,6 +347,7 @@
             this.botones_Nuevos1.TabIndex = 85;
             this.botones_Nuevos1.Text = "Guardar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_Subtitulos6
             // 
@@ -380,39 +414,6 @@
             this.cR_Subtitulos3.Size = new System.Drawing.Size(119, 25);
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
-            // 
-            // cR_Subtitulos8
-            // 
-            this.cR_Subtitulos8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_Subtitulos8.AutoSize = true;
-            this.cR_Subtitulos8.BackColor = System.Drawing.Color.Transparent;
-            this.cR_Subtitulos8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cR_Subtitulos8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos8.Location = new System.Drawing.Point(461, 9);
-            this.cR_Subtitulos8.Name = "cR_Subtitulos8";
-            this.cR_Subtitulos8.Size = new System.Drawing.Size(156, 21);
-            this.cR_Subtitulos8.TabIndex = 100;
-            this.cR_Subtitulos8.Text = "Sucursal (Opcional)";
-            // 
-            // fR_TextBox5
-            // 
-            this.fR_TextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox5.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox5.BorderSize = 2;
-            this.fR_TextBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.fR_TextBox5.Location = new System.Drawing.Point(463, 36);
-            this.fR_TextBox5.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.fR_TextBox5.Multiline = true;
-            this.fR_TextBox5.Name = "fR_TextBox5";
-            this.fR_TextBox5.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.fR_TextBox5.PasswordChar = false;
-            this.fR_TextBox5.Size = new System.Drawing.Size(110, 30);
-            this.fR_TextBox5.TabIndex = 99;
-            this.fR_TextBox5.texts = "fafa";
-            this.fR_TextBox5.UnderlinedStyle = false;
             // 
             // AgregarPeticiones
             // 
