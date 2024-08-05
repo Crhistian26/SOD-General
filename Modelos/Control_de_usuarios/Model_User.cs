@@ -23,6 +23,15 @@ namespace Modelos.Control_de_usuarios
             this._Password = password;
         }
 
+        public bool Confirm_Operation(string Operation_name)
+        {
+            var hola = this._Role._Operations.Where(a => a._Operation == Operation_name).Select(a => a).First();
+            if(hola != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
     }
 }

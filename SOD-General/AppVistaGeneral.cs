@@ -13,10 +13,8 @@ namespace SOD_General
         ControlOperaciones controller;
         SizesGenerales _size = new SizesGenerales();
         public Model_User user;
-
-
-        public Form formu;
-      
+            
+        public Form formu;  
         public AppVistaGeneral(Model_User user)
         {
             InitializeComponent();
@@ -27,10 +25,9 @@ namespace SOD_General
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
             controller.AddItemsInMenustrip();
-
         }
 
-        public void AbrirFormulario(Form formulario)
+        public void OpenForm(Form formulario)
         {
             if (this.panel1.Controls.Count > 0)
             {
@@ -46,20 +43,11 @@ namespace SOD_General
             this.panel1.Tag = this.formu;
             this.MinimumSize = formu.MinimumSize;
             this.formu.Show();
-
         }
-
-
-
 
         private void AppVistaGeneral_Resize(object sender, EventArgs e)
         {
             pictureBox1.Location = _size.CentrarElementosXY(pictureBox1.Size, panel1.Size);
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
         }
     }
 }

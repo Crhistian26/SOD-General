@@ -10,21 +10,11 @@ namespace SOD_General
 
     public partial class Login : Form
     {
-        /// <summary>
-        /// Este es el atributo de tipo VistaPrincipal para ejecutar sus 
-        /// metodos desde aca.
-        /// </summary>
+
         VistaPrincipal principal { get; set; }
 
-        /// <summary>
-        /// Este es el controlador para usar las funciones de 
-        /// la clase LoginController
-        /// </summary>
         LoginController controller = new LoginController();
 
-
-
-        //Su constructor donde recibe la vistaprincipal.
         public Login(VistaPrincipal principal)
         {
             InitializeComponent();
@@ -32,8 +22,7 @@ namespace SOD_General
 
         }
 
-        //El boton de login.
-        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
 
             Model_User user;
@@ -47,24 +36,13 @@ namespace SOD_General
                 }
                 else
                 {
-                    MessageBox.Show("Sus permisos en la aplicacion fueron revocados.");
+                    MessageBox.Show("Sus permisos en la aplicacion fueron revocados."); 
                 }
             }
             
             cr_Textbox1.Clear();
             cr_Textbox2.Clear();
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cR_TBhora1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
 
     }
 

@@ -33,7 +33,7 @@
             this.cr_Textbox1 = new Cr_Textbox();
             this.cR_Label2 = new CR_LabelUp();
             this.cR_Label1 = new CR_LabelUp();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.btn_Login = new Diseños.Botones_Nuevos();
             this.SuspendLayout();
             // 
             // cr_Textbox2
@@ -79,23 +79,23 @@
             this.cR_Label1.TabIndex = 10;
             this.cR_Label1.Text = "Contraseña";
             // 
-            // botones_Nuevos1
+            // btn_Login
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(144, 180);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 41);
-            this.botones_Nuevos1.TabIndex = 0;
-            this.botones_Nuevos1.Text = "Ingresar";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
+            this.btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
+            this.btn_Login.BorderColor = System.Drawing.Color.Teal;
+            this.btn_Login.BorderRadius = 40;
+            this.btn_Login.BorderSize = 0;
+            this.btn_Login.FlatAppearance.BorderSize = 0;
+            this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Login.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_Login.ForeColor = System.Drawing.Color.White;
+            this.btn_Login.Location = new System.Drawing.Point(144, 180);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(150, 41);
+            this.btn_Login.TabIndex = 0;
+            this.btn_Login.Text = "Ingresar";
+            this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // Login
             // 
@@ -107,13 +107,12 @@
             this.Controls.Add(this.cr_Textbox1);
             this.Controls.Add(this.cR_Label2);
             this.Controls.Add(this.cR_Label1);
-            this.Controls.Add(this.botones_Nuevos1);
+            this.Controls.Add(this.btn_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 240);
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +120,7 @@
 
         #endregion
 
-        private Diseños.Botones_Nuevos botones_Nuevos1;
+        private Diseños.Botones_Nuevos btn_Login;
         private CR_LabelUp cR_Label1;
         private CR_LabelUp cR_Label2;
         private Cr_Textbox cr_Textbox1;

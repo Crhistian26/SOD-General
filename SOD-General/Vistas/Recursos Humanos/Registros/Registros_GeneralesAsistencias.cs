@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.AsistenciasYPermisos;
+using Modelos.Control_de_usuarios;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
     public partial class Registros_GeneralesAsistencias : Form
     {
+        Model_User user;
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller control = new Registros_Controller();
-        ControlOperaciones operaciones;
         List<Record_Attendance> Asistencias;
-        public Registros_GeneralesAsistencias(AppVistaGeneral app)
+        public Registros_GeneralesAsistencias(Model_User user)
         {
             InitializeComponent();
-            //operaciones = new ControlOperaciones(app);
+            this.user = user;
         }
 
         public void CentrarElementos()
@@ -66,39 +67,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
         }
 
-        public void OrganizarDataGried()
-        {
-            var data = Asistencias.Select(a => a)
-                .Where(
-                    a => a.DateAttendance.Date.Day == cR_DateTimePicker1.Value.Date.Day
-                    && a.DateAttendance.Date.Month == cR_DateTimePicker1.Value.Date.Month
-                    && a.DateAttendance.Date.Year == cR_DateTimePicker1.Value.Date.Year
-                    )
-                .ToList();
-
-            if (data.Count > 0)
-            {
-                cR_DataGriedView2.Rows.Clear();
-                foreach (Record_Attendance registro in data)
-                {
-
-                    cR_DataGriedView2.Rows.Add(
-                        registro.IdRecord,
-                        registro._Name,
-                        _size.FiltarHoras(registro.Entry),
-                        _size.FiltarHoras(registro.LunchS),
-                        _size.FiltarHoras(registro.LunchF),
-                        _size.FiltarHoras(registro.Exit),
-                        registro.Job_Hours.ToString().Substring(0, 5)
-                        );
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("No hay asistencias en este dia.");
-            }
-        }
 
         private async void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
         {
@@ -106,14 +74,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             Task centrar = new Task(() => { CentrarElementos(); });
             llenarlista.Start();
             centrar.Start();
-            //if (operaciones.BuscarAutorizacion("Agregar asistencias"))
-            //{
-            //    botones_Nuevos1.Visible = true;
-            //}
-            //else
-            //{
-            //    botones_Nuevos1.Visible = false;
-            //}
+            if (true)
+            {
+                //pvto el que lo lea
+            }
+            else
+            {
+                botones_Nuevos1.Visible = false;
+            }
             await centrar;
             await llenarlista;
             OrganizarDataGriedFecha();      

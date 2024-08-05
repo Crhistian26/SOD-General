@@ -9,23 +9,14 @@ namespace SOD_General
 {
     public partial class VistaPrincipal : Form
     {
-        /// <summary>
-        /// atributo del form AppVistaGeneral (se hacen validaciones de autorizacion y demas)
-        /// </summary>
-        private AppVistaGeneral _appVistaGeneral;
 
+        private AppVistaGeneral _appVistaGeneral;
         private Form formu;
         public VistaPrincipal()
         {
             InitializeComponent();
         }
 
-        //Cuando el formulario se carga aca me cambia su diseño y lo primero que me abre es el login.
-        /// <summary>
-        /// carga los estilos para que el primer formulario se adapte y presente el login
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void VistaPrincipal_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -36,11 +27,7 @@ namespace SOD_General
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        //La funcion que se encarga de abrirme los formularios.
-        /// <summary>
-        /// metodo que le da estilos al form que reciba como parametro
-        /// </summary>
-        /// <param name="formulario"></param>
+
         public void AbrirFormulario(Form formulario)
         {
             if (this.panel1.Controls.Count > 0)
@@ -60,19 +47,7 @@ namespace SOD_General
 
         }
 
-        //Este es un metodo que me abrira la vista general y le enviara sus autorizaciones.
-        //Esta se ejecutara desde el Login no desde aqui.
-        //public void AbrirVistaGeneral(List<MAuthorization> autorizaciones)
-        //{
-        //    this.FormBorderStyle = FormBorderStyle.Sizable;
-        //    this.WindowState = FormWindowState.Maximized;
-
-        //    _appVistaGeneral = new AppVistaGeneral(autorizaciones);
-
-        //    AbrirFormulario(_appVistaGeneral);
-        //}
-
-
+     
         public void AbrirVistaGeneral(Model_User  user)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
@@ -82,6 +57,7 @@ namespace SOD_General
 
             AbrirFormulario(_appVistaGeneral);
         }
+
         private void VistaPrincipal_Resize(object sender, EventArgs e)
         {
             this.formu.Size = panel1.Size;

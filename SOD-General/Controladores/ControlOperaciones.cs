@@ -79,7 +79,7 @@ namespace Controladores
                             _Event = (object sender, EventArgs e) =>
                             {
                                 Visual_Empleados window = new Visual_Empleados(_view);
-                                _view.AbrirFormulario(window);
+                                _view.OpenForm(window);
                             };
                             return _Event;
                     }
@@ -92,8 +92,8 @@ namespace Controladores
                         case ("Ver asistencias"):
                             _Event = (object sender, EventArgs e) =>
                             {
-                                Registros_GeneralesAsistencias window = new Registros_GeneralesAsistencias(_view);
-                                _view.AbrirFormulario(window);
+                                Registros_GeneralesAsistencias window = new Registros_GeneralesAsistencias(this.User);
+                                _view.OpenForm(window);
                             };
                             return _Event;
                     }
@@ -107,7 +107,7 @@ namespace Controladores
                             _Event = (object sender, EventArgs e) =>
                             {
                                 Registros_GeneralesPermisos window = new Registros_GeneralesPermisos(_view);
-                                _view.AbrirFormulario(window);
+                                _view.OpenForm(window);
                             };
                             return _Event;
 
@@ -122,7 +122,7 @@ namespace Controladores
                             _Event = (object sender, EventArgs e) =>
                             {
                                 ExportarReportesRRHH window = new ExportarReportesRRHH();
-                                _view.AbrirFormulario(_view);
+                                _view.OpenForm(_view);
                             };
                             return _Event;
 

@@ -39,7 +39,7 @@ namespace SOD_General.Taller.Registro_peticiones
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
             RegistrarSolicitudEquipo regi = new RegistrarSolicitudEquipo(vista);
-            vista.AbrirFormulario(regi);
+            vista.OpenForm(regi);
         }
 
         private void AgregarPeticiones_Resize(object sender, EventArgs e)

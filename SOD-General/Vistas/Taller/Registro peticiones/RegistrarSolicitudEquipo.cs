@@ -26,7 +26,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         {
             VisualizarPeticiones visuaPeti = new VisualizarPeticiones();
             MessageBox.Show("Orden registrada con todos los equipos del cliente");
-            vista.AbrirFormulario(visuaPeti);
+            vista.OpenForm(visuaPeti);
             
         }
 
