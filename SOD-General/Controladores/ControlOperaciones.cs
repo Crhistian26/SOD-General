@@ -430,18 +430,18 @@ namespace Controladores
         public Model_User User;
         public Model_Role Role;
 
-        public ControlOperaciones(Model_User User, Model_Role Role)
+        public ControlOperaciones(Model_User User)
         {
             this.User = User;
-            this.Role = Role;
+            this.Role = User._Role;
         }
 
 
-        public EventHandler GetEvents(Model_Role Role, string name_operation)
+        public EventHandler GetEvents(string name_operation)
         {
             EventHandler _Event = null;
 
-            List<Model_Operations> operations = Role._Operations;
+            List<Model_Operations> operations = this.Role._Operations;
 
             string operation_select = operations.Where(a => a._Operation == name_operation).Select(a => a._Operation).First();
 
@@ -451,11 +451,10 @@ namespace Controladores
                 {
                     case ("Ver asistencias"):
                         _Event = (object sender, EventArgs e) => 
-                        { 
-                            
+                        {
+                            MessageBox.Show("Hola");
                         };
                         return _Event;
-
 
                 }
             }
@@ -473,6 +472,7 @@ namespace Controladores
         {
             List<Model_Operations> operations = Role._Operations;
 
+            var GroupOperations = operations.GroupBy(a => a._Module).ToList();
 
         }
         #endregion

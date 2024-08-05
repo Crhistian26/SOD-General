@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos.Control_de_usuario
+namespace Modelos.Control_de_usuarios
 {
-    internal class Model_Operations
+    public class Model_Operations
     {
         public int Id_Operation { get; set; }
         public string _Module {  get; set; }
