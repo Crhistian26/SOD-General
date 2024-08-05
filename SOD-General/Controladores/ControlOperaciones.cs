@@ -11,6 +11,7 @@ using SOD_General.Vistas.Taller.Controles_de_Equipo;
 using SOD_General.Vistas.Taller.Registrar_Cotizacion;
 using SOD_General.Vistas.Taller.Registrar_entrada;
 using SOD_General.Vistas.Taller.Registro_peticiones;
+using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -297,8 +298,19 @@ namespace Controladores
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
-                        VisualizarEquiposControl ventana = new VisualizarEquiposControl();
-                        vista.AbrirFormulario(ventana);
+                        //VisualizarEquiposControl ventana = new VisualizarEquiposControl();
+                        //vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+                if (ope._Operation == "Ver Ordenes de entrada")
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        VisualizarPeticiones ventan = new VisualizarPeticiones();
+                        vista.AbrirFormulario(ventan);
                     };
 
                     return evento;
@@ -352,7 +364,16 @@ namespace Controladores
                     return evento;
                 }
 
+                if (ope._Operation == "Ver Cotizacion")
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        VisualizarCotizacion ventana = new VisualizarCotizacion();
+                        vista.AbrirFormulario(ventana);
+                    };
 
+                    return evento;
+                }
             }
 
             if (selec == "Asistencias")

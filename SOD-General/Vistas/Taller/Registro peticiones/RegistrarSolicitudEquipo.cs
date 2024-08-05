@@ -24,8 +24,15 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
 
         private void botones_Nuevos2_Click(object sender, System.EventArgs e)
         {
-            VisualizarPeticiones visuaPeti= new VisualizarPeticiones();
+            VisualizarPeticiones visuaPeti = new VisualizarPeticiones();
+            MessageBox.Show("Orden registrada con todos los equipos del cliente");
+            vista.AbrirFormulario(visuaPeti);
             
+        }
+
+        private void botones_Nuevos1_Click(object sender, System.EventArgs e)
+        {
+            MessageBox.Show("Equipo registrado en la tabla");
         }
     }
 }

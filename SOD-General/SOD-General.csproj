@@ -226,12 +226,6 @@
     <Compile Include="Vistas\Taller\Controles de Equipo\EditarControlEquipo.Designer.cs">
       <DependentUpon>EditarControlEquipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposControl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposControl.Designer.cs">
-      <DependentUpon>VisualizarEquiposControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposReparados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -412,9 +406,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\EditarControlEquipo.resx">
       <DependentUpon>EditarControlEquipo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposControl.resx">
-      <DependentUpon>VisualizarEquiposControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\VisualizarEquiposReparados.resx">
       <DependentUpon>VisualizarEquiposReparados.cs</DependentUpon>

@@ -220,7 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 450);
             this.Controls.Add(this.cR_SplitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VisualizarPeticiones";
             this.Text = "Ver Ordenes de entrada";
             this.Load += new System.EventHandler(this.VisualizarPeticiones_Load);

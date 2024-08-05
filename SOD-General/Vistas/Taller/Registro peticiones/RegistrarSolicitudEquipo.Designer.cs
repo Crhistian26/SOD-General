@@ -36,6 +36,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos4 = new CR_Subtitulos();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.fR_TextBox2 = new Designer.FR_TextBox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.fR_TextBox1 = new Designer.FR_TextBox();
@@ -55,7 +56,6 @@
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_Subtitulos5 = new CR_Subtitulos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -170,6 +170,24 @@
             this.cR_Subtitulos4.Size = new System.Drawing.Size(255, 28);
             this.cR_Subtitulos4.TabIndex = 27;
             this.cR_Subtitulos4.Text = "REGISTRAR SOLICITUD";
+            // 
+            // botones_Nuevos2
+            // 
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(958, 29);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(111, 37);
+            this.botones_Nuevos2.TabIndex = 101;
+            this.botones_Nuevos2.Text = "Registrar";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.botones_Nuevos2.Click += new System.EventHandler(this.botones_Nuevos2_Click);
             // 
             // fR_TextBox2
             // 
@@ -423,24 +441,7 @@
             this.botones_Nuevos1.TabIndex = 85;
             this.botones_Nuevos1.Text = "Cargar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            // 
-            // botones_Nuevos2
-            // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(958, 29);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(111, 37);
-            this.botones_Nuevos2.TabIndex = 101;
-            this.botones_Nuevos2.Text = "Registrar";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
-            this.botones_Nuevos2.Click += new System.EventHandler(this.botones_Nuevos2_Click);
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // RegistrarSolicitudEquipo
             // 

@@ -43,13 +43,13 @@
             this.fR_TextBox3 = new Designer.FR_TextBox();
             this.cR_Subtitulos2 = new CR_Subtitulos();
             this.fR_TextBox1 = new Designer.FR_TextBox();
-            this.cR_Subtitulos1 = new CR_Subtitulos();
             this.fR_TextBox2 = new Designer.FR_TextBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos6 = new CR_Subtitulos();
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
+            this.cR_Subtitulos1 = new CR_Subtitulos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -93,6 +93,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_Subtitulos1);
             this.panel1.Controls.Add(this.cR_Subtitulos8);
             this.panel1.Controls.Add(this.fR_TextBox5);
             this.panel1.Controls.Add(this.cR_LabelDown1);
@@ -105,7 +106,6 @@
             this.panel1.Controls.Add(this.fR_TextBox3);
             this.panel1.Controls.Add(this.cR_Subtitulos2);
             this.panel1.Controls.Add(this.fR_TextBox1);
-            this.panel1.Controls.Add(this.cR_Subtitulos1);
             this.panel1.Controls.Add(this.fR_TextBox2);
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_Subtitulos6);
@@ -274,11 +274,11 @@
             this.cR_Subtitulos2.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cR_Subtitulos2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos2.Location = new System.Drawing.Point(24, 103);
+            this.cR_Subtitulos2.Location = new System.Drawing.Point(24, 196);
             this.cR_Subtitulos2.Name = "cR_Subtitulos2";
-            this.cR_Subtitulos2.Size = new System.Drawing.Size(80, 21);
+            this.cR_Subtitulos2.Size = new System.Drawing.Size(81, 21);
             this.cR_Subtitulos2.TabIndex = 91;
-            this.cR_Subtitulos2.Text = "Contacto";
+            this.cR_Subtitulos2.Text = "Direccion";
             // 
             // fR_TextBox1
             // 
@@ -297,21 +297,6 @@
             this.fR_TextBox1.TabIndex = 90;
             this.fR_TextBox1.texts = "fafa";
             this.fR_TextBox1.UnderlinedStyle = false;
-            // 
-            // cR_Subtitulos1
-            // 
-            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_Subtitulos1.AutoSize = true;
-            this.cR_Subtitulos1.BackColor = System.Drawing.Color.Transparent;
-            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(31, 196);
-            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(81, 21);
-            this.cR_Subtitulos1.TabIndex = 89;
-            this.cR_Subtitulos1.Text = "Direccion";
             // 
             // fR_TextBox2
             // 
@@ -415,6 +400,21 @@
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
             // 
+            // cR_Subtitulos1
+            // 
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos1.AutoSize = true;
+            this.cR_Subtitulos1.BackColor = System.Drawing.Color.Transparent;
+            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(24, 102);
+            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(80, 21);
+            this.cR_Subtitulos1.TabIndex = 101;
+            this.cR_Subtitulos1.Text = "Contacto";
+            // 
             // AgregarPeticiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,7 +454,6 @@
         private Designer.FR_TextBox fR_TextBox3;
         private CR_Subtitulos cR_Subtitulos2;
         private Designer.FR_TextBox fR_TextBox1;
-        private CR_Subtitulos cR_Subtitulos1;
         private Designer.FR_TextBox fR_TextBox2;
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private CR_Subtitulos cR_Subtitulos6;
@@ -462,5 +461,6 @@
         private CR_LabelDown cR_LabelDown1;
         private CR_Subtitulos cR_Subtitulos8;
         private Designer.FR_TextBox fR_TextBox5;
+        private CR_Subtitulos cR_Subtitulos1;
     }
 }
