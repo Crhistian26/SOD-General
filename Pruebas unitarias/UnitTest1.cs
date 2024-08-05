@@ -20,21 +20,21 @@ namespace Pruebas_unitarias
         public void TestMethod1()
         {
 
-            List<Model_Operations> model_Operations = new List<Model_Operations>
+            List<Model_Operations> operaciones = new List<Model_Operations>
             {
                 new Model_Operations(1,"Redaccion","ver"),
                 new Model_Operations(2,"Redaccion","agregar"),
                 new Model_Operations(3,"Empleados", "Ver asistencias")
             };
 
-            Model_Role role = new Model_Role(1, "Redactor", model_Operations);
+            Model_Role role = new Model_Role(1, "Redactor", operaciones);
 
-            Model_User user = new Model_User(1, 2, role, "Juanito", "123456");
+            Model_User usuario = new Model_User(1, 2, role, "Juanito", "123456");
 
-            ControlOperaciones control = new ControlOperaciones(user);
+            ControlOperaciones control = new ControlOperaciones(usuario);
 
-            EventHandler e = control.GetEvents("Ver asistencias");
-
+            EventHandler e = control.GetEvents("Ver ");
+            
             Assert.IsNotNull(e);
         }
     }

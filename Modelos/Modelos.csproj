@@ -73,6 +73,7 @@
     <Compile Include="Taller\Equipment.cs" />
     <Compile Include="Taller\EquipStatus.cs" />
     <Compile Include="Taller\EquipType.cs" />
+    <Compile Include="Taller\Locations.cs" />
     <Compile Include="Taller\Operations.cs" />
     <Compile Include="Taller\OutputEquip.cs" />
     <Compile Include="Taller\Petition.cs" />

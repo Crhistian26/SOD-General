@@ -42,15 +42,6 @@
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.cR_DataGriedView2 = new CR_DataGriedView();
-            this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peticiones_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cR_Subtitulos12 = new CR_Subtitulos();
             this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
@@ -82,6 +73,14 @@
             this.cR_Subtitulos5 = new CR_Subtitulos();
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.fR_TextBox3 = new Designer.FR_TextBox();
+            this.Peticiones_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peticiones_Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peticiones_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -264,7 +263,6 @@
             this.Column3,
             this.Peticiones_Date,
             this.Column1,
-            this.Column6,
             this.Column4});
             this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView2.EnableHeadersVisualStyles = false;
@@ -274,69 +272,6 @@
             this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cR_DataGriedView2.Size = new System.Drawing.Size(1070, 329);
             this.cR_DataGriedView2.TabIndex = 79;
-            // 
-            // Peticiones_Client
-            // 
-            this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Client.HeaderText = "Cliente";
-            this.Peticiones_Client.Name = "Peticiones_Client";
-            this.Peticiones_Client.ReadOnly = true;
-            this.Peticiones_Client.Width = 81;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Equipo";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Peticiones_Contact
-            // 
-            this.Peticiones_Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Contact.HeaderText = "Material";
-            this.Peticiones_Contact.Name = "Peticiones_Contact";
-            this.Peticiones_Contact.ReadOnly = true;
-            this.Peticiones_Contact.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Cant de materiales";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Coste";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Peticiones_Date
-            // 
-            this.Peticiones_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Peticiones_Date.HeaderText = "Fecha";
-            this.Peticiones_Date.Name = "Peticiones_Date";
-            this.Peticiones_Date.ReadOnly = true;
-            this.Peticiones_Date.Width = 73;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Detalle";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Aprobar";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Editar";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // panel4
             // 
@@ -794,6 +729,61 @@
             this.fR_TextBox3.texts = "fafa";
             this.fR_TextBox3.UnderlinedStyle = false;
             // 
+            // Peticiones_Client
+            // 
+            this.Peticiones_Client.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Client.HeaderText = "Cliente";
+            this.Peticiones_Client.Name = "Peticiones_Client";
+            this.Peticiones_Client.ReadOnly = true;
+            this.Peticiones_Client.Width = 81;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Equipo";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Peticiones_Contact
+            // 
+            this.Peticiones_Contact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Contact.HeaderText = "Material";
+            this.Peticiones_Contact.Name = "Peticiones_Contact";
+            this.Peticiones_Contact.ReadOnly = true;
+            this.Peticiones_Contact.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Cant de materiales";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Coste";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Peticiones_Date
+            // 
+            this.Peticiones_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Peticiones_Date.HeaderText = "Fecha";
+            this.Peticiones_Date.Name = "Peticiones_Date";
+            this.Peticiones_Date.ReadOnly = true;
+            this.Peticiones_Date.Width = 73;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Detalle";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Editar";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // VisualizarCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -865,6 +855,8 @@
         private CR_DateTimePicker cR_DateTimePicker1;
         private CR_Checkbox cR_Checkbox1;
         private CR_Checkbox cR_Checkbox2;
+        private CR_LabelUp cR_LabelUp4;
+        private Cr_Textbox cr_Textbox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Contact;
@@ -872,9 +864,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticiones_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private CR_LabelUp cR_LabelUp4;
-        private Cr_Textbox cr_Textbox1;
     }
 }

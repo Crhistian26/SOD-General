@@ -30,13 +30,11 @@
         {
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.cR_Checkbox1 = new CR_Checkbox();
             this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
-            this.soD_ComboBox1 = new SOD_ComboBox();
-            this.cR_LabelDown2 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.fR_TextBox1 = new Designer.FR_TextBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cR_Checkbox1 = new CR_Checkbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -60,12 +58,10 @@
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos2);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.soD_ComboBox1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.fR_TextBox1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(332, 346);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(314, 321);
             this.cR_SplitContainer1.SplitterDistance = 65;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -85,6 +81,18 @@
             this.cR_Subtitulos1.Text = "Editar Control \r\nde calidad";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // cR_Checkbox1
+            // 
+            this.cR_Checkbox1.AutoSize = true;
+            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox1.Location = new System.Drawing.Point(115, 122);
+            this.cR_Checkbox1.Name = "cR_Checkbox1";
+            this.cR_Checkbox1.Size = new System.Drawing.Size(70, 24);
+            this.cR_Checkbox1.TabIndex = 11;
+            this.cR_Checkbox1.Text = "Activo";
+            this.cR_Checkbox1.UseVisualStyleBackColor = true;
+            // 
             // botones_Nuevos2
             // 
             this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
@@ -95,39 +103,19 @@
             this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(171, 209);
+            this.botones_Nuevos2.Location = new System.Drawing.Point(173, 171);
             this.botones_Nuevos2.Name = "botones_Nuevos2";
             this.botones_Nuevos2.Size = new System.Drawing.Size(106, 42);
             this.botones_Nuevos2.TabIndex = 10;
             this.botones_Nuevos2.Text = "Eliminar";
             this.botones_Nuevos2.UseVisualStyleBackColor = false;
             // 
-            // soD_ComboBox1
-            // 
-            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Location = new System.Drawing.Point(40, 112);
-            this.soD_ComboBox1.Name = "soD_ComboBox1";
-            this.soD_ComboBox1.Size = new System.Drawing.Size(222, 27);
-            this.soD_ComboBox1.TabIndex = 9;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(38, 89);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(112, 20);
-            this.cR_LabelDown2.TabIndex = 8;
-            this.cR_LabelDown2.Text = "Tipo de equipo";
-            // 
             // cR_LabelDown1
             // 
             this.cR_LabelDown1.AutoSize = true;
             this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(38, 5);
+            this.cR_LabelDown1.Location = new System.Drawing.Point(83, 35);
             this.cR_LabelDown1.Name = "cR_LabelDown1";
             this.cR_LabelDown1.Size = new System.Drawing.Size(141, 20);
             this.cR_LabelDown1.TabIndex = 7;
@@ -139,7 +127,7 @@
             this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
             this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
             this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Location = new System.Drawing.Point(40, 33);
+            this.fR_TextBox1.Location = new System.Drawing.Point(46, 63);
             this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.fR_TextBox1.Multiline = true;
             this.fR_TextBox1.Name = "fR_TextBox1";
@@ -160,30 +148,18 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(39, 209);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(41, 171);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(110, 39);
             this.botones_Nuevos1.TabIndex = 5;
             this.botones_Nuevos1.Text = "Editar ";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
-            // cR_Checkbox1
-            // 
-            this.cR_Checkbox1.AutoSize = true;
-            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(95, 157);
-            this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(70, 24);
-            this.cR_Checkbox1.TabIndex = 11;
-            this.cR_Checkbox1.Text = "Activo";
-            this.cR_Checkbox1.UseVisualStyleBackColor = true;
-            // 
             // EditarControles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 346);
+            this.ClientSize = new System.Drawing.Size(314, 321);
             this.Controls.Add(this.cR_SplitContainer1);
             this.Name = "EditarControles";
             this.Text = "EditarControles";
@@ -200,8 +176,6 @@
         #endregion
 
         private CR_SplitContainer cR_SplitContainer1;
-        private SOD_ComboBox soD_ComboBox1;
-        private CR_LabelDown cR_LabelDown2;
         private CR_LabelDown cR_LabelDown1;
         private Designer.FR_TextBox fR_TextBox1;
         private Diseños.Botones_Nuevos botones_Nuevos1;

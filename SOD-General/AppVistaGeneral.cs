@@ -43,6 +43,7 @@ namespace SOD_General
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
             controller.Agregar_Items();
+
         }
 
         public void AbrirFormulario(Form formulario)

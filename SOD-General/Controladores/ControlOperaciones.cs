@@ -224,6 +224,11 @@ namespace Controladores
                     a = false;
                 }
 
+                if (id == "Ver Entradas")
+                {
+                    a = false;
+                }
+
 
             }
             //en caso de que no se ejecutara la lista negra a sera igual al valor con el que fue definida (true)
@@ -309,8 +314,19 @@ namespace Controladores
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
-                        VisualizarPeticiones ventan = new VisualizarPeticiones();
-                        vista.AbrirFormulario(ventan);
+                        VisualizarPeticiones ventana = new VisualizarPeticiones();
+                        vista.AbrirFormulario(ventana);
+                    };
+
+                    return evento;
+                }
+
+                if (ope._Operation == "Ver Entrada")
+                {
+                    EventHandler evento = delegate (object sender, EventArgs e)
+                    {
+                        VisualizarEntradas ventana = new VisualizarEntradas();
+                        vista.AbrirFormulario(ventana);
                     };
 
                     return evento;
@@ -451,6 +467,14 @@ namespace Controladores
                 {
                     case ("Ver asistencias"):
                         _Event = (object sender, EventArgs e) => 
+                        {
+                            MessageBox.Show("Hola");
+                        };
+                        return _Event;
+                        
+
+                    case ("Ver Entradas"):
+                        _Event = (object sender, EventArgs e) =>
                         {
                             MessageBox.Show("Hola");
                         };

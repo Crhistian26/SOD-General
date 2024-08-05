@@ -71,5 +71,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         {
 
         }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cr_ComboBox1 = new Cr_ComboBox();
+            this.Cb_ClienteSucursal = new Cr_ComboBox();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.txtCedula = new Cr_Textbox();
@@ -80,7 +80,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.splitContainer1.Panel1.Controls.Add(this.cr_ComboBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.Cb_ClienteSucursal);
             this.splitContainer1.Panel1.Controls.Add(this.cR_LabelUp1);
             this.splitContainer1.Panel1.Controls.Add(this.cR_Subtitulos4);
             this.splitContainer1.Panel1.Controls.Add(this.txtCedula);
@@ -90,24 +90,24 @@
             this.splitContainer1.Panel2.Controls.Add(this.panelCliente);
             this.splitContainer1.Panel2.Controls.Add(this.panelSucursal);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(983, 409);
             this.splitContainer1.SplitterDistance = 95;
             this.splitContainer1.TabIndex = 1;
             // 
-            // cr_ComboBox1
+            // Cb_ClienteSucursal
             // 
-            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
-            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Location = new System.Drawing.Point(782, 52);
-            this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(198, 33);
-            this.cr_ComboBox1.TabIndex = 76;
-            this.cr_ComboBox1.Text = "Cliente o Sucursal";
+            this.Cb_ClienteSucursal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Cb_ClienteSucursal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Cb_ClienteSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.Cb_ClienteSucursal.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.Cb_ClienteSucursal.ForeColor = System.Drawing.Color.White;
+            this.Cb_ClienteSucursal.FormattingEnabled = true;
+            this.Cb_ClienteSucursal.Location = new System.Drawing.Point(782, 52);
+            this.Cb_ClienteSucursal.Name = "Cb_ClienteSucursal";
+            this.Cb_ClienteSucursal.Size = new System.Drawing.Size(198, 33);
+            this.Cb_ClienteSucursal.TabIndex = 76;
+            this.Cb_ClienteSucursal.Text = "Cliente o Sucursal";
+            this.Cb_ClienteSucursal.SelectedIndexChanged += new System.EventHandler(this.Cb_ClienteSucursal_SelectedIndexChanged);
             // 
             // cR_LabelUp1
             // 
@@ -158,9 +158,9 @@
             this.panelCliente.Controls.Add(this.txtNumero1);
             this.panelCliente.Controls.Add(this.cR_Subtitulos3);
             this.panelCliente.Controls.Add(this.txtDireccion);
-            this.panelCliente.Location = new System.Drawing.Point(0, 4);
+            this.panelCliente.Location = new System.Drawing.Point(8, 6);
             this.panelCliente.Name = "panelCliente";
-            this.panelCliente.Size = new System.Drawing.Size(367, 303);
+            this.panelCliente.Size = new System.Drawing.Size(361, 286);
             this.panelCliente.TabIndex = 44;
             // 
             // txtCliente
@@ -219,6 +219,7 @@
             this.btn_AgregarClientes.TabIndex = 62;
             this.btn_AgregarClientes.Text = "Agregar";
             this.btn_AgregarClientes.UseVisualStyleBackColor = false;
+            this.btn_AgregarClientes.Click += new System.EventHandler(this.btn_AgregarClientes_Click_1);
             // 
             // txtNumero2
             // 
@@ -318,9 +319,9 @@
             this.panelSucursal.Controls.Add(this.cr_Textbox4);
             this.panelSucursal.Controls.Add(this.cR_Subtitulos12);
             this.panelSucursal.Controls.Add(this.cr_Textbox5);
-            this.panelSucursal.Location = new System.Drawing.Point(29, 22);
+            this.panelSucursal.Location = new System.Drawing.Point(8, 6);
             this.panelSucursal.Name = "panelSucursal";
-            this.panelSucursal.Size = new System.Drawing.Size(327, 267);
+            this.panelSucursal.Size = new System.Drawing.Size(364, 286);
             this.panelSucursal.TabIndex = 46;
             // 
             // txtSucursal
@@ -478,10 +479,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
@@ -501,6 +502,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarClientes";
             this.Text = "AgregarClientes";
+            this.Load += new System.EventHandler(this.AgregarClientes_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -548,6 +550,6 @@
         private CR_Subtitulos cR_Subtitulos12;
         private Cr_Textbox cr_Textbox5;
         private CR_DataGriedView cR_DataGriedView1;
-        private Cr_ComboBox cr_ComboBox1;
+        private Cr_ComboBox Cb_ClienteSucursal;
     }
 }

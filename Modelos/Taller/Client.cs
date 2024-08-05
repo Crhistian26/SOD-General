@@ -4,7 +4,6 @@
     {
         public int? IdClient { get; set; }
         public string _NameBranch { get; set; }
-        public string _Name { get; set; }
         public string _Address { get; set; }
         public string _Identifier { get; set; }
         public string Phone_1 { get; set; }
@@ -21,11 +20,10 @@
         /// <param name="phone1">Teléfono principal del cliente.</param>
         /// <param name="phone2">Teléfono secundario del cliente.</param>
         /// <param name="contact">Contacto del cliente.</param>
-        public Client(int? idClient, string nameBranch, string name, string address, string identifier, string phone1, string phone2, string contact)
+        public Client(int? idClient, string nameBranch, string address, string identifier, string phone1, string phone2, string contact)
         {
             IdClient = idClient;
             _NameBranch = nameBranch;
-            _Name = name;
             _Address = address;
             _Identifier = identifier;
             Phone_1 = phone1;

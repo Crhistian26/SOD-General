@@ -233,6 +233,7 @@
             this.botones_Nuevos1.TabIndex = 10;
             this.botones_Nuevos1.Text = "botones_Nuevos1";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_LabelDown3
             // 

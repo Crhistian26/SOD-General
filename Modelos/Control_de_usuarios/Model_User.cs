@@ -22,5 +22,7 @@ namespace Modelos.Control_de_usuarios
             this.User_Name = user_Name;
             this._Password = password;
         }
+
+
     }
 }

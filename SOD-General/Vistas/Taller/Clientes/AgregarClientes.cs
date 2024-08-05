@@ -1,6 +1,7 @@
 ﻿using Modelos.Taller;
 using SOD_General.Controladores;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 
@@ -10,15 +11,19 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
     {
         //instancia del modelo de clientes
         Client cliente;
-
+        Locations locations;
+        List<Client> listaCliente = new List<Client>();
+       
         //instancia de la clase que se encargara de agregar, editar y eliminar los clientes
         ClientController clientContr = new ClientController();
 
         public AgregarClientes()
         {
             InitializeComponent();
+            
         }
 
+        
 
 
         private void fR_TextBox7__TextChanged(object sender, EventArgs e)
@@ -28,38 +33,53 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
 
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
         {
-
-            if (txtCliente.Text.Trim().Length == 0)
-            {
-                string Sucursal = "No especificado";
-                cliente = new Client(null, Sucursal, txtSucursal.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
-                clientContr.AgregarCliente(cliente);
-            }
-            else
-            {
-
-                cliente = new Client(null, txtSucursal.Text, txtCliente.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
-
-                cliente = new Client(null, txtCliente.Text, txtSucursal.Text, txtDireccion.Text, txtCedula.Text, txtNumero1.Text, txtNumero2.Text, txtContacto.Text);
-
-                clientContr.AgregarCliente(cliente);
-            }
+           
+            
 
         }
 
-        private void txtContacto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            //debera abrir formulario para crear una marca
+            
+        }
+
+        private void AgregarClientes_Load(object sender, EventArgs e)
+        {
+            Cb_ClienteSucursal.Items.Add("Cliente");
+            Cb_ClienteSucursal.Items.Add("Sucursal");
+
+            
+        }
+
+        private void Cb_ClienteSucursal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Cb_ClienteSucursal.SelectedIndex == 0)
+            {
+                panelCliente.Visible = true;
+                panelSucursal.Visible = false;
+            }
+            else if (Cb_ClienteSucursal.SelectedIndex == 1)
+            {
+                panelSucursal.Visible = true;
+                panelCliente.Visible = false;
+            }
+        }
+
+        private void btn_AgregarClientes_Click_1(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text.Trim().Length == 0 || txtCedula.Text.Trim().Length == 0 || txtContacto.Text.Trim().Length == 0 || txtNumero1.Text.Trim().Length == 0 || txtNumero2.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Por favor, rellene todos los campos");
+            }
+            else
+            {
+                 cliente = new Client(null, txtCliente.Text.ToString(), txtDireccion.Text.ToString(), txtCedula.Text.ToString(), txtNumero1.Text.ToString(), txtNumero2.Text.ToString(), txtContacto.Text.ToString());
+
+                 clientContr.AgregarCliente(cliente);
+                
+            }
         }
     }
 }

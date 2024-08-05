@@ -62,7 +62,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(711, 450);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(635, 450);
             this.cR_SplitContainer1.SplitterDistance = 80;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -75,7 +75,7 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(243, 9);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(217, 23);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(168, 31);
             this.cR_Subtitulos1.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(711, 366);
+            this.panel1.Size = new System.Drawing.Size(635, 366);
             this.panel1.TabIndex = 0;
             // 
             // cR_DataGriedView1
@@ -112,7 +112,7 @@
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(711, 366);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(635, 366);
             this.cR_DataGriedView1.TabIndex = 1;
             this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
             // 
@@ -151,9 +151,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 450);
+            this.ClientSize = new System.Drawing.Size(635, 450);
             this.Controls.Add(this.cR_SplitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VisualizarEntradas";
             this.Text = "Ver entradas de equipos";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
