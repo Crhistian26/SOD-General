@@ -26,12 +26,8 @@ namespace SOD_General
 
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            controller.Agregar_Items();
-
-=======
             controller.AddItemsInMenustrip();
->>>>>>> Stashed changes
+
         }
 
         public void AbrirFormulario(Form formulario)

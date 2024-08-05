@@ -19,7 +19,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         public Registros_GeneralesAsistencias(AppVistaGeneral app)
         {
             InitializeComponent();
-            operaciones = new ControlOperaciones(app);
+            //operaciones = new ControlOperaciones(app);
         }
 
         public void CentrarElementos()
@@ -106,14 +106,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             Task centrar = new Task(() => { CentrarElementos(); });
             llenarlista.Start();
             centrar.Start();
-            if (operaciones.BuscarAutorizacion("Agregar asistencias"))
-            {
-                botones_Nuevos1.Visible = true;
-            }
-            else
-            {
-                botones_Nuevos1.Visible = false;
-            }
+            //if (operaciones.BuscarAutorizacion("Agregar asistencias"))
+            //{
+            //    botones_Nuevos1.Visible = true;
+            //}
+            //else
+            //{
+            //    botones_Nuevos1.Visible = false;
+            //}
             await centrar;
             await llenarlista;
             OrganizarDataGriedFecha();      

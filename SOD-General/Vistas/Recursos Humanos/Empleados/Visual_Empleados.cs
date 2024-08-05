@@ -28,7 +28,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
         public Visual_Empleados(AppVistaGeneral app)
         {
             InitializeComponent();
-            operaciones = new ControlOperaciones(app);
+            //operaciones = new ControlOperaciones(app);
             departamentos = controlRegistros.Obtener_Departamentos();
         }
         public void CentrarElementos()

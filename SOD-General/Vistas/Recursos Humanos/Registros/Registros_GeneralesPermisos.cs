@@ -21,7 +21,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         public Registros_GeneralesPermisos(AppVistaGeneral app)
         {
             InitializeComponent();
-            operaciones = new ControlOperaciones(app);
+            //operaciones = new ControlOperaciones(app);
             empleados = control.Obtener_Empleados();
             permisos = control.Obtener_Permisos();
         }
@@ -93,14 +93,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             CentrarElementos();
             cR_DataGriedView1.Rows.Add(1, "Fernando Acosta", "Enfermedad", "Lunes 27 de mayo", "Jueves 30 de mayo");
             cR_DataGriedView1.Rows.Add(1, "Maria Fernandez", "Diligencia", "Lunes 27 de mayo (10:30)", "Lunes 27 de mayo (2:15)");
-            if (operaciones.BuscarAutorizacion("Agregar permisos"))
-            {
-                botones_Nuevos5.Visible = true;
-            }
-            else
-            {
-                botones_Nuevos5.Visible = false;
-            }
+            //if (operaciones.BuscarAutorizacion("Agregar permisos"))
+            //{
+            //    botones_Nuevos5.Visible = true;
+            //}
+            //else
+            //{
+            //    botones_Nuevos5.Visible = false;
+            //}
             LlenarComboEmpleados();
             OrganizarDataGriedFecha();
         }
@@ -114,16 +114,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             if (e.RowIndex != -1)
             {
-                if (operaciones.BuscarAutorizacion("Editar permisos"))
-                {
-                    Permiso_Details ver = new Permiso_Details();
-                    ver.Show();
-                }
-                else
-                {
-                    Permiso_Details ver = new Permiso_Details(0);
-                    ver.Show();
-                }
+                //if (operaciones.BuscarAutorizacion("Editar permisos"))
+                //{
+                //    Permiso_Details ver = new Permiso_Details();
+                //    ver.Show();
+                //}
+                //else
+                //{
+                //    Permiso_Details ver = new Permiso_Details(0);
+                //    ver.Show();
+                //}
 
             }
         }
