@@ -60,6 +60,9 @@
     <Compile Include="AsistenciasYPermisos\Record_Attendance.cs" />
     <Compile Include="AsistenciasYPermisos\Record_Permission.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Control_Autorizaciones\Model_Operations.cs" />
+    <Compile Include="Control_Autorizaciones\Model_Role.cs" />
+    <Compile Include="Control_Autorizaciones\Model_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Taller\Brand.cs" />
     <Compile Include="Taller\Client.cs" />
@@ -96,7 +99,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Control de usuarios\" />
+    <Folder Include="Control_de_usuario\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

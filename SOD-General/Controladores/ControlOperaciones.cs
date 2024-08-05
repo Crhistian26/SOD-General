@@ -1,4 +1,5 @@
-﻿using Modelos.Usuarios_Empleados.Control_de_usuario;
+﻿using Modelos.Control_de_usuarios;
+using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Registro_peticiones;
@@ -13,12 +14,14 @@ using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace Controladores
 {
     public class ControlOperaciones
     {
+        #region Anterior filtro de operaciones
 
         AppVistaGeneral vista;
         List<C_Operation> operations;
@@ -189,21 +192,21 @@ namespace Controladores
             else if (selecc == "Recepcion")
             {
 
-                if(id != null)
+                if (id != null)
                 {
                     if (id == "Editar Entrada")
                     {
                         a = false;
                     }
 
-                    if ( id == "Editar Clientes") 
+                    if (id == "Editar Clientes")
                     {
                         a = false;
                     }
                 }
             }
 
-            else if(selecc == "Cotizacion")
+            else if (selecc == "Cotizacion")
             {
                 if (id == "Editar Cotizacion")
                 {
@@ -308,7 +311,7 @@ namespace Controladores
                 {
                     EventHandler evento = delegate (object sender, EventArgs e)
                     {
-                        AgregarPeticiones ventana = new AgregarPeticiones();
+                        AgregarPeticiones ventana = new AgregarPeticiones(vista);
                         vista.AbrirFormulario(ventana);
 
                     };
@@ -398,179 +401,59 @@ namespace Controladores
         }
 
 
+        #endregion
 
 
+        #region Nuevo filtro de operaciones
+
+        public Model_User User;
+        public Model_Role Role;
+
+        public ControlOperaciones(Model_User User, Model_Role Role)
+        {
+            this.User = User;
+            this.Role = Role;
+        }
 
 
+        public EventHandler GetEvents(Model_Role Role, string name_operation)
+        {
+            EventHandler _Event = null;
+
+            List<Model_Operations> operations = Role._Operations;
+
+            string operation_select = operations.Where(a => a._Operation == name_operation).Select(a => a._Operation).First();
+
+            if (operation_select != null)
+            {
+                switch(operation_select)
+                {
+                    case ("Ver asistencias"):
+                        _Event = (object sender, EventArgs e) => 
+                        { 
+                            
+                        };
+                        return _Event;
 
 
+                }
+            }
+            else
+            {
+                _Event = null;
+            }
 
 
+            return _Event;
+
+        }
+
+        public void AddItemsInMenustrip(Model_Role Role)
+        {
+            List<Model_Operations> operations = Role._Operations;
 
 
-
-
-
-
-
-
-
-
-
-
-
-        ///El codigo antes del de arriba, lo cambiamos ya que consideramos que el de arriba es mas optimo.
-
-
-        //public void Comprobar_Autorizaciones()
-        //{
-        //    string depart = "vista.Departamento";
-        //    switch(depart)
-        //    {
-        //        case "Recepcion taller":
-        //            ToolStripMenuItem elemento;
-        //            List<ToolStripMenuItem> elementos = Recepcion_Taller();
-        //            elemento = LlenarMenu(elementos);
-
-        //            vista.cR_MenuStrip1.Items.Add(elemento);
-        //            break;
-
-
-        //        case "Reparacion taller":
-        //            ToolStripMenuItem elemento2 = null;
-
-
-        //            vista.cR_MenuStrip1.Items.Add(elemento2);
-        //            break;
-
-
-        //        case "Recursos Humanos":
-        //            ToolStripMenuItem elemento3;
-
-        //            List<ToolStripMenuItem> elementos3 = Recursos_Humanos();
-        //            elemento3 = LlenarMenu(elementos3);
-
-        //            vista.cR_MenuStrip1.Items.Add(elemento3);
-        //            break;
-
-
-        //        case "Ventas":
-        //            ToolStripMenuItem elemento4 = null;
-
-        //            elemento = LlenarMenu(null);
-
-        //            vista.cR_MenuStrip1.Items.Add(elemento4);
-        //            break;
-
-
-        //        case "Almacen":
-        //            ToolStripMenuItem elemento5 = null;
-
-        //            elemento = LlenarMenu(null);
-
-        //            vista.cR_MenuStrip1.Items.Add(elemento5);
-        //            break;
-        //    }
-        //}
-
-        ////La funcion que me almacena cada uno de los items en uno solo.
-        //public ToolStripMenuItem LlenarMenu(List<ToolStripMenuItem> items)
-        //{
-        //    //El encabezado y la lista de items.
-        //    ToolStripMenuItem cabeza = new ToolStripMenuItem("vista.Departamento");
-
-        //    //El bucle que llena el encabezado.
-        //    foreach (ToolStripMenuItem item in items)
-        //    {
-        //        cabeza.DropDownItems.Add(item);
-        //    }
-        //    //Agregar el encabezado al menustrip.
-        //    return cabeza;
-
-        //}
-
-        //El apartado de taller, en caso que sea recepcion taller se ejecutara este.
-        //public List<ToolStripMenuItem> Recepcion_Taller()
-        //{
-        //    //La lista que retornara
-        //    List<ToolStripMenuItem> lista = new List<ToolStripMenuItem>();
-
-        //    //El elemento de el menustrip abrira el ver peticiones.
-        //    ToolStripMenuItem Peticiones = new ToolStripMenuItem();
-        //    Peticiones.Text = "Peticiones";
-        //    Peticiones.Click += Peticiones_Click;
-        //    lista.Add(Peticiones);
-
-
-        //    return lista;
-        //}
-
-        //public List<ToolStripMenuItem> Recursos_Humanos()
-        //{
-        //    //La lista que retornara
-        //    List<ToolStripMenuItem> lista = new List<ToolStripMenuItem>();
-
-        //    ToolStripMenuItem registrosP = new ToolStripMenuItem();
-        //    registrosP.Text = "Registro de permisos";
-        //    registrosP.Click += RegistrosP_Click;
-        //    lista.Add(registrosP);
-
-        //    ToolStripMenuItem registrosA = new ToolStripMenuItem();
-        //    registrosA.Text = "Registro de asistencias";
-        //    registrosA.Click += RegistrosA_Click; 
-        //    lista.Add(registrosA);
-
-        //    //El elemento de el menustrip abrira el empleados.
-        //    ToolStripMenuItem Emp = new ToolStripMenuItem();
-        //    Emp.Text = "Empleados";
-        //    Emp.Click += Empleados_Click;
-        //    lista.Add(Emp);
-
-        //    ToolStripMenuItem motivos = new ToolStripMenuItem();
-        //    motivos.Text = "Motivos";
-        //    motivos.Click += Motivos_Click; ;
-        //    lista.Add(motivos);
-
-        //    return lista;
-        //}
-
-        //private void Agregar_Click(object sender, EventArgs e)
-        //{
-        //    vista.AbrirFormulario(new Agregar_Permiso());
-        //}
-
-        //private void AgregarA_Click(object sender, EventArgs e)
-        //{
-        //    vista.AbrirFormulario(new Agregar_Asistencias());
-        //}
-
-        //private void RegistrosA_Click(object sender, EventArgs e)
-        //{
-        //    vista.AbrirFormulario(new Registros_GeneralesAsistencias());
-        //}
-
-        //private void Motivos_Click(object sender, EventArgs e)
-        //{
-        //    vista.AbrirFormulario(new Visual_Motivos());
-        //}
-
-
-        ////La funcion que tendra el elemento peticiones
-        //private void Peticiones_Click(object sender, EventArgs e)
-        //{
-        //    vista.AbrirFormulario(new VisualizarPeticiones());
-        //}
-
-        //private void Empleados_Click(object sender, EventArgs e)
-        //{
-        //    vista.AbrirFormulario(new Visual_Empleados());
-        //}
-
-        //private void RegistrosP_Click(object sender, EventArgs e)
-        //{
-        //    vista.AbrirFormulario(new Registros_GeneralesPermisos());
-        //}
-
-
+        }
+        #endregion
     }
 }
