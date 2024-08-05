@@ -43,8 +43,84 @@ namespace SOD_General.Controladores
             }
         }
 
-      
-      
+        /*
+         if (selec == "Empleados")
+
+              {
+                  //En caso que el id de la operacion sea el 5 (visualizar empleados) se creara el evento de abrir ese formulario.
+                  if (ope.Id == 23)
+                  {
+                      //El evento.
+                      EventHandler evento = delegate (object sender, EventArgs e)
+                      {
+                          //El metodo que tiene el evento.
+                          Empleados ventana = new Empleados(vista);
+                          vista.AbrirFormulario(ventana);
+                      };
+
+                      //Se retorna el evento.
+                      return evento;
+                  }
+
+                  if (ope._Operation == "Ver empleados")
+                  {
+                      EventHandler evento = delegate (object sender, EventArgs e)
+                      {
+                          
+                      };
+
+                      return evento;
+                  }
+
+              }
+
+  if (selec == "Asistencias")
+              {
+                  if (ope._Operation == "Ver asistencias")
+                  {
+                      EventHandler evento = delegate (object sender, EventArgs e)
+                      {
+                          Registros_GeneralesAsistencias ventana = new Registros_GeneralesAsistencias(vista);
+                          vista.AbrirFormulario(ventana);
+                      };
+
+                      return evento;
+                  }
+
+              }
+
+              if (selec == "Permisos")
+              {
+                  if (ope._Operation == "Ver permisos")
+                  {
+                      EventHandler evento = delegate (object sender, EventArgs e)
+                      {
+                          Registros_GeneralesPermisos ventana = new Registros_GeneralesPermisos(vista);
+                          vista.AbrirFormulario(ventana);
+                      };
+
+                      return evento;
+                  }
+              }
+
+              if (selec == "Reportes de RRHH")
+              {
+                  if (ope._Operation == "Exportar reporte" && ope.Module_Name == "Reportes de RRHH")
+                  {
+                      EventHandler evento = delegate (object sender, EventArgs e)
+                      {
+                          ExportarReportesRRHH ventana = new ExportarReportesRRHH();
+                          vista.AbrirFormulario(ventana);
+                      };
+
+                      return evento;
+                  }
+              }
+
+
+
+         */
+
     }
 
 

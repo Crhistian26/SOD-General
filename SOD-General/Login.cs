@@ -1,4 +1,5 @@
 ﻿using Controladores;
+using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
@@ -35,14 +36,14 @@ namespace SOD_General
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
 
-            List<C_Operation> lista;
-            lista = controller.Ingresar(cr_Textbox1.Text, cr_Textbox2.Text);
+            Model_User user;
+            user = controller.Log_in(cr_Textbox1.Text, cr_Textbox2.Text);
 
-            if (lista != null)
+            if(user != null)
             {
-                if(lista.Count > 0)
+                if(user._Role._Operations.Count > 0)
                 {
-                    principal.AbrirVistaGeneral(lista);
+                    principal.AbrirVistaGeneral(user);
                 }
                 else
                 {

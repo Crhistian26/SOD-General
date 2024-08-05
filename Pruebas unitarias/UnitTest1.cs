@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modelos;
 using Modelos.Control_de_usuarios;
+using SOD_General;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -15,27 +16,56 @@ namespace Pruebas_unitarias
     [TestClass]
     public class UnitTest1
     {
+<<<<<<< Updated upstream
         
         [TestMethod]
         public void TestMethod1()
         {
 
             List<Model_Operations> operaciones = new List<Model_Operations>
+=======
+        static List<Model_Operations> model_Operations = new List<Model_Operations>
+>>>>>>> Stashed changes
             {
                 new Model_Operations(1,"Redaccion","ver"),
                 new Model_Operations(2,"Redaccion","agregar"),
-                new Model_Operations(3,"Empleados", "Ver asistencias")
+                new Model_Operations(3,"Asistencias", "Ver asistencias")
             };
 
+<<<<<<< Updated upstream
             Model_Role role = new Model_Role(1, "Redactor", operaciones);
 
             Model_User usuario = new Model_User(1, 2, role, "Juanito", "123456");
 
             ControlOperaciones control = new ControlOperaciones(usuario);
+=======
+        static Model_Role role = new Model_Role(1, "Redactor", model_Operations);
+
+        static Model_User user = new Model_User(1, 2, role, "Juanito", "123456");
+
+        static AppVistaGeneral view = new AppVistaGeneral(user);
+
+        static ControlOperaciones control = new ControlOperaciones(view);
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+            EventHandler e = control.GetEventsInMenustrip("Ver asistencias");
+>>>>>>> Stashed changes
 
             EventHandler e = control.GetEvents("Ver ");
             
             Assert.IsNotNull(e);
+        }
+        [TestMethod]
+        public void MenustripTest()
+        {
+            List<ToolStripMenuItem> items = new List<ToolStripMenuItem>();
+            control.AddItemsInMenustrip();
+            foreach (ToolStripMenuItem item in items)
+            {
+                MessageBox.Show(item.Text);
+            }
         }
     }
 }

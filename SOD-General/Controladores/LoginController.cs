@@ -1,8 +1,10 @@
-﻿using Modelos.Usuarios_Empleados.Control_de_usuario;
+﻿using Modelos.Control_de_usuarios;
+using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 
@@ -20,64 +22,70 @@ namespace Controladores
         /// <param name="username">Su nombre de usuario</param>
         /// <param name="password">Su contraseña</param>
         /// <returns>Devuelve una lista de las autorizaciones hecha a base de la clase <seealso cref="MAuthorization"/></returns>
-        public List<C_Operation> Ingresar(string username, string password)
+        public Model_User Log_in(string username, string password)
         {
             try
             {
-                //Crea la lista que devolvera al final.
-                List<C_Operation> list = new List<C_Operation>();
-                //El query con su procedimiento y sus parametros.
-                string Query = "Exec Get_Operations @User, @password";
+                Model_User user = null;
+                Model_Role role;
+                List<Model_Operations> operations = new List<Model_Operations>();
+
+                string Query = "Exec Get_Operations @user, @password";
                 SqlCommand cmd = new SqlCommand(Query, conex);
-                cmd.Parameters.AddWithValue("@User", username);
+                cmd.Parameters.AddWithValue("@user", username);
                 cmd.Parameters.AddWithValue("@password", password);
 
                 //Se abre la conexion.
                 conex.Open();
                 //El lector.
-                SqlDataReader lector = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                while (lector.Read())
+                while (reader.Read())
                 {
-                    //Capturar datos.
-                    string Modulo = lector.GetString(0);
-                    int id = lector.GetInt32(1);
-                    string Operacion = lector.GetString(2);
+                    string module = reader.GetString(0);
+                    int id = reader.GetInt32(1);
+                    string operation_name = reader.GetString(2);
 
-                    //Creacion de objeto autorizacion.
-                    C_Operation operacion = new C_Operation(id, Operacion, Modulo);
+                    Model_Operations operation = new Model_Operations(id, module,operation_name);
 
-                    //Lo agrega a la lista.
-                    list.Add(operacion);
+                    operations.Add(operation);
                 }
-                //La conexion se cierra.
+
                 conex.Close();
 
-                //Me retorna la lista y el departamento.
-                return list;
+                Query = "exec Get_User_Data @user,@password";
+                cmd = new SqlCommand(Query,conex);
+                cmd.Parameters.AddWithValue("@user", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                conex.Open();
+                reader = cmd.ExecuteReader();
+                if(reader.Read())
+                {
+                    role = new Model_Role(reader.GetInt32(2), reader.GetString(3), operations);
+                    user = new Model_User(reader.GetInt32(0), reader.GetInt32(1), role, reader.GetString(4), reader.GetString(5));
+                }
+                conex.Close();
+
+                return user;
+
             }
             catch (SqlException ex)
             {
-                //Si la conexion no esta cerrada la cierra.
                 if (conex.State != System.Data.ConnectionState.Closed)
                 {
                     conex.Close();
                 }
-                //El mensaje de error de Sql en caso de no existir el usuario.
                 MessageBox.Show(ex.Message);
-                //Debe retornar algo.
                 return null;
             }
             catch (Exception ex)
             {
-                //Si la conexion no esta cerrada la cierra.
                 if (conex.State != System.Data.ConnectionState.Closed)
                 {
                     conex.Close();
                 }
-                //El mensaje de error de C# por si ocurre algo.
                 MessageBox.Show(ex.Message);
-                //Debe retornar algo.
                 return null;
             }
 

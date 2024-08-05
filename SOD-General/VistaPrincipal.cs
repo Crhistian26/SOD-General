@@ -1,4 +1,5 @@
-﻿using Modelos.Usuarios_Empleados.Control_de_usuario;
+﻿using Modelos.Control_de_usuarios;
+using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -72,12 +73,12 @@ namespace SOD_General
         //}
 
 
-        public void AbrirVistaGeneral(List<C_Operation> operations)
+        public void AbrirVistaGeneral(Model_User  user)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;
 
-            _appVistaGeneral = new AppVistaGeneral(operations);
+            _appVistaGeneral = new AppVistaGeneral(user);
 
             AbrirFormulario(_appVistaGeneral);
         }

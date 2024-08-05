@@ -1,4 +1,5 @@
 ﻿using Controladores;
+using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
 using System;
@@ -9,41 +10,28 @@ namespace SOD_General
 {
     public partial class AppVistaGeneral : Form
     {
-        /// <summary>
-        /// atributo Controller de tipo VisGenContr que guardara una instancia del controlador 
-        /// </summary>
         ControlOperaciones controller;
-
         SizesGenerales _size = new SizesGenerales();
-        //La lista de autorizaciones.
-        public List<C_Operation> operations = new List<C_Operation>();
+        public Model_User user;
 
-
-
-        //El departamento para la demostracion.
-        /// <summary>
-        /// atributo para almacenar lo departamentos
-        /// </summary>
 
         public Form formu;
-        //El constructor que captura la lista y la llena.
-        /// <summary>
-        /// Constructor de la clase ApViGe, que acepta como parametro un string y luego ese param llenara el atributo definido 
-        /// antes y le pasa al atributo Controller una nueva instancia del controlador y aeste le pasa una instancia de si mismo
-        /// </summary>
-        /// <param name="Departamento"></param>
-        public AppVistaGeneral(List<C_Operation> operations)
+      
+        public AppVistaGeneral(Model_User user)
         {
             InitializeComponent();
-            this.operations = operations;
-            controller = new ControlOperaciones(this);
+            this.user = user;
+            controller = new ControlOperaciones(user,this);
         }
 
-        //La aplicacion cargando.
         private void AppVistaGeneral_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             controller.Agregar_Items();
 
+=======
+            controller.AddItemsInMenustrip();
+>>>>>>> Stashed changes
         }
 
         public void AbrirFormulario(Form formulario)
