@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SOD_General.Controladores
 {
-    internal class Registros_Controller
+    public class Registros_Controller
     {
         //La cadena de conexion
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;

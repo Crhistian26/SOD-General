@@ -74,16 +74,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             Task centrar = new Task(() => { CentrarElementos(); });
             llenarlista.Start();
             centrar.Start();
-            if (true)
-            {
-                //pvto el que lo lea
-            }
-            else
-            {
-                botones_Nuevos1.Visible = false;
-            }
-            await centrar;
+
             await llenarlista;
+            await centrar;
+
             OrganizarDataGriedFecha();      
         }
 

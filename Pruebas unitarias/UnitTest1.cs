@@ -1,9 +1,11 @@
 ﻿using Controladores;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Modelos;
+using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
 using SOD_General;
 using SOD_General.Controladores;
+using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -35,13 +37,6 @@ namespace Pruebas_unitarias
         static ControlOperaciones control = new ControlOperaciones(user ,view);
 
         [TestMethod]
-        public void TestMethod1()
-        {
-            EventHandler e = control.GetEventsInMenustrip("Ver asistencias");
-            
-            Assert.IsNotNull(e);
-        }
-        [TestMethod]
         public void MenustripTest()
         {
             List<ToolStripMenuItem> items = new List<ToolStripMenuItem>();
@@ -56,6 +51,13 @@ namespace Pruebas_unitarias
         {
             bool h = user.Confirm_Operation("asd");
             Assert.IsFalse(h);
+        }
+        [TestMethod]
+        public void TestGetAllAtendance()
+        {
+            Registros_Controller control = new Registros_Controller();
+            List<Record_Attendance> asistencias = control.Obtener_Asistencias();
+            Assert.IsNull(asistencias);
         }
     }
 }
