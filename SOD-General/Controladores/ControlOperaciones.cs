@@ -15,6 +15,8 @@ using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Policy;
 using System.Windows.Forms;
 
@@ -22,120 +24,70 @@ namespace Controladores
 {
     public class ControlOperaciones
     {
-
-       
-
-
         #region Nuevo filtro de operaciones
 
         public Model_User User;
         public Model_Role Role;
         public AppVistaGeneral _view;
+        public Dictionary<(string,string), EventHandler> OperationsEvents;
+
         public ControlOperaciones(Model_User User,AppVistaGeneral view)
         {
             this.User = User;
             this.Role = User._Role;
             this._view = view;
+            this.OperationsEvents = DictionaryData();
         }
 
-        #region agregar eventos
-        /*
-                if(operation._Module == "Modulo a verificar")
-                {
-                    switch (operation._Operation)
-                    {
-                        case ("Operacion"):
-                            _Event = (object sender, EventArgs e) =>
-                            {
-                                //tu evento
-                            };
-                            return _Event;
-                    }
-                }
-         */
+        #region agregar eventos nuevos
+
         #endregion
+
+
         /// <summary>
-        /// Este metodo se encarga de retornar un evento dependiendo de la operacion a buscar,
-        /// este se utiliza en la parte de agregar los elementos al menu strip de AppVistaGeneral.
+        /// Este metodo se encarga de llenar el diccionario inicial con cada una de las operaciones existentes en el sistema.
         /// </summary>
-        /// <param name="name_operation"></param>
-        /// <returns>Retorna el evento asignado a esa operacion, en caso de no tener uno te retornara un null.</returns>
-        public EventHandler GetEventsInMenustrip(string name_operation)
+        /// <returns>Se encarga de regresar un diccionario, la llave es (Modulo,Operacion) y su valor es el evento.<returns>
+        public Dictionary<(string,string), EventHandler> DictionaryData()
         {
-            
-            EventHandler _Event = null;
-
-            List<Model_Operations> operations = this.Role._Operations;
-
-            Model_Operations operation = operations.Where(a => a._Operation == name_operation).Select(a => a).First();
-
-            if (operation != null)
-            {
-                if(operation._Module == "Empleados")
+            return
+                new Dictionary<(string, string), EventHandler>
                 {
-                    switch (operation._Operation)
                     {
-                        case ("Ver empleados"):
-                            _Event = (object sender, EventArgs e) =>
-                            {
-                                Visual_Empleados window = new Visual_Empleados(_view);
-                                _view.OpenForm(window);
-                            };
-                            return _Event;
-                    }
-                }
-
-                if (operation._Module == "Asistencias")
-                {
-                    switch (operation._Operation)
+                        (("Empleados", "Ver empleados")),
+                        (object sender, EventArgs e) =>
+                        {
+                            Visual_Empleados window = new Visual_Empleados(_view);
+                            _view.OpenForm(window);
+                        }
+                    },
                     {
-                        case ("Ver asistencias"):
-                            _Event = (object sender, EventArgs e) =>
-                            {
-                                Registros_GeneralesAsistencias window = new Registros_GeneralesAsistencias(this.User);
-                                _view.OpenForm(window);
-                            };
-                            return _Event;
-                    }
-                }
-
-                if (operation._Module == "Permisos")
-                {
-                    switch (operation._Operation)
+                        ("Asistencias","Ver asistencias"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Registros_GeneralesAsistencias window = new Registros_GeneralesAsistencias(User);
+                            _view.OpenForm(window);
+                        }
+                    },
                     {
-                        case ("Ver permisos"):
-                            _Event = (object sender, EventArgs e) =>
-                            {
-                                Registros_GeneralesPermisos window = new Registros_GeneralesPermisos(_view);
-                                _view.OpenForm(window);
-                            };
-                            return _Event;
-
-                    }
-                }
-
-                if (operation._Module == "Reportes de RRHH")
-                {
-                    switch (operation._Operation)
+                        ("Permisos","Ver permisos"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Registros_GeneralesPermisos window = new Registros_GeneralesPermisos(_view);
+                            _view.OpenForm(window);
+                        }
+                    },
                     {
-                        case ("Exportar reporte"):
-                            _Event = (object sender, EventArgs e) =>
-                            {
-                                ExportarReportesRRHH window = new ExportarReportesRRHH();
-                                _view.OpenForm(_view);
-                            };
-                            return _Event;
+                        ("Reportes de RRHH","Exportar reporte"),
+                        (object sender, EventArgs e) =>
+                        {
+                            ExportarReportesRRHH window = new ExportarReportesRRHH();
+                            _view.OpenForm(_view);
+                        }
+                    },
+                };
 
-                    }
-                }
 
-            }
-            else
-            {
-                _Event = null;
-            }
-
-            return _Event;
 
         }
 
@@ -155,9 +107,9 @@ namespace Controladores
 
                 foreach (Model_Operations operation in operations1)
                 {
-                    EventHandler _event = GetEventsInMenustrip(operation._Operation);
+                    EventHandler _event = OperationsEvents.Where(a => a.Key == (operation._Module, operation._Operation)).Select(a => a.Value).FirstOrDefault();
 
-                    if(_event == null )
+                    if(_event == null)
                     {
                         continue;
                     }

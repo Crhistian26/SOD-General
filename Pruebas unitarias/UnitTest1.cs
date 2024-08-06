@@ -16,9 +16,6 @@ namespace Pruebas_unitarias
     [TestClass]
     public class UnitTest1
     {
-
-        static List<Model_Operations> operaciones = new List<Model_Operations>();
-
         static List<Model_Operations> model_Operations = new List<Model_Operations>
 
             {
@@ -28,7 +25,7 @@ namespace Pruebas_unitarias
             };
 
 
-        static Model_Role role = new Model_Role(1, "Redactor", operaciones);
+        static Model_Role role = new Model_Role(1, "Redactor", model_Operations);
 
         static Model_User user = new Model_User(1, 2, role, "Juanito", "123456");
 
@@ -53,6 +50,12 @@ namespace Pruebas_unitarias
             {
                 MessageBox.Show(item.Text);
             }
+        }
+        [TestMethod]
+        public void TestUserConfirm()
+        {
+            bool h = user.Confirm_Operation("asd");
+            Assert.IsFalse(h);
         }
     }
 }

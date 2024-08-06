@@ -25,7 +25,8 @@ namespace Modelos.Control_de_usuarios
 
         public bool Confirm_Operation(string Operation_name)
         {
-            var hola = this._Role._Operations.Where(a => a._Operation == Operation_name).Select(a => a).First();
+            var hola = this._Role._Operations.Where(a => a._Operation == Operation_name).Select(a => a).FirstOrDefault();
+
             if(hola != null)
             {
                 return true;
