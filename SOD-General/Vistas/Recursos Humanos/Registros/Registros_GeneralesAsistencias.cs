@@ -73,7 +73,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             
             Task llenarlista = new Task(() => { Asistencias = control.Obtener_Asistencias(); });
             Task centrar = new Task(() => { CentrarElementos(); });
-            Task.Delay(400);
             llenarlista.Start();
             centrar.Start();
 

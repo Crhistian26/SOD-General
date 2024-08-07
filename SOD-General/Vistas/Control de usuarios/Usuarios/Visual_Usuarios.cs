@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SOD_General.Vistas.Programador.Usuarios
+namespace SOD_General.Vistas.Control_de_usuarios.Usuarios
 {
-    public partial class Visualizar_usuarios : Form
+    public partial class Visual_Usuarios : Form
     {
-        public Visualizar_usuarios()
+        public Visual_Usuarios()
         {
             InitializeComponent();
         }

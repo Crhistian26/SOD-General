@@ -129,7 +129,7 @@
             "Ningun limite"});
             this.soD_ComboBox4.Location = new System.Drawing.Point(491, 169);
             this.soD_ComboBox4.Name = "soD_ComboBox4";
-            this.soD_ComboBox4.Size = new System.Drawing.Size(101, 27);
+            this.soD_ComboBox4.Size = new System.Drawing.Size(142, 27);
             this.soD_ComboBox4.TabIndex = 11;
             // 
             // botones_Nuevos1
@@ -184,7 +184,7 @@
             "Unico"});
             this.soD_ComboBox3.Location = new System.Drawing.Point(401, 101);
             this.soD_ComboBox3.Name = "soD_ComboBox3";
-            this.soD_ComboBox3.Size = new System.Drawing.Size(191, 27);
+            this.soD_ComboBox3.Size = new System.Drawing.Size(232, 27);
             this.soD_ComboBox3.TabIndex = 6;
             // 
             // cR_LabelDown3

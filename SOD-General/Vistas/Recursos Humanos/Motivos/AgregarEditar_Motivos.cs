@@ -34,12 +34,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
 
         private void AgregarBoton(object sender, EventArgs e)
         {
-            MessageBox.Show("Yo agrego y eso es todo");
+            
         }
 
         private void EditarBoton(object sender, EventArgs e)
         {
-            MessageBox.Show("Edito papa");
+            
         }
 
         private void AgregarEditar_Motivos_Load(object sender, EventArgs e)
@@ -51,5 +51,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
         {
             CentrarElementos();
         }
+
     }
 }

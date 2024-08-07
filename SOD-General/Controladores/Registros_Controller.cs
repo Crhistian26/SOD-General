@@ -225,12 +225,12 @@ namespace SOD_General.Controladores
             }
         }
 
-        public List<Reason> Obtener_Razones()
+        public List<Model_Reason> Obtener_Razones()
         {
             try
             {
                 //La lista a retornar.
-                List<Reason> razones = new List<Reason>();
+                List<Model_Reason> razones = new List<Model_Reason>();
                 //El query.
                 string Query = "select IdReason,_Reason from Departments order by IdReason;";
                 //La consulta
@@ -244,7 +244,7 @@ namespace SOD_General.Controladores
                     int id = reader.GetInt32(0);
                     string reason = reader.GetString(1);
 
-                    Reason rea = new Reason(id, reason);
+                    Model_Reason rea = new Model_Reason(id, reason);
                     razones.Add(rea);
                 }
                 conex.Close();

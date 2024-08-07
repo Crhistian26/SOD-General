@@ -90,7 +90,7 @@ namespace Controladores
                         ("Permisos","Ver motivos"),
                         (object sender, EventArgs e) =>
                         {
-                            Visual_Motivos window = new Visual_Motivos();
+                            Visual_Motivos window = new Visual_Motivos(User);
                             _view.OpenForm(window);
                         }
                     },
