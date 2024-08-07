@@ -25,11 +25,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         public void CentrarElementos()
         {
-            Point punto = cR_Subtitulos1.Location;
-            cR_Subtitulos1.Location = _size.CentrarElementosX(punto, cR_Subtitulos1.Size, this.Size);
-
-            punto = cR_DateTimePicker1.Location;
+            Point punto = cR_DateTimePicker1.Location;
             cR_DateTimePicker1.Location = _size.CentrarElementosX(punto, cR_DateTimePicker1.Size, this.Size);
+
+            punto = cR_Subtitulos1.Location;
+            cR_Subtitulos1.Location = _size.CentrarElementosX(punto, cR_Subtitulos1.Size, this.Size);
         }
 
         public void OrganizarDataGriedFecha()
@@ -70,8 +70,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private async void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
         {
+            
             Task llenarlista = new Task(() => { Asistencias = control.Obtener_Asistencias(); });
             Task centrar = new Task(() => { CentrarElementos(); });
+            Task.Delay(400);
             llenarlista.Start();
             centrar.Start();
 

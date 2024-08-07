@@ -5,6 +5,7 @@ using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
+using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas.Taller.Clientes;
 using SOD_General.Vistas.Taller.Controles_de_Equipo;
@@ -82,7 +83,15 @@ namespace Controladores
                         (object sender, EventArgs e) =>
                         {
                             ExportarReportesRRHH window = new ExportarReportesRRHH();
-                            _view.OpenForm(_view);
+                            _view.OpenForm(window);
+                        }
+                    },
+                    {
+                        ("Permisos","Ver motivos"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Visual_Motivos window = new Visual_Motivos();
+                            _view.OpenForm(window);
                         }
                     },
                 };

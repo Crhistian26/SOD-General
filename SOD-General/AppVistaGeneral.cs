@@ -4,6 +4,7 @@ using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General
@@ -34,13 +35,18 @@ namespace SOD_General
                 panel1.Controls.Clear();
                 panel1.Tag = null;
             }
+            if (panel1.Controls.Contains(formulario))
+            {
+                return;
+            }
 
             Form formula = formulario;
             formula.TopLevel = false;
             formula.Dock = DockStyle.Fill;
             this.formu = formula;
+
             this.panel1.Controls.Add(this.formu);
-            this.panel1.Tag = this.formu;
+            this.panel1.Tag = formula;
             this.MinimumSize = formu.MinimumSize;
             this.formu.Show();
         }

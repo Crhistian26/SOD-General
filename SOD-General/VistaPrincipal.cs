@@ -40,6 +40,7 @@ namespace SOD_General
             formula.TopLevel = false;
             formula.Dock = DockStyle.Fill;
             this.formu = formula;
+
             this.panel1.Controls.Add(this.formu);
             this.panel1.Tag = this.formu;
             this.MinimumSize = formu.MinimumSize;

@@ -160,17 +160,17 @@
     <Compile Include="Vistas\Recursos Humanos\Motivos\Visual_Motivos.Designer.cs">
       <DependentUpon>Visual_Motivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Agregar_Asistencias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Agregar_Asistencias.Designer.cs">
-      <DependentUpon>Agregar_Asistencias.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Agregar_Permiso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Agregar_Permiso.Designer.cs">
       <DependentUpon>Agregar_Permiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Control_Asistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Control_Asistencias.Designer.cs">
+      <DependentUpon>Control_Asistencias.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.cs">
       <SubType>Form</SubType>
@@ -371,11 +371,11 @@
     <EmbeddedResource Include="Vistas\Recursos Humanos\Motivos\Visual_Motivos.resx">
       <DependentUpon>Visual_Motivos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Agregar_Asistencias.resx">
-      <DependentUpon>Agregar_Asistencias.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Agregar_Permiso.resx">
       <DependentUpon>Agregar_Permiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Control_Asistencias.resx">
+      <DependentUpon>Control_Asistencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.resx">
       <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
