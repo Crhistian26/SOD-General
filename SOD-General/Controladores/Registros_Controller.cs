@@ -77,7 +77,7 @@ namespace SOD_General.Controladores
         #region Permisos
         public void AgregarPermiso()
         {
-            Agregar_Permiso vista = new Agregar_Permiso();
+            Control_Permisos vista = new Control_Permisos();
             vista.Show();
         }
 

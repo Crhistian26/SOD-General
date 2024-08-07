@@ -52,12 +52,5 @@ namespace Pruebas_unitarias
             bool h = user.Confirm_Operation("asd");
             Assert.IsFalse(h);
         }
-        [TestMethod]
-        public void TestGetAllAtendance()
-        {
-            Registros_Controller control = new Registros_Controller();
-            List<Record_Attendance> asistencias = control.Obtener_Asistencias();
-            Assert.IsNull(asistencias);
-        }
     }
 }

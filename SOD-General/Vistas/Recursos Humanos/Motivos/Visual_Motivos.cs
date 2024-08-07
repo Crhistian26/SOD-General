@@ -5,6 +5,7 @@ using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Motivos
@@ -25,15 +26,31 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
         {
             foreach (Model_Reason reason in reasons)
             {
-                cR_DataGriedView1.Rows.Add
-                    (
-                        reason.IdReason,
-                        reason._Reason,
-                        reason.Mesure_Time1,
-                        reason.Mesure_Time2,
-                        reason.MaximuneCount_Time,
-                        reason.MesureMaximune_Time
-                    );
+                if(reason.MaximuneCount_Time != 0)
+                {
+                    cR_DataGriedView1.Rows.Add
+                   (
+                       reason.IdReason,
+                       reason._Reason,
+                       reason.Mesure_Time1,
+                       reason.Mesure_Time2,
+                       reason.MaximuneCount_Time + " " + reason.MesureMaximune_Time,
+                       reason.For_mesure
+                   );
+                }
+                else
+                {
+                    cR_DataGriedView1.Rows.Add
+                   (
+                       reason.IdReason,
+                       reason._Reason,
+                       reason.Mesure_Time1,
+                       reason.Mesure_Time2,
+                       reason.MesureMaximune_Time,
+                       reason.For_mesure
+                   );
+                }
+               
             }
         }
 
@@ -69,7 +86,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            control.AbrirEditar(null);
+            control.OpenControlReasons();
         }
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -78,7 +95,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             {
                 if(user.Confirm_Operation("Editar motivos"))
                 {
-                    control.AbrirEditar(1);
+                    int id = Convert.ToInt32(cR_DataGriedView1.Rows[e.RowIndex].Cells[0].Value);
+                    Model_Reason reason = reasons.Where(a => a.IdReason == id).Select(a => a).First();
+                    control.OpenControlReasons(reason);
                 }
             }
         }

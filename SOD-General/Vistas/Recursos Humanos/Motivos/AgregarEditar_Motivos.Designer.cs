@@ -33,17 +33,15 @@
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
-            this.soD_ComboBox4 = new SOD_ComboBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown5 = new CR_LabelDown();
-            this.cR_LabelDown4 = new CR_LabelDown();
-            this.soD_ComboBox3 = new SOD_ComboBox();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.soD_ComboBox2 = new SOD_ComboBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
+            this.soD_ComboBox3 = new SOD_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -89,10 +87,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.cR_TextBoxNumerico1);
-            this.panel1.Controls.Add(this.soD_ComboBox4);
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_LabelDown5);
-            this.panel1.Controls.Add(this.cR_LabelDown4);
             this.panel1.Controls.Add(this.soD_ComboBox3);
             this.panel1.Controls.Add(this.cR_LabelDown3);
             this.panel1.Controls.Add(this.soD_ComboBox2);
@@ -109,28 +105,11 @@
             // 
             this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(401, 171);
+            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(353, 138);
             this.cR_TextBoxNumerico1.MaxLength = 2;
             this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
             this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(65, 25);
             this.cR_TextBoxNumerico1.TabIndex = 12;
-            // 
-            // soD_ComboBox4
-            // 
-            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox4.FormattingEnabled = true;
-            this.soD_ComboBox4.Items.AddRange(new object[] {
-            "Minutos",
-            "Horas",
-            "Dias",
-            "Semanas",
-            "Meses",
-            "Ningun limite"});
-            this.soD_ComboBox4.Location = new System.Drawing.Point(491, 169);
-            this.soD_ComboBox4.Name = "soD_ComboBox4";
-            this.soD_ComboBox4.Size = new System.Drawing.Size(142, 27);
-            this.soD_ComboBox4.TabIndex = 11;
             // 
             // botones_Nuevos1
             // 
@@ -154,38 +133,11 @@
             this.cR_LabelDown5.AutoSize = true;
             this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown5.Location = new System.Drawing.Point(401, 147);
+            this.cR_LabelDown5.Location = new System.Drawing.Point(353, 114);
             this.cR_LabelDown5.Name = "cR_LabelDown5";
             this.cR_LabelDown5.Size = new System.Drawing.Size(53, 20);
             this.cR_LabelDown5.TabIndex = 8;
             this.cR_LabelDown5.Text = "Limite:";
-            // 
-            // cR_LabelDown4
-            // 
-            this.cR_LabelDown4.AutoSize = true;
-            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(401, 75);
-            this.cR_LabelDown4.Name = "cR_LabelDown4";
-            this.cR_LabelDown4.Size = new System.Drawing.Size(84, 20);
-            this.cR_LabelDown4.TabIndex = 7;
-            this.cR_LabelDown4.Text = "Tipo limite:";
-            // 
-            // soD_ComboBox3
-            // 
-            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox3.FormattingEnabled = true;
-            this.soD_ComboBox3.Items.AddRange(new object[] {
-            "Sin limites",
-            "Al año",
-            "Al mes",
-            "A la semana",
-            "Unico"});
-            this.soD_ComboBox3.Location = new System.Drawing.Point(401, 101);
-            this.soD_ComboBox3.Name = "soD_ComboBox3";
-            this.soD_ComboBox3.Size = new System.Drawing.Size(232, 27);
-            this.soD_ComboBox3.TabIndex = 6;
             // 
             // cR_LabelDown3
             // 
@@ -260,6 +212,21 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Motivo:";
             // 
+            // soD_ComboBox3
+            // 
+            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox3.FormattingEnabled = true;
+            this.soD_ComboBox3.Items.AddRange(new object[] {
+            "Minutos ",
+            "Sin limites",
+            "Unico"});
+            this.soD_ComboBox3.Location = new System.Drawing.Point(438, 136);
+            this.soD_ComboBox3.Name = "soD_ComboBox3";
+            this.soD_ComboBox3.Size = new System.Drawing.Size(198, 27);
+            this.soD_ComboBox3.TabIndex = 6;
+            this.soD_ComboBox3.SelectedIndexChanged += new System.EventHandler(this.soD_ComboBox3_SelectedIndexChanged);
+            // 
             // AgregarEditar_Motivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,9 +263,7 @@
         private SOD_TextBox soD_TextBox1;
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private CR_LabelDown cR_LabelDown5;
-        private CR_LabelDown cR_LabelDown4;
-        private SOD_ComboBox soD_ComboBox3;
-        private SOD_ComboBox soD_ComboBox4;
         private CR_TextBoxNumerico cR_TextBoxNumerico1;
+        private SOD_ComboBox soD_ComboBox3;
     }
 }

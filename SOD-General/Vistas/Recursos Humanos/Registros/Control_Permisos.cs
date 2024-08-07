@@ -9,12 +9,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
-    public partial class Agregar_Permiso : Form
+    public partial class Control_Permisos : Form
     {
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller control = new Registros_Controller();
         List<Employee> empleados;
-        public Agregar_Permiso()
+        public Control_Permisos()
         {
             InitializeComponent();
             empleados = control.Obtener_Empleados();

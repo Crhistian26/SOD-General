@@ -19,7 +19,7 @@ namespace SOD_General.Controladores
             try
             {
                 List<Model_Reason> reasons = new List<Model_Reason>();
-                string Query = "Select IdReason,_Reason,Mesure_Time1,Mesure_Time2,MaximunCount_Time,MesureMaximune_Time from Reasons";
+                string Query = "Select IdReason,_Reason,Mesure_Time1,Mesure_Time2,MaximunCount_Time,MesureMaximune_Time,For_Mesure from Reasons";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 //Los parametros
@@ -38,7 +38,8 @@ namespace SOD_General.Controladores
                             reader.GetString(2),
                             reader.GetString(3),
                             reader.GetInt32(4),
-                            reader.GetString(5)
+                            reader.GetString(5),
+                            reader.GetString(6)
                         )
                      );
                 }
@@ -66,18 +67,16 @@ namespace SOD_General.Controladores
             }
         }
         
-        public void AbrirEditar(int? y)
+        public void OpenControlReasons()
         {
-            if (y is null)
-            {
-                AgregarEditar_Motivos hola = new AgregarEditar_Motivos();
-                hola.Show();
-            }
-            else
-            {
-                AgregarEditar_Motivos hola = new AgregarEditar_Motivos(y);
-                hola.Show();
-            }
+            AgregarEditar_Motivos window = new AgregarEditar_Motivos();
+            window.Show();
         }
+        public void OpenControlReasons(Model_Reason reason)
+        {
+            AgregarEditar_Motivos window = new AgregarEditar_Motivos(reason);
+            window.Show();
+        }
+
     }
 }

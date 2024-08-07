@@ -1,4 +1,5 @@
-﻿using SOD_General.Controladores;
+﻿using Modelos.AsistenciasYPermisos;
+using SOD_General.Controladores;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -15,12 +16,17 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             botones_Nuevos1.Text = "Agregar";
             botones_Nuevos1.Click += AgregarBoton;
         }
-        public AgregarEditar_Motivos(int? y)
+        public AgregarEditar_Motivos(Model_Reason reason)
         {
             InitializeComponent();
             cR_Subtitulos1.Text = "Editar motivo";
             botones_Nuevos1.Text = "Editar";
             botones_Nuevos1.Click += EditarBoton;
+
+            soD_TextBox1.Text = reason._Reason;
+            soD_ComboBox1.SelectedIndex = soD_ComboBox1.FindString(reason.Mesure_Time1);
+            soD_ComboBox2.SelectedIndex = soD_ComboBox2.FindString(reason.Mesure_Time2);
+            soD_ComboBox3.SelectedIndex = soD_ComboBox3.FindString(reason.MesureMaximune_Time);
         }
 
         private void CentrarElementos()
@@ -31,6 +37,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
+
 
         private void AgregarBoton(object sender, EventArgs e)
         {
@@ -52,5 +59,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             CentrarElementos();
         }
 
+        private void soD_ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void soD_ComboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
