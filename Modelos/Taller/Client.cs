@@ -20,12 +20,12 @@
         /// <param name="phone1">Teléfono principal del cliente.</param>
         /// <param name="phone2">Teléfono secundario del cliente.</param>
         /// <param name="contact">Contacto del cliente.</param>
-        public Client(int? idClient, string nameBranch, string address, string identifier, string phone1, string phone2, string contact)
+        public Client(int? idClient,string identifier, string nameBranch, string address, string phone1, string phone2, string contact)
         {
             IdClient = idClient;
+            _Identifier = identifier;
             _NameBranch = nameBranch;
             _Address = address;
-            _Identifier = identifier;
             Phone_1 = phone1;
             Phone_2 = phone2;
             _Contact = contact;

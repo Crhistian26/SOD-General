@@ -10,7 +10,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
     public partial class AgregarClientes : Form
     {
         //instancia del modelo de clientes
-        Client cliente;
+        
         Locations locations;
         List<Client> listaCliente = new List<Client>();
        
@@ -75,7 +75,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             }
             else
             {
-                 cliente = new Client(null, txtCliente.Text.ToString(), txtDireccion.Text.ToString(), txtCedula.Text.ToString(), txtNumero1.Text.ToString(), txtNumero2.Text.ToString(), txtContacto.Text.ToString());
+                Client cliente = new Client(null, txtCedula.Text.ToString(), txtCliente.Text.ToString(), txtDireccion.Text.ToString(), txtNumero1.Text.ToString(), txtNumero2.Text.ToString(), txtContacto.Text.ToString());
 
                  clientContr.AgregarCliente(cliente);
                 

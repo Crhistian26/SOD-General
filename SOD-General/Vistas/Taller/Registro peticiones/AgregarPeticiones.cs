@@ -12,7 +12,7 @@ namespace SOD_General.Taller.Registro_peticiones
     {
         SizesGenerales _size = new SizesGenerales();
         AppVistaGeneral vista;
-        public AgregarPeticiones(AppVistaGeneral vista)
+        public AgregarPeticiones()
         {
             InitializeComponent();
             soD_ComboBox1.Items.Add("Pedro");

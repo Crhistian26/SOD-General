@@ -35,10 +35,12 @@
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -60,6 +62,7 @@
             this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_TextBox1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_ComboBox1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
+            this.cR_SplitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.cR_SplitContainer1_Panel1_Paint);
             // 
             // cR_SplitContainer1.Panel2
             // 
@@ -122,10 +125,12 @@
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column8,
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
@@ -137,33 +142,46 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Nombre";
+            this.Column1.HeaderText = "id";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "RNC o Cedula";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Apellido";
+            this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "1er Numero";
+            this.Column3.HeaderText = "Direccion";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "2do Numero";
+            this.Column4.HeaderText = "1er Numero";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Contacto";
+            this.Column5.HeaderText = "2do Numero";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Contacto";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // VisualizarClientes
             // 
@@ -174,6 +192,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VisualizarClientes";
             this.Text = "VisualizarClientes";
+            this.Load += new System.EventHandler(this.VisualizarClientes_Load);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
@@ -189,12 +208,14 @@
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
         private CR_DataGriedView cR_DataGriedView1;
+        private SOD_TextBox soD_TextBox1;
+        private SOD_ComboBox soD_ComboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private SOD_TextBox soD_TextBox1;
-        private SOD_ComboBox soD_ComboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

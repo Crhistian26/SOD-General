@@ -82,7 +82,7 @@
             this.cR_LabelDown1.AutoSize = true;
             this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(83, 25);
+            this.cR_LabelDown1.Location = new System.Drawing.Point(99, 25);
             this.cR_LabelDown1.Name = "cR_LabelDown1";
             this.cR_LabelDown1.Size = new System.Drawing.Size(141, 20);
             this.cR_LabelDown1.TabIndex = 2;

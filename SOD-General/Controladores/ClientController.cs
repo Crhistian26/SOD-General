@@ -1,5 +1,6 @@
 ﻿using Modelos.Taller;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -10,6 +11,8 @@ namespace SOD_General.Controladores
     {
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
+
+        List<Client> Registro;
         
         /// <summary>
         /// usando el Procedimiento Add_Client y el modelo de Client, se suben los datos y se llenan los parametros
@@ -20,25 +23,90 @@ namespace SOD_General.Controladores
         {
             try
             {
-                MessageBox.Show(cli._NameBranch + "\n" + cli._Address);
+               
                 string Query = "Exec Add_Client @Identifier, @Client, @Address, @Phone1, @Phone2, @Contact";
-                conex.Open();
-                SqlCommand cmd = new SqlCommand(Query, conex);
-                cmd.Parameters.AddWithValue("@Identifier", cli._Identifier);
-                cmd.Parameters.AddWithValue("@Client", cli._NameBranch);
-                cmd.Parameters.AddWithValue("@Address", cli._Address);
-                cmd.Parameters.AddWithValue("@Phone1", cli.Phone_1);
-                cmd.Parameters.AddWithValue("@Phone2", cli.Phone_2);
-                cmd.Parameters.AddWithValue("@Contact", cli._Contact);
                 
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                cmd.Parameters.Add("@Identifier", cli._Identifier);
+                cmd.Parameters.Add("@Client", cli._NameBranch);
+                cmd.Parameters.Add("@Address", cli._Address);
+                
+                cmd.Parameters.Add("@Phone1", cli.Phone_1);
+                cmd.Parameters.Add("@Phone2", cli.Phone_2);
+                cmd.Parameters.Add("@Contact", cli._Contact);
+
+                conex.Open();
                 cmd.ExecuteNonQuery();
                 conex.Close();
 
+                MessageBox.Show(cli._NameBranch + "\n" + cli._Address);
+            }
+            catch(SqlException ex)
+            {
+            
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show("Cliente no registrado: " + ex.ToString());
+            }
+        }
+
+        public List<Client> ViewClient()
+        {
+            try
+            {
+                string Query = "Exec Get_Client";
+                List<Client> ClientsRecordTaller = new List<Client>();
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                conex.Open();
+                SqlDataReader Reader = cmd.ExecuteReader();
+
+
+                if (Reader.FieldCount <= 1)
+                {
+                    throw new Exception("No hay Clientes registrados");
+                }
+                else
+                {
+                    while (Reader.Read())
+                    {
+                        Client Clientes;
+                        int Id = Reader.GetInt32(0);
+                        string Identifier = Reader.GetString(1);
+                        string Client = Reader.GetString(2);
+                        string Address = Reader.GetString(3);
+                        string Phone1 = Reader.GetString(4);
+                        string Phone2 = Reader.GetString(5);
+                        string Contact = Reader.GetString(6);
+
+                        Clientes = new Client(Id, Identifier, Client, Address, Phone1, Phone2, Contact);
+                        ClientsRecordTaller.Add(Clientes);
+                    }
+
+                    conex.Close();
+                    return ClientsRecordTaller;
+                }
+            }
+          
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
+        public void llenarTabla()
+        {
+            foreach (Client cliente in Registro)
+            {
+                
             }
         }
 
