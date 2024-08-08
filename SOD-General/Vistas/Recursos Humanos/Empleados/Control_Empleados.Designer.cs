@@ -31,8 +31,10 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_ComboBox = new Cr_ComboBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cR_LabelDown5 = new CR_LabelDown();
             this.cR_DateTimePicker2 = new CR_DateTimePicker();
@@ -45,8 +47,6 @@
             this.cR_LabelDown3 = new CR_LabelDown();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
-            this.cR_ComboBox = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -109,6 +109,19 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // cR_ComboBox
+            // 
+            this.cR_ComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cR_ComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cR_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cR_ComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cR_ComboBox.ForeColor = System.Drawing.Color.White;
+            this.cR_ComboBox.Location = new System.Drawing.Point(359, 31);
+            this.cR_ComboBox.Name = "cR_ComboBox";
+            this.cR_ComboBox.Size = new System.Drawing.Size(286, 29);
+            this.cR_ComboBox.TabIndex = 16;
+            // 
             // botones_Nuevos1
             // 
             this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
@@ -137,6 +150,24 @@
             this.panel2.Size = new System.Drawing.Size(643, 125);
             this.panel2.TabIndex = 15;
             this.panel2.Visible = false;
+            // 
+            // botones_Nuevos2
+            // 
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.Red;
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(440, 82);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(186, 40);
+            this.botones_Nuevos2.TabIndex = 17;
+            this.botones_Nuevos2.Text = "Eliminar usuario";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.botones_Nuevos2.Click += new System.EventHandler(this.botones_Nuevos2_Click);
             // 
             // panel3
             // 
@@ -271,38 +302,6 @@
             this.cR_LabelDown1.Size = new System.Drawing.Size(70, 20);
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Nombres";
-            // 
-            // botones_Nuevos2
-            // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.Red;
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(440, 82);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(186, 40);
-            this.botones_Nuevos2.TabIndex = 17;
-            this.botones_Nuevos2.Text = "Eliminar usuario";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
-            this.botones_Nuevos2.Click += new System.EventHandler(this.botones_Nuevos2_Click);
-            // 
-            // cR_ComboBox
-            // 
-            this.cR_ComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cR_ComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cR_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cR_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cR_ComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cR_ComboBox.ForeColor = System.Drawing.Color.White;
-            this.cR_ComboBox.Location = new System.Drawing.Point(359, 31);
-            this.cR_ComboBox.Name = "cR_ComboBox";
-            this.cR_ComboBox.Size = new System.Drawing.Size(286, 30);
-            this.cR_ComboBox.TabIndex = 16;
             // 
             // Control_Empleados
             // 

@@ -86,7 +86,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void AgregarEditar_Empleados_Load(object sender, EventArgs e)
         {
-            if(user.Confirm_Operation("Eliminar empleados"))
+            if(!user.Confirm_Operation("Eliminar empleados"))
             {
                 botones_Nuevos2.Visible = false;
             }
