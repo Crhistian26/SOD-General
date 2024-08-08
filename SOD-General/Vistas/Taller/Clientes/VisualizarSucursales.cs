@@ -16,5 +16,10 @@ namespace SOD_General.Vistas.Taller.Clientes
         {
             InitializeComponent();
         }
+
+        private void cR_SplitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

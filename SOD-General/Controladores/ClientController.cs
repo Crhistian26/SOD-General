@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -100,6 +101,56 @@ namespace SOD_General.Controladores
                 }
 
                 MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
+        public List<Locations> ViewLocation(int id)
+        {
+            try
+            {
+                string Query = "Exec Get_Locations @id";
+                List<Locations> locations = new List<Locations>();
+
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                cmd.Parameters.Add("@id", id);
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.FieldCount <= 1)
+                {
+                    throw new Exception("Este cliente no tiene sucursales registradas");
+                }
+                else
+                {
+                    while (reader.Read())
+                    {
+                        Locations loca;
+                        int IdLocation = reader.GetInt32(0);
+                        int IdClient = reader.GetInt32(1);
+                        string identifier = reader.GetString(2);
+                        string location = reader.GetString(3);
+                        string address = reader.GetString(4);
+                        string phone1 = reader.GetString(5);
+                        string phone2 = reader.GetString(6);
+                        string contact = reader.GetString(7);
+
+                        loca = new Locations(IdLocation, IdClient, identifier, location, address, phone1, phone2, contact);
+                        locations.Add(loca);
+                    }
+
+                    conex.Close();
+                    return locations;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Fallo: " + ex.ToString());
                 return null;
             }
         }

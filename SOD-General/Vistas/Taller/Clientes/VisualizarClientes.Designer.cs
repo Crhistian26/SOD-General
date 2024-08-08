@@ -33,7 +33,7 @@
             this.soD_TextBox1 = new SOD_TextBox();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.dgvClientes = new CR_DataGriedView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +45,7 @@
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -66,7 +66,7 @@
             // 
             // cR_SplitContainer1.Panel2
             // 
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.dgvClientes);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
             this.cR_SplitContainer1.SplitterDistance = 93;
             this.cR_SplitContainer1.TabIndex = 0;
@@ -112,18 +112,18 @@
             this.cR_Subtitulos1.TabIndex = 0;
             this.cR_Subtitulos1.Text = "Ver Clientes Registrados";
             // 
-            // cR_DataGriedView1
+            // dgvClientes
             // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column8,
             this.Column2,
@@ -131,14 +131,15 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(800, 353);
-            this.cR_DataGriedView1.TabIndex = 2;
+            this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvClientes.EnableHeadersVisualStyles = false;
+            this.dgvClientes.Location = new System.Drawing.Point(0, 0);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientes.Size = new System.Drawing.Size(800, 353);
+            this.dgvClientes.TabIndex = 2;
+            this.dgvClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentDoubleClick);
             // 
             // Column1
             // 
@@ -198,7 +199,7 @@
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,7 +208,7 @@
 
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
-        private CR_DataGriedView cR_DataGriedView1;
+        private CR_DataGriedView dgvClientes;
         private SOD_TextBox soD_TextBox1;
         private SOD_ComboBox soD_ComboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
