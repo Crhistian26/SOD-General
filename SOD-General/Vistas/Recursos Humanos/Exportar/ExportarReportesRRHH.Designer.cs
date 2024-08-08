@@ -152,6 +152,7 @@
             this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
             this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker2.TabIndex = 6;
+            this.cR_DateTimePicker2.ValueChanged += new System.EventHandler(this.cR_DateTimePicker2_ValueChanged);
             // 
             // cR_DateTimePicker1
             // 
@@ -161,6 +162,7 @@
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
             this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker1.TabIndex = 5;
+            this.cR_DateTimePicker1.ValueChanged += new System.EventHandler(this.cR_DateTimePicker1_ValueChanged);
             // 
             // cr_ComboBox2
             // 
@@ -214,6 +216,7 @@
             this.botones_Nuevos4.TabIndex = 3;
             this.botones_Nuevos4.Text = "Este año";
             this.botones_Nuevos4.UseVisualStyleBackColor = false;
+            this.botones_Nuevos4.Click += new System.EventHandler(this.botones_Nuevos4_Click);
             // 
             // botones_Nuevos3
             // 
@@ -231,6 +234,7 @@
             this.botones_Nuevos3.TabIndex = 2;
             this.botones_Nuevos3.Text = "Estos 3 meses";
             this.botones_Nuevos3.UseVisualStyleBackColor = false;
+            this.botones_Nuevos3.Click += new System.EventHandler(this.botones_Nuevos3_Click);
             // 
             // botones_Nuevos2
             // 
@@ -248,6 +252,7 @@
             this.botones_Nuevos2.TabIndex = 1;
             this.botones_Nuevos2.Text = "Este mes";
             this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.botones_Nuevos2.Click += new System.EventHandler(this.botones_Nuevos2_Click);
             // 
             // botones_Nuevos1
             // 
@@ -265,6 +270,7 @@
             this.botones_Nuevos1.TabIndex = 0;
             this.botones_Nuevos1.Text = "Esta semana";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cr_ComboBox1
             // 

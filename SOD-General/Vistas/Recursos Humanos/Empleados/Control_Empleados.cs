@@ -1,4 +1,5 @@
-﻿using Modelos.Usuarios_Empleados;
+﻿using Modelos.Control_de_usuarios;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using SOD_General.Recursos_Humanos.Empleados;
 using System;
@@ -18,6 +19,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         Empleados_Controller controlEmpleados = new Empleados_Controller();
         List<Department> departamentos;
         Visual_Empleados Padre;
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().FirstOrDefault().user;
+        Employee employee;
         public Control_Empleados()
         {
             InitializeComponent();
@@ -32,15 +35,20 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         public Control_Empleados(Employee employee)
         {
             InitializeComponent();
+            this.employee = employee;
             departamentos = controlRegistros.Obtener_Departamentos();
             cR_Subtitulos1.Text = "Editar empleado";
             botones_Nuevos1.Text = "Editar";
             panel2.Visible = true;
             cR_DateTimePicker1.Value = employee.Admission_date;
+            botones_Nuevos1.Click += EditEmployee;
+
+
             if (employee.Dismissal_date.HasValue)
             {
                 panel3.Visible = true;
                 cR_DateTimePicker2.Value = employee.Dismissal_date.Value;
+                cR_DateTimePicker2.Enabled = false;
                 cR_Checkbox1.Checked = false;
                 cR_Checkbox2.Checked = true;
             }
@@ -53,7 +61,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             soD_TextBox2.Text = employee._Lastname;
             LlenarComboDepartamentos();
 
-            soD_ComboBox2.SelectedIndex = soD_ComboBox2.FindString(employee.Department);
+
+            cR_ComboBox.SelectedIndex = cR_ComboBox.FindString(employee.Department);
         }
 
         
@@ -70,13 +79,17 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         {
             foreach (Department depa in departamentos)
             {
-                soD_ComboBox2.Items.Add(depa._Department);
+                cR_ComboBox.Items.Add(depa._Department);
             }
         }
 
 
         private void AgregarEditar_Empleados_Load(object sender, EventArgs e)
         {
+            if(user.Confirm_Operation("Eliminar empleados"))
+            {
+                botones_Nuevos2.Visible = false;
+            }
             CentrarElementos();
         }
 
@@ -111,8 +124,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             Employee emp = new Employee
                 (
                     0,
-                    departamentos[soD_ComboBox2.SelectedIndex].IdDepartment,
-                    departamentos[soD_ComboBox2.SelectedIndex]._Department,
+                    departamentos[cR_ComboBox.SelectedIndex].IdDepartment,
+                    departamentos[cR_ComboBox.SelectedIndex]._Department,
                     soD_TextBox1.Text,
                     soD_TextBox2.Text,
                     cR_DateTimePicker1.Value,
@@ -124,6 +137,45 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             {
                 controlEmpleados.Reset_VisualEmpleados();
                 this.Close();
+            }
+        }
+        private void EditEmployee(object sender, EventArgs e)
+        {
+            bool state = false;
+            if(cR_Checkbox1.Checked)
+            {
+                state = true;
+            }
+            else
+            {
+                state = false;
+            }
+            Employee emp = new Employee
+                (
+                    employee.IdEmployee,
+                    departamentos[cR_ComboBox.SelectedIndex].IdDepartment,
+                    soD_TextBox1.Text,
+                    soD_TextBox2.Text,
+                    cR_DateTimePicker1.Value,
+                    state
+                );
+            if (controlEmpleados.EditEmployee(emp))
+            {
+                controlEmpleados.Reset_VisualEmpleados();
+                this.Close();
+            }
+        }
+
+        private void botones_Nuevos2_Click(object sender, EventArgs e)
+        {
+            var message = MessageBox.Show("Eliminar el usuario hara que todos los registros de asistencias, permisos, y su usuario en el sistema sean eliminados, esta seguro de querer eliminar el empleado.", $"Eliminar el empleado: {employee._Name} {employee._Lastname}",MessageBoxButtons.OKCancel);
+            if(message == DialogResult.OK)
+            {
+                if(controlEmpleados.DeleteEmployee(employee.IdEmployee))
+                {
+                    controlEmpleados.Reset_VisualEmpleados();
+                    this.Close();
+                }
             }
         }
     }

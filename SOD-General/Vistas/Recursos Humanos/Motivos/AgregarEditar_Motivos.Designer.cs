@@ -35,13 +35,13 @@
             this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown5 = new CR_LabelDown();
+            this.soD_ComboBox3 = new SOD_ComboBox();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.soD_ComboBox2 = new SOD_ComboBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.soD_ComboBox3 = new SOD_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -139,6 +139,23 @@
             this.cR_LabelDown5.TabIndex = 8;
             this.cR_LabelDown5.Text = "Limite:";
             // 
+            // soD_ComboBox3
+            // 
+            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox3.FormattingEnabled = true;
+            this.soD_ComboBox3.Items.AddRange(new object[] {
+            "Minutos",
+            "Horas",
+            "Dias",
+            "Sin limites",
+            "Unico"});
+            this.soD_ComboBox3.Location = new System.Drawing.Point(438, 136);
+            this.soD_ComboBox3.Name = "soD_ComboBox3";
+            this.soD_ComboBox3.Size = new System.Drawing.Size(198, 27);
+            this.soD_ComboBox3.TabIndex = 6;
+            this.soD_ComboBox3.SelectedIndexChanged += new System.EventHandler(this.soD_ComboBox3_SelectedIndexChanged);
+            // 
             // cR_LabelDown3
             // 
             this.cR_LabelDown3.AutoSize = true;
@@ -211,21 +228,6 @@
             this.cR_LabelDown1.Size = new System.Drawing.Size(60, 20);
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Motivo:";
-            // 
-            // soD_ComboBox3
-            // 
-            this.soD_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox3.FormattingEnabled = true;
-            this.soD_ComboBox3.Items.AddRange(new object[] {
-            "Minutos ",
-            "Sin limites",
-            "Unico"});
-            this.soD_ComboBox3.Location = new System.Drawing.Point(438, 136);
-            this.soD_ComboBox3.Name = "soD_ComboBox3";
-            this.soD_ComboBox3.Size = new System.Drawing.Size(198, 27);
-            this.soD_ComboBox3.TabIndex = 6;
-            this.soD_ComboBox3.SelectedIndexChanged += new System.EventHandler(this.soD_ComboBox3_SelectedIndexChanged);
             // 
             // AgregarEditar_Motivos
             // 

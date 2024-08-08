@@ -484,7 +484,6 @@
 
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
-        private CR_DateTimePicker cR_DateTimePicker1;
         private CR_LabelDown cR_LabelDown1;
         private System.Windows.Forms.Panel panel1;
         private CR_LabelDown cR_LabelDown2;
@@ -514,5 +513,6 @@
         private SOD_ComboBox soD_ComboBox3;
         private SOD_ComboBox soD_ComboBox2;
         private SOD_ComboBox soD_ComboBox4;
+        public CR_DateTimePicker cR_DateTimePicker1;
     }
 }

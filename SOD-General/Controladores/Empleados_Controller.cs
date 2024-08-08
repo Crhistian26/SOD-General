@@ -133,6 +133,85 @@ namespace SOD_General.Controladores
             }
         }
 
+        public bool EditEmployee(Employee emp)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Edit_Employee @Idemployee, @DepartId, @name, @lastname, @Admission_date, @jobstate";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@Idemployee",emp.IdEmployee);
+                cmd.Parameters.AddWithValue("@DepartId", emp.DepartmentId);
+                cmd.Parameters.AddWithValue("@name", emp._Name);
+                cmd.Parameters.AddWithValue("@lastname", emp._Lastname);
+                cmd.Parameters.AddWithValue("@Admission_date", emp.Admission_date);
+                cmd.Parameters.AddWithValue("@jobstate", emp.Job_State);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                conex.Close();
+                return true;
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool DeleteEmployee(int id)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Delete_Employee @Idemployee";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@Idemployee",id);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                conex.Close();
+                return true;
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
         #region Sql server
         public Employee ObtenerEmpleado(int id)
         {

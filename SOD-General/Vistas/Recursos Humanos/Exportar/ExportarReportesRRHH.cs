@@ -44,7 +44,90 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
 
         private void ExportarReportesRRHH_Load(object sender, EventArgs e)
         {
+            LlenarComboEmpleados();
             CentrarElementos();
+        }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Now;
+            switch (fecha.DayOfWeek.ToString())
+            {
+                case "Sunday":
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-6);
+                    cR_DateTimePicker2.Value = DateTime.Now;
+                    break;
+                case "Monday":
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(0);
+                    cR_DateTimePicker2.Value = DateTime.Now;
+                    break;
+                case "Tuesday":
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-1);
+                    cR_DateTimePicker2.Value = DateTime.Now;
+                    break;
+                case "Wednesday":
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-2);
+                    cR_DateTimePicker2.Value = DateTime.Now;
+                    break;
+                case "Thursday":
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-3);
+                    cR_DateTimePicker2.Value = DateTime.Now;
+                    break;
+                case "Friday":
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-4);
+                    cR_DateTimePicker2.Value = DateTime.Now;
+                    break;
+                case "Saturday":
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-5);
+                    cR_DateTimePicker2.Value = DateTime.Now;
+                    break;
+
+            }
+        }
+
+        private void botones_Nuevos2_Click(object sender, EventArgs e)
+        {
+            DateTime hoy = DateTime.Now;
+            DateTime fecha = new DateTime(hoy.Year, hoy.Month, 1);
+            cR_DateTimePicker1.Value = fecha;
+            cR_DateTimePicker2.Value = DateTime.Now;
+        }
+
+        private void botones_Nuevos3_Click(object sender, EventArgs e)
+        {
+            DateTime hoy = DateTime.Now;
+            DateTime fecha = new DateTime(hoy.Year, hoy.AddMonths(-2).Month, 1);
+            cR_DateTimePicker1.Value = fecha;
+            cR_DateTimePicker2.Value = DateTime.Now;
+        }
+
+        private void botones_Nuevos4_Click(object sender, EventArgs e)
+        {
+            DateTime hoy = DateTime.Now;
+            DateTime fecha = new DateTime(hoy.Year, 1, 1);
+            cR_DateTimePicker1.Value = fecha;
+            cR_DateTimePicker2.Value = DateTime.Now;
+        }
+
+        private void cR_DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            if (cR_DateTimePicker1.Value > cR_DateTimePicker2.Value)
+            {
+                cR_DateTimePicker1.Value = DateTime.Now.AddMinutes(-1);
+                cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
+                MessageBox.Show("La primera fecha introducida no puede ser mayor a la segunda.");
+
+            }
+        }
+
+        private void cR_DateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            if (cR_DateTimePicker1.Value > cR_DateTimePicker2.Value)
+            {
+                cR_DateTimePicker2.Value = DateTime.Now;
+                cR_DateTimePicker1.Value = DateTime.Now;
+                MessageBox.Show("La primera fecha introducida no puede ser menor a la primera.");
+            }
         }
     }
 }

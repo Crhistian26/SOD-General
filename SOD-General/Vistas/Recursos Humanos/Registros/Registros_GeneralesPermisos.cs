@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.AsistenciasYPermisos;
+using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
@@ -17,6 +18,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         ControlOperaciones operaciones;
         List<Employee> empleados;
         List<Record_Permission> permisos;
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
 
         public Registros_GeneralesPermisos(AppVistaGeneral app)
         {
@@ -93,16 +95,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             CentrarElementos();
             cR_DataGriedView1.Rows.Add(1, "Fernando Acosta", "Enfermedad", "Lunes 27 de mayo", "Jueves 30 de mayo");
             cR_DataGriedView1.Rows.Add(1, "Maria Fernandez", "Diligencia", "Lunes 27 de mayo (10:30)", "Lunes 27 de mayo (2:15)");
-            //if (operaciones.BuscarAutorizacion("Agregar permisos"))
-            //{
-            //    botones_Nuevos5.Visible = true;
-            //}
-            //else
-            //{
-            //    botones_Nuevos5.Visible = false;
-            //}
             LlenarComboEmpleados();
             OrganizarDataGriedFecha();
+            if(!user.Confirm_Operation("Agregar permisos"))
+            {
+                botones_Nuevos5.Visible = false;
+            }
         }
 
         private void Registros_Generales_Resize(object sender, EventArgs e)
@@ -114,17 +112,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             if (e.RowIndex != -1)
             {
-                //if (operaciones.BuscarAutorizacion("Editar permisos"))
-                //{
-                //    Permiso_Details ver = new Permiso_Details();
-                //    ver.Show();
-                //}
-                //else
-                //{
-                //    Permiso_Details ver = new Permiso_Details(0);
-                //    ver.Show();
-                //}
-
+                if (user.Confirm_Operation("Editar permisos"))
+                {
+                    Permiso_Details ver = new Permiso_Details();
+                    ver.Show();
+                }
             }
         }
 

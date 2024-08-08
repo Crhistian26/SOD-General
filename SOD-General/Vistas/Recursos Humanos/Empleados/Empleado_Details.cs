@@ -1,10 +1,13 @@
 ﻿using Microsoft.Win32;
 using Modelos.AsistenciasYPermisos;
+using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Empleados
@@ -16,6 +19,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         Empleados_Controller controlEmpleados = new Empleados_Controller();
         List<Record_Attendance> Asistencias = new List<Record_Attendance>();
         List<Record_Permission> Permisos;
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
         public Empleado_Details(int id)
         {
             InitializeComponent();
@@ -53,6 +57,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         }
         private void Empleado_Details_Load(object sender, EventArgs e)
         {
+            if(!user.Confirm_Operation("Editar empleados"))
+            {
+                botones_Nuevos2.Visible = false;
+            }
             cR_Subtitulos1.Text = employee._Name + "\n" + employee._Lastname;
             this.Text = $"Registros de: {employee._Name} {employee._Lastname}";
             cR_Subtitulos2.Text = "Asistencias";
@@ -68,8 +76,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void botones_Nuevos2_Click(object sender, EventArgs e)
         {
-            controlEmpleados.Abrir_Control_Empleados(employee);
-            this.Close();
+            if (user.Employye_Id != employee.IdEmployee && (user._Role.Name != "Administrador" || user._Role.Name != "Programador"))
+            {
+                controlEmpleados.Abrir_Control_Empleados(employee);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No puedes alterar tus propios datos.");
+            }
+            
         }
 
         private void cR_DataGriedView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.comboBox1 = new Cr_ComboBox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_LabelUp1 = new CR_LabelUp();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.Empleados_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,10 +59,10 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp1);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.cR_SplitContainer1.Panel1.Resize += new System.EventHandler(this.cR_SplitContainer1_Panel1_Resize);
             // 
             // cR_SplitContainer1.Panel2
@@ -71,6 +71,21 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(770, 340);
             this.cR_SplitContainer1.SplitterDistance = 116;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 72);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(293, 29);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // botones_Nuevos1
             // 
@@ -116,25 +131,15 @@
             this.cR_LabelUp1.TabIndex = 1;
             this.cR_LabelUp1.Text = "Departamento";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // cR_DataGriedView1
             // 
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Empleados_Id,
@@ -223,7 +228,6 @@
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
         private CR_LabelUp cR_LabelUp1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private CR_DataGriedView cR_DataGriedView1;
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Id;
@@ -232,5 +236,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Department;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Entry;
         private System.Windows.Forms.DataGridViewTextBoxColumn Trabajando;
+        private Cr_ComboBox comboBox1;
     }
 }

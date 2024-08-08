@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.AsistenciasYPermisos;
+using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using SOD_General.Vistas.Pruebas;
@@ -18,7 +19,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         Empleados_Controller controlEmpleados = new Empleados_Controller();
         Registros_Controller controlRegistros = new Registros_Controller();
-
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
         ControlOperaciones operaciones;
 
         List<Employee> Empleados;
@@ -34,6 +35,10 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         public void Reset()
         {
+            if(!user.Confirm_Operation("Agregar empleados"))
+            {
+                botones_Nuevos1.Visible = false;
+            }
             Empleados = controlEmpleados.ListaGeneralEmpleados();
             CentrarElementos();
             LlenarDataGried();

@@ -70,15 +70,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private async void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
         {
-            
+            if (!user.Confirm_Operation("Agregar asistencias"))
+            {
+                botones_Nuevos1.Visible = false;
+            }
             Task llenarlista = new Task(() => { Asistencias = control.Obtener_Asistencias(); });
-            Task centrar = new Task(() => { CentrarElementos(); });
             llenarlista.Start();
-            centrar.Start();
-
             await llenarlista;
-            await centrar;
-
+            CentrarElementos();
             OrganizarDataGriedFecha();      
         }
 

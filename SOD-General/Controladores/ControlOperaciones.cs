@@ -32,6 +32,14 @@ namespace Controladores
         public AppVistaGeneral _view;
         public Dictionary<(string,string), EventHandler> OperationsEvents;
 
+        public ControlOperaciones()
+        {
+            this._view = Application.OpenForms.OfType<AppVistaGeneral>().First();
+            this.User = _view.user;
+            this.Role = User._Role;
+            this.OperationsEvents = DictionaryData();
+        }
+
         public ControlOperaciones(Model_User User,AppVistaGeneral view)
         {
             this.User = User;
@@ -39,6 +47,8 @@ namespace Controladores
             this._view = view;
             this.OperationsEvents = DictionaryData();
         }
+
+       
 
         #region agregar eventos nuevos
 
