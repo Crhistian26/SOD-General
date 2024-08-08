@@ -42,6 +42,8 @@
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
+            this.cR_LabelDown4 = new CR_LabelDown();
+            this.soD_ComboBox4 = new SOD_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -86,6 +88,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_LabelDown4);
+            this.panel1.Controls.Add(this.soD_ComboBox4);
             this.panel1.Controls.Add(this.cR_TextBoxNumerico1);
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_LabelDown5);
@@ -105,7 +109,7 @@
             // 
             this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(353, 138);
+            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(350, 103);
             this.cR_TextBoxNumerico1.MaxLength = 2;
             this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
             this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(65, 25);
@@ -133,7 +137,7 @@
             this.cR_LabelDown5.AutoSize = true;
             this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown5.Location = new System.Drawing.Point(353, 114);
+            this.cR_LabelDown5.Location = new System.Drawing.Point(350, 79);
             this.cR_LabelDown5.Name = "cR_LabelDown5";
             this.cR_LabelDown5.Size = new System.Drawing.Size(53, 20);
             this.cR_LabelDown5.TabIndex = 8;
@@ -150,7 +154,7 @@
             "Dias",
             "Sin limites",
             "Unico"});
-            this.soD_ComboBox3.Location = new System.Drawing.Point(438, 136);
+            this.soD_ComboBox3.Location = new System.Drawing.Point(435, 101);
             this.soD_ComboBox3.Name = "soD_ComboBox3";
             this.soD_ComboBox3.Size = new System.Drawing.Size(198, 27);
             this.soD_ComboBox3.TabIndex = 6;
@@ -229,6 +233,35 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Motivo:";
             // 
+            // cR_LabelDown4
+            // 
+            this.cR_LabelDown4.AutoSize = true;
+            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown4.Location = new System.Drawing.Point(350, 169);
+            this.cR_LabelDown4.Name = "cR_LabelDown4";
+            this.cR_LabelDown4.Size = new System.Drawing.Size(50, 20);
+            this.cR_LabelDown4.TabIndex = 14;
+            this.cR_LabelDown4.Text = "Cada :";
+            // 
+            // soD_ComboBox4
+            // 
+            this.soD_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.soD_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox4.FormattingEnabled = true;
+            this.soD_ComboBox4.Items.AddRange(new object[] {
+            "Dia",
+            "Semana",
+            "Mes",
+            "3 meses",
+            "Año",
+            "Sin limite",
+            "Unico"});
+            this.soD_ComboBox4.Location = new System.Drawing.Point(435, 169);
+            this.soD_ComboBox4.Name = "soD_ComboBox4";
+            this.soD_ComboBox4.Size = new System.Drawing.Size(198, 27);
+            this.soD_ComboBox4.TabIndex = 13;
+            // 
             // AgregarEditar_Motivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,5 +300,7 @@
         private CR_LabelDown cR_LabelDown5;
         private CR_TextBoxNumerico cR_TextBoxNumerico1;
         private SOD_ComboBox soD_ComboBox3;
+        private CR_LabelDown cR_LabelDown4;
+        private SOD_ComboBox soD_ComboBox4;
     }
 }
