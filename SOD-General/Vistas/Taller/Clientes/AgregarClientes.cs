@@ -2,6 +2,7 @@
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -71,7 +72,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         {
             if (txtDireccion.Text.Trim().Length == 0 || txtCedula.Text.Trim().Length == 0 || txtContacto.Text.Trim().Length == 0 || txtNumero1.Text.Trim().Length == 0 || txtNumero2.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Por favor, rellene todos los campos");
+                MessageBox.Show("Por favor, rellene todos los campos del cliente");
             }
             else
             {
@@ -80,6 +81,23 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                  clientContr.AgregarCliente(cliente);
                 
             }
+        }
+
+        private void btn_Sucursal_Click(object sender, EventArgs e)
+        {
+            if (txtCedula.Text.Trim().Length == 0 || txtSucursal.Text.Trim().Length == 0 || txtContactoSucur.Text.Trim().Length == 0 ||
+                txtDireccionSucur.Text.Trim().Length == 0 || txtNumero1Sucur.Text.Trim().Length == 0 || txtNumero2Sucur.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Por favor, rellene todos los campos de la sucursal");
+            }
+            else 
+            {
+                Locations locat = new Locations(null, null, txtCedula.Text,txtSucursal.Text, txtDireccionSucur.Text, 
+                    txtNumero1Sucur.Text, txtNumero2Sucur.Text, txtContactoSucur.Text);
+
+                clientContr.AgregarSucursal(locat);
+            }
+
         }
     }
 }

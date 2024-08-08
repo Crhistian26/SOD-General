@@ -50,14 +50,14 @@
             this.txtSucursal = new Cr_Textbox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_Subtitulos9 = new CR_Subtitulos();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cr_Textbox2 = new Cr_Textbox();
+            this.btn_Sucursal = new Diseños.Botones_Nuevos();
+            this.txtNumero2Sucur = new Cr_Textbox();
             this.cR_Subtitulos10 = new CR_Subtitulos();
             this.cR_Subtitulos11 = new CR_Subtitulos();
-            this.cr_Textbox3 = new Cr_Textbox();
-            this.cr_Textbox4 = new Cr_Textbox();
+            this.txtContactoSucur = new Cr_Textbox();
+            this.txtNumero1Sucur = new Cr_Textbox();
             this.cR_Subtitulos12 = new CR_Subtitulos();
-            this.cr_Textbox5 = new Cr_Textbox();
+            this.txtDireccionSucur = new Cr_Textbox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -158,9 +158,9 @@
             this.panelCliente.Controls.Add(this.txtNumero1);
             this.panelCliente.Controls.Add(this.cR_Subtitulos3);
             this.panelCliente.Controls.Add(this.txtDireccion);
-            this.panelCliente.Location = new System.Drawing.Point(8, 6);
+            this.panelCliente.Location = new System.Drawing.Point(11, 6);
             this.panelCliente.Name = "panelCliente";
-            this.panelCliente.Size = new System.Drawing.Size(361, 286);
+            this.panelCliente.Size = new System.Drawing.Size(363, 286);
             this.panelCliente.TabIndex = 44;
             // 
             // txtCliente
@@ -311,14 +311,14 @@
             this.panelSucursal.Controls.Add(this.txtSucursal);
             this.panelSucursal.Controls.Add(this.cR_Subtitulos1);
             this.panelSucursal.Controls.Add(this.cR_Subtitulos9);
-            this.panelSucursal.Controls.Add(this.botones_Nuevos1);
-            this.panelSucursal.Controls.Add(this.cr_Textbox2);
+            this.panelSucursal.Controls.Add(this.btn_Sucursal);
+            this.panelSucursal.Controls.Add(this.txtNumero2Sucur);
             this.panelSucursal.Controls.Add(this.cR_Subtitulos10);
             this.panelSucursal.Controls.Add(this.cR_Subtitulos11);
-            this.panelSucursal.Controls.Add(this.cr_Textbox3);
-            this.panelSucursal.Controls.Add(this.cr_Textbox4);
+            this.panelSucursal.Controls.Add(this.txtContactoSucur);
+            this.panelSucursal.Controls.Add(this.txtNumero1Sucur);
             this.panelSucursal.Controls.Add(this.cR_Subtitulos12);
-            this.panelSucursal.Controls.Add(this.cr_Textbox5);
+            this.panelSucursal.Controls.Add(this.txtDireccionSucur);
             this.panelSucursal.Location = new System.Drawing.Point(8, 6);
             this.panelSucursal.Name = "panelSucursal";
             this.panelSucursal.Size = new System.Drawing.Size(364, 286);
@@ -364,32 +364,33 @@
             this.cR_Subtitulos9.TabIndex = 73;
             this.cR_Subtitulos9.Text = "Contacto";
             // 
-            // botones_Nuevos1
+            // btn_Sucursal
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(226, 228);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(131, 39);
-            this.botones_Nuevos1.TabIndex = 74;
-            this.botones_Nuevos1.Text = "Agregar";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.btn_Sucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btn_Sucursal.BorderColor = System.Drawing.Color.Teal;
+            this.btn_Sucursal.BorderRadius = 40;
+            this.btn_Sucursal.BorderSize = 0;
+            this.btn_Sucursal.FlatAppearance.BorderSize = 0;
+            this.btn_Sucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sucursal.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_Sucursal.ForeColor = System.Drawing.Color.White;
+            this.btn_Sucursal.Location = new System.Drawing.Point(226, 228);
+            this.btn_Sucursal.Name = "btn_Sucursal";
+            this.btn_Sucursal.Size = new System.Drawing.Size(131, 39);
+            this.btn_Sucursal.TabIndex = 74;
+            this.btn_Sucursal.Text = "Agregar";
+            this.btn_Sucursal.UseVisualStyleBackColor = false;
+            this.btn_Sucursal.Click += new System.EventHandler(this.btn_Sucursal_Click);
             // 
-            // cr_Textbox2
+            // txtNumero2Sucur
             // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(199, 146);
-            this.cr_Textbox2.Multiline = true;
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.Size = new System.Drawing.Size(167, 30);
-            this.cr_Textbox2.TabIndex = 82;
+            this.txtNumero2Sucur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumero2Sucur.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtNumero2Sucur.Location = new System.Drawing.Point(199, 146);
+            this.txtNumero2Sucur.Multiline = true;
+            this.txtNumero2Sucur.Name = "txtNumero2Sucur";
+            this.txtNumero2Sucur.Size = new System.Drawing.Size(167, 30);
+            this.txtNumero2Sucur.TabIndex = 82;
             // 
             // cR_Subtitulos10
             // 
@@ -421,25 +422,25 @@
             this.cR_Subtitulos11.TabIndex = 81;
             this.cR_Subtitulos11.Text = "Numero 2";
             // 
-            // cr_Textbox3
+            // txtContactoSucur
             // 
-            this.cr_Textbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox3.Location = new System.Drawing.Point(199, 53);
-            this.cr_Textbox3.Multiline = true;
-            this.cr_Textbox3.Name = "cr_Textbox3";
-            this.cr_Textbox3.Size = new System.Drawing.Size(167, 30);
-            this.cr_Textbox3.TabIndex = 76;
+            this.txtContactoSucur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContactoSucur.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtContactoSucur.Location = new System.Drawing.Point(199, 53);
+            this.txtContactoSucur.Multiline = true;
+            this.txtContactoSucur.Name = "txtContactoSucur";
+            this.txtContactoSucur.Size = new System.Drawing.Size(167, 30);
+            this.txtContactoSucur.TabIndex = 76;
             // 
-            // cr_Textbox4
+            // txtNumero1Sucur
             // 
-            this.cr_Textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox4.Location = new System.Drawing.Point(12, 146);
-            this.cr_Textbox4.Multiline = true;
-            this.cr_Textbox4.Name = "cr_Textbox4";
-            this.cr_Textbox4.Size = new System.Drawing.Size(167, 30);
-            this.cr_Textbox4.TabIndex = 77;
+            this.txtNumero1Sucur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumero1Sucur.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtNumero1Sucur.Location = new System.Drawing.Point(12, 146);
+            this.txtNumero1Sucur.Multiline = true;
+            this.txtNumero1Sucur.Name = "txtNumero1Sucur";
+            this.txtNumero1Sucur.Size = new System.Drawing.Size(167, 30);
+            this.txtNumero1Sucur.TabIndex = 77;
             // 
             // cR_Subtitulos12
             // 
@@ -456,15 +457,15 @@
             this.cR_Subtitulos12.TabIndex = 79;
             this.cR_Subtitulos12.Text = "Sucursal";
             // 
-            // cr_Textbox5
+            // txtDireccionSucur
             // 
-            this.cr_Textbox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox5.Location = new System.Drawing.Point(12, 237);
-            this.cr_Textbox5.Multiline = true;
-            this.cr_Textbox5.Name = "cr_Textbox5";
-            this.cr_Textbox5.Size = new System.Drawing.Size(207, 30);
-            this.cr_Textbox5.TabIndex = 78;
+            this.txtDireccionSucur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDireccionSucur.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtDireccionSucur.Location = new System.Drawing.Point(12, 237);
+            this.txtDireccionSucur.Multiline = true;
+            this.txtDireccionSucur.Name = "txtDireccionSucur";
+            this.txtDireccionSucur.Size = new System.Drawing.Size(207, 30);
+            this.txtDireccionSucur.TabIndex = 78;
             // 
             // panel1
             // 
@@ -541,14 +542,14 @@
         private Cr_Textbox txtSucursal;
         private CR_Subtitulos cR_Subtitulos1;
         private CR_Subtitulos cR_Subtitulos9;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
-        private Cr_Textbox cr_Textbox2;
+        private Diseños.Botones_Nuevos btn_Sucursal;
+        private Cr_Textbox txtNumero2Sucur;
         private CR_Subtitulos cR_Subtitulos10;
         private CR_Subtitulos cR_Subtitulos11;
-        private Cr_Textbox cr_Textbox3;
-        private Cr_Textbox cr_Textbox4;
+        private Cr_Textbox txtContactoSucur;
+        private Cr_Textbox txtNumero1Sucur;
         private CR_Subtitulos cR_Subtitulos12;
-        private Cr_Textbox cr_Textbox5;
+        private Cr_Textbox txtDireccionSucur;
         private CR_DataGriedView cR_DataGriedView1;
         private Cr_ComboBox Cb_ClienteSucursal;
     }

@@ -94,6 +94,24 @@ namespace Controladores
                             _view.OpenForm(window);
                         }
                     },
+
+                    {
+                        ("Clientes","Añadir Clientes"),
+                        (object sender, EventArgs e) =>
+                        {
+                            AgregarClientes window = new AgregarClientes();
+                            _view.OpenForm(window);
+                        }
+                    },
+
+                    {
+                        ("Clientes","Ver Clientes"),
+                        (object sender, EventArgs e) =>
+                        {
+                            VisualizarClientes window = new VisualizarClientes();
+                            _view.OpenForm(window);
+                        }
+                    },
                 };
 
 
