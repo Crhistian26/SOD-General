@@ -130,11 +130,11 @@
     <Compile Include="Vistas\Pruebas\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Empleados\AgregarEditar_Empleados.cs">
+    <Compile Include="Vistas\Recursos Humanos\Empleados\Control_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Empleados\AgregarEditar_Empleados.Designer.cs">
-      <DependentUpon>AgregarEditar_Empleados.cs</DependentUpon>
+    <Compile Include="Vistas\Recursos Humanos\Empleados\Control_Empleados.Designer.cs">
+      <DependentUpon>Control_Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Recursos Humanos\Empleados\Empleado_Details.cs">
       <SubType>Form</SubType>
@@ -362,8 +362,8 @@
     <EmbeddedResource Include="Vistas\Pruebas\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\AgregarEditar_Empleados.resx">
-      <DependentUpon>AgregarEditar_Empleados.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\Control_Empleados.resx">
+      <DependentUpon>Control_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Empleados\Empleado_Details.resx">
       <DependentUpon>Empleado_Details.cs</DependentUpon>

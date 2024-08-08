@@ -99,9 +99,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem hoalToolStripMenuItem;
         public CR_MenuStrip cR_MenuStrip1;
+        public System.Windows.Forms.Panel panel1;
     }
 }

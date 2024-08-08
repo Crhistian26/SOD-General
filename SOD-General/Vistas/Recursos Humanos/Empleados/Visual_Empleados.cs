@@ -25,11 +25,19 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         List<Department> departamentos;
 
-        public Visual_Empleados(AppVistaGeneral app)
+        public Visual_Empleados()
         {
             InitializeComponent();
             //operaciones = new ControlOperaciones(app);
             departamentos = controlRegistros.Obtener_Departamentos();
+        }
+
+        public void Reset()
+        {
+            Empleados = controlEmpleados.ListaGeneralEmpleados();
+            CentrarElementos();
+            LlenarDataGried();
+            LlenarComboDepartamentos();
         }
         public void CentrarElementos()
         {
@@ -39,7 +47,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         public void LlenarDataGried()
         {
-            
+            cR_DataGriedView1.Rows.Clear();
             foreach (Employee empleado in Empleados)
             {
                 int id = empleado.IdEmployee;
@@ -47,8 +55,17 @@ namespace SOD_General.Recursos_Humanos.Empleados
                 string lastname = empleado._Lastname;
                 string department = empleado.Department;
                 DateTime date = empleado.Admission_date;
+                string estado = "";
+                if(empleado.Job_State)
+                {
+                    estado = "Trabajando";
+                }
+                else
+                {
+                    estado = "Despedido";
+                }
 
-                cR_DataGriedView1.Rows.Add(id, name, lastname, department, date.ToString("D"));
+                cR_DataGriedView1.Rows.Add(id, name, lastname, department, date.ToString("D"),estado);
             }
         }
 
@@ -64,10 +81,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         private void Visual_Empleados_Load(object sender, EventArgs e)
         {
-            Empleados = controlEmpleados.ListaGeneralEmpleados();
-            CentrarElementos();
-            LlenarDataGried();
-            LlenarComboDepartamentos();
+            Reset();
         }
 
         public void OrganizarDataGriedDepartamento()
@@ -122,7 +136,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            controlEmpleados.AbrirEditar();
+            controlEmpleados.Abrir_Control_Empleados();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

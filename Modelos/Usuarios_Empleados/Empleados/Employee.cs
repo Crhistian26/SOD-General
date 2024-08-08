@@ -21,21 +21,20 @@ namespace Modelos.Usuarios_Empleados
             this._Lastname = Lastname;
         }
 
-        public Employee(int IdEmployee, string Name, string Lastname, string Department, DateTime Admission_Date)
+        public Employee(int IdEmployee, string Name, string Lastname, string Department, DateTime Admission_Date, bool jobState)
             :this(IdEmployee,Name,Lastname)
         {
             this.Admission_date = Admission_Date;
             this.Department = Department;
-
+            this.Job_State = jobState;
         }
 
         public Employee(int idEmployee, int departmentId, string department, string name, string lastname, DateTime admissionDate, DateTime? dismissalDate, bool enabled, bool jobState)
-            : this(idEmployee, name, lastname, department, admissionDate)
+            : this(idEmployee, name, lastname, department, admissionDate, jobState)
         {
             DepartmentId = departmentId;
             Dismissal_date = dismissalDate;
             _Enabled = enabled;
-            Job_State = jobState;
         }
 
     }

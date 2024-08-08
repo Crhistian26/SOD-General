@@ -1,10 +1,12 @@
 ﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Usuarios_Empleados;
+using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -43,8 +45,9 @@ namespace SOD_General.Controladores
                     string lastname = lector.GetString(2);
                     string department = lector.GetString(3);
                     DateTime date = lector.GetDateTime(4);
+                    bool job = lector.GetBoolean(5);
 
-                    empleado = new Employee(id, name, lastname, department, date);
+                    empleado = new Employee(id, name, lastname, department, date,job);
                     empleados.Add(empleado);
                 }
 
@@ -90,6 +93,46 @@ namespace SOD_General.Controladores
             return diccionario;
         }
 
+        public bool AddEmployee(Employee emp)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Add_Employee @DepartId, @name, @lastname, @Admission_date";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@DepartId", emp.DepartmentId);
+                cmd.Parameters.AddWithValue("@name", emp._Name);
+                cmd.Parameters.AddWithValue("@lastname", emp._Lastname);
+                cmd.Parameters.AddWithValue("@Admission_date", emp.Admission_date);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                conex.Close();
+                return true;
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
         #region Sql server
         public Employee ObtenerEmpleado(int id)
         {
@@ -105,12 +148,20 @@ namespace SOD_General.Controladores
                 if (lector.Read())
                 {
                     int IdEmployee = lector.GetInt32(0);
+                    int DepartmentId = lector.GetInt32(1);
                     string Depart = lector.GetString(2);
                     string Name = lector.GetString(3);
                     string Lastname = lector.GetString(4);
                     DateTime Addmision = lector.GetDateTime(5);
+                    bool enabled = lector.GetBoolean(6);
+                    DateTime? dismal = null;
+                    if(!lector.IsDBNull(7))
+                    {
+                        dismal = lector.GetDateTime(7);
+                    }
+                    bool ejob = lector.GetBoolean(8);
 
-                    empleado = new Employee(IdEmployee, Name, Lastname, Depart, Addmision);
+                    empleado = new Employee(IdEmployee,DepartmentId,Depart, Name, Lastname, Addmision,dismal,enabled,ejob);
                     conex.Close();
 
                 }
@@ -139,20 +190,22 @@ namespace SOD_General.Controladores
 
         }
         #endregion
-        public void AbrirEditar()
+        public void Abrir_Control_Empleados()
         {
-            AgregarEditar_Empleados hola = new AgregarEditar_Empleados();
+            Control_Empleados hola = new Control_Empleados();
             hola.Show();
         }
-        public void AbrirEditar(int y)
+        public void Abrir_Control_Empleados(Employee emp)
         {
-            AgregarEditar_Empleados hola = new AgregarEditar_Empleados(y);
+            Control_Empleados hola = new Control_Empleados(emp);
             hola.Show();
         }
-        public void AbrirEditar(string y)
+
+        public void Reset_VisualEmpleados()
         {
-            AgregarEditar_Empleados hola = new AgregarEditar_Empleados(y);
-            hola.Show();
+            var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
+            Visual_Empleados view = new Visual_Empleados();
+            h.OpenForm(view);
         }
     }
 }

@@ -58,7 +58,7 @@ namespace Controladores
                         (("Empleados", "Ver empleados")),
                         (object sender, EventArgs e) =>
                         {
-                            Visual_Empleados window = new Visual_Empleados(_view);
+                            Visual_Empleados window = new Visual_Empleados();
                             _view.OpenForm(window);
                         }
                     },

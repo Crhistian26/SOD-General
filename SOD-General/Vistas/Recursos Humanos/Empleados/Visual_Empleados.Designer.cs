@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
@@ -40,6 +40,7 @@
             this.Empleados_Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleados_Entry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trabajando = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -130,17 +131,18 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Empleados_Id,
             this.Empleados_Names,
             this.Empleados_Lastname,
             this.Empleados_Department,
-            this.Empleados_Entry});
+            this.Empleados_Entry,
+            this.Trabajando});
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
@@ -188,6 +190,13 @@
             this.Empleados_Entry.ReadOnly = true;
             this.Empleados_Entry.Width = 84;
             // 
+            // Trabajando
+            // 
+            this.Trabajando.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Trabajando.HeaderText = "Estado";
+            this.Trabajando.Name = "Trabajando";
+            this.Trabajando.ReadOnly = true;
+            // 
             // Visual_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,11 +225,12 @@
         private CR_LabelUp cR_LabelUp1;
         private System.Windows.Forms.ComboBox comboBox1;
         private CR_DataGriedView cR_DataGriedView1;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Names;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Department;
         private System.Windows.Forms.DataGridViewTextBoxColumn Empleados_Entry;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Trabajando;
     }
 }

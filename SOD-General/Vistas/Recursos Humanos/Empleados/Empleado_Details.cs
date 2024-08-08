@@ -68,7 +68,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void botones_Nuevos2_Click(object sender, EventArgs e)
         {
-            controlEmpleados.AbrirEditar(1);
+            controlEmpleados.Abrir_Control_Empleados(employee);
             this.Close();
         }
 

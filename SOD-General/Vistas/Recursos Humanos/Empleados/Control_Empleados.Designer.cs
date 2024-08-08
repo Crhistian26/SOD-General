@@ -1,6 +1,6 @@
 ﻿namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 {
-    partial class AgregarEditar_Empleados
+    partial class Control_Empleados
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cR_LabelDown5 = new CR_LabelDown();
@@ -41,7 +42,6 @@
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.soD_TextBox2 = new SOD_TextBox();
             this.cR_LabelDown2 = new CR_LabelDown();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.soD_ComboBox2 = new SOD_ComboBox();
             this.soD_TextBox1 = new SOD_TextBox();
@@ -92,12 +92,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cR_LabelDown4);
             this.panel1.Controls.Add(this.cR_DateTimePicker1);
             this.panel1.Controls.Add(this.soD_TextBox2);
             this.panel1.Controls.Add(this.cR_LabelDown2);
-            this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_LabelDown3);
             this.panel1.Controls.Add(this.soD_ComboBox2);
             this.panel1.Controls.Add(this.soD_TextBox1);
@@ -107,6 +107,23 @@
             this.panel1.Size = new System.Drawing.Size(680, 275);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(265, 216);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.TabIndex = 10;
+            this.botones_Nuevos1.Text = "botones_Nuevos1";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -125,7 +142,7 @@
             this.panel3.Controls.Add(this.cR_DateTimePicker2);
             this.panel3.Location = new System.Drawing.Point(340, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(286, 66);
+            this.panel3.Size = new System.Drawing.Size(286, 63);
             this.panel3.TabIndex = 16;
             this.panel3.Visible = false;
             // 
@@ -161,6 +178,7 @@
             this.cR_Checkbox2.TabIndex = 1;
             this.cR_Checkbox2.Text = "Despedido";
             this.cR_Checkbox2.UseVisualStyleBackColor = true;
+            this.cR_Checkbox2.CheckedChanged += new System.EventHandler(this.cR_Checkbox2_CheckedChanged);
             // 
             // cR_Checkbox1
             // 
@@ -173,6 +191,7 @@
             this.cR_Checkbox1.TabIndex = 0;
             this.cR_Checkbox1.Text = "Trabajando";
             this.cR_Checkbox1.UseVisualStyleBackColor = true;
+            this.cR_Checkbox1.CheckedChanged += new System.EventHandler(this.cR_Checkbox1_CheckedChanged);
             // 
             // cR_LabelDown4
             // 
@@ -216,24 +235,6 @@
             this.cR_LabelDown2.Size = new System.Drawing.Size(72, 20);
             this.cR_LabelDown2.TabIndex = 11;
             this.cR_LabelDown2.Text = "Apellidos";
-            // 
-            // botones_Nuevos1
-            // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(265, 216);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
-            this.botones_Nuevos1.TabIndex = 10;
-            this.botones_Nuevos1.Text = "botones_Nuevos1";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_LabelDown3
             // 
@@ -279,15 +280,15 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Nombres";
             // 
-            // AgregarEditar_Empleados
+            // Control_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 381);
             this.Controls.Add(this.cR_SplitContainer1);
             this.MinimumSize = new System.Drawing.Size(720, 420);
-            this.Name = "AgregarEditar_Empleados";
-            this.Text = "AgregarEditar_Empleados";
+            this.Name = "Control_Empleados";
+            this.Text = "Control de empleados";
             this.Load += new System.EventHandler(this.AgregarEditar_Empleados_Load);
             this.Resize += new System.EventHandler(this.AgregarEditar_Empleados_Resize);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
