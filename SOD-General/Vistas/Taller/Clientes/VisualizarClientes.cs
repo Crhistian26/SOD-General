@@ -9,7 +9,7 @@ namespace SOD_General.Vistas.Taller.Clientes
     public partial class VisualizarClientes : Form
     {
         ClientController controller = new ClientController();
-        VisualizarSucursales sucursal = new VisualizarSucursales();
+        VisualizarSucursales sucursal;
         
         
         public VisualizarClientes()
@@ -43,23 +43,14 @@ namespace SOD_General.Vistas.Taller.Clientes
             
         }
 
-        private void llenarGridSucursal(int id)
-        {
-            List<Locations> Location = new List<Locations>();
-            Location = controller.ViewLocation(id);
-
-            foreach (Locations locat in Location)
-            {
-                sucursal.dgvSucursal.Rows.Add(locat.IdLocation, locat.IdClient, locat.Identifier, locat._Location, locat.Addrees, locat.Phone1, locat.Phone2, locat.Contact);
-            }
-            sucursal.Show();
-        }
+       
         private void dgvClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvClientes.Rows[e.RowIndex];
             int id = Convert.ToInt32(fila.Cells[0].Value);
-            llenarGridSucursal(id);
+            sucursal = new VisualizarSucursales(id);
 
+            sucursal.Show();
 
             MessageBox.Show(id.ToString());
         }

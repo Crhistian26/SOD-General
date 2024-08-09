@@ -107,6 +107,7 @@ namespace SOD_General.Controladores
 
         public List<Locations> ViewLocation(int id)
         {
+
             try
             {
                 string Query = "Exec Get_Locations @id";

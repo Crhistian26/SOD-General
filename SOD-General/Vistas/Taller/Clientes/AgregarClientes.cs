@@ -95,6 +95,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 Locations locat = new Locations(null, null, txtCedula.Text,txtSucursal.Text, txtDireccionSucur.Text, 
                     txtNumero1Sucur.Text, txtNumero2Sucur.Text, txtContactoSucur.Text);
 
+
                 clientContr.AgregarSucursal(locat);
             }
 
