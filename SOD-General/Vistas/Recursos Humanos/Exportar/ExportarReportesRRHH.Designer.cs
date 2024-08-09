@@ -121,6 +121,7 @@
             this.botones_Nuevos5.TabIndex = 9;
             this.botones_Nuevos5.Text = "Exportar reporte";
             this.botones_Nuevos5.UseVisualStyleBackColor = false;
+            this.botones_Nuevos5.Click += new System.EventHandler(this.botones_Nuevos5_Click);
             // 
             // cR_LabelDown4
             // 

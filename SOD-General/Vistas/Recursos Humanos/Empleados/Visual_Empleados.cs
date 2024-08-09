@@ -5,6 +5,7 @@ using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
+using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -126,6 +127,11 @@ namespace SOD_General.Recursos_Humanos.Empleados
         {
             if (e.RowIndex != -1)
             {
+                var win = Application.OpenForms.OfType<Empleado_Details>().FirstOrDefault();
+                if (win != null)
+                {
+                    win.Close();
+                }
                 DataGridViewRow fila = cR_DataGriedView1.Rows[e.RowIndex];
                 int id = Convert.ToInt32(fila.Cells[0].Value);
 

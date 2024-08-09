@@ -3,6 +3,7 @@ using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -13,6 +14,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller controlRegistro = new Registros_Controller();
         List<Employee> empleados;
+        ExportsRRHHReports reports = new ExportsRRHHReports();
         public ExportarReportesRRHH()
         {
             InitializeComponent();
@@ -128,6 +130,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
                 cR_DateTimePicker1.Value = DateTime.Now;
                 MessageBox.Show("La primera fecha introducida no puede ser menor a la primera.");
             }
+        }
+
+        private void botones_Nuevos5_Click(object sender, EventArgs e)
+        {
+            Employee emp = empleados.Where(a => a.IdEmployee == 2).Select(a => a).FirstOrDefault();
+            reports.ImprimirReporteAsistencias(emp, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
         }
     }
 }

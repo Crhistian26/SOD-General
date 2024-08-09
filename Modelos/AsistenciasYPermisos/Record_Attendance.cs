@@ -14,6 +14,15 @@ namespace Modelos.AsistenciasYPermisos
         public DateTime DateAttendance { get; set; }
         public TimeSpan Job_Hours { get; set; }
 
+        public Record_Attendance(DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF) 
+        {
+            this.Entry = entry;
+            this.Exit = exit;
+            this.LunchS = lunchS;
+            this.LunchF = lunchF;
+            this.DateAttendance = dateAttendance;
+            Job_Hours = (exit - entry) - (lunchF - lunchS);
+        }
         public Record_Attendance(int idRecord, int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
         {
             IdRecord = idRecord;

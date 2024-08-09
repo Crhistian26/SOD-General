@@ -114,6 +114,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 if (user.Confirm_Operation("Editar permisos"))
                 {
+                    var win = Application.OpenForms.OfType<Permiso_Details>().FirstOrDefault();
+                    if (win != null)
+                    {
+                        win.Close();
+                    }
                     Permiso_Details ver = new Permiso_Details();
                     ver.Show();
                 }

@@ -1,6 +1,7 @@
 ﻿using Controladores;
 using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados.Control_de_usuario;
+using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -44,6 +45,10 @@ namespace SOD_General
             cr_Textbox2.Clear();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

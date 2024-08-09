@@ -139,6 +139,7 @@
             this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cR_DataGriedView2.Size = new System.Drawing.Size(800, 364);
             this.cR_DataGriedView2.TabIndex = 3;
+            this.cR_DataGriedView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView2_CellDoubleClick);
             // 
             // Asistencias_RecordId
             // 

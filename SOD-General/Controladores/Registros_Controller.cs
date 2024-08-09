@@ -18,7 +18,7 @@ namespace SOD_General.Controladores
         #region Asistencias
         public void AgregarAsistencia()
         {
-            Agregar_Asistencias vista = new Agregar_Asistencias();
+            Control_Asistencias vista = new Control_Asistencias();
             vista.Show();
         }
 
@@ -40,12 +40,12 @@ namespace SOD_General.Controladores
                 {
                     int IdRecord = reader.GetInt32(0);
                     int IdEmployee = reader.GetInt32(1);
-                    string Name = reader.GetString(2);
-                    TimeSpan entry = reader.GetTimeSpan(3);
-                    TimeSpan exit = reader.GetTimeSpan(4);
-                    TimeSpan lunchS = reader.GetTimeSpan(5);
-                    TimeSpan lunchF = reader.GetTimeSpan(6);
-                    DateTime record_Date = reader.GetDateTime(7);
+                    string Name = reader.GetString(2) + " " + reader.GetString(3);
+                    TimeSpan entry = reader.GetTimeSpan(4);
+                    TimeSpan exit = reader.GetTimeSpan(5);
+                    TimeSpan lunchS = reader.GetTimeSpan(6);
+                    TimeSpan lunchF = reader.GetTimeSpan(7);
+                    DateTime record_Date = reader.GetDateTime(8);
 
                     record = new Record_Attendance(IdRecord, IdEmployee,Name, entry, exit, lunchS, lunchF, record_Date);
                     diccionario.Add(record);

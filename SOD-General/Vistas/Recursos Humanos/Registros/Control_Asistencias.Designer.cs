@@ -1,6 +1,6 @@
 ﻿namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
-    partial class Agregar_Asistencias
+    partial class Control_Asistencias
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Asistencias));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Control_Asistencias));
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,6 +61,8 @@
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelDown1 = new CR_LabelDown();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
+            this.cr_Textbox1 = new Cr_Textbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -94,8 +96,8 @@
             // 
             // cR_Subtitulos1
             // 
-            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Subtitulos1.AutoSize = true;
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
@@ -109,6 +111,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cr_Textbox1);
+            this.panel1.Controls.Add(this.botones_Nuevos2);
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -120,7 +124,7 @@
             this.panel1.Controls.Add(this.cR_LabelDown1);
             this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 365);
+            this.panel1.Size = new System.Drawing.Size(499, 365);
             this.panel1.TabIndex = 3;
             // 
             // botones_Nuevos1
@@ -449,6 +453,33 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
+            // botones_Nuevos2
+            // 
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.Red;
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(333, 307);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos2.TabIndex = 26;
+            this.botones_Nuevos2.Text = "Eliminar ";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(16, 87);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(279, 25);
+            this.cr_Textbox1.TabIndex = 27;
+            this.cr_Textbox1.Visible = false;
+            // 
             // Agregar_Asistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,5 +545,7 @@
         private SOD_ComboBox soD_ComboBox2;
         private SOD_ComboBox soD_ComboBox4;
         public CR_DateTimePicker cR_DateTimePicker1;
+        private Diseños.Botones_Nuevos botones_Nuevos2;
+        private Cr_Textbox cr_Textbox1;
     }
 }

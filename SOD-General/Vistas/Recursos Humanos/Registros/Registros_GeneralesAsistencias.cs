@@ -1,6 +1,7 @@
 ﻿using Controladores;
 using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -46,7 +47,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             if(data.Count > 0)
             {
-                
                 foreach (Record_Attendance registro in data)
                 {
                     cR_DataGriedView2.Rows.Add(
@@ -94,6 +94,23 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         private void cR_DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             OrganizarDataGriedFecha();
+        }
+
+        private void cR_DataGriedView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                var win = Application.OpenForms.OfType<Control_Asistencias>().FirstOrDefault();
+                if (win != null)
+                {
+                    win.Close();
+                }
+                Record_Attendance record = Asistencias
+                    .Where(a => a.IdRecord == Convert.ToInt32(cR_DataGriedView2.Rows[e.RowIndex].Cells[0].Value))
+                    .Select(a => a).First();
+                Control_Asistencias window = new Control_Asistencias(record);
+                window.Show();
+            }
         }
     }
 }
