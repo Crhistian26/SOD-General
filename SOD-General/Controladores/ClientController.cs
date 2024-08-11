@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
+using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -213,8 +214,21 @@ namespace SOD_General.Controladores
 
         }
 
+        public string RellenarComboBox(ComboBox cb, string Quer)
+        {
+            SqlCommand cmd = new SqlCommand(Quer, conex);
+            conex.Open();
+            SqlDataReader Reader = cmd.ExecuteReader();
+            
 
+            while (Reader.Read())
+            {
+                cb.Items.Add(Reader.GetString(0));
+            }
+            conex.Close();
+
+            return "";
+        }
+        
     }
-
-
 }

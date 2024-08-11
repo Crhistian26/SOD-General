@@ -9,6 +9,7 @@ using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas.Taller.Clientes;
 using SOD_General.Vistas.Taller.Controles_de_Equipo;
+using SOD_General.Vistas.Taller.Equipos;
 using SOD_General.Vistas.Taller.Registrar_Cotizacion;
 using SOD_General.Vistas.Taller.Registrar_entrada;
 using SOD_General.Vistas.Taller.Registro_peticiones;
@@ -119,6 +120,14 @@ namespace Controladores
                         (object sender, EventArgs e) =>
                         {
                             VisualizarClientes window = new VisualizarClientes();
+                            _view.OpenForm(window);
+                        }
+                    },
+                    {
+                        ("Equipos","Añadir Equipo"),
+                        (object sender, EventArgs e) =>
+                        {
+                            AgregarTipoEquipo window = new AgregarTipoEquipo();
                             _view.OpenForm(window);
                         }
                     },

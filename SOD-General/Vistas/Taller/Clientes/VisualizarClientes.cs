@@ -10,6 +10,7 @@ namespace SOD_General.Vistas.Taller.Clientes
     {
         ClientController controller = new ClientController();
         VisualizarSucursales sucursal;
+
         
         
         public VisualizarClientes()
@@ -28,6 +29,8 @@ namespace SOD_General.Vistas.Taller.Clientes
         private void VisualizarClientes_Load(object sender, System.EventArgs e)
         {
             llenarGridClientes();
+            string que = "Select _Client from Client";
+            cbCliente.Items.Add(controller.RellenarComboBox(cbCliente,que));
         }
 
         private void llenarGridClientes()

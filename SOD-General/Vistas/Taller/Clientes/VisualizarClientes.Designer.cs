@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.soD_TextBox1 = new SOD_TextBox();
-            this.soD_ComboBox1 = new SOD_ComboBox();
+            this.cbCliente = new SOD_ComboBox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.dgvClientes = new CR_DataGriedView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +41,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soD_ComboBox2 = new SOD_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -59,8 +60,9 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_ComboBox2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_TextBox1);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_ComboBox1);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cbCliente);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             this.cR_SplitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.cR_SplitContainer1_Panel1_Paint);
             // 
@@ -78,24 +80,23 @@
             this.soD_TextBox1.BorderSize = 2;
             this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox1.Location = new System.Drawing.Point(139, 58);
+            this.soD_TextBox1.Location = new System.Drawing.Point(664, 60);
             this.soD_TextBox1.Name = "soD_TextBox1";
             this.soD_TextBox1.Size = new System.Drawing.Size(100, 21);
             this.soD_TextBox1.TabIndex = 4;
             // 
-            // soD_ComboBox1
+            // cbCliente
             // 
-            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Items.AddRange(new object[] {
-            "Entidad",
+            this.cbCliente.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Items.AddRange(new object[] {
             "Nombre del cliente",
             "RNC"});
-            this.soD_ComboBox1.Location = new System.Drawing.Point(12, 54);
-            this.soD_ComboBox1.Name = "soD_ComboBox1";
-            this.soD_ComboBox1.Size = new System.Drawing.Size(121, 27);
-            this.soD_ComboBox1.TabIndex = 3;
-            this.soD_ComboBox1.Text = "Buscar por:";
+            this.cbCliente.Location = new System.Drawing.Point(12, 54);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(121, 27);
+            this.cbCliente.TabIndex = 3;
+            this.cbCliente.Text = "Buscar por:";
             // 
             // cR_Subtitulos1
             // 
@@ -184,6 +185,19 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // soD_ComboBox2
+            // 
+            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.soD_ComboBox2.FormattingEnabled = true;
+            this.soD_ComboBox2.Items.AddRange(new object[] {
+            "Nombre del cliente",
+            "RNC"});
+            this.soD_ComboBox2.Location = new System.Drawing.Point(139, 54);
+            this.soD_ComboBox2.Name = "soD_ComboBox2";
+            this.soD_ComboBox2.Size = new System.Drawing.Size(121, 27);
+            this.soD_ComboBox2.TabIndex = 5;
+            this.soD_ComboBox2.Text = "Buscar por:";
+            // 
             // VisualizarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,7 +224,7 @@
         private CR_Subtitulos cR_Subtitulos1;
         private CR_DataGriedView dgvClientes;
         private SOD_TextBox soD_TextBox1;
-        private SOD_ComboBox soD_ComboBox1;
+        private SOD_ComboBox cbCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -218,5 +232,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private SOD_ComboBox soD_ComboBox2;
     }
 }

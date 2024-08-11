@@ -47,6 +47,9 @@ namespace SOD_General.Taller.Registro_peticiones
             CentrarElementos();
         }
 
-        
+        private void fR_TextBox6__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

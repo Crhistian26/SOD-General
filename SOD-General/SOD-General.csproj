@@ -249,6 +249,7 @@
     <Compile Include="Controladores\ClientController.cs" />
     <Compile Include="Controladores\ControlOperaciones.cs" />
     <Compile Include="Controladores\Empleados_Controller.cs" />
+    <Compile Include="Controladores\EquipmentController.cs" />
     <Compile Include="Controladores\ExportsRRHHReports.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\Motivos_Controller.cs" />
@@ -357,6 +358,12 @@
     </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.Designer.cs">
       <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\EditarSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\EditarSucursales.Designer.cs">
+      <DependentUpon>EditarSucursales.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Clientes\VisualizarClientes.cs">
       <SubType>Form</SubType>
@@ -562,6 +569,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Permiso_Details.resx">
       <DependentUpon>Permiso_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Clientes\EditarSucursales.resx">
+      <DependentUpon>EditarSucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Clientes\VisualizarClientes.resx">
       <DependentUpon>VisualizarClientes.cs</DependentUpon>

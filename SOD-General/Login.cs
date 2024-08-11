@@ -14,7 +14,6 @@ namespace SOD_General
 
         VistaPrincipal principal { get; set; }
 
-        LoginController controller = new LoginController();
 
         public Login(VistaPrincipal principal)
         {
@@ -25,6 +24,7 @@ namespace SOD_General
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            LoginController controller = new LoginController();
 
             Model_User user;
             user = controller.Log_in(cr_Textbox1.Text, cr_Textbox2.Text);

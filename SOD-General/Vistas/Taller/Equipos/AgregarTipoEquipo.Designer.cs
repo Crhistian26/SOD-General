@@ -30,10 +30,9 @@
         {
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.fR_TextBox1 = new Designer.FR_TextBox();
-            this.cR_Checkbox1 = new CR_Checkbox();
+            this.txtTipoEquipo = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.btnGuardar = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -55,11 +54,10 @@
             // 
             // cR_SplitContainer1.Panel2
             // 
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.fR_TextBox1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox1);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.txtTipoEquipo);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(291, 264);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.btnGuardar);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(291, 239);
             this.cR_SplitContainer1.SplitterDistance = 65;
             this.cR_SplitContainer1.TabIndex = 4;
             // 
@@ -72,41 +70,21 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 14.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(7, 21);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(21, 22);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(246, 27);
             this.cR_Subtitulos1.TabIndex = 1;
             this.cR_Subtitulos1.Text = "Agregar tipo de equipo";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // fR_TextBox1
+            // txtTipoEquipo
             // 
-            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Location = new System.Drawing.Point(67, 41);
-            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox1.Multiline = true;
-            this.fR_TextBox1.Name = "fR_TextBox1";
-            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(141, 30);
-            this.fR_TextBox1.TabIndex = 33;
-            this.fR_TextBox1.texts = "";
-            this.fR_TextBox1.UnderlinedStyle = false;
-            // 
-            // cR_Checkbox1
-            // 
-            this.cR_Checkbox1.AutoSize = true;
-            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(103, 82);
-            this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(70, 24);
-            this.cR_Checkbox1.TabIndex = 32;
-            this.cR_Checkbox1.Text = "Activo";
-            this.cR_Checkbox1.UseVisualStyleBackColor = true;
+            this.txtTipoEquipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTipoEquipo.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtTipoEquipo.Location = new System.Drawing.Point(58, 49);
+            this.txtTipoEquipo.Name = "txtTipoEquipo";
+            this.txtTipoEquipo.Size = new System.Drawing.Size(158, 25);
+            this.txtTipoEquipo.TabIndex = 8;
             // 
             // cR_LabelDown1
             // 
@@ -119,30 +97,33 @@
             this.cR_LabelDown1.TabIndex = 7;
             this.cR_LabelDown1.Text = "Tipo de equipo";
             // 
-            // botones_Nuevos1
+            // btnGuardar
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(67, 136);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(141, 39);
-            this.botones_Nuevos1.TabIndex = 5;
-            this.botones_Nuevos1.Text = "Guardar";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnGuardar.BorderColor = System.Drawing.Color.Teal;
+            this.btnGuardar.BorderRadius = 40;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(65, 98);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(141, 39);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // AgregarTipoEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 264);
+            this.ClientSize = new System.Drawing.Size(291, 239);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "AgregarTipoEquipo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarTipoEquipo";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
@@ -158,9 +139,8 @@
 
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
-        private Designer.FR_TextBox fR_TextBox1;
-        private CR_Checkbox cR_Checkbox1;
         private CR_LabelDown cR_LabelDown1;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
+        private Diseños.Botones_Nuevos btnGuardar;
+        private Cr_Textbox txtTipoEquipo;
     }
 }
