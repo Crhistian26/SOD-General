@@ -246,6 +246,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\BrandController.cs" />
     <Compile Include="Controladores\ClientController.cs" />
     <Compile Include="Controladores\ControlOperaciones.cs" />
     <Compile Include="Controladores\Empleados_Controller.cs" />
@@ -437,6 +438,12 @@
     <Compile Include="Vistas\Taller\Equipos\VisualizacionEquipo.Designer.cs">
       <DependentUpon>VisualizacionEquipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Equipos\VisualizarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Equipos\VisualizarMarcas.Designer.cs">
+      <DependentUpon>VisualizarMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Inventario\AgregarPiezas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -611,6 +618,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Equipos\VisualizacionEquipo.resx">
       <DependentUpon>VisualizacionEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Equipos\VisualizarMarcas.resx">
+      <DependentUpon>VisualizarMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.resx">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>

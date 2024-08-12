@@ -131,6 +131,33 @@ namespace Controladores
                             _view.OpenForm(window);
                         }
                     },
+
+                      {
+                        ("Equipos","Ver Equipos"),
+                        (object sender, EventArgs e) =>
+                        {
+                            VisualizacionEquipo window = new VisualizacionEquipo();
+                            _view.OpenForm(window);
+                        }
+                    },
+
+                      {
+                        ("Equipos","Añadir Marcas"),
+                        (object sender, EventArgs e) =>
+                        {
+                            AgregarMarcas window = new AgregarMarcas();
+                            _view.OpenForm(window);
+                        }
+                    },
+
+                      {
+                        ("Equipos","Ver Marcas"),
+                        (object sender, EventArgs e) =>
+                        {
+                            VisualizarMarcas window = new VisualizarMarcas();
+                            _view.OpenForm(window);
+                        }
+                    },
                 };
 
 

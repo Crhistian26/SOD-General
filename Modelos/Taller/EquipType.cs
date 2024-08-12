@@ -2,7 +2,7 @@
 {
     public class EquipType
     {
-        public int IdEquipType { get; set; }
+        public int? IdEquipType { get; set; }
         public string _EquipType { get; set; }
         public bool _Enabled { get; set; }
 
@@ -12,7 +12,7 @@
         /// <param name="idEquipType">ID del tipo de equipo.</param>
         /// <param name="equipType">Nombre del tipo de equipo.</param>
         /// <param name="enabled">Estado de habilitación del tipo de equipo.</param>
-        public EquipType(int idEquipType, string equipType, bool enabled)
+        public EquipType(int? idEquipType, string equipType, bool enabled)
         {
             IdEquipType = idEquipType;
             _EquipType = equipType;
