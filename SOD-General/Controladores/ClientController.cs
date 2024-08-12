@@ -25,7 +25,6 @@ namespace SOD_General.Controladores
         {
             try
             {
-               
                 string Query = "Exec Add_Client @Identifier, @Client, @Address, @Phone1, @Phone2, @Contact";
                 
                 SqlCommand cmd = new SqlCommand(Query, conex);
@@ -108,7 +107,6 @@ namespace SOD_General.Controladores
 
         public List<Locations> ViewLocation(int id)
         {
-
             try
             {
                 string Query = "Exec Get_Locations @id";
@@ -214,20 +212,33 @@ namespace SOD_General.Controladores
 
         }
 
-        public string RellenarComboBox(ComboBox cb, string Quer)
+        public List<Client> RellenarComboBox()
         {
-            SqlCommand cmd = new SqlCommand(Quer, conex);
+            string Query = "Select * from Client";
+
+            List<Client> clientLista = new List<Client>();
+            SqlCommand cmd = new SqlCommand(Query, conex);
             conex.Open();
             SqlDataReader Reader = cmd.ExecuteReader();
             
 
             while (Reader.Read())
             {
-                cb.Items.Add(Reader.GetString(0));
+                Client Clientes;
+                int Id = Reader.GetInt32(0);
+                string Identifier = Reader.GetString(1);
+                string Client = Reader.GetString(2);
+                string Address = Reader.GetString(3);
+                string Phone1 = Reader.GetString(4);
+                string Phone2 = Reader.GetString(5);
+                string Contact = Reader.GetString(6);
+                Clientes = new Client(Id, Identifier, Client, Address, Phone1, Phone2, Contact);
+                clientLista.Add(Clientes);  
             }
+
             conex.Close();
 
-            return "";
+            return clientLista;
         }
         
     }

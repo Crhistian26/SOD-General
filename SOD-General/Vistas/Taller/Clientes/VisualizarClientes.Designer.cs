@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
-            this.soD_TextBox1 = new SOD_TextBox();
-            this.cbCliente = new SOD_ComboBox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.dgvClientes = new CR_DataGriedView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +39,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soD_ComboBox2 = new SOD_ComboBox();
+            this.cbCliente = new Cr_ComboBox();
+            this.cbFiltro = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -60,8 +59,7 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_ComboBox2);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.soD_TextBox1);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cbFiltro);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cbCliente);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             this.cR_SplitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.cR_SplitContainer1_Panel1_Paint);
@@ -73,31 +71,6 @@
             this.cR_SplitContainer1.SplitterDistance = 93;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
-            // soD_TextBox1
-            // 
-            this.soD_TextBox1.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox1.BorderSize = 2;
-            this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox1.Location = new System.Drawing.Point(664, 60);
-            this.soD_TextBox1.Name = "soD_TextBox1";
-            this.soD_TextBox1.Size = new System.Drawing.Size(100, 21);
-            this.soD_TextBox1.TabIndex = 4;
-            // 
-            // cbCliente
-            // 
-            this.cbCliente.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Items.AddRange(new object[] {
-            "Nombre del cliente",
-            "RNC"});
-            this.cbCliente.Location = new System.Drawing.Point(12, 54);
-            this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(121, 27);
-            this.cbCliente.TabIndex = 3;
-            this.cbCliente.Text = "Buscar por:";
-            // 
             // cR_Subtitulos1
             // 
             this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -107,7 +80,7 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(277, 37);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(273, 9);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(309, 31);
             this.cR_Subtitulos1.TabIndex = 0;
@@ -119,10 +92,10 @@
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -185,18 +158,32 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
-            // soD_ComboBox2
+            // cbCliente
             // 
-            this.soD_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox2.FormattingEnabled = true;
-            this.soD_ComboBox2.Items.AddRange(new object[] {
-            "Nombre del cliente",
-            "RNC"});
-            this.soD_ComboBox2.Location = new System.Drawing.Point(139, 54);
-            this.soD_ComboBox2.Name = "soD_ComboBox2";
-            this.soD_ComboBox2.Size = new System.Drawing.Size(121, 27);
-            this.soD_ComboBox2.TabIndex = 5;
-            this.soD_ComboBox2.Text = "Buscar por:";
+            this.cbCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbCliente.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbCliente.ForeColor = System.Drawing.Color.White;
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Location = new System.Drawing.Point(165, 52);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(132, 29);
+            this.cbCliente.TabIndex = 5;
+            // 
+            // cbFiltro
+            // 
+            this.cbFiltro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbFiltro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbFiltro.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbFiltro.ForeColor = System.Drawing.Color.White;
+            this.cbFiltro.FormattingEnabled = true;
+            this.cbFiltro.Location = new System.Drawing.Point(12, 52);
+            this.cbFiltro.Name = "cbFiltro";
+            this.cbFiltro.Size = new System.Drawing.Size(132, 29);
+            this.cbFiltro.TabIndex = 6;
+            this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
             // VisualizarClientes
             // 
@@ -223,8 +210,6 @@
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
         private CR_DataGriedView dgvClientes;
-        private SOD_TextBox soD_TextBox1;
-        private SOD_ComboBox cbCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -232,6 +217,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private SOD_ComboBox soD_ComboBox2;
+        private Cr_ComboBox cbCliente;
+        private Cr_ComboBox cbFiltro;
     }
 }

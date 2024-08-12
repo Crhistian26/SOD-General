@@ -2,6 +2,7 @@
 using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
+using SOD_General.Taller.Control_calidad;
 using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
@@ -155,6 +156,15 @@ namespace Controladores
                         (object sender, EventArgs e) =>
                         {
                             VisualizarMarcas window = new VisualizarMarcas();
+                            _view.OpenForm(window);
+                        }
+                    },
+
+                      {
+                        ("Equipos","Añadir Controles"),
+                        (object sender, EventArgs e) =>
+                        {
+                            AgregarControles window = new AgregarControles();
                             _view.OpenForm(window);
                         }
                     },

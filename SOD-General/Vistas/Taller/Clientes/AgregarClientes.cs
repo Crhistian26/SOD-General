@@ -51,6 +51,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             Cb_ClienteSucursal.Items.Add("Cliente");
             Cb_ClienteSucursal.Items.Add("Sucursal");
 
+
             
         }
 
@@ -59,11 +60,17 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             if (Cb_ClienteSucursal.SelectedIndex == 0)
             {
                 panelCliente.Visible = true;
+                PanelRncCliente.Visible = true;
+
+                panelRncSucursal.Visible = false;
                 panelSucursal.Visible = false;
             }
             else if (Cb_ClienteSucursal.SelectedIndex == 1)
             {
                 panelSucursal.Visible = true;
+                panelRncSucursal.Visible = true;
+
+                PanelRncCliente.Visible = false;
                 panelCliente.Visible = false;
             }
         }
@@ -99,6 +106,11 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 clientContr.AgregarSucursal(locat);
             }
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           // clientContr.ViewLocation();
         }
     }
 }

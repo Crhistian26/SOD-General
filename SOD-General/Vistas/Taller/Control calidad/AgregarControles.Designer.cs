@@ -30,9 +30,9 @@
         {
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.txtControlName = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.fR_TextBox1 = new Designer.FR_TextBox();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.btnAgregar = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -54,9 +54,9 @@
             // 
             // cR_SplitContainer1.Panel2
             // 
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.txtControlName);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.fR_TextBox1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.btnAgregar);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(347, 270);
             this.cR_SplitContainer1.SplitterDistance = 65;
             this.cR_SplitContainer1.TabIndex = 0;
@@ -77,50 +77,43 @@
             this.cR_Subtitulos1.Text = "Agregar Nuevos \r\nControles de calidad";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtControlName
+            // 
+            this.txtControlName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtControlName.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtControlName.Location = new System.Drawing.Point(71, 66);
+            this.txtControlName.Name = "txtControlName";
+            this.txtControlName.Size = new System.Drawing.Size(197, 25);
+            this.txtControlName.TabIndex = 3;
+            // 
             // cR_LabelDown1
             // 
             this.cR_LabelDown1.AutoSize = true;
             this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(99, 25);
+            this.cR_LabelDown1.Location = new System.Drawing.Point(100, 34);
             this.cR_LabelDown1.Name = "cR_LabelDown1";
             this.cR_LabelDown1.Size = new System.Drawing.Size(141, 20);
             this.cR_LabelDown1.TabIndex = 2;
             this.cR_LabelDown1.Text = "Nombre del control";
             // 
-            // fR_TextBox1
+            // btnAgregar
             // 
-            this.fR_TextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.fR_TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(123)))), ((int)(((byte)(134)))));
-            this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
-            this.fR_TextBox1.BorderSize = 2;
-            this.fR_TextBox1.Location = new System.Drawing.Point(85, 53);
-            this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.fR_TextBox1.Multiline = true;
-            this.fR_TextBox1.Name = "fR_TextBox1";
-            this.fR_TextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.fR_TextBox1.PasswordChar = false;
-            this.fR_TextBox1.Size = new System.Drawing.Size(173, 30);
-            this.fR_TextBox1.TabIndex = 1;
-            this.fR_TextBox1.texts = "";
-            this.fR_TextBox1.UnderlinedStyle = false;
-            // 
-            // botones_Nuevos1
-            // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(71, 110);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(197, 55);
-            this.botones_Nuevos1.TabIndex = 0;
-            this.botones_Nuevos1.Text = "Agregar nuevo control";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnAgregar.BorderColor = System.Drawing.Color.Teal;
+            this.btnAgregar.BorderRadius = 40;
+            this.btnAgregar.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(71, 134);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(197, 55);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.Text = "Agregar nuevo control";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // AgregarControles
             // 
@@ -146,7 +139,7 @@
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
         private CR_LabelDown cR_LabelDown1;
-        private Designer.FR_TextBox fR_TextBox1;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
+        private Diseños.Botones_Nuevos btnAgregar;
+        private Cr_Textbox txtControlName;
     }
 }

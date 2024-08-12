@@ -22,7 +22,7 @@ namespace SOD_General.Controladores
         {
             try
             {
-                string query = "exec Add_Brand @NameBrand, @Enable";
+                string query = "exec Add_+Brand @NameBrand, @Enable";
                 SqlCommand cmd = new SqlCommand(query, conex);
                 cmd.Parameters.Add("NameBrand", marca);
                 cmd.Parameters.Add("Enable", enable);

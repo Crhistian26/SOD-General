@@ -10,16 +10,12 @@ namespace SOD_General.Vistas.Taller.Clientes
     {
         ClientController controller = new ClientController();
         VisualizarSucursales sucursal;
-
-        
-        
+ 
         public VisualizarClientes()
         {
             InitializeComponent();
-            
+   
         }
-
-        
 
         private void cR_SplitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -29,9 +25,12 @@ namespace SOD_General.Vistas.Taller.Clientes
         private void VisualizarClientes_Load(object sender, System.EventArgs e)
         {
             llenarGridClientes();
-            string que = "Select _Client from Client";
-            cbCliente.Items.Add(controller.RellenarComboBox(cbCliente,que));
+            cbFiltro.Items.Add("Nombre");
+            cbFiltro.Items.Add("Rnc o Cedula");
+            
         }
+
+     //   int a = empleados[soD_ComboBox1.SelectedIndex].IdEmployee
 
         private void llenarGridClientes()
         {
@@ -56,6 +55,38 @@ namespace SOD_General.Vistas.Taller.Clientes
             sucursal.Show();
 
             MessageBox.Show(id.ToString());
+        }
+
+        public void cbLlenar(int a)
+        {
+            List<Client> lisCli = new List<Client>();
+            lisCli = controller.RellenarComboBox();
+
+            if (a == 0)
+            {
+                cbCliente.Items.Clear();
+                cbCliente.SelectedItem = null;
+                foreach (var client in lisCli)
+                {
+                    cbCliente.Items.Add(client._NameBranch);
+                }
+            }
+            else
+            {
+                cbCliente.Items.Clear();
+                cbCliente.SelectedItem = null;
+                
+                foreach (var client in lisCli)
+                {
+                    cbCliente.Items.Add(client._Identifier);
+                }
+            }
+        }
+
+        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int b = cbFiltro.SelectedIndex;
+            cbLlenar(b);
         }
     }
 }

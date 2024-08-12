@@ -254,6 +254,7 @@
     <Compile Include="Controladores\ExportsRRHHReports.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\Motivos_Controller.cs" />
+    <Compile Include="Controladores\QualityControlController.cs" />
     <Compile Include="Controladores\Registros_Controller.cs" />
     <Compile Include="Controladores\SizesGenerales.cs" />
     <Compile Include="AppVistaGeneral.cs">

@@ -132,6 +132,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
                 {
                     win.Close();
                 }
+
                 DataGridViewRow fila = cR_DataGriedView1.Rows[e.RowIndex];
                 int id = Convert.ToInt32(fila.Cells[0].Value);
 
