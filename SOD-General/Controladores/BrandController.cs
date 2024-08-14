@@ -24,8 +24,8 @@ namespace SOD_General.Controladores
             {
                 string query = "exec Add_+Brand @NameBrand, @Enable";
                 SqlCommand cmd = new SqlCommand(query, conex);
-                cmd.Parameters.Add("NameBrand", marca);
-                cmd.Parameters.Add("Enable", enable);
+                cmd.Parameters.AddWithValue("NameBrand", marca);
+                cmd.Parameters.AddWithValue("Enable", enable);
                 conex.Open();
                 cmd.ExecuteNonQuery();
 

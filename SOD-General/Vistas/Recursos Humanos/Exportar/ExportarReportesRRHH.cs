@@ -1,4 +1,5 @@
-﻿using Modelos.Usuarios_Empleados;
+﻿using Modelos.AsistenciasYPermisos;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -134,8 +135,53 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
 
         private void botones_Nuevos5_Click(object sender, EventArgs e)
         {
-            Employee emp = empleados.Where(a => a.IdEmployee == 2).Select(a => a).FirstOrDefault();
-            reports.ImprimirReporteAsistencias(emp, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+            
+            if (cr_ComboBox2.SelectedIndex != -1)
+            {
+                if (cr_ComboBox1.SelectedItem.ToString() == "Asistencias")
+                {
+                    ExportAttendance();
+                }
+                else if(cr_ComboBox1.SelectedItem.ToString() == "Permisos")
+                {
+                    MessageBox.Show("Hola imprimo permisos");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe de completar todos los campos para exportar l.");
+            }
+
+        }
+        private void ExportAttendance()
+        {
+
+            if (cr_ComboBox2.SelectedItem.ToString() != "Todos los empleados")
+            {
+                Employee emp = empleados[cr_ComboBox2.SelectedIndex - 1];
+                List<Record_Attendance> records = reports.Get_AttendanceEmployee(emp, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                if (records.Count > 0)
+                {
+                    reports.ImprimirReporteAsistencias(records, emp, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Este empleado no tiene registro de asistencia entre estas fechas.");
+                }
+            }
+            else if (cr_ComboBox2.SelectedItem.ToString() == "Todos los empleados")
+            {
+                List<Record_Attendance> records = reports.Get_AttendanceAllEmployee(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                if (records.Count > 0)
+                {
+                    reports.ImprimirReporteAsistencias(records, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                }
+                else
+                {
+                    MessageBox.Show("No hay registro de asistencias entre estas fechas.");
+                }
+            }
+            
         }
     }
 }

@@ -33,12 +33,11 @@
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.Motivos_Each = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivos_Limit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivos_Extent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivos_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Motivos_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Motivos_Limit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Motivos_Each = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -112,9 +111,8 @@
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Motivos_Id,
-            this.Motivos_Reason,
-            this.Motivos_Extent,
-            this.Column1,
+            this.Motivo,
+            this.Descrip,
             this.Motivos_Limit,
             this.Motivos_Each});
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -127,12 +125,26 @@
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
             // 
-            // Motivos_Each
+            // Motivos_Id
             // 
-            this.Motivos_Each.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Motivos_Each.HeaderText = "Cada";
-            this.Motivos_Each.Name = "Motivos_Each";
-            this.Motivos_Each.ReadOnly = true;
+            this.Motivos_Id.HeaderText = "Id";
+            this.Motivos_Id.Name = "Motivos_Id";
+            this.Motivos_Id.ReadOnly = true;
+            this.Motivos_Id.Visible = false;
+            // 
+            // Motivo
+            // 
+            this.Motivo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Motivo.HeaderText = "Motivo";
+            this.Motivo.Name = "Motivo";
+            this.Motivo.ReadOnly = true;
+            // 
+            // Descrip
+            // 
+            this.Descrip.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descrip.HeaderText = "Descripcion";
+            this.Descrip.Name = "Descrip";
+            this.Descrip.ReadOnly = true;
             // 
             // Motivos_Limit
             // 
@@ -141,33 +153,12 @@
             this.Motivos_Limit.Name = "Motivos_Limit";
             this.Motivos_Limit.ReadOnly = true;
             // 
-            // Column1
+            // Motivos_Each
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Medida 2";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Motivos_Extent
-            // 
-            this.Motivos_Extent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Motivos_Extent.HeaderText = "Medida 1";
-            this.Motivos_Extent.Name = "Motivos_Extent";
-            this.Motivos_Extent.ReadOnly = true;
-            // 
-            // Motivos_Reason
-            // 
-            this.Motivos_Reason.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Motivos_Reason.HeaderText = "Motivo";
-            this.Motivos_Reason.Name = "Motivos_Reason";
-            this.Motivos_Reason.ReadOnly = true;
-            // 
-            // Motivos_Id
-            // 
-            this.Motivos_Id.HeaderText = "Id";
-            this.Motivos_Id.Name = "Motivos_Id";
-            this.Motivos_Id.ReadOnly = true;
-            this.Motivos_Id.Visible = false;
+            this.Motivos_Each.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Motivos_Each.HeaderText = "Cada";
+            this.Motivos_Each.Name = "Motivos_Each";
+            this.Motivos_Each.ReadOnly = true;
             // 
             // Visual_Motivos
             // 
@@ -198,9 +189,8 @@
         private CR_Subtitulos cR_Subtitulos1;
         private CR_DataGriedView cR_DataGriedView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Motivos_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivos_Reason;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivos_Extent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Motivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descrip;
         private System.Windows.Forms.DataGridViewTextBoxColumn Motivos_Limit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Motivos_Each;
     }

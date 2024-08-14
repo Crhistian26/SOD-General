@@ -168,7 +168,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void botones_Nuevos2_Click(object sender, EventArgs e)
         {
-            var message = MessageBox.Show("Eliminar el usuario hara que todos los registros de asistencias, permisos, y su usuario en el sistema sean eliminados, esta seguro de querer eliminar el empleado.", $"Eliminar el empleado: {employee._Name} {employee._Lastname}",MessageBoxButtons.OKCancel);
+            var message = MessageBox.Show("Eliminar el empleado hara que todos los registros de asistencias, permisos, y su usuario en el sistema sean eliminados, esta seguro de querer eliminar el empleado.", $"Eliminar el empleado: {employee._Name} {employee._Lastname}",MessageBoxButtons.OKCancel);
             if(message == DialogResult.OK)
             {
                 if(controlEmpleados.DeleteEmployee(employee.IdEmployee))

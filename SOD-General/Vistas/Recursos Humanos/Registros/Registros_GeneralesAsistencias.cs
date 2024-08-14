@@ -22,6 +22,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             InitializeComponent();
             this.user = user;
+            Asistencias = control.Obtener_Asistencias(cR_DateTimePicker1.Value, cR_DateTimePicker1.Value);
+            CentrarElementos();
+            if (!user.Confirm_Operation("Agregar asistencias"))
+            {
+                botones_Nuevos1.Visible = false;
+            }
         }
 
         public void CentrarElementos()
@@ -34,9 +40,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
 
         public void OrganizarDataGriedFecha()
-        {
+        { 
             cR_DataGriedView2.Rows.Clear();
-
             var data = Asistencias.Select(a => a)
                 .Where(
                     a => a.DateAttendance.Date.Day == cR_DateTimePicker1.Value.Date.Day 
@@ -63,22 +68,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
             else
             {
-                MessageBox.Show("No hay asistencias en este dia.");
+                
             }
         }
 
 
-        private async void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
+        private  void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
         {
-            if (!user.Confirm_Operation("Agregar asistencias"))
-            {
-                botones_Nuevos1.Visible = false;
-            }
-            Task llenarlista = new Task(() => { Asistencias = control.Obtener_Asistencias(); });
-            llenarlista.Start();
-            await llenarlista;
-            CentrarElementos();
-            OrganizarDataGriedFecha();      
+            OrganizarDataGriedFecha();
         }
 
         private void Registros_GeneralesAsistencias_Resize(object sender, EventArgs e)
@@ -93,6 +90,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void cR_DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            Asistencias = control.Obtener_Asistencias(cR_DateTimePicker1.Value, cR_DateTimePicker1.Value);
             OrganizarDataGriedFecha();
         }
 

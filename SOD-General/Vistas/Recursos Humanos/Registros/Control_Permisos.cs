@@ -33,8 +33,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             foreach (Employee emp in empleados)
             {
-                soD_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
-
+                cr_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
             }
         }
         private void Agregar_Permiso_Load(object sender, EventArgs e)
@@ -55,7 +54,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void soD_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int a = empleados[soD_ComboBox1.SelectedIndex].IdEmployee;
+            int a = empleados[cr_ComboBox1.SelectedIndex].IdEmployee;
         }
     }
 }

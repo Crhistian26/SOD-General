@@ -23,6 +23,12 @@ namespace Modelos.AsistenciasYPermisos
             this.DateAttendance = dateAttendance;
             Job_Hours = (exit - entry) - (lunchF - lunchS);
         }
+        public Record_Attendance(string Name, DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF)
+            :this(dateAttendance,entry,exit,lunchS,lunchF)
+        {
+            this._Name = Name;
+        }
+
         public Record_Attendance(int idRecord, int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
         {
             IdRecord = idRecord;

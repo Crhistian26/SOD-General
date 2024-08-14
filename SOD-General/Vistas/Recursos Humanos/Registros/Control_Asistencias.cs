@@ -21,31 +21,53 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         public Control_Asistencias()
         {
             InitializeComponent();
+            VistaAgregar();
+        }
+
+        public Control_Asistencias(Record_Attendance record)
+        {
+            InitializeComponent();
+            VistaEditar(record);
+        }
+        private void VistaAgregar()
+        {
             empleados = control.Obtener_Empleados();
             botones_Nuevos2.Visible = false;
             cr_Textbox1.Visible = false;
             LlenarComboEmpleados();
             botones_Nuevos1.Click += AddAttendance;
         }
-
-        public Control_Asistencias(Record_Attendance record)
+        private void VistaEditar(Record_Attendance record)
         {
-            InitializeComponent();
             botones_Nuevos1.Visible = false;
             botones_Nuevos2.Visible = false;
             soD_ComboBox1.Visible = false;
-            cr_Textbox1.Visible = true;
+            cR_Subtitulos1.Text = "Editar asistencia";
+            botones_Nuevos1.Visible = true;
             cr_Textbox1.Enabled = false;
+            botones_Nuevos1.Text = "Editar";
+            cr_Textbox1.Visible = true;
+            
             cr_Textbox1.Text = record._Name;
+            string index = "";
+
+            (cR_TBhora1.Text, cR_TBminutos1.Text, index) = _size.FiltrarHorasComb(record.Entry);
+            soD_ComboBox4.SelectedIndex = soD_ComboBox4.FindString(index);
+
+            (cR_TBhora2.Text, cR_TBminutos2.Text, index) = _size.FiltrarHorasComb(record.Exit);
+            soD_ComboBox2.SelectedIndex = soD_ComboBox4.FindString(index);
+
+            (cR_TBhora3.Text, cR_TBminutos3.Text, index) = _size.FiltrarHorasComb(record.LunchS);
+            soD_ComboBox3.SelectedIndex = soD_ComboBox4.FindString(index);
+
+            (cR_TBhora4.Text, cR_TBminutos4.Text, index) = _size.FiltrarHorasComb(record.LunchF);
+            soD_ComboBox5.SelectedIndex = soD_ComboBox4.FindString(index);
+
             if (user.Confirm_Operation("Eliminar asistencias"))
             {
                 botones_Nuevos2.Visible = true;
             }
-            if (user.Confirm_Operation("Editar asistencias"))
-            {
-                botones_Nuevos1.Visible = true;
-                botones_Nuevos1.Text = "Editar";
-            }
+
             botones_Nuevos1.Click += EditAttendance;
             botones_Nuevos2.Click += DeleteAttendance;
         }

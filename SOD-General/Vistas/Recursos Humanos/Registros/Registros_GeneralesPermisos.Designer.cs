@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_LabelUp2 = new CR_LabelUp();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.botones_Nuevos4 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
@@ -42,13 +41,15 @@
             this.cR_DateTimePicker2 = new CR_DateTimePicker();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelUp1 = new CR_LabelUp();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.cr_ComboBox1 = new Cr_ComboBox();
+            this.cr_ComboBox2 = new Cr_ComboBox();
             this.Registros_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -68,19 +69,19 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cr_ComboBox2);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cr_ComboBox1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos5);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp2);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.comboBox2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.panel1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_LabelUp1);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.comboBox1);
             // 
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(960, 490);
-            this.cR_SplitContainer1.SplitterDistance = 161;
+            this.cR_SplitContainer1.SplitterDistance = 198;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // botones_Nuevos5
@@ -121,19 +122,11 @@
             this.cR_LabelUp2.AutoSize = true;
             this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(12, 107);
+            this.cR_LabelUp2.Location = new System.Drawing.Point(12, 115);
             this.cR_LabelUp2.Name = "cR_LabelUp2";
             this.cR_LabelUp2.Size = new System.Drawing.Size(57, 20);
             this.cR_LabelUp2.TabIndex = 4;
             this.cR_LabelUp2.Text = "Motivo";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(12, 130);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(245, 21);
-            this.comboBox2.TabIndex = 3;
             // 
             // panel1
             // 
@@ -252,41 +245,61 @@
             this.cR_LabelUp1.TabIndex = 1;
             this.cR_LabelUp1.Text = "Empleado";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 83);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // cR_DataGriedView1
             // 
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registros_RecordId,
             this.Registros_Employee,
             this.Registros_Reason,
             this.Registros_Date1,
-            this.Registros_Date2});
+            this.Registros_Date2,
+            this.Cantidad});
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(960, 325);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(960, 288);
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
+            // 
+            // cr_ComboBox1
+            // 
+            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox1.FormattingEnabled = true;
+            this.cr_ComboBox1.Location = new System.Drawing.Point(16, 83);
+            this.cr_ComboBox1.Name = "cr_ComboBox1";
+            this.cr_ComboBox1.Size = new System.Drawing.Size(247, 29);
+            this.cr_ComboBox1.TabIndex = 7;
+            this.cr_ComboBox1.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox1_SelectedIndexChanged);
+            // 
+            // cr_ComboBox2
+            // 
+            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox2.FormattingEnabled = true;
+            this.cr_ComboBox2.Location = new System.Drawing.Point(16, 138);
+            this.cr_ComboBox2.Name = "cr_ComboBox2";
+            this.cr_ComboBox2.Size = new System.Drawing.Size(247, 29);
+            this.cr_ComboBox2.TabIndex = 8;
             // 
             // Registros_RecordId
             // 
@@ -323,6 +336,13 @@
             this.Registros_Date2.Name = "Registros_Date2";
             this.Registros_Date2.ReadOnly = true;
             // 
+            // Cantidad
+            // 
+            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cantidad.HeaderText = "Cantidad de tiempo";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
             // Registros_GeneralesPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,9 +370,7 @@
 
         private CR_SplitContainer cR_SplitContainer1;
         private CR_LabelUp cR_LabelUp1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private CR_LabelUp cR_LabelUp2;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel1;
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private CR_DateTimePicker cR_DateTimePicker2;
@@ -362,11 +380,14 @@
         private Diseños.Botones_Nuevos botones_Nuevos3;
         private Diseños.Botones_Nuevos botones_Nuevos2;
         private CR_DataGriedView cR_DataGriedView1;
+        private Diseños.Botones_Nuevos botones_Nuevos5;
+        private Cr_ComboBox cr_ComboBox2;
+        private Cr_ComboBox cr_ComboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Reason;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date2;
-        private Diseños.Botones_Nuevos botones_Nuevos5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }

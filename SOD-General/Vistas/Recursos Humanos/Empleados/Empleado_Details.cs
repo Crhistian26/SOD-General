@@ -25,7 +25,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             InitializeComponent();
             Asistencias = controlEmpleados.ListaAsistenciasEmpleado(id);
             employee = controlEmpleados.ObtenerEmpleado(id);
-
+            Permisos = controlEmpleados.ListaPermisosEmpleado(id);
         }
 
         public void CentrarElementos()
@@ -55,6 +55,24 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                 }
             }
         }
+
+        public void LlenarPermisos()
+        {
+            if (Asistencias.Count > 0)
+            {
+                foreach (Record_Permission registro in Permisos)
+                {
+                    cR_DataGriedView1.Rows.Add(
+                        registro.IdRecord,
+                        registro.Permission_Date.ToString("D"),
+                        registro.Permission_Date.ToString("D"),
+                        registro._Reason,
+                        registro._Description,
+                        registro.Count_Time+" "+registro.Mesure_Time
+                        );
+                }
+            }
+        }
         private void Empleado_Details_Load(object sender, EventArgs e)
         {
             if(!user.Confirm_Operation("Editar empleados"))
@@ -66,6 +84,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             cR_Subtitulos2.Text = "Asistencias";
             cR_DataGriedView2.Visible = true;
             LlenarAsistencias();
+            LlenarPermisos();
             CentrarElementos();
         }
 

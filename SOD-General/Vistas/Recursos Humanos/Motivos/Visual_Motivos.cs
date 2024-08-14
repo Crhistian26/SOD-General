@@ -32,8 +32,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
                    (
                        reason.IdReason,
                        reason._Reason,
-                       reason.Mesure_Time1,
-                       reason.Mesure_Time2,
+                       reason._Descripcion,
                        reason.MaximuneCount_Time + " " + reason.MesureMaximune_Time,
                        reason.For_mesure
                    );
@@ -44,8 +43,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
                    (
                        reason.IdReason,
                        reason._Reason,
-                       reason.Mesure_Time1,
-                       reason.Mesure_Time2,
+                       reason._Descripcion,
                        reason.MesureMaximune_Time,
                        reason.For_mesure
                    );

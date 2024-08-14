@@ -28,8 +28,8 @@ namespace SOD_General.Controladores
                 string Query = "Exec Add_TypeEquipment @NameEquipment, @Enable";
 
                 SqlCommand cmd = new SqlCommand(Query, conex);
-                cmd.Parameters.Add("@NameEquipment", equipo);
-                cmd.Parameters.Add("@Enable", enable);
+                cmd.Parameters.AddWithValue("@NameEquipment", equipo);
+                cmd.Parameters.AddWithValue("@Enable", enable);
 
 
                 conex.Open();

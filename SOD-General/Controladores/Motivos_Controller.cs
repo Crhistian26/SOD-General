@@ -19,11 +19,9 @@ namespace SOD_General.Controladores
             try
             {
                 List<Model_Reason> reasons = new List<Model_Reason>();
-                string Query = "Select IdReason,_Reason,Mesure_Time1,Mesure_Time2,MaximunCount_Time,MesureMaximune_Time,For_Mesure from Reasons";
+                string Query = "Select IdReason,_Reason,Descripcion,MaximunCount_Time,MesureMaximune_Time,For_Mesure from Reasons";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
-                //Los parametros
-
                 //El proceso
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -36,10 +34,9 @@ namespace SOD_General.Controladores
                             reader.GetInt32(0),
                             reader.GetString(1),
                             reader.GetString(2),
-                            reader.GetString(3),
-                            reader.GetInt32(4),
-                            reader.GetString(5),
-                            reader.GetString(6)
+                            reader.GetInt32(3),
+                            reader.GetString(4),
+                            reader.GetString(5)
                         )
                      );
                 }

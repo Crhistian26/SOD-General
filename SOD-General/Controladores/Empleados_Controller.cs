@@ -93,6 +93,33 @@ namespace SOD_General.Controladores
             return diccionario;
         }
 
+        public List<Record_Permission> ListaPermisosEmpleado(int id)
+        {
+            List<Record_Permission> diccionario = new List<Record_Permission>();
+            Record_Permission record;
+            string Query = "Exec Get_EmployeePermission @IdEmpleado";
+            SqlCommand cmd = new SqlCommand(Query, conex);
+            cmd.Parameters.AddWithValue("@IdEmpleado", id);
+
+            conex.Open();
+
+            SqlDataReader lector = cmd.ExecuteReader();
+            while (lector.Read())
+            {
+                int IdRecord = lector.GetInt32(0);
+                string Reason = lector.GetString(1);
+                string Details = lector.GetString(2);
+                int count = lector.GetInt32(3);
+                string Mesure = lector.GetString(4);
+                DateTime date = lector.GetDateTime(5);
+
+                record = new Record_Permission(IdRecord, Reason,Details,count,Mesure,date);
+                diccionario.Add(record);
+            }
+            conex.Close();
+            return diccionario;
+        }
+
         public bool AddEmployee(Employee emp)
         {
             try

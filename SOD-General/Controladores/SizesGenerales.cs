@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 
 namespace SOD_General.Controladores
@@ -80,6 +81,50 @@ namespace SOD_General.Controladores
                     return $"{hora.Hours}:{hora.Minutes} AM";
                 }
             }
+        }
+
+        public (string,string,string) FiltrarHorasComb(TimeSpan hora)
+        {
+            if(hora.Hours > 12)
+            {
+                return ((hora.Hours - 12).ToString(),hora.Minutes.ToString(), "PM");
+            }
+            else if(hora.Hours == 12)
+            {
+                return (hora.Hours.ToString(), hora.Minutes.ToString(), "PM");
+            }
+            else if(hora.Hours == 24)
+            {
+                return (hora.Hours.ToString(), hora.Minutes.ToString(), "AM");
+            }
+            else
+            {
+                return (hora.Hours.ToString(), hora.Minutes.ToString(), "AM");
+            }
+        }
+
+        public TimeSpan CreateTS(string hour, string min, string merides)
+        {
+            TimeSpan time = new TimeSpan();
+            int _hour = Convert.ToInt32(hour);
+            int _min = Convert.ToInt32(min);
+            if(merides == "PM" && _hour != 12)
+            {
+                time = new TimeSpan(_hour + 12,_min,0);
+            }
+            else if(merides == "AM" && _hour != 12)
+            {
+                time = new TimeSpan(_hour, _min, 0);
+            }
+            else if(merides == "PM" && _hour == 12)
+            {
+                time = new TimeSpan(_hour, _min, 0);
+            }
+            else if (merides == "AM" && _hour == 12)
+            {
+                time = new TimeSpan(0, _min, 0);
+            }
+            return time;
         }
     }
 }

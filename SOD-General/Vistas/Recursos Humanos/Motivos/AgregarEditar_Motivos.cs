@@ -24,8 +24,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             botones_Nuevos1.Click += EditarBoton;
 
             soD_TextBox1.Text = reason._Reason;
-            soD_ComboBox1.SelectedIndex = soD_ComboBox1.FindString(reason.Mesure_Time1);
-            soD_ComboBox2.SelectedIndex = soD_ComboBox2.FindString(reason.Mesure_Time2);
+            soD_TextBox2.Text = reason._Descripcion;
             soD_ComboBox3.SelectedIndex = soD_ComboBox3.FindString(reason.MesureMaximune_Time);
         }
 

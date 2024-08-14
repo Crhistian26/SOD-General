@@ -17,6 +17,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         SizesGenerales _sizes = new SizesGenerales();
         ControlOperaciones operaciones;
         List<Employee> empleados;
+        List<Model_Reason> motivos;
         List<Record_Permission> permisos;
         Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
 
@@ -25,7 +26,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             InitializeComponent();
             //operaciones = new ControlOperaciones(app);
             empleados = control.Obtener_Empleados();
+            motivos = control.Obtener_Razones();
             permisos = control.Obtener_Permisos();
+            CentrarElementos();
+            LlenarComboEmpleados();
+            LlenarComboMotivos();
+            OrganizarDataGriedFecha();
+            if (!user.Confirm_Operation("Agregar permisos"))
+            {
+                botones_Nuevos5.Visible = false;
+            }
         }
 
         public void CentrarElementos()
@@ -36,27 +46,38 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void LlenarComboEmpleados()
         {
-            comboBox1.Items.Add("Todos los empleados");
+            cr_ComboBox1.Items.Add("Todos los empleados");
             foreach (Employee emp in empleados)
             {
-                comboBox1.Items.Add(emp._Name + " " + emp._Lastname);
+                cr_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
             }
-            comboBox1.SelectedIndex = 0;
+            cr_ComboBox1.SelectedIndex = 0;
         }
+
+        private void LlenarComboMotivos()
+        {
+            cr_ComboBox2.Items.Add("Todos los motivos");
+            foreach (Model_Reason reas in motivos)
+            {
+                cr_ComboBox2.Items.Add(reas._Reason);
+            }
+            cr_ComboBox2.SelectedIndex = 0;
+        }
+
 
         public void OrganizarDataGriedFecha()
         {
             cR_DataGriedView1.Rows.Clear();
             List<Record_Permission> data = null;
-            if (comboBox1.Text != "Todos los empleados")
+            if (cr_ComboBox1.Text == "Todos los empleados")
             {
                 cR_DataGriedView1.Rows.Clear();
                 data = 
                     permisos.Select(a => a)
                     .Where
                     (
-                    a => a.Permission_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
-                    && a.Permission_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
+                        a => a.Permission_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
+                        && a.Permission_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
                     )
                     .OrderBy(a => a.Permission_Date)
                     .ToList();
@@ -70,7 +91,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     (
                     a => a.Permission_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
                     && a.Permission_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
-                    && a._Name == comboBox1.Text
+                    && a._Name == cr_ComboBox1.Text
                     )
                     .OrderBy(a => a.Permission_Date)
                     .ToList();
@@ -83,8 +104,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     Record.IdRecord,
                     Record._Name,
                     Record._Reason,
-                    Record.Count_Time + " " + Record.Mesure_Time,
-                    Record.Permission_Date.ToString("D")
+                    Record.Permission_Date.ToString("D"),
+                    Record.Permission_Date.ToString("D"),
+                    Record.Count_Time + " " + Record.Mesure_Time
                     );
                 }
             }
@@ -92,15 +114,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void Registros_Generales_Load(object sender, EventArgs e)
         {
-            CentrarElementos();
-            cR_DataGriedView1.Rows.Add(1, "Fernando Acosta", "Enfermedad", "Lunes 27 de mayo", "Jueves 30 de mayo");
-            cR_DataGriedView1.Rows.Add(1, "Maria Fernandez", "Diligencia", "Lunes 27 de mayo (10:30)", "Lunes 27 de mayo (2:15)");
-            LlenarComboEmpleados();
-            OrganizarDataGriedFecha();
-            if(!user.Confirm_Operation("Agregar permisos"))
-            {
-                botones_Nuevos5.Visible = false;
-            }
+            
         }
 
         private void Registros_Generales_Resize(object sender, EventArgs e)
@@ -130,10 +144,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             control.AgregarPermiso();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
@@ -217,12 +227,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 cR_DateTimePicker1.Value = DateTime.Now.AddMinutes(-1);
                 cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
                 MessageBox.Show("La primera fecha introducida no puede ser mayor a la segunda.");
-                
             }
             else
             {
                 OrganizarDataGriedFecha();
             }
+        }
+
+        private void cr_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OrganizarDataGriedFecha();
         }
     }
 }

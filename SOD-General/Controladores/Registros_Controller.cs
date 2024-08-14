@@ -22,17 +22,18 @@ namespace SOD_General.Controladores
             vista.Show();
         }
 
-        public List<Record_Attendance> Obtener_Asistencias()
+        public List<Record_Attendance> Obtener_Asistencias(DateTime date1, DateTime date2)
         {
             try
             {
                 List<Record_Attendance> diccionario = new List<Record_Attendance>();
                 Record_Attendance record;
                 //El query.
-                string Query = "exec Get_All_Attendances";
+                string Query = "exec Get_AttendanceForDate @date1, @date2";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
-
+                cmd.Parameters.AddWithValue("@date1", date1);
+                cmd.Parameters.AddWithValue("@date2", date2);
                 //El proceso
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -72,6 +73,47 @@ namespace SOD_General.Controladores
                 return null;
             }
         }
+
+        public bool AddAttendance(Record_Attendance record)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Add_Attendance @idEmp,@entry,@exit,@lunchS,@lunchF,@date";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idEmp",record.IdEmployee);
+                cmd.Parameters.AddWithValue("@entry", record.Entry);
+                cmd.Parameters.AddWithValue("@exit", record.Exit);
+                cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
+                cmd.Parameters.AddWithValue("@lunchF", record.LunchF);
+                cmd.Parameters.AddWithValue("@date", record.DateAttendance);
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
         #endregion
 
         #region Permisos
@@ -100,11 +142,12 @@ namespace SOD_General.Controladores
                     int IdRecord = reader.GetInt32(0);
                     string Name = reader.GetString(1);
                     string Reason = reader.GetString(2);
-                    int Count = reader.GetInt32(3);
-                    string Mesure = reader.GetString(4);
-                    DateTime record_Date = reader.GetDateTime(5);
+                    string Det = reader.GetString(3);
+                    int Count = reader.GetInt32(4);
+                    string Mesure = reader.GetString(5);
+                    DateTime record_Date = reader.GetDateTime(6);
 
-                    record = new Record_Permission(IdRecord,Name,Reason,Count,Mesure, record_Date);
+                    record = new Record_Permission(IdRecord,Reason, Name, Det,Count,Mesure, record_Date);
                     permisos.Add(record);
                 }
                 conex.Close();
@@ -232,7 +275,7 @@ namespace SOD_General.Controladores
                 //La lista a retornar.
                 List<Model_Reason> razones = new List<Model_Reason>();
                 //El query.
-                string Query = "select IdReason,_Reason from Departments order by IdReason;";
+                string Query = "select IdReason,_Reason from Reasons order by IdReason;";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
 
