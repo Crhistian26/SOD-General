@@ -73,7 +73,7 @@ namespace SOD_General.Controladores
             
         }
 
-        public List<Record_Attendance> Get_AttendanceAllEmployee( DateTime date1, DateTime date2)
+        public List<Record_Attendance> Get_AttendanceAllEmployee(DateTime date1, DateTime date2)
         {
             List<Record_Attendance> records = new List<Record_Attendance>();
             string Query = "exec Get_AttendanceForDate @date1, @date2";
@@ -93,11 +93,11 @@ namespace SOD_General.Controladores
                         new Record_Attendance
                         (
                             reader.GetString(2) + " "+ reader.GetString(3),
-                            reader.GetDateTime(4),
+                            reader.GetDateTime(8),
+                            reader.GetTimeSpan(4),
                             reader.GetTimeSpan(5),
                             reader.GetTimeSpan(6),
-                            reader.GetTimeSpan(7),
-                            reader.GetTimeSpan(8)
+                            reader.GetTimeSpan(7)
                         )
                     );
                 }
@@ -135,8 +135,6 @@ namespace SOD_General.Controladores
                     int row = 1;
                     var hoja1 = LibroExcel.Worksheets.Add("Asistencias");
 
-                   
-                    
                     var title1 = hoja1.Range("A1:F1").Merge();
                     title1.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
                     title1.Style.Font.FontName = "Century";

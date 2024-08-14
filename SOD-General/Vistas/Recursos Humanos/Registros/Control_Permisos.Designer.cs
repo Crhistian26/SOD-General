@@ -32,6 +32,9 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cr_ComboBox3 = new Cr_ComboBox();
+            this.cr_ComboBox2 = new Cr_ComboBox();
+            this.cr_ComboBox1 = new Cr_ComboBox();
             this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             this.cR_TBminutos1 = new CR_TBminutos();
             this.cR_TBhora1 = new CR_TBhora();
@@ -46,9 +49,6 @@
             this.cR_LabelDown3 = new CR_LabelDown();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.cr_ComboBox1 = new Cr_ComboBox();
-            this.cr_ComboBox2 = new Cr_ComboBox();
-            this.cr_ComboBox3 = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -72,7 +72,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(720, 470);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(720, 462);
             this.cR_SplitContainer1.SplitterDistance = 75;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -114,6 +114,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 336);
             this.panel1.TabIndex = 0;
+            // 
+            // cr_ComboBox3
+            // 
+            this.cr_ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox3.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox3.FormattingEnabled = true;
+            this.cr_ComboBox3.Items.AddRange(new object[] {
+            "Minutos",
+            "Horas",
+            "Dias"});
+            this.cr_ComboBox3.Location = new System.Drawing.Point(82, 222);
+            this.cr_ComboBox3.Name = "cr_ComboBox3";
+            this.cr_ComboBox3.Size = new System.Drawing.Size(201, 29);
+            this.cr_ComboBox3.TabIndex = 23;
+            // 
+            // cr_ComboBox2
+            // 
+            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox2.FormattingEnabled = true;
+            this.cr_ComboBox2.Location = new System.Drawing.Point(8, 155);
+            this.cr_ComboBox2.Name = "cr_ComboBox2";
+            this.cr_ComboBox2.Size = new System.Drawing.Size(275, 29);
+            this.cr_ComboBox2.TabIndex = 22;
+            // 
+            // cr_ComboBox1
+            // 
+            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox1.FormattingEnabled = true;
+            this.cr_ComboBox1.Location = new System.Drawing.Point(8, 91);
+            this.cr_ComboBox1.Name = "cr_ComboBox1";
+            this.cr_ComboBox1.Size = new System.Drawing.Size(275, 29);
+            this.cr_ComboBox1.TabIndex = 21;
             // 
             // cR_TextBoxNumerico1
             // 
@@ -279,65 +325,11 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
-            // cr_ComboBox1
-            // 
-            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Items.AddRange(new object[] {
-            "Minutos",
-            "Horas",
-            "Dias"});
-            this.cr_ComboBox1.Location = new System.Drawing.Point(8, 91);
-            this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(275, 29);
-            this.cr_ComboBox1.TabIndex = 21;
-            // 
-            // cr_ComboBox2
-            // 
-            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Items.AddRange(new object[] {
-            "Minutos",
-            "Horas",
-            "Dias"});
-            this.cr_ComboBox2.Location = new System.Drawing.Point(8, 155);
-            this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(275, 29);
-            this.cr_ComboBox2.TabIndex = 22;
-            // 
-            // cr_ComboBox3
-            // 
-            this.cr_ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cr_ComboBox3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox3.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox3.FormattingEnabled = true;
-            this.cr_ComboBox3.Items.AddRange(new object[] {
-            "Minutos",
-            "Horas",
-            "Dias"});
-            this.cr_ComboBox3.Location = new System.Drawing.Point(82, 222);
-            this.cr_ComboBox3.Name = "cr_ComboBox3";
-            this.cr_ComboBox3.Size = new System.Drawing.Size(201, 29);
-            this.cr_ComboBox3.TabIndex = 23;
-            // 
             // Control_Permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 470);
+            this.ClientSize = new System.Drawing.Size(720, 462);
             this.Controls.Add(this.cR_SplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);

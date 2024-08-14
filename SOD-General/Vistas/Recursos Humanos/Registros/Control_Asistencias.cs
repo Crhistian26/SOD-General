@@ -18,6 +18,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         Registros_Controller control = new Registros_Controller();
         List<Employee> empleados;
         Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
+        Record_Attendance record;
         public Control_Asistencias()
         {
             InitializeComponent();
@@ -27,7 +28,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         public Control_Asistencias(Record_Attendance record)
         {
             InitializeComponent();
-            VistaEditar(record);
+            this.record = record;
+            VistaEditar();
         }
         private void VistaAgregar()
         {
@@ -36,8 +38,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             cr_Textbox1.Visible = false;
             LlenarComboEmpleados();
             botones_Nuevos1.Click += AddAttendance;
+            txtsDefecto();
         }
-        private void VistaEditar(Record_Attendance record)
+        private void VistaEditar()
         {
             botones_Nuevos1.Visible = false;
             botones_Nuevos2.Visible = false;
@@ -52,13 +55,13 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             string index = "";
 
             (cR_TBhora1.Text, cR_TBminutos1.Text, index) = _size.FiltrarHorasComb(record.Entry);
-            soD_ComboBox4.SelectedIndex = soD_ComboBox4.FindString(index);
-
-            (cR_TBhora2.Text, cR_TBminutos2.Text, index) = _size.FiltrarHorasComb(record.Exit);
             soD_ComboBox2.SelectedIndex = soD_ComboBox4.FindString(index);
 
-            (cR_TBhora3.Text, cR_TBminutos3.Text, index) = _size.FiltrarHorasComb(record.LunchS);
+            (cR_TBhora2.Text, cR_TBminutos2.Text, index) = _size.FiltrarHorasComb(record.Exit);
             soD_ComboBox3.SelectedIndex = soD_ComboBox4.FindString(index);
+
+            (cR_TBhora3.Text, cR_TBminutos3.Text, index) = _size.FiltrarHorasComb(record.LunchS);
+            soD_ComboBox4.SelectedIndex = soD_ComboBox4.FindString(index);
 
             (cR_TBhora4.Text, cR_TBminutos4.Text, index) = _size.FiltrarHorasComb(record.LunchF);
             soD_ComboBox5.SelectedIndex = soD_ComboBox4.FindString(index);
@@ -79,12 +82,32 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
+
         private void LlenarComboEmpleados()
         {
             foreach (Employee emp in empleados)
             {
                 soD_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
             }
+        }
+
+        private void txtsDefecto()
+        {
+            cR_TBhora1.Text = "8";
+            cR_TBminutos1.Text = "30";
+            soD_ComboBox2.SelectedIndex = 0;
+
+            cR_TBhora2.Text = "5";
+            cR_TBminutos2.Text = "30";
+            soD_ComboBox3.SelectedIndex = 1;
+
+            cR_TBhora3.Text = "12";
+            cR_TBminutos3.Text = "00";
+            soD_ComboBox4.SelectedIndex = 1;
+
+            cR_TBhora4.Text = "1";
+            cR_TBminutos4.Text = "00";
+            soD_ComboBox5.SelectedIndex = 1;
         }
         private void Agregar_Asistencias_Load(object sender, EventArgs e)
         {
@@ -97,18 +120,50 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
 
         private void AddAttendance(object sender, EventArgs e)
-        {
-            MessageBox.Show("Yo agrego");
+        {  
+            Record_Attendance record = new Record_Attendance
+            (
+                empleados[soD_ComboBox1.SelectedIndex].IdEmployee,
+                _size.CreateTS(cR_TBhora1.Text, cR_TBminutos1.Text, soD_ComboBox2.SelectedItem.ToString()),
+                _size.CreateTS(cR_TBhora2.Text, cR_TBminutos2.Text, soD_ComboBox3.SelectedItem.ToString()),
+                _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString()),
+                _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString()),
+                cR_DateTimePicker1.Value
+            );
+            if(control.AddAttendance(record))
+            {
+                control.Reset_VisualRegistors();
+                this.Close();
+            }
         }
 
         private void EditAttendance(object sender, EventArgs e)
         {
-            MessageBox.Show("Yo edito");
+
+            record.Entry = _size.CreateTS(cR_TBhora1.Text, cR_TBminutos1.Text, soD_ComboBox2.SelectedItem.ToString());
+            record.Exit = _size.CreateTS(cR_TBhora2.Text, cR_TBminutos2.Text, soD_ComboBox3.SelectedItem.ToString());
+            record.LunchS = _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString());
+            record.LunchF = _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString());
+            record.DateAttendance = cR_DateTimePicker1.Value;
+
+            if (control.EditAttendance(record))
+            {
+                control.Reset_VisualRegistors();
+                this.Close();
+            }
         }
 
         private void DeleteAttendance(object sender, EventArgs e)
         {
-            MessageBox.Show("Yo elimino");
+            var ms = MessageBox.Show("Estas seguro de eliminar esta asistencia?", "Eliminar asistencia", MessageBoxButtons.OKCancel);
+            if (ms == DialogResult.OK)
+            {
+                if (control.DeleteAttendance(record))
+                {
+                    control.Reset_VisualRegistors();
+                    this.Close();
+                }
+            }
         }
     }
 }

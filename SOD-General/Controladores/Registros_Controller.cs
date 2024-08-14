@@ -1,10 +1,12 @@
 ﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Usuarios_Empleados;
+using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -114,6 +116,92 @@ namespace SOD_General.Controladores
                 return false;
             }
         }
+
+        public bool EditAttendance(Record_Attendance record)
+        {
+            try
+            {
+                //El query.
+                string Query = "exec Edit_Attendance @recordId, @employeeId, @entry,@exit,@lunchS, @lunchF, @date";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@recordId",record.IdRecord);
+                cmd.Parameters.AddWithValue("@employeeId", record.IdEmployee);
+                cmd.Parameters.AddWithValue("@entry", record.Entry);
+                cmd.Parameters.AddWithValue("@exit", record.Exit);
+                cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
+                cmd.Parameters.AddWithValue("@lunchF", record.LunchF);
+                cmd.Parameters.AddWithValue("@date", record.DateAttendance);
+
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            
+        }
+
+        public bool DeleteAttendance(Record_Attendance record)
+        {
+            try
+            {
+                //El query.
+                string Query = "exec Delete_Attendance @recordId";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@recordId", record.IdRecord);
+
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+
+        }
+
+        public bool DeleteAttendance()
+        {
+            return false;
+        }
+
         #endregion
 
         #region Permisos
@@ -313,5 +401,11 @@ namespace SOD_General.Controladores
             }
         }
 
+        public void Reset_VisualRegistors()
+        {
+            var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
+            Registros_GeneralesAsistencias view = new Registros_GeneralesAsistencias(h.user);
+            h.OpenForm(view);
+        }
     }
 }

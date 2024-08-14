@@ -37,6 +37,13 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
 
+        
+        private void AgregarEditar_Motivos_Load(object sender, EventArgs e)
+        {
+            soD_ComboBox4.Visible = false;
+            cR_LabelDown4.Visible = false;
+            CentrarElementos();
+        }
 
         private void AgregarBoton(object sender, EventArgs e)
         {
@@ -48,10 +55,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             
         }
 
-        private void AgregarEditar_Motivos_Load(object sender, EventArgs e)
-        {
-            CentrarElementos();
-        }
+        
 
         private void AgregarEditar_Motivos_Resize(object sender, EventArgs e)
         {

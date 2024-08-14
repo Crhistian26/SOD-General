@@ -62,8 +62,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                         _size.FiltarHoras(registro.LunchF),
                         _size.FiltarHoras(registro.Exit),
                         registro.Job_Hours.ToString().Substring(0, 5)+ " Horas"
-                        );
-                    
+                        );     
                 }
             }
             else
@@ -109,6 +108,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 Control_Asistencias window = new Control_Asistencias(record);
                 window.Show();
             }
+        }
+
+        public void Reset()
+        {
+            Asistencias = control.Obtener_Asistencias(cR_DateTimePicker1.Value, cR_DateTimePicker1.Value);
+            OrganizarDataGriedFecha();
         }
     }
 }

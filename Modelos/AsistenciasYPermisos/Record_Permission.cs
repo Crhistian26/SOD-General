@@ -18,6 +18,9 @@ namespace Modelos.AsistenciasYPermisos
         public string Mesure_Time { get; set; }
         public int Count_Time { get; set; }
         public DateTime Permission_Date { get; set; }
+        public TimeSpan Permission_Hour { get;set; }
+        public DateTime Permission_Date2 { get; set; }
+        public TimeSpan Permission_Hour2 { get; set; }
 
         public Record_Permission(int IdRecord,string Reason,string descip, int Count, string Mesure, DateTime fecha)
         {

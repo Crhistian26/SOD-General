@@ -32,6 +32,8 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cR_TBminutos4 = new CR_TBminutos();
@@ -61,8 +63,6 @@
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
-            this.cr_Textbox1 = new Cr_Textbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -96,8 +96,8 @@
             // 
             // cR_Subtitulos1
             // 
-            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_Subtitulos1.AutoSize = true;
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
@@ -126,6 +126,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(499, 365);
             this.panel1.TabIndex = 3;
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(16, 87);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(279, 25);
+            this.cr_Textbox1.TabIndex = 27;
+            this.cr_Textbox1.Visible = false;
+            // 
+            // botones_Nuevos2
+            // 
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.Red;
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(333, 307);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos2.TabIndex = 26;
+            this.botones_Nuevos2.Text = "Eliminar ";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
             // 
             // botones_Nuevos1
             // 
@@ -215,8 +242,8 @@
             // 
             this.panel4.Controls.Add(this.cR_TBminutos3);
             this.panel4.Controls.Add(this.cR_TBhora3);
-            this.panel4.Controls.Add(this.soD_ComboBox3);
             this.panel4.Controls.Add(this.cR_LabelDown5);
+            this.panel4.Controls.Add(this.soD_ComboBox4);
             this.panel4.Controls.Add(this.cR_LabelDown8);
             this.panel4.Location = new System.Drawing.Point(16, 217);
             this.panel4.Name = "panel4";
@@ -282,7 +309,7 @@
             // 
             this.panel3.Controls.Add(this.cR_TBminutos2);
             this.panel3.Controls.Add(this.cR_TBhora2);
-            this.panel3.Controls.Add(this.soD_ComboBox2);
+            this.panel3.Controls.Add(this.soD_ComboBox3);
             this.panel3.Controls.Add(this.cR_LabelDown3);
             this.panel3.Controls.Add(this.cR_LabelDown4);
             this.panel3.Location = new System.Drawing.Point(283, 134);
@@ -349,7 +376,7 @@
             // 
             this.panel2.Controls.Add(this.cR_TBminutos1);
             this.panel2.Controls.Add(this.cR_TBhora1);
-            this.panel2.Controls.Add(this.soD_ComboBox4);
+            this.panel2.Controls.Add(this.soD_ComboBox2);
             this.panel2.Controls.Add(this.cR_LabelDown7);
             this.panel2.Controls.Add(this.cR_LabelDown6);
             this.panel2.Location = new System.Drawing.Point(16, 134);
@@ -453,34 +480,7 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
-            // botones_Nuevos2
-            // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.Red;
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(333, 307);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
-            this.botones_Nuevos2.TabIndex = 26;
-            this.botones_Nuevos2.Text = "Eliminar ";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(16, 87);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(279, 25);
-            this.cr_Textbox1.TabIndex = 27;
-            this.cr_Textbox1.Visible = false;
-            // 
-            // Agregar_Asistencias
+            // Control_Asistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -488,7 +488,7 @@
             this.Controls.Add(this.cR_SplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);
-            this.Name = "Agregar_Asistencias";
+            this.Name = "Control_Asistencias";
             this.Text = "Control de asistencias";
             this.Load += new System.EventHandler(this.Agregar_Asistencias_Load);
             this.Resize += new System.EventHandler(this.Agregar_Asistencias_Resize);

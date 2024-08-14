@@ -172,13 +172,18 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
             else if (cr_ComboBox2.SelectedItem.ToString() == "Todos los empleados")
             {
                 List<Record_Attendance> records = reports.Get_AttendanceAllEmployee(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
-                if (records.Count > 0)
+
+                if (records != null)
                 {
-                    reports.ImprimirReporteAsistencias(records, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
-                }
-                else
-                {
-                    MessageBox.Show("No hay registro de asistencias entre estas fechas.");
+
+                    if (records.Count > 0)
+                    {
+                        reports.ImprimirReporteAsistencias(records, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay registro de asistencias entre estas fechas.");
+                    }
                 }
             }
             
