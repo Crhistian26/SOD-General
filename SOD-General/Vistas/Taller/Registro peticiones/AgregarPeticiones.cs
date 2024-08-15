@@ -20,8 +20,8 @@ namespace SOD_General.Taller.Registro_peticiones
         }
         private void CentrarElementos()
         {
-            Point SubL = cR_Subtitulos4.Location;
-            cR_Subtitulos4.Location = _size.CentrarElementosX(SubL, cR_Subtitulos4.Size, this.Size);
+            Point SubL = panelTitulo.Location;
+            panelTitulo.Location = _size.CentrarElementosX(SubL, panelTitulo.Size, this.Size);
 
             Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);

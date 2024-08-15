@@ -30,9 +30,9 @@
         {
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.txtMarcas = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.btnGuardar = new Diseños.Botones_Nuevos();
-            this.txtMarcas = new Cr_Textbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -77,6 +77,15 @@
             this.cR_Subtitulos1.Text = "Agregar marcas de equipo";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // txtMarcas
+            // 
+            this.txtMarcas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMarcas.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtMarcas.Location = new System.Drawing.Point(67, 55);
+            this.txtMarcas.Name = "txtMarcas";
+            this.txtMarcas.Size = new System.Drawing.Size(133, 25);
+            this.txtMarcas.TabIndex = 8;
+            // 
             // cR_LabelDown1
             // 
             this.cR_LabelDown1.AutoSize = true;
@@ -106,21 +115,13 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtMarcas
-            // 
-            this.txtMarcas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMarcas.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtMarcas.Location = new System.Drawing.Point(67, 55);
-            this.txtMarcas.Name = "txtMarcas";
-            this.txtMarcas.Size = new System.Drawing.Size(133, 25);
-            this.txtMarcas.TabIndex = 8;
-            // 
             // AgregarMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(288, 272);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarMarcas";
             this.Text = "AgregarMarcas";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

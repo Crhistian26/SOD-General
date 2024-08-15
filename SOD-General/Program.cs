@@ -1,4 +1,6 @@
-﻿using SOD_General.Vistas.Taller.Clientes;
+﻿using SOD_General.Taller.Registro_peticiones;
+using SOD_General.Vistas.Taller.Clientes;
+using SOD_General.Vistas.Taller.Control_calidad;
 using System;
 using System.Windows.Forms;
 

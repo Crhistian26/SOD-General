@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelRncSucursal = new System.Windows.Forms.Panel();
+            this.cbRnc2 = new Cr_ComboBox();
+            this.cR_LabelUp2 = new CR_LabelUp();
+            this.btnBuscar = new Diseños.Botones_Nuevos();
+            this.PanelRncCliente = new System.Windows.Forms.Panel();
+            this.cR_LabelUp1 = new CR_LabelUp();
+            this.txtCedula = new Cr_Textbox();
             this.Cb_ClienteSucursal = new Cr_ComboBox();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.panelCliente = new System.Windows.Forms.Panel();
@@ -47,6 +54,8 @@
             this.panelSucursal = new System.Windows.Forms.Panel();
             this.txtSucursal = new Cr_Textbox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
             this.cR_Subtitulos9 = new CR_Subtitulos();
             this.btn_Sucursal = new Diseños.Botones_Nuevos();
             this.txtNumero2Sucur = new Cr_Textbox();
@@ -56,25 +65,16 @@
             this.txtNumero1Sucur = new Cr_Textbox();
             this.cR_Subtitulos12 = new CR_Subtitulos();
             this.txtDireccionSucur = new Cr_Textbox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.btnBuscar = new Diseños.Botones_Nuevos();
-            this.PanelRncCliente = new System.Windows.Forms.Panel();
-            this.cR_LabelUp1 = new CR_LabelUp();
-            this.txtCedula = new Cr_Textbox();
-            this.panelRncSucursal = new System.Windows.Forms.Panel();
-            this.cR_LabelUp2 = new CR_LabelUp();
-            this.cbCliente = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panelRncSucursal.SuspendLayout();
+            this.PanelRncCliente.SuspendLayout();
             this.panelCliente.SuspendLayout();
             this.panelSucursal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
-            this.PanelRncCliente.SuspendLayout();
-            this.panelRncSucursal.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -100,6 +100,90 @@
             this.splitContainer1.SplitterDistance = 95;
             this.splitContainer1.TabIndex = 1;
             // 
+            // panelRncSucursal
+            // 
+            this.panelRncSucursal.Controls.Add(this.cbRnc2);
+            this.panelRncSucursal.Controls.Add(this.cR_LabelUp2);
+            this.panelRncSucursal.Controls.Add(this.btnBuscar);
+            this.panelRncSucursal.Location = new System.Drawing.Point(15, 35);
+            this.panelRncSucursal.Margin = new System.Windows.Forms.Padding(0);
+            this.panelRncSucursal.Name = "panelRncSucursal";
+            this.panelRncSucursal.Size = new System.Drawing.Size(439, 47);
+            this.panelRncSucursal.TabIndex = 78;
+            this.panelRncSucursal.Visible = false;
+            // 
+            // cbRnc2
+            // 
+            this.cbRnc2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbRnc2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbRnc2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbRnc2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbRnc2.ForeColor = System.Drawing.Color.White;
+            this.cbRnc2.FormattingEnabled = true;
+            this.cbRnc2.Location = new System.Drawing.Point(149, 8);
+            this.cbRnc2.Name = "cbRnc2";
+            this.cbRnc2.Size = new System.Drawing.Size(156, 29);
+            this.cbRnc2.TabIndex = 77;
+            // 
+            // cR_LabelUp2
+            // 
+            this.cR_LabelUp2.AutoSize = true;
+            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp2.Location = new System.Drawing.Point(3, 10);
+            this.cR_LabelUp2.Name = "cR_LabelUp2";
+            this.cR_LabelUp2.Size = new System.Drawing.Size(140, 25);
+            this.cR_LabelUp2.TabIndex = 76;
+            this.cR_LabelUp2.Text = "RNC o Cedula";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.Teal;
+            this.btnBuscar.BorderRadius = 40;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(322, 8);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(117, 35);
+            this.btnBuscar.TabIndex = 72;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // PanelRncCliente
+            // 
+            this.PanelRncCliente.Controls.Add(this.cR_LabelUp1);
+            this.PanelRncCliente.Controls.Add(this.txtCedula);
+            this.PanelRncCliente.Location = new System.Drawing.Point(12, 38);
+            this.PanelRncCliente.Name = "PanelRncCliente";
+            this.PanelRncCliente.Size = new System.Drawing.Size(322, 47);
+            this.PanelRncCliente.TabIndex = 77;
+            // 
+            // cR_LabelUp1
+            // 
+            this.cR_LabelUp1.AutoSize = true;
+            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp1.Location = new System.Drawing.Point(7, 10);
+            this.cR_LabelUp1.Name = "cR_LabelUp1";
+            this.cR_LabelUp1.Size = new System.Drawing.Size(140, 25);
+            this.cR_LabelUp1.TabIndex = 76;
+            this.cR_LabelUp1.Text = "RNC o Cedula";
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCedula.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtCedula.Location = new System.Drawing.Point(153, 7);
+            this.txtCedula.Multiline = true;
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(162, 30);
+            this.txtCedula.TabIndex = 75;
+            // 
             // Cb_ClienteSucursal
             // 
             this.Cb_ClienteSucursal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -109,6 +193,7 @@
             this.Cb_ClienteSucursal.ForeColor = System.Drawing.Color.White;
             this.Cb_ClienteSucursal.FormattingEnabled = true;
             this.Cb_ClienteSucursal.Location = new System.Drawing.Point(782, 52);
+            this.Cb_ClienteSucursal.Margin = new System.Windows.Forms.Padding(0);
             this.Cb_ClienteSucursal.Name = "Cb_ClienteSucursal";
             this.Cb_ClienteSucursal.Size = new System.Drawing.Size(198, 33);
             this.Cb_ClienteSucursal.TabIndex = 76;
@@ -124,7 +209,8 @@
             this.cR_Subtitulos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos4.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos4.Location = new System.Drawing.Point(343, 9);
+            this.cR_Subtitulos4.Location = new System.Drawing.Point(472, 9);
+            this.cR_Subtitulos4.Margin = new System.Windows.Forms.Padding(0);
             this.cR_Subtitulos4.Name = "cR_Subtitulos4";
             this.cR_Subtitulos4.Size = new System.Drawing.Size(211, 28);
             this.cR_Subtitulos4.TabIndex = 27;
@@ -143,9 +229,9 @@
             this.panelCliente.Controls.Add(this.txtNumero1);
             this.panelCliente.Controls.Add(this.cR_Subtitulos3);
             this.panelCliente.Controls.Add(this.txtDireccion);
-            this.panelCliente.Location = new System.Drawing.Point(243, 8);
+            this.panelCliente.Location = new System.Drawing.Point(604, 3);
             this.panelCliente.Name = "panelCliente";
-            this.panelCliente.Size = new System.Drawing.Size(517, 289);
+            this.panelCliente.Size = new System.Drawing.Size(139, 304);
             this.panelCliente.TabIndex = 44;
             // 
             // txtCliente
@@ -336,6 +422,33 @@
             this.cR_Subtitulos1.TabIndex = 72;
             this.cR_Subtitulos1.Text = "Numero 1";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cR_DataGriedView1);
+            this.panel1.Location = new System.Drawing.Point(388, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(584, 280);
+            this.panel1.TabIndex = 45;
+            // 
+            // cR_DataGriedView1
+            // 
+            this.cR_DataGriedView1.AllowUserToAddRows = false;
+            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
+            this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(584, 280);
+            this.cR_DataGriedView1.TabIndex = 1;
+            // 
             // cR_Subtitulos9
             // 
             this.cR_Subtitulos9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -454,116 +567,6 @@
             this.txtDireccionSucur.Size = new System.Drawing.Size(207, 30);
             this.txtDireccionSucur.TabIndex = 78;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cR_DataGriedView1);
-            this.panel1.Location = new System.Drawing.Point(388, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 280);
-            this.panel1.TabIndex = 45;
-            // 
-            // cR_DataGriedView1
-            // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(584, 280);
-            this.cR_DataGriedView1.TabIndex = 1;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.Teal;
-            this.btnBuscar.BorderRadius = 40;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(311, 10);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(117, 35);
-            this.btnBuscar.TabIndex = 72;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // PanelRncCliente
-            // 
-            this.PanelRncCliente.Controls.Add(this.cR_LabelUp1);
-            this.PanelRncCliente.Controls.Add(this.txtCedula);
-            this.PanelRncCliente.Location = new System.Drawing.Point(12, 38);
-            this.PanelRncCliente.Name = "PanelRncCliente";
-            this.PanelRncCliente.Size = new System.Drawing.Size(322, 47);
-            this.PanelRncCliente.TabIndex = 77;
-            // 
-            // cR_LabelUp1
-            // 
-            this.cR_LabelUp1.AutoSize = true;
-            this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
-            this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(7, 10);
-            this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(140, 25);
-            this.cR_LabelUp1.TabIndex = 76;
-            this.cR_LabelUp1.Text = "RNC o Cedula";
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCedula.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtCedula.Location = new System.Drawing.Point(153, 7);
-            this.txtCedula.Multiline = true;
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(162, 30);
-            this.txtCedula.TabIndex = 75;
-            // 
-            // panelRncSucursal
-            // 
-            this.panelRncSucursal.Controls.Add(this.cbCliente);
-            this.panelRncSucursal.Controls.Add(this.cR_LabelUp2);
-            this.panelRncSucursal.Controls.Add(this.btnBuscar);
-            this.panelRncSucursal.Location = new System.Drawing.Point(15, 35);
-            this.panelRncSucursal.Name = "panelRncSucursal";
-            this.panelRncSucursal.Size = new System.Drawing.Size(433, 47);
-            this.panelRncSucursal.TabIndex = 78;
-            this.panelRncSucursal.Visible = false;
-            // 
-            // cR_LabelUp2
-            // 
-            this.cR_LabelUp2.AutoSize = true;
-            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
-            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(3, 10);
-            this.cR_LabelUp2.Name = "cR_LabelUp2";
-            this.cR_LabelUp2.Size = new System.Drawing.Size(140, 25);
-            this.cR_LabelUp2.TabIndex = 76;
-            this.cR_LabelUp2.Text = "RNC o Cedula";
-            // 
-            // cbCliente
-            // 
-            this.cbCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbCliente.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cbCliente.ForeColor = System.Drawing.Color.White;
-            this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(149, 8);
-            this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(132, 29);
-            this.cbCliente.TabIndex = 77;
-            // 
             // AgregarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,16 +582,16 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panelRncSucursal.ResumeLayout(false);
+            this.panelRncSucursal.PerformLayout();
+            this.PanelRncCliente.ResumeLayout(false);
+            this.PanelRncCliente.PerformLayout();
             this.panelCliente.ResumeLayout(false);
             this.panelCliente.PerformLayout();
             this.panelSucursal.ResumeLayout(false);
             this.panelSucursal.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
-            this.PanelRncCliente.ResumeLayout(false);
-            this.PanelRncCliente.PerformLayout();
-            this.panelRncSucursal.ResumeLayout(false);
-            this.panelRncSucursal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -630,6 +633,6 @@
         private CR_LabelUp cR_LabelUp2;
         private CR_LabelUp cR_LabelUp1;
         private Cr_Textbox txtCedula;
-        private Cr_ComboBox cbCliente;
+        private Cr_ComboBox cbRnc2;
     }
 }
