@@ -34,13 +34,15 @@
             this.cR_Label2 = new CR_LabelUp();
             this.cR_Label1 = new CR_LabelUp();
             this.btn_Login = new Diseños.Botones_Nuevos();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cr_Textbox2
             // 
             this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(79, 113);
+            this.cr_Textbox2.Location = new System.Drawing.Point(7, 106);
             this.cr_Textbox2.Name = "cr_Textbox2";
             this.cr_Textbox2.PasswordChar = '*';
             this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
@@ -50,7 +52,7 @@
             // 
             this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(79, 41);
+            this.cr_Textbox1.Location = new System.Drawing.Point(7, 34);
             this.cr_Textbox1.Name = "cr_Textbox1";
             this.cr_Textbox1.Size = new System.Drawing.Size(284, 25);
             this.cr_Textbox1.TabIndex = 12;
@@ -61,7 +63,7 @@
             this.cR_Label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Label2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Label2.ForeColor = System.Drawing.Color.White;
-            this.cR_Label2.Location = new System.Drawing.Point(75, 17);
+            this.cR_Label2.Location = new System.Drawing.Point(3, 10);
             this.cR_Label2.Name = "cR_Label2";
             this.cR_Label2.Size = new System.Drawing.Size(60, 20);
             this.cR_Label2.TabIndex = 11;
@@ -73,7 +75,7 @@
             this.cR_Label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Label1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Label1.ForeColor = System.Drawing.Color.White;
-            this.cR_Label1.Location = new System.Drawing.Point(75, 90);
+            this.cR_Label1.Location = new System.Drawing.Point(3, 83);
             this.cR_Label1.Name = "cR_Label1";
             this.cR_Label1.Size = new System.Drawing.Size(85, 20);
             this.cR_Label1.TabIndex = 10;
@@ -89,7 +91,7 @@
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Login.ForeColor = System.Drawing.Color.White;
-            this.btn_Login.Location = new System.Drawing.Point(144, 180);
+            this.btn_Login.Location = new System.Drawing.Point(73, 156);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(150, 41);
             this.btn_Login.TabIndex = 0;
@@ -97,25 +99,35 @@
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_login_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cR_Label2);
+            this.panel1.Controls.Add(this.cr_Textbox2);
+            this.panel1.Controls.Add(this.btn_Login);
+            this.panel1.Controls.Add(this.cr_Textbox1);
+            this.panel1.Controls.Add(this.cR_Label1);
+            this.panel1.Location = new System.Drawing.Point(69, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(304, 216);
+            this.panel1.TabIndex = 14;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(450, 240);
-            this.Controls.Add(this.cr_Textbox2);
-            this.Controls.Add(this.cr_Textbox1);
-            this.Controls.Add(this.cR_Label2);
-            this.Controls.Add(this.cR_Label1);
-            this.Controls.Add(this.btn_Login);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 240);
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.Resize += new System.EventHandler(this.Login_Resize);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -126,5 +138,6 @@
         private CR_LabelUp cR_Label2;
         private Cr_Textbox cr_Textbox1;
         private Cr_Textbox cr_Textbox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

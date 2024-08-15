@@ -19,7 +19,7 @@ namespace SOD_General
 
         private void VistaPrincipal_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
             AbrirFormulario(new Login(this));
             this.Size = new Size(463, 284);

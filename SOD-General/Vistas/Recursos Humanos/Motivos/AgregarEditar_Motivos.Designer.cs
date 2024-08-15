@@ -32,6 +32,8 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.soD_TextBox2 = new SOD_TextBox();
+            this.cR_LabelDown2 = new CR_LabelDown();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.soD_ComboBox4 = new SOD_ComboBox();
             this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
@@ -40,8 +42,6 @@
             this.soD_ComboBox3 = new SOD_ComboBox();
             this.soD_TextBox1 = new SOD_TextBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.soD_TextBox2 = new SOD_TextBox();
-            this.cR_LabelDown2 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -101,6 +101,30 @@
             this.panel1.Size = new System.Drawing.Size(680, 329);
             this.panel1.TabIndex = 0;
             // 
+            // soD_TextBox2
+            // 
+            this.soD_TextBox2.BorderColor = System.Drawing.Color.Yellow;
+            this.soD_TextBox2.BorderFocusColor = System.Drawing.Color.Red;
+            this.soD_TextBox2.BorderSize = 2;
+            this.soD_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.soD_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.soD_TextBox2.Location = new System.Drawing.Point(19, 92);
+            this.soD_TextBox2.Multiline = true;
+            this.soD_TextBox2.Name = "soD_TextBox2";
+            this.soD_TextBox2.Size = new System.Drawing.Size(314, 143);
+            this.soD_TextBox2.TabIndex = 16;
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(15, 69);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(130, 20);
+            this.cR_LabelDown2.TabIndex = 15;
+            this.cR_LabelDown2.Text = "Breve descripcion:";
+            // 
             // cR_LabelDown4
             // 
             this.cR_LabelDown4.AutoSize = true;
@@ -122,9 +146,7 @@
             "Semana",
             "Mes",
             "3 meses",
-            "Año",
-            "Sin limite",
-            "Unico"});
+            "Año"});
             this.soD_ComboBox4.Location = new System.Drawing.Point(435, 169);
             this.soD_ComboBox4.Name = "soD_ComboBox4";
             this.soD_ComboBox4.Size = new System.Drawing.Size(198, 27);
@@ -207,30 +229,6 @@
             this.cR_LabelDown1.Size = new System.Drawing.Size(60, 20);
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Motivo:";
-            // 
-            // soD_TextBox2
-            // 
-            this.soD_TextBox2.BorderColor = System.Drawing.Color.Yellow;
-            this.soD_TextBox2.BorderFocusColor = System.Drawing.Color.Red;
-            this.soD_TextBox2.BorderSize = 2;
-            this.soD_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.soD_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox2.Location = new System.Drawing.Point(19, 92);
-            this.soD_TextBox2.Multiline = true;
-            this.soD_TextBox2.Name = "soD_TextBox2";
-            this.soD_TextBox2.Size = new System.Drawing.Size(314, 143);
-            this.soD_TextBox2.TabIndex = 16;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(15, 69);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(130, 20);
-            this.cR_LabelDown2.TabIndex = 15;
-            this.cR_LabelDown2.Text = "Breve descripcion:";
             // 
             // AgregarEditar_Motivos
             // 

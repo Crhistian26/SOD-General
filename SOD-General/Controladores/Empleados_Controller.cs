@@ -310,8 +310,7 @@ namespace SOD_General.Controladores
         public void Reset_VisualEmpleados()
         {
             var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
-            Visual_Empleados view = new Visual_Empleados();
-            h.OpenForm(view);
+            h.OpenForm(new Visual_Empleados());
         }
     }
 }

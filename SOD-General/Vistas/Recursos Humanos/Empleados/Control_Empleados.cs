@@ -146,7 +146,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             {
                 state = true;
             }
-            else
+            else if(cR_Checkbox2.Checked)
             {
                 state = false;
             }
@@ -178,5 +178,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                 }
             }
         }
+
     }
 }

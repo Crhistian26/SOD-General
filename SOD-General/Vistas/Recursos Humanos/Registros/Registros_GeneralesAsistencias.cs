@@ -14,14 +14,13 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
     public partial class Registros_GeneralesAsistencias : Form
     {
-        Model_User user;
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller control = new Registros_Controller();
         List<Record_Attendance> Asistencias;
-        public Registros_GeneralesAsistencias(Model_User user)
+        public Registros_GeneralesAsistencias()
         {
             InitializeComponent();
-            this.user = user;
             Asistencias = control.Obtener_Asistencias(cR_DateTimePicker1.Value, cR_DateTimePicker1.Value);
             CentrarElementos();
             if (!user.Confirm_Operation("Agregar asistencias"))

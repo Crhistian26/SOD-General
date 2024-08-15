@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using Modelos.AsistenciasYPermisos;
 using System.Runtime.InteropServices.WindowsRuntime;
+using SOD_General.Vistas.Recursos_Humanos.Registros;
+using System.Linq;
 
 namespace SOD_General.Controladores
 {
@@ -63,7 +65,89 @@ namespace SOD_General.Controladores
                 return null;
             }
         }
-        
+
+        public bool AddReason(Model_Reason reason)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Add_Reason @reason,@count,@mesureMax,@mesureFor,@descrip";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@reason", reason._Reason);
+                cmd.Parameters.AddWithValue("@count", reason.MaximuneCount_Time);
+                cmd.Parameters.AddWithValue("@mesureMax", reason.MesureMaximune_Time);
+                cmd.Parameters.AddWithValue("@mesureFor", reason.For_mesure);
+                cmd.Parameters.AddWithValue("@descrip", reason._Descripcion);
+
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        public bool EditReason(Model_Reason reason)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Edit_Reason @reasonId,@reason,@count,@mesureMax,@mesureFor,@descrip";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@reasonId", reason.IdReason);
+                cmd.Parameters.AddWithValue("@reason", reason._Reason);
+                cmd.Parameters.AddWithValue("@count", reason.MaximuneCount_Time);
+                cmd.Parameters.AddWithValue("@mesureMax", reason.MesureMaximune_Time);
+                cmd.Parameters.AddWithValue("@mesureFor", reason.For_mesure);
+                cmd.Parameters.AddWithValue("@descrip", reason._Descripcion);
+
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+
+        }
         public void OpenControlReasons()
         {
             AgregarEditar_Motivos window = new AgregarEditar_Motivos();
@@ -73,6 +157,12 @@ namespace SOD_General.Controladores
         {
             AgregarEditar_Motivos window = new AgregarEditar_Motivos(reason);
             window.Show();
+        }
+
+        public void ResetVisualReasons()
+        {
+            var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
+            h.OpenForm(new Visual_Motivos());
         }
 
     }

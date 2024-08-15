@@ -116,7 +116,6 @@ namespace SOD_General.Controladores
                 return false;
             }
         }
-
         public bool EditAttendance(Record_Attendance record)
         {
             try
@@ -404,8 +403,7 @@ namespace SOD_General.Controladores
         public void Reset_VisualRegistors()
         {
             var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
-            Registros_GeneralesAsistencias view = new Registros_GeneralesAsistencias(h.user);
-            h.OpenForm(view);
+            h.OpenForm(new Registros_GeneralesAsistencias());
         }
     }
 }

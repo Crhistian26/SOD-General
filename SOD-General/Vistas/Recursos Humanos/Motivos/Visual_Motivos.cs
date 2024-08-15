@@ -14,12 +14,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
     {
         SizesGenerales _size = new SizesGenerales();
         Motivos_Controller control = new Motivos_Controller();
-        Model_User user;
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
         List<Model_Reason> reasons;
-        public Visual_Motivos(Model_User user)
+        public Visual_Motivos()
         {
             InitializeComponent();
-            this.user = user;
             reasons = control.Obtener_Razones();
         }
         private void LlenarDataGried()
@@ -84,6 +83,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
+
             control.OpenControlReasons();
         }
 

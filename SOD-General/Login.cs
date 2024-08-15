@@ -1,6 +1,7 @@
 ﻿using Controladores;
 using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados.Control_de_usuario;
+using SOD_General.Controladores;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace SOD_General
     {
 
         VistaPrincipal principal { get; set; }
-
+        SizesGenerales _size = new SizesGenerales();
 
         public Login(VistaPrincipal principal)
         {
@@ -47,7 +48,12 @@ namespace SOD_General
 
         private void Login_Load(object sender, EventArgs e)
         {
+           panel1.Location = _size.CentrarElementosXY(panel1.Size, this.Size);
+        }
 
+        private void Login_Resize(object sender, EventArgs e)
+        {
+            panel1.Location = _size.CentrarElementosXY(panel1.Size, this.Size);
         }
     }
 

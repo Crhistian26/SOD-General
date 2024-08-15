@@ -78,7 +78,7 @@ namespace Controladores
                         ("Asistencias","Ver asistencias"),
                         (object sender, EventArgs e) =>
                         {
-                            Registros_GeneralesAsistencias window = new Registros_GeneralesAsistencias(User);
+                            Registros_GeneralesAsistencias window = new Registros_GeneralesAsistencias();
                             _view.OpenForm(window);
                         }
                     },
@@ -102,7 +102,7 @@ namespace Controladores
                         ("Permisos","Ver motivos"),
                         (object sender, EventArgs e) =>
                         {
-                            Visual_Motivos window = new Visual_Motivos(User);
+                            Visual_Motivos window = new Visual_Motivos();
                             _view.OpenForm(window);
                         }
                     },
