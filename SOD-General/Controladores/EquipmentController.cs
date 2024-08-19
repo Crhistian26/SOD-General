@@ -82,37 +82,7 @@ namespace SOD_General.Controladores
         }
 
 
-        public void AgregarControles(string txt, bool bolean)
-        {
-            try
-            {
-
-                string Query = "Exec Add_QualityControl @NameQuality, @Enable";
-
-                SqlCommand Cmd = new SqlCommand(Query, conex);
-
-                Cmd.Parameters.AddWithValue("@NameQuality", txt);
-
-                Cmd.Parameters.AddWithValue("@Enable", bolean);
-
-                conex.Open();
-
-                Cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Agregado Exitosamente");
-
-            }
-            catch(SqlException Ex)
-
-            {
-                MessageBox.Show("Error desde la base de datos: " +Ex.ToString());
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.ToString());
-            }
-
-        }
+      
 
     }
 }

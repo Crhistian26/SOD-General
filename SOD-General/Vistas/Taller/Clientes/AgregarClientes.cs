@@ -87,7 +87,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 
             }
         }
-
+                                                                                    
         private void btn_Sucursal_Click(object sender, EventArgs e)
         {
             if (cbRnc2.SelectedIndex == null || txtSucursal.Text.Trim().Length == 0 || txtContactoSucur.Text.Trim().Length == 0 ||

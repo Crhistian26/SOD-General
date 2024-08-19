@@ -1,8 +1,9 @@
-﻿namespace Modelos.Taller
+﻿
+namespace Modelos.Taller
 {
-    public class Control
+    public class Controles
     {
-        public int IdControl { get; set; }
+        public int idControl { get; set; }
         public string Name { get; set; }
         public bool Enabled { get; set; }
 
@@ -12,12 +13,11 @@
         /// <param name="idControl">ID del control.</param>
         /// <param name="name">Nombre del control.</param>
         /// <param name="enabled">Indica si el control está habilitado.</param>
-        public Control(int idControl, string name, bool enabled)
+        public Controles(int IdControl, string _name, bool _enabled)
         {
-            IdControl = idControl;
-            Name = name;
-            Enabled = enabled;
+            idControl = IdControl;
+            Name = _name;
+            Enabled = _enabled;
         }
     }
-
 }

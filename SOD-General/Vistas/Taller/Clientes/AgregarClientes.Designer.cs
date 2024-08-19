@@ -229,9 +229,9 @@
             this.panelCliente.Controls.Add(this.txtNumero1);
             this.panelCliente.Controls.Add(this.cR_Subtitulos3);
             this.panelCliente.Controls.Add(this.txtDireccion);
-            this.panelCliente.Location = new System.Drawing.Point(604, 3);
+            this.panelCliente.Location = new System.Drawing.Point(254, 6);
             this.panelCliente.Name = "panelCliente";
-            this.panelCliente.Size = new System.Drawing.Size(139, 304);
+            this.panelCliente.Size = new System.Drawing.Size(525, 304);
             this.panelCliente.TabIndex = 44;
             // 
             // txtCliente

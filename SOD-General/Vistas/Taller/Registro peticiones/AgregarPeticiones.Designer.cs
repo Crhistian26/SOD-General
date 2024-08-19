@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.cR_SplitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelTitulo = new System.Windows.Forms.Panel();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.cR_Subtitulos4 = new CR_Subtitulos();
+            this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             this.cr_Textbox1 = new Cr_Textbox();
             this.soD_ComboBox2 = new SOD_ComboBox();
             this.cR_Subtitulos7 = new CR_Subtitulos();
@@ -44,13 +45,12 @@
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
-            this.panelTitulo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panelTitulo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -71,6 +71,17 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(559, 450);
             this.cR_SplitContainer1.SplitterDistance = 63;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.panelTitulo.Controls.Add(this.cR_LabelUp1);
+            this.panelTitulo.Controls.Add(this.cR_Subtitulos4);
+            this.panelTitulo.Controls.Add(this.cR_TextBoxNumerico1);
+            this.panelTitulo.Location = new System.Drawing.Point(3, 3);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(553, 58);
+            this.panelTitulo.TabIndex = 105;
             // 
             // cR_LabelUp1
             // 
@@ -94,6 +105,16 @@
             this.cR_Subtitulos4.Size = new System.Drawing.Size(332, 28);
             this.cR_Subtitulos4.TabIndex = 27;
             this.cR_Subtitulos4.Text = "REGISTRAR ORDEN ENTRADA";
+            // 
+            // cR_TextBoxNumerico1
+            // 
+            this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(44, 24);
+            this.cR_TextBoxNumerico1.MaxLength = 2;
+            this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
+            this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(84, 25);
+            this.cR_TextBoxNumerico1.TabIndex = 97;
             // 
             // panel1
             // 
@@ -121,19 +142,9 @@
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Location = new System.Drawing.Point(10, 115);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(104, 21);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(70, 21);
             this.cR_Subtitulos1.TabIndex = 104;
-            this.cR_Subtitulos1.Text = "Razon social";
-            // 
-            // cR_TextBoxNumerico1
-            // 
-            this.cR_TextBoxNumerico1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TextBoxNumerico1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TextBoxNumerico1.Location = new System.Drawing.Point(44, 24);
-            this.cR_TextBoxNumerico1.MaxLength = 2;
-            this.cR_TextBoxNumerico1.Name = "cR_TextBoxNumerico1";
-            this.cR_TextBoxNumerico1.Size = new System.Drawing.Size(84, 25);
-            this.cR_TextBoxNumerico1.TabIndex = 97;
+            this.cR_Subtitulos1.Text = "Detalles";
             // 
             // cr_Textbox1
             // 
@@ -293,17 +304,6 @@
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
             // 
-            // panelTitulo
-            // 
-            this.panelTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.panelTitulo.Controls.Add(this.cR_LabelUp1);
-            this.panelTitulo.Controls.Add(this.cR_Subtitulos4);
-            this.panelTitulo.Controls.Add(this.cR_TextBoxNumerico1);
-            this.panelTitulo.Location = new System.Drawing.Point(3, 3);
-            this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(553, 58);
-            this.panelTitulo.TabIndex = 105;
-            // 
             // AgregarPeticiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,10 +320,10 @@
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

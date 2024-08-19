@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using Modelos.Taller;
+using SOD_General.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,24 @@ namespace SOD_General.Vistas.Taller.Control_calidad
 {
     public partial class EnlaceControlEquipo : Form
     {
+       QualityControlController qCC = new QualityControlController();
         public EnlaceControlEquipo()
         {
+           
             InitializeComponent();
+            qCC.ControlesCheckBx(FLPanel);
+            llenarCombBox();
+        }
+
+        public void llenarCombBox()
+        {
+            List<EquipType> ctrlLis = new List<EquipType>();
+            ctrlLis = qCC.RellenarCmbBox();
+
+            foreach (var lista in ctrlLis)
+            {
+                cmbBx.Items.Add(lista._EquipType);
+            }
         }
     }
 }
