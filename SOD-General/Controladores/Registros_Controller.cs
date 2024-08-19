@@ -1,6 +1,7 @@
 ﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Recursos_Humanos.Empleados;
+using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,11 @@ namespace SOD_General.Controladores
         #region Asistencias
         public void AgregarAsistencia()
         {
+            var win = Application.OpenForms.OfType<Control_Asistencias>().FirstOrDefault();
+            if (win != null)
+            {
+                win.Close();
+            }
             Control_Asistencias vista = new Control_Asistencias();
             vista.Show();
         }
@@ -206,21 +212,32 @@ namespace SOD_General.Controladores
         #region Permisos
         public void AgregarPermiso()
         {
+            var win = Application.OpenForms.OfType<Control_Permisos>().FirstOrDefault();
+            if (win != null)
+            {
+                win.Close();
+            }
             Control_Permisos vista = new Control_Permisos();
             vista.Show();
         }
 
-        public List<Record_Permission> Obtener_Permisos()
+        public void EditarPermiso()
+        {
+
+        }
+
+        public List<Record_Permission> Obtener_Permisos(DateTime date1, DateTime date2)
         {
             try
             {
                 List<Record_Permission> permisos = new List<Record_Permission>();
                 Record_Permission record;
                 //El query.
-                string Query = "exec Get_All_Permission";
+                string Query = "exec Get_PermissionForDate @date1,@date2";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
-
+                cmd.Parameters.AddWithValue("@date1", date1);
+                cmd.Parameters.AddWithValue("@date2", date2);
                 //El proceso
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -264,14 +281,14 @@ namespace SOD_General.Controladores
 
         #endregion
 
-        public List<Employee> Obtener_Empleados()
+        public List<Employee> Obtener_Empleados_Trabajando()
         {
             try
             {
                 //La lista a retornar.
                 List<Employee> empleados = new List<Employee>();
                 //El query.
-                string Query = "select IdEmployee,_Name,_Lastname from Employees order by _Name;";
+                string Query = "select IdEmployee,_Name,_Lastname from Employees where Job_State = 1 order by _Name ;";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
 

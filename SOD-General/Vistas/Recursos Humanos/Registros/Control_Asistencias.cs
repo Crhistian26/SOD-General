@@ -33,7 +33,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
         private void VistaAgregar()
         {
-            empleados = control.Obtener_Empleados();
+            empleados = control.Obtener_Empleados_Trabajando();
             botones_Nuevos2.Visible = false;
             cr_Textbox1.Visible = false;
             LlenarComboEmpleados();

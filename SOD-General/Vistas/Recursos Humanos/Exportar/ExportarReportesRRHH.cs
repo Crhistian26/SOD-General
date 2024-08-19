@@ -19,7 +19,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
         public ExportarReportesRRHH()
         {
             InitializeComponent();
-            empleados = controlRegistro.Obtener_Empleados();
+            empleados = controlRegistro.Obtener_Empleados_Trabajando();
         }
 
         private void LlenarComboEmpleados()

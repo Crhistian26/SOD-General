@@ -25,9 +25,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             InitializeComponent();
             //operaciones = new ControlOperaciones(app);
-            empleados = control.Obtener_Empleados();
+            empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
-            permisos = control.Obtener_Permisos();
+            permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value,cR_DateTimePicker2.Value);
             CentrarElementos();
             LlenarComboEmpleados();
             LlenarComboMotivos();
@@ -216,6 +216,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
             else
             {
+                permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
                 OrganizarDataGriedFecha();
             }
         }
@@ -230,6 +231,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
             else
             {
+                permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
                 OrganizarDataGriedFecha();
             }
         }

@@ -17,7 +17,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         public Control_Permisos()
         {
             InitializeComponent();
-            empleados = control.Obtener_Empleados();
+            empleados = control.Obtener_Empleados_Trabajando();
         }
 
         private void CentrarElementos()

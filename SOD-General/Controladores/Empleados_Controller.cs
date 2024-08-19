@@ -298,11 +298,21 @@ namespace SOD_General.Controladores
         #endregion
         public void Abrir_Control_Empleados()
         {
+            var win = Application.OpenForms.OfType<Control_Empleados>().FirstOrDefault();
+            if (win != null)
+            {
+                win.Close();
+            }
             Control_Empleados hola = new Control_Empleados();
             hola.Show();
         }
         public void Abrir_Control_Empleados(Employee emp)
         {
+            var win = Application.OpenForms.OfType<Control_Empleados>().FirstOrDefault();
+            if (win != null)
+            {
+                win.Close();
+            }
             Control_Empleados hola = new Control_Empleados(emp);
             hola.Show();
         }
