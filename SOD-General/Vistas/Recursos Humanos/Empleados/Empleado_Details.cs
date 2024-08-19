@@ -64,11 +64,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                 {
                     cR_DataGriedView1.Rows.Add(
                         registro.IdRecord,
-                        registro.Permission_Date.ToString("D"),
-                        registro.Permission_Date.ToString("D"),
                         registro._Reason,
-                        registro._Description,
-                        registro.Count_Time+" "+registro.Mesure_Time
+                        registro._Description
                         );
                 }
             }

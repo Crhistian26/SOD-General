@@ -109,11 +109,10 @@ namespace SOD_General.Controladores
                 int IdRecord = lector.GetInt32(0);
                 string Reason = lector.GetString(1);
                 string Details = lector.GetString(2);
-                int count = lector.GetInt32(3);
-                string Mesure = lector.GetString(4);
-                DateTime date = lector.GetDateTime(5);
+                DateTime Bdate = lector.GetDateTime(3);
+                DateTime Edate = lector.GetDateTime(4);
 
-                record = new Record_Permission(IdRecord, Reason,Details,count,Mesure,date);
+                record = new Record_Permission(IdRecord, Reason,Details,Bdate,Edate);
                 diccionario.Add(record);
             }
             conex.Close();

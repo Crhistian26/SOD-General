@@ -247,11 +247,10 @@ namespace SOD_General.Controladores
                     string Name = reader.GetString(1);
                     string Reason = reader.GetString(2);
                     string Det = reader.GetString(3);
-                    int Count = reader.GetInt32(4);
-                    string Mesure = reader.GetString(5);
-                    DateTime record_Date = reader.GetDateTime(6);
+                    DateTime Begin = reader.GetDateTime(4);
+                    DateTime End = reader.GetDateTime(5);
 
-                    record = new Record_Permission(IdRecord,Reason, Name, Det,Count,Mesure, record_Date);
+                    record = new Record_Permission(IdRecord,Reason, Name, Det,Begin,End);
                     permisos.Add(record);
                 }
                 conex.Close();

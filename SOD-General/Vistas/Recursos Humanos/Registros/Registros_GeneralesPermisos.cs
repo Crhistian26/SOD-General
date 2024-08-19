@@ -76,10 +76,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     permisos.Select(a => a)
                     .Where
                     (
-                        a => a.Permission_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
-                        && a.Permission_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
+                        a => a.End_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
+                        && a.Begin_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
                     )
-                    .OrderBy(a => a.Permission_Date)
+                    .OrderBy(a => a.Begin_Date)
                     .ToList();
             }
             else
@@ -89,11 +89,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     permisos.Select(a => a)
                     .Where
                     (
-                    a => a.Permission_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
-                    && a.Permission_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
+                    a => a.Begin_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
+                    && a.End_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
                     && a._Name == cr_ComboBox1.Text
                     )
-                    .OrderBy(a => a.Permission_Date)
+                    .OrderBy(a => a.Begin_Date)
                     .ToList();
             }
             if (data.Count > 0)
@@ -103,10 +103,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     cR_DataGriedView1.Rows.Add(
                     Record.IdRecord,
                     Record._Name,
-                    Record._Reason,
-                    Record.Permission_Date.ToString("D"),
-                    Record.Permission_Date.ToString("D"),
-                    Record.Count_Time + " " + Record.Mesure_Time
+                    Record._Reason
+                    
                     );
                 }
             }
