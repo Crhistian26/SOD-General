@@ -123,7 +123,17 @@ namespace SOD_General.Controladores
 
             try
             {
-                
+                List<int> inter = new List<int>();
+                int b;
+                //foreach que recorre todos los checkbox en el FlowLayoutPanel y almacena el tag(id) de los que estan en checked
+                foreach (CheckBox chkx in flp.Controls)
+                {
+                    if (chkx.Checked)
+                    {
+                        b = Convert.ToInt32(chkx.Tag);
+                        inter.Add(b);
+                    }
+                }
 
                 string query = "Exec Add_EquipmentControl @TypeEquipment_Id, @ControlQuality_Id";
                 SqlCommand cmd = new SqlCommand(query, conex);
@@ -136,44 +146,26 @@ namespace SOD_General.Controladores
 
                 MessageBox.Show(idEquip.ToString());
 
+                conex.Open();
                 
-
-                //foreach (var a in inter)
-                //{
-                    
-                //}
-                
-
-
-
-
-                
-                //List<int> inter = new List<int>();
-
-                //foreach que recorre todos los checkbox en el FlowLayoutPanel y almacena el tag(id) de los que estan en checked
-                foreach (CheckBox chkx in flp.Controls)
+                foreach (var a in inter)
                 {
-                    if (chkx.Checked)
-                    {
-                        conex.Open();
-                        int b;
-                        b = Convert.ToInt32(chkx.Tag);
-                        cmd.Parameters.AddWithValue("@TypeEquipment_Id", idEquip);
-                        cmd.Parameters.AddWithValue("@ControlQuality_Id", b);
-                        cmd.ExecuteNonQuery();
-                        conex.Close();
-                    }
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@TypeEquipment_Id", idEquip);
+                    cmd.Parameters.AddWithValue("@ControlQuality_Id", a);
+                    cmd.ExecuteNonQuery();
+                    
                 }
-                
+                conex.Close();
                 MessageBox.Show("Agregado correctamente");
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Error del sistema: " + ex.ToString());
+                MessageBox.Show("Error de sql: " + ex.ToString());
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error de sql: " + ex.ToString());
+                MessageBox.Show("error del sistema: " + ex.ToString());
             }
             
         }
