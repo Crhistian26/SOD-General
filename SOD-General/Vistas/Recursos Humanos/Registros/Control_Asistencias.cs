@@ -42,15 +42,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
         private void VistaEditar()
         {
+            NulificarElementos();
             botones_Nuevos1.Visible = false;
             botones_Nuevos2.Visible = false;
             soD_ComboBox1.Visible = false;
             cR_Subtitulos1.Text = "Editar asistencia";
-            botones_Nuevos1.Visible = true;
             cr_Textbox1.Enabled = false;
             botones_Nuevos1.Text = "Editar";
             cr_Textbox1.Visible = true;
-            
+            cR_DateTimePicker1.Value = record.DateAttendance;
+
             cr_Textbox1.Text = record._Name;
             string index = "";
 
@@ -69,6 +70,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             if (user.Confirm_Operation("Eliminar asistencias"))
             {
                 botones_Nuevos2.Visible = true;
+            }
+
+            if (user.Confirm_Operation("Editar asistencias"))
+            {
+                botones_Nuevos1.Visible = true;
+                HabilitarElementos();
             }
 
             botones_Nuevos1.Click += EditAttendance;
@@ -108,6 +115,43 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             cR_TBhora4.Text = "1";
             cR_TBminutos4.Text = "00";
             soD_ComboBox5.SelectedIndex = 1;
+        }
+
+        private void NulificarElementos()
+        {
+            cR_TBhora1.Enabled = false;
+            cR_TBminutos1.Enabled = false;
+            soD_ComboBox2.Enabled = false;
+
+            cR_TBhora2.Enabled = false;
+            cR_TBminutos2.Enabled = false;
+            soD_ComboBox3.Enabled = false;
+
+            cR_TBhora3.Enabled = false;
+            cR_TBminutos3.Enabled = false;
+            soD_ComboBox4.Enabled = false;
+
+            cR_TBhora4.Enabled = false;
+            cR_TBminutos4.Enabled = false;
+            soD_ComboBox5.Enabled = false;
+        }
+        private void HabilitarElementos()
+        {
+            cR_TBhora1.Enabled = true;
+            cR_TBminutos1.Enabled = true;
+            soD_ComboBox2.Enabled = true;
+
+            cR_TBhora2.Enabled = true;
+            cR_TBminutos2.Enabled = true;
+            soD_ComboBox3.Enabled = true;
+
+            cR_TBhora3.Enabled = true;
+            cR_TBminutos3.Enabled = true;
+            soD_ComboBox4.Enabled = true;
+
+            cR_TBhora4.Enabled = true;
+            cR_TBminutos4.Enabled = true;
+            soD_ComboBox5.Enabled = true;
         }
         private void Agregar_Asistencias_Load(object sender, EventArgs e)
         {

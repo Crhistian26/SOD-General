@@ -12,7 +12,6 @@ namespace SOD_General
 
     public partial class Login : Form
     {
-
         VistaPrincipal principal { get; set; }
         SizesGenerales _size = new SizesGenerales();
 

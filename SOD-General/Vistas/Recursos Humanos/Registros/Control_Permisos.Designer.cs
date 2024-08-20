@@ -32,6 +32,8 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_Checkbox2 = new CR_Checkbox();
+            this.cR_Checkbox1 = new CR_Checkbox();
             this.cr_ComboBox3 = new Cr_ComboBox();
             this.cr_ComboBox2 = new Cr_ComboBox();
             this.cr_ComboBox1 = new Cr_ComboBox();
@@ -93,6 +95,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_Checkbox2);
+            this.panel1.Controls.Add(this.cR_Checkbox1);
             this.panel1.Controls.Add(this.cr_ComboBox3);
             this.panel1.Controls.Add(this.cr_ComboBox2);
             this.panel1.Controls.Add(this.cr_ComboBox1);
@@ -115,6 +119,30 @@
             this.panel1.Size = new System.Drawing.Size(680, 336);
             this.panel1.TabIndex = 0;
             // 
+            // cR_Checkbox2
+            // 
+            this.cR_Checkbox2.AutoSize = true;
+            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox2.Location = new System.Drawing.Point(27, 280);
+            this.cR_Checkbox2.Name = "cR_Checkbox2";
+            this.cR_Checkbox2.Size = new System.Drawing.Size(92, 24);
+            this.cR_Checkbox2.TabIndex = 25;
+            this.cR_Checkbox2.Text = "Almorzó?";
+            this.cR_Checkbox2.UseVisualStyleBackColor = true;
+            // 
+            // cR_Checkbox1
+            // 
+            this.cR_Checkbox1.AutoSize = true;
+            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox1.Location = new System.Drawing.Point(140, 280);
+            this.cR_Checkbox1.Name = "cR_Checkbox1";
+            this.cR_Checkbox1.Size = new System.Drawing.Size(207, 24);
+            this.cR_Checkbox1.TabIndex = 24;
+            this.cR_Checkbox1.Text = "El dia inicio fue completo?";
+            this.cR_Checkbox1.UseVisualStyleBackColor = true;
+            // 
             // cr_ComboBox3
             // 
             this.cr_ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -132,6 +160,7 @@
             this.cr_ComboBox3.Name = "cr_ComboBox3";
             this.cr_ComboBox3.Size = new System.Drawing.Size(201, 29);
             this.cr_ComboBox3.TabIndex = 23;
+            this.cr_ComboBox3.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox3_SelectedIndexChanged);
             // 
             // cr_ComboBox2
             // 
@@ -250,7 +279,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(248, 269);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(395, 271);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos1.TabIndex = 11;
@@ -370,5 +399,7 @@
         private Cr_ComboBox cr_ComboBox3;
         private Cr_ComboBox cr_ComboBox2;
         private Cr_ComboBox cr_ComboBox1;
+        private CR_Checkbox cR_Checkbox2;
+        private CR_Checkbox cR_Checkbox1;
     }
 }

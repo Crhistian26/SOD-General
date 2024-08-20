@@ -19,12 +19,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         List<Employee> empleados;
         List<Model_Reason> motivos;
         List<Record_Permission> permisos;
-        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
+        Model_User user;
 
         public Registros_GeneralesPermisos(AppVistaGeneral app)
         {
             InitializeComponent();
-            //operaciones = new ControlOperaciones(app);
+            user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
             permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value,cR_DateTimePicker2.Value);

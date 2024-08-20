@@ -17,7 +17,7 @@ namespace SOD_General
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EnlaceControlEquipo());
+            Application.Run(new VistaPrincipal());
         }
     }
 }

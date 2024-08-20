@@ -4,6 +4,7 @@ using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 

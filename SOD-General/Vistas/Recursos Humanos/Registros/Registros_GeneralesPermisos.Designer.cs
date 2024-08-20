@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.cr_ComboBox2 = new Cr_ComboBox();
+            this.cr_ComboBox1 = new Cr_ComboBox();
             this.botones_Nuevos5 = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_LabelUp2 = new CR_LabelUp();
@@ -42,8 +44,6 @@
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.cr_ComboBox1 = new Cr_ComboBox();
-            this.cr_ComboBox2 = new Cr_ComboBox();
             this.Registros_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +83,35 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(960, 490);
             this.cR_SplitContainer1.SplitterDistance = 198;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // cr_ComboBox2
+            // 
+            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox2.FormattingEnabled = true;
+            this.cr_ComboBox2.Location = new System.Drawing.Point(16, 138);
+            this.cr_ComboBox2.Name = "cr_ComboBox2";
+            this.cr_ComboBox2.Size = new System.Drawing.Size(247, 29);
+            this.cr_ComboBox2.TabIndex = 8;
+            // 
+            // cr_ComboBox1
+            // 
+            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox1.FormattingEnabled = true;
+            this.cr_ComboBox1.Location = new System.Drawing.Point(16, 83);
+            this.cr_ComboBox1.Name = "cr_ComboBox1";
+            this.cr_ComboBox1.Size = new System.Drawing.Size(247, 29);
+            this.cr_ComboBox1.TabIndex = 7;
+            this.cr_ComboBox1.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox1_SelectedIndexChanged);
             // 
             // botones_Nuevos5
             // 
@@ -272,35 +301,6 @@
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
             // 
-            // cr_ComboBox1
-            // 
-            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Location = new System.Drawing.Point(16, 83);
-            this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(247, 29);
-            this.cr_ComboBox1.TabIndex = 7;
-            this.cr_ComboBox1.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox1_SelectedIndexChanged);
-            // 
-            // cr_ComboBox2
-            // 
-            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Location = new System.Drawing.Point(16, 138);
-            this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(247, 29);
-            this.cr_ComboBox2.TabIndex = 8;
-            // 
             // Registros_RecordId
             // 
             this.Registros_RecordId.HeaderText = "Id";
@@ -339,7 +339,7 @@
             // Cantidad
             // 
             this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Cantidad.HeaderText = "Cantidad de tiempo";
+            this.Cantidad.HeaderText = "Total de horas";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 

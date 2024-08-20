@@ -120,7 +120,7 @@
             // 
             // botones_Nuevos2
             // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.Red;
             this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
             this.botones_Nuevos2.BorderRadius = 40;
             this.botones_Nuevos2.BorderSize = 0;

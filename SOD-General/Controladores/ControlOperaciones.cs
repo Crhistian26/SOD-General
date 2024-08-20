@@ -1,4 +1,5 @@
 ﻿using Modelos.Control_de_usuarios;
+using Modelos.Taller;
 using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
@@ -215,10 +216,18 @@ namespace Controladores
                 }
                 
             }
-
+            ToolStripMenuItem login_back = new ToolStripMenuItem();
+            login_back.Text = "Volver al login";
+            login_back.Click += Login_Click;
+            _view.cR_MenuStrip1.Items.Add(login_back);
         }
 
-     
+        private void Login_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+
         #endregion
     }
 }

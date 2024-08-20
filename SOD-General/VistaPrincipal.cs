@@ -12,6 +12,7 @@ namespace SOD_General
 
         private AppVistaGeneral _appVistaGeneral;
         private Form formu;
+        public Model_User user;
         public VistaPrincipal()
         {
             InitializeComponent();
@@ -19,15 +20,18 @@ namespace SOD_General
 
         private void VistaPrincipal_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            AbrirLogin();
+        }
 
+        public void AbrirLogin()
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
             AbrirFormulario(new Login(this));
             this.Size = new Size(463, 284);
 
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
-
         public void AbrirFormulario(Form formulario)
         {
             if (this.panel1.Controls.Count > 0)
@@ -45,7 +49,6 @@ namespace SOD_General
             this.panel1.Tag = this.formu;
             this.MinimumSize = formu.MinimumSize;
             this.formu.Show();
-
         }
 
      
@@ -53,7 +56,7 @@ namespace SOD_General
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;
-
+            this.user = user;
             _appVistaGeneral = new AppVistaGeneral(user);
 
             AbrirFormulario(_appVistaGeneral);

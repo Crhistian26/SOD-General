@@ -1,4 +1,6 @@
-﻿using Modelos.Usuarios_Empleados;
+﻿using DocumentFormat.OpenXml.EMMA;
+using Modelos.AsistenciasYPermisos;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using SOD_General.Vistas.Pruebas;
 using System;
@@ -14,10 +16,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller control = new Registros_Controller();
         List<Employee> empleados;
+        List<Model_Reason> motivos;
         public Control_Permisos()
         {
             InitializeComponent();
             empleados = control.Obtener_Empleados_Trabajando();
+            motivos = control.Obtener_Razones();
         }
 
         private void CentrarElementos()
@@ -29,17 +33,22 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
 
-        private void LlenarComboEmpleados()
+        private void LlenarCombobox()
         {
             foreach (Employee emp in empleados)
             {
                 cr_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
             }
+            foreach (Model_Reason rea in motivos)
+            {
+                cr_ComboBox2.Items.Add(rea._Reason);
+            }
         }
         private void Agregar_Permiso_Load(object sender, EventArgs e)
         {
             CentrarElementos();
-            LlenarComboEmpleados();
+            LlenarCombobox();
+            cR_Checkbox1.Visible = false;
         }
 
         private void soD_ComboBox4_Resize(object sender, EventArgs e)
@@ -55,6 +64,18 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         private void soD_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int a = empleados[cr_ComboBox1.SelectedIndex].IdEmployee;
+        }
+
+        private void cr_ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cr_ComboBox3.SelectedIndex == 2)
+            {
+                cR_Checkbox1.Visible = true;
+            }
+            else
+            {
+                cR_Checkbox1.Visible = false;
+            }
         }
     }
 }
