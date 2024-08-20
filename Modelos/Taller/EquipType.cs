@@ -1,10 +1,18 @@
-﻿namespace Modelos.Taller
+﻿using DocumentFormat.OpenXml.Presentation;
+
+namespace Modelos.Taller
 {
     public class EquipType
     {
-        public int? IdEquipType { get; set; }
+        public int IdEquipType { get; set; }
         public string _EquipType { get; set; }
         public bool _Enabled { get; set; }
+
+        public EquipType(string equipType, bool enabled) 
+        {
+            _EquipType = equipType;
+            _Enabled = enabled;
+        }
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="EquipType"/>.
@@ -12,11 +20,12 @@
         /// <param name="idEquipType">ID del tipo de equipo.</param>
         /// <param name="equipType">Nombre del tipo de equipo.</param>
         /// <param name="enabled">Estado de habilitación del tipo de equipo.</param>
-        public EquipType(int? idEquipType, string equipType, bool enabled)
+        public EquipType(int idEquipType, string equipType, bool enabled)
+            :this(equipType, enabled)
         {
             IdEquipType = idEquipType;
-            _EquipType = equipType;
-            _Enabled = enabled;
+            
         }
+        
     }
 }

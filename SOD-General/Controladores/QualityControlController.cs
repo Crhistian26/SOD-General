@@ -36,6 +36,8 @@ namespace SOD_General.Controladores
 
                 Cmd.ExecuteNonQuery();
 
+                conex.Close();
+
                 MessageBox.Show("Agregado Exitosamente");
 
             }
@@ -58,17 +60,17 @@ namespace SOD_General.Controladores
 
             conex.Open();
             SqlDataReader reader = cmd.ExecuteReader();
-            int i = 0;
 
             while (reader.Read())
             {
               //  Control controles = new Control();   
-                CR_Checkbox cmb = new CR_Checkbox();
+                CR_Checkbox chb = new CR_Checkbox();
                 int id = reader.GetInt32(0);
                 string name = reader.GetString(1);
                 bool bolea = reader.GetBoolean(2);
-                cmb.Text = name;
-                flp.Controls.Add(cmb);  
+                chb.Text = name;
+                chb.Tag = id;
+                flp.Controls.Add(chb);
             }
             conex.Close();
         }
@@ -113,6 +115,67 @@ namespace SOD_General.Controladores
             }
 
             return ctrlList;
+        }
+
+        public void agregarCheckbox(FlowLayoutPanel flp, ComboBox cmb)
+        {
+            
+
+            try
+            {
+                
+
+                string query = "Exec Add_EquipmentControl @TypeEquipment_Id, @ControlQuality_Id";
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                string equipo = cmb.SelectedItem.ToString();
+
+                int idEquip = ctrlList.Where(c => c._EquipType == equipo)
+                                         .Select(c => c.IdEquipType)
+                                         .First();
+
+                MessageBox.Show(idEquip.ToString());
+
+                
+
+                //foreach (var a in inter)
+                //{
+                    
+                //}
+                
+
+
+
+
+                
+                //List<int> inter = new List<int>();
+
+                //foreach que recorre todos los checkbox en el FlowLayoutPanel y almacena el tag(id) de los que estan en checked
+                foreach (CheckBox chkx in flp.Controls)
+                {
+                    if (chkx.Checked)
+                    {
+                        conex.Open();
+                        int b;
+                        b = Convert.ToInt32(chkx.Tag);
+                        cmd.Parameters.AddWithValue("@TypeEquipment_Id", idEquip);
+                        cmd.Parameters.AddWithValue("@ControlQuality_Id", b);
+                        cmd.ExecuteNonQuery();
+                        conex.Close();
+                    }
+                }
+                
+                MessageBox.Show("Agregado correctamente");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error del sistema: " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error de sql: " + ex.ToString());
+            }
+            
         }
 
         

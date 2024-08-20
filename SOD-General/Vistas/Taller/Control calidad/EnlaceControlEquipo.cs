@@ -34,5 +34,12 @@ namespace SOD_General.Vistas.Taller.Control_calidad
                 cmbBx.Items.Add(lista._EquipType);
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            qCC.agregarCheckbox(FLPanel, cmbBx);
+            
+
+        }
     }
 }
