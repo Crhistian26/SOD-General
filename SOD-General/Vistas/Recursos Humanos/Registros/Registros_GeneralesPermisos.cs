@@ -103,8 +103,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     cR_DataGriedView1.Rows.Add(
                     Record.IdRecord,
                     Record._Name,
-                    Record._Reason
-                    
+                    Record._Reason,
+                    Record.Begin_Date.ToString("F"),
+                    Record.End_Date.ToString("f")
                     );
                 }
             }
