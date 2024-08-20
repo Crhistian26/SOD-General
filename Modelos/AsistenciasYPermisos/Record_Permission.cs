@@ -44,8 +44,7 @@ namespace Modelos.AsistenciasYPermisos
 
         public string Get_Hours_Ausent(DateTime date1, DateTime date2)
         {
-            
-            return null;
+            return null;   
         }
             
 
