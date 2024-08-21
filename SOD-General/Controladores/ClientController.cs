@@ -105,6 +105,8 @@ namespace SOD_General.Controladores
             }
         }
 
+       
+
         public List<Locations> ViewLocation(int id)
         {
             try
@@ -119,7 +121,8 @@ namespace SOD_General.Controladores
 
                 if (reader.FieldCount <= 1)
                 {
-                    throw new Exception("Este cliente no tiene sucursales registradas");
+                    MessageBox.Show("Este cliente no tiene sucursales registradas");
+                    return null;
                 }
                 else
                 {
@@ -150,6 +153,7 @@ namespace SOD_General.Controladores
                 {
                     conex.Close();
                 }
+
                 MessageBox.Show("Fallo: " + ex.ToString());
                 return null;
             }
