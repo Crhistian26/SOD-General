@@ -24,7 +24,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             InitializeComponent();
             VistaAgregar();
         }
-
         public Control_Asistencias(Record_Attendance record)
         {
             InitializeComponent();
@@ -35,6 +34,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             empleados = control.Obtener_Empleados_Trabajando();
             botones_Nuevos2.Visible = false;
+            botones_Nuevos1.Visible = true;
             cr_Textbox1.Visible = false;
             LlenarComboEmpleados();
             botones_Nuevos1.Click += AddAttendance;
@@ -165,6 +165,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void AddAttendance(object sender, EventArgs e)
         {  
+
             Record_Attendance record = new Record_Attendance
             (
                 empleados[soD_ComboBox1.SelectedIndex].IdEmployee,
@@ -209,5 +210,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 }
             }
         }
+
+
     }
 }

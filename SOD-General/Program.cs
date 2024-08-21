@@ -18,7 +18,7 @@ namespace SOD_General
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AgregarPeticiones());
+            Application.Run(new VistaPrincipal());
         }
     }
 }

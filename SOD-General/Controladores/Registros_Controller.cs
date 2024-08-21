@@ -333,7 +333,7 @@ namespace SOD_General.Controladores
                 //La lista a retornar.
                 List<Department> departamentos = new List<Department>();
                 //El query.
-                string Query = "select IdDeparment,_Department from Departments order by IdDeparment;";
+                string Query = "select IdDeparment,_Department from Departments order by _Department;";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
 

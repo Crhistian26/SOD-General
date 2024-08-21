@@ -52,5 +52,30 @@ namespace Pruebas_unitarias
             bool h = user.Confirm_Operation("asd");
             Assert.IsFalse(h);
         }
+        [TestMethod]
+        public void TestDatetimeSubstrac()
+        {
+            TimeSpan h = new Record_Permission(
+                1,
+                "Fulanito",
+                "Juan",
+                "a",
+                new DateTime(2024, 8, 21, 8, 30, 0),
+                new DateTime(2024, 8, 21, 10, 30, 0),
+                new TimeSpan(12,0,0),
+                new TimeSpan(1,0,0)
+                ).Get_Hours_Ausent();
+
+            TimeSpan f = new Record_Permission(
+                1,
+                "Fulanito",
+                "Juan",
+                "a",
+                new DateTime(2024, 8, 21, 8, 30, 0),
+                new DateTime(2024, 8, 24, 9, 30, 0),
+                new TimeSpan(12, 0, 0),
+                new TimeSpan(1, 0, 0)
+                ).Get_Hours_Ausent();
+        }
     }
 }

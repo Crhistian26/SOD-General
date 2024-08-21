@@ -51,6 +51,18 @@ namespace SOD_General.Recursos_Humanos.Empleados
             cR_Subtitulos1.Location = _size.CentrarElementosX(localA, cR_Subtitulos1.Size, this.Size);
         }
 
+        public string JobState(Employee empleado)
+        {
+            if (empleado.Job_State)
+            {
+                return "Trabajando";
+            }
+            else
+            {
+                return "Despedido";
+            }
+        }
+
         public void LlenarDataGried()
         {
             cR_DataGriedView1.Rows.Clear();
@@ -61,17 +73,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
                 string lastname = empleado._Lastname;
                 string department = empleado.Department;
                 DateTime date = empleado.Admission_date;
-                string estado = "";
-                if(empleado.Job_State)
-                {
-                    estado = "Trabajando";
-                }
-                else
-                {
-                    estado = "Despedido";
-                }
-
-                cR_DataGriedView1.Rows.Add(id, name, lastname, department, date.ToString("D"),estado);
+                cR_DataGriedView1.Rows.Add(id, name, lastname, department, date.ToString("D"),JobState(empleado));
             }
         }
 
@@ -107,7 +109,8 @@ namespace SOD_General.Recursos_Humanos.Empleados
                         empleado._Name,
                         empleado._Lastname,
                         empleado.Department,
-                        empleado.Admission_date.ToString("D")
+                        empleado.Admission_date.ToString("D"),
+                        JobState(empleado)
                         );
                     }
                 }
