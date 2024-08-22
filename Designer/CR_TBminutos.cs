@@ -21,16 +21,20 @@ public class CR_TBminutos : TextBox
         }
         else
         {
-            string texto = this.Text + e.KeyChar;
-            int hora = Convert.ToInt32(texto);
-            if (hora < 0)
+            if(char.IsNumber(e.KeyChar))
             {
-                this.Text = "1";
+                string texto = this.Text + e.KeyChar;
+                int hora = Convert.ToInt32(texto);
+                if (hora < 0)
+                {
+                    this.Text = "1";
+                }
+                else if (hora > 59)
+                {
+                    this.Text = "59";
+                }
             }
-            else if (hora > 59)
-            {
-                this.Text = "59";
-            }
+            
         }
 
     }

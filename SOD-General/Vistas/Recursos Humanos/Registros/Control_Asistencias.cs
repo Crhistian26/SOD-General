@@ -211,6 +211,5 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
         }
 
-
     }
 }

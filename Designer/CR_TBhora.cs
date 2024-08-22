@@ -21,15 +21,19 @@ public class CR_TBhora : TextBox
         }
         else
         {
-            string texto = this.Text + e.KeyChar;
-            int hora = Convert.ToInt32(texto);
-            if (hora < 0)
+
+            if (char.IsNumber(e.KeyChar))
             {
-                this.Text = "1";
-            }
-            else if (hora > 12)
-            {
-                this.Text = "12";
+                string texto = this.Text + e.KeyChar;
+                int hora = Convert.ToInt32(texto);
+                if (hora < 0)
+                {
+                    this.Text = "1";
+                }
+                else if (hora > 12)
+                {
+                    this.Text = "12";
+                }
             }
         }
 

@@ -71,11 +71,12 @@ namespace Pruebas_unitarias
                 "Fulanito",
                 "Juan",
                 "a",
-                new DateTime(2024, 8, 21, 8, 30, 0),
-                new DateTime(2024, 8, 24, 9, 30, 0),
+                new DateTime(2024, 8, 1, 8, 30, 0),
+                new DateTime(2024, 8, 22, 8, 30, 0),
                 new TimeSpan(12, 0, 0),
                 new TimeSpan(1, 0, 0)
                 ).Get_Hours_Ausent();
+            
         }
     }
 }
