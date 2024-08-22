@@ -30,12 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.cR_SplitContainer1 = new CR_SplitContainer();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.BtnAgregarEquip = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
@@ -67,41 +68,6 @@
             this.cR_DataGriedView1.Size = new System.Drawing.Size(800, 355);
             this.cR_DataGriedView1.TabIndex = 2;
             // 
-            // cR_Subtitulos1
-            // 
-            this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_Subtitulos1.AutoSize = true;
-            this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(315, 30);
-            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(128, 31);
-            this.cR_Subtitulos1.TabIndex = 0;
-            this.cR_Subtitulos1.Text = "Ver Tipos";
-            // 
-            // cR_SplitContainer1
-            // 
-            this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.cR_SplitContainer1.Name = "cR_SplitContainer1";
-            this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // cR_SplitContainer1.Panel1
-            // 
-            this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
-            // 
-            // cR_SplitContainer1.Panel2
-            // 
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.cR_SplitContainer1.SplitterDistance = 91;
-            this.cR_SplitContainer1.TabIndex = 1;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Id";
@@ -128,6 +94,59 @@
             this.Column4.HeaderText = "Editar";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // cR_Subtitulos1
+            // 
+            this.cR_Subtitulos1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cR_Subtitulos1.AutoSize = true;
+            this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(322, 9);
+            this.cR_Subtitulos1.Name = "cR_Subtitulos1";
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(128, 31);
+            this.cR_Subtitulos1.TabIndex = 0;
+            this.cR_Subtitulos1.Text = "Ver Tipos";
+            // 
+            // cR_SplitContainer1
+            // 
+            this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.cR_SplitContainer1.Name = "cR_SplitContainer1";
+            this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // cR_SplitContainer1.Panel1
+            // 
+            this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.BtnAgregarEquip);
+            // 
+            // cR_SplitContainer1.Panel2
+            // 
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.cR_SplitContainer1.SplitterDistance = 91;
+            this.cR_SplitContainer1.TabIndex = 1;
+            // 
+            // BtnAgregarEquip
+            // 
+            this.BtnAgregarEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAgregarEquip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.BtnAgregarEquip.BorderColor = System.Drawing.Color.Teal;
+            this.BtnAgregarEquip.BorderRadius = 40;
+            this.BtnAgregarEquip.BorderSize = 0;
+            this.BtnAgregarEquip.FlatAppearance.BorderSize = 0;
+            this.BtnAgregarEquip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarEquip.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnAgregarEquip.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregarEquip.Location = new System.Drawing.Point(604, 50);
+            this.BtnAgregarEquip.Name = "BtnAgregarEquip";
+            this.BtnAgregarEquip.Size = new System.Drawing.Size(193, 31);
+            this.BtnAgregarEquip.TabIndex = 1;
+            this.BtnAgregarEquip.Text = "Agregar Equipos";
+            this.BtnAgregarEquip.UseVisualStyleBackColor = false;
+            this.BtnAgregarEquip.Click += new System.EventHandler(this.BtnAgregarEquip_Click);
             // 
             // VisualizacionEquipo
             // 
@@ -159,5 +178,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Column4;
+        private Diseños.Botones_Nuevos BtnAgregarEquip;
     }
 }

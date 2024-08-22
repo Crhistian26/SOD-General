@@ -122,6 +122,7 @@ namespace SOD_General.Controladores
                 if (reader.FieldCount <= 1)
                 {
                     MessageBox.Show("Este cliente no tiene sucursales registradas");
+                    conex.Close();
                     return null;
                 }
                 else
@@ -156,6 +157,7 @@ namespace SOD_General.Controladores
 
                 MessageBox.Show("Fallo: " + ex.ToString());
                 return null;
+                
             }
         }
 

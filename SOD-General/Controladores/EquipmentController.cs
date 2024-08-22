@@ -81,8 +81,40 @@ namespace SOD_General.Controladores
            
         }
 
+        //public List<EquipType> visualizarControles()
+        //{
+        //    List<Controles> tipoControles = new List<Controles>();
 
-      
+        //    try
+        //    {
+        //        string query = "Select * from ControlQuality";
+        //        SqlCommand cmd = new SqlCommand(query, conex);
+
+        //        conex.Open();
+        //        SqlDataReader reader = cmd.ExecuteReader();
+
+        //        while (reader.Read())
+        //        {
+        //            int Id = reader.GetInt32(0);
+        //            string Equipo = reader.GetString(1);
+        //            bool v = reader.GetBoolean(2);
+
+        //            equipType = new EquipType(Id, Equipo, v);
+        //            tipoEquipo.Add(equipType);
+        //        }
+        //        conex.Close();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error " + ex.ToString());
+        //    }
+        //    return tipoEquipo;
+
+        //}
+
+
+
 
     }
 }

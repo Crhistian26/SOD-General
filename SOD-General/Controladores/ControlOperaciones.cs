@@ -125,14 +125,14 @@ namespace Controladores
                             _view.OpenForm(window);
                         }
                     },
-                    {
-                        ("Equipos","Añadir Equipo"),
-                        (object sender, EventArgs e) =>
-                        {
-                            AgregarTipoEquipo window = new AgregarTipoEquipo();
-                            _view.OpenForm(window);
-                        }
-                    },
+                    //{
+                    //    ("Equipos","Añadir Equipo"),
+                    //    (object sender, EventArgs e) =>
+                    //    {
+                    //        AgregarTipoEquipo window = new AgregarTipoEquipo();
+                    //        _view.OpenForm(window);
+                    //    }
+                    //},
 
                       {
                         ("Equipos","Ver Equipos"),
@@ -143,14 +143,14 @@ namespace Controladores
                         }
                     },
 
-                      {
-                        ("Equipos","Añadir Marcas"),
-                        (object sender, EventArgs e) =>
-                        {
-                            AgregarMarcas window = new AgregarMarcas();
-                            _view.OpenForm(window);
-                        }
-                    },
+                    //  {
+                    //    ("Equipos","Añadir Marcas"),
+                    //    (object sender, EventArgs e) =>
+                    //    {
+                    //        AgregarMarcas window = new AgregarMarcas();
+                    //        _view.OpenForm(window);
+                    //    }
+                    //},
 
                       {
                         ("Equipos","Ver Marcas"),
@@ -162,13 +162,22 @@ namespace Controladores
                     },
 
                       {
-                        ("Equipos","Añadir Controles"),
+                        ("Controles de calidad","Ver Controles"),
                         (object sender, EventArgs e) =>
                         {
-                            AgregarControles window = new AgregarControles();
+                            VisualizarControles window = new VisualizarControles();
                             _view.OpenForm(window);
                         }
                     },
+
+                    //  {
+                    //    ("Equipos","Ver Marcas"),
+                    //    (object sender, EventArgs e) =>
+                    //    {
+                    //        VisualizarMarcas window = new VisualizarMarcas();
+                    //        _view.OpenForm(window);
+                    //    }
+                    //},
                 };
 
 

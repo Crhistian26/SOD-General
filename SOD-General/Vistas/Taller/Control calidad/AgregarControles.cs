@@ -16,5 +16,7 @@ namespace SOD_General.Taller.Control_calidad
         {
             cQController.AgregarControles(txtControlName.Text, true);
         }
+
+        
     }
 }

@@ -1,4 +1,6 @@
-﻿using Modelos.Taller;
+﻿using Modelos.Control_de_usuarios;
+using Modelos.Taller;
+using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,8 @@ namespace SOD_General.Vistas.Taller.Equipos
     public partial class VisualizarMarcas : Form
     {
         BrandController brandController = new BrandController();
-
+        SizesGenerales _size = new SizesGenerales();
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
         public VisualizarMarcas()
         {
             InitializeComponent();
@@ -24,6 +27,8 @@ namespace SOD_General.Vistas.Taller.Equipos
         private void VisualizarMarcas_Load(object sender, EventArgs e)
         {
             llenargrid();
+            ValidarAddMarcas();
+            CentrarElemento();
         }
 
         public void llenargrid()
@@ -35,6 +40,32 @@ namespace SOD_General.Vistas.Taller.Equipos
             {
                 cR_DataGriedView1.Rows.Add(list.IdBrand, list._Brand, list._Enabled);
             }
+        }
+        public void CentrarElemento()
+        {
+            Point SubL = cR_Subtitulos1.Location;
+            cR_Subtitulos1.Location = _size.CentrarElementosX(SubL, cR_Subtitulos1.Size, this.Size);
+
+            //Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
+            //panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
+        }
+
+        private void ValidarAddMarcas()
+        {
+            if (user.Confirm_Operation("Añadir Marcas"))
+            {
+                BtnAgregarMarcas.Visible = true;
+            }
+            else
+            {
+                BtnAgregarMarcas.Visible = false;
+            }
+        }
+
+        private void BtnAgregarMarcas_Click(object sender, EventArgs e)
+        {
+            AgregarMarcas addMarca = new AgregarMarcas();
+            addMarca.Show();
         }
     }
 }
