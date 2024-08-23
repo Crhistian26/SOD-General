@@ -84,7 +84,6 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             sucursal.Show();
 
-            MessageBox.Show(id.ToString());
         }
 
         public void cbLlenar(int a)

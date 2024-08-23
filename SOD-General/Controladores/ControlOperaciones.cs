@@ -13,6 +13,7 @@ using SOD_General.Vistas.Taller.Clientes;
 using SOD_General.Vistas.Taller.Control_calidad;
 using SOD_General.Vistas.Taller.Controles_de_Equipo;
 using SOD_General.Vistas.Taller.Equipos;
+using SOD_General.Vistas.Taller.Pruebadiseño;
 using SOD_General.Vistas.Taller.Registrar_Cotizacion;
 using SOD_General.Vistas.Taller.Registrar_entrada;
 using SOD_General.Vistas.Taller.Registro_peticiones;
@@ -110,6 +111,15 @@ namespace Controladores
                     },
 
                     {
+                        ("Recepcion","Orden de entrada"),
+                        (object sender, EventArgs e) =>
+                        {
+                            sucursalesSeleccion window = new sucursalesSeleccion();
+                            _view.OpenForm(window);
+                        }
+                    },
+
+                    {
                         ("Clientes","Añadir Clientes"),
                         (object sender, EventArgs e) =>
                         {
@@ -179,6 +189,8 @@ namespace Controladores
                             _view.OpenForm(window);
                         }
                     },
+
+                      
                 };
 
 
