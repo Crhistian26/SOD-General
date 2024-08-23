@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationRevision>29</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -481,6 +481,30 @@
     <Compile Include="Vistas\Taller\Clientes\AgregarClientes.Designer.cs">
       <DependentUpon>AgregarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\AddContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\AddContact.Designer.cs">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\AddEnterprise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\AddEnterprise.Designer.cs">
+      <DependentUpon>AddEnterprise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\AddLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\AddLocation.Designer.cs">
+      <DependentUpon>AddLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\sucursalesSeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Pruebadiseño\sucursalesSeleccion.Designer.cs">
+      <DependentUpon>sucursalesSeleccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -649,6 +673,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Equipos\VisualizarMarcas.resx">
       <DependentUpon>VisualizarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\AddContact.resx">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\AddEnterprise.resx">
+      <DependentUpon>AddEnterprise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\AddLocation.resx">
+      <DependentUpon>AddLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\sucursalesSeleccion.resx">
+      <DependentUpon>sucursalesSeleccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Registrar Cotizacion\AgregarCotizaciones.resx">
       <DependentUpon>AgregarCotizaciones.cs</DependentUpon>

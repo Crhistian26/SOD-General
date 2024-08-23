@@ -33,6 +33,7 @@
             this.panelRncSucursal = new System.Windows.Forms.Panel();
             this.cbRnc2 = new Cr_ComboBox();
             this.cR_LabelUp2 = new CR_LabelUp();
+            this.btnBuscar = new Diseños.Botones_Nuevos();
             this.PanelRncCliente = new System.Windows.Forms.Panel();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.txtCedula = new Cr_Textbox();
@@ -64,7 +65,6 @@
             this.txtNumero1Sucur = new Cr_Textbox();
             this.cR_Subtitulos12 = new CR_Subtitulos();
             this.txtDireccionSucur = new Cr_Textbox();
-            this.btnBuscar = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -135,6 +135,24 @@
             this.cR_LabelUp2.Size = new System.Drawing.Size(140, 25);
             this.cR_LabelUp2.TabIndex = 76;
             this.cR_LabelUp2.Text = "RNC o Cedula";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.Teal;
+            this.btnBuscar.BorderRadius = 40;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(322, 8);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(117, 35);
+            this.btnBuscar.TabIndex = 72;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // PanelRncCliente
             // 
@@ -213,7 +231,7 @@
             this.panelCliente.Controls.Add(this.txtDireccion);
             this.panelCliente.Location = new System.Drawing.Point(254, 6);
             this.panelCliente.Name = "panelCliente";
-            this.panelCliente.Size = new System.Drawing.Size(525, 304);
+            this.panelCliente.Size = new System.Drawing.Size(530, 304);
             this.panelCliente.TabIndex = 44;
             // 
             // txtCliente
@@ -266,7 +284,7 @@
             this.btn_AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarClientes.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_AgregarClientes.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarClientes.Location = new System.Drawing.Point(259, 228);
+            this.btn_AgregarClientes.Location = new System.Drawing.Point(259, 230);
             this.btn_AgregarClientes.Name = "btn_AgregarClientes";
             this.btn_AgregarClientes.Size = new System.Drawing.Size(227, 39);
             this.btn_AgregarClientes.TabIndex = 62;
@@ -548,24 +566,6 @@
             this.txtDireccionSucur.Name = "txtDireccionSucur";
             this.txtDireccionSucur.Size = new System.Drawing.Size(207, 30);
             this.txtDireccionSucur.TabIndex = 78;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.Teal;
-            this.btnBuscar.BorderRadius = 40;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(322, 8);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(117, 35);
-            this.btnBuscar.TabIndex = 72;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // AgregarClientes
             // 
