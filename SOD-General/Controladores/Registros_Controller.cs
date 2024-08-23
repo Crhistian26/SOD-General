@@ -230,6 +230,7 @@ namespace SOD_General.Controladores
         {
             try
             {
+                ;
                 List<Record_Permission> permisos = new List<Record_Permission>();
                 Record_Permission record;
                 //El query.
@@ -249,8 +250,15 @@ namespace SOD_General.Controladores
                     string Det = reader.GetString(3);
                     DateTime Begin = reader.GetDateTime(4);
                     DateTime End = reader.GetDateTime(5);
+                    TimeSpan LunchS = new TimeSpan();
+                    TimeSpan LunchF = new TimeSpan();
+                    if(!reader.IsDBNull(6))
+                    {
+                        LunchS = reader.GetTimeSpan(6);
+                        LunchF = reader.GetTimeSpan(7);
+                    }
 
-                    record = new Record_Permission(IdRecord,Reason, Name, Det,Begin,End);
+                    record = new Record_Permission(IdRecord,Reason, Name, Det,Begin,End,LunchS,LunchF);
                     permisos.Add(record);
                 }
                 conex.Close();

@@ -20,11 +20,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
             InitializeComponent();
         }
 
-        private void LlenarComboEmpleados()
-        {
-           
-        }
-
         private void CentrarElementos()
         {
             Point SubL = cR_Subtitulos1.Location;
@@ -41,7 +36,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
 
         private void ExportarReportesRRHH_Load(object sender, EventArgs e)
         {
-            LlenarComboEmpleados();
             CentrarElementos();
         }
 
@@ -113,7 +107,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
                 cR_DateTimePicker1.Value = DateTime.Now.AddMinutes(-1);
                 cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
                 MessageBox.Show("La primera fecha introducida no puede ser mayor a la segunda.");
-
             }
         }
 
@@ -129,37 +122,23 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
 
         private void botones_Nuevos5_Click(object sender, EventArgs e)
         {
-            
-           
-                if (cr_ComboBox1.SelectedItem.ToString() == "Asistencias")
-                {
-                    ExportAttendance();
-                }
-                else if(cr_ComboBox1.SelectedItem.ToString() == "Permisos")
-                {
-                    MessageBox.Show("Hola imprimo permisos");
-                }
-           
-
+            ExportAttendance();
         }
         private void ExportAttendance()
         {
             
-                List<Record_Attendance> records = reports.Get_AttendanceAllEmployee(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
-
-                if (records != null)
-                {
-
-                    if (records.Count > 0)
-                    {
-                        reports.ImprimirReporteAsistencias(records, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
-                    }
-                    else
-                    {
-                        MessageBox.Show("No hay registro de asistencias entre estas fechas.");
-                    }
-                }
+            List<Record_Attendance> records = reports.Get_AttendanceAllEmployee(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+            List<Record_Permission> permissions = reports.Get_PermissionAllEmployees(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+            if (records != null)
             
+                if (records.Count > 0)
+                {
+                    reports.ImprimirReporte(records,permissions, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                }
+                else
+                {
+                    MessageBox.Show("No hay registro de asistencias entre estas fechas.");
+                }          
             
         }
     }

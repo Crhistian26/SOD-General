@@ -69,6 +69,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             cR_DataGriedView1.Rows.Clear();
             List<Record_Permission> data = null;
+
             if (cr_ComboBox1.Text == "Todos los empleados")
             {
                 cR_DataGriedView1.Rows.Clear();
@@ -100,12 +101,17 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 foreach (Record_Permission Record in data)
                 {
+                    string lunchS = "No almorzo";
+                    string lunchF = "No almorzo";
                     cR_DataGriedView1.Rows.Add(
                     Record.IdRecord,
                     Record._Name,
                     Record._Reason,
-                    Record.Begin_Date.ToString("F"),
-                    Record.End_Date.ToString("f")
+                    lunchS,
+                    lunchF,
+                    Record.Begin_Date.ToString("f"),
+                    Record.End_Date.ToString("f"),
+                    Record.Get_Hours_Ausent().ToString(@"hh\:mm")
                     );
                 }
             }
@@ -127,12 +133,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 if (user.Confirm_Operation("Editar permisos"))
                 {
-                    var win = Application.OpenForms.OfType<Permiso_Details>().FirstOrDefault();
+                    var win = Application.OpenForms.OfType<Control_Permisos>().FirstOrDefault();
                     if (win != null)
                     {
                         win.Close();
                     }
-                    Permiso_Details ver = new Permiso_Details();
+                    Control_Permisos ver = new Control_Permisos();
                     ver.Show();
                 }
             }

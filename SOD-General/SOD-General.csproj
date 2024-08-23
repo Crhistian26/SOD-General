@@ -355,12 +355,6 @@
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.Designer.cs">
       <DependentUpon>Registros_GeneralesPermisos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Permiso_Details.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Permiso_Details.Designer.cs">
-      <DependentUpon>Permiso_Details.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -619,9 +613,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.resx">
       <DependentUpon>Registros_GeneralesPermisos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Permiso_Details.resx">
-      <DependentUpon>Permiso_Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Clientes\EditarSucursales.resx">
       <DependentUpon>EditarSucursales.cs</DependentUpon>

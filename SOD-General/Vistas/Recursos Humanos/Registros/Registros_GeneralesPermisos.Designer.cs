@@ -47,6 +47,8 @@
             this.Registros_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fin_Almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -288,6 +290,8 @@
             this.Registros_RecordId,
             this.Registros_Employee,
             this.Registros_Reason,
+            this.Almuerzo,
+            this.Fin_Almuerzo,
             this.Registros_Date1,
             this.Registros_Date2,
             this.Cantidad});
@@ -321,6 +325,20 @@
             this.Registros_Reason.HeaderText = "Motivo";
             this.Registros_Reason.Name = "Registros_Reason";
             this.Registros_Reason.ReadOnly = true;
+            // 
+            // Almuerzo
+            // 
+            this.Almuerzo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Almuerzo.HeaderText = "Inicio de almuerzo";
+            this.Almuerzo.Name = "Almuerzo";
+            this.Almuerzo.ReadOnly = true;
+            // 
+            // Fin_Almuerzo
+            // 
+            this.Fin_Almuerzo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fin_Almuerzo.HeaderText = "Fin de almuerzo";
+            this.Fin_Almuerzo.Name = "Fin_Almuerzo";
+            this.Fin_Almuerzo.ReadOnly = true;
             // 
             // Registros_Date1
             // 
@@ -386,6 +404,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Reason;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Almuerzo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fin_Almuerzo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;

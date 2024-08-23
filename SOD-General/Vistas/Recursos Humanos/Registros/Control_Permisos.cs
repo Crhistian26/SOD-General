@@ -23,6 +23,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
         }
+        public Control_Permisos(Record_Permission record)
+        {
+            InitializeComponent();
+            empleados = control.Obtener_Empleados_Trabajando();
+            motivos = control.Obtener_Razones();
+        }
 
         private void CentrarElementos()
         {
@@ -48,12 +54,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             CentrarElementos();
             LlenarCombobox();
-            cR_Checkbox1.Visible = false;
-        }
-
-        private void soD_ComboBox4_Resize(object sender, EventArgs e)
-        {
-
+            cR_Checkbox1.Checked = true;
+            cR_Checkbox2.Checked = true;
         }
 
         private void Agregar_Permiso_Resize(object sender, EventArgs e)
@@ -63,18 +65,31 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void soD_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int a = empleados[cr_ComboBox1.SelectedIndex].IdEmployee;
+            
         }
 
-        private void cr_ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void cR_Checkbox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(cr_ComboBox3.SelectedIndex == 2)
+            if(cR_Checkbox1.Checked == true)
             {
-                cR_Checkbox1.Visible = true;
+                panel2.Visible = false;
             }
             else
             {
-                cR_Checkbox1.Visible = false;
+                panel2.Visible = true;
+            }
+            
+        }
+
+        private void cR_Checkbox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cR_Checkbox2.Checked == true)
+            {
+                panel3.Visible = false;
+            }
+            else
+            {
+                panel3.Visible = true;
             }
         }
     }

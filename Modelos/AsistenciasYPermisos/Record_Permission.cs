@@ -9,17 +9,17 @@ namespace Modelos.AsistenciasYPermisos
 {
     public class Record_Permission
     {
-        static Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = new Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)>
+        public Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = new Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)>
         {
-            {DayOfWeek.Monday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Tuesday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Wednesday,(new TimeSpan(9,0,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Thursday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Friday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
+            {DayOfWeek.Monday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
+            {DayOfWeek.Tuesday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
+            {DayOfWeek.Wednesday,(new TimeSpan(9,0,0),new TimeSpan(17,45,0))},
+            {DayOfWeek.Thursday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
+            {DayOfWeek.Friday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
             {DayOfWeek.Saturday,(new TimeSpan(8,30,0),new TimeSpan(13,0,0))},
             {DayOfWeek.Sunday,(new TimeSpan(0,0,0),new TimeSpan(0,0,0))},
         };
-
+        
         public int IdRecord { get; set; }
         public int IdEmployee { get; set; }
         public string _Name { get; set; }
@@ -38,6 +38,7 @@ namespace Modelos.AsistenciasYPermisos
             this._Description = descip;
             this.Begin_Date = fecha1;
             this.End_Date = fecha2;
+            
         }
 
         public Record_Permission(int IdRecord, string Reason, string Name, string descip, DateTime fecha1, DateTime fecha2)
@@ -47,9 +48,10 @@ namespace Modelos.AsistenciasYPermisos
         }
 
         public Record_Permission(int IdRecord, string Reason, string Name, string descip, DateTime fecha1, DateTime fecha2, TimeSpan time1, TimeSpan time2)
-            : this(IdRecord, Reason, descip, fecha1, fecha2)
+            : this(IdRecord, Reason,Name, descip, fecha1, fecha2)
         {
-            
+            this.LunchS = time1;
+            this.LunchF = time2;
         }
         public Record_Permission(int IdRecord,string Name, DateTime fecha1, DateTime fecha2, string Reason)
         {
@@ -60,10 +62,9 @@ namespace Modelos.AsistenciasYPermisos
             this.End_Date = fecha2;
         }
 
-
-
         public TimeSpan Get_Hours_Ausent()
         {
+            
             TimeSpan totalFaltado = TimeSpan.Zero;
 
             for (DateTime dia = Begin_Date.Date; dia <= End_Date.Date; dia = dia.AddDays(1))
@@ -82,11 +83,18 @@ namespace Modelos.AsistenciasYPermisos
                         if (end > start)
                         {
                             totalFaltado += end - start;
+                            if(LunchS.Minutes > 0 || LunchS.Hours > 0)
+                            {
+                                totalFaltado -= (LunchF - LunchS);
+                            }
+                            else
+                            {
+                                totalFaltado -= new TimeSpan(1, 0, 0);
+                            }
                         }
                     }
                 }
             }
-
             return totalFaltado;
         }
             
