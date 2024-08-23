@@ -403,6 +403,12 @@
     <Compile Include="Vistas\Taller\Control calidad\EnlaceControlEquipo.Designer.cs">
       <DependentUpon>EnlaceControlEquipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Control calidad\VerEnlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Control calidad\VerEnlace.Designer.cs">
+      <DependentUpon>VerEnlace.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Control calidad\VisualizarControles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -610,6 +616,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Control calidad\EnlaceControlEquipo.resx">
       <DependentUpon>EnlaceControlEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Control calidad\VerEnlace.resx">
+      <DependentUpon>VerEnlace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Control calidad\VisualizarControles.resx">
       <DependentUpon>VisualizarControles.cs</DependentUpon>

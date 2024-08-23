@@ -14,21 +14,15 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
     {
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller controlRegistro = new Registros_Controller();
-        List<Employee> empleados;
         ExportsRRHHReports reports = new ExportsRRHHReports();
         public ExportarReportesRRHH()
         {
             InitializeComponent();
-            empleados = controlRegistro.Obtener_Empleados_Trabajando();
         }
 
         private void LlenarComboEmpleados()
         {
-            cr_ComboBox2.Items.Add("Todos los empleados");
-            foreach (Employee emp in empleados)
-            {
-                cr_ComboBox2.Items.Add(emp._Name + " " + emp._Lastname);
-            }
+           
         }
 
         private void CentrarElementos()
@@ -136,8 +130,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
         private void botones_Nuevos5_Click(object sender, EventArgs e)
         {
             
-            if (cr_ComboBox2.SelectedIndex != -1)
-            {
+           
                 if (cr_ComboBox1.SelectedItem.ToString() == "Asistencias")
                 {
                     ExportAttendance();
@@ -146,31 +139,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
                 {
                     MessageBox.Show("Hola imprimo permisos");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Debe de completar todos los campos para exportar l.");
-            }
+           
 
         }
         private void ExportAttendance()
         {
-
-            if (cr_ComboBox2.SelectedItem.ToString() != "Todos los empleados")
-            {
-                Employee emp = empleados[cr_ComboBox2.SelectedIndex - 1];
-                List<Record_Attendance> records = reports.Get_AttendanceEmployee(emp, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
-                if (records.Count > 0)
-                {
-                    reports.ImprimirReporteAsistencias(records, emp, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
-                }
-                else
-                {
-                    MessageBox.Show("Este empleado no tiene registro de asistencia entre estas fechas.");
-                }
-            }
-            else if (cr_ComboBox2.SelectedItem.ToString() == "Todos los empleados")
-            {
+            
                 List<Record_Attendance> records = reports.Get_AttendanceAllEmployee(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
 
                 if (records != null)
@@ -185,7 +159,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
                         MessageBox.Show("No hay registro de asistencias entre estas fechas.");
                     }
                 }
-            }
+            
             
         }
     }

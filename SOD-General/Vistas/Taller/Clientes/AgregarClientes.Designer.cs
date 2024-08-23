@@ -33,7 +33,6 @@
             this.panelRncSucursal = new System.Windows.Forms.Panel();
             this.cbRnc2 = new Cr_ComboBox();
             this.cR_LabelUp2 = new CR_LabelUp();
-            this.btnBuscar = new Diseños.Botones_Nuevos();
             this.PanelRncCliente = new System.Windows.Forms.Panel();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.txtCedula = new Cr_Textbox();
@@ -65,6 +64,7 @@
             this.txtNumero1Sucur = new Cr_Textbox();
             this.cR_Subtitulos12 = new CR_Subtitulos();
             this.txtDireccionSucur = new Cr_Textbox();
+            this.btnBuscar = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -135,24 +135,6 @@
             this.cR_LabelUp2.Size = new System.Drawing.Size(140, 25);
             this.cR_LabelUp2.TabIndex = 76;
             this.cR_LabelUp2.Text = "RNC o Cedula";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.Teal;
-            this.btnBuscar.BorderRadius = 40;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(322, 8);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(117, 35);
-            this.btnBuscar.TabIndex = 72;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // PanelRncCliente
             // 
@@ -567,6 +549,24 @@
             this.txtDireccionSucur.Size = new System.Drawing.Size(207, 30);
             this.txtDireccionSucur.TabIndex = 78;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.Teal;
+            this.btnBuscar.BorderRadius = 40;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(322, 8);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(117, 35);
+            this.btnBuscar.TabIndex = 72;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // AgregarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,12 +627,12 @@
         private Cr_Textbox txtDireccionSucur;
         private Cr_ComboBox Cb_ClienteSucursal;
         private CR_DataGriedView cR_DataGriedView1;
-        private Diseños.Botones_Nuevos btnBuscar;
         private System.Windows.Forms.Panel PanelRncCliente;
         private System.Windows.Forms.Panel panelRncSucursal;
         private CR_LabelUp cR_LabelUp2;
         private CR_LabelUp cR_LabelUp1;
         private Cr_Textbox txtCedula;
         private Cr_ComboBox cbRnc2;
+        private Diseños.Botones_Nuevos btnBuscar;
     }
 }

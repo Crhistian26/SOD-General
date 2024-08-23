@@ -41,5 +41,10 @@ namespace SOD_General.Vistas.Taller.Control_calidad
             
 
         }
+
+        private void cR_SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

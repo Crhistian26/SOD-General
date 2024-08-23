@@ -1,5 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Office2010.Excel;
 using Modelos.Taller;
+using SOD_General.Taller.Control_calidad;
+using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -40,15 +42,26 @@ namespace SOD_General.Controladores
 
                 MessageBox.Show("Agregado Exitosamente");
 
+                Application.OpenForms.OfType<AgregarControles>().First().Close();
+
             }
             catch (SqlException Ex)
-
             {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+
                 MessageBox.Show("Error desde la base de datos: " + Ex.ToString());
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
             }
 
         }
@@ -119,8 +132,6 @@ namespace SOD_General.Controladores
 
         public void agregarCheckbox(FlowLayoutPanel flp, ComboBox cmb)
         {
-            
-
             try
             {
                 List<int> inter = new List<int>();
@@ -170,6 +181,38 @@ namespace SOD_General.Controladores
             
         }
 
-        
+
+        public List<Controles> visualizarControles()
+        {
+            List<Controles> ControlesQ = new List<Controles>();
+            Controles ListControl;
+            try
+            {
+                string query = "Select * from ControlQuality";
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int Id = reader.GetInt32(0);
+                    string Equipo = reader.GetString(1);
+                    bool v = reader.GetBoolean(2);
+
+                    ListControl = new Controles(Id, Equipo, v);
+                    ControlesQ.Add(ListControl);
+                }
+                conex.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.ToString());
+            }
+            return ControlesQ;
+
+        }
+
     }
 }

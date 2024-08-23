@@ -1,5 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using Modelos.Taller;
+using SOD_General.Vistas.Taller.Equipos;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -30,6 +31,8 @@ namespace SOD_General.Controladores
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Ingresado correctamente");
+                Application.OpenForms.OfType<AgregarMarcas>().First().Close();
+
             }
             catch (SqlException ex)
             {
@@ -39,7 +42,8 @@ namespace SOD_General.Controladores
             {
                 MessageBox.Show("Error: " + ex.Message.ToString());
             }
-          
+
+            
         }
 
         public List<Brand> ViewBrand()

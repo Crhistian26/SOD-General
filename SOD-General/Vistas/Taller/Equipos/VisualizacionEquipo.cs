@@ -1,6 +1,7 @@
 ﻿using Modelos.Control_de_usuarios;
 using Modelos.Taller;
 using SOD_General.Controladores;
+using SOD_General.Taller.Control_calidad;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -15,6 +16,7 @@ namespace SOD_General.Vistas.Taller.Equipos
         SizesGenerales _size = new SizesGenerales();
         AppVistaGeneral vista;
         Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
+
 
 
         public VisualizacionEquipo()
@@ -52,6 +54,12 @@ namespace SOD_General.Vistas.Taller.Equipos
 
         private void BtnAgregarEquip_Click(object sender, System.EventArgs e)
         {
+            var formu = Application.OpenForms.OfType<AgregarTipoEquipo>().FirstOrDefault();
+            if (formu != null)
+            {
+                formu.Close();
+            }
+
             AgregarTipoEquipo addEquipo = new AgregarTipoEquipo();
             addEquipo.Show();
         }
@@ -65,6 +73,16 @@ namespace SOD_General.Vistas.Taller.Equipos
             else
             {
                 BtnAgregarEquip.Visible = false;
+            }
+
+            if (user.Confirm_Operation("Ver Enlace Equipo Control"))
+            {
+                cR_DataGriedView1.Columns[4].Visible = true;
+            }
+            else
+            {
+                cR_DataGriedView1.Columns[4].Visible = false;
+
             }
         }
     }

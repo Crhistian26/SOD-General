@@ -20,6 +20,8 @@ namespace SOD_General.Vistas.Taller.Equipos
             else
             {
                 MarcaControl.agregarMarca(txtMarcas.Text, 1);
+                VisualizarMarcas visuaMarcas = new VisualizarMarcas();
+                visuaMarcas.llenargrid();
             }
         }
     }

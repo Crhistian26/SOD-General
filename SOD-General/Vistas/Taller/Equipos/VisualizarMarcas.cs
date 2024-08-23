@@ -64,6 +64,11 @@ namespace SOD_General.Vistas.Taller.Equipos
 
         private void BtnAgregarMarcas_Click(object sender, EventArgs e)
         {
+            var formu = Application.OpenForms.OfType<AgregarMarcas>().FirstOrDefault();
+            if (formu != null )
+            {
+                formu.Close();
+            }
             AgregarMarcas addMarca = new AgregarMarcas();
             addMarca.Show();
         }

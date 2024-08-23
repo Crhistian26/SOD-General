@@ -36,8 +36,6 @@
             this.cR_LabelDown3 = new CR_LabelDown();
             this.cR_DateTimePicker2 = new CR_DateTimePicker();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
-            this.cr_ComboBox2 = new Cr_ComboBox();
-            this.cR_LabelDown2 = new CR_LabelDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botones_Nuevos4 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
@@ -95,8 +93,6 @@
             this.panel1.Controls.Add(this.cR_LabelDown3);
             this.panel1.Controls.Add(this.cR_DateTimePicker2);
             this.panel1.Controls.Add(this.cR_DateTimePicker1);
-            this.panel1.Controls.Add(this.cr_ComboBox2);
-            this.panel1.Controls.Add(this.cR_LabelDown2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cr_ComboBox1);
             this.panel1.Controls.Add(this.cR_LabelDown1);
@@ -164,31 +160,6 @@
             this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker1.TabIndex = 5;
             this.cR_DateTimePicker1.ValueChanged += new System.EventHandler(this.cR_DateTimePicker1_ValueChanged);
-            // 
-            // cr_ComboBox2
-            // 
-            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Location = new System.Drawing.Point(17, 98);
-            this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(338, 29);
-            this.cr_ComboBox2.TabIndex = 4;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(13, 75);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(89, 20);
-            this.cR_LabelDown2.TabIndex = 3;
-            this.cR_LabelDown2.Text = "Empleado/s";
             // 
             // panel2
             // 
@@ -335,8 +306,6 @@
         private CR_LabelDown cR_LabelDown3;
         private CR_DateTimePicker cR_DateTimePicker2;
         private CR_DateTimePicker cR_DateTimePicker1;
-        private Cr_ComboBox cr_ComboBox2;
-        private CR_LabelDown cR_LabelDown2;
         private System.Windows.Forms.Panel panel2;
         private Diseños.Botones_Nuevos botones_Nuevos4;
         private Diseños.Botones_Nuevos botones_Nuevos3;

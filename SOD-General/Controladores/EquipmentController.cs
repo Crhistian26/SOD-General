@@ -20,7 +20,7 @@ namespace SOD_General.Controladores
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
         EquipType equipType;
-
+        Controles controlesQ;
         public void agregarEquipo(string equipo, int enable)
         {
             try
@@ -81,37 +81,37 @@ namespace SOD_General.Controladores
            
         }
 
-        //public List<EquipType> visualizarControles()
-        //{
-        //    List<Controles> tipoControles = new List<Controles>();
+        public List<Controles> visualizarControles()
+        {
+            List<Controles> tipoControles = new List<Controles>();
 
-        //    try
-        //    {
-        //        string query = "Select * from ControlQuality";
-        //        SqlCommand cmd = new SqlCommand(query, conex);
+            try
+            {
+                string query = "Select * from ControlQuality";
+                SqlCommand cmd = new SqlCommand(query, conex);
 
-        //        conex.Open();
-        //        SqlDataReader reader = cmd.ExecuteReader();
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
 
-        //        while (reader.Read())
-        //        {
-        //            int Id = reader.GetInt32(0);
-        //            string Equipo = reader.GetString(1);
-        //            bool v = reader.GetBoolean(2);
+                while (reader.Read())
+                {
+                    int Id = reader.GetInt32(0);
+                    string Equipo = reader.GetString(1);
+                    bool v = reader.GetBoolean(2);
 
-        //            equipType = new EquipType(Id, Equipo, v);
-        //            tipoEquipo.Add(equipType);
-        //        }
-        //        conex.Close();
+                    controlesQ = new Controles(Id, Equipo, v);
+                    tipoControles.Add(controlesQ);
+                }
+                conex.Close();
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error " + ex.ToString());
-        //    }
-        //    return tipoEquipo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.ToString());
+            }
+            return tipoControles;
 
-        //}
+        }
 
 
 

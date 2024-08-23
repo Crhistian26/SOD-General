@@ -10,6 +10,7 @@ using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas.Taller.Clientes;
+using SOD_General.Vistas.Taller.Control_calidad;
 using SOD_General.Vistas.Taller.Controles_de_Equipo;
 using SOD_General.Vistas.Taller.Equipos;
 using SOD_General.Vistas.Taller.Registrar_Cotizacion;
@@ -170,14 +171,14 @@ namespace Controladores
                         }
                     },
 
-                    //  {
-                    //    ("Equipos","Ver Marcas"),
-                    //    (object sender, EventArgs e) =>
-                    //    {
-                    //        VisualizarMarcas window = new VisualizarMarcas();
-                    //        _view.OpenForm(window);
-                    //    }
-                    //},
+                      {
+                        ("Controles de calidad","Enlace Equipo Control"),
+                        (object sender, EventArgs e) =>
+                        {
+                            EnlaceControlEquipo window = new EnlaceControlEquipo();
+                            _view.OpenForm(window);
+                        }
+                    },
                 };
 
 
