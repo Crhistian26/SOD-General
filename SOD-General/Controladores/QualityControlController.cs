@@ -213,6 +213,47 @@ namespace SOD_General.Controladores
             return ControlesQ;
 
         }
+        public List<Controles> FiltrarControles(int id)
+        {
+            List<Controles> ControlesQ = new List<Controles>();
+            Controles ListControl;
+            try
+            {
+                string query = "SELECT Ec.IdEquipmentControl, Cq._NameQuality, Cq._Enable" +
+                    "\nFROM EquipmentControl Ec" +
+                    "\nJOIN TypeEquipment Te" +
+                    "\nON Te.IdTypeEquipment = Ec.TypeEquipment_Id" +
+                    "\nJOIN ControlQuality Cq" +
+                    "\nON Cq.IdControlQuality = Ec.ControlQuality_Id" +
+                    $"\nWHERE Te.IdTypeEquipment = {id}";
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int Id = reader.GetInt32(0);
+                    string Equipo = reader.GetString(1);
+                    bool v = reader.GetBoolean(2);
+
+                    ListControl = new Controles(Id, Equipo, v);
+                    ControlesQ.Add(ListControl);
+                }
+                conex.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.ToString());
+            }
+            return ControlesQ;
+
+        }
 
     }
 }

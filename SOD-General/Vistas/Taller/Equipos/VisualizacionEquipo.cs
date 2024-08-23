@@ -2,6 +2,8 @@
 using Modelos.Taller;
 using SOD_General.Controladores;
 using SOD_General.Taller.Control_calidad;
+using SOD_General.Vistas.Taller.Control_calidad;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -82,6 +84,23 @@ namespace SOD_General.Vistas.Taller.Equipos
             else
             {
                 cR_DataGriedView1.Columns[4].Visible = false;
+            }
+        }
+
+        private void cR_DataGriedView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (cR_DataGriedView1.Columns[e.ColumnIndex].Index == 4)
+            {
+                int IdDgv = Convert.ToInt32(cR_DataGriedView1.Rows[e.RowIndex].Cells[0].Value);
+                
+                var cerrarForm = Application.OpenForms.OfType<VerEnlace>().FirstOrDefault();
+                if (cerrarForm != null) 
+                {
+                    cerrarForm.Close();
+                }
+
+                VerEnlace verEnl = new VerEnlace(IdDgv);
+                verEnl.Show();
 
             }
         }
