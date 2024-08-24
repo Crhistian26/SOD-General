@@ -98,6 +98,6 @@ namespace Modelos.AsistenciasYPermisos
             return totalFaltado;
         }
             
-
+       
     }
 }

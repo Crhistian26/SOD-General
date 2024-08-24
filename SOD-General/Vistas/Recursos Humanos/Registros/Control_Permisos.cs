@@ -17,6 +17,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         Registros_Controller control = new Registros_Controller();
         List<Employee> empleados;
         List<Model_Reason> motivos;
+        Record_Permission Permission_Record;
         public Control_Permisos()
         {
             InitializeComponent();
@@ -28,8 +29,18 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             InitializeComponent();
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
+            this.Permission_Record = record;
         }
 
+        private void AddPermissionView()
+        {
+            if()
+        }
+
+        private void EditPermissionView()
+        {
+
+        }
         private void CentrarElementos()
         {
             Point SubL = cR_Subtitulos1.Location;
