@@ -231,6 +231,7 @@ namespace Controladores
             login_back.Text = "Volver al login";
             login_back.Click += Login_Click;
             _view.cR_MenuStrip1.Items.Add(login_back);
+            _view.cR_MenuStrip1.ForeColor = System.Drawing.Color.White;
         }
 
         private void Login_Click(object sender, EventArgs e)
