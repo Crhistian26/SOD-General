@@ -6,9 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 {
@@ -65,7 +63,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             cR_ComboBox.SelectedIndex = cR_ComboBox.FindString(employee.Department);
         }
 
-        
+
         private void CentrarElementos()
         {
             Point SubL = cR_Subtitulos1.Location;
@@ -86,7 +84,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void AgregarEditar_Empleados_Load(object sender, EventArgs e)
         {
-            if(!user.Confirm_Operation("Eliminar empleados"))
+            if (!user.Confirm_Operation("Eliminar empleados"))
             {
                 botones_Nuevos2.Visible = false;
             }
@@ -105,7 +103,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void cR_Checkbox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(cR_Checkbox1.Checked)
+            if (cR_Checkbox1.Checked)
             {
                 cR_Checkbox2.Checked = false;
             }
@@ -133,7 +131,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                     true,
                     true
                 );
-            if(controlEmpleados.AddEmployee(emp))
+            if (controlEmpleados.AddEmployee(emp))
             {
                 controlEmpleados.Reset_VisualEmpleados();
                 this.Close();
@@ -142,11 +140,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         private void EditEmployee(object sender, EventArgs e)
         {
             bool state = false;
-            if(cR_Checkbox1.Checked)
+            if (cR_Checkbox1.Checked)
             {
                 state = true;
             }
-            else if(cR_Checkbox2.Checked)
+            else if (cR_Checkbox2.Checked)
             {
                 state = false;
             }
@@ -168,10 +166,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
 
         private void botones_Nuevos2_Click(object sender, EventArgs e)
         {
-            var message = MessageBox.Show("Eliminar el empleado hara que todos los registros de asistencias, permisos, y su usuario en el sistema sean eliminados, esta seguro de querer eliminar el empleado.", $"Eliminar el empleado: {employee._Name} {employee._Lastname}",MessageBoxButtons.OKCancel);
-            if(message == DialogResult.OK)
+            var message = MessageBox.Show("Eliminar el empleado hara que todos los registros de asistencias, permisos, y su usuario en el sistema sean eliminados, esta seguro de querer eliminar el empleado.", $"Eliminar el empleado: {employee._Name} {employee._Lastname}", MessageBoxButtons.OKCancel);
+            if (message == DialogResult.OK)
             {
-                if(controlEmpleados.DeleteEmployee(employee.IdEmployee))
+                if (controlEmpleados.DeleteEmployee(employee.IdEmployee))
                 {
                     controlEmpleados.Reset_VisualEmpleados();
                     this.Close();

@@ -1,17 +1,11 @@
 ﻿using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml.Spreadsheet;
-using Microsoft.Win32;
 using Modelos.AsistenciasYPermisos;
-using Modelos.Usuarios_Empleados;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -24,11 +18,11 @@ namespace SOD_General.Controladores
         SizesGenerales _size = new SizesGenerales();
 
         static Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = _size2.Days;
-           
+
         public TimeSpan CountHoursPendent(DateTime Begin, DateTime End)
         {
             DateTime Begin_Date = new DateTime(Begin.Year, Begin.Month, Begin.Day);
-            DateTime End_Date = new DateTime(End.Year,End.Month,End.Day);
+            DateTime End_Date = new DateTime(End.Year, End.Month, End.Day);
 
             TimeSpan totalFaltado = TimeSpan.Zero;
 
@@ -40,21 +34,21 @@ namespace SOD_General.Controladores
                     {
                         continue;
                     }
-                    totalFaltado +=  horario.JobEnd - horario.JobStart;
+                    totalFaltado += horario.JobEnd - horario.JobStart;
 
-                    if(dia.DayOfWeek == DayOfWeek.Saturday)
+                    if (dia.DayOfWeek == DayOfWeek.Saturday)
                     {
                         continue;
                     }
                     totalFaltado -= new TimeSpan(1, 15, 0);
-                    
-                    
+
+
                 }
             }
 
             return totalFaltado;
         }
-        
+
         public List<Record_Attendance> Get_AttendanceAllEmployee(DateTime date1, DateTime date2)
         {
             List<Record_Attendance> records = new List<Record_Attendance>();
@@ -74,7 +68,7 @@ namespace SOD_General.Controladores
                     (
                         new Record_Attendance
                         (
-                            reader.GetString(2) + " "+ reader.GetString(3),
+                            reader.GetString(2) + " " + reader.GetString(3),
                             reader.GetDateTime(8),
                             reader.GetTimeSpan(4),
                             reader.GetTimeSpan(5),
@@ -107,11 +101,11 @@ namespace SOD_General.Controladores
 
         }
 
-        public List<Record_Permission> Get_PermissionAllEmployees (DateTime date1, DateTime date2)
+        public List<Record_Permission> Get_PermissionAllEmployees(DateTime date1, DateTime date2)
         {
             return new List<Record_Permission>();
         }
-        public void ImprimirReporte(List<Record_Attendance> records,List<Record_Permission> permissions, DateTime date1, DateTime date2)
+        public void ImprimirReporte(List<Record_Attendance> records, List<Record_Permission> permissions, DateTime date1, DateTime date2)
         {
             try
             {
@@ -174,7 +168,7 @@ namespace SOD_General.Controladores
                 //Calculo de horas asistidas
                 var Hours_hoja1 = LibroExcel.Worksheets.Add("Horas asistidas");
 
-           
+
                 var Hours_title1 = Hours_hoja1.Range("A1:D1").Merge();
                 Hours_title1.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
                 Hours_title1.Style.Font.FontName = "Century";
@@ -192,14 +186,14 @@ namespace SOD_General.Controladores
                 Hours_hoja1.Range("C2:D2").Merge().SetValue($"Hasta el {date2.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center; ;
                 row++;
 
-                
+
                 Hours_hoja1.Cell(row, 1).Value = "Nombre del empleado:";
                 Hours_hoja1.Cell(row, 2).Value = "Horas trabajadas:";
                 Hours_hoja1.Cell(row, 3).Value = "Horas estimadas:";
                 Hours_hoja1.Cell(row, 4).Value = "Diferencia:";
                 row++;
 
-                
+
                 var registrosAgrupados = records.GroupBy(r => r._Name);
 
                 foreach (var grupo in registrosAgrupados)
@@ -218,7 +212,7 @@ namespace SOD_General.Controladores
                     }
 
 
-                    TimeSpan horasEsperadas = CountHoursPendent(date1,date2);
+                    TimeSpan horasEsperadas = CountHoursPendent(date1, date2);
                     TimeSpan diferencia = horasTrabajadas - horasEsperadas;
 
 
@@ -237,7 +231,7 @@ namespace SOD_General.Controladores
 
                 //Area encargada de cada uno de los permisos.
 
-                
+
 
 
 

@@ -1,7 +1,5 @@
 ﻿using Modelos.Control_de_usuarios;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -26,7 +24,7 @@ namespace SOD_General
         public void AbrirLogin()
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            
+
             AbrirFormulario(new Login(this));
             this.Size = new Size(463, 284);
 
@@ -51,8 +49,8 @@ namespace SOD_General
             this.formu.Show();
         }
 
-     
-        public void AbrirVistaGeneral(Model_User  user)
+
+        public void AbrirVistaGeneral(Model_User user)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;

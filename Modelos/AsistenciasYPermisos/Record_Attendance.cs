@@ -14,7 +14,7 @@ namespace Modelos.AsistenciasYPermisos
         public DateTime DateAttendance { get; set; }
         public TimeSpan Job_Hours { get; set; }
 
-        public Record_Attendance(int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF,DateTime dateAttendance)
+        public Record_Attendance(int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
         {
             this.IdEmployee = idEmployee;
             this.Entry = entry;
@@ -25,7 +25,7 @@ namespace Modelos.AsistenciasYPermisos
 
         }
 
-        public Record_Attendance(DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF) 
+        public Record_Attendance(DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF)
         {
             this.Entry = entry;
             this.Exit = exit;
@@ -35,7 +35,7 @@ namespace Modelos.AsistenciasYPermisos
             Job_Hours = (exit - entry) - (lunchF - lunchS);
         }
         public Record_Attendance(string Name, DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF)
-            :this(dateAttendance,entry,exit,lunchS,lunchF)
+            : this(dateAttendance, entry, exit, lunchS, lunchF)
         {
             this._Name = Name;
         }
@@ -55,7 +55,7 @@ namespace Modelos.AsistenciasYPermisos
         }
 
         public Record_Attendance(int idRecord, int idEmployee, string Name, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
-           :this(idRecord,idEmployee,entry,exit,lunchS,lunchF,dateAttendance)
+           : this(idRecord, idEmployee, entry, exit, lunchS, lunchF, dateAttendance)
         {
 
             _Name = Name;

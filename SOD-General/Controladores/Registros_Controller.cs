@@ -1,7 +1,5 @@
 ﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Usuarios_Empleados;
-using SOD_General.Recursos_Humanos.Empleados;
-using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
@@ -56,7 +54,7 @@ namespace SOD_General.Controladores
                     TimeSpan lunchF = reader.GetTimeSpan(7);
                     DateTime record_Date = reader.GetDateTime(8);
 
-                    record = new Record_Attendance(IdRecord, IdEmployee,Name, entry, exit, lunchS, lunchF, record_Date);
+                    record = new Record_Attendance(IdRecord, IdEmployee, Name, entry, exit, lunchS, lunchF, record_Date);
                     diccionario.Add(record);
                 }
                 conex.Close();
@@ -91,7 +89,7 @@ namespace SOD_General.Controladores
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 //Los parametros
-                cmd.Parameters.AddWithValue("@idEmp",record.IdEmployee);
+                cmd.Parameters.AddWithValue("@idEmp", record.IdEmployee);
                 cmd.Parameters.AddWithValue("@entry", record.Entry);
                 cmd.Parameters.AddWithValue("@exit", record.Exit);
                 cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
@@ -131,7 +129,7 @@ namespace SOD_General.Controladores
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 //Los parametros
-                cmd.Parameters.AddWithValue("@recordId",record.IdRecord);
+                cmd.Parameters.AddWithValue("@recordId", record.IdRecord);
                 cmd.Parameters.AddWithValue("@employeeId", record.IdEmployee);
                 cmd.Parameters.AddWithValue("@entry", record.Entry);
                 cmd.Parameters.AddWithValue("@exit", record.Exit);
@@ -162,7 +160,7 @@ namespace SOD_General.Controladores
                 MessageBox.Show(ex.Message);
                 return false;
             }
-            
+
         }
 
         public bool DeleteAttendance(Record_Attendance record)
@@ -252,18 +250,18 @@ namespace SOD_General.Controladores
                     DateTime End = reader.GetDateTime(5);
                     TimeSpan LunchS = new TimeSpan();
                     TimeSpan LunchF = new TimeSpan();
-                    if(!reader.IsDBNull(6))
+                    if (!reader.IsDBNull(6))
                     {
                         LunchS = reader.GetTimeSpan(6);
                         LunchF = reader.GetTimeSpan(7);
                     }
 
-                    record = new Record_Permission(IdRecord,Reason, Name, Det,Begin,End,LunchS,LunchF);
+                    record = new Record_Permission(IdRecord, Reason, Name, Det, Begin, End, LunchS, LunchF);
                     permisos.Add(record);
                 }
                 conex.Close();
 
-                
+
                 return permisos;
             }
             catch (SqlException ex)

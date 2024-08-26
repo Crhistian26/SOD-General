@@ -1,15 +1,10 @@
 ﻿using Modelos.Control_de_usuarios;
 using Modelos.Taller;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Taller.Equipos
@@ -65,7 +60,7 @@ namespace SOD_General.Vistas.Taller.Equipos
         private void BtnAgregarMarcas_Click(object sender, EventArgs e)
         {
             var formu = Application.OpenForms.OfType<AgregarMarcas>().FirstOrDefault();
-            if (formu != null )
+            if (formu != null)
             {
                 formu.Close();
             }

@@ -3,12 +3,8 @@ using SOD_General.Controladores;
 using SOD_General.Vistas.Taller.Clientes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Taller.Pruebadiseño
@@ -102,13 +98,13 @@ namespace SOD_General.Vistas.Taller.Pruebadiseño
             }
 
 
-           string cb = cbCliente.SelectedItem.ToString();
+            string cb = cbCliente.SelectedItem.ToString();
 
-                Client especifi = cliente.Where(c => c._NameBranch == cb).FirstOrDefault();
-                dgvClientes.Rows.Clear();
-                dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._NameBranch, especifi._Address, especifi.Phone_1, especifi.Phone_2, especifi._Contact);
+            Client especifi = cliente.Where(c => c._NameBranch == cb).FirstOrDefault();
+            dgvClientes.Rows.Clear();
+            dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._NameBranch, especifi._Address, especifi.Phone_1, especifi.Phone_2, especifi._Contact);
 
-            
+
         }
 
         private void llenarGridClientes()
@@ -134,7 +130,7 @@ namespace SOD_General.Vistas.Taller.Pruebadiseño
             Sucursal = new VisualizarSucursales(id);
 
             var formu = Application.OpenForms.OfType<VisualizarSucursales>().FirstOrDefault();
-            if(formu != null)
+            if (formu != null)
             {
                 formu.Close();
             }

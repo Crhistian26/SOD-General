@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelos.Taller
+﻿namespace Modelos.Taller
 {
     public class Locations
     {
-        public int? IdLocation {  get; set; }
+        public int? IdLocation { get; set; }
         public int? IdClient { get; set; }
         public string Identifier { get; set; }
         public string _Location { get; set; }

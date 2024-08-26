@@ -1,6 +1,5 @@
 ﻿using Modelos.Taller;
 using SOD_General.Controladores;
-using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
 using System.Collections.Generic;
@@ -21,7 +20,7 @@ namespace SOD_General.Taller.Registro_peticiones
         public AgregarPeticiones()
         {
             InitializeComponent();
-           
+
             this.vista = vista;
         }
         private void CentrarElementos()
@@ -32,7 +31,7 @@ namespace SOD_General.Taller.Registro_peticiones
             Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
-       
+
         private void AgregarPeticiones_Load(object sender, EventArgs e)
         {
             CentrarElementos();
@@ -41,7 +40,7 @@ namespace SOD_General.Taller.Registro_peticiones
             CbSucursal.Items.Clear();
         }
 
-       
+
 
         private void AgregarPeticiones_Resize(object sender, EventArgs e)
         {
@@ -64,10 +63,10 @@ namespace SOD_General.Taller.Registro_peticiones
             foreach (var a in ClientList)
             {
                 cbRNC.Items.Add(a._Identifier);
-              //  cbRNC.Tag = a.IdClient;
+                //  cbRNC.Tag = a.IdClient;
             }
 
-            
+
         }
 
         public void cbRellenarCl()
@@ -79,15 +78,15 @@ namespace SOD_General.Taller.Registro_peticiones
             foreach (var a in ClientList)
             {
                 CbCliente.Items.Add(a._NameBranch);
-           //     CbCliente.Tag = a.IdClient;
-                
+                //     CbCliente.Tag = a.IdClient;
+
             }
         }
         public void cbRellenarLoc(int a)
-        {           
+        {
             ListLoc = Ccontroller.ViewLocation(a);
             CbSucursal.Items.Clear();
-            if (ListLoc != null) 
+            if (ListLoc != null)
             {
                 foreach (var b in ListLoc)
                 {
@@ -98,25 +97,25 @@ namespace SOD_General.Taller.Registro_peticiones
             {
 
             }
-            
+
         }
 
 
 
-        
-       
+
+
 
         private void chkSucursal_CheckedChanged(object sender, EventArgs e)
         {
             if (chkSucursal.Checked)
             {
                 CbSucursal.Enabled = true;
-             
+
             }
             else
             {
                 CbSucursal.Enabled = false;
-           
+
             }
         }
 
@@ -129,7 +128,7 @@ namespace SOD_General.Taller.Registro_peticiones
                                         .Select(m => m._Identifier)
                                         .First();
 
-                 txtCliente.Text = view.ToString();
+                txtCliente.Text = view.ToString();
             }
             else
             {
@@ -177,7 +176,7 @@ namespace SOD_General.Taller.Registro_peticiones
                                         .First();
 
                 int busc = Convert.ToInt32(buscar);
-                cbRellenarLoc(busc);     
+                cbRellenarLoc(busc);
             }
             else
             {
@@ -186,7 +185,7 @@ namespace SOD_General.Taller.Registro_peticiones
             }
         }
 
-      
+
 
         private void RncCliente_CheckedChanged(object sender, EventArgs e)
         {
@@ -194,13 +193,13 @@ namespace SOD_General.Taller.Registro_peticiones
             {
                 pnlRnc.Visible = true;
                 pnlCliente.Visible = false;
-                
+
             }
             else
             {
                 pnlRnc.Visible = false;
                 pnlCliente.Visible = true;
-                
+
             }
         }
     }

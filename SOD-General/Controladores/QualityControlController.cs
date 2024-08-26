@@ -1,15 +1,10 @@
-﻿using DocumentFormat.OpenXml.Office2010.Excel;
-using Modelos.Taller;
+﻿using Modelos.Taller;
 using SOD_General.Taller.Control_calidad;
-using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Drawing.Text;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -68,7 +63,7 @@ namespace SOD_General.Controladores
 
         public void ControlesCheckBx(FlowLayoutPanel flp)
         {
-            string query = "Select * from ControlQuality"; 
+            string query = "Select * from ControlQuality";
             SqlCommand cmd = new SqlCommand(query, conex);
 
             conex.Open();
@@ -76,7 +71,7 @@ namespace SOD_General.Controladores
 
             while (reader.Read())
             {
-              //  Control controles = new Control();   
+                //  Control controles = new Control();   
                 CR_Checkbox chb = new CR_Checkbox();
                 int id = reader.GetInt32(0);
                 string name = reader.GetString(1);
@@ -158,14 +153,14 @@ namespace SOD_General.Controladores
                 MessageBox.Show(idEquip.ToString());
 
                 conex.Open();
-                
+
                 foreach (var a in inter)
                 {
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@TypeEquipment_Id", idEquip);
                     cmd.Parameters.AddWithValue("@ControlQuality_Id", a);
                     cmd.ExecuteNonQuery();
-                    
+
                 }
                 conex.Close();
                 MessageBox.Show("Agregado correctamente");
@@ -178,7 +173,7 @@ namespace SOD_General.Controladores
             {
                 MessageBox.Show("error del sistema: " + ex.ToString());
             }
-            
+
         }
 
 

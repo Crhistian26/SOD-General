@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 
 namespace SOD_General.Controladores
@@ -59,9 +58,9 @@ namespace SOD_General.Controladores
 
         public string FiltarHoras(TimeSpan hora)
         {
-            if(hora.Hours > 12)
+            if (hora.Hours > 12)
             {
-                if(hora.Minutes == 0)
+                if (hora.Minutes == 0)
                 {
                     return $"{hora.Hours - 12}:{hora.Minutes}0 PM";
                 }
@@ -69,9 +68,9 @@ namespace SOD_General.Controladores
                 {
                     return $"{hora.Hours - 12}:{hora.Minutes} PM";
                 }
-               
+
             }
-            else if(hora.Hours == 12)
+            else if (hora.Hours == 12)
             {
                 if (hora.Minutes == 0)
                 {
@@ -95,17 +94,17 @@ namespace SOD_General.Controladores
             }
         }
 
-        public (string,string,string) FiltrarHorasComb(TimeSpan hora)
+        public (string, string, string) FiltrarHorasComb(TimeSpan hora)
         {
-            if(hora.Hours > 12)
+            if (hora.Hours > 12)
             {
-                return ((hora.Hours - 12).ToString(),hora.Minutes.ToString(), "PM");
+                return ((hora.Hours - 12).ToString(), hora.Minutes.ToString(), "PM");
             }
-            else if(hora.Hours == 12)
+            else if (hora.Hours == 12)
             {
                 return (hora.Hours.ToString(), hora.Minutes.ToString(), "PM");
             }
-            else if(hora.Hours == 24)
+            else if (hora.Hours == 24)
             {
                 return (hora.Hours.ToString(), hora.Minutes.ToString(), "AM");
             }
@@ -120,15 +119,15 @@ namespace SOD_General.Controladores
             TimeSpan time = new TimeSpan();
             int _hour = Convert.ToInt32(hour);
             int _min = Convert.ToInt32(min);
-            if(merides == "PM" && _hour != 12)
+            if (merides == "PM" && _hour != 12)
             {
-                time = new TimeSpan(_hour + 12,_min,0);
+                time = new TimeSpan(_hour + 12, _min, 0);
             }
-            else if(merides == "AM" && _hour != 12)
+            else if (merides == "AM" && _hour != 12)
             {
                 time = new TimeSpan(_hour, _min, 0);
             }
-            else if(merides == "PM" && _hour == 12)
+            else if (merides == "PM" && _hour == 12)
             {
                 time = new TimeSpan(_hour, _min, 0);
             }

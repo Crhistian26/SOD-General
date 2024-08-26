@@ -1,11 +1,9 @@
 ﻿using Modelos.Control_de_usuarios;
 using Modelos.Taller;
 using SOD_General.Controladores;
-using SOD_General.Taller.Control_calidad;
 using SOD_General.Vistas.Taller.Control_calidad;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -35,7 +33,7 @@ namespace SOD_General.Vistas.Taller.Equipos
 
         private void LlenarDataGridView()
         {
-            List<EquipType> TiposEquip = new List<EquipType>(); 
+            List<EquipType> TiposEquip = new List<EquipType>();
             TiposEquip = equipControl.visualizarEquipo();
 
             foreach (var tE in TiposEquip)
@@ -52,7 +50,7 @@ namespace SOD_General.Vistas.Taller.Equipos
             //Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
             //panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
-        
+
 
         private void BtnAgregarEquip_Click(object sender, System.EventArgs e)
         {
@@ -92,9 +90,9 @@ namespace SOD_General.Vistas.Taller.Equipos
             if (cR_DataGriedView1.Columns[e.ColumnIndex].Index == 4)
             {
                 int IdDgv = Convert.ToInt32(cR_DataGriedView1.Rows[e.RowIndex].Cells[0].Value);
-                
+
                 var cerrarForm = Application.OpenForms.OfType<VerEnlace>().FirstOrDefault();
-                if (cerrarForm != null) 
+                if (cerrarForm != null)
                 {
                     cerrarForm.Close();
                 }

@@ -27,7 +27,7 @@ namespace SOD_General.Vistas.Pruebas
             //else
             //{
             //    button1.Visible = false;
-            
+
         }
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

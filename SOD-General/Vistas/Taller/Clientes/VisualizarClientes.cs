@@ -15,11 +15,11 @@ namespace SOD_General.Vistas.Taller.Clientes
         Client especifi;
 
         string cb = "";
- 
+
         public VisualizarClientes()
         {
             InitializeComponent();
-   
+
         }
 
         private void cR_SplitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -32,8 +32,8 @@ namespace SOD_General.Vistas.Taller.Clientes
             llenarGridClientes();
             cbFiltro.Items.Add("Nombre");
             cbFiltro.Items.Add("Rnc o Cedula");
-           
-            
+
+
         }
         private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -60,7 +60,7 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             }
 
-         }
+        }
 
         //   int a = empleados[soD_ComboBox1.SelectedIndex].IdEmployee
 
@@ -72,10 +72,10 @@ namespace SOD_General.Vistas.Taller.Clientes
             foreach (Client client in clientes)
             {
                 dgvClientes.Rows.Add(client.IdClient, client._Identifier, client._NameBranch, client._Address, client.Phone_1, client.Phone_2, client._Contact);
-            }            
+            }
         }
 
-       
+
         private void dgvClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvClientes.Rows[e.RowIndex];
@@ -104,7 +104,7 @@ namespace SOD_General.Vistas.Taller.Clientes
             {
                 cbCliente.Items.Clear();
                 cbCliente.SelectedItem = null;
-                
+
                 foreach (var client in lisCli)
                 {
                     cbCliente.Items.Add(client._Identifier);

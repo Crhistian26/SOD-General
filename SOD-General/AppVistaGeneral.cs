@@ -1,11 +1,7 @@
 ﻿using Controladores;
 using Modelos.Control_de_usuarios;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General
@@ -15,13 +11,13 @@ namespace SOD_General
         ControlOperaciones controller;
         SizesGenerales _size = new SizesGenerales();
         public Model_User user;
-            
-        public Form formu;  
+
+        public Form formu;
         public AppVistaGeneral(Model_User user)
         {
             InitializeComponent();
             this.user = user;
-            controller = new ControlOperaciones(user,this);
+            controller = new ControlOperaciones(user, this);
         }
 
         private void AppVistaGeneral_Load(object sender, EventArgs e)

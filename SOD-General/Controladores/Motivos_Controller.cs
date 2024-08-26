@@ -1,13 +1,11 @@
-﻿using SOD_General.Vistas.Recursos_Humanos.Motivos;
-using System.Configuration;
-using System.Data.SqlClient;
-using System.Windows.Forms;
+﻿using Modelos.AsistenciasYPermisos;
+using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using System;
 using System.Collections.Generic;
-using Modelos.AsistenciasYPermisos;
-using System.Runtime.InteropServices.WindowsRuntime;
-using SOD_General.Vistas.Recursos_Humanos.Registros;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace SOD_General.Controladores
 {
@@ -16,7 +14,7 @@ namespace SOD_General.Controladores
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
 
-         public List<Model_Reason> Obtener_Razones()
+        public List<Model_Reason> Obtener_Razones()
         {
             try
             {

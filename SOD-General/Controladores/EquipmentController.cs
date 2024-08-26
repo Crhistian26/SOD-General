@@ -1,16 +1,8 @@
-﻿using DocumentFormat.OpenXml.Office2010.Excel;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using Modelos.Taller;
-using SOD_General.Vistas.Taller.Equipos;
+﻿using Modelos.Taller;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -60,7 +52,7 @@ namespace SOD_General.Controladores
 
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-  
+
                 while (reader.Read())
                 {
                     int Id = reader.GetInt32(0);
@@ -78,7 +70,7 @@ namespace SOD_General.Controladores
                 MessageBox.Show("Error " + ex.ToString());
             }
             return tipoEquipo;
-           
+
         }
 
         public List<Controles> visualizarControles()

@@ -45,11 +45,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
         }
 
-        
+
         private void AgregarEditar_Motivos_Load(object sender, EventArgs e)
         {
             CentrarElementos();
-            
+
         }
 
         private string MesureValue()
@@ -70,7 +70,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             return MesureFor;
         }
         private void AgregarBoton(object sender, EventArgs e)
-        { 
+        {
             Model_Reason reason = new Model_Reason
             (
                 0,
@@ -80,7 +80,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
                 soD_ComboBox3.SelectedItem.ToString(),
                 MesureValue()
             );
-            if(control.AddReason(reason))
+            if (control.AddReason(reason))
             {
                 control.ResetVisualReasons();
                 this.Close();
@@ -139,7 +139,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
 
         private void soD_ComboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

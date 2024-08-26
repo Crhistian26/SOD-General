@@ -1,13 +1,10 @@
-﻿using Controladores;
-using Modelos.AsistenciasYPermisos;
+﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
-using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
@@ -39,17 +36,17 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
 
         public void OrganizarDataGriedFecha()
-        { 
+        {
             cR_DataGriedView2.Rows.Clear();
             var data = Asistencias.Select(a => a)
                 .Where(
-                    a => a.DateAttendance.Date.Day == cR_DateTimePicker1.Value.Date.Day 
-                    && a.DateAttendance.Date.Month == cR_DateTimePicker1.Value.Date.Month 
+                    a => a.DateAttendance.Date.Day == cR_DateTimePicker1.Value.Date.Day
+                    && a.DateAttendance.Date.Month == cR_DateTimePicker1.Value.Date.Month
                     && a.DateAttendance.Date.Year == cR_DateTimePicker1.Value.Date.Year
                     )
                 .ToList();
 
-            if(data.Count > 0)
+            if (data.Count > 0)
             {
                 foreach (Record_Attendance registro in data)
                 {
@@ -60,18 +57,18 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                         _size.FiltarHoras(registro.LunchS),
                         _size.FiltarHoras(registro.LunchF),
                         _size.FiltarHoras(registro.Exit),
-                        registro.Job_Hours.ToString().Substring(0, 5)+ " Horas"
-                        );     
+                        registro.Job_Hours.ToString().Substring(0, 5) + " Horas"
+                        );
                 }
             }
             else
             {
-                
+
             }
         }
 
 
-        private  void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
+        private void Registros_GeneralesAsistencias_Load(object sender, EventArgs e)
         {
             OrganizarDataGriedFecha();
         }

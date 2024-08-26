@@ -27,7 +27,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
-            permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value,cR_DateTimePicker2.Value);
+            permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
             CentrarElementos();
             LlenarComboEmpleados();
             LlenarComboMotivos();
@@ -73,7 +73,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             if (cr_ComboBox1.Text == "Todos los empleados")
             {
                 cR_DataGriedView1.Rows.Clear();
-                data = 
+                data =
                     permisos.Select(a => a)
                     .Where
                     (
@@ -119,7 +119,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void Registros_Generales_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Registros_Generales_Resize(object sender, EventArgs e)

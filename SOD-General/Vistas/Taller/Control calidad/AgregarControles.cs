@@ -1,5 +1,4 @@
-﻿using Modelos.Taller;
-using SOD_General.Controladores;
+﻿using SOD_General.Controladores;
 using System.Windows.Forms;
 
 namespace SOD_General.Taller.Control_calidad
@@ -17,6 +16,6 @@ namespace SOD_General.Taller.Control_calidad
             cQController.AgregarControles(txtControlName.Text, true);
         }
 
-        
+
     }
 }

@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Packaging;
-using Modelos.AsistenciasYPermisos;
+﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
@@ -8,7 +7,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
@@ -164,7 +162,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
 
         private void AddAttendance(object sender, EventArgs e)
-        {  
+        {
 
             Record_Attendance record = new Record_Attendance
             (
@@ -175,7 +173,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString()),
                 cR_DateTimePicker1.Value
             );
-            if(control.AddAttendance(record))
+            if (control.AddAttendance(record))
             {
                 control.Reset_VisualRegistors();
                 this.Close();

@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using Modelos.AsistenciasYPermisos;
+﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
@@ -7,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Empleados
@@ -49,7 +47,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                         _size.FiltarHoras(registro.LunchS),
                         _size.FiltarHoras(registro.LunchF),
                         _size.FiltarHoras(registro.Exit),
-                        registro.Job_Hours.ToString().Substring(0, 5)+" Horas",
+                        registro.Job_Hours.ToString().Substring(0, 5) + " Horas",
                         registro.DateAttendance.ToString("D")
                         );
                 }
@@ -72,7 +70,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
         }
         private void Empleado_Details_Load(object sender, EventArgs e)
         {
-            if(!user.Confirm_Operation("Editar empleados"))
+            if (!user.Confirm_Operation("Editar empleados"))
             {
                 botones_Nuevos2.Visible = false;
             }
@@ -101,7 +99,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             {
                 MessageBox.Show("No puedes alterar tus propios datos.");
             }
-            
+
         }
 
         private void cR_DataGriedView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

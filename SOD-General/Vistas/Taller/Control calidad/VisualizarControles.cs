@@ -1,8 +1,6 @@
 ﻿using Modelos.Control_de_usuarios;
 using Modelos.Taller;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General.Controladores;
-using SOD_General.Vistas.Taller.Equipos;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -58,7 +56,7 @@ namespace SOD_General.Taller.Control_calidad
             AgregarControles addControles = new AgregarControles();
             addControles.Show();
         }
-    
+
         private void llenarGrid()
         {
             QualityControlController Qcc = new QualityControlController();

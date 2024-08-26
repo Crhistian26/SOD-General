@@ -47,7 +47,7 @@ namespace SOD_General.Controladores
                     DateTime date = lector.GetDateTime(4);
                     bool job = lector.GetBoolean(5);
 
-                    empleado = new Employee(id, name, lastname, department, date,job);
+                    empleado = new Employee(id, name, lastname, department, date, job);
                     empleados.Add(empleado);
                 }
 
@@ -112,7 +112,7 @@ namespace SOD_General.Controladores
                 DateTime Bdate = lector.GetDateTime(3);
                 DateTime Edate = lector.GetDateTime(4);
 
-                record = new Record_Permission(IdRecord, Reason,Details,Bdate,Edate);
+                record = new Record_Permission(IdRecord, Reason, Details, Bdate, Edate);
                 diccionario.Add(record);
             }
             conex.Close();
@@ -168,7 +168,7 @@ namespace SOD_General.Controladores
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 //Los parametros
-                cmd.Parameters.AddWithValue("@Idemployee",emp.IdEmployee);
+                cmd.Parameters.AddWithValue("@Idemployee", emp.IdEmployee);
                 cmd.Parameters.AddWithValue("@DepartId", emp.DepartmentId);
                 cmd.Parameters.AddWithValue("@name", emp._Name);
                 cmd.Parameters.AddWithValue("@lastname", emp._Lastname);
@@ -210,7 +210,7 @@ namespace SOD_General.Controladores
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 //Los parametros
-                cmd.Parameters.AddWithValue("@Idemployee",id);
+                cmd.Parameters.AddWithValue("@Idemployee", id);
                 //El proceso
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -260,13 +260,13 @@ namespace SOD_General.Controladores
                     DateTime Addmision = lector.GetDateTime(5);
                     bool enabled = lector.GetBoolean(6);
                     DateTime? dismal = null;
-                    if(!lector.IsDBNull(7))
+                    if (!lector.IsDBNull(7))
                     {
                         dismal = lector.GetDateTime(7);
                     }
                     bool ejob = lector.GetBoolean(8);
 
-                    empleado = new Employee(IdEmployee,DepartmentId,Depart, Name, Lastname, Addmision,dismal,enabled,ejob);
+                    empleado = new Employee(IdEmployee, DepartmentId, Depart, Name, Lastname, Addmision, dismal, enabled, ejob);
                     conex.Close();
 
                 }

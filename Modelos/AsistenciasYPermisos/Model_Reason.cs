@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelos.AsistenciasYPermisos
+﻿namespace Modelos.AsistenciasYPermisos
 {
     public class Model_Reason
     {
@@ -20,7 +14,7 @@ namespace Modelos.AsistenciasYPermisos
             this._Reason = _Reason;
         }
 
-        public Model_Reason(int IdReason,string _Reason, string _Descripcion, int MaximuneCount_Time, string MesureMaximunr_Time, string for_mesure)
+        public Model_Reason(int IdReason, string _Reason, string _Descripcion, int MaximuneCount_Time, string MesureMaximunr_Time, string for_mesure)
             : this(IdReason, _Reason)
         {
             this._Descripcion = _Descripcion;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace Modelos.Control_de_usuarios
 {
@@ -27,7 +23,7 @@ namespace Modelos.Control_de_usuarios
         {
             var hola = this._Role._Operations.Where(a => a._Operation == Operation_name).Select(a => a).FirstOrDefault();
 
-            if(hola != null)
+            if (hola != null)
             {
                 return true;
             }

@@ -1,12 +1,9 @@
 ﻿using Modelos.AsistenciasYPermisos;
-using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Exportar
 {
@@ -126,20 +123,20 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
         }
         private void ExportAttendance()
         {
-            
+
             List<Record_Attendance> records = reports.Get_AttendanceAllEmployee(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
             List<Record_Permission> permissions = reports.Get_PermissionAllEmployees(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
             if (records != null)
-            
+
                 if (records.Count > 0)
                 {
-                    reports.ImprimirReporte(records,permissions, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                    reports.ImprimirReporte(records, permissions, cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
                 }
                 else
                 {
                     MessageBox.Show("No hay registro de asistencias entre estas fechas.");
-                }          
-            
+                }
+
         }
     }
 }

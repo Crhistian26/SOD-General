@@ -1,11 +1,8 @@
 ﻿using Controladores;
-using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
-using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
-using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -36,7 +33,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         public void Reset()
         {
-            if(!user.Confirm_Operation("Agregar empleados"))
+            if (!user.Confirm_Operation("Agregar empleados"))
             {
                 botones_Nuevos1.Visible = false;
             }
@@ -73,7 +70,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
                 string lastname = empleado._Lastname;
                 string department = empleado.Department;
                 DateTime date = empleado.Admission_date;
-                cR_DataGriedView1.Rows.Add(id, name, lastname, department, date.ToString("D"),JobState(empleado));
+                cR_DataGriedView1.Rows.Add(id, name, lastname, department, date.ToString("D"), JobState(empleado));
             }
         }
 

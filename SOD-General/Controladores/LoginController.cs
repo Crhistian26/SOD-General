@@ -1,10 +1,8 @@
 ﻿using Modelos.Control_de_usuarios;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq.Expressions;
 using System.Windows.Forms;
 
 
@@ -46,7 +44,7 @@ namespace Controladores
                     int id = reader.GetInt32(1);
                     string operation_name = reader.GetString(2);
 
-                    Model_Operations operation = new Model_Operations(id, module,operation_name);
+                    Model_Operations operation = new Model_Operations(id, module, operation_name);
 
                     operations.Add(operation);
                 }
@@ -54,13 +52,13 @@ namespace Controladores
                 conex.Close();
 
                 Query = "exec Get_User_Data @user,@password";
-                cmd = new SqlCommand(Query,conex);
+                cmd = new SqlCommand(Query, conex);
                 cmd.Parameters.AddWithValue("@user", username);
                 cmd.Parameters.AddWithValue("@password", password);
 
                 conex.Open();
                 reader = cmd.ExecuteReader();
-                if(reader.Read())
+                if (reader.Read())
                 {
                     role = new Model_Role(reader.GetInt32(2), reader.GetString(3), operations);
                     user = new Model_User(reader.GetInt32(0), reader.GetInt32(1), role, reader.GetString(4), reader.GetString(5));

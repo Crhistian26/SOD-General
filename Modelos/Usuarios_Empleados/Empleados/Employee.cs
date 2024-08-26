@@ -20,8 +20,8 @@ namespace Modelos.Usuarios_Empleados
             this._Name = Name;
             this._Lastname = Lastname;
         }
-        public Employee(int IdEmployee,int DepartmentId, string Name, string Lastname,DateTime admissionDate, bool jobState)
-            :this(IdEmployee,Name,Lastname)
+        public Employee(int IdEmployee, int DepartmentId, string Name, string Lastname, DateTime admissionDate, bool jobState)
+            : this(IdEmployee, Name, Lastname)
         {
             this.DepartmentId = DepartmentId;
             this.Admission_date = admissionDate;
@@ -29,14 +29,14 @@ namespace Modelos.Usuarios_Empleados
         }
 
         public Employee(int IdEmployee, string Name, string Lastname, string Department, DateTime Admission_Date, bool jobState)
-            :this(IdEmployee,Name,Lastname)
+            : this(IdEmployee, Name, Lastname)
         {
             this.Admission_date = Admission_Date;
             this.Department = Department;
             this.Job_State = jobState;
         }
 
-        
+
         public Employee(int idEmployee, int departmentId, string department, string name, string lastname, DateTime admissionDate, DateTime? dismissalDate, bool enabled, bool jobState)
             : this(idEmployee, name, lastname, department, admissionDate, jobState)
         {

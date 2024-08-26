@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 public class Cr_ComboBox : ComboBox
@@ -11,7 +10,7 @@ public class Cr_ComboBox : ComboBox
         this.AutoCompleteSource = AutoCompleteSource.ListItems;
         this.Font = new Font("Microsoft YaHei", 12);
         this.ForeColor = Color.White;
-        
+
     }
 }
 

@@ -1,29 +1,18 @@
 ﻿using Modelos.Control_de_usuarios;
-using Modelos.Taller;
-using Modelos.Usuarios_Empleados.Control_de_usuario;
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Control_calidad;
-using SOD_General.Taller.Registro_peticiones;
-using SOD_General.Vistas.Pruebas;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using SOD_General.Vistas.Taller.Clientes;
 using SOD_General.Vistas.Taller.Control_calidad;
-using SOD_General.Vistas.Taller.Controles_de_Equipo;
 using SOD_General.Vistas.Taller.Equipos;
 using SOD_General.Vistas.Taller.Pruebadiseño;
-using SOD_General.Vistas.Taller.Registrar_Cotizacion;
-using SOD_General.Vistas.Taller.Registrar_entrada;
 using SOD_General.Vistas.Taller.Registro_peticiones;
-using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.ComTypes;
-using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace Controladores
@@ -35,7 +24,7 @@ namespace Controladores
         public Model_User User;
         public Model_Role Role;
         public AppVistaGeneral _view;
-        public Dictionary<(string,string), EventHandler> OperationsEvents;
+        public Dictionary<(string, string), EventHandler> OperationsEvents;
 
         public ControlOperaciones()
         {
@@ -45,7 +34,7 @@ namespace Controladores
             this.OperationsEvents = DictionaryData();
         }
 
-        public ControlOperaciones(Model_User User,AppVistaGeneral view)
+        public ControlOperaciones(Model_User User, AppVistaGeneral view)
         {
             this.User = User;
             this.Role = User._Role;
@@ -53,7 +42,7 @@ namespace Controladores
             this.OperationsEvents = DictionaryData();
         }
 
-       
+
 
         #region agregar eventos nuevos
 
@@ -64,7 +53,7 @@ namespace Controladores
         /// Este metodo se encarga de llenar el diccionario inicial con cada una de las operaciones existentes en el sistema.
         /// </summary>
         /// <returns>Se encarga de regresar un diccionario, la llave es (Modulo,Operacion) y su valor es el evento.<returns>
-        public Dictionary<(string,string), EventHandler> DictionaryData()
+        public Dictionary<(string, string), EventHandler> DictionaryData()
         {
             return
                 new Dictionary<(string, string), EventHandler>
@@ -190,7 +179,7 @@ namespace Controladores
                         }
                     },
 
-                      
+
                 };
 
 
@@ -204,7 +193,7 @@ namespace Controladores
         {
             List<Model_Operations> operations = this.Role._Operations;
 
-            var GroupOperations = operations.GroupBy(a => a._Module).Select(a => a).ToList();  
+            var GroupOperations = operations.GroupBy(a => a._Module).Select(a => a).ToList();
 
             foreach (var operations1 in GroupOperations)
             {
@@ -215,7 +204,7 @@ namespace Controladores
                 {
                     EventHandler _event = OperationsEvents.Where(a => a.Key == (operation._Module, operation._Operation)).Select(a => a.Value).FirstOrDefault();
 
-                    if(_event == null)
+                    if (_event == null)
                     {
                         continue;
                     }
@@ -228,7 +217,7 @@ namespace Controladores
                     }
                 }
 
-                if(head_item.DropDownItems.Count <= 0)
+                if (head_item.DropDownItems.Count <= 0)
                 {
                     continue;
                 }
@@ -236,7 +225,7 @@ namespace Controladores
                 {
                     _view.cR_MenuStrip1.Items.Add(head_item);
                 }
-                
+
             }
             ToolStripMenuItem login_back = new ToolStripMenuItem();
             login_back.Text = "Volver al login";

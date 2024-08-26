@@ -1,6 +1,4 @@
-﻿using DocumentFormat.OpenXml.Presentation;
-
-namespace Modelos.Taller
+﻿namespace Modelos.Taller
 {
     public class EquipType
     {
@@ -8,7 +6,7 @@ namespace Modelos.Taller
         public string _EquipType { get; set; }
         public bool _Enabled { get; set; }
 
-        public EquipType(string equipType, bool enabled) 
+        public EquipType(string equipType, bool enabled)
         {
             _EquipType = equipType;
             _Enabled = enabled;
@@ -21,11 +19,11 @@ namespace Modelos.Taller
         /// <param name="equipType">Nombre del tipo de equipo.</param>
         /// <param name="enabled">Estado de habilitación del tipo de equipo.</param>
         public EquipType(int idEquipType, string equipType, bool enabled)
-            :this(equipType, enabled)
+            : this(equipType, enabled)
         {
             IdEquipType = idEquipType;
-            
+
         }
-        
+
     }
 }

@@ -1,13 +1,10 @@
-﻿using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using Modelos.Taller;
+﻿using Modelos.Taller;
 using SOD_General.Vistas.Taller.Equipos;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -43,7 +40,7 @@ namespace SOD_General.Controladores
                 MessageBox.Show("Error: " + ex.Message.ToString());
             }
 
-            
+
         }
 
         public List<Brand> ViewBrand()
@@ -72,10 +69,10 @@ namespace SOD_General.Controladores
                         lista = new Brand(id, marca, enable);
                         brandList.Add(lista);
                     }
-                    conex.Close();                    
+                    conex.Close();
                 }
             }
-         
+
             catch (SqlException ex)
             {
                 MessageBox.Show("Error desde la base de datos: " + ex.ToString());

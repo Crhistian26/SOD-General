@@ -1,6 +1,5 @@
 ﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
-using Modelos.Taller;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -25,7 +24,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
         {
             foreach (Model_Reason reason in reasons)
             {
-                if(reason.MaximuneCount_Time != 0)
+                if (reason.MaximuneCount_Time != 0)
                 {
                     cR_DataGriedView1.Rows.Add
                    (
@@ -47,7 +46,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
                        reason.For_mesure
                    );
                 }
-               
+
             }
         }
 
@@ -61,7 +60,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
 
             LlenarDataGried();
 
-            if(user.Confirm_Operation("Agregar motivos"))
+            if (user.Confirm_Operation("Agregar motivos"))
             {
                 botones_Nuevos1.Visible = true;
             }
@@ -69,7 +68,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
             {
                 botones_Nuevos1.Visible = false;
             }
-            
+
         }
 
         private void Visual_Motivos_Resize(object sender, EventArgs e)
@@ -91,7 +90,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Motivos
         {
             if (e.RowIndex != -1)
             {
-                if(user.Confirm_Operation("Editar motivos"))
+                if (user.Confirm_Operation("Editar motivos"))
                 {
                     int id = Convert.ToInt32(cR_DataGriedView1.Rows[e.RowIndex].Cells[0].Value);
                     Model_Reason reason = reasons.Where(a => a.IdReason == id).Select(a => a).First();

@@ -2,7 +2,6 @@
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 
@@ -11,20 +10,20 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
     public partial class AgregarClientes : Form
     {
         //instancia del modelo de clientes
-        
+
         Locations locations;
         List<Client> listaCliente = new List<Client>();
-       
+
         //instancia de la clase que se encargara de agregar, editar y eliminar los clientes
         ClientController clientContr = new ClientController();
 
         public AgregarClientes()
         {
             InitializeComponent();
-            
+
         }
 
-        
+
 
 
         private void fR_TextBox7__TextChanged(object sender, EventArgs e)
@@ -34,23 +33,23 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
 
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
         {
-           
-            
+
+
 
         }
 
-       
+
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void AgregarClientes_Load(object sender, EventArgs e)
         {
             Cb_ClienteSucursal.Items.Add("Cliente");
             Cb_ClienteSucursal.Items.Add("Sucursal");
-            cbRnc();  
+            cbRnc();
         }
 
         private void Cb_ClienteSucursal_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,11 +82,11 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             {
                 Client cliente = new Client(null, txtCedula.Text.ToString(), txtCliente.Text.ToString(), txtDireccion.Text.ToString(), txtNumero1.Text.ToString(), txtNumero2.Text.ToString(), txtContacto.Text.ToString());
 
-                 clientContr.AgregarCliente(cliente);
-                
+                clientContr.AgregarCliente(cliente);
+
             }
         }
-                                                                                    
+
         private void btn_Sucursal_Click(object sender, EventArgs e)
         {
             if (cbRnc2.SelectedIndex == null || txtSucursal.Text.Trim().Length == 0 || txtContactoSucur.Text.Trim().Length == 0 ||
@@ -95,9 +94,9 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             {
                 MessageBox.Show("Por favor, rellene todos los campos de la sucursal");
             }
-            else 
+            else
             {
-                Locations locat = new Locations(null, null, cbRnc2.SelectedItem.ToString(),txtSucursal.Text, txtDireccionSucur.Text, 
+                Locations locat = new Locations(null, null, cbRnc2.SelectedItem.ToString(), txtSucursal.Text, txtDireccionSucur.Text,
                     txtNumero1Sucur.Text, txtNumero2Sucur.Text, txtContactoSucur.Text);
 
 
@@ -120,7 +119,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           // clientContr.ViewLocation();
+            // clientContr.ViewLocation();
         }
     }
 }

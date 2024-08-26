@@ -1,13 +1,10 @@
-﻿using DocumentFormat.OpenXml.EMMA;
-using Modelos.AsistenciasYPermisos;
+﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
-using SOD_General.Vistas.Pruebas;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
 {
@@ -34,7 +31,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void AddPermissionView()
         {
-            if()
+
         }
 
         private void EditPermissionView()
@@ -76,12 +73,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void soD_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cR_Checkbox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(cR_Checkbox1.Checked == true)
+            if (cR_Checkbox1.Checked == true)
             {
                 panel2.Visible = false;
             }
@@ -89,7 +86,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 panel2.Visible = true;
             }
-            
+
         }
 
         private void cR_Checkbox2_CheckedChanged(object sender, EventArgs e)

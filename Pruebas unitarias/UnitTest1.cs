@@ -1,16 +1,10 @@
 ﻿using Controladores;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Modelos;
 using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
 using SOD_General;
-using SOD_General.Controladores;
-using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
 using System.Collections.Generic;
-using System.Net;
-using System.Runtime.Remoting.Messaging;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace Pruebas_unitarias
@@ -34,7 +28,7 @@ namespace Pruebas_unitarias
 
         static AppVistaGeneral view = new AppVistaGeneral(user);
 
-        static ControlOperaciones control = new ControlOperaciones(user ,view);
+        static ControlOperaciones control = new ControlOperaciones(user, view);
 
         [TestMethod]
         public void MenustripTest()
@@ -62,8 +56,8 @@ namespace Pruebas_unitarias
                 "a",
                 new DateTime(2024, 8, 21, 8, 30, 0),
                 new DateTime(2024, 8, 21, 10, 30, 0),
-                new TimeSpan(12,0,0),
-                new TimeSpan(1,0,0)
+                new TimeSpan(12, 0, 0),
+                new TimeSpan(1, 0, 0)
                 ).Get_Hours_Ausent();
 
             TimeSpan f = new Record_Permission(
@@ -76,7 +70,7 @@ namespace Pruebas_unitarias
                 new TimeSpan(12, 0, 0),
                 new TimeSpan(1, 0, 0)
                 ).Get_Hours_Ausent();
-            
+
         }
     }
 }
