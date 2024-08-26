@@ -153,35 +153,36 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
             DateTime fecha = DateTime.Now;
+
             switch (fecha.DayOfWeek.ToString())
             {
                 case "Sunday":
-                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-6);
                     cR_DateTimePicker2.Value = DateTime.Now;
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-6);
                     break;
                 case "Monday":
-                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(0);
                     cR_DateTimePicker2.Value = DateTime.Now;
+                    cR_DateTimePicker1.Value = DateTime.Now.AddMinutes(-1);
                     break;
                 case "Tuesday":
-                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-1);
                     cR_DateTimePicker2.Value = DateTime.Now;
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-1);
                     break;
                 case "Wednesday":
-                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-2);
                     cR_DateTimePicker2.Value = DateTime.Now;
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-2);
                     break;
                 case "Thursday":
-                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-3);
                     cR_DateTimePicker2.Value = DateTime.Now;
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-3);
                     break;
                 case "Friday":
-                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-4);
                     cR_DateTimePicker2.Value = DateTime.Now;
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-4);
                     break;
                 case "Saturday":
-                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-5);
                     cR_DateTimePicker2.Value = DateTime.Now;
+                    cR_DateTimePicker1.Value = DateTime.Now.AddDays(-5);
                     break;
 
             }
@@ -215,9 +216,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             if (cR_DateTimePicker1.Value > cR_DateTimePicker2.Value)
             {
-                cR_DateTimePicker2.Value = DateTime.Now;
-                cR_DateTimePicker1.Value = DateTime.Now;
-                MessageBox.Show("La primera fecha introducida no puede ser menor a la primera.");
+                cR_DateTimePicker1.Refresh();
+                cR_DateTimePicker2.Refresh();
+                MessageBox.Show("La segunda fecha debe ser mayor a la primera.");
             }
             else
             {
@@ -230,9 +231,9 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             if (cR_DateTimePicker1.Value > cR_DateTimePicker2.Value)
             {
-                cR_DateTimePicker1.Value = DateTime.Now.AddMinutes(-1);
-                cR_DateTimePicker2.Value = DateTime.Now.AddMinutes(1);
-                MessageBox.Show("La primera fecha introducida no puede ser mayor a la segunda.");
+                cR_DateTimePicker1.Refresh();
+                cR_DateTimePicker2.Refresh();
+                MessageBox.Show("La primera fecha debe ser menor a la segunda.");
             }
             else
             {

@@ -163,14 +163,34 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void AddAttendance(object sender, EventArgs e)
         {
+            TimeSpan StartJob = _size.CreateTS(cR_TBhora1.Text, cR_TBminutos1.Text, soD_ComboBox2.SelectedItem.ToString());
+            TimeSpan FinishJob = _size.CreateTS(cR_TBhora2.Text, cR_TBminutos2.Text, soD_ComboBox3.SelectedItem.ToString());
+            TimeSpan StartLunch = _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString());
+            TimeSpan FinishLunch = _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString());
+
+            if(
+                StartJob > StartLunch
+                || StartLunch > FinishLunch
+                || FinishLunch > FinishJob
+                )
+            {
+                MessageBox.Show("Tiene una o mas horas incorrectas.");
+                return;
+            }
+
+            if (soD_ComboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debes de seleccionar el empleado.");
+                return;
+            }
 
             Record_Attendance record = new Record_Attendance
             (
                 empleados[soD_ComboBox1.SelectedIndex].IdEmployee,
-                _size.CreateTS(cR_TBhora1.Text, cR_TBminutos1.Text, soD_ComboBox2.SelectedItem.ToString()),
-                _size.CreateTS(cR_TBhora2.Text, cR_TBminutos2.Text, soD_ComboBox3.SelectedItem.ToString()),
-                _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString()),
-                _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString()),
+                StartJob,
+                FinishJob,
+                StartLunch,
+                FinishLunch,
                 cR_DateTimePicker1.Value
             );
             if (control.AddAttendance(record))

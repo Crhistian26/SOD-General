@@ -1,4 +1,6 @@
 ﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
 using Modelos.AsistenciasYPermisos;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,7 @@ namespace SOD_General.Controladores
         SqlConnection conex = new SqlConnection(cadena);
         static SizesGenerales _size2 = new SizesGenerales();
         SizesGenerales _size = new SizesGenerales();
+        Registros_Controller Registros_Controller = new Registros_Controller();
 
         static Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = _size2.Days;
 
@@ -49,67 +52,57 @@ namespace SOD_General.Controladores
             return totalFaltado;
         }
 
-        public List<Record_Attendance> Get_AttendanceAllEmployee(DateTime date1, DateTime date2)
+        public (string,XLColor) ConvertTimeSpan(TimeSpan timespan)
         {
-            List<Record_Attendance> records = new List<Record_Attendance>();
-            string Query = "exec Get_AttendanceForDate @date1, @date2";
-            SqlCommand cmd = new SqlCommand(Query, conex);
-            //Los parametros
-            cmd.Parameters.AddWithValue("@date1", date1);
-            cmd.Parameters.AddWithValue("@date2", date2);
-            //El proceso
-            try
+            string Diferent = "";
+            XLColor color = XLColor.Black;
+
+            if (Convert.ToInt32(timespan.TotalHours) > 0 && timespan.Minutes > 0)
             {
-                conex.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    records.Add
-                    (
-                        new Record_Attendance
-                        (
-                            reader.GetString(2) + " " + reader.GetString(3),
-                            reader.GetDateTime(8),
-                            reader.GetTimeSpan(4),
-                            reader.GetTimeSpan(5),
-                            reader.GetTimeSpan(6),
-                            reader.GetTimeSpan(7)
-                        )
-                    );
-                }
-                conex.Close();
-                return records;
+                Diferent = $"{Convert.ToInt32(timespan.TotalHours)} horas y {timespan.Minutes} minutos";
+                color = XLColor.Green;
             }
-            catch (SqlException ex)
+            else if (Convert.ToInt32(timespan.TotalHours) > 0 && timespan.Minutes == 0)
             {
-                if (conex.State != System.Data.ConnectionState.Closed)
-                {
-                    conex.Close();
-                }
-                MessageBox.Show(ex.Message);
-                return null;
+                Diferent = $"{Convert.ToInt32(timespan.TotalHours)} horas";
+                color = XLColor.Green;
             }
-            catch (Exception ex)
+            else if (Convert.ToInt32(timespan.TotalHours) == 0 && timespan.Minutes > 0)
             {
-                if (conex.State != System.Data.ConnectionState.Closed)
-                {
-                    conex.Close();
-                }
-                MessageBox.Show(ex.Message);
-                return null;
+                Diferent = $"{Convert.ToInt32(timespan.Minutes)} minutos";
+                color = XLColor.Green;
             }
+            else if (Convert.ToInt32(timespan.TotalHours) <= 0 && timespan.Minutes == 0)
+            {
+                Diferent = $"{System.Math.Abs(Convert.ToInt32(timespan.TotalHours))} horas";
+                color = XLColor.Red;
+            }
+            else if (Convert.ToInt32(timespan.TotalHours) == 0 && timespan.Minutes <= 0)
+            {
+                Diferent = $"{System.Math.Abs(timespan.Minutes)} minutos";
+                color = XLColor.Red;
+            }
+            else if (Convert.ToInt32(timespan.TotalHours) == 0 && timespan.Minutes == 0)
+            {
+                Diferent = "Justo.";
+                color = XLColor.Black;
+            }
+            else
+            {
+                Diferent = $"{System.Math.Abs(Convert.ToInt32(timespan.TotalHours))} horas y {System.Math.Abs(timespan.Minutes)} minutos";
+                color = XLColor.Red;
+            }
+            return (Diferent, color);
 
         }
 
-        public List<Record_Permission> Get_PermissionAllEmployees(DateTime date1, DateTime date2)
-        {
-            return new List<Record_Permission>();
-        }
         public void ImprimirReporte(List<Record_Attendance> records, List<Record_Permission> permissions, DateTime date1, DateTime date2)
         {
             try
             {
+ 
                 XLWorkbook LibroExcel = new XLWorkbook();
+                #region Asistencias detalladas
                 int row = 1;
                 var hoja1 = LibroExcel.Worksheets.Add("Asistencias");
 
@@ -159,15 +152,17 @@ namespace SOD_General.Controladores
                 hoja1.Columns().AdjustToContents();
 
                 var range = hoja1.Range($"A1:G{row - 1}");
+
                 range.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                 range.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                range = hoja1.Range($"A3:G{row - 1}").CreateTable();
+                #endregion
+
+                #region Calculo de horas asistidas
+                //Calculo de horas asistidas
 
                 row = 1;
-
-
-                //Calculo de horas asistidas
                 var Hours_hoja1 = LibroExcel.Worksheets.Add("Horas asistidas");
-
 
                 var Hours_title1 = Hours_hoja1.Range("A1:D1").Merge();
                 Hours_title1.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
@@ -182,15 +177,25 @@ namespace SOD_General.Controladores
                 Hours_title2.Style.Font.FontName = "Lucida Bright";
                 Hours_title2.Style.Font.FontSize = 12;
                 Hours_title2.Style.Font.FontColor = XLColor.White;
-                Hours_hoja1.Range("A2:B2").Merge().SetValue($"Desde el {date1.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center; ;
-                Hours_hoja1.Range("C2:D2").Merge().SetValue($"Hasta el {date2.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center; ;
+                Hours_hoja1.Range("A2:B2").Merge().SetValue($"Desde el {date1.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center; 
+                Hours_hoja1.Range("C2:D2").Merge().SetValue($"Hasta el {date2.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center; 
+                
+
                 row++;
 
 
                 Hours_hoja1.Cell(row, 1).Value = "Nombre del empleado:";
+                Hours_hoja1.Cell(row, 1).Style.Font.FontColor = XLColor.FromArgb(0, 153, 168);
+
                 Hours_hoja1.Cell(row, 2).Value = "Horas trabajadas:";
+                Hours_hoja1.Cell(row, 2).Style.Font.FontColor = XLColor.FromArgb(0, 153, 168);
+
                 Hours_hoja1.Cell(row, 3).Value = "Horas estimadas:";
+                Hours_hoja1.Cell(row, 3).Style.Font.FontColor = XLColor.FromArgb(0, 153, 168);
+
                 Hours_hoja1.Cell(row, 4).Value = "Diferencia:";
+                Hours_hoja1.Cell(row, 4).Style.Font.FontColor = XLColor.FromArgb(0, 153, 168);
+
                 row++;
 
 
@@ -215,34 +220,168 @@ namespace SOD_General.Controladores
                     TimeSpan horasEsperadas = CountHoursPendent(date1, date2);
                     TimeSpan diferencia = horasTrabajadas - horasEsperadas;
 
+                    string HoursJob = $"{Convert.ToInt32(horasTrabajadas.TotalHours)} horas y {horasTrabajadas.Minutes}  minutos";
+                    string StimateHours = $"{Convert.ToInt32(horasEsperadas.TotalHours)} horas y {horasEsperadas.Minutes} minutos";
+                    string Diferent; XLColor color;
+
+                    (Diferent, color) = ConvertTimeSpan(diferencia);
 
                     Hours_hoja1.Cell(row, 1).Value = nombreEmpleado;
-                    Hours_hoja1.Cell(row, 2).Value = horasTrabajadas.ToString();
-                    Hours_hoja1.Cell(row, 3).Value = horasEsperadas.ToString();
-                    Hours_hoja1.Cell(row, 4).Value = diferencia.ToString();
+                    Hours_hoja1.Cell(row, 2).Value = HoursJob;
+                    Hours_hoja1.Cell(row, 3).Value = StimateHours;
+                    Hours_hoja1.Cell(row, 4).Value = Diferent;
+                    Hours_hoja1.Cell(row, 4).Style.Font.FontColor = color; 
                     row++;
                 }
-
-
-                Hours_hoja1.Columns().AdjustToContents();
+                
                 var Hours_range2 = Hours_hoja1.Range($"A1:D{row - 1}");
                 Hours_range2.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                 Hours_range2.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                Hours_hoja1.Columns().AdjustToContents();
+                #endregion
 
                 //Area encargada de cada uno de los permisos.
+                #region Permisos detallados
+                if (permissions.Count <= 0)
+                {
+                    goto SaveFile;
+                }
+
+                row = 1;
+                var DetailedPermission = LibroExcel.Worksheets.Add("Permisos detallados");
+
+                var DetPer_title = DetailedPermission.Range("A1:H1").Merge();
+                DetPer_title.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
+                DetPer_title.Style.Font.FontName = "Century";
+                DetPer_title.Style.Font.FontSize = 16;
+                DetPer_title.Style.Font.FontColor = XLColor.White;
+                DetPer_title.SetValue($"Registro de asistencias general").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                row++;
+
+                var DetPer_title2 = DetailedPermission.Range("A2:G2");
+                DetPer_title2.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
+                DetPer_title2.Style.Font.FontName = "Lucida Bright";
+                DetPer_title2.Style.Font.FontSize = 12;
+                DetPer_title2.Style.Font.FontColor = XLColor.White;
+                DetailedPermission.Range("A2:D2").Merge().SetValue($"Desde el {date1.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center; ;
+                DetailedPermission.Range("E2:H2").Merge().SetValue($"Hasta el {date2.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center; ;
+                row++;
+
+                var DetPer_title3 = DetailedPermission.Range("A3:H3");
+                DetPer_title3.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
+                DetPer_title3.Style.Font.FontName = "Lucida Bright";
+                DetPer_title3.Style.Font.FontSize = 12;
+                DetPer_title3.Style.Font.FontColor = XLColor.White;
+
+                DetailedPermission.Cell(row, 1).Value = $"Nombre del empleado:";
+                DetailedPermission.Cell(row, 2).Value = $"Motivo:";
+                DetailedPermission.Cell(row, 3).Value = $"Detalles:";
+                DetailedPermission.Cell(row, 4).Value = $"Inicio de almuerzo:";
+                DetailedPermission.Cell(row, 5).Value = $"Fin de almuerzo:";
+                DetailedPermission.Cell(row, 6).Value = $"Desde el:";
+                DetailedPermission.Cell(row, 7).Value = $"Hasta el:";
+                DetailedPermission.Cell(row, 8).Value = $"Total en horas:";
+                row++;
+
+                foreach (Record_Permission permission in permissions)
+                {
+                    DetailedPermission.Cell(row, 1).Value = permission._Name;
+                    DetailedPermission.Cell(row, 2).Value = permission._Reason;
+                    DetailedPermission.Cell(row, 3).Value = permission._Description;
+                    if(permission.LunchS.Value.TotalMinutes > 0 && permission.LunchF.Value.TotalMinutes > 0)
+                    {
+                        DetailedPermission.Cell(row, 4).Value = _size.FiltarHoras(permission.LunchS.Value);
+                        DetailedPermission.Cell(row, 5).Value = _size.FiltarHoras(permission.LunchF.Value);
+                    }
+                    else
+                    {
+                        DetailedPermission.Cell(row, 4).Value = "No almorzo este dia.";
+                        DetailedPermission.Cell(row, 5).Value = "No almorzo este dia.";
+                    }
+                    DetailedPermission.Cell(row, 6).Value = permission.Begin_Date.ToString("f");
+                    DetailedPermission.Cell(row, 7).Value = permission.End_Date.ToString("f");
+                    DetailedPermission.Cell(row, 8).Value = ConvertTimeSpan(permission.Get_Hours_Ausent()).Item1;
+                    row++;
+                }
+                DetailedPermission.Columns().AdjustToContents();
+
+                var DetPer_range = DetailedPermission.Range($"A1:H{row - 1}");
+
+                DetPer_range.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                DetPer_range.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                DetPer_range = DetailedPermission.Range($"A3:H{row - 1}").CreateTable();
+                #endregion
+
+                #region Calculo de horas de permisos
+                row = 1;
+                var HoursPermission_hoja1 = LibroExcel.Worksheets.Add("Horas ausentes");
+
+                var HoursPermission_title1 = HoursPermission_hoja1.Range("A1:B1").Merge();
+                HoursPermission_title1.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
+                HoursPermission_title1.Style.Font.FontName = "Century";
+                HoursPermission_title1.Style.Font.FontSize = 16;
+                HoursPermission_title1.Style.Font.FontColor = XLColor.White;
+                HoursPermission_title1.SetValue("Resumen de horas ausentes").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                row++;
+
+                var HoursPermission_title2 = HoursPermission_hoja1.Range("A2:B2");
+                HoursPermission_title2.Style.Fill.BackgroundColor = XLColor.FromArgb(0, 153, 168);
+                HoursPermission_title2.Style.Font.FontName = "Lucida Bright";
+                HoursPermission_title2.Style.Font.FontSize = 12;
+                HoursPermission_title2.Style.Font.FontColor = XLColor.White;
+                HoursPermission_hoja1.Cell("A2").SetValue($"Desde el {date1.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                HoursPermission_hoja1.Cell("B2").SetValue($"Hasta el {date2.ToString("D")}").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
 
+                row++;
 
 
+                HoursPermission_hoja1.Cell(row, 1).Value = "Nombre del empleado:";
+                HoursPermission_hoja1.Cell(row, 1).Style.Font.FontColor = XLColor.FromArgb(0, 153, 168);
+
+                HoursPermission_hoja1.Cell(row, 2).Value = "Total de horas:";
+                HoursPermission_hoja1.Cell(row, 2).Style.Font.FontColor = XLColor.FromArgb(0, 153, 168);
 
 
+                row++;
+
+
+                var PermisosAgrupados = permissions.GroupBy(r => r._Name);
+
+                foreach (var grupo in PermisosAgrupados)
+                {
+                    string nombreEmpleado = grupo.Key;
+                    TimeSpan HoursAusent = TimeSpan.Zero;
+                    string TotalHours;
+                    foreach (var record in grupo)
+                    {
+                        HoursAusent += record.Get_Hours_Ausent();
+                    }
+                    
+
+                    XLColor h;
+                    (TotalHours, h) = ConvertTimeSpan(HoursAusent);
+
+                    HoursPermission_hoja1.Cell(row, 1).Value = nombreEmpleado;
+                    HoursPermission_hoja1.Cell(row, 2).Value = TotalHours;
+                    row++;
+                }
+
+                var HoursPermission_range2 = HoursPermission_hoja1.Range($"A1:B{row - 1}");
+                HoursPermission_range2.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                HoursPermission_range2.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                HoursPermission_hoja1.Columns().AdjustToContents();
+            #endregion
+
+
+            SaveFile:
                 //Esta es la parte encargada de guardar el archivo
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-
+                string NameFile = $"Registro asistencias ({date1.ToString("D")} - {date2.ToString("D")})";
                 saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx|All Files (*.*)|*.*";
                 saveFileDialog.Title = "Guardar archivo Excel";
-                saveFileDialog.FileName = "default.xlsx";
+                saveFileDialog.FileName = NameFile;
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {

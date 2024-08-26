@@ -29,33 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.cr_Textbox2 = new Cr_Textbox();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cR_Label2 = new CR_LabelUp();
-            this.cR_Label1 = new CR_LabelUp();
-            this.btn_Login = new Diseños.Botones_Nuevos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_Label2 = new CR_LabelUp();
+            this.cr_Textbox2 = new Cr_Textbox();
+            this.btn_Login = new Diseños.Botones_Nuevos();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_Label1 = new CR_LabelUp();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cr_Textbox2
+            // panel1
             // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(7, 106);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.PasswordChar = '*';
-            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
-            this.cr_Textbox2.TabIndex = 13;
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(7, 34);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(284, 25);
-            this.cr_Textbox1.TabIndex = 12;
+            this.panel1.Controls.Add(this.cr_Textbox2);
+            this.panel1.Controls.Add(this.cR_Label2);
+            this.panel1.Controls.Add(this.btn_Login);
+            this.panel1.Controls.Add(this.cr_Textbox1);
+            this.panel1.Controls.Add(this.cR_Label1);
+            this.panel1.Location = new System.Drawing.Point(69, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(304, 216);
+            this.panel1.TabIndex = 14;
             // 
             // cR_Label2
             // 
@@ -69,17 +62,15 @@
             this.cR_Label2.TabIndex = 11;
             this.cR_Label2.Text = "Usuario";
             // 
-            // cR_Label1
+            // cr_Textbox2
             // 
-            this.cR_Label1.AutoSize = true;
-            this.cR_Label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Label1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Label1.ForeColor = System.Drawing.Color.White;
-            this.cR_Label1.Location = new System.Drawing.Point(3, 83);
-            this.cR_Label1.Name = "cR_Label1";
-            this.cR_Label1.Size = new System.Drawing.Size(85, 20);
-            this.cR_Label1.TabIndex = 10;
-            this.cR_Label1.Text = "Contraseña";
+            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox2.Location = new System.Drawing.Point(7, 106);
+            this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.PasswordChar = '*';
+            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox2.TabIndex = 13;
             // 
             // btn_Login
             // 
@@ -99,17 +90,26 @@
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // panel1
+            // cr_Textbox1
             // 
-            this.panel1.Controls.Add(this.cR_Label2);
-            this.panel1.Controls.Add(this.cr_Textbox2);
-            this.panel1.Controls.Add(this.btn_Login);
-            this.panel1.Controls.Add(this.cr_Textbox1);
-            this.panel1.Controls.Add(this.cR_Label1);
-            this.panel1.Location = new System.Drawing.Point(69, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 216);
-            this.panel1.TabIndex = 14;
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(7, 34);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox1.TabIndex = 12;
+            // 
+            // cR_Label1
+            // 
+            this.cR_Label1.AutoSize = true;
+            this.cR_Label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Label1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Label1.ForeColor = System.Drawing.Color.White;
+            this.cR_Label1.Location = new System.Drawing.Point(3, 83);
+            this.cR_Label1.Name = "cR_Label1";
+            this.cR_Label1.Size = new System.Drawing.Size(85, 20);
+            this.cR_Label1.TabIndex = 10;
+            this.cR_Label1.Text = "Contraseña";
             // 
             // Login
             // 

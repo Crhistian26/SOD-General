@@ -24,8 +24,8 @@ namespace Modelos.AsistenciasYPermisos
         public string _Description { get; set; }
         public DateTime Begin_Date { get; set; }
         public DateTime End_Date { get; set; }
-        public TimeSpan LunchS { get; set; }
-        public TimeSpan LunchF { get; set; }
+        public TimeSpan? LunchS { get; set; }
+        public TimeSpan? LunchF { get; set; }
 
         public Record_Permission(int IdRecord, string Reason, string descip, DateTime fecha1, DateTime fecha2)
         {
@@ -43,7 +43,7 @@ namespace Modelos.AsistenciasYPermisos
             this._Name = Name;
         }
 
-        public Record_Permission(int IdRecord, string Reason, string Name, string descip, DateTime fecha1, DateTime fecha2, TimeSpan time1, TimeSpan time2)
+        public Record_Permission(int IdRecord, string Name,  string Reason,  string descip, DateTime fecha1, DateTime fecha2, TimeSpan time1, TimeSpan time2)
             : this(IdRecord, Reason, Name, descip, fecha1, fecha2)
         {
             this.LunchS = time1;
@@ -62,30 +62,32 @@ namespace Modelos.AsistenciasYPermisos
         {
 
             TimeSpan totalFaltado = TimeSpan.Zero;
-
-            for (DateTime dia = Begin_Date.Date; dia <= End_Date.Date; dia = dia.AddDays(1))
+            if (this.LunchS != null)
             {
-                if (Days.TryGetValue(dia.DayOfWeek, out var horario))
+                for (DateTime dia = Begin_Date.Date; dia <= End_Date.Date; dia = dia.AddDays(1))
                 {
-                    DateTime inicioJornada = dia.Date + horario.JobStart;
-                    DateTime finJornada = dia.Date + horario.JobEnd;
-
-                    if (Begin_Date < finJornada && End_Date > inicioJornada)
+                    if (Days.TryGetValue(dia.DayOfWeek, out var horario))
                     {
+                        DateTime inicioJornada = dia.Date + horario.JobStart;
+                        DateTime finJornada = dia.Date + horario.JobEnd;
 
-                        DateTime start = Begin_Date > inicioJornada ? Begin_Date : inicioJornada;
-                        DateTime end = End_Date < finJornada ? End_Date : finJornada;
-
-                        if (end > start)
+                        if (Begin_Date < finJornada && End_Date > inicioJornada)
                         {
-                            totalFaltado += end - start;
-                            if (LunchS.Minutes > 0 || LunchS.Hours > 0)
+
+                            DateTime start = Begin_Date > inicioJornada ? Begin_Date : inicioJornada;
+                            DateTime end = End_Date < finJornada ? End_Date : finJornada;
+
+                            if (end > start)
                             {
-                                totalFaltado -= (LunchF - LunchS);
-                            }
-                            else
-                            {
-                                totalFaltado -= new TimeSpan(1, 0, 0);
+                                totalFaltado += end - start;
+                                if (LunchS.Value.Minutes > 0 || LunchS.Value.Hours > 0)
+                                {
+                                    totalFaltado -= (LunchF.Value - LunchS.Value);
+                                }
+                                else
+                                {
+                                    totalFaltado -= new TimeSpan(1, 0, 0);
+                                }
                             }
                         }
                     }
@@ -93,7 +95,5 @@ namespace Modelos.AsistenciasYPermisos
             }
             return totalFaltado;
         }
-
-
     }
 }

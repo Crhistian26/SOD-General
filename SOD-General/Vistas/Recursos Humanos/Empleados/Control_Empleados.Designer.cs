@@ -114,7 +114,6 @@
             this.cR_ComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cR_ComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cR_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cR_ComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cR_ComboBox.ForeColor = System.Drawing.Color.White;
             this.cR_ComboBox.Location = new System.Drawing.Point(359, 31);

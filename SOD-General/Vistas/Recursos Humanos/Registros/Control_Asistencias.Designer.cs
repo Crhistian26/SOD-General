@@ -60,9 +60,9 @@
             this.cR_LabelDown7 = new CR_LabelDown();
             this.cR_LabelDown6 = new CR_LabelDown();
             this.cR_LabelDown2 = new CR_LabelDown();
-            this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelDown1 = new CR_LabelDown();
+            this.soD_ComboBox1 = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -119,9 +119,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cR_LabelDown2);
-            this.panel1.Controls.Add(this.soD_ComboBox1);
             this.panel1.Controls.Add(this.cR_DateTimePicker1);
             this.panel1.Controls.Add(this.cR_LabelDown1);
+            this.panel1.Controls.Add(this.soD_ComboBox1);
             this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(499, 365);
@@ -131,9 +131,9 @@
             // 
             this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(16, 87);
+            this.cr_Textbox1.Location = new System.Drawing.Point(16, 93);
             this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(279, 25);
+            this.cr_Textbox1.Size = new System.Drawing.Size(467, 25);
             this.cr_Textbox1.TabIndex = 27;
             this.cr_Textbox1.Visible = false;
             // 
@@ -451,16 +451,6 @@
             this.cR_LabelDown2.TabIndex = 3;
             this.cR_LabelDown2.Text = "Dia a registrar";
             // 
-            // soD_ComboBox1
-            // 
-            this.soD_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.soD_ComboBox1.FormattingEnabled = true;
-            this.soD_ComboBox1.Location = new System.Drawing.Point(16, 87);
-            this.soD_ComboBox1.Name = "soD_ComboBox1";
-            this.soD_ComboBox1.Size = new System.Drawing.Size(279, 27);
-            this.soD_ComboBox1.TabIndex = 2;
-            // 
             // cR_DateTimePicker1
             // 
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
@@ -480,6 +470,19 @@
             this.cR_LabelDown1.Size = new System.Drawing.Size(77, 20);
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
+            // 
+            // soD_ComboBox1
+            // 
+            this.soD_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.soD_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.soD_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.soD_ComboBox1.ForeColor = System.Drawing.Color.White;
+            this.soD_ComboBox1.FormattingEnabled = true;
+            this.soD_ComboBox1.Location = new System.Drawing.Point(16, 90);
+            this.soD_ComboBox1.Name = "soD_ComboBox1";
+            this.soD_ComboBox1.Size = new System.Drawing.Size(467, 29);
+            this.soD_ComboBox1.TabIndex = 28;
             // 
             // Control_Asistencias
             // 
@@ -519,7 +522,6 @@
         private CR_LabelDown cR_LabelDown1;
         private System.Windows.Forms.Panel panel1;
         private CR_LabelDown cR_LabelDown2;
-        private SOD_ComboBox soD_ComboBox1;
         private System.Windows.Forms.Panel panel3;
         private CR_LabelDown cR_LabelDown3;
         private CR_LabelDown cR_LabelDown4;
@@ -548,5 +550,6 @@
         public CR_DateTimePicker cR_DateTimePicker1;
         private Diseños.Botones_Nuevos botones_Nuevos2;
         private Cr_Textbox cr_Textbox1;
+        private Cr_ComboBox soD_ComboBox1;
     }
 }

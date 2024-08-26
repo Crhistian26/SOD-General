@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cr_ComboBox2 = new Cr_ComboBox();
             this.cr_ComboBox1 = new Cr_ComboBox();
@@ -52,7 +52,6 @@
             this.Registros_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botones_Nuevos6 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -66,14 +65,12 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos6);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cr_ComboBox2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cr_ComboBox1);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.botones_Nuevos5);
@@ -85,39 +82,34 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(1440, 754);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(960, 490);
             this.cR_SplitContainer1.SplitterDistance = 198;
-            this.cR_SplitContainer1.SplitterWidth = 6;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // cr_ComboBox2
             // 
             this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.White;
             this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.Black;
             this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Location = new System.Drawing.Point(24, 212);
-            this.cr_ComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cr_ComboBox2.Location = new System.Drawing.Point(16, 138);
             this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(368, 29);
+            this.cr_ComboBox2.Size = new System.Drawing.Size(301, 29);
             this.cr_ComboBox2.TabIndex = 8;
             // 
             // cr_ComboBox1
             // 
             this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox1.BackColor = System.Drawing.Color.White;
             this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox1.ForeColor = System.Drawing.Color.Black;
             this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Location = new System.Drawing.Point(24, 128);
-            this.cr_ComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cr_ComboBox1.Location = new System.Drawing.Point(16, 83);
             this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(368, 29);
+            this.cr_ComboBox1.Size = new System.Drawing.Size(301, 29);
             this.cr_ComboBox1.TabIndex = 7;
             this.cr_ComboBox1.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox1_SelectedIndexChanged);
             // 
@@ -131,10 +123,9 @@
             this.botones_Nuevos5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos5.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos5.Location = new System.Drawing.Point(24, 20);
-            this.botones_Nuevos5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botones_Nuevos5.Location = new System.Drawing.Point(16, 13);
             this.botones_Nuevos5.Name = "botones_Nuevos5";
-            this.botones_Nuevos5.Size = new System.Drawing.Size(262, 62);
+            this.botones_Nuevos5.Size = new System.Drawing.Size(175, 40);
             this.botones_Nuevos5.TabIndex = 6;
             this.botones_Nuevos5.Text = "Agregar permisos";
             this.botones_Nuevos5.UseVisualStyleBackColor = false;
@@ -149,8 +140,7 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(525, 14);
-            this.cR_Subtitulos1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(350, 9);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(271, 31);
             this.cR_Subtitulos1.TabIndex = 5;
@@ -161,8 +151,7 @@
             this.cR_LabelUp2.AutoSize = true;
             this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(18, 177);
-            this.cR_LabelUp2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cR_LabelUp2.Location = new System.Drawing.Point(12, 115);
             this.cR_LabelUp2.Name = "cR_LabelUp2";
             this.cR_LabelUp2.Size = new System.Drawing.Size(57, 20);
             this.cR_LabelUp2.TabIndex = 4;
@@ -177,10 +166,9 @@
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_DateTimePicker2);
             this.panel1.Controls.Add(this.cR_DateTimePicker1);
-            this.panel1.Location = new System.Drawing.Point(422, 50);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(323, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 140);
+            this.panel1.Size = new System.Drawing.Size(625, 91);
             this.panel1.TabIndex = 2;
             // 
             // botones_Nuevos4
@@ -193,8 +181,7 @@
             this.botones_Nuevos4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos4.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos4.Location = new System.Drawing.Point(639, 6);
-            this.botones_Nuevos4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botones_Nuevos4.Location = new System.Drawing.Point(472, 4);
             this.botones_Nuevos4.Name = "botones_Nuevos4";
             this.botones_Nuevos4.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos4.TabIndex = 5;
@@ -212,8 +199,7 @@
             this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos3.Location = new System.Drawing.Point(428, 6);
-            this.botones_Nuevos3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botones_Nuevos3.Location = new System.Drawing.Point(316, 4);
             this.botones_Nuevos3.Name = "botones_Nuevos3";
             this.botones_Nuevos3.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos3.TabIndex = 4;
@@ -231,8 +217,7 @@
             this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(216, 5);
-            this.botones_Nuevos2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botones_Nuevos2.Location = new System.Drawing.Point(160, 3);
             this.botones_Nuevos2.Name = "botones_Nuevos2";
             this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos2.TabIndex = 3;
@@ -250,8 +235,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(6, 6);
-            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(4, 4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos1.TabIndex = 2;
@@ -263,10 +247,9 @@
             // 
             this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(428, 98);
-            this.cR_DateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(357, 64);
             this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
-            this.cR_DateTimePicker2.Size = new System.Drawing.Size(396, 24);
+            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker2.TabIndex = 1;
             this.cR_DateTimePicker2.ValueChanged += new System.EventHandler(this.cR_DateTimePicker2_ValueChanged);
             // 
@@ -274,10 +257,9 @@
             // 
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(4, 98);
-            this.cR_DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(3, 64);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(396, 24);
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker1.TabIndex = 0;
             this.cR_DateTimePicker1.ValueChanged += new System.EventHandler(this.cR_DateTimePicker1_ValueChanged);
             // 
@@ -286,8 +268,7 @@
             this.cR_LabelUp1.AutoSize = true;
             this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(18, 92);
-            this.cR_LabelUp1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cR_LabelUp1.Location = new System.Drawing.Point(12, 60);
             this.cR_LabelUp1.Name = "cR_LabelUp1";
             this.cR_LabelUp1.Size = new System.Drawing.Size(77, 20);
             this.cR_LabelUp1.TabIndex = 1;
@@ -298,10 +279,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registros_RecordId,
@@ -315,11 +296,10 @@
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(1440, 550);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(960, 288);
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
             // 
@@ -379,32 +359,14 @@
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 
-            // botones_Nuevos6
-            // 
-            this.botones_Nuevos6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos6.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos6.BorderRadius = 40;
-            this.botones_Nuevos6.BorderSize = 0;
-            this.botones_Nuevos6.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos6.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos6.Location = new System.Drawing.Point(242, 81);
-            this.botones_Nuevos6.Name = "botones_Nuevos6";
-            this.botones_Nuevos6.Size = new System.Drawing.Size(150, 40);
-            this.botones_Nuevos6.TabIndex = 9;
-            this.botones_Nuevos6.Text = "botones_Nuevos6";
-            this.botones_Nuevos6.UseVisualStyleBackColor = false;
-            // 
             // Registros_GeneralesPermisos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 754);
+            this.ClientSize = new System.Drawing.Size(960, 490);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1358, 726);
+            this.MinimumSize = new System.Drawing.Size(905, 472);
             this.Name = "Registros_GeneralesPermisos";
             this.Text = "Registros_Generales";
             this.Load += new System.EventHandler(this.Registros_Generales_Load);
@@ -426,7 +388,6 @@
         private CR_LabelUp cR_LabelUp1;
         private CR_LabelUp cR_LabelUp2;
         private System.Windows.Forms.Panel panel1;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
         private CR_DateTimePicker cR_DateTimePicker2;
         private CR_DateTimePicker cR_DateTimePicker1;
         private CR_Subtitulos cR_Subtitulos1;
@@ -445,6 +406,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private Diseños.Botones_Nuevos botones_Nuevos6;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
     }
 }
