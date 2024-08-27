@@ -193,6 +193,18 @@ namespace Controladores
         {
             List<Model_Operations> operations = this.Role._Operations;
 
+            if (this.Role.Name == "Administrador")
+            {
+                List<Model_Operations> data = new List<Model_Operations>();
+                foreach (var ope in DictionaryData())
+                {
+                    data.Add(
+                        new Model_Operations(0, ope.Key.Item1, ope.Key.Item2)
+                        );
+                }
+                operations = data;
+            }
+
             var GroupOperations = operations.GroupBy(a => a._Module).Select(a => a).ToList();
 
             foreach (var operations1 in GroupOperations)
@@ -227,6 +239,8 @@ namespace Controladores
                 }
 
             }
+            
+            
             ToolStripMenuItem login_back = new ToolStripMenuItem();
             login_back.Text = "Volver al login";
             login_back.Click += Login_Click;
