@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cr_ComboBox2 = new Cr_ComboBox();
             this.cr_ComboBox1 = new Cr_ComboBox();
@@ -47,8 +47,6 @@
             this.Registros_RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fin_Almuerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registros_Date2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -279,17 +277,15 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registros_RecordId,
             this.Registros_Employee,
             this.Registros_Reason,
-            this.Almuerzo,
-            this.Fin_Almuerzo,
             this.Registros_Date1,
             this.Registros_Date2,
             this.Cantidad});
@@ -323,20 +319,6 @@
             this.Registros_Reason.HeaderText = "Motivo";
             this.Registros_Reason.Name = "Registros_Reason";
             this.Registros_Reason.ReadOnly = true;
-            // 
-            // Almuerzo
-            // 
-            this.Almuerzo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Almuerzo.HeaderText = "Inicio de almuerzo";
-            this.Almuerzo.Name = "Almuerzo";
-            this.Almuerzo.ReadOnly = true;
-            // 
-            // Fin_Almuerzo
-            // 
-            this.Fin_Almuerzo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fin_Almuerzo.HeaderText = "Fin de almuerzo";
-            this.Fin_Almuerzo.Name = "Fin_Almuerzo";
-            this.Fin_Almuerzo.ReadOnly = true;
             // 
             // Registros_Date1
             // 
@@ -398,14 +380,12 @@
         private Diseños.Botones_Nuevos botones_Nuevos5;
         private Cr_ComboBox cr_ComboBox2;
         private Cr_ComboBox cr_ComboBox1;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Employee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Reason;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Almuerzo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fin_Almuerzo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Registros_Date2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
     }
 }

@@ -27,7 +27,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
-            permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+            permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value.AddDays(1));
             CentrarElementos();
             LlenarComboEmpleados();
             LlenarComboMotivos();
@@ -75,11 +75,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 cR_DataGriedView1.Rows.Clear();
                 data =
                     permisos.Select(a => a)
-                    .Where
-                    (
-                        a => a.End_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
-                        && a.Begin_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
-                    )
                     .OrderBy(a => a.Begin_Date)
                     .ToList();
             }
@@ -89,10 +84,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 data =
                     permisos.Select(a => a)
                     .Where
-                    (
-                    a => a.Begin_Date.DayOfYear <= cR_DateTimePicker2.Value.DayOfYear
-                    && a.End_Date.DayOfYear >= cR_DateTimePicker1.Value.DayOfYear
-                    && a._Name == cr_ComboBox1.Text
+                    ( a =>
+                        a._Name == cr_ComboBox1.Text
                     )
                     .OrderBy(a => a.Begin_Date)
                     .ToList();
@@ -101,14 +94,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 foreach (Record_Permission Record in data)
                 {
-                    string lunchS = "No almorzo";
-                    string lunchF = "No almorzo";
                     cR_DataGriedView1.Rows.Add(
                     Record.IdRecord,
                     Record._Name,
                     Record._Reason,
-                    lunchS,
-                    lunchF,
                     Record.Begin_Date.ToString("f"),
                     Record.End_Date.ToString("f"),
                     Record.Get_Hours_Ausent().ToString(@"hh\:mm")
@@ -222,7 +211,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
             else
             {
-                permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value.Date, cR_DateTimePicker2.Value.Date.AddDays(1));
                 OrganizarDataGriedFecha();
             }
         }
@@ -237,7 +226,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
             else
             {
-                permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+                permisos = control.Obtener_Permisos(cR_DateTimePicker1.Value.Date, cR_DateTimePicker2.Value.Date.AddDays(1));
                 OrganizarDataGriedFecha();
             }
         }

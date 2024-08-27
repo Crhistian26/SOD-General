@@ -114,6 +114,27 @@ namespace SOD_General.Controladores
             }
         }
 
+        public TimeSpan ConvertComboForTimeSpan(int hour, int minutes, string Meridiem)
+        {
+
+            if (Meridiem == "AM" && hour < 12)
+            {
+                return new TimeSpan(hour,minutes,0);
+            }
+            else if (Meridiem == "AM" && hour == 12)
+            {
+                return new TimeSpan(0,minutes,0);
+            }
+            else if (Meridiem == "PM" && hour < 12)
+            {
+                return new TimeSpan(hour + 12, minutes, 0);
+            }
+            else
+            {
+                return new TimeSpan(hour, minutes, 0);
+            }
+        }
+
         public TimeSpan CreateTS(string hour, string min, string merides)
         {
             TimeSpan time = new TimeSpan();

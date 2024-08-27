@@ -27,6 +27,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
             this.Permission_Record = record;
+            this.botones_Nuevos1.Click += Add_Permission;
         }
 
         private void AddPermissionView()
@@ -99,6 +100,77 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 panel3.Visible = true;
             }
+        }
+
+        private void Add_Permission(object sender, EventArgs e)
+        {
+            DateTime Begin = new DateTime();
+            DateTime End = new DateTime();
+
+            if(cR_Checkbox1.Checked)
+            {
+                var day = _size.Days[cR_DateTimePicker1.Value.DayOfWeek];
+                var hello = new DateTime
+                    (cR_DateTimePicker1.Value.Year,
+                    cR_DateTimePicker1.Value.Month,
+                    cR_DateTimePicker1.Value.Day)
+                    + day.JobStart
+                    ;
+                Begin = hello;
+            }
+            else
+            {
+                var hello = new DateTime
+                    (cR_DateTimePicker1.Value.Year,
+                    cR_DateTimePicker1.Value.Month,
+                    cR_DateTimePicker1.Value.Day)
+                    + _size.ConvertComboForTimeSpan(
+                        Convert.ToInt32(cR_TBhora1.Text),
+                        Convert.ToInt32(cR_TBminutos1.Text),
+                        cr_ComboBox3.SelectedItem.ToString()
+                        );
+                Begin = hello;
+            }
+
+            if (cR_Checkbox2.Checked)
+            {
+                var day = _size.Days[cR_DateTimePicker2.Value.DayOfWeek];
+                var hello = new DateTime
+                    (cR_DateTimePicker2.Value.Year,
+                    cR_DateTimePicker2.Value.Month,
+                    cR_DateTimePicker2.Value.Day)
+                    + day.JobEnd
+                    ;
+                End = hello;
+            }
+            else
+            {
+                var hello = new DateTime
+                    (cR_DateTimePicker2.Value.Year,
+                    cR_DateTimePicker2.Value.Month,
+                    cR_DateTimePicker2.Value.Day)
+                    + _size.ConvertComboForTimeSpan(
+                        Convert.ToInt32(cR_TBhora2.Text),
+                        Convert.ToInt32(cR_TBminutos2.Text),
+                        cr_ComboBox4.SelectedItem.ToString()
+                        );
+                End = hello;
+            }
+
+            Record_Permission record = new Record_Permission(
+                    0,
+                    empleados[cr_ComboBox1.SelectedIndex].IdEmployee,
+                    motivos[cr_ComboBox2.SelectedIndex].IdReason,
+                    soD_TextBox2.Text,
+                    Begin,
+                    End
+                );
+            if (control.Add_Permission(record))
+            {
+                control.Reset_VisualPermisos();
+                this.Close();
+            }
+
         }
     }
 }

@@ -24,8 +24,6 @@ namespace Modelos.AsistenciasYPermisos
         public string _Description { get; set; }
         public DateTime Begin_Date { get; set; }
         public DateTime End_Date { get; set; }
-        public TimeSpan? LunchS { get; set; }
-        public TimeSpan? LunchF { get; set; }
 
         public Record_Permission(int IdRecord, string Reason, string descip, DateTime fecha1, DateTime fecha2)
         {
@@ -34,22 +32,24 @@ namespace Modelos.AsistenciasYPermisos
             this._Description = descip;
             this.Begin_Date = fecha1;
             this.End_Date = fecha2;
-
         }
 
-        public Record_Permission(int IdRecord, string Reason, string Name, string descip, DateTime fecha1, DateTime fecha2)
+        public Record_Permission(int IdRecord, int idEmployee , int idReason, string descip, DateTime fecha1, DateTime fecha2)
+        {
+            this.IdRecord = IdRecord;
+            this.IdEmployee = idEmployee;
+            this.IdReason = idReason;
+            this._Description = descip;
+            this.Begin_Date = fecha1;
+            this.End_Date = fecha2;
+        }
+
+        public Record_Permission(int IdRecord, string Name, string Reason,  string descip, DateTime fecha1, DateTime fecha2)
             : this(IdRecord, Reason, descip, fecha1, fecha2)
         {
             this._Name = Name;
         }
-
-        public Record_Permission(int IdRecord, string Name,  string Reason,  string descip, DateTime fecha1, DateTime fecha2, TimeSpan time1, TimeSpan time2)
-            : this(IdRecord, Reason, Name, descip, fecha1, fecha2)
-        {
-            this.LunchS = time1;
-            this.LunchF = time2;
-        }
-        public Record_Permission(int IdRecord, string Name, DateTime fecha1, DateTime fecha2, string Reason)
+        public Record_Permission(int IdRecord, int idEmployee, string Name, DateTime fecha1, DateTime fecha2, string Reason)
         {
             this.IdRecord = IdRecord;
             this._Name = Name;
@@ -62,8 +62,6 @@ namespace Modelos.AsistenciasYPermisos
         {
 
             TimeSpan totalFaltado = TimeSpan.Zero;
-            if (this.LunchS != null)
-            {
                 for (DateTime dia = Begin_Date.Date; dia <= End_Date.Date; dia = dia.AddDays(1))
                 {
                     if (Days.TryGetValue(dia.DayOfWeek, out var horario))
@@ -76,23 +74,47 @@ namespace Modelos.AsistenciasYPermisos
 
                             DateTime start = Begin_Date > inicioJornada ? Begin_Date : inicioJornada;
                             DateTime end = End_Date < finJornada ? End_Date : finJornada;
-
+                            
+                            totalFaltado += end - start;
+                            
                             if (end > start)
                             {
-                                totalFaltado += end - start;
-                                if (LunchS.Value.Minutes > 0 || LunchS.Value.Hours > 0)
-                                {
-                                    totalFaltado -= (LunchF.Value - LunchS.Value);
-                                }
-                                else
-                                {
-                                    totalFaltado -= new TimeSpan(1, 0, 0);
-                                }
+                                totalFaltado -= new TimeSpan(1, 15, 0);
                             }
                         }
                     }
                 }
+            
+            return totalFaltado;
+        }
+
+        public TimeSpan Get_Hours_Ausent(DateTime FinalDate)
+        {
+
+            TimeSpan totalFaltado = TimeSpan.Zero;
+            for (DateTime dia = Begin_Date.Date; dia <= FinalDate; dia = dia.AddDays(1))
+            {
+                if (Days.TryGetValue(dia.DayOfWeek, out var horario))
+                {
+                    DateTime inicioJornada = dia.Date + horario.JobStart;
+                    DateTime finJornada = dia.Date + horario.JobEnd;
+
+                    if (Begin_Date < finJornada && End_Date > inicioJornada)
+                    {
+
+                        DateTime start = Begin_Date > inicioJornada ? Begin_Date : inicioJornada;
+                        DateTime end = End_Date < finJornada ? End_Date : finJornada;
+
+                        totalFaltado += end - start;
+
+                        if (end > start)
+                        {
+                            totalFaltado -= new TimeSpan(1, 15, 0);
+                        }
+                    }
+                }
             }
+
             return totalFaltado;
         }
     }

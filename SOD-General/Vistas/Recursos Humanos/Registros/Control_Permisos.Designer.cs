@@ -32,7 +32,14 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cR_LabelDown7 = new CR_LabelDown();
+            this.cr_ComboBox4 = new Cr_ComboBox();
+            this.cR_TBhora2 = new CR_TBhora();
+            this.cR_TBminutos2 = new CR_TBminutos();
+            this.cR_LabelDown9 = new CR_LabelDown();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cR_LabelDown8 = new CR_LabelDown();
             this.cr_ComboBox3 = new Cr_ComboBox();
             this.cR_TBhora1 = new CR_TBhora();
             this.cR_TBminutos1 = new CR_TBminutos();
@@ -50,20 +57,14 @@
             this.soD_TextBox2 = new SOD_TextBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.cR_LabelDown8 = new CR_LabelDown();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.cR_LabelDown7 = new CR_LabelDown();
-            this.cr_ComboBox4 = new Cr_ComboBox();
-            this.cR_TBhora2 = new CR_TBhora();
-            this.cR_TBminutos2 = new CR_TBminutos();
-            this.cR_LabelDown9 = new CR_LabelDown();
+            this.cR_Checkbox3 = new CR_Checkbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -103,6 +104,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_Checkbox3);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cR_Checkbox2);
@@ -123,6 +125,81 @@
             this.panel1.Size = new System.Drawing.Size(922, 368);
             this.panel1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cR_LabelDown7);
+            this.panel3.Controls.Add(this.cr_ComboBox4);
+            this.panel3.Controls.Add(this.cR_TBhora2);
+            this.panel3.Controls.Add(this.cR_TBminutos2);
+            this.panel3.Controls.Add(this.cR_LabelDown9);
+            this.panel3.Location = new System.Drawing.Point(314, 194);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 72);
+            this.panel3.TabIndex = 37;
+            // 
+            // cR_LabelDown7
+            // 
+            this.cR_LabelDown7.AutoSize = true;
+            this.cR_LabelDown7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown7.Location = new System.Drawing.Point(16, 11);
+            this.cR_LabelDown7.Name = "cR_LabelDown7";
+            this.cR_LabelDown7.Size = new System.Drawing.Size(45, 20);
+            this.cR_LabelDown7.TabIndex = 32;
+            this.cR_LabelDown7.Text = "Hora:";
+            // 
+            // cr_ComboBox4
+            // 
+            this.cr_ComboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cr_ComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cr_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox4.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox4.FormattingEnabled = true;
+            this.cr_ComboBox4.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.cr_ComboBox4.Location = new System.Drawing.Point(130, 34);
+            this.cr_ComboBox4.Name = "cr_ComboBox4";
+            this.cr_ComboBox4.Size = new System.Drawing.Size(61, 29);
+            this.cr_ComboBox4.TabIndex = 31;
+            // 
+            // cR_TBhora2
+            // 
+            this.cR_TBhora2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cR_TBhora2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBhora2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBhora2.Location = new System.Drawing.Point(16, 37);
+            this.cR_TBhora2.MaxLength = 2;
+            this.cR_TBhora2.Name = "cR_TBhora2";
+            this.cR_TBhora2.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBhora2.TabIndex = 28;
+            // 
+            // cR_TBminutos2
+            // 
+            this.cR_TBminutos2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cR_TBminutos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cR_TBminutos2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_TBminutos2.Location = new System.Drawing.Point(82, 37);
+            this.cR_TBminutos2.MaxLength = 2;
+            this.cR_TBminutos2.Name = "cR_TBminutos2";
+            this.cR_TBminutos2.Size = new System.Drawing.Size(42, 25);
+            this.cR_TBminutos2.TabIndex = 29;
+            // 
+            // cR_LabelDown9
+            // 
+            this.cR_LabelDown9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cR_LabelDown9.AutoSize = true;
+            this.cR_LabelDown9.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown9.Location = new System.Drawing.Point(64, 39);
+            this.cR_LabelDown9.Name = "cR_LabelDown9";
+            this.cR_LabelDown9.Size = new System.Drawing.Size(12, 20);
+            this.cR_LabelDown9.TabIndex = 30;
+            this.cR_LabelDown9.Text = ":";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.cR_LabelDown8);
@@ -134,6 +211,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 72);
             this.panel2.TabIndex = 36;
+            // 
+            // cR_LabelDown8
+            // 
+            this.cR_LabelDown8.AutoSize = true;
+            this.cR_LabelDown8.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown8.Location = new System.Drawing.Point(16, 11);
+            this.cR_LabelDown8.Name = "cR_LabelDown8";
+            this.cR_LabelDown8.Size = new System.Drawing.Size(45, 20);
+            this.cR_LabelDown8.TabIndex = 32;
+            this.cR_LabelDown8.Text = "Hora:";
             // 
             // cr_ComboBox3
             // 
@@ -227,7 +315,7 @@
             this.cR_Checkbox1.AutoSize = true;
             this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(88, 135);
+            this.cR_Checkbox1.Location = new System.Drawing.Point(15, 135);
             this.cR_Checkbox1.Name = "cR_Checkbox1";
             this.cR_Checkbox1.Size = new System.Drawing.Size(119, 24);
             this.cR_Checkbox1.TabIndex = 23;
@@ -288,6 +376,7 @@
             this.botones_Nuevos1.TabIndex = 11;
             this.botones_Nuevos1.Text = "Agregar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.Add_Permission);
             // 
             // cR_DateTimePicker1
             // 
@@ -346,91 +435,17 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
-            // cR_LabelDown8
+            // cR_Checkbox3
             // 
-            this.cR_LabelDown8.AutoSize = true;
-            this.cR_LabelDown8.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown8.Location = new System.Drawing.Point(16, 11);
-            this.cR_LabelDown8.Name = "cR_LabelDown8";
-            this.cR_LabelDown8.Size = new System.Drawing.Size(45, 20);
-            this.cR_LabelDown8.TabIndex = 32;
-            this.cR_LabelDown8.Text = "Hora:";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.cR_LabelDown7);
-            this.panel3.Controls.Add(this.cr_ComboBox4);
-            this.panel3.Controls.Add(this.cR_TBhora2);
-            this.panel3.Controls.Add(this.cR_TBminutos2);
-            this.panel3.Controls.Add(this.cR_LabelDown9);
-            this.panel3.Location = new System.Drawing.Point(314, 194);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 72);
-            this.panel3.TabIndex = 37;
-            // 
-            // cR_LabelDown7
-            // 
-            this.cR_LabelDown7.AutoSize = true;
-            this.cR_LabelDown7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown7.Location = new System.Drawing.Point(16, 11);
-            this.cR_LabelDown7.Name = "cR_LabelDown7";
-            this.cR_LabelDown7.Size = new System.Drawing.Size(45, 20);
-            this.cR_LabelDown7.TabIndex = 32;
-            this.cR_LabelDown7.Text = "Hora:";
-            // 
-            // cr_ComboBox4
-            // 
-            this.cr_ComboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cr_ComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cr_ComboBox4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox4.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox4.FormattingEnabled = true;
-            this.cr_ComboBox4.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.cr_ComboBox4.Location = new System.Drawing.Point(130, 34);
-            this.cr_ComboBox4.Name = "cr_ComboBox4";
-            this.cr_ComboBox4.Size = new System.Drawing.Size(61, 29);
-            this.cr_ComboBox4.TabIndex = 31;
-            // 
-            // cR_TBhora2
-            // 
-            this.cR_TBhora2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cR_TBhora2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBhora2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBhora2.Location = new System.Drawing.Point(16, 37);
-            this.cR_TBhora2.MaxLength = 2;
-            this.cR_TBhora2.Name = "cR_TBhora2";
-            this.cR_TBhora2.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBhora2.TabIndex = 28;
-            // 
-            // cR_TBminutos2
-            // 
-            this.cR_TBminutos2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cR_TBminutos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cR_TBminutos2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_TBminutos2.Location = new System.Drawing.Point(82, 37);
-            this.cR_TBminutos2.MaxLength = 2;
-            this.cR_TBminutos2.Name = "cR_TBminutos2";
-            this.cR_TBminutos2.Size = new System.Drawing.Size(42, 25);
-            this.cR_TBminutos2.TabIndex = 29;
-            // 
-            // cR_LabelDown9
-            // 
-            this.cR_LabelDown9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cR_LabelDown9.AutoSize = true;
-            this.cR_LabelDown9.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown9.Location = new System.Drawing.Point(64, 39);
-            this.cR_LabelDown9.Name = "cR_LabelDown9";
-            this.cR_LabelDown9.Size = new System.Drawing.Size(12, 20);
-            this.cR_LabelDown9.TabIndex = 30;
-            this.cR_LabelDown9.Text = ":";
+            this.cR_Checkbox3.AutoSize = true;
+            this.cR_Checkbox3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox3.Location = new System.Drawing.Point(150, 135);
+            this.cR_Checkbox3.Name = "cR_Checkbox3";
+            this.cR_Checkbox3.Size = new System.Drawing.Size(92, 24);
+            this.cR_Checkbox3.TabIndex = 38;
+            this.cR_Checkbox3.Text = "Almorzo?";
+            this.cR_Checkbox3.UseVisualStyleBackColor = true;
             // 
             // Control_Permisos
             // 
@@ -451,10 +466,10 @@
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -489,5 +504,6 @@
         private CR_TBminutos cR_TBminutos2;
         private CR_LabelDown cR_LabelDown9;
         private CR_LabelDown cR_LabelDown8;
+        private CR_Checkbox cR_Checkbox3;
     }
 }

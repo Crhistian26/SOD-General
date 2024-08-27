@@ -125,7 +125,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Exportar
         {
 
             List<Record_Attendance> records = controlRegistro.Obtener_Asistencias(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
-            List<Record_Permission> permissions = controlRegistro.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value);
+            List<Record_Permission> permissions = controlRegistro.Obtener_Permisos(cR_DateTimePicker1.Value, cR_DateTimePicker2.Value.AddDays(1));
             if (records != null)
 
                 if (records.Count > 0)

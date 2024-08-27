@@ -247,15 +247,8 @@ namespace SOD_General.Controladores
                     string Det = reader.GetString(3);
                     DateTime Begin = reader.GetDateTime(4);
                     DateTime End = reader.GetDateTime(5);
-                    TimeSpan LunchS = new TimeSpan();
-                    TimeSpan LunchF = new TimeSpan();
-                    if (!reader.IsDBNull(6))
-                    {
-                        LunchS = reader.GetTimeSpan(6);
-                        LunchF = reader.GetTimeSpan(7);
-                    }
 
-                    record = new Record_Permission(IdRecord,  Name, Reason, Det, Begin, End, LunchS, LunchF);
+                    record = new Record_Permission(IdRecord,  Name, Reason, Det, Begin, End);
                     permisos.Add(record);
                 }
                 conex.Close();
@@ -283,6 +276,85 @@ namespace SOD_General.Controladores
             }
         }
 
+        public bool Add_Permission(Record_Permission record)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Add_Permission @idEmp,@idReason,@Details,@DT1,@DT2";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idEmp", record.IdEmployee);
+                cmd.Parameters.AddWithValue("@idReason", record.IdReason);
+                cmd.Parameters.AddWithValue("@Details", record._Description);
+                cmd.Parameters.AddWithValue("@DT1", record.Begin_Date);
+                cmd.Parameters.AddWithValue("@DT2", record.End_Date);
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool Edit_Permission(Record_Permission record)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Edit_Permission @idRecord,@idReason,@Details,@DT1,@DT2";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idRecord", record.IdRecord);
+                cmd.Parameters.AddWithValue("@idReason", record.IdReason);
+                cmd.Parameters.AddWithValue("@Details", record._Description);
+                cmd.Parameters.AddWithValue("@DT1", record.Begin_Date);
+                cmd.Parameters.AddWithValue("@DT2", record.End_Date);
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
         #endregion
 
         public List<Employee> Obtener_Empleados_Trabajando()
@@ -425,6 +497,11 @@ namespace SOD_General.Controladores
         {
             var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
             h.OpenForm(new Registros_GeneralesAsistencias());
+        }
+        public void Reset_VisualPermisos()
+        {
+            var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
+            h.OpenForm(new Registros_GeneralesPermisos(h));
         }
     }
 }
