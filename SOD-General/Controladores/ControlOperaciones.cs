@@ -112,8 +112,8 @@ namespace Controladores
                         ("Clientes","Añadir Clientes"),
                         (object sender, EventArgs e) =>
                         {
-                            AgregarClientes window = new AgregarClientes();
-                            _view.OpenForm(window);
+                         //   AgregarClientes window = new AgregarClientes();
+                          //  _view.OpenForm(window);
                         }
                     },
 

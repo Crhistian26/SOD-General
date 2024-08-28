@@ -31,6 +31,8 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cr_Textbox4 = new Cr_Textbox();
+            this.cr_Textbox1 = new Cr_Textbox();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown3 = new CR_LabelDown();
@@ -38,8 +40,6 @@
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cr_Textbox2 = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cr_Textbox4 = new Cr_Textbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -98,6 +98,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(691, 299);
             this.panel1.TabIndex = 1;
+            // 
+            // cr_Textbox4
+            // 
+            this.cr_Textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox4.Location = new System.Drawing.Point(40, 133);
+            this.cr_Textbox4.Name = "cr_Textbox4";
+            this.cr_Textbox4.Size = new System.Drawing.Size(264, 25);
+            this.cr_Textbox4.TabIndex = 11;
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(40, 34);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(232, 25);
+            this.cr_Textbox1.TabIndex = 10;
             // 
             // cR_LabelDown4
             // 
@@ -177,24 +195,6 @@
             this.cR_LabelDown1.Size = new System.Drawing.Size(64, 20);
             this.cR_LabelDown1.TabIndex = 1;
             this.cR_LabelDown1.Text = "Nombre";
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(40, 34);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(264, 25);
-            this.cr_Textbox1.TabIndex = 10;
-            // 
-            // cr_Textbox4
-            // 
-            this.cr_Textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox4.Location = new System.Drawing.Point(40, 133);
-            this.cr_Textbox4.Name = "cr_Textbox4";
-            this.cr_Textbox4.Size = new System.Drawing.Size(264, 25);
-            this.cr_Textbox4.TabIndex = 11;
             // 
             // AddContact
             // 

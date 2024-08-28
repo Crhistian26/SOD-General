@@ -367,6 +367,7 @@
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.Designer.cs">
       <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Clientes\AddLocations.Designer.cs" />
     <Compile Include="Vistas\Taller\Clientes\EditarSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,29 +476,11 @@
     <Compile Include="Vistas\Taller\Inventario\VisualizarPiezas.Designer.cs">
       <DependentUpon>VisualizarPiezas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Taller\Clientes\AgregarClientes.cs">
+    <Compile Include="Vistas\Taller\Clientes\AddEnterprise.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Taller\Clientes\AgregarClientes.Designer.cs">
-      <DependentUpon>AgregarClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Taller\Pruebadiseño\AddContact.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Taller\Pruebadiseño\AddContact.Designer.cs">
-      <DependentUpon>AddContact.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Taller\Pruebadiseño\AddEnterprise.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Taller\Pruebadiseño\AddEnterprise.Designer.cs">
+    <Compile Include="Vistas\Taller\Clientes\AddEnterprise.Designer.cs">
       <DependentUpon>AddEnterprise.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Taller\Pruebadiseño\AddLocation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Taller\Pruebadiseño\AddLocation.Designer.cs">
-      <DependentUpon>AddLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Pruebadiseño\sucursalesSeleccion.cs">
       <SubType>Form</SubType>
@@ -647,9 +630,6 @@
     <EmbeddedResource Include="Vistas\Taller\Control calidad\VisualizarControles.resx">
       <DependentUpon>VisualizarControles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Clientes\AgregarClientes.resx">
-      <DependentUpon>AgregarClientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Controles de Equipo\AplicarControl.resx">
       <DependentUpon>AplicarControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -674,14 +654,8 @@
     <EmbeddedResource Include="Vistas\Taller\Equipos\VisualizarMarcas.resx">
       <DependentUpon>VisualizarMarcas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\AddContact.resx">
-      <DependentUpon>AddContact.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\AddEnterprise.resx">
+    <EmbeddedResource Include="Vistas\Taller\Clientes\AddEnterprise.resx">
       <DependentUpon>AddEnterprise.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\AddLocation.resx">
-      <DependentUpon>AddLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\sucursalesSeleccion.resx">
       <DependentUpon>sucursalesSeleccion.cs</DependentUpon>
