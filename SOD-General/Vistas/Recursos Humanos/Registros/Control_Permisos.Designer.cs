@@ -57,7 +57,6 @@
             this.soD_TextBox2 = new SOD_TextBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.cR_Checkbox3 = new CR_Checkbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -104,7 +103,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cR_Checkbox3);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cR_Checkbox2);
@@ -315,7 +313,7 @@
             this.cR_Checkbox1.AutoSize = true;
             this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(15, 135);
+            this.cR_Checkbox1.Location = new System.Drawing.Point(87, 135);
             this.cR_Checkbox1.Name = "cR_Checkbox1";
             this.cR_Checkbox1.Size = new System.Drawing.Size(119, 24);
             this.cR_Checkbox1.TabIndex = 23;
@@ -435,18 +433,6 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Empleado";
             // 
-            // cR_Checkbox3
-            // 
-            this.cR_Checkbox3.AutoSize = true;
-            this.cR_Checkbox3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox3.Location = new System.Drawing.Point(150, 135);
-            this.cR_Checkbox3.Name = "cR_Checkbox3";
-            this.cR_Checkbox3.Size = new System.Drawing.Size(92, 24);
-            this.cR_Checkbox3.TabIndex = 38;
-            this.cR_Checkbox3.Text = "Almorzo?";
-            this.cR_Checkbox3.UseVisualStyleBackColor = true;
-            // 
             // Control_Permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,6 +490,5 @@
         private CR_TBminutos cR_TBminutos2;
         private CR_LabelDown cR_LabelDown9;
         private CR_LabelDown cR_LabelDown8;
-        private CR_Checkbox cR_Checkbox3;
     }
 }

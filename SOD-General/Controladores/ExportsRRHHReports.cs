@@ -493,8 +493,6 @@ namespace SOD_General.Controladores
                             color= XLColor.BlueGray;
                         }
                     }
-                    
-
 
                     CountHours.Cell(row, 1).Value = Name;
                     CountHours.Cell(row, 2).Value = CountAttendanceHours;
