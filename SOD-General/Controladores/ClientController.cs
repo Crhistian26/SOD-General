@@ -1,8 +1,12 @@
-﻿using Modelos.Taller;
+﻿using Modelos.Control_de_usuarios;
+using Modelos.Taller;
+using SOD_General.Vistas.Taller.Clientes;
+using SOD_General.Vistas.Taller.Pruebadiseño;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -12,6 +16,10 @@ namespace SOD_General.Controladores
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
 
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().FirstOrDefault().user;
+
+        AppVistaGeneral view;
+
         List<Client> Registro;
 
         /// <summary>
@@ -19,34 +27,41 @@ namespace SOD_General.Controladores
         /// </summary>
         /// <param name="cli"></param>
         /// 
-        public void AgregarCliente(Client cli)
+        public void AgregarCliente(int ident)
         {
+            view = new AppVistaGeneral(user);
             try
             {
-                string Query = "Exec Add_Client @Identifier, @Client, @Address, @Phone1, @Phone2, @Contact";
+                string Query = "Exec Add_Client @Identifier";
 
                 SqlCommand cmd = new SqlCommand(Query, conex);
-                cmd.Parameters.Add("@Identifier", cli._Identifier);
-                cmd.Parameters.Add("@Client", cli._NameBranch);
-                cmd.Parameters.Add("@Address", cli._Address);
-
-                cmd.Parameters.Add("@Phone1", cli.Phone_1);
-                cmd.Parameters.Add("@Phone2", cli.Phone_2);
-                cmd.Parameters.Add("@Contact", cli._Contact);
-
+                cmd.Parameters.AddWithValue("@Identifier", ident);
                 conex.Open();
                 cmd.ExecuteNonQuery();
                 conex.Close();
+                MessageBox.Show("RNC/Cedula cargado");
 
-                MessageBox.Show(cli._NameBranch + "\n" + cli._Address);
+                AddLocations window = new AddLocations();
+                view.OpenForm(window);
             }
+
+
             catch (SqlException ex)
             {
+                MessageBox.Show("Cliente no registrado: " + ex.ToString());
 
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
             }
 
             catch (Exception ex)
             {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
                 MessageBox.Show("Cliente no registrado: " + ex.ToString());
             }
         }
@@ -113,7 +128,7 @@ namespace SOD_General.Controladores
                 List<Locations> locations = new List<Locations>();
 
                 SqlCommand cmd = new SqlCommand(Query, conex);
-                cmd.Parameters.Add("@id", id);
+                cmd.Parameters.AddWithValue("@id", id);
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -168,12 +183,12 @@ namespace SOD_General.Controladores
                 string Query = "Exec Add_Locations @Identifier, @Location, @Address, @Phone1, @Phone2, @Contact";
                 SqlCommand cmd = new SqlCommand(Query, conex);
 
-                cmd.Parameters.Add("@Identifier", loc.Identifier);
-                cmd.Parameters.Add("@Location", loc._Location);
-                cmd.Parameters.Add("@Address", loc.Addrees);
-                cmd.Parameters.Add("@Phone1", loc.Phone1);
-                cmd.Parameters.Add("@Phone2", loc.Phone2);
-                cmd.Parameters.Add("@Contact", loc.Contact);
+                cmd.Parameters.AddWithValue("@Identifier", loc.Identifier);
+                cmd.Parameters.AddWithValue("@Location", loc._Location);
+                cmd.Parameters.AddWithValue("@Address", loc.Addrees);
+                cmd.Parameters.AddWithValue("@Phone1", loc.Phone1);
+                cmd.Parameters.AddWithValue("@Phone2", loc.Phone2);
+                cmd.Parameters.AddWithValue("@Contact", loc.Contact);
 
                 conex.Open();
                 cmd.ExecuteNonQuery();

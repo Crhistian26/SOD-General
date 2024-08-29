@@ -367,7 +367,18 @@
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.Designer.cs">
       <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Taller\Clientes\AddLocations.Designer.cs" />
+    <Compile Include="Vistas\Taller\Clientes\AddContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\AddContact.Designer.cs">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\AddLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\AddLocations.Designer.cs">
+      <DependentUpon>AddLocations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Clientes\EditarSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -605,6 +616,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.resx">
       <DependentUpon>Registros_GeneralesPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Clientes\AddContact.resx">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Clientes\AddLocations.resx">
+      <DependentUpon>AddLocations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Clientes\EditarSucursales.resx">
       <DependentUpon>EditarSucursales.cs</DependentUpon>

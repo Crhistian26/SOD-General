@@ -63,7 +63,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(691, 383);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(691, 357);
             this.cR_SplitContainer1.SplitterDistance = 80;
             this.cR_SplitContainer1.TabIndex = 2;
             // 
@@ -96,7 +96,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(691, 299);
+            this.panel1.Size = new System.Drawing.Size(691, 273);
             this.panel1.TabIndex = 1;
             // 
             // cr_Textbox4
@@ -190,7 +190,7 @@
             this.cR_LabelDown1.AutoSize = true;
             this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(155, 11);
+            this.cR_LabelDown1.Location = new System.Drawing.Point(116, 11);
             this.cR_LabelDown1.Name = "cR_LabelDown1";
             this.cR_LabelDown1.Size = new System.Drawing.Size(64, 20);
             this.cR_LabelDown1.TabIndex = 1;
@@ -200,8 +200,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 383);
+            this.ClientSize = new System.Drawing.Size(691, 357);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddContact";
             this.Text = "AddContact";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);

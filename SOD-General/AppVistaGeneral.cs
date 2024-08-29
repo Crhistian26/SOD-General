@@ -16,6 +16,7 @@ namespace SOD_General
         public AppVistaGeneral(Model_User user)
         {
             InitializeComponent();
+
             this.user = user;
             controller = new ControlOperaciones(user, this);
         }
