@@ -44,8 +44,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                 {
                     cR_DataGriedView2.Rows.Add(
                         _size.FiltarHoras(registro.Entry),
-                        _size.FiltarHoras(registro.LunchS),
-                        _size.FiltarHoras(registro.LunchF),
+                        _size.FiltarHoras(registro.LunchS.Value),
+                        _size.FiltarHoras(registro.LunchF.Value),
                         _size.FiltarHoras(registro.Exit),
                         registro.Job_Hours.ToString().Substring(0, 5) + " Horas",
                         registro.DateAttendance.ToString("D")

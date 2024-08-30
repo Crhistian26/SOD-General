@@ -59,10 +59,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             (cR_TBhora2.Text, cR_TBminutos2.Text, index) = _size.FiltrarHorasComb(record.Exit);
             soD_ComboBox3.SelectedIndex = soD_ComboBox4.FindString(index);
 
-            (cR_TBhora3.Text, cR_TBminutos3.Text, index) = _size.FiltrarHorasComb(record.LunchS);
+            (cR_TBhora3.Text, cR_TBminutos3.Text, index) = _size.FiltrarHorasComb(record.LunchS.Value);
             soD_ComboBox4.SelectedIndex = soD_ComboBox4.FindString(index);
 
-            (cR_TBhora4.Text, cR_TBminutos4.Text, index) = _size.FiltrarHorasComb(record.LunchF);
+            (cR_TBhora4.Text, cR_TBminutos4.Text, index) = _size.FiltrarHorasComb(record.LunchF.Value);
             soD_ComboBox5.SelectedIndex = soD_ComboBox4.FindString(index);
 
             if (user.Confirm_Operation("Eliminar asistencias"))

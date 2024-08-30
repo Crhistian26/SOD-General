@@ -143,8 +143,8 @@ namespace SOD_General.Controladores
                     hoja1.Cell(row, 1).Value = record._Name;
                     hoja1.Cell(row, 2).Value = record.DateAttendance.ToString("dddd d MMM yyy");
                     hoja1.Cell(row, 3).Value = _size.FiltarHoras(record.Entry);
-                    hoja1.Cell(row, 4).Value = _size.FiltarHoras(record.LunchS);
-                    hoja1.Cell(row, 5).Value = _size.FiltarHoras(record.LunchF);
+                    hoja1.Cell(row, 4).Value = _size.FiltarHoras(record.LunchS.Value);
+                    hoja1.Cell(row, 5).Value = _size.FiltarHoras(record.LunchF.Value);
                     hoja1.Cell(row, 6).Value = _size.FiltarHoras(record.Exit);
                     hoja1.Cell(row, 7).Value = record.Job_Hours.ToString().Substring(0, 5) + " Horas";
                     row++;

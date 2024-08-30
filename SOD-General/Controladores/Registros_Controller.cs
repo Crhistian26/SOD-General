@@ -50,8 +50,17 @@ namespace SOD_General.Controladores
                     string Name = reader.GetString(2) + " " + reader.GetString(3);
                     TimeSpan entry = reader.GetTimeSpan(4);
                     TimeSpan exit = reader.GetTimeSpan(5);
-                    TimeSpan lunchS = reader.GetTimeSpan(6);
-                    TimeSpan lunchF = reader.GetTimeSpan(7);
+                    TimeSpan? lunchS, lunchF;
+                    if(!reader.IsDBNull(6) && !reader.IsDBNull(7))
+                    {
+                        lunchS = reader.GetTimeSpan(6);
+                        lunchF = reader.GetTimeSpan(7);
+                    }
+                    else
+                    {
+                        lunchS = null;
+                        lunchF = null;
+                    }
                     DateTime record_Date = reader.GetDateTime(8);
 
                     record = new Record_Attendance(IdRecord, IdEmployee, Name, entry, exit, lunchS, lunchF, record_Date);
@@ -92,8 +101,16 @@ namespace SOD_General.Controladores
                 cmd.Parameters.AddWithValue("@idEmp", record.IdEmployee);
                 cmd.Parameters.AddWithValue("@entry", record.Entry);
                 cmd.Parameters.AddWithValue("@exit", record.Exit);
-                cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
-                cmd.Parameters.AddWithValue("@lunchF", record.LunchF);
+                if (record.LunchS != null && record.LunchF != null)
+                {
+                    cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
+                    cmd.Parameters.AddWithValue("@lunchF", record.LunchF);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@lunchS", DBNull.Value);
+                    cmd.Parameters.AddWithValue("@lunchF", DBNull.Value);
+                }
                 cmd.Parameters.AddWithValue("@date", record.DateAttendance);
                 //El proceso
                 conex.Open();
@@ -133,8 +150,16 @@ namespace SOD_General.Controladores
                 cmd.Parameters.AddWithValue("@employeeId", record.IdEmployee);
                 cmd.Parameters.AddWithValue("@entry", record.Entry);
                 cmd.Parameters.AddWithValue("@exit", record.Exit);
-                cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
-                cmd.Parameters.AddWithValue("@lunchF", record.LunchF);
+                if (record.LunchS != null && record.LunchF != null)
+                {
+                    cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
+                    cmd.Parameters.AddWithValue("@lunchF", record.LunchF);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@lunchS", DBNull.Value);
+                    cmd.Parameters.AddWithValue("@lunchF", DBNull.Value);
+                }
                 cmd.Parameters.AddWithValue("@date", record.DateAttendance);
 
                 conex.Open();

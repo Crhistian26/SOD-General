@@ -50,20 +50,27 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 foreach (Record_Attendance registro in data)
                 {
+                    string LS, LF;
+                    if(registro.LunchS != null && registro.LunchF != null)
+                    {
+                        LS = _size.FiltarHoras(registro.LunchS.Value);
+                        LF = _size.FiltarHoras(registro.LunchF.Value);
+                    }
+                    else
+                    {
+                        LS = "No almorzo";
+                        LF = "No almorzo";
+                    }
                     cR_DataGriedView2.Rows.Add(
                         registro.IdRecord,
                         registro._Name,
                         _size.FiltarHoras(registro.Entry),
-                        _size.FiltarHoras(registro.LunchS),
-                        _size.FiltarHoras(registro.LunchF),
+                        LS,
+                        LF,
                         _size.FiltarHoras(registro.Exit),
                         registro.Job_Hours.ToString().Substring(0, 5) + " Horas"
                         );
                 }
-            }
-            else
-            {
-
             }
         }
 

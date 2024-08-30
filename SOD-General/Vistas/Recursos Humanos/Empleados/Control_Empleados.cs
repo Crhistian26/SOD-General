@@ -40,8 +40,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             panel2.Visible = true;
             cR_DateTimePicker1.Value = employee.Admission_date;
             botones_Nuevos1.Click += EditEmployee;
-
-
             if (employee.Dismissal_date.HasValue)
             {
                 panel3.Visible = true;

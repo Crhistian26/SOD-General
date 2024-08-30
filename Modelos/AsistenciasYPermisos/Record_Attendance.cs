@@ -9,12 +9,12 @@ namespace Modelos.AsistenciasYPermisos
         public string _Name { get; set; }
         public TimeSpan Entry { get; set; }
         public TimeSpan Exit { get; set; }
-        public TimeSpan LunchS { get; set; }
-        public TimeSpan LunchF { get; set; }
+        public TimeSpan? LunchS { get; set; }
+        public TimeSpan? LunchF { get; set; }
         public DateTime DateAttendance { get; set; }
         public TimeSpan Job_Hours { get; set; }
 
-        public Record_Attendance(int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
+        public Record_Attendance(int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan? lunchS, TimeSpan? lunchF, DateTime dateAttendance)
         {
             this.IdEmployee = idEmployee;
             this.Entry = entry;
@@ -25,22 +25,26 @@ namespace Modelos.AsistenciasYPermisos
 
         }
 
-        public Record_Attendance(DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF)
+        public Record_Attendance(DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan? lunchS, TimeSpan? lunchF)
         {
             this.Entry = entry;
             this.Exit = exit;
             this.LunchS = lunchS;
             this.LunchF = lunchF;
             this.DateAttendance = dateAttendance;
-            Job_Hours = (exit - entry) - (lunchF - lunchS);
+            Job_Hours = (exit - entry);
+            if(lunchS != null && lunchF != null)
+            {
+                Job_Hours -= (lunchF.Value - lunchS.Value);
+            }
         }
-        public Record_Attendance(string Name, DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF)
+        public Record_Attendance(string Name, DateTime dateAttendance, TimeSpan entry, TimeSpan exit, TimeSpan? lunchS, TimeSpan? lunchF)
             : this(dateAttendance, entry, exit, lunchS, lunchF)
         {
             this._Name = Name;
         }
 
-        public Record_Attendance(int idRecord, int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
+        public Record_Attendance(int idRecord, int idEmployee, TimeSpan entry, TimeSpan exit, TimeSpan? lunchS, TimeSpan? lunchF, DateTime dateAttendance)
         {
             IdRecord = idRecord;
             IdEmployee = idEmployee;
@@ -50,11 +54,14 @@ namespace Modelos.AsistenciasYPermisos
             LunchF = lunchF;
             DateAttendance = dateAttendance;
 
-            Job_Hours = (exit - entry) - (lunchF - lunchS);
-
+            Job_Hours = (exit - entry);
+            if (lunchS != null && lunchF != null)
+            {
+                Job_Hours -= (lunchF.Value - lunchS.Value);
+            }
         }
 
-        public Record_Attendance(int idRecord, int idEmployee, string Name, TimeSpan entry, TimeSpan exit, TimeSpan lunchS, TimeSpan lunchF, DateTime dateAttendance)
+        public Record_Attendance(int idRecord, int idEmployee, string Name, TimeSpan entry, TimeSpan exit, TimeSpan? lunchS, TimeSpan? lunchF, DateTime dateAttendance)
            : this(idRecord, idEmployee, entry, exit, lunchS, lunchF, dateAttendance)
         {
 
