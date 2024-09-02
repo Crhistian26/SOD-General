@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.cr_ComboBox1 = new Cr_ComboBox();
+            this.cmbRnc = new Cr_ComboBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvRncSearch = new CR_DataGriedView();
-            this.cmbBx = new Cr_ComboBox();
-            this.cR_LabelDown1 = new CR_LabelDown();
-            this.btnGuardar = new Diseños.Botones_Nuevos();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbNmb = new Cr_ComboBox();
+            this.cR_LabelDown1 = new CR_LabelDown();
+            this.btnGuardar = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -67,13 +67,12 @@
             // 
             // cR_SplitContainer1.Panel2
             // 
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cr_ComboBox1);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbRnc);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbBx);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbNmb);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.btnGuardar);
-            this.cR_SplitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.cR_SplitContainer1_Panel2_Paint);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
             this.cR_SplitContainer1.SplitterDistance = 65;
             this.cR_SplitContainer1.TabIndex = 7;
@@ -94,18 +93,19 @@
             this.cR_Subtitulos1.Text = "Buscar Entidad Social";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // cr_ComboBox1
+            // cmbRnc
             // 
-            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Location = new System.Drawing.Point(272, 33);
-            this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(188, 29);
-            this.cr_ComboBox1.TabIndex = 11;
+            this.cmbRnc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbRnc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbRnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cmbRnc.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cmbRnc.ForeColor = System.Drawing.Color.White;
+            this.cmbRnc.FormattingEnabled = true;
+            this.cmbRnc.Location = new System.Drawing.Point(272, 33);
+            this.cmbRnc.Name = "cmbRnc";
+            this.cmbRnc.Size = new System.Drawing.Size(188, 29);
+            this.cmbRnc.TabIndex = 11;
+            this.cmbRnc.SelectedIndexChanged += new System.EventHandler(this.cmbRnc_SelectedIndexChanged);
             // 
             // cR_LabelDown2
             // 
@@ -134,18 +134,18 @@
             this.dgvRncSearch.AllowUserToAddRows = false;
             this.dgvRncSearch.AllowUserToDeleteRows = false;
             this.dgvRncSearch.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgvRncSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.dgvRncSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvRncSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRncSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column6,
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
+            this.Column5});
             this.dgvRncSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRncSearch.EnableHeadersVisualStyles = false;
             this.dgvRncSearch.Location = new System.Drawing.Point(0, 0);
@@ -155,48 +155,12 @@
             this.dgvRncSearch.Size = new System.Drawing.Size(766, 293);
             this.dgvRncSearch.TabIndex = 0;
             // 
-            // cmbBx
+            // Column6
             // 
-            this.cmbBx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbBx.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cmbBx.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cmbBx.ForeColor = System.Drawing.Color.White;
-            this.cmbBx.FormattingEnabled = true;
-            this.cmbBx.Location = new System.Drawing.Point(12, 33);
-            this.cmbBx.Name = "cmbBx";
-            this.cmbBx.Size = new System.Drawing.Size(188, 29);
-            this.cmbBx.TabIndex = 8;
-            // 
-            // cR_LabelDown1
-            // 
-            this.cR_LabelDown1.AutoSize = true;
-            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(8, 10);
-            this.cR_LabelDown1.Name = "cR_LabelDown1";
-            this.cR_LabelDown1.Size = new System.Drawing.Size(64, 20);
-            this.cR_LabelDown1.TabIndex = 7;
-            this.cR_LabelDown1.Text = "Nombre";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.Teal;
-            this.btnGuardar.BorderRadius = 40;
-            this.btnGuardar.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(637, 23);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(141, 39);
-            this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.Column6.HeaderText = "Id";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
             // 
             // Column1
             // 
@@ -229,12 +193,48 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // Column6
+            // cmbNmb
             // 
-            this.Column6.HeaderText = "Id";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
+            this.cmbNmb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbNmb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbNmb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cmbNmb.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cmbNmb.ForeColor = System.Drawing.Color.White;
+            this.cmbNmb.FormattingEnabled = true;
+            this.cmbNmb.Location = new System.Drawing.Point(12, 33);
+            this.cmbNmb.Name = "cmbNmb";
+            this.cmbNmb.Size = new System.Drawing.Size(188, 29);
+            this.cmbNmb.TabIndex = 8;
+            this.cmbNmb.SelectedIndexChanged += new System.EventHandler(this.cmbNmb_SelectedIndexChanged);
+            // 
+            // cR_LabelDown1
+            // 
+            this.cR_LabelDown1.AutoSize = true;
+            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown1.Location = new System.Drawing.Point(8, 10);
+            this.cR_LabelDown1.Name = "cR_LabelDown1";
+            this.cR_LabelDown1.Size = new System.Drawing.Size(64, 20);
+            this.cR_LabelDown1.TabIndex = 7;
+            this.cR_LabelDown1.Text = "Nombre";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnGuardar.BorderColor = System.Drawing.Color.Teal;
+            this.btnGuardar.BorderRadius = 40;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(637, 23);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(141, 39);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // RncSearch
             // 
@@ -261,18 +261,18 @@
 
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
-        private Cr_ComboBox cr_ComboBox1;
+        private Cr_ComboBox cmbRnc;
         private CR_LabelDown cR_LabelDown2;
         private System.Windows.Forms.Panel panel1;
         private CR_DataGriedView dgvRncSearch;
-        private Cr_ComboBox cmbBx;
+        private Cr_ComboBox cmbNmb;
         private CR_LabelDown cR_LabelDown1;
         private Diseños.Botones_Nuevos btnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

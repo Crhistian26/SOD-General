@@ -15,20 +15,28 @@ namespace SOD_General.Vistas.Taller.Clientes
     public partial class RncSearch : Form
     {
         ClientController clieControl = new ClientController();
+        private bool cambioSelectIndex = false;
 
         public RncSearch()
         {
             InitializeComponent();
             verRnc();
+            llenarCbRnc();
         }
 
-        private void cR_SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
+     
 
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
+       private void llenarCbRnc()
         {
+            List<Locations> locList = clieControl.Rellenado();
+            foreach (Locations loc in locList) 
+            {
+                cmbNmb.Items.Add(loc._Location);
+                cmbNmb.Tag = loc.IdLocation;
+
+                cmbRnc.Items.Add(loc.Identifier);
+                cmbNmb.Tag = loc.IdClient;
+            }
 
         }
 
@@ -40,6 +48,26 @@ namespace SOD_General.Vistas.Taller.Clientes
             foreach (Locations client in cliente)
             {
                 dgvRncSearch.Rows.Add(client.IdClient, client._Location, client.Identifier, client.Addrees, client.Phone1, client.Phone2);
+            }
+        }
+
+        private void cmbNmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!cambioSelectIndex)
+            {
+                cambioSelectIndex = true;
+                cmbRnc.SelectedItem = null;
+                cambioSelectIndex = false;
+            }
+        }
+
+        private void cmbRnc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!cambioSelectIndex)
+            {
+                cambioSelectIndex = true;
+                cmbNmb.SelectedItem = null;
+                cambioSelectIndex = false;
             }
         }
     }
