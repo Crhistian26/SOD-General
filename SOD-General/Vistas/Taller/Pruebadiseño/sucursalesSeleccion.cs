@@ -56,7 +56,7 @@ namespace SOD_General.Vistas.Taller.Pruebadiseño
 
             foreach (var client in cliente)
             {
-                cbCliente.Items.Add(client._NameBranch);
+               // cbCliente.Items.Add(client._Name);
             }
 
         }
@@ -80,7 +80,7 @@ namespace SOD_General.Vistas.Taller.Pruebadiseño
 
             Client especifi = cliente.Where(c => c._Identifier == cb).FirstOrDefault();
             dgvClientes.Rows.Clear();
-            dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._NameBranch, especifi._Address, especifi.Phone_1, especifi.Phone_2, especifi._Contact);
+            dgvClientes.Rows.Add(especifi.IdClient);
         }
 
         private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -100,9 +100,9 @@ namespace SOD_General.Vistas.Taller.Pruebadiseño
 
             string cb = cbCliente.SelectedItem.ToString();
 
-            Client especifi = cliente.Where(c => c._NameBranch == cb).FirstOrDefault();
-            dgvClientes.Rows.Clear();
-            dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._NameBranch, especifi._Address, especifi.Phone_1, especifi.Phone_2, especifi._Contact);
+            //Client especifi = cliente.Where(c => c._Name == cb).FirstOrDefault();
+            //dgvClientes.Rows.Clear();
+            //dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._Name, especifi._Address, especifi.Phone_1, especifi.Phone_2);
 
 
         }
@@ -114,7 +114,7 @@ namespace SOD_General.Vistas.Taller.Pruebadiseño
 
             foreach (Client client in cliente)
             {
-                dgvClientes.Rows.Add(client.IdClient, client._Identifier, client._NameBranch, client._Address, client.Phone_1, client.Phone_2, client._Contact);
+              //  dgvClientes.Rows.Add(client.IdClient, client._Identifier);
             }
         }
 

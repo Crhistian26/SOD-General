@@ -39,7 +39,7 @@ namespace SOD_General.Vistas.Taller.Clientes
                 {
                     foreach (Locations locat in Location)
                     {
-                        dgvSucursal.Rows.Add(locat.IdLocation, locat.IdClient, locat._Location, locat.Addrees, locat.Phone1, locat.Phone2, locat.Contact, locat.Identifier);
+                        dgvSucursal.Rows.Add(locat.IdLocation, locat.IdClient, locat._Location, locat.Addrees, locat.Phone1, locat.Phone2, locat.IdContact, locat.Identifier);
                     }
                 }
                 else

@@ -27,22 +27,25 @@ namespace SOD_General.Controladores
         /// </summary>
         /// <param name="cli"></param>
         /// 
-        public void AgregarCliente(int ident)
+        public void AgregarCliente(int _Name, string _Address, string Phone1, string Phone2, string ident )
         {
-            view = new AppVistaGeneral(user);
+
             try
             {
-                string Query = "Exec Add_Client @Identifier";
+                string Query = "Exec Add_Client @Name, @Address, @Phone1, @Phone2, @Identifier";
 
                 SqlCommand cmd = new SqlCommand(Query, conex);
+                cmd.Parameters.AddWithValue("@Name", _Name);
+                cmd.Parameters.AddWithValue("@Address", _Address);
+                cmd.Parameters.AddWithValue("@Phone1", Phone1);
+                cmd.Parameters.AddWithValue("@Phone2", Phone2);
                 cmd.Parameters.AddWithValue("@Identifier", ident);
+
                 conex.Open();
                 cmd.ExecuteNonQuery();
                 conex.Close();
-                MessageBox.Show("RNC/Cedula cargado");
 
-                AddLocations window = new AddLocations();
-                view.OpenForm(window);
+                MessageBox.Show("RNC/Cedula cargado");
             }
 
 
@@ -67,6 +70,53 @@ namespace SOD_General.Controladores
         }
 
 
+        public List<Client> ViewIdentifier()
+        {
+            try
+            {
+                string Query = "Exec Get_Client";
+                List<Client> ClientsRecordTaller = new List<Client>();
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                conex.Open();
+                SqlDataReader Reader = cmd.ExecuteReader();
+
+
+                if (Reader.FieldCount <= 1)
+                {
+                    throw new Exception("No hay Clientes registrados");
+                }
+                else
+                {
+                    while (Reader.Read())
+                    {
+                        Client Clientes;
+                        int Id = Reader.GetInt32(0);
+
+                        string Identifier = Reader.GetString(1);
+
+
+                        Clientes = new Client(Id, Identifier);
+                        ClientsRecordTaller.Add(Clientes);
+                    }
+
+                    conex.Close();
+                    return ClientsRecordTaller;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
+
 
         public List<Client> ViewClient()
         {
@@ -90,14 +140,12 @@ namespace SOD_General.Controladores
                     {
                         Client Clientes;
                         int Id = Reader.GetInt32(0);
+
                         string Identifier = Reader.GetString(1);
                         string Client = Reader.GetString(2);
-                        string Address = Reader.GetString(3);
-                        string Phone1 = Reader.GetString(4);
-                        string Phone2 = Reader.GetString(5);
-                        string Contact = Reader.GetString(6);
 
-                        Clientes = new Client(Id, Identifier, Client, Address, Phone1, Phone2, Contact);
+
+                        Clientes = new Client(Id, Identifier);
                         ClientsRecordTaller.Add(Clientes);
                     }
 
@@ -151,8 +199,9 @@ namespace SOD_General.Controladores
                         string phone1 = reader.GetString(5);
                         string phone2 = reader.GetString(6);
                         string contact = reader.GetString(7);
+                        int a = 2; 
 
-                        loca = new Locations(IdLocation, IdClient, identifier, location, address, phone1, phone2, contact);
+                        loca = new Locations(IdLocation, IdClient, a, address, phone1, phone2, contact, identifier);
                         locations.Add(loca);
                     }
 
@@ -183,12 +232,11 @@ namespace SOD_General.Controladores
                 string Query = "Exec Add_Locations @Identifier, @Location, @Address, @Phone1, @Phone2, @Contact";
                 SqlCommand cmd = new SqlCommand(Query, conex);
 
-                cmd.Parameters.AddWithValue("@Identifier", loc.Identifier);
+              //  cmd.Parameters.AddWithValue("@Identifier", loc.Identifier);
                 cmd.Parameters.AddWithValue("@Location", loc._Location);
                 cmd.Parameters.AddWithValue("@Address", loc.Addrees);
                 cmd.Parameters.AddWithValue("@Phone1", loc.Phone1);
                 cmd.Parameters.AddWithValue("@Phone2", loc.Phone2);
-                cmd.Parameters.AddWithValue("@Contact", loc.Contact);
 
                 conex.Open();
                 cmd.ExecuteNonQuery();
@@ -247,12 +295,38 @@ namespace SOD_General.Controladores
                 int Id = Reader.GetInt32(0);
                 string Identifier = Reader.GetString(1);
                 string Client = Reader.GetString(2);
-                string Address = Reader.GetString(3);
-                string Phone1 = Reader.GetString(4);
-                string Phone2 = Reader.GetString(5);
-                string Contact = Reader.GetString(6);
-                Clientes = new Client(Id, Identifier, Client, Address, Phone1, Phone2, Contact);
+
+                Clientes = new Client(Id, Identifier);
                 clientLista.Add(Clientes);
+            }
+
+            conex.Close();
+
+            return clientLista;
+        }
+
+        public List<Locations> LlenarDataGridRNC()
+        {
+            string Query = "select CD._Name, CD._Address, CD.Phone1, CD.Phone2, CD.ClientIdentId, CI.identifier from ClienteData CD join ClientIdentifier CI on ClientIdentId = IdClientIdent";
+
+            List<Locations> clientLista = new List<Locations>();
+            SqlCommand cmd = new SqlCommand(Query, conex);
+            conex.Open();
+            SqlDataReader Reader = cmd.ExecuteReader();
+
+
+            while (Reader.Read())
+            {
+                Locations RncLoc;
+                string Client = Reader.GetString(0);
+                string Address = Reader.GetString(1);
+                string Phone1 = Reader.GetString(2);
+                string Phone2 = Reader.GetString(3);
+                int IdIdentifier = Reader.GetInt32(4);
+                string Identifier = Reader.GetString(5);
+
+                RncLoc = new Locations(null, IdIdentifier, null, Client,  Address, Phone1, Phone2,  Identifier);
+                clientLista.Add(RncLoc);
             }
 
             conex.Close();

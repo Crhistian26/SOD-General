@@ -41,16 +41,16 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             if (cbFiltro.SelectedIndex == 0)
             {
-                Client especifi = clientes.Where(c => c._NameBranch == cb).FirstOrDefault();
-                dgvClientes.Rows.Clear();
-                dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._NameBranch, especifi._Address, especifi.Phone_1, especifi.Phone_2, especifi._Contact);
+                //Client especifi = clientes.Where(c => c._Name == cb).FirstOrDefault();
+                //dgvClientes.Rows.Clear();
+                //dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._Name, especifi._Address, especifi.Phone_1, especifi.Phone_2);
 
             }
             else if (cbFiltro.SelectedIndex == 1)
             {
                 Client especifi = clientes.Where(c => c._Identifier == cb.ToString()).FirstOrDefault();
                 dgvClientes.Rows.Clear();
-                dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._NameBranch, especifi._Address, especifi.Phone_1, especifi.Phone_2, especifi._Contact);
+                //dgvClientes.Rows.Add(especifi.IdClient, especifi._Identifier, especifi._Name, especifi._Address, especifi.Phone_1, especifi.Phone_2);
 
 
             }
@@ -71,7 +71,7 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             foreach (Client client in clientes)
             {
-                dgvClientes.Rows.Add(client.IdClient, client._Identifier, client._NameBranch, client._Address, client.Phone_1, client.Phone_2, client._Contact);
+                //dgvClientes.Rows.Add(client.IdClient, client._Identifier, client._Name, client._Address, client.Phone_1, client.Phone_2);
             }
         }
 
@@ -97,7 +97,7 @@ namespace SOD_General.Vistas.Taller.Clientes
                 cbCliente.SelectedItem = null;
                 foreach (var client in lisCli)
                 {
-                    cbCliente.Items.Add(client._NameBranch);
+                 //   cbCliente.Items.Add(client._Name);
                 }
             }
             else

@@ -112,7 +112,7 @@ namespace Controladores
                         ("Clientes","Añadir Clientes"),
                         (object sender, EventArgs e) =>
                         {
-                            AddEnterprise window = new AddEnterprise();
+                            AddLocations window = new AddLocations();
                             _view.OpenForm(window);
                         }
                     },

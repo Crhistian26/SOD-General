@@ -77,7 +77,7 @@ namespace SOD_General.Taller.Registro_peticiones
 
             foreach (var a in ClientList)
             {
-                CbCliente.Items.Add(a._NameBranch);
+             //   CbCliente.Items.Add(a);
                 //     CbCliente.Tag = a.IdClient;
 
             }
@@ -123,12 +123,12 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             if (CbCliente.SelectedIndex != null)
             {
-                string selection = CbCliente.Text;
-                string view = ClientList.Where(m => m._NameBranch == selection)
-                                        .Select(m => m._Identifier)
-                                        .First();
+                //string selection = CbCliente.Text;
+                //string view = ClientList.Where(m => m._Name == selection)
+                //                        .Select(m => m._Identifier)
+                //                        .First();
 
-                txtCliente.Text = view.ToString();
+                //txtCliente.Text = view.ToString();
             }
             else
             {
@@ -137,13 +137,13 @@ namespace SOD_General.Taller.Registro_peticiones
 
             if (chkSucursal.Checked && CbCliente.SelectedIndex != null)
             {
-                string select = CbCliente.Text;
-                int? buscar = ClientList.Where(Z => Z._NameBranch == select)
-                                        .Select(m => m.IdClient)
-                                        .First();
+                //string select = CbCliente.Text;
+                //int? buscar = ClientList.Where(Z => Z._Name == select)
+                //                        .Select(m => m.IdClient)
+                //                        .First();
 
-                int busc = Convert.ToInt32(buscar);
-                cbRellenarLoc(busc);
+                //int busc = Convert.ToInt32(buscar);
+                //cbRellenarLoc(busc);
             }
             else
             {
@@ -156,12 +156,12 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             if (cbRNC.SelectedIndex != null)
             {
-                string selection = cbRNC.Text;
-                string view = ClientList.Where(m => m._Identifier == selection)
-                                        .Select(m => m._NameBranch)
-                                        .First();
+                //string selection = cbRNC.Text;
+                //string view = ClientList.Where(m => m._Identifier == selection)
+                //                        .Select(m => m._Name)
+                //                        .First();
 
-                txtRnc.Text = view.ToString();
+                //txtRnc.Text = view.ToString();
             }
             else
             {

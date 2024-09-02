@@ -379,11 +379,23 @@
     <Compile Include="Vistas\Taller\Clientes\AddLocations.Designer.cs">
       <DependentUpon>AddLocations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Clientes\ContactoSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\ContactoSearch.Designer.cs">
+      <DependentUpon>ContactoSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Taller\Clientes\EditarSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Taller\Clientes\EditarSucursales.Designer.cs">
       <DependentUpon>EditarSucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\RncSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Taller\Clientes\RncSearch.Designer.cs">
+      <DependentUpon>RncSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Clientes\VisualizarClientes.cs">
       <SubType>Form</SubType>
@@ -486,12 +498,6 @@
     </Compile>
     <Compile Include="Vistas\Taller\Inventario\VisualizarPiezas.Designer.cs">
       <DependentUpon>VisualizarPiezas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Taller\Clientes\AddEnterprise.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Taller\Clientes\AddEnterprise.Designer.cs">
-      <DependentUpon>AddEnterprise.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Taller\Pruebadiseño\sucursalesSeleccion.cs">
       <SubType>Form</SubType>
@@ -623,8 +629,14 @@
     <EmbeddedResource Include="Vistas\Taller\Clientes\AddLocations.resx">
       <DependentUpon>AddLocations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Clientes\ContactoSearch.resx">
+      <DependentUpon>ContactoSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Clientes\EditarSucursales.resx">
       <DependentUpon>EditarSucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Taller\Clientes\RncSearch.resx">
+      <DependentUpon>RncSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Clientes\VisualizarClientes.resx">
       <DependentUpon>VisualizarClientes.cs</DependentUpon>
@@ -670,9 +682,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Equipos\VisualizarMarcas.resx">
       <DependentUpon>VisualizarMarcas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Taller\Clientes\AddEnterprise.resx">
-      <DependentUpon>AddEnterprise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Taller\Pruebadiseño\sucursalesSeleccion.resx">
       <DependentUpon>sucursalesSeleccion.cs</DependentUpon>

@@ -3,12 +3,7 @@
     public class Client
     {
         public int? IdClient { get; set; }
-        public string _NameBranch { get; set; }
-        public string _Address { get; set; }
         public string _Identifier { get; set; }
-        public string Phone_1 { get; set; }
-        public string Phone_2 { get; set; }
-        public string _Contact { get; set; }
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="Client"/>.
@@ -20,15 +15,10 @@
         /// <param name="phone1">Teléfono principal del cliente.</param>
         /// <param name="phone2">Teléfono secundario del cliente.</param>
         /// <param name="contact">Contacto del cliente.</param>
-        public Client(int? idClient, string identifier, string nameBranch, string address, string phone1, string phone2, string contact)
+        public Client(int? idClient, string identifier)
         {
             IdClient = idClient;
             _Identifier = identifier;
-            _NameBranch = nameBranch;
-            _Address = address;
-            Phone_1 = phone1;
-            Phone_2 = phone2;
-            _Contact = contact;
         }
     }
 

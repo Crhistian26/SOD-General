@@ -39,5 +39,10 @@ namespace SOD_General.Vistas.Taller.Control_calidad
         {
 
         }
+
+        private void cmbBx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

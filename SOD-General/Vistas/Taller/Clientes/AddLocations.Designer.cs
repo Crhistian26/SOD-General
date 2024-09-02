@@ -32,11 +32,11 @@
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelCliente = new System.Windows.Forms.Panel();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cr_ComboBox2 = new Cr_ComboBox();
+            this.btnBuscarRnc = new Diseños.Botones_Nuevos();
+            this.btnBuscarCtc = new Diseños.Botones_Nuevos();
+            this.CbRnc = new Cr_ComboBox();
             this.cR_Subtitulos2 = new CR_Subtitulos();
-            this.cr_ComboBox1 = new Cr_ComboBox();
+            this.CbContact = new Cr_ComboBox();
             this.txtCliente = new Cr_Textbox();
             this.cR_Subtitulos5 = new CR_Subtitulos();
             this.cR_Subtitulos8 = new CR_Subtitulos();
@@ -101,11 +101,11 @@
             // 
             // panelCliente
             // 
-            this.panelCliente.Controls.Add(this.botones_Nuevos2);
-            this.panelCliente.Controls.Add(this.botones_Nuevos1);
-            this.panelCliente.Controls.Add(this.cr_ComboBox2);
+            this.panelCliente.Controls.Add(this.btnBuscarRnc);
+            this.panelCliente.Controls.Add(this.btnBuscarCtc);
+            this.panelCliente.Controls.Add(this.CbRnc);
             this.panelCliente.Controls.Add(this.cR_Subtitulos2);
-            this.panelCliente.Controls.Add(this.cr_ComboBox1);
+            this.panelCliente.Controls.Add(this.CbContact);
             this.panelCliente.Controls.Add(this.txtCliente);
             this.panelCliente.Controls.Add(this.cR_Subtitulos5);
             this.panelCliente.Controls.Add(this.cR_Subtitulos8);
@@ -122,52 +122,55 @@
             this.panelCliente.Size = new System.Drawing.Size(682, 366);
             this.panelCliente.TabIndex = 45;
             // 
-            // botones_Nuevos2
+            // btnBuscarRnc
             // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(269, 136);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(65, 30);
-            this.botones_Nuevos2.TabIndex = 78;
-            this.botones_Nuevos2.Text = "Buscar";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.btnBuscarRnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnBuscarRnc.BorderColor = System.Drawing.Color.Teal;
+            this.btnBuscarRnc.BorderRadius = 40;
+            this.btnBuscarRnc.BorderSize = 0;
+            this.btnBuscarRnc.FlatAppearance.BorderSize = 0;
+            this.btnBuscarRnc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarRnc.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarRnc.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarRnc.Location = new System.Drawing.Point(269, 136);
+            this.btnBuscarRnc.Name = "btnBuscarRnc";
+            this.btnBuscarRnc.Size = new System.Drawing.Size(65, 30);
+            this.btnBuscarRnc.TabIndex = 78;
+            this.btnBuscarRnc.Text = "Buscar";
+            this.btnBuscarRnc.UseVisualStyleBackColor = false;
+            this.btnBuscarRnc.Click += new System.EventHandler(this.btnBuscarRnc_Click);
             // 
-            // botones_Nuevos1
+            // btnBuscarCtc
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(269, 209);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(65, 30);
-            this.botones_Nuevos1.TabIndex = 77;
-            this.botones_Nuevos1.Text = "Buscar";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.btnBuscarCtc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnBuscarCtc.BorderColor = System.Drawing.Color.Teal;
+            this.btnBuscarCtc.BorderRadius = 40;
+            this.btnBuscarCtc.BorderSize = 0;
+            this.btnBuscarCtc.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCtc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCtc.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarCtc.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarCtc.Location = new System.Drawing.Point(269, 209);
+            this.btnBuscarCtc.Name = "btnBuscarCtc";
+            this.btnBuscarCtc.Size = new System.Drawing.Size(65, 30);
+            this.btnBuscarCtc.TabIndex = 77;
+            this.btnBuscarCtc.Text = "Buscar";
+            this.btnBuscarCtc.UseVisualStyleBackColor = false;
+            this.btnBuscarCtc.Click += new System.EventHandler(this.btnBuscarCtc_Click);
             // 
-            // cr_ComboBox2
+            // CbRnc
             // 
-            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox2.BackColor = System.Drawing.Color.White;
-            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Location = new System.Drawing.Point(12, 135);
-            this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(251, 29);
-            this.cr_ComboBox2.TabIndex = 76;
+            this.CbRnc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CbRnc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CbRnc.BackColor = System.Drawing.Color.White;
+            this.CbRnc.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.CbRnc.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.CbRnc.FormattingEnabled = true;
+            this.CbRnc.Location = new System.Drawing.Point(12, 135);
+            this.CbRnc.Name = "CbRnc";
+            this.CbRnc.Size = new System.Drawing.Size(251, 29);
+            this.CbRnc.TabIndex = 76;
+            this.CbRnc.SelectedIndexChanged += new System.EventHandler(this.CbRnc_SelectedIndexChanged);
             // 
             // cR_Subtitulos2
             // 
@@ -184,18 +187,18 @@
             this.cR_Subtitulos2.TabIndex = 75;
             this.cR_Subtitulos2.Text = "RNC/Cedula";
             // 
-            // cr_ComboBox1
+            // CbContact
             // 
-            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox1.BackColor = System.Drawing.Color.White;
-            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Location = new System.Drawing.Point(12, 212);
-            this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(251, 29);
-            this.cr_ComboBox1.TabIndex = 74;
+            this.CbContact.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CbContact.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CbContact.BackColor = System.Drawing.Color.White;
+            this.CbContact.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.CbContact.ForeColor = System.Drawing.Color.White;
+            this.CbContact.FormattingEnabled = true;
+            this.CbContact.Location = new System.Drawing.Point(12, 212);
+            this.CbContact.Name = "CbContact";
+            this.CbContact.Size = new System.Drawing.Size(251, 29);
+            this.CbContact.TabIndex = 74;
             // 
             // txtCliente
             // 
@@ -253,6 +256,7 @@
             this.btn_AgregarClientes.TabIndex = 62;
             this.btn_AgregarClientes.Text = "Agregar";
             this.btn_AgregarClientes.UseVisualStyleBackColor = false;
+            this.btn_AgregarClientes.Click += new System.EventHandler(this.btn_AgregarClientes_Click);
             // 
             // txtNumero2
             // 
@@ -335,6 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 450);
             this.Controls.Add(this.cR_SplitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddLocations";
             this.Text = "AddLocations";
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
@@ -355,7 +360,7 @@
         private CR_Subtitulos cR_Subtitulos1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelCliente;
-        private Cr_ComboBox cr_ComboBox1;
+        private Cr_ComboBox CbContact;
         private Cr_Textbox txtCliente;
         private CR_Subtitulos cR_Subtitulos5;
         private CR_Subtitulos cR_Subtitulos8;
@@ -366,9 +371,9 @@
         private Cr_Textbox txtNumero1;
         private CR_Subtitulos cR_Subtitulos3;
         private Cr_Textbox txtDireccion;
-        private Cr_ComboBox cr_ComboBox2;
+        private Cr_ComboBox CbRnc;
         private CR_Subtitulos cR_Subtitulos2;
-        private Diseños.Botones_Nuevos botones_Nuevos2;
-        private Diseños.Botones_Nuevos botones_Nuevos1;
+        private Diseños.Botones_Nuevos btnBuscarRnc;
+        private Diseños.Botones_Nuevos btnBuscarCtc;
     }
 }

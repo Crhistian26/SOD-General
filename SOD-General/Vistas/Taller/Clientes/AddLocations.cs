@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelos.Taller;
+using SOD_General.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,46 @@ namespace SOD_General.Vistas.Taller.Clientes
 {
     public partial class AddLocations : Form
     {
+        ClientController clieControl =  new ClientController();
         public AddLocations()
         {
             InitializeComponent();
+            cbRncRelleno();
+        }
+
+        private void btn_AgregarClientes_Click(object sender, EventArgs e)
+        {
+          //  clieControl.AgregarCliente(txtCliente.Text, txtDireccion.Text, txtNumero1.Text, txtNumero2.Text, CbRnc.SelectedItem.ToString());
+        }
+
+        private void btnBuscarRnc_Click(object sender, EventArgs e)
+        {
+            RncSearch rncSearch = new RncSearch();
+            rncSearch.Show();   
+        }
+
+        private void btnBuscarCtc_Click(object sender, EventArgs e)
+        {
+            ContactoSearch contactoSearch = new ContactoSearch();
+            contactoSearch.Show();
+        }
+
+        private void CbRnc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void cbRncRelleno()
+        {
+           List<Client> cliente = clieControl.ViewIdentifier();
+
+            CbRnc.Items.Clear();
+            CbRnc.SelectedItem = null;
+
+            foreach (var client in cliente)
+            {
+                CbRnc.Items.Add(client._Identifier);
+            }
         }
     }
 }
