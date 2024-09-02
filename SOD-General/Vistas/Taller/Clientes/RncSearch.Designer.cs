@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cmbRnc = new Cr_ComboBox();
@@ -134,10 +134,10 @@
             this.dgvRncSearch.AllowUserToAddRows = false;
             this.dgvRncSearch.AllowUserToDeleteRows = false;
             this.dgvRncSearch.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.dgvRncSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dgvRncSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRncSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRncSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -154,6 +154,7 @@
             this.dgvRncSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRncSearch.Size = new System.Drawing.Size(766, 293);
             this.dgvRncSearch.TabIndex = 0;
+            this.dgvRncSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRncSearch_CellDoubleClick);
             // 
             // Column6
             // 

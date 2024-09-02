@@ -170,7 +170,6 @@
             this.CbRnc.Name = "CbRnc";
             this.CbRnc.Size = new System.Drawing.Size(251, 29);
             this.CbRnc.TabIndex = 76;
-            this.CbRnc.SelectedIndexChanged += new System.EventHandler(this.CbRnc_SelectedIndexChanged);
             // 
             // cR_Subtitulos2
             // 
@@ -371,9 +370,9 @@
         private Cr_Textbox txtNumero1;
         private CR_Subtitulos cR_Subtitulos3;
         private Cr_Textbox txtDireccion;
-        private Cr_ComboBox CbRnc;
         private CR_Subtitulos cR_Subtitulos2;
         private Diseños.Botones_Nuevos btnBuscarRnc;
         private Diseños.Botones_Nuevos btnBuscarCtc;
+        public Cr_ComboBox CbRnc;
     }
 }

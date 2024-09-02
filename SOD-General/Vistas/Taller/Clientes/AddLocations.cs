@@ -38,10 +38,7 @@ namespace SOD_General.Vistas.Taller.Clientes
             contactoSearch.Show();
         }
 
-        private void CbRnc_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
         public void cbRncRelleno()
         {
@@ -55,5 +52,11 @@ namespace SOD_General.Vistas.Taller.Clientes
                 CbRnc.Items.Add(client._Identifier);
             }
         }
+
+        //public void obtenerDatos(string item)
+        //{
+        //    CbRnc.SelectedItem = item;
+        //    MessageBox.Show();
+        //}
     }
 }

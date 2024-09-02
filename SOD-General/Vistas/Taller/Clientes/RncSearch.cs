@@ -16,6 +16,7 @@ namespace SOD_General.Vistas.Taller.Clientes
     {
         ClientController clieControl = new ClientController();
         private bool cambioSelectIndex = false;
+        AddLocations addLoc = Application.OpenForms.OfType<AddLocations>().FirstOrDefault();
 
         public RncSearch()
         {
@@ -59,6 +60,16 @@ namespace SOD_General.Vistas.Taller.Clientes
                 cmbRnc.SelectedItem = null;
                 cambioSelectIndex = false;
             }
+
+            List<Locations> listLot = new List<Locations>();
+            string seleccion = cmbNmb.SelectedItem.ToString();
+
+            var filtro = from Locations in listLot
+                         where Locations._Location == seleccion
+                         select Locations;
+
+            dgvRncSearch.Rows.Add(filtro);
+
         }
 
         private void cmbRnc_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,5 +81,22 @@ namespace SOD_General.Vistas.Taller.Clientes
                 cambioSelectIndex = false;
             }
         }
+
+        private void dgvRncSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (addLoc != null)
+                {
+                    DataGridViewRow dgvRow = dgvRncSearch.Rows[e.RowIndex];
+
+                    string iden = dgvRow.Cells[2].Value.ToString();
+                    addLoc.CbRnc.SelectedItem = iden;
+                    this.Close();
+                }
+
+            }
+        }
     }
+    
 }

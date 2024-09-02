@@ -95,7 +95,6 @@ namespace SOD_General.Controladores
 
                         string Identifier = Reader.GetString(1);
 
-
                         Clientes = new Client(Id, Identifier);
                         ClientsRecordTaller.Add(Clientes);
                     }
