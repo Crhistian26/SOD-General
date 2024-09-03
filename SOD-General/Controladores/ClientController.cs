@@ -198,7 +198,7 @@ namespace SOD_General.Controladores
                         string phone1 = reader.GetString(5);
                         string phone2 = reader.GetString(6);
                         string contact = reader.GetString(7);
-                        int a = 2; 
+                        int a = 2;
 
                         loca = new Locations(IdLocation, IdClient, a, address, phone1, phone2, contact, identifier);
                         locations.Add(loca);
@@ -278,45 +278,7 @@ namespace SOD_General.Controladores
 
         }
 
-        public List<Locations> Rellenado()
-        {
-            List<Locations> ListLoc = new List<Locations>();
-            try
-            {
-                string query = "Exec Get_Locations";
-                SqlCommand cmd = new SqlCommand(query,conex);
-
-                conex.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Locations loc;
-                    int IdClient = reader.GetInt32(0);
-                    string name = reader.GetString(1);
-                    string address = reader.GetString(2);
-                    string phone1 = reader.GetString(3);
-                    string phone2 = reader.GetString(4);
-                    int IdIdent = reader.GetInt32(5);
-                    string Identifier = reader.GetString(6);
-
-                    loc = new Locations(IdClient, IdIdent, null, name, address, phone1, phone2, Identifier);
-                    ListLoc.Add(loc);
-                }
-                conex.Close();
-                reader.Close();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error de la base de datos: " + ex.ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error del sistema" + ex.ToString());
-            }
-            return ListLoc;
-        }
-
+       
         public List<Client> RellenarComboBox()
         {
             string Query = "Select * from Client";
@@ -372,5 +334,80 @@ namespace SOD_General.Controladores
             return clientLista;
         }
 
+        public List<Locations> Rellenado()
+        {
+            List<Locations> ListLoc = new List<Locations>();
+            try
+            {
+                string query = "Exec Get_Locations";
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Locations loc;
+                    int IdClient = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    string address = reader.GetString(2);
+                    string phone1 = reader.GetString(3);
+                    string phone2 = reader.GetString(4);
+                    int IdIdent = reader.GetInt32(5);
+                    string Identifier = reader.GetString(6);
+
+                    loc = new Locations(IdClient, IdIdent, null, name, address, phone1, phone2, Identifier);
+                    ListLoc.Add(loc);
+                }
+                conex.Close();
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema" + ex.ToString());
+            }
+            return ListLoc;
+        }
+
+        public List<Contact> ContactData()
+        {
+            List<Contact> ListLoc = new List<Contact>();
+            try
+            {
+                string query = "Exec Get_Contact";
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Contact loc;
+                    int IdClient = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    string identifier = reader.GetString(2);
+                    string phone1 = reader.GetString(3);
+                    string phone2 = reader.GetString(4);
+
+                    loc = new Contact(IdClient, name, identifier, phone1, phone2);
+                    ListLoc.Add(loc);
+                }
+                conex.Close();
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema" + ex.ToString());
+            }
+            return ListLoc;
+        }
     }
 }

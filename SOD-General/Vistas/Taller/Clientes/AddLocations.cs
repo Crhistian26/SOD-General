@@ -19,6 +19,7 @@ namespace SOD_General.Vistas.Taller.Clientes
         {
             InitializeComponent();
             cbRncRelleno();
+            cbCtcRelleno();
         }
 
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
@@ -53,10 +54,17 @@ namespace SOD_General.Vistas.Taller.Clientes
             }
         }
 
-        //public void obtenerDatos(string item)
-        //{
-        //    CbRnc.SelectedItem = item;
-        //    MessageBox.Show();
-        //}
+        public void cbCtcRelleno()
+        {
+            List<Contact> contact = clieControl.ContactData();
+
+            CbContact.Items.Clear();
+            CbContact.SelectedItem = null;
+
+            foreach (var cont in contact)
+            {
+                CbContact.Items.Add(cont.identifier);
+            }
+        }
     }
 }

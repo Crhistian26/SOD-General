@@ -102,12 +102,12 @@ namespace SOD_General.Recursos_Humanos.Empleados
                     foreach (Employee empleado in data)
                     {
                         cR_DataGriedView1.Rows.Add(
-                        empleado.IdEmployee,
-                        empleado._Name,
-                        empleado._Lastname,
-                        empleado.Department,
-                        empleado.Admission_date.ToString("D"),
-                        JobState(empleado)
+                            empleado.IdEmployee,
+                            empleado._Name,
+                            empleado._Lastname,
+                            empleado.Department,
+                            empleado.Admission_date.ToString("D"),
+                            JobState(empleado)
                         );
                     }
                 }

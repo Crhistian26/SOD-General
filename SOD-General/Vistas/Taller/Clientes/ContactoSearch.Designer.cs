@@ -31,19 +31,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.cr_ComboBox1 = new Cr_ComboBox();
+            this.cmbCed = new Cr_ComboBox();
             this.cR_LabelDown2 = new CR_LabelDown();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.cmbBx = new Cr_ComboBox();
+            this.dgvContact = new CR_DataGriedView();
+            this.cmbName = new Cr_ComboBox();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.btnGuardar = new Diseños.Botones_Nuevos();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContact)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -61,10 +66,10 @@
             // 
             // cR_SplitContainer1.Panel2
             // 
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cr_ComboBox1);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbCed);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbBx);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbName);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.btnGuardar);
             this.cR_SplitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.cR_SplitContainer1_Panel2_Paint);
@@ -88,18 +93,19 @@
             this.cR_Subtitulos1.Text = "Buscar Contacto";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // cr_ComboBox1
+            // cmbCed
             // 
-            this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Location = new System.Drawing.Point(272, 33);
-            this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(188, 29);
-            this.cr_ComboBox1.TabIndex = 11;
+            this.cmbCed.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbCed.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cmbCed.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cmbCed.ForeColor = System.Drawing.Color.White;
+            this.cmbCed.FormattingEnabled = true;
+            this.cmbCed.Location = new System.Drawing.Point(272, 33);
+            this.cmbCed.Name = "cmbCed";
+            this.cmbCed.Size = new System.Drawing.Size(188, 29);
+            this.cmbCed.TabIndex = 11;
+            this.cmbCed.SelectedIndexChanged += new System.EventHandler(this.cmbCed_SelectedIndexChanged);
             // 
             // cR_LabelDown2
             // 
@@ -117,43 +123,51 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.cR_DataGriedView1);
+            this.panel1.Controls.Add(this.dgvContact);
             this.panel1.Location = new System.Drawing.Point(12, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 293);
             this.panel1.TabIndex = 9;
             // 
-            // cR_DataGriedView1
+            // dgvContact
             // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            this.dgvContact.AllowUserToAddRows = false;
+            this.dgvContact.AllowUserToDeleteRows = false;
+            this.dgvContact.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(766, 293);
-            this.cR_DataGriedView1.TabIndex = 0;
+            this.dgvContact.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContact.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgvContact.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvContact.EnableHeadersVisualStyles = false;
+            this.dgvContact.Location = new System.Drawing.Point(0, 0);
+            this.dgvContact.Name = "dgvContact";
+            this.dgvContact.ReadOnly = true;
+            this.dgvContact.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvContact.Size = new System.Drawing.Size(766, 293);
+            this.dgvContact.TabIndex = 0;
+            this.dgvContact.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContact_CellDoubleClick);
             // 
-            // cmbBx
+            // cmbName
             // 
-            this.cmbBx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbBx.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cmbBx.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cmbBx.ForeColor = System.Drawing.Color.White;
-            this.cmbBx.FormattingEnabled = true;
-            this.cmbBx.Location = new System.Drawing.Point(7, 33);
-            this.cmbBx.Name = "cmbBx";
-            this.cmbBx.Size = new System.Drawing.Size(188, 29);
-            this.cmbBx.TabIndex = 8;
+            this.cmbName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cmbName.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cmbName.ForeColor = System.Drawing.Color.White;
+            this.cmbName.FormattingEnabled = true;
+            this.cmbName.Location = new System.Drawing.Point(7, 33);
+            this.cmbName.Name = "cmbName";
+            this.cmbName.Size = new System.Drawing.Size(188, 29);
+            this.cmbName.TabIndex = 8;
+            this.cmbName.SelectedIndexChanged += new System.EventHandler(this.cmbName_SelectedIndexChanged);
             // 
             // cR_LabelDown1
             // 
@@ -184,6 +198,37 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cedula";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "1r Numero";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "2do Numero";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // ContactoSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,7 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContact)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,11 +255,16 @@
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
         private System.Windows.Forms.Panel panel1;
-        private CR_DataGriedView cR_DataGriedView1;
-        private Cr_ComboBox cmbBx;
+        private CR_DataGriedView dgvContact;
+        private Cr_ComboBox cmbName;
         private CR_LabelDown cR_LabelDown1;
         private Diseños.Botones_Nuevos btnGuardar;
-        private Cr_ComboBox cr_ComboBox1;
+        private Cr_ComboBox cmbCed;
         private CR_LabelDown cR_LabelDown2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

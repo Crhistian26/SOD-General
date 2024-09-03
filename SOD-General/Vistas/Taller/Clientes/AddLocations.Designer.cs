@@ -192,7 +192,7 @@
             this.CbContact.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CbContact.BackColor = System.Drawing.Color.White;
             this.CbContact.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.CbContact.ForeColor = System.Drawing.Color.White;
+            this.CbContact.ForeColor = System.Drawing.Color.Black;
             this.CbContact.FormattingEnabled = true;
             this.CbContact.Location = new System.Drawing.Point(12, 212);
             this.CbContact.Name = "CbContact";
@@ -359,7 +359,6 @@
         private CR_Subtitulos cR_Subtitulos1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelCliente;
-        private Cr_ComboBox CbContact;
         private Cr_Textbox txtCliente;
         private CR_Subtitulos cR_Subtitulos5;
         private CR_Subtitulos cR_Subtitulos8;
@@ -374,5 +373,6 @@
         private Diseños.Botones_Nuevos btnBuscarRnc;
         private Diseños.Botones_Nuevos btnBuscarCtc;
         public Cr_ComboBox CbRnc;
+        public Cr_ComboBox CbContact;
     }
 }

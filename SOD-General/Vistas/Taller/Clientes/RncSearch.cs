@@ -38,7 +38,6 @@ namespace SOD_General.Vistas.Taller.Clientes
                 cmbRnc.Items.Add(loc.Identifier);
                 cmbNmb.Tag = loc.IdClient;
             }
-
         }
 
         public void verRnc()
@@ -54,21 +53,37 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void cmbNmb_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dgvRncSearch.Rows.Clear();
+
             if (!cambioSelectIndex)
             {
                 cambioSelectIndex = true;
                 cmbRnc.SelectedItem = null;
                 cambioSelectIndex = false;
             }
+            List<Locations> listLot = clieControl.Rellenado();
 
-            List<Locations> listLot = new List<Locations>();
-            string seleccion = cmbNmb.SelectedItem.ToString();
+            var filtro = listLot.Select(a => a).Where(a => a._Location == cmbNmb.Text).ToList();
 
-            var filtro = from Locations in listLot
-                         where Locations._Location == seleccion
-                         select Locations;
-
-            dgvRncSearch.Rows.Add(filtro);
+            if (filtro.Count > 0)
+            {
+                foreach (Locations loc in filtro)
+                {
+                    dgvRncSearch.Rows.Add(
+                        loc.IdClient,
+                        loc._Location,
+                        loc.Identifier,
+                        loc.Addrees,
+                        loc.Phone1,
+                        loc.Phone2
+                        );
+                }
+            }
+            else
+            {
+                verRnc();
+            }
+           
 
         }
 
@@ -79,6 +94,31 @@ namespace SOD_General.Vistas.Taller.Clientes
                 cambioSelectIndex = true;
                 cmbNmb.SelectedItem = null;
                 cambioSelectIndex = false;
+            }
+
+            dgvRncSearch.Rows.Clear();
+
+            List<Locations> listLot = clieControl.Rellenado();
+
+            var filtro = listLot.Select(a => a).Where(a => a.Identifier == cmbRnc.Text).ToList();
+
+            if (filtro.Count > 0)
+            {
+                foreach (Locations loc in filtro)
+                {
+                    dgvRncSearch.Rows.Add(
+                        loc.IdClient,
+                        loc._Location,
+                        loc.Identifier,
+                        loc.Addrees,
+                        loc.Phone1,
+                        loc.Phone2
+                        );
+                }
+            }
+            else
+            {
+                verRnc();
             }
         }
 
@@ -94,7 +134,6 @@ namespace SOD_General.Vistas.Taller.Clientes
                     addLoc.CbRnc.SelectedItem = iden;
                     this.Close();
                 }
-
             }
         }
     }
