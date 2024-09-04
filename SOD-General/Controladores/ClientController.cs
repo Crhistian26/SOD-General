@@ -223,25 +223,24 @@ namespace SOD_General.Controladores
         }
 
 
-        public bool AgregarSucursal(Locations loc)
+        public void AgregarSucursal(string name, string address, string phone1, string phone2, string identifier, string contactIdent)
         {
-            bool insercion;
             try
             {
-                string Query = "Exec Add_Locations @Identifier, @Location, @Address, @Phone1, @Phone2, @Contact";
+                string Query = "Exec Add_Locations @Name, @Address, @Phone1, @Phone2, @Identifier, @ContactIdentifier";
                 SqlCommand cmd = new SqlCommand(Query, conex);
 
-              //  cmd.Parameters.AddWithValue("@Identifier", loc.Identifier);
-                cmd.Parameters.AddWithValue("@Location", loc._Location);
-                cmd.Parameters.AddWithValue("@Address", loc.Addrees);
-                cmd.Parameters.AddWithValue("@Phone1", loc.Phone1);
-                cmd.Parameters.AddWithValue("@Phone2", loc.Phone2);
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Address", address);
+                cmd.Parameters.AddWithValue("@Phone1", phone1);
+                cmd.Parameters.AddWithValue("@Phone2", phone2);
+                cmd.Parameters.AddWithValue("@Identifier", identifier);
+                cmd.Parameters.AddWithValue("@ContactIdentifier", contactIdent);
 
                 conex.Open();
                 cmd.ExecuteNonQuery();
                 conex.Close();
-                insercion = true;
-
+                MessageBox.Show("Agregado exitorsamente");
             }
             catch (SqlException ex)
             {
@@ -250,8 +249,6 @@ namespace SOD_General.Controladores
                     conex.Close();
                 }
                 MessageBox.Show("Error desde la base de datos: \n" + ex.ToString());
-
-                insercion = false;
             }
 
             catch (Exception ex)
@@ -261,21 +258,7 @@ namespace SOD_General.Controladores
                     conex.Close();
                 }
                 MessageBox.Show("Error desde el sistema: \n" + ex.ToString());
-
-                insercion = false;
             }
-
-            if (insercion == true)
-            {
-                MessageBox.Show("Agregado con exito");
-            }
-            else
-            {
-                MessageBox.Show("Ha ocurrido un error");
-            }
-            return insercion;
-
-
         }
 
        

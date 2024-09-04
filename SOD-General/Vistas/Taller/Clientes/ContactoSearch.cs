@@ -25,6 +25,7 @@ namespace SOD_General.Vistas.Taller.Clientes
         {
             InitializeComponent();
             llenarCbRncName();
+            llenarGrid();
         }
 
         private void cR_SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -89,7 +90,8 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void cmbCed_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
+            dgvContact.Rows.Clear();
 
             if (!cambioSeleccion)
             {
@@ -99,7 +101,6 @@ namespace SOD_General.Vistas.Taller.Clientes
             }
 
             List<Contact> contactClient = clieControl.ContactData();
-            dgvContact.Rows.Clear();
 
             listLot = clieControl.ContactData();
 
@@ -137,6 +138,15 @@ namespace SOD_General.Vistas.Taller.Clientes
                     this.Close();
                 }
 
+            }
+        }
+
+        public void llenarGrid()
+        {
+            List<Contact> listado = clieControl.ContactData();
+            foreach (var recorrer in listado)
+            {
+                dgvContact.Rows.Add(recorrer.IdContact, recorrer.ContactName, recorrer.identifier, recorrer.numero1, recorrer.numero2);
             }
         }
 

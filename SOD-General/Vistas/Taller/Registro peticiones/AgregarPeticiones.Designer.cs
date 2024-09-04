@@ -80,7 +80,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(654, 457);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(652, 457);
             this.cR_SplitContainer1.SplitterDistance = 63;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -428,7 +428,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 457);
+            this.ClientSize = new System.Drawing.Size(652, 457);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MinimumSize = new System.Drawing.Size(559, 450);

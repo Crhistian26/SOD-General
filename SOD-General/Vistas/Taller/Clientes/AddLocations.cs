@@ -24,7 +24,13 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
         {
-          //  clieControl.AgregarCliente(txtCliente.Text, txtDireccion.Text, txtNumero1.Text, txtNumero2.Text, CbRnc.SelectedItem.ToString());
+           clieControl.AgregarSucursal(txtCliente.Text, txtDireccion.Text, txtNumero1.Text, txtNumero2.Text, CbRnc.SelectedItem.ToString(), CbContact.SelectedItem.ToString());
+            txtCliente.Text = null;
+            txtDireccion.Text = null;
+            txtNumero1.Text = null;
+            txtNumero2.Text = null;
+            CbContact.SelectedItem = null;
+            CbRnc.SelectedItem = null;
         }
 
         private void btnBuscarRnc_Click(object sender, EventArgs e)
