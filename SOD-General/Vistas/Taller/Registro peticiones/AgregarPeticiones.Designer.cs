@@ -28,25 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.cR_LabelUp1 = new CR_LabelUp();
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.cR_TextBoxNumerico1 = new CR_TextBoxNumerico();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ChkRncCliente = new CR_Checkbox();
             this.pnlRnc = new System.Windows.Forms.Panel();
-            this.txtRnc = new Cr_Textbox();
-            this.cbRNC = new SOD_ComboBox();
+            this.cbClient = new SOD_ComboBox();
             this.cR_Subtitulos7 = new CR_Subtitulos();
-            this.chkSucursal = new CR_Checkbox();
             this.pnlCliente = new System.Windows.Forms.Panel();
             this.txtCliente = new Cr_Textbox();
             this.CbCliente = new SOD_ComboBox();
             this.cR_Subtitulos2 = new CR_Subtitulos();
-            this.pnlSucursal = new System.Windows.Forms.Panel();
-            this.CbSucursal = new SOD_ComboBox();
-            this.cR_Subtitulos6 = new CR_Subtitulos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cr_Textbox1 = new Cr_Textbox();
             this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
@@ -54,6 +49,10 @@
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
+            this.CbCont = new SOD_ComboBox();
+            this.cR_Subtitulos5 = new CR_Subtitulos();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -62,7 +61,8 @@
             this.panel1.SuspendLayout();
             this.pnlRnc.SuspendLayout();
             this.pnlCliente.SuspendLayout();
-            this.pnlSucursal.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -80,8 +80,8 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(652, 457);
-            this.cR_SplitContainer1.SplitterDistance = 63;
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(1014, 594);
+            this.cR_SplitContainer1.SplitterDistance = 81;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // panelTitulo
@@ -130,68 +130,46 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.ChkRncCliente);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pnlRnc);
-            this.panel1.Controls.Add(this.chkSucursal);
             this.panel1.Controls.Add(this.pnlCliente);
-            this.panel1.Controls.Add(this.pnlSucursal);
-            this.panel1.Controls.Add(this.cR_Subtitulos1);
-            this.panel1.Controls.Add(this.cr_Textbox1);
-            this.panel1.Controls.Add(this.botones_Nuevos2);
-            this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(649, 383);
+            this.panel1.Size = new System.Drawing.Size(1011, 509);
             this.panel1.TabIndex = 0;
-            // 
-            // ChkRncCliente
-            // 
-            this.ChkRncCliente.AutoSize = true;
-            this.ChkRncCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.ChkRncCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.ChkRncCliente.Location = new System.Drawing.Point(85, 3);
-            this.ChkRncCliente.Name = "ChkRncCliente";
-            this.ChkRncCliente.Size = new System.Drawing.Size(83, 24);
-            this.ChkRncCliente.TabIndex = 109;
-            this.ChkRncCliente.Text = "Nombre";
-            this.ChkRncCliente.UseVisualStyleBackColor = true;
-            this.ChkRncCliente.CheckedChanged += new System.EventHandler(this.RncCliente_CheckedChanged);
             // 
             // pnlRnc
             // 
-            this.pnlRnc.Controls.Add(this.txtRnc);
-            this.pnlRnc.Controls.Add(this.cbRNC);
+            this.pnlRnc.Controls.Add(this.btnGuardar);
+            this.pnlRnc.Controls.Add(this.CbCont);
+            this.pnlRnc.Controls.Add(this.botones_Nuevos2);
+            this.pnlRnc.Controls.Add(this.cr_Textbox1);
+            this.pnlRnc.Controls.Add(this.cR_Subtitulos1);
+            this.pnlRnc.Controls.Add(this.cR_Subtitulos5);
+            this.pnlRnc.Controls.Add(this.cbClient);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos7);
-            this.pnlRnc.Location = new System.Drawing.Point(3, 33);
+            this.pnlRnc.Location = new System.Drawing.Point(3, 3);
             this.pnlRnc.Name = "pnlRnc";
-            this.pnlRnc.Size = new System.Drawing.Size(286, 97);
+            this.pnlRnc.Size = new System.Drawing.Size(1005, 204);
             this.pnlRnc.TabIndex = 108;
+            this.pnlRnc.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRnc_Paint);
             // 
-            // txtRnc
+            // cbClient
             // 
-            this.txtRnc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRnc.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtRnc.Location = new System.Drawing.Point(75, 66);
-            this.txtRnc.Name = "txtRnc";
-            this.txtRnc.Size = new System.Drawing.Size(100, 25);
-            this.txtRnc.TabIndex = 109;
-            // 
-            // cbRNC
-            // 
-            this.cbRNC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbRNC.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cbRNC.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbRNC.FormattingEnabled = true;
-            this.cbRNC.Items.AddRange(new object[] {
+            this.cbClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbClient.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cbClient.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbClient.FormattingEnabled = true;
+            this.cbClient.Items.AddRange(new object[] {
             "axel",
             "alejandro",
             "rodrigo",
             "fernandez"});
-            this.cbRNC.Location = new System.Drawing.Point(3, 33);
-            this.cbRNC.Name = "cbRNC";
-            this.cbRNC.Size = new System.Drawing.Size(264, 27);
-            this.cbRNC.TabIndex = 102;
-            this.cbRNC.SelectedIndexChanged += new System.EventHandler(this.cbRNC_SelectedIndexChanged);
+            this.cbClient.Location = new System.Drawing.Point(21, 54);
+            this.cbClient.Name = "cbClient";
+            this.cbClient.Size = new System.Drawing.Size(264, 27);
+            this.cbClient.TabIndex = 102;
+            this.cbClient.SelectedIndexChanged += new System.EventHandler(this.cbRNC_SelectedIndexChanged);
             // 
             // cR_Subtitulos7
             // 
@@ -202,24 +180,11 @@
             this.cR_Subtitulos7.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cR_Subtitulos7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos7.Location = new System.Drawing.Point(86, 9);
+            this.cR_Subtitulos7.Location = new System.Drawing.Point(59, 30);
             this.cR_Subtitulos7.Name = "cR_Subtitulos7";
-            this.cR_Subtitulos7.Size = new System.Drawing.Size(117, 21);
+            this.cR_Subtitulos7.Size = new System.Drawing.Size(187, 21);
             this.cR_Subtitulos7.TabIndex = 96;
-            this.cR_Subtitulos7.Text = "RNC o Cedula";
-            // 
-            // chkSucursal
-            // 
-            this.chkSucursal.AutoSize = true;
-            this.chkSucursal.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.chkSucursal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.chkSucursal.Location = new System.Drawing.Point(463, 3);
-            this.chkSucursal.Name = "chkSucursal";
-            this.chkSucursal.Size = new System.Drawing.Size(84, 24);
-            this.chkSucursal.TabIndex = 106;
-            this.chkSucursal.Text = "Sucursal";
-            this.chkSucursal.UseVisualStyleBackColor = true;
-            this.chkSucursal.CheckedChanged += new System.EventHandler(this.chkSucursal_CheckedChanged);
+            this.cR_Subtitulos7.Text = "RNC/Cedula del cliente";
             // 
             // pnlCliente
             // 
@@ -272,47 +237,6 @@
             this.cR_Subtitulos2.TabIndex = 87;
             this.cR_Subtitulos2.Text = "Cliente";
             // 
-            // pnlSucursal
-            // 
-            this.pnlSucursal.Controls.Add(this.CbSucursal);
-            this.pnlSucursal.Controls.Add(this.cR_Subtitulos6);
-            this.pnlSucursal.Location = new System.Drawing.Point(361, 32);
-            this.pnlSucursal.Name = "pnlSucursal";
-            this.pnlSucursal.Size = new System.Drawing.Size(276, 98);
-            this.pnlSucursal.TabIndex = 105;
-            // 
-            // CbSucursal
-            // 
-            this.CbSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.CbSucursal.Enabled = false;
-            this.CbSucursal.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.CbSucursal.ForeColor = System.Drawing.SystemColors.Window;
-            this.CbSucursal.FormattingEnabled = true;
-            this.CbSucursal.Items.AddRange(new object[] {
-            "axel",
-            "alejandro",
-            "rodrigo",
-            "fernandez"});
-            this.CbSucursal.Location = new System.Drawing.Point(17, 37);
-            this.CbSucursal.Name = "CbSucursal";
-            this.CbSucursal.Size = new System.Drawing.Size(240, 27);
-            this.CbSucursal.TabIndex = 86;
-            // 
-            // cR_Subtitulos6
-            // 
-            this.cR_Subtitulos6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cR_Subtitulos6.AutoSize = true;
-            this.cR_Subtitulos6.BackColor = System.Drawing.Color.Transparent;
-            this.cR_Subtitulos6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cR_Subtitulos6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos6.Location = new System.Drawing.Point(86, 10);
-            this.cR_Subtitulos6.Name = "cR_Subtitulos6";
-            this.cR_Subtitulos6.Size = new System.Drawing.Size(73, 21);
-            this.cR_Subtitulos6.TabIndex = 87;
-            this.cR_Subtitulos6.Text = "Sucursal";
-            // 
             // cR_Subtitulos1
             // 
             this.cR_Subtitulos1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -322,7 +246,7 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(10, 144);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(6, 106);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(70, 21);
             this.cR_Subtitulos1.TabIndex = 104;
@@ -332,10 +256,10 @@
             // 
             this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(14, 168);
+            this.cr_Textbox1.Location = new System.Drawing.Point(10, 133);
             this.cr_Textbox1.Multiline = true;
             this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(623, 116);
+            this.cr_Textbox1.Size = new System.Drawing.Size(653, 68);
             this.cr_Textbox1.TabIndex = 103;
             // 
             // botones_Nuevos2
@@ -348,9 +272,9 @@
             this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(545, 294);
+            this.botones_Nuevos2.Location = new System.Drawing.Point(695, 48);
             this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(92, 40);
+            this.botones_Nuevos2.Size = new System.Drawing.Size(92, 33);
             this.botones_Nuevos2.TabIndex = 94;
             this.botones_Nuevos2.Text = "Cliente nuevo";
             this.botones_Nuevos2.UseVisualStyleBackColor = false;
@@ -365,9 +289,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(14, 290);
+            this.btnGuardar.Location = new System.Drawing.Point(681, 133);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(244, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(147, 68);
             this.btnGuardar.TabIndex = 85;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -424,11 +348,69 @@
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
             // 
+            // CbCont
+            // 
+            this.CbCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.CbCont.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.CbCont.ForeColor = System.Drawing.SystemColors.Window;
+            this.CbCont.FormattingEnabled = true;
+            this.CbCont.Items.AddRange(new object[] {
+            "axel",
+            "alejandro",
+            "rodrigo",
+            "fernandez"});
+            this.CbCont.Location = new System.Drawing.Point(399, 54);
+            this.CbCont.Name = "CbCont";
+            this.CbCont.Size = new System.Drawing.Size(264, 27);
+            this.CbCont.TabIndex = 111;
+            // 
+            // cR_Subtitulos5
+            // 
+            this.cR_Subtitulos5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cR_Subtitulos5.AutoSize = true;
+            this.cR_Subtitulos5.BackColor = System.Drawing.Color.Transparent;
+            this.cR_Subtitulos5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cR_Subtitulos5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Subtitulos5.Location = new System.Drawing.Point(426, 30);
+            this.cR_Subtitulos5.Name = "cR_Subtitulos5";
+            this.cR_Subtitulos5.Size = new System.Drawing.Size(204, 21);
+            this.cR_Subtitulos5.TabIndex = 110;
+            this.cR_Subtitulos5.Text = "RNC/Cedula del contacto";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cR_DataGriedView1);
+            this.panel2.Location = new System.Drawing.Point(3, 210);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1008, 296);
+            this.panel2.TabIndex = 109;
+            // 
+            // cR_DataGriedView1
+            // 
+            this.cR_DataGriedView1.AllowUserToAddRows = false;
+            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
+            this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(1008, 296);
+            this.cR_DataGriedView1.TabIndex = 0;
+            // 
             // AgregarPeticiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 457);
+            this.ClientSize = new System.Drawing.Size(1014, 594);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MinimumSize = new System.Drawing.Size(559, 450);
@@ -443,13 +425,12 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.pnlRnc.ResumeLayout(false);
             this.pnlRnc.PerformLayout();
             this.pnlCliente.ResumeLayout(false);
             this.pnlCliente.PerformLayout();
-            this.pnlSucursal.ResumeLayout(false);
-            this.pnlSucursal.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,23 +445,21 @@
         private System.Windows.Forms.Panel panel1;
         private CR_Subtitulos cR_Subtitulos7;
         private Diseños.Botones_Nuevos botones_Nuevos2;
-        private SOD_ComboBox CbSucursal;
         private Diseños.Botones_Nuevos btnGuardar;
-        private CR_Subtitulos cR_Subtitulos6;
         private CR_TextBoxNumerico cR_TextBoxNumerico1;
-        private SOD_ComboBox cbRNC;
+        private SOD_ComboBox cbClient;
         private CR_LabelUp cR_LabelUp1;
         private CR_Subtitulos cR_Subtitulos1;
         private Cr_Textbox cr_Textbox1;
         private System.Windows.Forms.Panel panelTitulo;
-        private System.Windows.Forms.Panel pnlSucursal;
-        private CR_Checkbox chkSucursal;
         private System.Windows.Forms.Panel pnlCliente;
         private SOD_ComboBox CbCliente;
         private CR_Subtitulos cR_Subtitulos2;
         private System.Windows.Forms.Panel pnlRnc;
-        private Cr_Textbox txtRnc;
         private Cr_Textbox txtCliente;
-        private CR_Checkbox ChkRncCliente;
+        private SOD_ComboBox CbCont;
+        private CR_Subtitulos cR_Subtitulos5;
+        private System.Windows.Forms.Panel panel2;
+        private CR_DataGriedView cR_DataGriedView1;
     }
 }

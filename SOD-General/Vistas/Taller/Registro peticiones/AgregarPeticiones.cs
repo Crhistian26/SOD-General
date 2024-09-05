@@ -30,6 +30,7 @@ namespace SOD_General.Taller.Registro_peticiones
 
             Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
+
         }
 
         private void AgregarPeticiones_Load(object sender, EventArgs e)
@@ -37,7 +38,6 @@ namespace SOD_General.Taller.Registro_peticiones
             CentrarElementos();
             cbRellenarRNC();
             cbRellenarCl();
-            CbSucursal.Items.Clear();
         }
 
 
@@ -49,24 +49,23 @@ namespace SOD_General.Taller.Registro_peticiones
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            RegistrarSolicitudEquipo regi = new RegistrarSolicitudEquipo(vista);
-            vista.OpenForm(regi);
+
         }
 
 
         public void cbRellenarRNC()
         {
             ClientList = Ccontroller.RellenarComboBox();
-            cbRNC.Items.Clear();
-            cbRNC.SelectedItem = null;
+            cbClient.Items.Clear();
+            cbClient.SelectedItem = null;
 
             foreach (var a in ClientList)
             {
-                cbRNC.Items.Add(a._Identifier);
+                cbClient.Items.Add(a._Identifier);
                 //  cbRNC.Tag = a.IdClient;
             }
 
-
+            
         }
 
         public void cbRellenarCl()
@@ -85,12 +84,10 @@ namespace SOD_General.Taller.Registro_peticiones
         public void cbRellenarLoc(int a)
         {
             ListLoc = Ccontroller.ViewLocation(a);
-            CbSucursal.Items.Clear();
             if (ListLoc != null)
             {
                 foreach (var b in ListLoc)
                 {
-                    CbSucursal.Items.Add(b._Location);
                 }
             }
             else
@@ -107,100 +104,29 @@ namespace SOD_General.Taller.Registro_peticiones
 
         private void chkSucursal_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkSucursal.Checked)
-            {
-                CbSucursal.Enabled = true;
-
-            }
-            else
-            {
-                CbSucursal.Enabled = false;
-
-            }
+        
         }
 
         private void CbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CbCliente.SelectedIndex != null)
-            {
-                //string selection = CbCliente.Text;
-                //string view = ClientList.Where(m => m._Name == selection)
-                //                        .Select(m => m._Identifier)
-                //                        .First();
-
-                //txtCliente.Text = view.ToString();
-            }
-            else
-            {
-                txtCliente.Text = null;
-            }
-
-            if (chkSucursal.Checked && CbCliente.SelectedIndex != null)
-            {
-                //string select = CbCliente.Text;
-                //int? buscar = ClientList.Where(Z => Z._Name == select)
-                //                        .Select(m => m.IdClient)
-                //                        .First();
-
-                //int busc = Convert.ToInt32(buscar);
-                //cbRellenarLoc(busc);
-            }
-            else
-            {
-
-
-            }
+           
         }
 
         private void cbRNC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbRNC.SelectedIndex != null)
-            {
-                //string selection = cbRNC.Text;
-                //string view = ClientList.Where(m => m._Identifier == selection)
-                //                        .Select(m => m._Name)
-                //                        .First();
-
-                //txtRnc.Text = view.ToString();
-            }
-            else
-            {
-                txtCliente.Text = null;
-            }
-
-            if (chkSucursal.Checked && cbRNC.SelectedIndex != null)
-            {
-                string select = cbRNC.Text;
-                int? buscar = ClientList.Where(Z => Z._Identifier == select)
-                                        .Select(m => m.IdClient)
-                                        .First();
-
-                int busc = Convert.ToInt32(buscar);
-                cbRellenarLoc(busc);
-            }
-            else
-            {
-
-
-            }
+          
         }
 
 
 
         private void RncCliente_CheckedChanged(object sender, EventArgs e)
         {
-            if (ChkRncCliente.Checked)
-            {
-                pnlRnc.Visible = true;
-                pnlCliente.Visible = false;
+        
+        }
 
-            }
-            else
-            {
-                pnlRnc.Visible = false;
-                pnlCliente.Visible = true;
+        private void pnlRnc_Paint(object sender, PaintEventArgs e)
+        {
 
-            }
         }
     }
 }

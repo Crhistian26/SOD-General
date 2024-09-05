@@ -1,4 +1,5 @@
-﻿using Modelos.Control_de_usuarios;
+﻿using DocumentFormat.OpenXml.Office2010.ExcelAc;
+using Modelos.Control_de_usuarios;
 using Modelos.Taller;
 using SOD_General.Vistas.Taller.Clientes;
 using SOD_General.Vistas.Taller.Pruebadiseño;
@@ -117,12 +118,14 @@ namespace SOD_General.Controladores
         }
 
 
-        public List<Client> ViewClient()
+        public List<List<ClientContact>> ViewClient()
         {
             try
             {
-                string Query = "Exec Get_Client";
-                List<Client> ClientsRecordTaller = new List<Client>();
+                string Query = "Exec Get_Locations";
+                List<List<ClientContact>> ClientsRecordTaller = new List<List<ClientContact>>();
+                List<ClientContact> CliCont = new List<ClientContact>();    
+
                 SqlCommand cmd = new SqlCommand(Query, conex);
 
                 conex.Open();
@@ -137,15 +140,26 @@ namespace SOD_General.Controladores
                 {
                     while (Reader.Read())
                     {
-                        Client Clientes;
-                        int Id = Reader.GetInt32(0);
 
-                        string Identifier = Reader.GetString(1);
-                        string Client = Reader.GetString(2);
+                        CliCont.Add(
+                            new ClientContact(
+                                Reader.GetInt32(0),
+                                new Locations(
+                                    Reader.GetString(1),
+                                    Reader.GetString(2),
+                                    Reader.GetString(3),
+                                    Reader.GetString(4),
+                                    Reader.GetString(5)
+                                ),
+                                new Contact(
+                                     Reader.GetString(6),
+                                      Reader.GetString(7),
+                                      Reader.GetString(8),
+                                      Reader.GetString(9)
+                                    )
+                           ));
 
-
-                        Clientes = new Client(Id, Identifier);
-                        ClientsRecordTaller.Add(Clientes);
+                        ClientsRecordTaller.Add(CliCont);
                     }
 
                     conex.Close();
@@ -203,7 +217,6 @@ namespace SOD_General.Controladores
                         loca = new Locations(IdLocation, IdClient, a, address, phone1, phone2, contact, identifier);
                         locations.Add(loca);
                     }
-
                     conex.Close();
                     return locations;
                 }
@@ -376,7 +389,7 @@ namespace SOD_General.Controladores
                     string phone1 = reader.GetString(3);
                     string phone2 = reader.GetString(4);
 
-                    loc = new Contact(IdClient, name, identifier, phone1, phone2);
+                    loc = new Contact(name, identifier, phone1, phone2, IdClient);
                     ListLoc.Add(loc);
                 }
                 conex.Close();

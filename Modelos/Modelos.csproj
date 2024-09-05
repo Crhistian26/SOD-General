@@ -227,6 +227,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Taller\Brand.cs" />
     <Compile Include="Taller\Client.cs" />
+    <Compile Include="Taller\ClientContact.cs" />
     <Compile Include="Taller\Contact.cs" />
     <Compile Include="Taller\Controles.cs" />
     <Compile Include="Taller\ControlQuality.cs" />

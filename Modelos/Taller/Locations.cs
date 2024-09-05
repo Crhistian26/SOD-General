@@ -52,5 +52,16 @@
         }
 
 
+        public Locations(string _Location, string Identfier, string Address, string Phone1, string Phone2) 
+        {
+            this._Location = _Location;
+            this.Identifier = Identfier;
+            this.Addrees = Address;
+            this.Phone1 = Phone1;
+            this.Phone2 = Phone2;
+        
+        }
+
+
     }
 }
