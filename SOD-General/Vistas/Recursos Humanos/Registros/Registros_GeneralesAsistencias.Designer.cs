@@ -216,7 +216,6 @@
 
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
-        private CR_DateTimePicker cR_DateTimePicker1;
         private CR_DataGriedView cR_DataGriedView2;
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_RecordId;
@@ -226,5 +225,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fin_Receso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencias_Hours;
+        public CR_DateTimePicker cR_DateTimePicker1;
     }
 }

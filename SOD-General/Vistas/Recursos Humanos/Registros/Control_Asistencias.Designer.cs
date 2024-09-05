@@ -171,6 +171,7 @@
             this.botones_Nuevos1.Text = "Agregar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             this.botones_Nuevos1.Visible = false;
+
             // 
             // panel5
             // 

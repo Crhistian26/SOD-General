@@ -17,9 +17,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         List<Employee> empleados;
         Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
         Record_Attendance record;
-        public Control_Asistencias()
+        public Control_Asistencias(DateTime fecha)
         {
             InitializeComponent();
+            cR_DateTimePicker1.Value = fecha;
             VistaAgregar();
         }
         public Control_Asistencias(Record_Attendance record)
@@ -225,14 +226,14 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     }
                     MessageBox.Show(mensaje);
                 }
-                control.Reset_VisualRegistors();
+                control.Reset_VisualRegistors(cR_DateTimePicker1.Value);
                 this.Close();
             }
             else
             {
                 Record_Attendance record = new Record_Attendance
                 (
-                    empleados[soD_ComboBox1.SelectedIndex + 1].IdEmployee,
+                    empleados[soD_ComboBox1.SelectedIndex - 1].IdEmployee,
                     StartJob,
                     FinishJob,
                     StartLunch,
@@ -242,7 +243,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
                 if (control.AddAttendance(record))
                 {
-                    control.Reset_VisualRegistors();
+                    control.Reset_VisualRegistors(cR_DateTimePicker1.Value);
                     this.Close();
                 }
             }
@@ -259,7 +260,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             if (control.EditAttendance(record))
             {
-                control.Reset_VisualRegistors();
+                control.Reset_VisualRegistors(cR_DateTimePicker1.Value);
                 this.Close();
             }
         }
@@ -271,11 +272,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 if (control.DeleteAttendance(record))
                 {
-                    control.Reset_VisualRegistors();
+                    control.Reset_VisualRegistors(cR_DateTimePicker1.Value);
                     this.Close();
                 }
             }
         }
 
+       
     }
 }

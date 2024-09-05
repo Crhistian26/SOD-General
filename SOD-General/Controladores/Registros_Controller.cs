@@ -17,14 +17,14 @@ namespace SOD_General.Controladores
         SqlConnection conex = new SqlConnection(cadena);
 
         #region Asistencias
-        public void AgregarAsistencia()
+        public void AgregarAsistencia(DateTime fecha)
         {
             var win = Application.OpenForms.OfType<Control_Asistencias>().FirstOrDefault();
             if (win != null)
             {
                 win.Close();
             }
-            Control_Asistencias vista = new Control_Asistencias();
+            Control_Asistencias vista = new Control_Asistencias(fecha);
             vista.Show();
         }
 
@@ -561,6 +561,13 @@ namespace SOD_General.Controladores
         {
             var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
             h.OpenForm(new Registros_GeneralesAsistencias());
+        }
+        public void Reset_VisualRegistors(DateTime fecha)
+        {
+            var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
+            var f = new Registros_GeneralesAsistencias();
+            f.cR_DateTimePicker1.Value = fecha;
+            h.OpenForm(f);
         }
         public void Reset_VisualPermisos()
         {

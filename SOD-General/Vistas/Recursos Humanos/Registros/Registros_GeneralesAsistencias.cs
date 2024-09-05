@@ -87,7 +87,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void botones_Nuevos1_Click(object sender, EventArgs e)
         {
-            control.AgregarAsistencia();
+            control.AgregarAsistencia(cR_DateTimePicker1.Value);
         }
 
         private void cR_DateTimePicker1_ValueChanged(object sender, EventArgs e)
