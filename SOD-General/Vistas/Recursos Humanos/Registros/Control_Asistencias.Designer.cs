@@ -479,6 +479,8 @@
             this.soD_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.soD_ComboBox1.ForeColor = System.Drawing.Color.White;
             this.soD_ComboBox1.FormattingEnabled = true;
+            this.soD_ComboBox1.Items.AddRange(new object[] {
+            "Todos los empleados"});
             this.soD_ComboBox1.Location = new System.Drawing.Point(16, 90);
             this.soD_ComboBox1.Name = "soD_ComboBox1";
             this.soD_ComboBox1.Size = new System.Drawing.Size(467, 29);

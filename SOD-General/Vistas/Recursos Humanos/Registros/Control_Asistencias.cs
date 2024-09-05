@@ -184,19 +184,67 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 return;
             }
 
-            Record_Attendance record = new Record_Attendance
-            (
-                empleados[soD_ComboBox1.SelectedIndex].IdEmployee,
-                StartJob,
-                FinishJob,
-                StartLunch,
-                FinishLunch,
-                cR_DateTimePicker1.Value
-            );
-            if (control.AddAttendance(record))
+            if (soD_ComboBox1.SelectedIndex == 0)
             {
+
+                List<int> idsEmpleados = new List<int>();
+                foreach(Employee emp in empleados)
+                {
+                    Record_Attendance record = new Record_Attendance
+                    (
+                        emp.IdEmployee,
+                        StartJob,
+                        FinishJob,
+                        StartLunch,
+                        FinishLunch,
+                        cR_DateTimePicker1.Value
+                    );
+
+                    int id = control.AddAttendanceMulti(record);
+
+                    if (id != -1)
+                    {
+                        idsEmpleados.Add(id);
+                    }
+                    
+                }
+
+                if(idsEmpleados.Count > 0)
+                {
+                    List<string> EmpleadosNoAgregables = 
+                        empleados
+                        .Where(a => idsEmpleados.Contains(a.IdEmployee))
+                        .Select(a => a._Name +" "+ a._Lastname)
+                        .ToList();
+
+                    string mensaje = "Los siguientes empleados no se agregaron por que tienen una asistencia registrada:";
+                    
+                    foreach(string name in EmpleadosNoAgregables)
+                    {
+                        mensaje += $"\n{name}";
+                    }
+                    MessageBox.Show(mensaje);
+                }
                 control.Reset_VisualRegistors();
                 this.Close();
+            }
+            else
+            {
+                Record_Attendance record = new Record_Attendance
+                (
+                    empleados[soD_ComboBox1.SelectedIndex + 1].IdEmployee,
+                    StartJob,
+                    FinishJob,
+                    StartLunch,
+                    FinishLunch,
+                    cR_DateTimePicker1.Value
+                );
+
+                if (control.AddAttendance(record))
+                {
+                    control.Reset_VisualRegistors();
+                    this.Close();
+                }
             }
         }
 

@@ -137,6 +137,45 @@ namespace SOD_General.Controladores
                 return false;
             }
         }
+        public int AddAttendanceMulti(Record_Attendance record)
+        {
+            try
+            {
+                //El query.
+                string Query = "Exec Add_Attendance @idEmp,@entry,@exit,@lunchS,@lunchF,@date";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idEmp", record.IdEmployee);
+                cmd.Parameters.AddWithValue("@entry", record.Entry);
+                cmd.Parameters.AddWithValue("@exit", record.Exit);
+                if (record.LunchS != null && record.LunchF != null)
+                {
+                    cmd.Parameters.AddWithValue("@lunchS", record.LunchS);
+                    cmd.Parameters.AddWithValue("@lunchF", record.LunchF);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@lunchS", DBNull.Value);
+                    cmd.Parameters.AddWithValue("@lunchF", DBNull.Value);
+                }
+                cmd.Parameters.AddWithValue("@date", record.DateAttendance);
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return -1;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                return record.IdEmployee;
+            }
+            
+        }
         public bool EditAttendance(Record_Attendance record)
         {
             try
