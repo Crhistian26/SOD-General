@@ -38,6 +38,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             LlenarComboEmpleados();
             botones_Nuevos1.Click += AddAttendance;
             txtsDefecto();
+            cR_Checkbox2.Checked = true;
         }
         private void VistaEditar()
         {
@@ -166,10 +167,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             TimeSpan StartJob = _size.CreateTS(cR_TBhora1.Text, cR_TBminutos1.Text, soD_ComboBox2.SelectedItem.ToString());
             TimeSpan FinishJob = _size.CreateTS(cR_TBhora2.Text, cR_TBminutos2.Text, soD_ComboBox3.SelectedItem.ToString());
-            TimeSpan StartLunch = _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString());
-            TimeSpan FinishLunch = _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString());
+            TimeSpan? StartLunch = _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString());
+            TimeSpan? FinishLunch = _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString());
 
-            if(
+            if(!cR_Checkbox2.Checked)
+            {
+                StartLunch = null;
+                FinishLunch = null;
+            }
+
+            if (
                 StartJob > StartLunch
                 || StartLunch > FinishLunch
                 || FinishLunch > FinishJob
@@ -254,8 +261,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             record.Entry = _size.CreateTS(cR_TBhora1.Text, cR_TBminutos1.Text, soD_ComboBox2.SelectedItem.ToString());
             record.Exit = _size.CreateTS(cR_TBhora2.Text, cR_TBminutos2.Text, soD_ComboBox3.SelectedItem.ToString());
-            record.LunchS = _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString());
-            record.LunchF = _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString());
+            if( cR_Checkbox2.Checked) 
+            {
+                record.LunchS = _size.CreateTS(cR_TBhora3.Text, cR_TBminutos3.Text, soD_ComboBox4.SelectedItem.ToString());
+                record.LunchF = _size.CreateTS(cR_TBhora4.Text, cR_TBminutos4.Text, soD_ComboBox5.SelectedItem.ToString());
+            }
+            else
+            {
+                record.LunchS = null;
+                record.LunchF = null;
+            }
             record.DateAttendance = cR_DateTimePicker1.Value;
 
             if (control.EditAttendance(record))
@@ -278,6 +293,18 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
         }
 
-       
+        private void cR_Checkbox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cR_Checkbox2.Checked)
+            {
+                panel4.Visible = true;
+                panel5.Visible = true;
+            }
+            else
+            {
+                panel4.Visible = false;
+                panel5.Visible = false;
+            }
+        }
     }
 }

@@ -63,6 +63,7 @@
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.soD_ComboBox1 = new Cr_ComboBox();
+            this.cR_Checkbox2 = new CR_Checkbox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -90,7 +91,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(720, 470);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(720, 517);
             this.cR_SplitContainer1.SplitterDistance = 86;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -111,6 +112,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_Checkbox2);
             this.panel1.Controls.Add(this.cr_Textbox1);
             this.panel1.Controls.Add(this.botones_Nuevos2);
             this.panel1.Controls.Add(this.botones_Nuevos1);
@@ -124,7 +126,7 @@
             this.panel1.Controls.Add(this.soD_ComboBox1);
             this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(499, 365);
+            this.panel1.Size = new System.Drawing.Size(499, 405);
             this.panel1.TabIndex = 3;
             // 
             // cr_Textbox1
@@ -147,7 +149,7 @@
             this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(333, 307);
+            this.botones_Nuevos2.Location = new System.Drawing.Point(333, 351);
             this.botones_Nuevos2.Name = "botones_Nuevos2";
             this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos2.TabIndex = 26;
@@ -164,14 +166,13 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(173, 307);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(173, 351);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos1.TabIndex = 25;
             this.botones_Nuevos1.Text = "Agregar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             this.botones_Nuevos1.Visible = false;
-
             // 
             // panel5
             // 
@@ -180,7 +181,7 @@
             this.panel5.Controls.Add(this.soD_ComboBox5);
             this.panel5.Controls.Add(this.cR_LabelDown9);
             this.panel5.Controls.Add(this.cR_LabelDown10);
-            this.panel5.Location = new System.Drawing.Point(283, 217);
+            this.panel5.Location = new System.Drawing.Point(283, 261);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 66);
             this.panel5.TabIndex = 24;
@@ -247,7 +248,7 @@
             this.panel4.Controls.Add(this.cR_LabelDown5);
             this.panel4.Controls.Add(this.soD_ComboBox4);
             this.panel4.Controls.Add(this.cR_LabelDown8);
-            this.panel4.Location = new System.Drawing.Point(16, 217);
+            this.panel4.Location = new System.Drawing.Point(16, 261);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 66);
             this.panel4.TabIndex = 24;
@@ -487,11 +488,24 @@
             this.soD_ComboBox1.Size = new System.Drawing.Size(467, 29);
             this.soD_ComboBox1.TabIndex = 28;
             // 
+            // cR_Checkbox2
+            // 
+            this.cR_Checkbox2.AutoSize = true;
+            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_Checkbox2.Location = new System.Drawing.Point(205, 221);
+            this.cR_Checkbox2.Name = "cR_Checkbox2";
+            this.cR_Checkbox2.Size = new System.Drawing.Size(85, 24);
+            this.cR_Checkbox2.TabIndex = 29;
+            this.cR_Checkbox2.Text = "Almorzo";
+            this.cR_Checkbox2.UseVisualStyleBackColor = true;
+            this.cR_Checkbox2.CheckedChanged += new System.EventHandler(this.cR_Checkbox2_CheckedChanged);
+            // 
             // Control_Asistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 470);
+            this.ClientSize = new System.Drawing.Size(720, 517);
             this.Controls.Add(this.cR_SplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(720, 470);
@@ -554,5 +568,6 @@
         private Diseños.Botones_Nuevos botones_Nuevos2;
         private Cr_Textbox cr_Textbox1;
         private Cr_ComboBox soD_ComboBox1;
+        private CR_Checkbox cR_Checkbox2;
     }
 }

@@ -120,14 +120,14 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         private void cR_DataGriedView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("Junciona");
+            
         }
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1)
+            if (e.RowIndex != -1 && user.Confirm_Operation("Editar empleados"))
             {
-                var win = Application.OpenForms.OfType<Empleado_Details>().FirstOrDefault();
+                var win = Application.OpenForms.OfType<Control_Empleados>().FirstOrDefault();
                 if (win != null)
                 {
                     win.Close();
@@ -136,7 +136,13 @@ namespace SOD_General.Recursos_Humanos.Empleados
                 DataGridViewRow fila = cR_DataGriedView1.Rows[e.RowIndex];
                 int id = Convert.ToInt32(fila.Cells[0].Value);
 
-                Empleado_Details vista = new Empleado_Details(id);
+                Control_Empleados vista = new Control_Empleados(
+                    Empleados
+                    .Where(a=>a.IdEmployee == id)
+                    .Select(a=>a)
+                    .First()
+                );
+
                 vista.Show();
             }
         }

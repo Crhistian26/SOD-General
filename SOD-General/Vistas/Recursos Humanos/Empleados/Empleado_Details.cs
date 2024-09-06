@@ -64,7 +64,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
                         registro.IdRecord,
                         registro._Reason,
                         registro._Description
-                        );
+                    );
                 }
             }
         }
