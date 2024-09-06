@@ -15,7 +15,8 @@ namespace SOD_General.Taller.Registro_peticiones
         AppVistaGeneral vista;
         ClientController Ccontroller = new ClientController();
         int elegido = 0;
-        List<Client> ClientList = new List<Client>();
+        List<ClientContact> ContactList = new List<ClientContact>();
+
         List<Locations> ListLoc = new List<Locations>();
         public AgregarPeticiones()
         {
@@ -25,8 +26,8 @@ namespace SOD_General.Taller.Registro_peticiones
         }
         private void CentrarElementos()
         {
-            Point SubL = panelTitulo.Location;
-            panelTitulo.Location = _size.CentrarElementosX(SubL, panelTitulo.Size, this.Size);
+            Point SubL = cR_Subtitulos4.Location;
+            cR_Subtitulos4.Location = _size.CentrarElementosX(SubL, cR_Subtitulos4.Size, this.Size);
 
             Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
             panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
@@ -36,8 +37,8 @@ namespace SOD_General.Taller.Registro_peticiones
         private void AgregarPeticiones_Load(object sender, EventArgs e)
         {
             CentrarElementos();
-            cbRellenarRNC();
-            cbRellenarCl();
+            cbRncClient();
+            cbRncLoc();
         }
 
 
@@ -53,45 +54,28 @@ namespace SOD_General.Taller.Registro_peticiones
         }
 
 
-        public void cbRellenarRNC()
+        public void cbRncClient()
         {
-            ClientList = Ccontroller.RellenarComboBox();
             cbClient.Items.Clear();
+            ContactList = Ccontroller.ViewClient();
+            
             cbClient.SelectedItem = null;
 
-            foreach (var a in ClientList)
+            foreach (var ListCont in ContactList)
             {
-                cbClient.Items.Add(a._Identifier);
-                //  cbRNC.Tag = a.IdClient;
+                cbClient.Items.Add(ListCont.locat.Identifier);
             }
 
             
         }
-
-        public void cbRellenarCl()
+        public void cbRncLoc()
         {
-            ClientList = Ccontroller.RellenarComboBox();
-            CbCliente.Items.Clear();
-            CbCliente.SelectedItem = null;
+            CbCont.Items.Clear();
+            ContactList = Ccontroller.ViewClient();
 
-            foreach (var a in ClientList)
+            foreach (var b in ContactList)
             {
-             //   CbCliente.Items.Add(a);
-                //     CbCliente.Tag = a.IdClient;
-
-            }
-        }
-        public void cbRellenarLoc(int a)
-        {
-            ListLoc = Ccontroller.ViewLocation(a);
-            if (ListLoc != null)
-            {
-                foreach (var b in ListLoc)
-                {
-                }
-            }
-            else
-            {
+                cbClient.Items.Add(b.contc.identifier);
 
             }
 

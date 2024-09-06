@@ -70,7 +70,7 @@ namespace SOD_General.Controladores
             }
         }
 
-
+        //sirve
         public List<Client> ViewIdentifier()
         {
             try
@@ -117,13 +117,12 @@ namespace SOD_General.Controladores
             }
         }
 
-
-        public List<List<ClientContact>> ViewClient()
+        //sirve
+        public List<ClientContact> ViewClient()
         {
             try
             {
-                string Query = "Exec Get_Locations";
-                List<List<ClientContact>> ClientsRecordTaller = new List<List<ClientContact>>();
+                string Query = "Exec Get_LocationsContact";
                 List<ClientContact> CliCont = new List<ClientContact>();    
 
                 SqlCommand cmd = new SqlCommand(Query, conex);
@@ -159,11 +158,11 @@ namespace SOD_General.Controladores
                                     )
                            ));
 
-                        ClientsRecordTaller.Add(CliCont);
+                        
                     }
 
                     conex.Close();
-                    return ClientsRecordTaller;
+                    return CliCont;
                 }
             }
 
@@ -180,16 +179,15 @@ namespace SOD_General.Controladores
         }
 
 
-
+        //sirve?
         public List<Locations> ViewLocation(int id)
         {
             try
             {
-                string Query = "Exec Get_Locations @id";
+                string Query = "Exec Get_Locations";
                 List<Locations> locations = new List<Locations>();
 
                 SqlCommand cmd = new SqlCommand(Query, conex);
-                cmd.Parameters.AddWithValue("@id", id);
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -235,7 +233,7 @@ namespace SOD_General.Controladores
             }
         }
 
-
+        //sirve
         public void AgregarSucursal(string name, string address, string phone1, string phone2, string identifier, string contactIdent)
         {
             try
@@ -275,32 +273,8 @@ namespace SOD_General.Controladores
         }
 
        
-        public List<Client> RellenarComboBox()
-        {
-            string Query = "Select * from Client";
-
-            List<Client> clientLista = new List<Client>();
-            SqlCommand cmd = new SqlCommand(Query, conex);
-            conex.Open();
-            SqlDataReader Reader = cmd.ExecuteReader();
-
-
-            while (Reader.Read())
-            {
-                Client Clientes;
-                int Id = Reader.GetInt32(0);
-                string Identifier = Reader.GetString(1);
-                string Client = Reader.GetString(2);
-
-                Clientes = new Client(Id, Identifier);
-                clientLista.Add(Clientes);
-            }
-
-            conex.Close();
-
-            return clientLista;
-        }
-
+       
+        //nidea
         public List<Locations> LlenarDataGridRNC()
         {
             string Query = "select CD._Name, CD._Address, CD.Phone1, CD.Phone2, CD.ClientIdentId, CI.identifier from ClienteData CD join ClientIdentifier CI on ClientIdentId = IdClientIdent";
@@ -330,6 +304,7 @@ namespace SOD_General.Controladores
             return clientLista;
         }
 
+        //repetido? sirve sin id
         public List<Locations> Rellenado()
         {
             List<Locations> ListLoc = new List<Locations>();
@@ -369,6 +344,7 @@ namespace SOD_General.Controladores
             return ListLoc;
         }
 
+        //sirve
         public List<Contact> ContactData()
         {
             List<Contact> ListLoc = new List<Contact>();

@@ -2,6 +2,7 @@
 using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Control_calidad;
+using SOD_General.Taller.Registro_peticiones;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
@@ -100,15 +101,6 @@ namespace Controladores
                     },
 
                     {
-                        ("Recepcion","Orden de entrada"),
-                        (object sender, EventArgs e) =>
-                        {
-                            sucursalesSeleccion window = new sucursalesSeleccion();
-                            _view.OpenForm(window);
-                        }
-                    },
-
-                    {
                         ("Clientes","Añadir Clientes"),
                         (object sender, EventArgs e) =>
                         {
@@ -179,6 +171,14 @@ namespace Controladores
                         }
                     },
 
+                      {
+                        ("Recepcion","Orden de entrada"),
+                        (object sender, EventArgs e) =>
+                        {
+                            AgregarPeticiones window = new AgregarPeticiones();
+                            _view.OpenForm(window);
+                        }
+                    }
 
                 };
 

@@ -66,13 +66,13 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void llenarGridClientes()
         {
-            clientes = controller.ViewClient();
-            dgvClientes.Rows.Clear();
+            //clientes = controller.ViewClient();
+            //dgvClientes.Rows.Clear();
 
-            foreach (Client client in clientes)
-            {
-                //dgvClientes.Rows.Add(client.IdClient, client._Identifier, client._Name, client._Address, client.Phone_1, client.Phone_2);
-            }
+            //foreach (Client client in clientes)
+            //{
+            //    //dgvClientes.Rows.Add(client.IdClient, client._Identifier, client._Name, client._Address, client.Phone_1, client.Phone_2);
+            //}
         }
 
 
@@ -89,7 +89,6 @@ namespace SOD_General.Vistas.Taller.Clientes
         public void cbLlenar(int a)
         {
             List<Client> lisCli = new List<Client>();
-            lisCli = controller.RellenarComboBox();
 
             if (a == 0)
             {
