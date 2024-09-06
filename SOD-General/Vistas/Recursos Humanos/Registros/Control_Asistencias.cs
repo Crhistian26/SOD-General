@@ -1,4 +1,5 @@
-﻿using Modelos.AsistenciasYPermisos;
+﻿using DocumentFormat.OpenXml.Office2010.CustomUI;
+using Modelos.AsistenciasYPermisos;
 using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
@@ -21,12 +22,21 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             InitializeComponent();
             cR_DateTimePicker1.Value = fecha;
+            cR_Checkbox2.Checked = true;
             VistaAgregar();
         }
         public Control_Asistencias(Record_Attendance record)
         {
             InitializeComponent();
             this.record = record;
+            if(record.LunchS != null && record.LunchF != null)
+            {
+                cR_Checkbox2.Checked = true;
+            }
+            else
+            {
+                cR_Checkbox2.Checked = false;
+            }
             VistaEditar();
         }
         private void VistaAgregar()
@@ -38,7 +48,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             LlenarComboEmpleados();
             botones_Nuevos1.Click += AddAttendance;
             txtsDefecto();
-            cR_Checkbox2.Checked = true;
+            
         }
         private void VistaEditar()
         {
@@ -61,11 +71,31 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             (cR_TBhora2.Text, cR_TBminutos2.Text, index) = _size.FiltrarHorasComb(record.Exit);
             soD_ComboBox3.SelectedIndex = soD_ComboBox4.FindString(index);
 
-            (cR_TBhora3.Text, cR_TBminutos3.Text, index) = _size.FiltrarHorasComb(record.LunchS.Value);
-            soD_ComboBox4.SelectedIndex = soD_ComboBox4.FindString(index);
+            if(record.LunchS != null && record.LunchF != null)
+            {
+                (cR_TBhora3.Text, cR_TBminutos3.Text, index) = _size.FiltrarHorasComb(record.LunchS.Value);
+                soD_ComboBox4.SelectedIndex = soD_ComboBox4.FindString(index);
 
-            (cR_TBhora4.Text, cR_TBminutos4.Text, index) = _size.FiltrarHorasComb(record.LunchF.Value);
-            soD_ComboBox5.SelectedIndex = soD_ComboBox4.FindString(index);
+                (cR_TBhora4.Text, cR_TBminutos4.Text, index) = _size.FiltrarHorasComb(record.LunchF.Value);
+                soD_ComboBox5.SelectedIndex = soD_ComboBox4.FindString(index);
+
+                
+            }
+            else
+            {
+                cR_TBhora3.Text = "12";
+                cR_TBminutos3.Text = "00";
+                index = "PM";
+                soD_ComboBox4.SelectedIndex = soD_ComboBox4.FindString(index);
+
+                cR_TBhora4.Text = "1";
+                cR_TBminutos4.Text = "00";
+                index = "PM";
+                soD_ComboBox5.SelectedIndex = soD_ComboBox5.FindString(index);
+
+                panel4.Visible = false;
+                panel5.Visible = false;
+            }
 
             if (user.Confirm_Operation("Eliminar asistencias"))
             {
