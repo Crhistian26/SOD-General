@@ -161,7 +161,7 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(542, 105);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(545, 118);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(54, 25);
             this.cR_Subtitulos1.TabIndex = 102;
@@ -192,7 +192,7 @@
             this.fR_TextBox1.BorderFocusColor = System.Drawing.Color.Blue;
             this.fR_TextBox1.BorderSize = 2;
             this.fR_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.fR_TextBox1.Location = new System.Drawing.Point(542, 137);
+            this.fR_TextBox1.Location = new System.Drawing.Point(545, 150);
             this.fR_TextBox1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.fR_TextBox1.Multiline = true;
             this.fR_TextBox1.Name = "fR_TextBox1";
@@ -309,7 +309,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(568, 360);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(559, 370);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(226, 50);
             this.botones_Nuevos1.TabIndex = 85;
@@ -388,11 +388,11 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.cR_DataGriedView4.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView4.Location = new System.Drawing.Point(12, 130);
+            this.cR_DataGriedView4.Location = new System.Drawing.Point(12, 148);
             this.cR_DataGriedView4.Name = "cR_DataGriedView4";
             this.cR_DataGriedView4.ReadOnly = true;
             this.cR_DataGriedView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView4.Size = new System.Drawing.Size(515, 383);
+            this.cR_DataGriedView4.Size = new System.Drawing.Size(515, 365);
             this.cR_DataGriedView4.TabIndex = 4;
             // 
             // soD_ComboBox3

@@ -111,6 +111,7 @@
             this.soD_ComboBox1.Name = "soD_ComboBox1";
             this.soD_ComboBox1.Size = new System.Drawing.Size(200, 27);
             this.soD_ComboBox1.TabIndex = 7;
+            this.soD_ComboBox1.Text = "adf";
             // 
             // cR_LabelUp2
             // 
