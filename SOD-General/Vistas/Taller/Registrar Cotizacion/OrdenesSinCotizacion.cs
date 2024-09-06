@@ -16,5 +16,10 @@ namespace SOD_General.Vistas.Taller.Registrar_Cotizacion
         {
             InitializeComponent();
         }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
