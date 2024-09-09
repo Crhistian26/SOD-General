@@ -221,6 +221,7 @@
     <Compile Include="AsistenciasYPermisos\Record_Attendance.cs" />
     <Compile Include="AsistenciasYPermisos\Record_Permission.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Control_de_usuarios\Model_Module.cs" />
     <Compile Include="Control_de_usuarios\Model_Operations.cs" />
     <Compile Include="Control_de_usuarios\Model_Role.cs" />
     <Compile Include="Control_de_usuarios\Model_User.cs" />
