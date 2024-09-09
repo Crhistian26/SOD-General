@@ -28,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cR_Checkbox8 = new CR_Checkbox();
-            this.cR_Checkbox4 = new CR_Checkbox();
-            this.cR_Checkbox7 = new CR_Checkbox();
-            this.cR_Checkbox6 = new CR_Checkbox();
-            this.cR_Checkbox5 = new CR_Checkbox();
-            this.cR_Checkbox3 = new CR_Checkbox();
-            this.cR_Checkbox2 = new CR_Checkbox();
-            this.cR_Checkbox1 = new CR_Checkbox();
             this.soD_TextBox3 = new SOD_TextBox();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.soD_TextBox2 = new SOD_TextBox();
@@ -47,11 +41,15 @@
             this.cR_LabelDown2 = new CR_LabelDown();
             this.soD_ComboBox1 = new SOD_ComboBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -70,16 +68,9 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox8);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox4);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox7);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox6);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox5);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox3);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox2);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_Checkbox1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.soD_TextBox3);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown4);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.soD_TextBox2);
@@ -108,6 +99,23 @@
             this.cR_Subtitulos1.Text = "Editar control \r\nde calidad";
             this.cR_Subtitulos1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // botones_Nuevos2
+            // 
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(161, 310);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(126, 40);
+            this.botones_Nuevos2.TabIndex = 18;
+            this.botones_Nuevos2.Text = "Eliminar";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            // 
             // botones_Nuevos1
             // 
             this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
@@ -124,102 +132,6 @@
             this.botones_Nuevos1.TabIndex = 17;
             this.botones_Nuevos1.Text = "Editar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            // 
-            // cR_Checkbox8
-            // 
-            this.cR_Checkbox8.AutoSize = true;
-            this.cR_Checkbox8.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox8.Location = new System.Drawing.Point(174, 266);
-            this.cR_Checkbox8.Name = "cR_Checkbox8";
-            this.cR_Checkbox8.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox8.TabIndex = 16;
-            this.cR_Checkbox8.Text = "cR_Checkbox8";
-            this.cR_Checkbox8.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox4
-            // 
-            this.cR_Checkbox4.AutoSize = true;
-            this.cR_Checkbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox4.Location = new System.Drawing.Point(24, 266);
-            this.cR_Checkbox4.Name = "cR_Checkbox4";
-            this.cR_Checkbox4.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox4.TabIndex = 15;
-            this.cR_Checkbox4.Text = "cR_Checkbox4";
-            this.cR_Checkbox4.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox7
-            // 
-            this.cR_Checkbox7.AutoSize = true;
-            this.cR_Checkbox7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox7.Location = new System.Drawing.Point(174, 236);
-            this.cR_Checkbox7.Name = "cR_Checkbox7";
-            this.cR_Checkbox7.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox7.TabIndex = 14;
-            this.cR_Checkbox7.Text = "cR_Checkbox7";
-            this.cR_Checkbox7.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox6
-            // 
-            this.cR_Checkbox6.AutoSize = true;
-            this.cR_Checkbox6.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox6.Location = new System.Drawing.Point(174, 206);
-            this.cR_Checkbox6.Name = "cR_Checkbox6";
-            this.cR_Checkbox6.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox6.TabIndex = 13;
-            this.cR_Checkbox6.Text = "cR_Checkbox6";
-            this.cR_Checkbox6.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox5
-            // 
-            this.cR_Checkbox5.AutoSize = true;
-            this.cR_Checkbox5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox5.Location = new System.Drawing.Point(174, 176);
-            this.cR_Checkbox5.Name = "cR_Checkbox5";
-            this.cR_Checkbox5.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox5.TabIndex = 12;
-            this.cR_Checkbox5.Text = "cR_Checkbox5";
-            this.cR_Checkbox5.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox3
-            // 
-            this.cR_Checkbox3.AutoSize = true;
-            this.cR_Checkbox3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox3.Location = new System.Drawing.Point(24, 236);
-            this.cR_Checkbox3.Name = "cR_Checkbox3";
-            this.cR_Checkbox3.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox3.TabIndex = 10;
-            this.cR_Checkbox3.Text = "cR_Checkbox3";
-            this.cR_Checkbox3.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox2
-            // 
-            this.cR_Checkbox2.AutoSize = true;
-            this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox2.Location = new System.Drawing.Point(24, 206);
-            this.cR_Checkbox2.Name = "cR_Checkbox2";
-            this.cR_Checkbox2.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox2.TabIndex = 9;
-            this.cR_Checkbox2.Text = "cR_Checkbox2";
-            this.cR_Checkbox2.UseVisualStyleBackColor = true;
-            // 
-            // cR_Checkbox1
-            // 
-            this.cR_Checkbox1.AutoSize = true;
-            this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(24, 176);
-            this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(124, 24);
-            this.cR_Checkbox1.TabIndex = 8;
-            this.cR_Checkbox1.Text = "cR_Checkbox1";
-            this.cR_Checkbox1.UseVisualStyleBackColor = true;
             // 
             // soD_TextBox3
             // 
@@ -314,22 +226,49 @@
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Tecnico";
             // 
-            // botones_Nuevos2
+            // cR_DataGriedView1
             // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(161, 310);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(126, 40);
-            this.botones_Nuevos2.TabIndex = 18;
-            this.botones_Nuevos2.Text = "Eliminar";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.cR_DataGriedView1.AllowUserToAddRows = false;
+            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView1.Location = new System.Drawing.Point(3, 175);
+            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
+            this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(293, 116);
+            this.cR_DataGriedView1.TabIndex = 19;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column3.HeaderText = "";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 5;
             // 
             // EditarControlEquipo
             // 
@@ -345,6 +284,7 @@
             this.cR_SplitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,14 +294,6 @@
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
         private Diseños.Botones_Nuevos botones_Nuevos1;
-        private CR_Checkbox cR_Checkbox8;
-        private CR_Checkbox cR_Checkbox4;
-        private CR_Checkbox cR_Checkbox7;
-        private CR_Checkbox cR_Checkbox6;
-        private CR_Checkbox cR_Checkbox5;
-        private CR_Checkbox cR_Checkbox3;
-        private CR_Checkbox cR_Checkbox2;
-        private CR_Checkbox cR_Checkbox1;
         private SOD_TextBox soD_TextBox3;
         private CR_LabelDown cR_LabelDown4;
         private SOD_TextBox soD_TextBox2;
@@ -371,5 +303,9 @@
         private SOD_ComboBox soD_ComboBox1;
         private CR_LabelDown cR_LabelDown1;
         private Diseños.Botones_Nuevos botones_Nuevos2;
+        private CR_DataGriedView cR_DataGriedView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
     }
 }

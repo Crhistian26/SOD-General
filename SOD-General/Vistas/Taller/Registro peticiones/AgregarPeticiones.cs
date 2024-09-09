@@ -1,4 +1,6 @@
-﻿using Modelos.Taller;
+﻿using DocumentFormat.OpenXml.EMMA;
+using Modelos.Control_de_usuarios;
+using Modelos.Taller;
 using SOD_General.Controladores;
 using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
@@ -16,6 +18,7 @@ namespace SOD_General.Taller.Registro_peticiones
         ClientController Ccontroller = new ClientController();
         int elegido = 0;
         List<ClientContact> ContactList = new List<ClientContact>();
+        Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
 
         List<Locations> ListLoc = new List<Locations>();
         public AgregarPeticiones()
@@ -93,6 +96,18 @@ namespace SOD_General.Taller.Registro_peticiones
             chbEmpresa.Checked = false;
             pnlRnc.Visible = false;
             pnlCliente.Visible = true;
+        }
+
+        public void validarClienteNuevo()
+        {
+            if (user.Confirm_Operation("Añadir Clientes"))
+            {
+                btnClienteNuevo.Visible = true;
+            }
+            else
+            {
+                btnClienteNuevo.Visible = false;
+            }
         }
     }
 }

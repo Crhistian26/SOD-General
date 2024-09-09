@@ -124,7 +124,7 @@
             this.chbEmpresa.AutoSize = true;
             this.chbEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbEmpresa.ForeColor = System.Drawing.Color.White;
-            this.chbEmpresa.Location = new System.Drawing.Point(285, 67);
+            this.chbEmpresa.Location = new System.Drawing.Point(284, 73);
             this.chbEmpresa.Name = "chbEmpresa";
             this.chbEmpresa.Size = new System.Drawing.Size(118, 29);
             this.chbEmpresa.TabIndex = 101;
@@ -176,7 +176,7 @@
             this.btnClienteNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClienteNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnClienteNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnClienteNuevo.Location = new System.Drawing.Point(860, 35);
+            this.btnClienteNuevo.Location = new System.Drawing.Point(848, 32);
             this.btnClienteNuevo.Name = "btnClienteNuevo";
             this.btnClienteNuevo.Size = new System.Drawing.Size(122, 45);
             this.btnClienteNuevo.TabIndex = 94;
@@ -210,7 +210,7 @@
             this.pnlCliente.Controls.Add(this.cR_Subtitulos6);
             this.pnlCliente.Location = new System.Drawing.Point(94, 15);
             this.pnlCliente.Name = "pnlCliente";
-            this.pnlCliente.Size = new System.Drawing.Size(346, 429);
+            this.pnlCliente.Size = new System.Drawing.Size(795, 429);
             this.pnlCliente.TabIndex = 112;
             this.pnlCliente.Visible = false;
             // 
