@@ -56,61 +56,43 @@ namespace SOD_General.Taller.Registro_peticiones
 
         public void cbRncClient()
         {
-            cbClient.Items.Clear();
+            cbRnc.Items.Clear();
             ContactList = Ccontroller.ViewClient();
             
-            cbClient.SelectedItem = null;
+            cbRnc.SelectedItem = null;
 
             foreach (var ListCont in ContactList)
             {
-                cbClient.Items.Add(ListCont.locat.Identifier);
+                cbRnc.Items.Add(ListCont.locat.Identifier);
             }
 
             
         }
         public void cbRncLoc()
         {
-            CbCont.Items.Clear();
+            cbContact.Items.Clear();
             ContactList = Ccontroller.ViewClient();
 
             foreach (var b in ContactList)
             {
-                cbClient.Items.Add(b.contc.identifier);
+                cbRnc.Items.Add(b.contc.identifier);
 
             }
 
         }
 
-
-
-
-
-
-        private void chkSucursal_CheckedChanged(object sender, EventArgs e)
+        private void chbEmpresa_CheckedChanged(object sender, EventArgs e)
         {
-        
+            chbCliente.Checked = false;
+            pnlCliente.Visible = false;
+            pnlRnc.Visible = true;
         }
 
-        private void CbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        private void chbCliente_CheckedChanged(object sender, EventArgs e)
         {
-           
-        }
-
-        private void cbRNC_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-
-
-        private void RncCliente_CheckedChanged(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void pnlRnc_Paint(object sender, PaintEventArgs e)
-        {
-
+            chbEmpresa.Checked = false;
+            pnlRnc.Visible = false;
+            pnlCliente.Visible = true;
         }
     }
 }

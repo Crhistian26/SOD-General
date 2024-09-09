@@ -36,39 +36,39 @@
             this.cR_Subtitulos4 = new CR_Subtitulos();
             this.btnClienteNuevo = new Diseños.Botones_Nuevos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cr_Textbox12 = new Cr_Textbox();
+            this.pnlCliente = new System.Windows.Forms.Panel();
+            this.txtDireccionCliente = new Cr_Textbox();
             this.cR_Subtitulos8 = new CR_Subtitulos();
             this.cR_LabelDown3 = new CR_LabelDown();
-            this.cr_Textbox2 = new Cr_Textbox();
+            this.txtTelefono2Cliente = new Cr_Textbox();
             this.cR_LabelDown8 = new CR_LabelDown();
-            this.cr_Textbox5 = new Cr_Textbox();
+            this.txtTelefono1Cliente = new Cr_Textbox();
             this.cR_LabelDown9 = new CR_LabelDown();
-            this.cr_Textbox10 = new Cr_Textbox();
+            this.txtNombreCliente = new Cr_Textbox();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cbCedula = new SOD_ComboBox();
-            this.cr_Textbox11 = new Cr_Textbox();
+            this.txtDetallesCliente = new Cr_Textbox();
             this.cR_Subtitulos2 = new CR_Subtitulos();
             this.cR_Subtitulos6 = new CR_Subtitulos();
             this.pnlRnc = new System.Windows.Forms.Panel();
             this.cR_LabelDown7 = new CR_LabelDown();
-            this.cr_Textbox9 = new Cr_Textbox();
+            this.txtTlfono2Contact = new Cr_Textbox();
             this.cR_LabelDown6 = new CR_LabelDown();
-            this.cr_Textbox8 = new Cr_Textbox();
+            this.txttlfnoContact = new Cr_Textbox();
             this.cR_LabelDown5 = new CR_LabelDown();
-            this.cr_Textbox7 = new Cr_Textbox();
+            this.txtNameContact = new Cr_Textbox();
             this.cR_LabelDown4 = new CR_LabelDown();
-            this.cr_Textbox6 = new Cr_Textbox();
+            this.txtTlfnoEmpre = new Cr_Textbox();
             this.cR_LabelDown2 = new CR_LabelDown();
-            this.cr_Textbox4 = new Cr_Textbox();
+            this.txtDireccionEmpre = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.cr_Textbox3 = new Cr_Textbox();
+            this.txtNombreEmpresa = new Cr_Textbox();
             this.btnGuardar = new Diseños.Botones_Nuevos();
-            this.CbCont = new SOD_ComboBox();
-            this.cr_Textbox1 = new Cr_Textbox();
+            this.cbContact = new SOD_ComboBox();
+            this.txtDetallesContact = new Cr_Textbox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_Subtitulos5 = new CR_Subtitulos();
-            this.cbClient = new SOD_ComboBox();
+            this.cbRnc = new SOD_ComboBox();
             this.cR_Subtitulos7 = new CR_Subtitulos();
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
@@ -78,7 +78,7 @@
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlCliente.SuspendLayout();
             this.pnlRnc.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,6 +117,7 @@
             this.chbCliente.TabIndex = 102;
             this.chbCliente.Text = "Clientes";
             this.chbCliente.UseVisualStyleBackColor = true;
+            this.chbCliente.CheckedChanged += new System.EventHandler(this.chbCliente_CheckedChanged);
             // 
             // chbEmpresa
             // 
@@ -129,6 +130,7 @@
             this.chbEmpresa.TabIndex = 101;
             this.chbEmpresa.Text = "Empresas";
             this.chbEmpresa.UseVisualStyleBackColor = true;
+            this.chbEmpresa.CheckedChanged += new System.EventHandler(this.chbEmpresa_CheckedChanged);
             // 
             // lblNumOrden
             // 
@@ -183,7 +185,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pnlCliente);
             this.panel1.Controls.Add(this.pnlRnc);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -191,36 +193,36 @@
             this.panel1.Size = new System.Drawing.Size(982, 456);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pnlCliente
             // 
-            this.panel2.Controls.Add(this.cr_Textbox12);
-            this.panel2.Controls.Add(this.cR_Subtitulos8);
-            this.panel2.Controls.Add(this.cR_LabelDown3);
-            this.panel2.Controls.Add(this.cr_Textbox2);
-            this.panel2.Controls.Add(this.cR_LabelDown8);
-            this.panel2.Controls.Add(this.cr_Textbox5);
-            this.panel2.Controls.Add(this.cR_LabelDown9);
-            this.panel2.Controls.Add(this.cr_Textbox10);
-            this.panel2.Controls.Add(this.botones_Nuevos1);
-            this.panel2.Controls.Add(this.cbCedula);
-            this.panel2.Controls.Add(this.cr_Textbox11);
-            this.panel2.Controls.Add(this.cR_Subtitulos2);
-            this.panel2.Controls.Add(this.cR_Subtitulos6);
-            this.panel2.Location = new System.Drawing.Point(94, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(795, 429);
-            this.panel2.TabIndex = 112;
-            this.panel2.Visible = false;
+            this.pnlCliente.Controls.Add(this.txtDireccionCliente);
+            this.pnlCliente.Controls.Add(this.cR_Subtitulos8);
+            this.pnlCliente.Controls.Add(this.cR_LabelDown3);
+            this.pnlCliente.Controls.Add(this.txtTelefono2Cliente);
+            this.pnlCliente.Controls.Add(this.cR_LabelDown8);
+            this.pnlCliente.Controls.Add(this.txtTelefono1Cliente);
+            this.pnlCliente.Controls.Add(this.cR_LabelDown9);
+            this.pnlCliente.Controls.Add(this.txtNombreCliente);
+            this.pnlCliente.Controls.Add(this.botones_Nuevos1);
+            this.pnlCliente.Controls.Add(this.cbCedula);
+            this.pnlCliente.Controls.Add(this.txtDetallesCliente);
+            this.pnlCliente.Controls.Add(this.cR_Subtitulos2);
+            this.pnlCliente.Controls.Add(this.cR_Subtitulos6);
+            this.pnlCliente.Location = new System.Drawing.Point(94, 15);
+            this.pnlCliente.Name = "pnlCliente";
+            this.pnlCliente.Size = new System.Drawing.Size(346, 429);
+            this.pnlCliente.TabIndex = 112;
+            this.pnlCliente.Visible = false;
             // 
-            // cr_Textbox12
+            // txtDireccionCliente
             // 
-            this.cr_Textbox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox12.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox12.Location = new System.Drawing.Point(48, 244);
-            this.cr_Textbox12.Multiline = true;
-            this.cr_Textbox12.Name = "cr_Textbox12";
-            this.cr_Textbox12.Size = new System.Drawing.Size(360, 73);
-            this.cr_Textbox12.TabIndex = 139;
+            this.txtDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtDireccionCliente.Location = new System.Drawing.Point(48, 244);
+            this.txtDireccionCliente.Multiline = true;
+            this.txtDireccionCliente.Name = "txtDireccionCliente";
+            this.txtDireccionCliente.Size = new System.Drawing.Size(360, 73);
+            this.txtDireccionCliente.TabIndex = 139;
             // 
             // cR_Subtitulos8
             // 
@@ -248,14 +250,14 @@
             this.cR_LabelDown3.TabIndex = 138;
             this.cR_LabelDown3.Text = "Telefono 2";
             // 
-            // cr_Textbox2
+            // txtTelefono2Cliente
             // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(251, 172);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.Size = new System.Drawing.Size(157, 25);
-            this.cr_Textbox2.TabIndex = 137;
+            this.txtTelefono2Cliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono2Cliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtTelefono2Cliente.Location = new System.Drawing.Point(251, 172);
+            this.txtTelefono2Cliente.Name = "txtTelefono2Cliente";
+            this.txtTelefono2Cliente.Size = new System.Drawing.Size(157, 25);
+            this.txtTelefono2Cliente.TabIndex = 137;
             // 
             // cR_LabelDown8
             // 
@@ -268,14 +270,14 @@
             this.cR_LabelDown8.TabIndex = 136;
             this.cR_LabelDown8.Text = "Telefono 1";
             // 
-            // cr_Textbox5
+            // txtTelefono1Cliente
             // 
-            this.cr_Textbox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox5.Location = new System.Drawing.Point(50, 170);
-            this.cr_Textbox5.Name = "cr_Textbox5";
-            this.cr_Textbox5.Size = new System.Drawing.Size(157, 25);
-            this.cr_Textbox5.TabIndex = 135;
+            this.txtTelefono1Cliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono1Cliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtTelefono1Cliente.Location = new System.Drawing.Point(50, 170);
+            this.txtTelefono1Cliente.Name = "txtTelefono1Cliente";
+            this.txtTelefono1Cliente.Size = new System.Drawing.Size(157, 25);
+            this.txtTelefono1Cliente.TabIndex = 135;
             // 
             // cR_LabelDown9
             // 
@@ -288,14 +290,14 @@
             this.cR_LabelDown9.TabIndex = 134;
             this.cR_LabelDown9.Text = "Nombre del cliente";
             // 
-            // cr_Textbox10
+            // txtNombreCliente
             // 
-            this.cr_Textbox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox10.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox10.Location = new System.Drawing.Point(48, 110);
-            this.cr_Textbox10.Name = "cr_Textbox10";
-            this.cr_Textbox10.Size = new System.Drawing.Size(360, 25);
-            this.cr_Textbox10.TabIndex = 133;
+            this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtNombreCliente.Location = new System.Drawing.Point(48, 110);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(360, 25);
+            this.txtNombreCliente.TabIndex = 133;
             // 
             // botones_Nuevos1
             // 
@@ -330,15 +332,15 @@
             this.cbCedula.Size = new System.Drawing.Size(210, 27);
             this.cbCedula.TabIndex = 132;
             // 
-            // cr_Textbox11
+            // txtDetallesCliente
             // 
-            this.cr_Textbox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox11.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox11.Location = new System.Drawing.Point(446, 36);
-            this.cr_Textbox11.Multiline = true;
-            this.cr_Textbox11.Name = "cr_Textbox11";
-            this.cr_Textbox11.Size = new System.Drawing.Size(332, 281);
-            this.cr_Textbox11.TabIndex = 129;
+            this.txtDetallesCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDetallesCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtDetallesCliente.Location = new System.Drawing.Point(446, 36);
+            this.txtDetallesCliente.Multiline = true;
+            this.txtDetallesCliente.Name = "txtDetallesCliente";
+            this.txtDetallesCliente.Size = new System.Drawing.Size(332, 281);
+            this.txtDetallesCliente.TabIndex = 129;
             // 
             // cR_Subtitulos2
             // 
@@ -373,30 +375,29 @@
             // pnlRnc
             // 
             this.pnlRnc.Controls.Add(this.cR_LabelDown7);
-            this.pnlRnc.Controls.Add(this.cr_Textbox9);
+            this.pnlRnc.Controls.Add(this.txtTlfono2Contact);
             this.pnlRnc.Controls.Add(this.cR_LabelDown6);
-            this.pnlRnc.Controls.Add(this.cr_Textbox8);
+            this.pnlRnc.Controls.Add(this.txttlfnoContact);
             this.pnlRnc.Controls.Add(this.cR_LabelDown5);
-            this.pnlRnc.Controls.Add(this.cr_Textbox7);
+            this.pnlRnc.Controls.Add(this.txtNameContact);
             this.pnlRnc.Controls.Add(this.cR_LabelDown4);
-            this.pnlRnc.Controls.Add(this.cr_Textbox6);
+            this.pnlRnc.Controls.Add(this.txtTlfnoEmpre);
             this.pnlRnc.Controls.Add(this.cR_LabelDown2);
-            this.pnlRnc.Controls.Add(this.cr_Textbox4);
+            this.pnlRnc.Controls.Add(this.txtDireccionEmpre);
             this.pnlRnc.Controls.Add(this.cR_LabelDown1);
-            this.pnlRnc.Controls.Add(this.cr_Textbox3);
+            this.pnlRnc.Controls.Add(this.txtNombreEmpresa);
             this.pnlRnc.Controls.Add(this.btnGuardar);
-            this.pnlRnc.Controls.Add(this.CbCont);
-            this.pnlRnc.Controls.Add(this.cr_Textbox1);
+            this.pnlRnc.Controls.Add(this.cbContact);
+            this.pnlRnc.Controls.Add(this.txtDetallesContact);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos1);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos5);
-            this.pnlRnc.Controls.Add(this.cbClient);
+            this.pnlRnc.Controls.Add(this.cbRnc);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos7);
             this.pnlRnc.Location = new System.Drawing.Point(94, 15);
             this.pnlRnc.Name = "pnlRnc";
             this.pnlRnc.Size = new System.Drawing.Size(795, 414);
             this.pnlRnc.TabIndex = 108;
             this.pnlRnc.Visible = false;
-            this.pnlRnc.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRnc_Paint);
             // 
             // cR_LabelDown7
             // 
@@ -409,14 +410,14 @@
             this.cR_LabelDown7.TabIndex = 127;
             this.cR_LabelDown7.Text = "Telefono 2";
             // 
-            // cr_Textbox9
+            // txtTlfono2Contact
             // 
-            this.cr_Textbox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox9.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox9.Location = new System.Drawing.Point(611, 172);
-            this.cr_Textbox9.Name = "cr_Textbox9";
-            this.cr_Textbox9.Size = new System.Drawing.Size(165, 25);
-            this.cr_Textbox9.TabIndex = 126;
+            this.txtTlfono2Contact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTlfono2Contact.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtTlfono2Contact.Location = new System.Drawing.Point(611, 172);
+            this.txtTlfono2Contact.Name = "txtTlfono2Contact";
+            this.txtTlfono2Contact.Size = new System.Drawing.Size(165, 25);
+            this.txtTlfono2Contact.TabIndex = 126;
             // 
             // cR_LabelDown6
             // 
@@ -429,14 +430,14 @@
             this.cR_LabelDown6.TabIndex = 123;
             this.cR_LabelDown6.Text = "Telefono 1";
             // 
-            // cr_Textbox8
+            // txttlfnoContact
             // 
-            this.cr_Textbox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox8.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox8.Location = new System.Drawing.Point(447, 171);
-            this.cr_Textbox8.Name = "cr_Textbox8";
-            this.cr_Textbox8.Size = new System.Drawing.Size(157, 25);
-            this.cr_Textbox8.TabIndex = 122;
+            this.txttlfnoContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txttlfnoContact.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txttlfnoContact.Location = new System.Drawing.Point(447, 171);
+            this.txttlfnoContact.Name = "txttlfnoContact";
+            this.txttlfnoContact.Size = new System.Drawing.Size(157, 25);
+            this.txttlfnoContact.TabIndex = 122;
             // 
             // cR_LabelDown5
             // 
@@ -449,14 +450,14 @@
             this.cR_LabelDown5.TabIndex = 121;
             this.cR_LabelDown5.Text = "Nombre del contacto";
             // 
-            // cr_Textbox7
+            // txtNameContact
             // 
-            this.cr_Textbox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox7.Location = new System.Drawing.Point(448, 110);
-            this.cr_Textbox7.Name = "cr_Textbox7";
-            this.cr_Textbox7.Size = new System.Drawing.Size(328, 25);
-            this.cr_Textbox7.TabIndex = 120;
+            this.txtNameContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNameContact.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtNameContact.Location = new System.Drawing.Point(448, 110);
+            this.txtNameContact.Name = "txtNameContact";
+            this.txtNameContact.Size = new System.Drawing.Size(328, 25);
+            this.txtNameContact.TabIndex = 120;
             // 
             // cR_LabelDown4
             // 
@@ -469,14 +470,14 @@
             this.cR_LabelDown4.TabIndex = 119;
             this.cR_LabelDown4.Text = "Telefono Principal";
             // 
-            // cr_Textbox6
+            // txtTlfnoEmpre
             // 
-            this.cr_Textbox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox6.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox6.Location = new System.Drawing.Point(17, 172);
-            this.cr_Textbox6.Name = "cr_Textbox6";
-            this.cr_Textbox6.Size = new System.Drawing.Size(367, 25);
-            this.cr_Textbox6.TabIndex = 118;
+            this.txtTlfnoEmpre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTlfnoEmpre.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtTlfnoEmpre.Location = new System.Drawing.Point(17, 172);
+            this.txtTlfnoEmpre.Name = "txtTlfnoEmpre";
+            this.txtTlfnoEmpre.Size = new System.Drawing.Size(367, 25);
+            this.txtTlfnoEmpre.TabIndex = 118;
             // 
             // cR_LabelDown2
             // 
@@ -489,15 +490,15 @@
             this.cR_LabelDown2.TabIndex = 115;
             this.cR_LabelDown2.Text = "Direccion";
             // 
-            // cr_Textbox4
+            // txtDireccionEmpre
             // 
-            this.cr_Textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox4.Location = new System.Drawing.Point(18, 244);
-            this.cr_Textbox4.Multiline = true;
-            this.cr_Textbox4.Name = "cr_Textbox4";
-            this.cr_Textbox4.Size = new System.Drawing.Size(366, 98);
-            this.cr_Textbox4.TabIndex = 114;
+            this.txtDireccionEmpre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDireccionEmpre.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtDireccionEmpre.Location = new System.Drawing.Point(18, 244);
+            this.txtDireccionEmpre.Multiline = true;
+            this.txtDireccionEmpre.Name = "txtDireccionEmpre";
+            this.txtDireccionEmpre.Size = new System.Drawing.Size(366, 98);
+            this.txtDireccionEmpre.TabIndex = 114;
             // 
             // cR_LabelDown1
             // 
@@ -510,14 +511,14 @@
             this.cR_LabelDown1.TabIndex = 113;
             this.cR_LabelDown1.Text = "Nombre de la empresa";
             // 
-            // cr_Textbox3
+            // txtNombreEmpresa
             // 
-            this.cr_Textbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox3.Location = new System.Drawing.Point(17, 110);
-            this.cr_Textbox3.Name = "cr_Textbox3";
-            this.cr_Textbox3.Size = new System.Drawing.Size(367, 25);
-            this.cr_Textbox3.TabIndex = 112;
+            this.txtNombreEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(17, 110);
+            this.txtNombreEmpresa.Name = "txtNombreEmpresa";
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(367, 25);
+            this.txtNombreEmpresa.TabIndex = 112;
             // 
             // btnGuardar
             // 
@@ -537,31 +538,31 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // CbCont
+            // cbContact
             // 
-            this.CbCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.CbCont.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.CbCont.ForeColor = System.Drawing.SystemColors.Window;
-            this.CbCont.FormattingEnabled = true;
-            this.CbCont.Items.AddRange(new object[] {
+            this.cbContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cbContact.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbContact.FormattingEnabled = true;
+            this.cbContact.Items.AddRange(new object[] {
             "axel",
             "alejandro",
             "rodrigo",
             "fernandez"});
-            this.CbCont.Location = new System.Drawing.Point(512, 36);
-            this.CbCont.Name = "CbCont";
-            this.CbCont.Size = new System.Drawing.Size(210, 27);
-            this.CbCont.TabIndex = 111;
+            this.cbContact.Location = new System.Drawing.Point(512, 36);
+            this.cbContact.Name = "cbContact";
+            this.cbContact.Size = new System.Drawing.Size(210, 27);
+            this.cbContact.TabIndex = 111;
             // 
-            // cr_Textbox1
+            // txtDetallesContact
             // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(444, 244);
-            this.cr_Textbox1.Multiline = true;
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(332, 98);
-            this.cr_Textbox1.TabIndex = 103;
+            this.txtDetallesContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDetallesContact.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtDetallesContact.Location = new System.Drawing.Point(444, 244);
+            this.txtDetallesContact.Multiline = true;
+            this.txtDetallesContact.Name = "txtDetallesContact";
+            this.txtDetallesContact.Size = new System.Drawing.Size(332, 98);
+            this.txtDetallesContact.TabIndex = 103;
             // 
             // cR_Subtitulos1
             // 
@@ -593,22 +594,21 @@
             this.cR_Subtitulos5.TabIndex = 110;
             this.cR_Subtitulos5.Text = "Cedula del contacto";
             // 
-            // cbClient
+            // cbRnc
             // 
-            this.cbClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbClient.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cbClient.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbClient.FormattingEnabled = true;
-            this.cbClient.Items.AddRange(new object[] {
+            this.cbRnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbRnc.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cbRnc.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbRnc.FormattingEnabled = true;
+            this.cbRnc.Items.AddRange(new object[] {
             "axel",
             "alejandro",
             "rodrigo",
             "fernandez"});
-            this.cbClient.Location = new System.Drawing.Point(17, 36);
-            this.cbClient.Name = "cbClient";
-            this.cbClient.Size = new System.Drawing.Size(213, 27);
-            this.cbClient.TabIndex = 102;
-            this.cbClient.SelectedIndexChanged += new System.EventHandler(this.cbRNC_SelectedIndexChanged);
+            this.cbRnc.Location = new System.Drawing.Point(17, 36);
+            this.cbRnc.Name = "cbRnc";
+            this.cbRnc.Size = new System.Drawing.Size(213, 27);
+            this.cbRnc.TabIndex = 102;
             // 
             // cR_Subtitulos7
             // 
@@ -694,8 +694,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlCliente.ResumeLayout(false);
+            this.pnlCliente.PerformLayout();
             this.pnlRnc.ResumeLayout(false);
             this.pnlRnc.PerformLayout();
             this.ResumeLayout(false);
@@ -712,36 +712,36 @@
         private CR_Subtitulos cR_Subtitulos7;
         private Diseños.Botones_Nuevos btnClienteNuevo;
         private Diseños.Botones_Nuevos btnGuardar;
-        private SOD_ComboBox cbClient;
+        private SOD_ComboBox cbRnc;
         private CR_Subtitulos cR_Subtitulos1;
-        private Cr_Textbox cr_Textbox1;
+        private Cr_Textbox txtDetallesContact;
         private System.Windows.Forms.Panel pnlRnc;
-        private SOD_ComboBox CbCont;
+        private SOD_ComboBox cbContact;
         private CR_Subtitulos cR_Subtitulos5;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlCliente;
         private CR_LabelDown cR_LabelDown6;
-        private Cr_Textbox cr_Textbox8;
+        private Cr_Textbox txttlfnoContact;
         private CR_LabelDown cR_LabelDown5;
-        private Cr_Textbox cr_Textbox7;
+        private Cr_Textbox txtNameContact;
         private CR_LabelDown cR_LabelDown4;
-        private Cr_Textbox cr_Textbox6;
+        private Cr_Textbox txtTlfnoEmpre;
         private CR_LabelDown cR_LabelDown2;
-        private Cr_Textbox cr_Textbox4;
+        private Cr_Textbox txtDireccionEmpre;
         private CR_LabelDown cR_LabelDown1;
-        private Cr_Textbox cr_Textbox3;
+        private Cr_Textbox txtNombreEmpresa;
         private CR_LabelDown cR_LabelDown7;
-        private Cr_Textbox cr_Textbox9;
-        private Cr_Textbox cr_Textbox12;
+        private Cr_Textbox txtTlfono2Contact;
+        private Cr_Textbox txtDireccionCliente;
         private CR_Subtitulos cR_Subtitulos8;
         private CR_LabelDown cR_LabelDown3;
-        private Cr_Textbox cr_Textbox2;
+        private Cr_Textbox txtTelefono2Cliente;
         private CR_LabelDown cR_LabelDown8;
-        private Cr_Textbox cr_Textbox5;
+        private Cr_Textbox txtTelefono1Cliente;
         private CR_LabelDown cR_LabelDown9;
-        private Cr_Textbox cr_Textbox10;
+        private Cr_Textbox txtNombreCliente;
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private SOD_ComboBox cbCedula;
-        private Cr_Textbox cr_Textbox11;
+        private Cr_Textbox txtDetallesCliente;
         private CR_Subtitulos cR_Subtitulos2;
         private CR_Subtitulos cR_Subtitulos6;
         private CR_Checkbox chbCliente;
