@@ -64,15 +64,17 @@
             this.cR_LabelDown1 = new CR_LabelDown();
             this.txtNombreEmpresa = new Cr_Textbox();
             this.btnGuardar = new Diseños.Botones_Nuevos();
-            this.cbContact = new SOD_ComboBox();
+            this.cbContactEmpresa = new SOD_ComboBox();
             this.txtDetallesContact = new Cr_Textbox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_Subtitulos5 = new CR_Subtitulos();
-            this.cbRnc = new SOD_ComboBox();
+            this.cbRncEmpresa = new SOD_ComboBox();
             this.cR_Subtitulos7 = new CR_Subtitulos();
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
+            this.txtTlfnoSecundario = new Cr_Textbox();
+            this.cR_LabelDown10 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -208,9 +210,9 @@
             this.pnlCliente.Controls.Add(this.txtDetallesCliente);
             this.pnlCliente.Controls.Add(this.cR_Subtitulos2);
             this.pnlCliente.Controls.Add(this.cR_Subtitulos6);
-            this.pnlCliente.Location = new System.Drawing.Point(94, 15);
+            this.pnlCliente.Location = new System.Drawing.Point(876, 15);
             this.pnlCliente.Name = "pnlCliente";
-            this.pnlCliente.Size = new System.Drawing.Size(795, 429);
+            this.pnlCliente.Size = new System.Drawing.Size(13, 429);
             this.pnlCliente.TabIndex = 112;
             this.pnlCliente.Visible = false;
             // 
@@ -374,6 +376,8 @@
             // 
             // pnlRnc
             // 
+            this.pnlRnc.Controls.Add(this.cR_LabelDown10);
+            this.pnlRnc.Controls.Add(this.txtTlfnoSecundario);
             this.pnlRnc.Controls.Add(this.cR_LabelDown7);
             this.pnlRnc.Controls.Add(this.txtTlfono2Contact);
             this.pnlRnc.Controls.Add(this.cR_LabelDown6);
@@ -387,11 +391,11 @@
             this.pnlRnc.Controls.Add(this.cR_LabelDown1);
             this.pnlRnc.Controls.Add(this.txtNombreEmpresa);
             this.pnlRnc.Controls.Add(this.btnGuardar);
-            this.pnlRnc.Controls.Add(this.cbContact);
+            this.pnlRnc.Controls.Add(this.cbContactEmpresa);
             this.pnlRnc.Controls.Add(this.txtDetallesContact);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos1);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos5);
-            this.pnlRnc.Controls.Add(this.cbRnc);
+            this.pnlRnc.Controls.Add(this.cbRncEmpresa);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos7);
             this.pnlRnc.Location = new System.Drawing.Point(94, 15);
             this.pnlRnc.Name = "pnlRnc";
@@ -468,7 +472,7 @@
             this.cR_LabelDown4.Name = "cR_LabelDown4";
             this.cR_LabelDown4.Size = new System.Drawing.Size(132, 20);
             this.cR_LabelDown4.TabIndex = 119;
-            this.cR_LabelDown4.Text = "Telefono Principal";
+            this.cR_LabelDown4.Text = "Telefono principal";
             // 
             // txtTlfnoEmpre
             // 
@@ -476,7 +480,7 @@
             this.txtTlfnoEmpre.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.txtTlfnoEmpre.Location = new System.Drawing.Point(17, 172);
             this.txtTlfnoEmpre.Name = "txtTlfnoEmpre";
-            this.txtTlfnoEmpre.Size = new System.Drawing.Size(367, 25);
+            this.txtTlfnoEmpre.Size = new System.Drawing.Size(189, 25);
             this.txtTlfnoEmpre.TabIndex = 118;
             // 
             // cR_LabelDown2
@@ -538,21 +542,22 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // cbContact
+            // cbContactEmpresa
             // 
-            this.cbContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cbContact.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbContact.FormattingEnabled = true;
-            this.cbContact.Items.AddRange(new object[] {
+            this.cbContactEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbContactEmpresa.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cbContactEmpresa.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbContactEmpresa.FormattingEnabled = true;
+            this.cbContactEmpresa.Items.AddRange(new object[] {
             "axel",
             "alejandro",
             "rodrigo",
             "fernandez"});
-            this.cbContact.Location = new System.Drawing.Point(512, 36);
-            this.cbContact.Name = "cbContact";
-            this.cbContact.Size = new System.Drawing.Size(210, 27);
-            this.cbContact.TabIndex = 111;
+            this.cbContactEmpresa.Location = new System.Drawing.Point(512, 36);
+            this.cbContactEmpresa.Name = "cbContactEmpresa";
+            this.cbContactEmpresa.Size = new System.Drawing.Size(210, 27);
+            this.cbContactEmpresa.TabIndex = 111;
+            this.cbContactEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbContactEmpresa_SelectedIndexChanged);
             // 
             // txtDetallesContact
             // 
@@ -594,21 +599,22 @@
             this.cR_Subtitulos5.TabIndex = 110;
             this.cR_Subtitulos5.Text = "Cedula del contacto";
             // 
-            // cbRnc
+            // cbRncEmpresa
             // 
-            this.cbRnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbRnc.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cbRnc.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbRnc.FormattingEnabled = true;
-            this.cbRnc.Items.AddRange(new object[] {
+            this.cbRncEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbRncEmpresa.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.cbRncEmpresa.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbRncEmpresa.FormattingEnabled = true;
+            this.cbRncEmpresa.Items.AddRange(new object[] {
             "axel",
             "alejandro",
             "rodrigo",
             "fernandez"});
-            this.cbRnc.Location = new System.Drawing.Point(17, 36);
-            this.cbRnc.Name = "cbRnc";
-            this.cbRnc.Size = new System.Drawing.Size(213, 27);
-            this.cbRnc.TabIndex = 102;
+            this.cbRncEmpresa.Location = new System.Drawing.Point(17, 36);
+            this.cbRncEmpresa.Name = "cbRncEmpresa";
+            this.cbRncEmpresa.Size = new System.Drawing.Size(213, 27);
+            this.cbRncEmpresa.TabIndex = 102;
+            this.cbRncEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbRncEmpresa_SelectedIndexChanged);
             // 
             // cR_Subtitulos7
             // 
@@ -676,6 +682,26 @@
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
             // 
+            // txtTlfnoSecundario
+            // 
+            this.txtTlfnoSecundario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTlfnoSecundario.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtTlfnoSecundario.Location = new System.Drawing.Point(212, 170);
+            this.txtTlfnoSecundario.Name = "txtTlfnoSecundario";
+            this.txtTlfnoSecundario.Size = new System.Drawing.Size(172, 25);
+            this.txtTlfnoSecundario.TabIndex = 128;
+            // 
+            // cR_LabelDown10
+            // 
+            this.cR_LabelDown10.AutoSize = true;
+            this.cR_LabelDown10.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown10.Location = new System.Drawing.Point(208, 147);
+            this.cR_LabelDown10.Name = "cR_LabelDown10";
+            this.cR_LabelDown10.Size = new System.Drawing.Size(147, 20);
+            this.cR_LabelDown10.TabIndex = 129;
+            this.cR_LabelDown10.Text = "Telefono secundario";
+            // 
             // AgregarPeticiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,11 +738,11 @@
         private CR_Subtitulos cR_Subtitulos7;
         private Diseños.Botones_Nuevos btnClienteNuevo;
         private Diseños.Botones_Nuevos btnGuardar;
-        private SOD_ComboBox cbRnc;
+        private SOD_ComboBox cbRncEmpresa;
         private CR_Subtitulos cR_Subtitulos1;
         private Cr_Textbox txtDetallesContact;
         private System.Windows.Forms.Panel pnlRnc;
-        private SOD_ComboBox cbContact;
+        private SOD_ComboBox cbContactEmpresa;
         private CR_Subtitulos cR_Subtitulos5;
         private System.Windows.Forms.Panel pnlCliente;
         private CR_LabelDown cR_LabelDown6;
@@ -749,5 +775,7 @@
         private CR_LabelUp lblNumOrden;
         private CR_LabelUp cR_LabelUp1;
         private CR_Subtitulos cR_Subtitulos4;
+        private CR_LabelDown cR_LabelDown10;
+        private Cr_Textbox txtTlfnoSecundario;
     }
 }

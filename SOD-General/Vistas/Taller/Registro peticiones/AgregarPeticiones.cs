@@ -40,8 +40,8 @@ namespace SOD_General.Taller.Registro_peticiones
         private void AgregarPeticiones_Load(object sender, EventArgs e)
         {
             CentrarElementos();
-            cbRncClient();
-            cbRncLoc();
+            RncCedulaCtc();
+            RncEmpresaLlenado();
         }
 
 
@@ -57,28 +57,33 @@ namespace SOD_General.Taller.Registro_peticiones
         }
 
 
-        public void cbRncClient()
+        public void RncCedulaCtc()
         {
-            cbRnc.Items.Clear();
+            cbRncEmpresa.Items.Clear();
             ContactList = Ccontroller.ViewClient();
             
-            cbRnc.SelectedItem = null;
+            cbRncEmpresa.SelectedItem = null;
 
             foreach (var ListCont in ContactList)
             {
-                cbRnc.Items.Add(ListCont.locat.Identifier);
+                cbRncEmpresa.Items.Add(ListCont.locat.Identifier);
             }
 
             
         }
-        public void cbRncLoc()
+        public void RncEmpresaLlenado()
         {
-            cbContact.Items.Clear();
+            cbContactEmpresa.Items.Clear();
             ContactList = Ccontroller.ViewClient();
 
-            foreach (var b in ContactList)
+            var identifierUnic = ContactList
+                .GroupBy(g => g.contc.identifier)
+                .Select(s => s.First())
+                .ToList();
+
+            foreach (var b in identifierUnic)
             {
-                cbRnc.Items.Add(b.contc.identifier);
+                cbContactEmpresa.Items.Add(b.contc.identifier);
 
             }
 
@@ -108,6 +113,29 @@ namespace SOD_General.Taller.Registro_peticiones
             {
                 btnClienteNuevo.Visible = false;
             }
+        }
+
+        private void cbContactEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cedula = cbContactEmpresa.SelectedItem.ToString();
+
+            var registroContacto = ContactList.Where(c => c.contc.identifier == cedula).First();
+
+            txtNameContact.Text = registroContacto.contc.ContactName.ToString();
+            txttlfnoContact.Text = registroContacto.contc.numero1.ToString();
+            txtTlfono2Contact.Text = registroContacto.contc.numero2.ToString();
+        }
+
+        private void cbRncEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string RNC = cbRncEmpresa.SelectedItem.ToString();
+
+            var registroEmpresa = ContactList.Where(c => c.locat.Identifier == RNC).First();
+
+            txtNombreEmpresa.Text = registroEmpresa.locat._Location.ToString();
+            txtTlfnoEmpre.Text = registroEmpresa.locat.Phone1.ToString();
+            txtTlfnoSecundario.Text = registroEmpresa.locat.Phone2.ToString();
+            txtDireccionEmpre.Text = registroEmpresa.locat.Addrees.ToString();
         }
     }
 }

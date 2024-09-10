@@ -191,14 +191,7 @@ namespace SOD_General.Controladores
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.FieldCount <= 1)
-                {
-                    MessageBox.Show("Este cliente no tiene sucursales registradas");
-                    conex.Close();
-                    return null;
-                }
-                else
-                {
+                
                     while (reader.Read())
                     {
                         Locations loca;
@@ -217,7 +210,7 @@ namespace SOD_General.Controladores
                     }
                     conex.Close();
                     return locations;
-                }
+               
 
             }
             catch (Exception ex)
