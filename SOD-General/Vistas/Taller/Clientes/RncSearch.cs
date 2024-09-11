@@ -42,13 +42,13 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         public void verRnc()
         {
-            List<Locations> cliente = clieControl.LlenarDataGridRNC();
-            dgvRncSearch.Rows.Clear();
+            //List<Locations> cliente = clieControl.LlenarDataGridRNC();
+            //dgvRncSearch.Rows.Clear();
 
-            foreach (Locations client in cliente)
-            {
-                dgvRncSearch.Rows.Add(client.IdClient, client._Location, client.Identifier, client.Addrees, client.Phone1, client.Phone2);
-            }
+            //foreach (Locations client in cliente)
+            //{
+            //    dgvRncSearch.Rows.Add(client.IdClient, client._Location, client.Identifier, client.Addrees, client.Phone1, client.Phone2);
+            //}
         }
 
         private void cmbNmb_SelectedIndexChanged(object sender, EventArgs e)

@@ -10,6 +10,7 @@
         public string Phone1 { get; set; }
         public string Phone2 { get; set; }
         public string Identifier { get; set; }
+        public string TipoCliente { get; set; }
 
 
         /// <summary>
@@ -52,7 +53,7 @@
         }
 
 
-        public Locations(string _Location, string Identfier, string Address, string Phone1, string Phone2) 
+        public Locations(int idClient, string _Location, string Identfier, string Address, string Phone1, string Phone2, string tipoCliente) 
         {
             this._Location = _Location;
             this.Identifier = Identfier;
@@ -60,6 +61,17 @@
             this.Phone1 = Phone1;
             this.Phone2 = Phone2;
         
+        }
+
+        public Locations(int IdLocation, string _Location, string Address, string Phone1, string Phone2, int IdClient, string TipoCliente)
+        {
+            this.IdLocation = IdLocation;
+            this._Location = _Location;
+            this.Addrees = Address;
+            this.Phone1 = Phone1;
+            this.Phone2 = Phone2;
+            this.IdClient = IdClient;   
+            this.TipoCliente = TipoCliente;
         }
 
 

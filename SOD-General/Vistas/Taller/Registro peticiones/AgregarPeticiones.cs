@@ -19,8 +19,11 @@ namespace SOD_General.Taller.Registro_peticiones
         int elegido = 0;
         List<ClientContact> ContactList = new List<ClientContact>();
         List<Contact> ctcClient = new List<Contact>();
+        List<Client> ClienteIdentifier = new List<Client>();
         Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
         string RNC = "";
+        List<Locations> EmpresaName;
+        int idClienteCtc = 0;
 
         List<Locations> ListLoc = new List<Locations>();
         public AgregarPeticiones()
@@ -42,7 +45,6 @@ namespace SOD_General.Taller.Registro_peticiones
         private void AgregarPeticiones_Load(object sender, EventArgs e)
         {
             CentrarElementos();
-            RncCedulaCtc();
             RncEmpresaLlenado();
         }
 
@@ -62,27 +64,24 @@ namespace SOD_General.Taller.Registro_peticiones
         public void RncEmpresaLlenado()
         {
             cbRncEmpresa.Items.Clear();
-            ContactList = Ccontroller.ViewClient();
+            ClienteIdentifier = Ccontroller.ViewIdentifier();
             
             cbRncEmpresa.SelectedItem = null;
 
-            foreach (var ListCont in ContactList)
+            foreach (var ListCont in ClienteIdentifier)
             {
-                cbRncEmpresa.Items.Add(ListCont.locat.Identifier);
-            }
-
-            
+                cbRncEmpresa.Items.Add(ListCont._Identifier);
+            } 
         }
         public void RncCedulaCtc()
         {
             cbContactEmpresa.Items.Clear();
-            ctcClient = Ccontroller.ContactoCliente(RNC);
+            ctcClient = Ccontroller.ContactoCliente(idClienteCtc);
 
             foreach (var b in ctcClient)
             {
                 cbContactEmpresa.Items.Add(b.identifier);
             }
-
         }
 
         private void chbEmpresa_CheckedChanged(object sender, EventArgs e)
@@ -115,21 +114,36 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             string cedula = cbContactEmpresa.SelectedItem.ToString();
 
-            List<Contact> registroContacto = Ccontroller.ContactoCliente(cedula);
-
-           
+            txtNameContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.ContactName).First().ToString();
+            txttlfnoContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero1).First().ToString();
+            txtTlfono2Contact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero2).First().ToString();
         }
 
         private void cbRncEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
             RNC = cbRncEmpresa.SelectedItem.ToString();
+            cbNombreEmpresa.Items.Clear();  
 
-            var registroEmpresa = ContactList.Where(c => c.locat.Identifier == RNC).First();
+            EmpresaName = Ccontroller.VerEmpresa(RNC);
 
-            txtNombreEmpresa.Text = registroEmpresa.locat._Location.ToString();
-            txtTlfnoEmpre.Text = registroEmpresa.locat.Phone1.ToString();
-            txtTlfnoSecundario.Text = registroEmpresa.locat.Phone2.ToString();
-            txtDireccionEmpre.Text = registroEmpresa.locat.Addrees.ToString();
+            foreach (var EN in EmpresaName)
+            {
+                cbNombreEmpresa.Items.Add(EN._Location);
+            }
+            
+        }
+
+        private void cbNombreEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nameEmpresa = cbNombreEmpresa.SelectedItem.ToString();
+
+            idClienteCtc =Convert.ToInt32(EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.IdClient).First());
+            txtDireccionEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Addrees).First().ToString();
+            txtTlfnoEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone1).First().ToString();
+            txtTlfnoSecundario.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone2).First().ToString();
+
+            RncCedulaCtc();
         }
     }
+    
 }

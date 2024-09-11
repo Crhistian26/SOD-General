@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -144,11 +145,14 @@ namespace SOD_General.Controladores
                             new ClientContact(
                                 Reader.GetInt32(0),
                                 new Locations(
+                                    Reader.GetInt32(0),
                                     Reader.GetString(1),
                                     Reader.GetString(2),
                                     Reader.GetString(3),
                                     Reader.GetString(4),
-                                    Reader.GetString(5)
+                                    Reader.GetString(5),
+                                    Reader.GetString(6)
+                                    
                                 ),
                                 new Contact(
                                      Reader.GetString(6),
@@ -270,33 +274,59 @@ namespace SOD_General.Controladores
        
        
         //nidea
-        public List<Locations> LlenarDataGridRNC()
+        public List<Locations> VerEmpresa(string identifier)
         {
-            string Query = "select CD._Name, CD._Address, CD.Phone1, CD.Phone2, CD.ClientIdentId, CI.identifier from ClienteData CD join ClientIdentifier CI on ClientIdentId = IdClientIdent";
-
             List<Locations> clientLista = new List<Locations>();
-            SqlCommand cmd = new SqlCommand(Query, conex);
-            conex.Open();
-            SqlDataReader Reader = cmd.ExecuteReader();
 
-
-            while (Reader.Read())
+            try
             {
-                Locations RncLoc;
-                string Client = Reader.GetString(0);
-                string Address = Reader.GetString(1);
-                string Phone1 = Reader.GetString(2);
-                string Phone2 = Reader.GetString(3);
-                int IdIdentifier = Reader.GetInt32(4);
-                string Identifier = Reader.GetString(5);
+                string Query = "exec Get_RncName @RNC";
+                conex.Open();
 
-                RncLoc = new Locations(null, IdIdentifier, null, Client,  Address, Phone1, Phone2,  Identifier);
-                clientLista.Add(RncLoc);
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                cmd.Parameters.AddWithValue("@RNC", identifier);
+
+                SqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    Locations RncLoc;
+                    int IdClient = Reader.GetInt32(0);
+                    string Client = Reader.GetString(1);
+                    string Address = Reader.GetString(2);
+                    string Phone1 = Reader.GetString(3);
+                    string Phone2 = Reader.GetString(4);
+                    int IdIdentifier = Reader.GetInt32(5);
+                    string TipoCliente = Reader.GetString(6);
+
+                    RncLoc = new Locations(IdClient, Client, Address, Phone1, Phone2, IdIdentifier, TipoCliente);
+                    clientLista.Add(RncLoc);
+
+                }
             }
 
-            conex.Close();
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.Message.ToString());
 
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema: " + ex.Message.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+            }
+            conex.Close();
             return clientLista;
+
         }
 
         //repetido? sirve sin id
@@ -377,7 +407,7 @@ namespace SOD_General.Controladores
             return ListLoc;
         }
 
-        public List<Contact> ContactoCliente(string Rnc)
+        public List<Contact> ContactoCliente(int Rnc)
         {
             List<Contact> ListLoc = new List<Contact>();
             try
