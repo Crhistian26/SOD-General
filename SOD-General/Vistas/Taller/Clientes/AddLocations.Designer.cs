@@ -47,6 +47,7 @@
             this.txtNumero1 = new Cr_Textbox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
             this.txtDireccion = new Cr_Textbox();
+            this.cbTipoCliente = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -101,6 +102,7 @@
             // 
             // panelCliente
             // 
+            this.panelCliente.Controls.Add(this.cbTipoCliente);
             this.panelCliente.Controls.Add(this.btnBuscarRnc);
             this.panelCliente.Controls.Add(this.btnBuscarCtc);
             this.panelCliente.Controls.Add(this.CbRnc);
@@ -249,9 +251,9 @@
             this.btn_AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarClientes.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold);
             this.btn_AgregarClientes.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarClientes.Location = new System.Drawing.Point(246, 285);
+            this.btn_AgregarClientes.Location = new System.Drawing.Point(398, 274);
             this.btn_AgregarClientes.Name = "btn_AgregarClientes";
-            this.btn_AgregarClientes.Size = new System.Drawing.Size(192, 49);
+            this.btn_AgregarClientes.Size = new System.Drawing.Size(252, 46);
             this.btn_AgregarClientes.TabIndex = 62;
             this.btn_AgregarClientes.Text = "Agregar";
             this.btn_AgregarClientes.UseVisualStyleBackColor = false;
@@ -276,7 +278,7 @@
             this.cR_Subtitulos6.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos6.Location = new System.Drawing.Point(473, 183);
+            this.cR_Subtitulos6.Location = new System.Drawing.Point(86, 257);
             this.cR_Subtitulos6.Name = "cR_Subtitulos6";
             this.cR_Subtitulos6.Size = new System.Drawing.Size(98, 25);
             this.cR_Subtitulos6.TabIndex = 63;
@@ -326,11 +328,27 @@
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtDireccion.Location = new System.Drawing.Point(398, 211);
+            this.txtDireccion.Location = new System.Drawing.Point(11, 285);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(252, 30);
             this.txtDireccion.TabIndex = 66;
+            // 
+            // cbTipoCliente
+            // 
+            this.cbTipoCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbTipoCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbTipoCliente.BackColor = System.Drawing.Color.White;
+            this.cbTipoCliente.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbTipoCliente.ForeColor = System.Drawing.Color.White;
+            this.cbTipoCliente.FormattingEnabled = true;
+            this.cbTipoCliente.Items.AddRange(new object[] {
+            "Cliente",
+            "Empresa"});
+            this.cbTipoCliente.Location = new System.Drawing.Point(398, 212);
+            this.cbTipoCliente.Name = "cbTipoCliente";
+            this.cbTipoCliente.Size = new System.Drawing.Size(252, 29);
+            this.cbTipoCliente.TabIndex = 79;
             // 
             // AddLocations
             // 
@@ -374,5 +392,6 @@
         private Diseños.Botones_Nuevos btnBuscarCtc;
         public Cr_ComboBox CbRnc;
         public Cr_ComboBox CbContact;
+        private Cr_ComboBox cbTipoCliente;
     }
 }

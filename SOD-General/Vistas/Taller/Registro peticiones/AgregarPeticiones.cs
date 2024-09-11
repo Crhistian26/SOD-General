@@ -18,7 +18,9 @@ namespace SOD_General.Taller.Registro_peticiones
         ClientController Ccontroller = new ClientController();
         int elegido = 0;
         List<ClientContact> ContactList = new List<ClientContact>();
+        List<Contact> ctcClient = new List<Contact>();
         Model_User user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;
+        string RNC = "";
 
         List<Locations> ListLoc = new List<Locations>();
         public AgregarPeticiones()
@@ -57,7 +59,7 @@ namespace SOD_General.Taller.Registro_peticiones
         }
 
 
-        public void RncCedulaCtc()
+        public void RncEmpresaLlenado()
         {
             cbRncEmpresa.Items.Clear();
             ContactList = Ccontroller.ViewClient();
@@ -71,20 +73,14 @@ namespace SOD_General.Taller.Registro_peticiones
 
             
         }
-        public void RncEmpresaLlenado()
+        public void RncCedulaCtc()
         {
             cbContactEmpresa.Items.Clear();
-            ContactList = Ccontroller.ViewClient();
+            ctcClient = Ccontroller.ContactoCliente(RNC);
 
-            var identifierUnic = ContactList
-                .GroupBy(g => g.contc.identifier)
-                .Select(s => s.First())
-                .ToList();
-
-            foreach (var b in identifierUnic)
+            foreach (var b in ctcClient)
             {
-                cbContactEmpresa.Items.Add(b.contc.identifier);
-
+                cbContactEmpresa.Items.Add(b.identifier);
             }
 
         }
@@ -119,16 +115,14 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             string cedula = cbContactEmpresa.SelectedItem.ToString();
 
-            var registroContacto = ContactList.Where(c => c.contc.identifier == cedula).First();
+            List<Contact> registroContacto = Ccontroller.ContactoCliente(cedula);
 
-            txtNameContact.Text = registroContacto.contc.ContactName.ToString();
-            txttlfnoContact.Text = registroContacto.contc.numero1.ToString();
-            txtTlfono2Contact.Text = registroContacto.contc.numero2.ToString();
+           
         }
 
         private void cbRncEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string RNC = cbRncEmpresa.SelectedItem.ToString();
+            RNC = cbRncEmpresa.SelectedItem.ToString();
 
             var registroEmpresa = ContactList.Where(c => c.locat.Identifier == RNC).First();
 

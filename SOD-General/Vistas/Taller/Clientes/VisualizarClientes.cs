@@ -10,7 +10,6 @@ namespace SOD_General.Vistas.Taller.Clientes
     public partial class VisualizarClientes : Form
     {
         ClientController controller = new ClientController();
-        VisualizarSucursales sucursal;
         List<Client> clientes = new List<Client>();
         Client especifi;
 
@@ -80,9 +79,6 @@ namespace SOD_General.Vistas.Taller.Clientes
         {
             DataGridViewRow fila = dgvClientes.Rows[e.RowIndex];
             int id = Convert.ToInt32(fila.Cells[0].Value);
-            sucursal = new VisualizarSucursales(id);
-
-            sucursal.Show();
 
         }
 

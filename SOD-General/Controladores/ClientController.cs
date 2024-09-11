@@ -180,7 +180,7 @@ namespace SOD_General.Controladores
 
 
         //sirve?
-        public List<Locations> ViewLocation(int id)
+        public List<Locations> ViewContact(int id)
         {
             try
             {
@@ -191,26 +191,26 @@ namespace SOD_General.Controladores
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                
-                    while (reader.Read())
-                    {
-                        Locations loca;
-                        int IdLocation = reader.GetInt32(0);
-                        int IdClient = reader.GetInt32(1);
-                        string identifier = reader.GetString(2);
-                        string location = reader.GetString(3);
-                        string address = reader.GetString(4);
-                        string phone1 = reader.GetString(5);
-                        string phone2 = reader.GetString(6);
-                        string contact = reader.GetString(7);
-                        int a = 2;
 
-                        loca = new Locations(IdLocation, IdClient, a, address, phone1, phone2, contact, identifier);
-                        locations.Add(loca);
-                    }
-                    conex.Close();
-                    return locations;
-               
+                while (reader.Read())
+                {
+                    Locations loca;
+                    int IdLocation = reader.GetInt32(0);
+                    int IdClient = reader.GetInt32(1);
+                    string identifier = reader.GetString(2);
+                    string location = reader.GetString(3);
+                    string address = reader.GetString(4);
+                    string phone1 = reader.GetString(5);
+                    string phone2 = reader.GetString(6);
+                    string contact = reader.GetString(7);
+                    int a = 2;
+
+                    loca = new Locations(IdLocation, IdClient, a, address, phone1, phone2, contact, identifier);
+                    locations.Add(loca);
+                }
+                conex.Close();
+                return locations;
+
 
             }
             catch (Exception ex)
@@ -227,11 +227,11 @@ namespace SOD_General.Controladores
         }
 
         //sirve
-        public void AgregarSucursal(string name, string address, string phone1, string phone2, string identifier, string contactIdent)
+        public void AgregarSucursal(string name, string address, string phone1, string phone2, string identifier, string contactIdent, string tipoCliente)
         {
             try
             {
-                string Query = "Exec Add_Locations @Name, @Address, @Phone1, @Phone2, @Identifier, @ContactIdentifier";
+                string Query = "Exec Add_Locations @Name, @Address, @Phone1, @Phone2, @Identifier, @ContactIdentifier, @tipoCliente";
                 SqlCommand cmd = new SqlCommand(Query, conex);
 
                 cmd.Parameters.AddWithValue("@Name", name);
@@ -240,6 +240,8 @@ namespace SOD_General.Controladores
                 cmd.Parameters.AddWithValue("@Phone2", phone2);
                 cmd.Parameters.AddWithValue("@Identifier", identifier);
                 cmd.Parameters.AddWithValue("@ContactIdentifier", contactIdent);
+                cmd.Parameters.AddWithValue("@tipoCliente", tipoCliente);
+
 
                 conex.Open();
                 cmd.ExecuteNonQuery();
@@ -374,5 +376,45 @@ namespace SOD_General.Controladores
             }
             return ListLoc;
         }
+
+        public List<Contact> ContactoCliente(string Rnc)
+        {
+            List<Contact> ListLoc = new List<Contact>();
+            try
+            {
+                string query = "Exec Get_ContactClient @Identifier";
+                SqlCommand cmd = new SqlCommand(query, conex);
+                cmd.Parameters.AddWithValue("@Identifier", Rnc);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Contact loc;
+                    int IdClient = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    string identifier = reader.GetString(2);
+                    string phone1 = reader.GetString(3);
+                    string phone2 = reader.GetString(4);
+
+                    loc = new Contact(name, identifier, phone1, phone2, IdClient);
+                    ListLoc.Add(loc);
+                }
+                conex.Close();
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema" + ex.ToString());
+            }
+            return ListLoc;
+        }
+
+
     }
 }

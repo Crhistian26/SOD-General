@@ -24,7 +24,7 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
         {
-           clieControl.AgregarSucursal(txtCliente.Text, txtDireccion.Text, txtNumero1.Text, txtNumero2.Text, CbRnc.SelectedItem.ToString(), CbContact.SelectedItem.ToString());
+           clieControl.AgregarSucursal(txtCliente.Text, txtDireccion.Text, txtNumero1.Text, txtNumero2.Text, CbRnc.SelectedItem.ToString(), CbContact.SelectedItem.ToString(), cbTipoCliente.SelectedItem.ToString());
             txtCliente.Text = null;
             txtDireccion.Text = null;
             txtNumero1.Text = null;
