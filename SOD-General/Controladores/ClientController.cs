@@ -445,6 +445,9 @@ namespace SOD_General.Controladores
             return ListLoc;
         }
 
+        public void ordenDeEntrada(string details, int idClient, int idContact)
+        {
 
+        }
     }
 }

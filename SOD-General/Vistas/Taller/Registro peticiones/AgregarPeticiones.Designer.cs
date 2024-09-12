@@ -51,6 +51,9 @@
             this.cR_Subtitulos2 = new CR_Subtitulos();
             this.cR_Subtitulos6 = new CR_Subtitulos();
             this.pnlRnc = new System.Windows.Forms.Panel();
+            this.cbContactEmpresa = new Cr_ComboBox();
+            this.cbNombreEmpresa = new Cr_ComboBox();
+            this.cbRncEmpresa = new Cr_ComboBox();
             this.cR_LabelDown10 = new CR_LabelDown();
             this.txtTlfnoSecundario = new Cr_Textbox();
             this.cR_LabelDown7 = new CR_LabelDown();
@@ -64,7 +67,7 @@
             this.cR_LabelDown2 = new CR_LabelDown();
             this.txtDireccionEmpre = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.btnGuardar = new Diseños.Botones_Nuevos();
+            this.btnGuardarEmpre = new Diseños.Botones_Nuevos();
             this.txtDetallesContact = new Cr_Textbox();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_Subtitulos5 = new CR_Subtitulos();
@@ -72,9 +75,6 @@
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
-            this.cbRncEmpresa = new Cr_ComboBox();
-            this.cbNombreEmpresa = new Cr_ComboBox();
-            this.cbContactEmpresa = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -392,7 +392,7 @@
             this.pnlRnc.Controls.Add(this.cR_LabelDown2);
             this.pnlRnc.Controls.Add(this.txtDireccionEmpre);
             this.pnlRnc.Controls.Add(this.cR_LabelDown1);
-            this.pnlRnc.Controls.Add(this.btnGuardar);
+            this.pnlRnc.Controls.Add(this.btnGuardarEmpre);
             this.pnlRnc.Controls.Add(this.txtDetallesContact);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos1);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos5);
@@ -402,6 +402,48 @@
             this.pnlRnc.Size = new System.Drawing.Size(795, 414);
             this.pnlRnc.TabIndex = 108;
             this.pnlRnc.Visible = false;
+            // 
+            // cbContactEmpresa
+            // 
+            this.cbContactEmpresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbContactEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbContactEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbContactEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbContactEmpresa.ForeColor = System.Drawing.Color.White;
+            this.cbContactEmpresa.FormattingEnabled = true;
+            this.cbContactEmpresa.Location = new System.Drawing.Point(500, 34);
+            this.cbContactEmpresa.Name = "cbContactEmpresa";
+            this.cbContactEmpresa.Size = new System.Drawing.Size(252, 29);
+            this.cbContactEmpresa.TabIndex = 133;
+            this.cbContactEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbContactEmpresa_SelectedIndexChanged);
+            // 
+            // cbNombreEmpresa
+            // 
+            this.cbNombreEmpresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbNombreEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbNombreEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbNombreEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbNombreEmpresa.ForeColor = System.Drawing.Color.White;
+            this.cbNombreEmpresa.FormattingEnabled = true;
+            this.cbNombreEmpresa.Location = new System.Drawing.Point(18, 106);
+            this.cbNombreEmpresa.Name = "cbNombreEmpresa";
+            this.cbNombreEmpresa.Size = new System.Drawing.Size(366, 29);
+            this.cbNombreEmpresa.TabIndex = 132;
+            this.cbNombreEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbNombreEmpresa_SelectedIndexChanged);
+            // 
+            // cbRncEmpresa
+            // 
+            this.cbRncEmpresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbRncEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbRncEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbRncEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbRncEmpresa.ForeColor = System.Drawing.Color.White;
+            this.cbRncEmpresa.FormattingEnabled = true;
+            this.cbRncEmpresa.Location = new System.Drawing.Point(17, 34);
+            this.cbRncEmpresa.Name = "cbRncEmpresa";
+            this.cbRncEmpresa.Size = new System.Drawing.Size(367, 29);
+            this.cbRncEmpresa.TabIndex = 131;
+            this.cbRncEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbRncEmpresa_SelectedIndexChanged);
             // 
             // cR_LabelDown10
             // 
@@ -535,23 +577,23 @@
             this.cR_LabelDown1.TabIndex = 113;
             this.cR_LabelDown1.Text = "Nombre de la empresa";
             // 
-            // btnGuardar
+            // btnGuardarEmpre
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.Teal;
-            this.btnGuardar.BorderRadius = 40;
-            this.btnGuardar.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(313, 348);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(188, 57);
-            this.btnGuardar.TabIndex = 85;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardarEmpre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.btnGuardarEmpre.BorderColor = System.Drawing.Color.Teal;
+            this.btnGuardarEmpre.BorderRadius = 40;
+            this.btnGuardarEmpre.BorderSize = 0;
+            this.btnGuardarEmpre.FlatAppearance.BorderSize = 0;
+            this.btnGuardarEmpre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarEmpre.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuardarEmpre.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarEmpre.Location = new System.Drawing.Point(313, 348);
+            this.btnGuardarEmpre.Name = "btnGuardarEmpre";
+            this.btnGuardarEmpre.Size = new System.Drawing.Size(188, 57);
+            this.btnGuardarEmpre.TabIndex = 85;
+            this.btnGuardarEmpre.Text = "Guardar";
+            this.btnGuardarEmpre.UseVisualStyleBackColor = false;
+            this.btnGuardarEmpre.Click += new System.EventHandler(this.btnGuardarEmpre_Click);
             // 
             // txtDetallesContact
             // 
@@ -659,48 +701,6 @@
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
             // 
-            // cbRncEmpresa
-            // 
-            this.cbRncEmpresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbRncEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbRncEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbRncEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cbRncEmpresa.ForeColor = System.Drawing.Color.White;
-            this.cbRncEmpresa.FormattingEnabled = true;
-            this.cbRncEmpresa.Location = new System.Drawing.Point(17, 34);
-            this.cbRncEmpresa.Name = "cbRncEmpresa";
-            this.cbRncEmpresa.Size = new System.Drawing.Size(367, 29);
-            this.cbRncEmpresa.TabIndex = 131;
-            this.cbRncEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbRncEmpresa_SelectedIndexChanged);
-            // 
-            // cbNombreEmpresa
-            // 
-            this.cbNombreEmpresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbNombreEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbNombreEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbNombreEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cbNombreEmpresa.ForeColor = System.Drawing.Color.White;
-            this.cbNombreEmpresa.FormattingEnabled = true;
-            this.cbNombreEmpresa.Location = new System.Drawing.Point(18, 106);
-            this.cbNombreEmpresa.Name = "cbNombreEmpresa";
-            this.cbNombreEmpresa.Size = new System.Drawing.Size(366, 29);
-            this.cbNombreEmpresa.TabIndex = 132;
-            this.cbNombreEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbNombreEmpresa_SelectedIndexChanged);
-            // 
-            // cbContactEmpresa
-            // 
-            this.cbContactEmpresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbContactEmpresa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbContactEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbContactEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cbContactEmpresa.ForeColor = System.Drawing.Color.White;
-            this.cbContactEmpresa.FormattingEnabled = true;
-            this.cbContactEmpresa.Location = new System.Drawing.Point(500, 34);
-            this.cbContactEmpresa.Name = "cbContactEmpresa";
-            this.cbContactEmpresa.Size = new System.Drawing.Size(252, 29);
-            this.cbContactEmpresa.TabIndex = 133;
-            this.cbContactEmpresa.SelectedIndexChanged += new System.EventHandler(this.cbContactEmpresa_SelectedIndexChanged);
-            // 
             // AgregarPeticiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -736,7 +736,7 @@
         private System.Windows.Forms.Panel panel1;
         private CR_Subtitulos cR_Subtitulos7;
         private Diseños.Botones_Nuevos btnClienteNuevo;
-        private Diseños.Botones_Nuevos btnGuardar;
+        private Diseños.Botones_Nuevos btnGuardarEmpre;
         private CR_Subtitulos cR_Subtitulos1;
         private Cr_Textbox txtDetallesContact;
         private System.Windows.Forms.Panel pnlRnc;
