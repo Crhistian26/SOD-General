@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cR_LabelDown1 = new CR_LabelDown();
-            this.cr_Textbox2 = new Cr_Textbox();
-            this.cR_LabelDown2 = new CR_LabelDown();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cr_Textbox3 = new Cr_Textbox();
-            this.cR_LabelDown3 = new CR_LabelDown();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
+            this.botones_Nuevos4 = new Diseños.Botones_Nuevos();
+            this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown4 = new CR_LabelDown();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
+            this.cR_DataGriedView1 = new CR_DataGriedView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
-            this.botones_Nuevos4 = new Diseños.Botones_Nuevos();
+            this.cr_Textbox3 = new Cr_Textbox();
+            this.cR_LabelDown3 = new CR_LabelDown();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.cr_Textbox2 = new Cr_Textbox();
+            this.cR_LabelDown2 = new CR_LabelDown();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_LabelDown1 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -108,62 +108,102 @@
             this.panel1.Size = new System.Drawing.Size(776, 367);
             this.panel1.TabIndex = 0;
             // 
-            // cr_Textbox1
+            // botones_Nuevos4
             // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(3, 33);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(212, 25);
-            this.cr_Textbox1.TabIndex = 2;
+            this.botones_Nuevos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos4.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos4.BorderRadius = 40;
+            this.botones_Nuevos4.BorderSize = 0;
+            this.botones_Nuevos4.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos4.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos4.Location = new System.Drawing.Point(445, 288);
+            this.botones_Nuevos4.Name = "botones_Nuevos4";
+            this.botones_Nuevos4.Size = new System.Drawing.Size(185, 40);
+            this.botones_Nuevos4.TabIndex = 13;
+            this.botones_Nuevos4.Text = "Suspender usuario";
+            this.botones_Nuevos4.UseVisualStyleBackColor = false;
             // 
-            // cR_LabelDown1
+            // botones_Nuevos3
             // 
-            this.cR_LabelDown1.AutoSize = true;
-            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(15, 10);
-            this.cR_LabelDown1.Name = "cR_LabelDown1";
-            this.cR_LabelDown1.Size = new System.Drawing.Size(142, 20);
-            this.cR_LabelDown1.TabIndex = 3;
-            this.cR_LabelDown1.Text = "Nombre de usuario:";
+            this.botones_Nuevos3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos3.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos3.BorderRadius = 40;
+            this.botones_Nuevos3.BorderSize = 0;
+            this.botones_Nuevos3.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos3.Location = new System.Drawing.Point(159, 288);
+            this.botones_Nuevos3.Name = "botones_Nuevos3";
+            this.botones_Nuevos3.Size = new System.Drawing.Size(185, 40);
+            this.botones_Nuevos3.TabIndex = 12;
+            this.botones_Nuevos3.Text = "Guardar cambios";
+            this.botones_Nuevos3.UseVisualStyleBackColor = false;
             // 
-            // cr_Textbox2
+            // cR_LabelDown4
             // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(3, 104);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.Size = new System.Drawing.Size(212, 25);
-            this.cr_Textbox2.TabIndex = 4;
+            this.cR_LabelDown4.AutoSize = true;
+            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown4.Location = new System.Drawing.Point(293, 27);
+            this.cR_LabelDown4.Name = "cR_LabelDown4";
+            this.cR_LabelDown4.Size = new System.Drawing.Size(96, 20);
+            this.cR_LabelDown4.TabIndex = 11;
+            this.cR_LabelDown4.Text = "Operaciones:";
             // 
-            // cR_LabelDown2
+            // botones_Nuevos2
             // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(15, 81);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(88, 20);
-            this.cR_LabelDown2.TabIndex = 5;
-            this.cR_LabelDown2.Text = "Contraseña:";
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(571, 16);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(185, 40);
+            this.botones_Nuevos2.TabIndex = 10;
+            this.botones_Nuevos2.Text = "Agregar operacion";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
             // 
-            // botones_Nuevos1
+            // cR_DataGriedView1
             // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(19, 135);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(185, 40);
-            this.botones_Nuevos1.TabIndex = 6;
-            this.botones_Nuevos1.Text = "Cambiar contraseña";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.cR_DataGriedView1.AllowUserToAddRows = false;
+            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Operacion});
+            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedView1.Location = new System.Drawing.Point(288, 62);
+            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
+            this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(468, 178);
+            this.cR_DataGriedView1.TabIndex = 9;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Column1";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Operacion
+            // 
+            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operacion.HeaderText = "Operacion";
+            this.Operacion.Name = "Operacion";
+            this.Operacion.ReadOnly = true;
             // 
             // cr_Textbox3
             // 
@@ -185,102 +225,62 @@
             this.cR_LabelDown3.TabIndex = 8;
             this.cR_LabelDown3.Text = "Empleado con este usuario:";
             // 
-            // cR_DataGriedView1
+            // botones_Nuevos1
             // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Operacion});
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(288, 62);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(468, 178);
-            this.cR_DataGriedView1.TabIndex = 9;
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(19, 135);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(185, 40);
+            this.botones_Nuevos1.TabIndex = 6;
+            this.botones_Nuevos1.Text = "Cambiar contraseña";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
-            // botones_Nuevos2
+            // cr_Textbox2
             // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(571, 16);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(185, 40);
-            this.botones_Nuevos2.TabIndex = 10;
-            this.botones_Nuevos2.Text = "Agregar operacion";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox2.Location = new System.Drawing.Point(3, 104);
+            this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.Size = new System.Drawing.Size(212, 25);
+            this.cr_Textbox2.TabIndex = 4;
             // 
-            // cR_LabelDown4
+            // cR_LabelDown2
             // 
-            this.cR_LabelDown4.AutoSize = true;
-            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(293, 27);
-            this.cR_LabelDown4.Name = "cR_LabelDown4";
-            this.cR_LabelDown4.Size = new System.Drawing.Size(96, 20);
-            this.cR_LabelDown4.TabIndex = 11;
-            this.cR_LabelDown4.Text = "Operaciones:";
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(15, 81);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(88, 20);
+            this.cR_LabelDown2.TabIndex = 5;
+            this.cR_LabelDown2.Text = "Contraseña:";
             // 
-            // id
+            // cr_Textbox1
             // 
-            this.id.HeaderText = "Column1";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(3, 33);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(212, 25);
+            this.cr_Textbox1.TabIndex = 2;
             // 
-            // Operacion
+            // cR_LabelDown1
             // 
-            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Operacion.HeaderText = "Operacion";
-            this.Operacion.Name = "Operacion";
-            this.Operacion.ReadOnly = true;
-            // 
-            // botones_Nuevos3
-            // 
-            this.botones_Nuevos3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos3.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos3.BorderRadius = 40;
-            this.botones_Nuevos3.BorderSize = 0;
-            this.botones_Nuevos3.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos3.Location = new System.Drawing.Point(159, 288);
-            this.botones_Nuevos3.Name = "botones_Nuevos3";
-            this.botones_Nuevos3.Size = new System.Drawing.Size(185, 40);
-            this.botones_Nuevos3.TabIndex = 12;
-            this.botones_Nuevos3.Text = "Guardar cambios";
-            this.botones_Nuevos3.UseVisualStyleBackColor = false;
-            // 
-            // botones_Nuevos4
-            // 
-            this.botones_Nuevos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos4.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos4.BorderRadius = 40;
-            this.botones_Nuevos4.BorderSize = 0;
-            this.botones_Nuevos4.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos4.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos4.Location = new System.Drawing.Point(445, 288);
-            this.botones_Nuevos4.Name = "botones_Nuevos4";
-            this.botones_Nuevos4.Size = new System.Drawing.Size(185, 40);
-            this.botones_Nuevos4.TabIndex = 13;
-            this.botones_Nuevos4.Text = "Suspender usuario";
-            this.botones_Nuevos4.UseVisualStyleBackColor = false;
+            this.cR_LabelDown1.AutoSize = true;
+            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown1.Location = new System.Drawing.Point(15, 10);
+            this.cR_LabelDown1.Name = "cR_LabelDown1";
+            this.cR_LabelDown1.Size = new System.Drawing.Size(142, 20);
+            this.cR_LabelDown1.TabIndex = 3;
+            this.cR_LabelDown1.Text = "Nombre de usuario:";
             // 
             // ControlUsuario
             // 

@@ -31,27 +31,27 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
-            this.cR_LabelDown1 = new CR_LabelDown();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cR_LabelDown2 = new CR_LabelDown();
-            this.cr_Textbox2 = new Cr_Textbox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cR_LabelDown3 = new CR_LabelDown();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
-            this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cr_Textbox2 = new Cr_Textbox();
+            this.cR_LabelDown2 = new CR_LabelDown();
+            this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_LabelDown3 = new CR_LabelDown();
+            this.cR_LabelDown1 = new CR_LabelDown();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,45 +90,20 @@
             this.cR_Subtitulos1.TabIndex = 0;
             this.cR_Subtitulos1.Text = "cR_Subtitulos1";
             // 
-            // cR_LabelDown1
+            // panel1
             // 
-            this.cR_LabelDown1.AutoSize = true;
-            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(12, 27);
-            this.cR_LabelDown1.Name = "cR_LabelDown1";
-            this.cR_LabelDown1.Size = new System.Drawing.Size(114, 20);
-            this.cR_LabelDown1.TabIndex = 1;
-            this.cR_LabelDown1.Text = "Nombre del rol:";
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(12, 53);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(212, 25);
-            this.cr_Textbox1.TabIndex = 0;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(9, 8);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(154, 20);
-            this.cR_LabelDown2.TabIndex = 3;
-            this.cR_LabelDown2.Text = "Personas con este rol:";
-            // 
-            // cr_Textbox2
-            // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(9, 31);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.Size = new System.Drawing.Size(212, 25);
-            this.cr_Textbox2.TabIndex = 2;
+            this.panel1.Controls.Add(this.cR_DataGriedView1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.botones_Nuevos3);
+            this.panel1.Controls.Add(this.botones_Nuevos2);
+            this.panel1.Controls.Add(this.cr_Textbox1);
+            this.panel1.Controls.Add(this.cR_LabelDown3);
+            this.panel1.Controls.Add(this.cR_LabelDown1);
+            this.panel1.Controls.Add(this.botones_Nuevos1);
+            this.panel1.Location = new System.Drawing.Point(30, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(758, 320);
+            this.panel1.TabIndex = 7;
             // 
             // cR_DataGriedView1
             // 
@@ -152,34 +127,6 @@
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cR_DataGriedView1.Size = new System.Drawing.Size(515, 239);
             this.cR_DataGriedView1.TabIndex = 4;
-            // 
-            // botones_Nuevos1
-            // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(548, 18);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(197, 29);
-            this.botones_Nuevos1.TabIndex = 5;
-            this.botones_Nuevos1.Text = "Agregar operaciones";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            // 
-            // cR_LabelDown3
-            // 
-            this.cR_LabelDown3.AutoSize = true;
-            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(226, 27);
-            this.cR_LabelDown3.Name = "cR_LabelDown3";
-            this.cR_LabelDown3.Size = new System.Drawing.Size(170, 20);
-            this.cR_LabelDown3.TabIndex = 6;
-            this.cR_LabelDown3.Text = "Operaciones en este rol:";
             // 
             // Id
             // 
@@ -212,37 +159,34 @@
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Eliminar.Width = 89;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.cR_DataGriedView1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.botones_Nuevos3);
-            this.panel1.Controls.Add(this.botones_Nuevos2);
-            this.panel1.Controls.Add(this.cr_Textbox1);
-            this.panel1.Controls.Add(this.cR_LabelDown3);
-            this.panel1.Controls.Add(this.cR_LabelDown1);
-            this.panel1.Controls.Add(this.botones_Nuevos1);
-            this.panel1.Location = new System.Drawing.Point(30, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(758, 320);
-            this.panel1.TabIndex = 7;
+            this.panel2.Controls.Add(this.cr_Textbox2);
+            this.panel2.Controls.Add(this.cR_LabelDown2);
+            this.panel2.Location = new System.Drawing.Point(3, 93);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(226, 62);
+            this.panel2.TabIndex = 8;
             // 
-            // botones_Nuevos2
+            // cr_Textbox2
             // 
-            this.botones_Nuevos2.BackColor = System.Drawing.Color.Blue;
-            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos2.BorderRadius = 40;
-            this.botones_Nuevos2.BorderSize = 0;
-            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(27, 181);
-            this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(172, 40);
-            this.botones_Nuevos2.TabIndex = 7;
-            this.botones_Nuevos2.Text = "Guardar cambios";
-            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox2.Location = new System.Drawing.Point(9, 31);
+            this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.Size = new System.Drawing.Size(212, 25);
+            this.cr_Textbox2.TabIndex = 2;
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(9, 8);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(154, 20);
+            this.cR_LabelDown2.TabIndex = 3;
+            this.cR_LabelDown2.Text = "Personas con este rol:";
             // 
             // botones_Nuevos3
             // 
@@ -261,14 +205,70 @@
             this.botones_Nuevos3.Text = "Eliminar rol";
             this.botones_Nuevos3.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // botones_Nuevos2
             // 
-            this.panel2.Controls.Add(this.cr_Textbox2);
-            this.panel2.Controls.Add(this.cR_LabelDown2);
-            this.panel2.Location = new System.Drawing.Point(3, 93);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 62);
-            this.panel2.TabIndex = 8;
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.Blue;
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(27, 181);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(172, 40);
+            this.botones_Nuevos2.TabIndex = 7;
+            this.botones_Nuevos2.Text = "Guardar cambios";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(12, 53);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(212, 25);
+            this.cr_Textbox1.TabIndex = 0;
+            // 
+            // cR_LabelDown3
+            // 
+            this.cR_LabelDown3.AutoSize = true;
+            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown3.Location = new System.Drawing.Point(226, 27);
+            this.cR_LabelDown3.Name = "cR_LabelDown3";
+            this.cR_LabelDown3.Size = new System.Drawing.Size(170, 20);
+            this.cR_LabelDown3.TabIndex = 6;
+            this.cR_LabelDown3.Text = "Operaciones en este rol:";
+            // 
+            // cR_LabelDown1
+            // 
+            this.cR_LabelDown1.AutoSize = true;
+            this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown1.Location = new System.Drawing.Point(12, 27);
+            this.cR_LabelDown1.Name = "cR_LabelDown1";
+            this.cR_LabelDown1.Size = new System.Drawing.Size(114, 20);
+            this.cR_LabelDown1.TabIndex = 1;
+            this.cR_LabelDown1.Text = "Nombre del rol:";
+            // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(548, 18);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(197, 29);
+            this.botones_Nuevos1.TabIndex = 5;
+            this.botones_Nuevos1.Text = "Agregar operaciones";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
             // ControlRoles
             // 
@@ -278,14 +278,16 @@
             this.Controls.Add(this.cR_SplitContainer1);
             this.Name = "ControlRoles";
             this.Text = "ControlRoles";
+            this.Load += new System.EventHandler(this.ControlRoles_Load);
+            this.Shown += new System.EventHandler(this.ControlRoles_Shown);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

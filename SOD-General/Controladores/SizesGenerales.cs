@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SOD_General.Controladores
 {
@@ -159,6 +161,16 @@ namespace SOD_General.Controladores
             return time;
         }
 
-
+        public void CloseForm(Form formulario)
+        {
+            var windows = Application.OpenForms.OfType<Form>().Where(f => f.GetType() == formulario.GetType()).ToList();
+            
+            if (windows.Count > 1)
+            {
+                var window = windows.First();
+                window.Close();
+            }
+        }
+        
     }
 }

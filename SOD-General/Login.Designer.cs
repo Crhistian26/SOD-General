@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_Label2 = new CR_LabelUp();
             this.cr_Textbox2 = new Cr_Textbox();
+            this.cR_Label2 = new CR_LabelUp();
             this.btn_Login = new Diseños.Botones_Nuevos();
             this.cr_Textbox1 = new Cr_Textbox();
             this.cR_Label1 = new CR_LabelUp();
@@ -50,6 +50,16 @@
             this.panel1.Size = new System.Drawing.Size(304, 216);
             this.panel1.TabIndex = 14;
             // 
+            // cr_Textbox2
+            // 
+            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox2.Location = new System.Drawing.Point(7, 106);
+            this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.PasswordChar = '*';
+            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox2.TabIndex = 13;
+            // 
             // cR_Label2
             // 
             this.cR_Label2.AutoSize = true;
@@ -61,16 +71,6 @@
             this.cR_Label2.Size = new System.Drawing.Size(60, 20);
             this.cR_Label2.TabIndex = 11;
             this.cR_Label2.Text = "Usuario";
-            // 
-            // cr_Textbox2
-            // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(7, 106);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.PasswordChar = '*';
-            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
-            this.cr_Textbox2.TabIndex = 13;
             // 
             // btn_Login
             // 
