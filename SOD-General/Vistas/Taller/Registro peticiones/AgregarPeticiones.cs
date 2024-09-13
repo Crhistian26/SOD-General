@@ -112,45 +112,81 @@ namespace SOD_General.Taller.Registro_peticiones
 
         private void cbContactEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string cedula = cbContactEmpresa.SelectedItem.ToString();
+            if (cbContactEmpresa.SelectedItem != null)
+            {
+                string cedula = cbContactEmpresa.SelectedItem.ToString();
 
-            IdContact = Convert.ToInt32(ctcClient.Where(a => a.identifier == cedula).Select(b => b.IdContact).First());
-            txtNameContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.ContactName).First().ToString();
-            txttlfnoContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero1).First().ToString();
-            txtTlfono2Contact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero2).First().ToString();
+                IdContact = Convert.ToInt32(ctcClient.Where(a => a.identifier == cedula).Select(b => b.IdContact).First());
+                txtNameContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.ContactName).First().ToString();
+                txttlfnoContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero1).First().ToString();
+                txtTlfono2Contact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero2).First().ToString();
+
+            }
+            else
+            {
+
+            }
         }
 
         private void cbRncEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RNC = cbRncEmpresa.SelectedItem.ToString();
-
-            IdIdentififer = Convert.ToInt32(ClienteIdentifier.Where(a => a._Identifier == RNC).Select(b => b.IdClient).First());
-            cbNombreEmpresa.Items.Clear();  
-
-            EmpresaName = Ccontroller.VerEmpresa(RNC);
-
-            foreach (var EN in EmpresaName)
+            if (cbRncEmpresa.SelectedItem != null)
             {
-                cbNombreEmpresa.Items.Add(EN._Location);
+                RNC = cbRncEmpresa.SelectedItem.ToString();
+
+                IdIdentififer = Convert.ToInt32(ClienteIdentifier.Where(a => a._Identifier == RNC).Select(b => b.IdClient).First());
+                cbNombreEmpresa.Items.Clear();
+
+                EmpresaName = Ccontroller.VerEmpresa(RNC);
+
+                foreach (var EN in EmpresaName)
+                {
+                    cbNombreEmpresa.Items.Add(EN._Location);
+                }
+            }
+            else
+            {
+
             }
             
         }
 
         private void cbNombreEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string nameEmpresa = cbNombreEmpresa.SelectedItem.ToString();
+            if (cbNombreEmpresa.SelectedItem != null)
+            {
+                string nameEmpresa = cbNombreEmpresa.SelectedItem.ToString();
 
-            IdCliente = Convert.ToInt32(EmpresaName.Where(a => a._Location == nameEmpresa).Select(b => b.IdLocation).First());
-            idClienteCtc = Convert.ToInt32(EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.IdClient).First());
-            txtDireccionEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Addrees).First().ToString();
-            txtTlfnoEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone1).First().ToString();
-            txtTlfnoSecundario.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone2).First().ToString();
+                IdCliente = Convert.ToInt32(EmpresaName.Where(a => a._Location == nameEmpresa).Select(b => b.IdLocation).First());
+                idClienteCtc = Convert.ToInt32(EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.IdClient).First());
+                txtDireccionEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Addrees).First().ToString();
+                txtTlfnoEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone1).First().ToString();
+                txtTlfnoSecundario.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone2).First().ToString();
 
-            RncCedulaCtc();
+                RncCedulaCtc();
+            }
+            else
+            {
+
+            }
         }
 
         private void btnGuardarEmpre_Click(object sender, EventArgs e)
         {
+            Ccontroller.ordenDeEntrada(txtDetallesContact.Text, IdCliente, IdContact);
+
+            cbRncEmpresa.SelectedItem = null;
+            txtDetallesContact.Text = null;
+            cbNombreEmpresa.SelectedItem = null;
+            txtTlfnoEmpre.Text= null;
+            txtDireccionEmpre.Text = null;
+            txtTlfnoEmpre.Text = null;
+            txtTlfnoSecundario.Text = null; 
+            cbContactEmpresa.SelectedItem = null;   
+            cbCedula.SelectedItem = null;
+            txttlfnoContact.Text = null;
+            txtTlfono2Contact.Text = null;
+            txtNameContact.Text = null;
 
         }
     }

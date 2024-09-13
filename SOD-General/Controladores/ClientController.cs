@@ -9,7 +9,9 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Net.Sockets;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SOD_General.Controladores
 {
@@ -444,10 +446,88 @@ namespace SOD_General.Controladores
             }
             return ListLoc;
         }
-
+                                                                                                                                               
         public void ordenDeEntrada(string details, int idClient, int idContact)
         {
+            try
+            {
+                string query = "Exec Add_EntryOrder @Fecha, @idClient, @idContact, @Detalles";
+                DateTime date = DateTime.Now;
+
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                cmd.Parameters.AddWithValue("@idClient", idClient);
+                cmd.Parameters.AddWithValue("@idContact", idContact);
+                cmd.Parameters.AddWithValue("@Detalles", details);
+                cmd.Parameters.AddWithValue("@Fecha", date);
+
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                MessageBox.Show("Agregado Correctamente");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close(); 
+                }
+            }
 
         }
+
+        public void Entradas(int IdEntryOrder, int IdEquipo, int IdTecnico, string serial, string falla, int counter, int code )
+        {
+            try
+            {
+                string query = "Exec Add_Entrada @petitionId, @EquipmentId, @TecnicalRepairId, @Serial, @Fault, @Count_Printer, @Code";
+
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                cmd.Parameters.AddWithValue("@petitionId", IdEntryOrder);
+                cmd.Parameters.AddWithValue("@EquipmentId", IdEquipo);
+                cmd.Parameters.AddWithValue("@TecnicalRepairId", IdTecnico);
+                cmd.Parameters.AddWithValue("@serial", serial);
+                cmd.Parameters.AddWithValue("@fault", falla);
+                cmd.Parameters.AddWithValue("@Counter_Printer", counter);
+                cmd.Parameters.AddWithValue("@Code", code);
+
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                MessageBox.Show("Agregado Correctamente");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+            }
+        }
     }
+
+    
 }
