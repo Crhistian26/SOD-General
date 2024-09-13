@@ -1,4 +1,4 @@
-﻿using Modelos.Control_de_usuarios;
+﻿﻿using Modelos.Control_de_usuarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
         public ControlOperaciones()
         {
             InitializeComponent();
-            foreach(var module in Modules)
+            foreach (var module in Modules)
             {
                 cr_ComboBox1.Items.Add(module._Module);
             }
@@ -51,6 +51,6 @@ namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
         {
 
         }
-        
+
     }
 }

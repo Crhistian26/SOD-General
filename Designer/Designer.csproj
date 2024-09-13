@@ -216,6 +216,9 @@
     <Compile Include="Cr_ComboBox_Down.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CR_DataGriedViewNormal.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CR_DataGriedView.cs">
       <SubType>Component</SubType>
     </Compile>

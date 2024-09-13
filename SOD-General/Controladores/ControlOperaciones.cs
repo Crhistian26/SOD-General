@@ -3,6 +3,9 @@ using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Control_calidad;
 using SOD_General.Taller.Registro_peticiones;
+using SOD_General.Vistas.Control_de_usuarios.Operaciones;
+using SOD_General.Vistas.Control_de_usuarios.Roles;
+using SOD_General.Vistas.Control_de_usuarios.Usuarios;
 using SOD_General.Vistas.Recursos_Humanos.Exportar;
 using SOD_General.Vistas.Recursos_Humanos.Motivos;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
@@ -161,7 +164,6 @@ namespace Controladores
                             _view.OpenForm(window);
                         }
                     },
-
                       {
                         ("Controles de calidad","Enlace Equipo Control"),
                         (object sender, EventArgs e) =>
@@ -170,12 +172,35 @@ namespace Controladores
                             _view.OpenForm(window);
                         }
                     },
-
                       {
                         ("Recepcion","Orden de entrada"),
                         (object sender, EventArgs e) =>
                         {
                             AgregarPeticiones window = new AgregarPeticiones();
+                            _view.OpenForm(window);
+                        }
+                    },
+                      {
+                        ("Control maestro","Ver operaciones"),
+                        (object sender, EventArgs e) =>
+                        {
+                            VisualOperaciones window = new VisualOperaciones();
+                            _view.OpenForm(window);
+                        }
+                    },
+                      {
+                        ("Control maestro","Ver usuarios"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Visual_Usuarios window = new Visual_Usuarios();
+                            _view.OpenForm(window);
+                        }
+                    },
+                      {
+                        ("Control maestro","Ver roles"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Visual_Roles window = new Visual_Roles();
                             _view.OpenForm(window);
                         }
                     }
@@ -228,7 +253,6 @@ namespace Controladores
                         head_item.DropDownItems.Add(item);
                     }
                 }
-
                 if (head_item.DropDownItems.Count <= 0)
                 {
                     continue;
@@ -237,9 +261,7 @@ namespace Controladores
                 {
                     _view.cR_MenuStrip1.Items.Add(head_item);
                 }
-
             }
-            
             
             ToolStripMenuItem login_back = new ToolStripMenuItem();
             login_back.Text = "Volver al login";

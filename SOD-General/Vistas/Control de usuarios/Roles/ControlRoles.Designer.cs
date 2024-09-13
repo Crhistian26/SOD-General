@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cr_Textbox2 = new Cr_Textbox();
             this.cR_LabelDown2 = new CR_LabelDown();
@@ -46,13 +41,18 @@
             this.cR_LabelDown3 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
+            this.cR_DataGriedViewNormal1 = new CR_DataGriedViewNormal();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedViewNormal1)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -92,7 +92,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cR_DataGriedView1);
+            this.panel1.Controls.Add(this.cR_DataGriedViewNormal1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.botones_Nuevos3);
             this.panel1.Controls.Add(this.botones_Nuevos2);
@@ -104,60 +104,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 320);
             this.panel1.TabIndex = 7;
-            // 
-            // cR_DataGriedView1
-            // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Operacion,
-            this.Modulo,
-            this.Eliminar});
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(230, 53);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(515, 239);
-            this.cR_DataGriedView1.TabIndex = 4;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Column1";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Operacion
-            // 
-            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Operacion.HeaderText = "Operacion";
-            this.Operacion.Name = "Operacion";
-            this.Operacion.ReadOnly = true;
-            // 
-            // Modulo
-            // 
-            this.Modulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Modulo.HeaderText = "Modulo";
-            this.Modulo.Name = "Modulo";
-            this.Modulo.ReadOnly = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.Width = 89;
             // 
             // panel2
             // 
@@ -236,7 +182,7 @@
             this.cR_LabelDown3.AutoSize = true;
             this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(226, 27);
+            this.cR_LabelDown3.Location = new System.Drawing.Point(254, 27);
             this.cR_LabelDown3.Name = "cR_LabelDown3";
             this.cR_LabelDown3.Size = new System.Drawing.Size(170, 20);
             this.cR_LabelDown3.TabIndex = 6;
@@ -270,6 +216,56 @@
             this.botones_Nuevos1.Text = "Agregar operaciones";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
+            // cR_DataGriedViewNormal1
+            // 
+            this.cR_DataGriedViewNormal1.AllowUserToAddRows = false;
+            this.cR_DataGriedViewNormal1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedViewNormal1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedViewNormal1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedViewNormal1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedViewNormal1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Operacion,
+            this.Column1,
+            this.Eliminar});
+            this.cR_DataGriedViewNormal1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedViewNormal1.Location = new System.Drawing.Point(249, 53);
+            this.cR_DataGriedViewNormal1.Name = "cR_DataGriedViewNormal1";
+            this.cR_DataGriedViewNormal1.ReadOnly = true;
+            this.cR_DataGriedViewNormal1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedViewNormal1.Size = new System.Drawing.Size(496, 239);
+            this.cR_DataGriedViewNormal1.TabIndex = 9;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Operacion
+            // 
+            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operacion.HeaderText = "Operacion";
+            this.Operacion.Name = "Operacion";
+            this.Operacion.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Modulo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
             // ControlRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,9 +283,9 @@
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedViewNormal1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,16 +298,16 @@
         private Cr_Textbox cr_Textbox1;
         private CR_LabelDown cR_LabelDown3;
         private Diseños.Botones_Nuevos botones_Nuevos1;
-        private CR_DataGriedView cR_DataGriedView1;
         private CR_LabelDown cR_LabelDown2;
         private Cr_Textbox cr_Textbox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Operacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Modulo;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private Diseños.Botones_Nuevos botones_Nuevos3;
         private Diseños.Botones_Nuevos botones_Nuevos2;
         private System.Windows.Forms.Panel panel2;
+        private CR_DataGriedViewNormal cR_DataGriedViewNormal1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Operacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }
