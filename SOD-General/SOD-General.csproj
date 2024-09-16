@@ -271,12 +271,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\Control de usuarios\Operaciones\ControlOperaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Control de usuarios\Operaciones\ControlOperaciones.Designer.cs">
-      <DependentUpon>ControlOperaciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Control de usuarios\Operaciones\VisualOperaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -593,9 +587,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vistas\Control de usuarios\Operaciones\ControlOperaciones.resx">
-      <DependentUpon>ControlOperaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Control de usuarios\Operaciones\VisualOperaciones.resx">
       <DependentUpon>VisualOperaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -751,7 +742,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SOD-General_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

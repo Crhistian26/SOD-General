@@ -33,7 +33,7 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             InitializeComponent();
 
-            this.vista = vista;
+            this.vista = Application.OpenForms.OfType<AppVistaGeneral>().First();
         }
         private void CentrarElementos()
         {
@@ -48,7 +48,9 @@ namespace SOD_General.Taller.Registro_peticiones
         private void AgregarPeticiones_Load(object sender, EventArgs e)
         {
             CentrarElementos();
+            validarClienteNuevo();
             RncEmpresaLlenado();
+            IdUltimo();
         }
 
 
@@ -122,10 +124,7 @@ namespace SOD_General.Taller.Registro_peticiones
                 txtTlfono2Contact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero2).First().ToString();
 
             }
-            else
-            {
 
-            }
         }
 
         private void cbRncEmpresa_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,11 +143,7 @@ namespace SOD_General.Taller.Registro_peticiones
                     cbNombreEmpresa.Items.Add(EN._Location);
                 }
             }
-            else
-            {
 
-            }
-            
         }
 
         private void cbNombreEmpresa_SelectedIndexChanged(object sender, EventArgs e)
@@ -183,11 +178,18 @@ namespace SOD_General.Taller.Registro_peticiones
             txtTlfnoEmpre.Text = null;
             txtTlfnoSecundario.Text = null; 
             cbContactEmpresa.SelectedItem = null;   
-            cbCedula.SelectedItem = null;
             txttlfnoContact.Text = null;
             txtTlfono2Contact.Text = null;
             txtNameContact.Text = null;
 
+           
+                RegistrarSolicitudEquipo regiEntrada = new RegistrarSolicitudEquipo();
+                vista.OpenForm(regiEntrada);
+        }
+
+        public void IdUltimo()
+        {
+            txtUltimoId.Text = Ccontroller.UltimoId().ToString();
         }
     }
     

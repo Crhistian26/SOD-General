@@ -5,7 +5,7 @@
         public int IdEquipment { get; set; }
         public int BrandID { get; set; }
         public int EquipTypeId { get; set; }
-        public string _Equip { get; set; }
+        public int _Equip { get; set; }
         public string _Model { get; set; }
         public bool _PrinterCheck { get; set; }
 
@@ -18,14 +18,15 @@
         /// <param name="equip">Nombre del equipo.</param>
         /// <param name="model">Modelo del equipo.</param>
         /// <param name="printerCheck">Si dispone de impresora.</param>
-        public Equipment(int idEquipment, int brandID, int equipTypeId, string equip, string model, bool printerCheck)
+        public Equipment(int idEquipment, int brandID, int equipTypeId, string model, bool printerCheck, int equip)
         {
             IdEquipment = idEquipment;
             BrandID = brandID;
             EquipTypeId = equipTypeId;
-            _Equip = equip;
             _Model = model;
             _PrinterCheck = printerCheck;
+            _Equip = equip;
+
         }
     }
 }

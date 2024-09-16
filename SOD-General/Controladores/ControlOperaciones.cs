@@ -180,31 +180,15 @@ namespace Controladores
                             _view.OpenForm(window);
                         }
                     },
-                      {
-                        ("Control maestro","Ver operaciones"),
+
+                    {
+                        ("Recepcion","Agregar Entradas"),
                         (object sender, EventArgs e) =>
                         {
-                            VisualOperaciones window = new VisualOperaciones();
-                            _view.OpenForm(window);
-                        }
-                    },
-                      {
-                        ("Control maestro","Ver usuarios"),
-                        (object sender, EventArgs e) =>
-                        {
-                            Visual_Usuarios window = new Visual_Usuarios();
-                            _view.OpenForm(window);
-                        }
-                    },
-                      {
-                        ("Control maestro","Ver roles"),
-                        (object sender, EventArgs e) =>
-                        {
-                            Visual_Roles window = new Visual_Roles();
+                            RegistrarSolicitudEquipo window = new RegistrarSolicitudEquipo();
                             _view.OpenForm(window);
                         }
                     }
-
                 };
 
 

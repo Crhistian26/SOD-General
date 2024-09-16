@@ -64,7 +64,7 @@ namespace SOD_General.Controladores
                         Brand lista;
                         int id = reader.GetInt32(0);
                         string marca = reader.GetString(1);
-                        int enable = Convert.ToInt32(reader.GetBoolean(2));
+                        bool enable = reader.GetBoolean(2);
 
                         lista = new Brand(id, marca, enable);
                         brandList.Add(lista);

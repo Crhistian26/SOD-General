@@ -527,6 +527,233 @@ namespace SOD_General.Controladores
                 }
             }
         }
+
+        public List<EquipType> ObtenerTiposEquipos()
+        {  
+            List<EquipType> EquipTypeList = new List<EquipType>();
+            try
+            {
+                //El query.
+                string Query = "exec Get_TypeEquipment";
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    EquipType Equipo;
+                    int idTypeEquip = reader.GetInt32(0);
+                    string EquipType = reader.GetString(1);
+                    bool Enable = reader.GetBoolean(2);
+
+                    Equipo = new EquipType(idTypeEquip, EquipType, Enable);
+                    EquipTypeList.Add(Equipo);
+                }
+                conex.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error de la Base de datos: " + ex.Message);
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error del sistema: " + ex.Message);
+            }
+            return EquipTypeList;
+        }
+
+        public List<Brand> ObtenerMarcas()
+        {
+            List<Brand> EquipTypeList = new List<Brand>();
+            try
+            {
+                //El query.
+                string Query = "exec Get_Brand";
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Brand Equipo;
+                    int idTypeEquip = reader.GetInt32(0);
+                    string EquipType = reader.GetString(1);
+                    bool Enable = reader.GetBoolean(2);
+
+                    Equipo = new Brand(idTypeEquip, EquipType, Enable);
+                    EquipTypeList.Add(Equipo);
+                }
+                conex.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error de la Base de datos: " + ex.Message);
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error del sistema: " + ex.Message);
+            }
+            return EquipTypeList;
+        }
+
+
+        public List<NameEquipment> ObtenerLineaEquipo()
+        {
+            List<NameEquipment> EquipTypeList = new List<NameEquipment>();
+            try
+            {
+                //El query.
+                string Query = "exec Get_NameEquipment";
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    NameEquipment Equipo;
+                    int idTypeEquip = reader.GetInt32(0);
+                    string EquipType = reader.GetString(1);
+                    bool Enable = reader.GetBoolean(2);
+                    int typeId  = reader.GetInt32(3);
+
+                    Equipo = new NameEquipment(idTypeEquip, EquipType, Enable, typeId);
+                    EquipTypeList.Add(Equipo);
+                }
+                conex.Close();
+                return EquipTypeList;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error de la Base de datos: " + ex.Message);
+                return null;
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error del sistema: " + ex.Message);
+                return null;
+            }
+            
+        }
+
+
+        public List<Equipment> ObtenerEquipo()
+        {
+            List<Equipment> EquipList = new List<Equipment>();
+            try
+            {
+                //El query.
+                string Query = "exec Get_Equipment";
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Equipment Equipo;
+                    int idTypeEquip = reader.GetInt32(0);
+                    int brandId = reader.GetInt32(1);
+                    int equipTypeId = reader.GetInt32(2);
+                    string modelo = reader.GetString(3);
+                    bool printer = reader.GetBoolean(4);
+                    int nameEquipmentId = reader.GetInt32(5);
+
+                    Equipo = new Equipment(idTypeEquip, brandId, equipTypeId, modelo, printer, nameEquipmentId);
+                    EquipList.Add(Equipo);
+                }
+                conex.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error de la Base de datos: " + ex.Message);
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error del sistema: " + ex.Message);
+            }
+            return EquipList;
+        }
+
+        public int UltimoId()
+        {
+            int IdUltimo = 0;
+            try
+            {
+                string query = "Exec Get_LastEntrance";
+
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                conex.Open();
+                
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    IdUltimo = reader.GetInt32(0);
+                }
+
+                conex.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema: " + ex.ToString());
+            }
+
+            return IdUltimo;
+        }
+
+
     }
 
     
