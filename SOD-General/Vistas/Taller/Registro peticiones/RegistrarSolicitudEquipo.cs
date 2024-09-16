@@ -16,6 +16,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         List<Equipment> equipComp;
 
         int idTipo = 0;
+        int IdMarcas = 0;
         ClientController ClController = new ClientController();
         
         public RegistrarSolicitudEquipo()
@@ -121,6 +122,22 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         public void IdUltimo()
         {
            txtIdEntrada.Text = ClController.UltimoId().ToString();
+        }
+
+        private void cbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string marcaElegida = cbMarca.SelectedItem.ToString();
+            IdMarcas = Convert.ToInt32(marcas.Where(a => a._Brand == marcaElegida).Select(a => a.IdBrand));
+        }
+
+        private void cbLinea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbModelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

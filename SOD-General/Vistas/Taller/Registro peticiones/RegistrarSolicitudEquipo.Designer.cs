@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.txtIdEntrada = new CR_LabelUp();
@@ -173,10 +173,10 @@
             this.cR_DataGriedView3.AllowUserToAddRows = false;
             this.cR_DataGriedView3.AllowUserToDeleteRows = false;
             this.cR_DataGriedView3.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.cR_DataGriedView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
@@ -237,10 +237,10 @@
             this.dgvFiltro.AllowUserToAddRows = false;
             this.dgvFiltro.AllowUserToDeleteRows = false;
             this.dgvFiltro.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.dgvFiltro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            this.dgvFiltro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvFiltro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFiltro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -398,6 +398,7 @@
             this.cbModelo.Name = "cbModelo";
             this.cbModelo.Size = new System.Drawing.Size(215, 29);
             this.cbModelo.TabIndex = 108;
+            this.cbModelo.SelectedIndexChanged += new System.EventHandler(this.cbModelo_SelectedIndexChanged);
             // 
             // cR_Subtitulos7
             // 
@@ -426,6 +427,7 @@
             this.cbLinea.Name = "cbLinea";
             this.cbLinea.Size = new System.Drawing.Size(215, 29);
             this.cbLinea.TabIndex = 106;
+            this.cbLinea.SelectedIndexChanged += new System.EventHandler(this.cbLinea_SelectedIndexChanged);
             // 
             // cbMarca
             // 
@@ -439,6 +441,7 @@
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(215, 29);
             this.cbMarca.TabIndex = 105;
+            this.cbMarca.SelectedIndexChanged += new System.EventHandler(this.cbMarca_SelectedIndexChanged);
             // 
             // cbTipoEquipo
             // 
