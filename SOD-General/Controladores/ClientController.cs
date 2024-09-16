@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml.Office2010.ExcelAc;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using Modelos.Control_de_usuarios;
 using Modelos.Taller;
 using SOD_General.Vistas.Taller.Clientes;
@@ -716,6 +717,8 @@ namespace SOD_General.Controladores
             return EquipList;
         }
 
+
+
         public int UltimoId()
         {
             int IdUltimo = 0;
@@ -753,6 +756,79 @@ namespace SOD_General.Controladores
             return IdUltimo;
         }
 
+
+
+        public List<DataEquip> DatosEquipo()
+        {
+            try
+            {
+                List<DataEquip> listaDatos = new List<DataEquip>();  
+                
+                //El query.
+                string Query = "exec Get_All_Equip";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    listaDatos.Add(
+                        new DataEquip(
+                            new Equipment(
+                                reader.GetInt32(0),
+                                reader.GetInt32(1),
+                                reader.GetInt32(2),
+                                reader.GetString(3),
+                                reader.GetBoolean(4),
+                                reader.GetInt32(5)
+                                ),
+
+                            new Brand(
+                                reader.GetInt32(6),
+                                reader.GetString(7),
+                                reader.GetBoolean(8)
+                                ),
+                        
+                            new EquipType(
+                                reader.GetInt32(9),
+                                reader.GetString(10),
+                                reader.GetBoolean(11)
+                                ),
+
+                            new NameEquipment(
+                                reader.GetInt32(12),
+                                reader.GetString(13),
+                                reader.GetBoolean(14),
+                                reader.GetInt32(15)
+                                ))
+                        );       
+                }
+                conex.Close();
+                return listaDatos;
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+
+        }
 
     }
 

@@ -232,6 +232,7 @@
     <Compile Include="Taller\Contact.cs" />
     <Compile Include="Taller\Controles.cs" />
     <Compile Include="Taller\ControlQuality.cs" />
+    <Compile Include="Taller\DataEquip.cs" />
     <Compile Include="Taller\Entrance.cs" />
     <Compile Include="Taller\EquipControl.cs" />
     <Compile Include="Taller\Equipment.cs" />

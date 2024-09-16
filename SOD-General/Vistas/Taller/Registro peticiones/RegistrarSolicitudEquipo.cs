@@ -3,6 +3,7 @@ using SOD_General.Controladores;
 using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,9 +15,13 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         List<EquipType> TipoEquipo;
         List<Brand> marcas;
         List<Equipment> equipComp;
+        List<NameEquipment> linea;
+        List<DataEquip> datosEquipo;
+
 
         int idTipo = 0;
         int IdMarcas = 0;
+        int IdLineas = 0;
         ClientController ClController = new ClientController();
         
         public RegistrarSolicitudEquipo()
@@ -69,16 +74,8 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             }
         }
 
-        
-
-        public void llenarGrid()
+        public void ObtenerLineas(int a)
         {
-
-        }
-
-        public void ObtenerModelo(int a)
-        {
-            List<NameEquipment> linea;
             linea = ClController.ObtenerLineaEquipo();
 
             if (linea != null)
@@ -94,10 +91,23 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 {
                     cbLinea.Items.Add(item._NameEquipment);
                 }
-            }
-
-            
+            } 
         }
+
+        public void ObtenerModelos( int idlinea)
+        {
+            equipComp = ClController.ObtenerEquipo();
+
+            List<Equipment> dataEquips = new List<Equipment>();
+            dataEquips = equipComp.Where(u => u._Equip == idlinea).Select(o => o).ToList();
+
+            foreach (var marc in dataEquips)
+            {
+                cbModelo.Items.Add(marc._Model);
+            }
+        }
+
+
 
         private void RegistrarSolicitudEquipo_Load(object sender, System.EventArgs e)
         {
@@ -114,7 +124,9 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 string tipo = cbTipoEquipo.SelectedItem.ToString();
 
                 idTipo = TipoEquipo.Where(q => q._EquipType == tipo).Select(l => l.IdEquipType).First();
-                ObtenerModelo(idTipo);
+                ObtenerLineas(idTipo);
+                
+                ObtenerEquiposDgv(idTipo);
             }
 
         }
@@ -127,11 +139,86 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         private void cbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
             string marcaElegida = cbMarca.SelectedItem.ToString();
-            IdMarcas = Convert.ToInt32(marcas.Where(a => a._Brand == marcaElegida).Select(a => a.IdBrand));
+            IdMarcas = Convert.ToInt32(marcas.Where(a => a._Brand == marcaElegida).Select(a => a.IdBrand).First());
+
+            ObtenerEquiposDgv(idTipo, IdMarcas);
         }
 
         private void cbLinea_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string lineaElegida =  cbLinea.SelectedItem.ToString();
+            IdLineas = Convert.ToInt32(linea.Where(a => a._NameEquipment == lineaElegida).Select(b => b.IdNameEquipment).First());
+
+            ObtenerModelos(IdLineas);
+
+            ObtenerEquiposDgv(idTipo, IdMarcas, IdLineas);
+        }
+
+        public void ObtenerEquiposDgv(int tipo)
+        {
+            dgvFiltro.Rows.Clear();
+            datosEquipo  = ClController.DatosEquipo();
+            List<DataEquip> equipCompData = new List<DataEquip>();
+
+            equipCompData = datosEquipo.Where(o => o.tipoEquip.IdEquipType == tipo)
+                  .Select(e => e).ToList();
+
+            cbModelo.Items.Clear();
+            cbModelo.Text = null;
+
+            foreach (var item in equipCompData)
+            {
+                dgvFiltro.Rows.Add(item.equip.IdEquipment, item.tipoEquip._EquipType, item.marc._Brand, item.equip._Model);
+            }
+            
+        }
+
+        public void ObtenerEquiposDgv(int tipo, int marca)
+        {
+            dgvFiltro.Rows.Clear();
+            datosEquipo = ClController.DatosEquipo();
+            List<DataEquip> equipCompData = new List<DataEquip>();
+
+            equipCompData = datosEquipo.Where(o => o.tipoEquip.IdEquipType == tipo)
+                  .Select(e => e).ToList();
+
+            List<DataEquip> equipCompData2 = new List<DataEquip>();
+            equipCompData2 = equipCompData.Where(o => o.marc.IdBrand == marca)
+                  .Select(e => e).ToList();
+
+            cbModelo.Items.Clear();
+            cbModelo.Text = null;
+
+            foreach (var item in equipCompData2)
+            {
+                dgvFiltro.Rows.Add(item.equip.IdEquipment, item.tipoEquip._EquipType, item.marc._Brand, item.equip._Model);
+            }
+
+        }
+
+        public void ObtenerEquiposDgv(int tipo, int marca, int linea )
+        {
+            dgvFiltro.Rows.Clear();
+            datosEquipo = ClController.DatosEquipo();
+            List<DataEquip> equipCompData = new List<DataEquip>();
+            equipCompData = datosEquipo.Where(o => o.tipoEquip.IdEquipType == tipo)
+                  .Select(e => e).ToList();
+
+            List<DataEquip> equipCompData2 = new List<DataEquip>();
+            equipCompData2 = equipCompData.Where(o => o.marc.IdBrand == marca)
+                  .Select(e => e).ToList();
+
+            List<DataEquip> equipCompData3 = new List<DataEquip>();
+            equipCompData3 = equipCompData2.Where(o => o.equipoNomb.IdNameEquipment == linea)
+                  .Select(e => e).ToList();
+
+            cbModelo.Items.Clear();
+            cbModelo.Text = null;
+
+            foreach (var item in equipCompData3)
+            {
+                dgvFiltro.Rows.Add(item.equip.IdEquipment, item.tipoEquip._EquipType, item.marc._Brand, item.equip._Model);
+            }
 
         }
 

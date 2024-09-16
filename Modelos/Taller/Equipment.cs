@@ -20,12 +20,12 @@
         /// <param name="printerCheck">Si dispone de impresora.</param>
         public Equipment(int idEquipment, int brandID, int equipTypeId, string model, bool printerCheck, int equip)
         {
-            IdEquipment = idEquipment;
-            BrandID = brandID;
-            EquipTypeId = equipTypeId;
-            _Model = model;
-            _PrinterCheck = printerCheck;
-            _Equip = equip;
+            this.IdEquipment = idEquipment;
+            this.BrandID = brandID;
+            this.EquipTypeId = equipTypeId;
+            this._Model = model;
+            this._PrinterCheck = printerCheck;
+            this._Equip = equip;
 
         }
     }
