@@ -7,7 +7,6 @@ namespace Modelos.Taller
         public int IdEntrance { get; set; }
         public int PetitionId { get; set; }
         public int EquipmentId { get; set; }
-        public int TecnicalRepairId { get; set; }
         public int ClientId { get; set; }
         public int EquipStatusId { get; set; }
         public DateTime EntranceDate { get; set; }
@@ -37,7 +36,6 @@ namespace Modelos.Taller
             IdEntrance = idEntrance;
             PetitionId = petitionId;
             EquipmentId = equipmentId;
-            TecnicalRepairId = tecnicalRepairId;
             ClientId = clientId;
             EquipStatusId = equipStatusId;
             EntranceDate = entranceDate;

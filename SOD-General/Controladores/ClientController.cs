@@ -827,9 +827,53 @@ namespace SOD_General.Controladores
                 return null;
             }
 
-
+           
         }
+        public void AgregarEntradas(int peticionId, int EquipmentId, int equipStatusId, string serial, string fault, bool counterPrinter)
+        {
+            try
+            {
+                //El query.
+                string Query = "exec Add_Entrada @petitionId, @EquipmentId, @EquipStatusId, @serial, @fault, @Counter_Printer";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@petitionId", peticionId);
+                cmd.Parameters.AddWithValue("@EquipmentId", EquipmentId);
+                cmd.Parameters.AddWithValue("@EquipStatusId", equipStatusId);
+                cmd.Parameters.AddWithValue("@serial", serial);
+                cmd.Parameters.AddWithValue("@fault", fault);
+                cmd.Parameters.AddWithValue("@CounterPrinter", counterPrinter);
 
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                //while ()
+                //{
+
+                //}
+                conex.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                //return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+               // return null;
+            }
+        }
     }
 
     

@@ -183,7 +183,7 @@ namespace SOD_General.Taller.Registro_peticiones
             txtNameContact.Text = null;
 
            
-                RegistrarSolicitudEquipo regiEntrada = new RegistrarSolicitudEquipo();
+                RegistrarSolicitudEquipo regiEntrada = new RegistrarSolicitudEquipo(Convert.ToInt32(txtUltimoId.Text));
                 vista.OpenForm(regiEntrada);
         }
 
