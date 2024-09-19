@@ -185,7 +185,7 @@ namespace Controladores
                         ("Recepcion","Agregar Entradas"),
                         (object sender, EventArgs e) =>
                         {
-                            RegistrarSolicitudEquipo window = new RegistrarSolicitudEquipo(123);
+                            RegistrarSolicitudEquipo window = new RegistrarSolicitudEquipo(000);
                             _view.OpenForm(window);
                         }
                     }
