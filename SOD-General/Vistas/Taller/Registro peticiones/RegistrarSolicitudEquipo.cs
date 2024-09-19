@@ -115,19 +115,16 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             if (cbTipoEquipo.SelectedItem != null)
             {
                 tipo = cbTipoEquipo.SelectedItem.ToString();
-
                 idTipo = TipoEquipo.Where(q => q._EquipType == tipo).Select(l => l.IdEquipType).First();
+
                 ObtenerLineas(idTipo);
                 
                 ObtenerEquiposDgv(idTipo);
             }
 
         }
-        //funcion para mostrar el numero de entrada
-        public void IdUltimo()
-        {
-            txtIdEntrada.Text = ClController.UltimoId().ToString();
-        }
+        
+        //Evento al seleccionar la marca
         private void cbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbMarca.SelectedItem != null)
@@ -139,8 +136,11 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             }
         }
 
-
-        
+        //funcion para mostrar el numero de entrada
+        public void IdUltimo()
+        {
+            txtIdEntrada.Text = ClController.UltimoId().ToString();
+        }
 
         public void ObtenerEquiposDgv(int tipo)
         {
@@ -235,31 +235,38 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
 
         private void cbModelo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            modelo = cbModelo.SelectedItem.ToString();
-
-            idEquip = Convert.ToInt32(equipComp.Where(u => u.EquipTypeId == idTipo).Where(u => u.BrandID == IdMarcas).Where(u => u._Equip == idEquip).Select(o => o.IdEquipment).First());
+            if (cbModelo.SelectedItem != null)
+            {
+                modelo = cbModelo.SelectedItem.ToString();
+            }
         }
 
          
         private void btnAgregRegistro_Click(object sender, EventArgs e)
         {
-            //int idEquipment = Convert.ToInt32(equipComp.Where(a => a.EquipTypeId == idTipo).Where(a => a.BrandID == IdMarcas).Where(a => a._Equip == IdLineas).Where(a => a._Model == modelo).Select(b => b.IdEquipment).First());
-           MessageBox.Show(idEquip.ToString());
-            
+           int resultado = Convert.ToInt32(equipComp.Where(u => u.EquipTypeId == idTipo)
+                                               .Where(u => u.BrandID == IdMarcas)
+                                               .Where(u => u._Equip == IdLineas)
+                                               .Where(a => a._Model == modelo)
+                                               .Select(o => o.IdEquipment).FirstOrDefault());
+
+            if (idEquip != null)
+            {
+                idEquip = Convert.ToInt32(resultado);
+            }
 
             if (cbTipoEquipo.SelectedItem != null && cbMarca.SelectedItem != null && cbLinea.SelectedItem != null && cbModelo.SelectedItem != null && txtSerial.Text != null && txtFalla.Text != null)
             {
 
-                int a = 1;
-                dgvEquipoRegistro.Rows.Add(a.ToString(), cbTipoEquipo.SelectedItem.ToString(), cbMarca.SelectedItem.ToString(), cbLinea.SelectedItem.ToString(), cbModelo.SelectedItem.ToString(), txtSerial.Text.ToString(), txtFalla.Text.ToString());
+                dgvEquipoRegistro.Rows.Add(idEquip.ToString(), cbTipoEquipo.SelectedItem.ToString(), cbMarca.SelectedItem.ToString(), cbLinea.SelectedItem.ToString(), cbModelo.SelectedItem.ToString(), txtSerial.Text.ToString(), txtFalla.Text.ToString());
 
                 dgvFiltro.Rows.Clear();
-                cbModelo.SelectedItem = null;
-                cbLinea.SelectedItem = null;
-                cbMarca.SelectedItem = null;
-                cbTipoEquipo.SelectedItem = null;
-                txtSerial.Text = null;
-                txtFalla.Text = null;
+                cbModelo.SelectedIndex = -1;
+                cbLinea.SelectedIndex = -1;
+                cbMarca.SelectedIndex = -1;
+                cbTipoEquipo.SelectedIndex = -1;
+                txtSerial.Text = string.Empty;
+                txtFalla.Text = string.Empty;
             }
             else
             {
