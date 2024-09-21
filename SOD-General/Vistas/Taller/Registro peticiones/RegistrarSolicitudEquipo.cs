@@ -29,6 +29,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         int IdLineas = 0;
         int idEquip = 0;
         int IdPetition;
+        bool bolean = false;
         ClientController ClController = new ClientController();
         
         public RegistrarSolicitudEquipo(int idPeticion)
@@ -38,23 +39,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             this.IdPetition = idPeticion;
         }
 
-        private void botones_Nuevos2_Click(object sender, System.EventArgs e)
-        {
-           
-            if (cbTipoEquipo.SelectedItem != null && cbMarca.SelectedItem != null && cbLinea.SelectedItem != null && cbModelo.SelectedItem != null && txtSerial.Text != null && txtFalla.Text != null)
-            {
-               // ClController.AgregarEntradas(IdPetition, idEquipment, 1, txtSerial.Text, txtFalla.Text, buleano);
-            }
-
-            foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
-            {
-                if (dgvr.IsNewRow)
-                {
-                 //   ClController.AgregarEntradas(IdPetition,Convert.ToInt32(dgvr.Cells[1].Value), 1, txtSerial.Text, txtFalla.Text, buleano);
-
-                }
-            }
-        }
+       
 
         
         //llenar comboBox para los tipos de equipos
@@ -139,7 +124,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         //funcion para mostrar el numero de entrada
         public void IdUltimo()
         {
-            txtIdEntrada.Text = ClController.UltimoId().ToString();
+            txtIdEntrada.Text = IdPetition.ToString();
         }
 
         public void ObtenerEquiposDgv(int tipo)
@@ -244,21 +229,20 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
          
         private void btnAgregRegistro_Click(object sender, EventArgs e)
         {
-           int resultado = Convert.ToInt32(equipComp.Where(u => u.EquipTypeId == idTipo)
+           idEquip = Convert.ToInt32(equipComp.Where(u => u.EquipTypeId == idTipo)
                                                .Where(u => u.BrandID == IdMarcas)
                                                .Where(u => u._Equip == IdLineas)
                                                .Where(a => a._Model == modelo)
                                                .Select(o => o.IdEquipment).FirstOrDefault());
 
-            if (idEquip != null)
-            {
-                idEquip = Convert.ToInt32(resultado);
-            }
+            bolean = Convert.ToBoolean(equipComp.Where(a => a.IdEquipment == idEquip).Select(b => b._PrinterCheck).First());
+
+            
 
             if (cbTipoEquipo.SelectedItem != null && cbMarca.SelectedItem != null && cbLinea.SelectedItem != null && cbModelo.SelectedItem != null && txtSerial.Text != null && txtFalla.Text != null)
             {
 
-                dgvEquipoRegistro.Rows.Add(idEquip.ToString(), cbTipoEquipo.SelectedItem.ToString(), cbMarca.SelectedItem.ToString(), cbLinea.SelectedItem.ToString(), cbModelo.SelectedItem.ToString(), txtSerial.Text.ToString(), txtFalla.Text.ToString());
+                dgvEquipoRegistro.Rows.Add(idEquip.ToString(), cbTipoEquipo.SelectedItem.ToString(), cbMarca.SelectedItem.ToString(), cbLinea.SelectedItem.ToString(), cbModelo.SelectedItem.ToString(), txtSerial.Text.ToString(), txtFalla.Text.ToString(), bolean.ToString());
 
                 dgvFiltro.Rows.Clear();
                 cbModelo.SelectedIndex = -1;
@@ -273,6 +257,19 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 MessageBox.Show("Faltan datos por ingresar, por favor, completelos");
             }
             
+        }
+
+        private void botones_Nuevos2_Click(object sender, System.EventArgs e)
+        {
+
+            foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
+            {
+                if (!dgvr.IsNewRow)
+                {
+                    ClController.AgregarEntradas(Convert.ToInt32(txtIdEntrada.Text), Convert.ToInt32(dgvr.Cells[0].Value), 1, dgvr.Cells[5].Value.ToString(), dgvr.Cells[6].Value.ToString(), true);
+                    dgvEquipoRegistro.Rows.Clear();
+                }
+            }
         }
     }
 }

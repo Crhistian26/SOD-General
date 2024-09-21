@@ -47,6 +47,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvFiltro = new CR_DataGriedView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -220,7 +221,8 @@
             this.Column2,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
+            this.dataGridViewTextBoxColumn10,
+            this.Column3});
             this.dgvEquipoRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEquipoRegistro.EnableHeadersVisualStyles = false;
             this.dgvEquipoRegistro.Location = new System.Drawing.Point(0, 0);
@@ -273,6 +275,13 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Fallo";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "PrinterCheck";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
             // 
             // panel1
             // 
@@ -345,9 +354,9 @@
             this.btnRegiEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegiEntrada.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnRegiEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnRegiEntrada.Location = new System.Drawing.Point(1105, 434);
+            this.btnRegiEntrada.Location = new System.Drawing.Point(1118, 414);
             this.btnRegiEntrada.Name = "btnRegiEntrada";
-            this.btnRegiEntrada.Size = new System.Drawing.Size(256, 63);
+            this.btnRegiEntrada.Size = new System.Drawing.Size(256, 61);
             this.btnRegiEntrada.TabIndex = 101;
             this.btnRegiEntrada.Text = "Registrar entrada completa";
             this.btnRegiEntrada.UseVisualStyleBackColor = false;
@@ -563,5 +572,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

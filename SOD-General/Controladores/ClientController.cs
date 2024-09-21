@@ -834,7 +834,7 @@ namespace SOD_General.Controladores
             try
             {
                 //El query.
-                string Query = "exec Add_Entrada @petitionId, @EquipmentId, @EquipStatusId, @serial, @fault, @Counter_Printer";
+                string Query = "exec Add_Entrada @petitionId, @EquipmentId, @EquipStatusId, @serial, @fault, @Count_Printer";
                 //La consulta
                 SqlCommand cmd = new SqlCommand(Query, conex);
                 //Los parametros
@@ -843,16 +843,14 @@ namespace SOD_General.Controladores
                 cmd.Parameters.AddWithValue("@EquipStatusId", equipStatusId);
                 cmd.Parameters.AddWithValue("@serial", serial);
                 cmd.Parameters.AddWithValue("@fault", fault);
-                cmd.Parameters.AddWithValue("@CounterPrinter", counterPrinter);
+                cmd.Parameters.AddWithValue("@Count_Printer", counterPrinter);
 
                 //El proceso
                 conex.Open();
                 cmd.ExecuteNonQuery();
-                //while ()
-                //{
-
-                //}
                 conex.Close();
+
+                MessageBox.Show("Datos ingresados correctamente");
 
             }
             catch (SqlException ex)
