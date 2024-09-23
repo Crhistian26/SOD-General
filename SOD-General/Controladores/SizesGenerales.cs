@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -171,6 +172,13 @@ namespace SOD_General.Controladores
                 window.Close();
             }
         }
-        
+
+        public void ChechekConnection(SqlConnection conex)
+        {
+            if (conex.State != System.Data.ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+        }
     }
 }

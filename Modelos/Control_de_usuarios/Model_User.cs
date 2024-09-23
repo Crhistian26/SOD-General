@@ -9,6 +9,7 @@ namespace Modelos.Control_de_usuarios
         public Model_Role _Role { get; set; }
         public string User_Name { get; set; }
         public string _Password { get; set; }
+        public bool _State { get; set; }
 
         public Model_User(int id_User, int employye_Id, Model_Role role, string user_Name, string password)
         {
@@ -17,6 +18,12 @@ namespace Modelos.Control_de_usuarios
             this._Role = role;
             this.User_Name = user_Name;
             this._Password = password;
+        }
+
+        public Model_User(int id_User, int employye_Id, Model_Role role, string user_Name, string password, bool state) 
+            : this(id_User, employye_Id, role, user_Name, password)
+        {
+            _State = state;
         }
 
         public bool Confirm_Operation(string Operation_name)

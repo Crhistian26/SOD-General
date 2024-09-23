@@ -6,11 +6,16 @@
         public string _Module { get; set; }
         public string _Operation { get; set; }
 
-        public Model_Operations(int id, string module, string operation)
+        public Model_Operations(string module, string operation)
         {
-            this.Id_Operation = id;
             this._Module = module;
             this._Operation = operation;
+        }
+
+        public Model_Operations(int id, string module, string operation)
+            :this (module,operation)
+        {
+            this.Id_Operation = id;
         }
     }
 }

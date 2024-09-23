@@ -32,6 +32,11 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_DataGriedViewNormal1 = new CR_DataGriedViewNormal();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cr_Textbox2 = new Cr_Textbox();
             this.cR_LabelDown2 = new CR_LabelDown();
@@ -41,18 +46,13 @@
             this.cR_LabelDown3 = new CR_LabelDown();
             this.cR_LabelDown1 = new CR_LabelDown();
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
-            this.cR_DataGriedViewNormal1 = new CR_DataGriedViewNormal();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedViewNormal1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -104,6 +104,56 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 320);
             this.panel1.TabIndex = 7;
+            // 
+            // cR_DataGriedViewNormal1
+            // 
+            this.cR_DataGriedViewNormal1.AllowUserToAddRows = false;
+            this.cR_DataGriedViewNormal1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedViewNormal1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedViewNormal1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cR_DataGriedViewNormal1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedViewNormal1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Operacion,
+            this.Column1,
+            this.Eliminar});
+            this.cR_DataGriedViewNormal1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedViewNormal1.Location = new System.Drawing.Point(249, 53);
+            this.cR_DataGriedViewNormal1.Name = "cR_DataGriedViewNormal1";
+            this.cR_DataGriedViewNormal1.ReadOnly = true;
+            this.cR_DataGriedViewNormal1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedViewNormal1.Size = new System.Drawing.Size(496, 239);
+            this.cR_DataGriedViewNormal1.TabIndex = 9;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Operacion
+            // 
+            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operacion.HeaderText = "Operacion";
+            this.Operacion.Name = "Operacion";
+            this.Operacion.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Modulo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
             // 
             // panel2
             // 
@@ -213,58 +263,8 @@
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(197, 29);
             this.botones_Nuevos1.TabIndex = 5;
-            this.botones_Nuevos1.Text = "Agregar operaciones";
+            this.botones_Nuevos1.Text = "Editar operaciones";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            // 
-            // cR_DataGriedViewNormal1
-            // 
-            this.cR_DataGriedViewNormal1.AllowUserToAddRows = false;
-            this.cR_DataGriedViewNormal1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedViewNormal1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedViewNormal1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cR_DataGriedViewNormal1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedViewNormal1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Operacion,
-            this.Column1,
-            this.Eliminar});
-            this.cR_DataGriedViewNormal1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedViewNormal1.Location = new System.Drawing.Point(249, 53);
-            this.cR_DataGriedViewNormal1.Name = "cR_DataGriedViewNormal1";
-            this.cR_DataGriedViewNormal1.ReadOnly = true;
-            this.cR_DataGriedViewNormal1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedViewNormal1.Size = new System.Drawing.Size(496, 239);
-            this.cR_DataGriedViewNormal1.TabIndex = 9;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // Operacion
-            // 
-            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Operacion.HeaderText = "Operacion";
-            this.Operacion.Name = "Operacion";
-            this.Operacion.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Modulo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
             // 
             // ControlRoles
             // 
@@ -283,9 +283,9 @@
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedViewNormal1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedViewNormal1)).EndInit();
             this.ResumeLayout(false);
 
         }
