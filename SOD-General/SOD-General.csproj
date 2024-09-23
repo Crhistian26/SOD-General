@@ -246,6 +246,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\Administrator_Controller.cs" />
     <Compile Include="Controladores\BrandController.cs" />
     <Compile Include="Controladores\ClientController.cs" />
     <Compile Include="Controladores\ControlOperaciones.cs" />
@@ -277,11 +278,11 @@
     <Compile Include="Vistas\Control de usuarios\Operaciones\VisualOperaciones.Designer.cs">
       <DependentUpon>VisualOperaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Control de usuarios\Operaciones\VisualOperacionesRole.cs">
+    <Compile Include="Vistas\Control de usuarios\Roles\EditOperationRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Control de usuarios\Operaciones\VisualOperacionesRole.Designer.cs">
-      <DependentUpon>VisualOperacionesRole.cs</DependentUpon>
+    <Compile Include="Vistas\Control de usuarios\Roles\EditOperationRole.Designer.cs">
+      <DependentUpon>EditOperationRole.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Control de usuarios\Roles\ControlRoles.cs">
       <SubType>Form</SubType>
@@ -602,8 +603,8 @@
     <EmbeddedResource Include="Vistas\Control de usuarios\Operaciones\VisualOperaciones.resx">
       <DependentUpon>VisualOperaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Control de usuarios\Operaciones\VisualOperacionesRole.resx">
-      <DependentUpon>VisualOperacionesRole.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Control de usuarios\Roles\EditOperationRole.resx">
+      <DependentUpon>EditOperationRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Control de usuarios\Roles\ControlRoles.resx">
       <DependentUpon>ControlRoles.cs</DependentUpon>
@@ -801,6 +802,7 @@
   <ItemGroup>
     <Content Include="Codigo copiable para hacer mas rapido todo.txt" />
     <Content Include="Logo-de-la-app.ico" />
+    <None Include="Resources\ojo-con-pestanas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

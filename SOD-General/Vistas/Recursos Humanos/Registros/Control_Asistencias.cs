@@ -97,7 +97,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 panel5.Visible = false;
             }
 
-            if (user.Confirm_Operation("Eliminar asistencias"))
+            if (user.Confirm_Operation("Editar asistencias"))
             {
                 botones_Nuevos2.Visible = true;
             }

@@ -52,6 +52,19 @@ namespace SOD_General
         {
             panel1.Location = _size.CentrarElementosXY(panel1.Size, this.Size);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (cr_Textbox2.PasswordChar != 0)
+            {
+                cr_Textbox2.PasswordChar = '\0';
+            }
+            else
+            {
+                cr_Textbox2.PasswordChar = '*';
+            }
+
+        }
     }
 
 }

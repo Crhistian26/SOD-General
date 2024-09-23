@@ -125,7 +125,7 @@ namespace SOD_General.Recursos_Humanos.Empleados
 
         private void cR_DataGriedView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1 && user.Confirm_Operation("Editar empleados"))
+            if (e.RowIndex != -1 && user.Confirm_Operation("Ver empleados"))
             {
                 var win = Application.OpenForms.OfType<Control_Empleados>().FirstOrDefault();
                 if (win != null)
@@ -160,6 +160,11 @@ namespace SOD_General.Recursos_Humanos.Empleados
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             OrganizarDataGriedDepartamento();
+        }
+
+        private void cR_DataGriedView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

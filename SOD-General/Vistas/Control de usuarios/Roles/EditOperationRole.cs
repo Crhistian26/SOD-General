@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
 {
-    public partial class VisualOperationsRole : Form
+    public partial class EditOperationRole : Form
     {
-        public VisualOperationsRole()
+        public EditOperationRole()
         {
             InitializeComponent();
         }

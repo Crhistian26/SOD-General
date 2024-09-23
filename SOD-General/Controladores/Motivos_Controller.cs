@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SOD_General.Controladores
 {
@@ -13,7 +14,7 @@ namespace SOD_General.Controladores
     {
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
-
+        static SizesGenerales _size = new SizesGenerales();
         public List<Model_Reason> Obtener_Razones()
         {
             try
@@ -154,12 +155,14 @@ namespace SOD_General.Controladores
         public void OpenControlReasons(Model_Reason reason)
         {
             AgregarEditar_Motivos window = new AgregarEditar_Motivos(reason);
+            _size.CloseForm(window);
             window.Show();
         }
 
         public void ResetVisualReasons()
         {
             var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
+            _size.CloseForm(h);
             h.OpenForm(new Visual_Motivos());
         }
 

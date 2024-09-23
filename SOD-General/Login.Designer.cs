@@ -35,19 +35,21 @@
             this.btn_Login = new Diseños.Botones_Nuevos();
             this.cr_Textbox1 = new Cr_Textbox();
             this.cR_Label1 = new CR_LabelUp();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.cr_Textbox2);
             this.panel1.Controls.Add(this.cR_Label2);
             this.panel1.Controls.Add(this.btn_Login);
             this.panel1.Controls.Add(this.cr_Textbox1);
             this.panel1.Controls.Add(this.cR_Label1);
-            this.panel1.Location = new System.Drawing.Point(69, 12);
+            this.panel1.Location = new System.Drawing.Point(42, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 216);
+            this.panel1.Size = new System.Drawing.Size(369, 216);
             this.panel1.TabIndex = 14;
             // 
             // cr_Textbox2
@@ -111,6 +113,17 @@
             this.cR_Label1.TabIndex = 10;
             this.cR_Label1.Text = "Contraseña";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::SOD_General.Properties.Resources.ojo_con_pestanas;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Location = new System.Drawing.Point(297, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,5 +152,6 @@
         private Cr_Textbox cr_Textbox1;
         private Cr_Textbox cr_Textbox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

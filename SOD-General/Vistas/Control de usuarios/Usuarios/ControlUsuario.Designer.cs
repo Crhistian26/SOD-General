@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cR_LabelDown5 = new CR_LabelDown();
+            this.cr_Textbox4 = new Cr_Textbox();
+            this.cR_LabelDown4 = new CR_LabelDown();
             this.botones_Nuevos4 = new Diseños.Botones_Nuevos();
             this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
             this.cr_Textbox3 = new Cr_Textbox();
@@ -41,18 +44,15 @@
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cr_Textbox1 = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cR_DataGriedViewNormal1 = new CR_DataGriedViewNormal();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
-            this.cr_Textbox4 = new Cr_Textbox();
-            this.cR_LabelDown4 = new CR_LabelDown();
-            this.cR_LabelDown5 = new CR_LabelDown();
+            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedViewNormal1)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -71,7 +71,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 580);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 515);
             this.cR_SplitContainer1.SplitterDistance = 73;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -92,12 +92,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_DataGriedViewNormal1);
             this.panel1.Controls.Add(this.cR_LabelDown5);
             this.panel1.Controls.Add(this.cr_Textbox4);
             this.panel1.Controls.Add(this.cR_LabelDown4);
             this.panel1.Controls.Add(this.botones_Nuevos4);
             this.panel1.Controls.Add(this.botones_Nuevos3);
-            this.panel1.Controls.Add(this.cR_DataGriedView1);
             this.panel1.Controls.Add(this.cr_Textbox3);
             this.panel1.Controls.Add(this.cR_LabelDown3);
             this.panel1.Controls.Add(this.botones_Nuevos1);
@@ -107,12 +107,43 @@
             this.panel1.Controls.Add(this.cR_LabelDown1);
             this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 488);
+            this.panel1.Size = new System.Drawing.Size(776, 423);
             this.panel1.TabIndex = 0;
+            // 
+            // cR_LabelDown5
+            // 
+            this.cR_LabelDown5.AutoSize = true;
+            this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown5.Location = new System.Drawing.Point(574, 10);
+            this.cR_LabelDown5.Name = "cR_LabelDown5";
+            this.cR_LabelDown5.Size = new System.Drawing.Size(182, 20);
+            this.cR_LabelDown5.TabIndex = 16;
+            this.cR_LabelDown5.Text = "Operaciones segun su rol:";
+            // 
+            // cr_Textbox4
+            // 
+            this.cr_Textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox4.Location = new System.Drawing.Point(3, 101);
+            this.cr_Textbox4.Name = "cr_Textbox4";
+            this.cr_Textbox4.Size = new System.Drawing.Size(212, 25);
+            this.cr_Textbox4.TabIndex = 14;
+            // 
+            // cR_LabelDown4
+            // 
+            this.cR_LabelDown4.AutoSize = true;
+            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown4.Location = new System.Drawing.Point(15, 78);
+            this.cR_LabelDown4.Name = "cR_LabelDown4";
+            this.cR_LabelDown4.Size = new System.Drawing.Size(34, 20);
+            this.cR_LabelDown4.TabIndex = 15;
+            this.cR_LabelDown4.Text = "Rol:";
             // 
             // botones_Nuevos4
             // 
-            this.botones_Nuevos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos4.BackColor = System.Drawing.Color.Gray;
             this.botones_Nuevos4.BorderColor = System.Drawing.Color.Teal;
             this.botones_Nuevos4.BorderRadius = 40;
             this.botones_Nuevos4.BorderSize = 0;
@@ -120,11 +151,11 @@
             this.botones_Nuevos4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos4.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos4.Location = new System.Drawing.Point(436, 420);
+            this.botones_Nuevos4.Location = new System.Drawing.Point(431, 366);
             this.botones_Nuevos4.Name = "botones_Nuevos4";
             this.botones_Nuevos4.Size = new System.Drawing.Size(185, 40);
             this.botones_Nuevos4.TabIndex = 13;
-            this.botones_Nuevos4.Text = "Suspender usuario";
+            this.botones_Nuevos4.Text = "Accion a realizar";
             this.botones_Nuevos4.UseVisualStyleBackColor = false;
             // 
             // botones_Nuevos3
@@ -137,7 +168,7 @@
             this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos3.Location = new System.Drawing.Point(150, 420);
+            this.botones_Nuevos3.Location = new System.Drawing.Point(145, 366);
             this.botones_Nuevos3.Name = "botones_Nuevos3";
             this.botones_Nuevos3.Size = new System.Drawing.Size(185, 40);
             this.botones_Nuevos3.TabIndex = 12;
@@ -221,6 +252,34 @@
             this.cR_LabelDown1.TabIndex = 3;
             this.cR_LabelDown1.Text = "Nombre de usuario:";
             // 
+            // cR_DataGriedViewNormal1
+            // 
+            this.cR_DataGriedViewNormal1.AllowUserToAddRows = false;
+            this.cR_DataGriedViewNormal1.AllowUserToDeleteRows = false;
+            this.cR_DataGriedViewNormal1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedViewNormal1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.cR_DataGriedViewNormal1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cR_DataGriedViewNormal1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Operacion});
+            this.cR_DataGriedViewNormal1.EnableHeadersVisualStyles = false;
+            this.cR_DataGriedViewNormal1.Location = new System.Drawing.Point(306, 33);
+            this.cR_DataGriedViewNormal1.Name = "cR_DataGriedViewNormal1";
+            this.cR_DataGriedViewNormal1.ReadOnly = true;
+            this.cR_DataGriedViewNormal1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cR_DataGriedViewNormal1.Size = new System.Drawing.Size(450, 293);
+            this.cR_DataGriedViewNormal1.TabIndex = 17;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
             // Operacion
             // 
             this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -228,70 +287,11 @@
             this.Operacion.Name = "Operacion";
             this.Operacion.ReadOnly = true;
             // 
-            // id
-            // 
-            this.id.HeaderText = "Column1";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // cR_DataGriedView1
-            // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Operacion});
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(288, 33);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(468, 312);
-            this.cR_DataGriedView1.TabIndex = 9;
-            // 
-            // cr_Textbox4
-            // 
-            this.cr_Textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox4.Location = new System.Drawing.Point(3, 101);
-            this.cr_Textbox4.Name = "cr_Textbox4";
-            this.cr_Textbox4.Size = new System.Drawing.Size(212, 25);
-            this.cr_Textbox4.TabIndex = 14;
-            // 
-            // cR_LabelDown4
-            // 
-            this.cR_LabelDown4.AutoSize = true;
-            this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(15, 78);
-            this.cR_LabelDown4.Name = "cR_LabelDown4";
-            this.cR_LabelDown4.Size = new System.Drawing.Size(34, 20);
-            this.cR_LabelDown4.TabIndex = 15;
-            this.cR_LabelDown4.Text = "Rol:";
-            // 
-            // cR_LabelDown5
-            // 
-            this.cR_LabelDown5.AutoSize = true;
-            this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown5.Location = new System.Drawing.Point(574, 10);
-            this.cR_LabelDown5.Name = "cR_LabelDown5";
-            this.cR_LabelDown5.Size = new System.Drawing.Size(182, 20);
-            this.cR_LabelDown5.TabIndex = 16;
-            this.cR_LabelDown5.Text = "Operaciones segun su rol:";
-            // 
             // ControlUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 580);
+            this.ClientSize = new System.Drawing.Size(800, 515);
             this.Controls.Add(this.cR_SplitContainer1);
             this.Name = "ControlUsuario";
             this.Text = "ControlUsuario";
@@ -302,7 +302,7 @@
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedViewNormal1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,7 +324,7 @@
         private CR_LabelDown cR_LabelDown5;
         private Cr_Textbox cr_Textbox4;
         private CR_LabelDown cR_LabelDown4;
-        private CR_DataGriedView cR_DataGriedView1;
+        private CR_DataGriedViewNormal cR_DataGriedViewNormal1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Operacion;
     }

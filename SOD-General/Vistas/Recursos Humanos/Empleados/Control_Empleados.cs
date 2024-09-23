@@ -39,7 +39,21 @@ namespace SOD_General.Vistas.Recursos_Humanos.Empleados
             botones_Nuevos1.Text = "Editar";
             panel2.Visible = true;
             cR_DateTimePicker1.Value = employee.Admission_date;
-            botones_Nuevos1.Click += EditEmployee;
+            if (user.Confirm_Operation("Editar empleados"))
+            {
+                botones_Nuevos1.Click += EditEmployee;
+            }
+            else
+            {
+                botones_Nuevos1.Visible = false;
+                cR_ComboBox.Enabled = false;
+                soD_TextBox1.Enabled = false;
+                soD_TextBox2.Enabled = false;
+                cR_DateTimePicker1.Enabled = false;
+                cR_DateTimePicker2.Enabled = false;
+                cR_Checkbox1.Enabled = false;
+                cR_Checkbox2.Enabled = false;
+            }
             if (employee.Dismissal_date.HasValue)
             {
                 panel3.Visible = true;

@@ -61,15 +61,25 @@ namespace SOD_General.Controladores
 
         public string FiltarHoras(TimeSpan hora)
         {
+            string minutes = "";
+            if (hora.Minutes > 9)
+            {
+                minutes = hora.Minutes.ToString();
+            }
+            if (hora.Minutes <= 9 || hora.Minutes == 0)
+            {
+                minutes = $"0{hora.Minutes.ToString()}";
+            }
+
             if (hora.Hours > 12)
             {
                 if (hora.Minutes == 0)
                 {
-                    return $"{hora.Hours - 12}:{hora.Minutes}0 PM";
+                    return $"{hora.Hours - 12}:{minutes} PM";
                 }
                 else
                 {
-                    return $"{hora.Hours - 12}:{hora.Minutes} PM";
+                    return $"{hora.Hours - 12}:{minutes} PM";
                 }
 
             }
@@ -77,43 +87,53 @@ namespace SOD_General.Controladores
             {
                 if (hora.Minutes == 0)
                 {
-                    return $"{hora.Hours}:{hora.Minutes}0 PM";
+                    return $"{hora.Hours}:{minutes} PM";
                 }
                 else
                 {
-                    return $"{hora.Hours}:{hora.Minutes} PM";
+                    return $"{hora.Hours}:{minutes} PM";
                 }
             }
             else
             {
                 if (hora.Minutes == 0)
                 {
-                    return $"{hora.Hours}:{hora.Minutes}0 AM";
+                    return $"{hora.Hours}:{minutes} AM";
                 }
                 else
                 {
-                    return $"{hora.Hours}:{hora.Minutes} AM";
+                    return $"{hora.Hours}:{minutes} AM";
                 }
             }
         }
 
         public (string, string, string) FiltrarHorasComb(TimeSpan hora)
         {
+            string minutes = "";
+            if(hora.Minutes > 9)
+            {
+                minutes = hora.Minutes.ToString();
+            }
+            if (hora.Minutes <= 9 || hora.Minutes == 0)
+            {
+                minutes = $"0{hora.Minutes.ToString()}";
+            }
+
             if (hora.Hours > 12)
             {
-                return ((hora.Hours - 12).ToString(), hora.Minutes.ToString(), "PM");
+                return ((hora.Hours - 12).ToString(), minutes, "PM");
             }
             else if (hora.Hours == 12)
             {
-                return (hora.Hours.ToString(), hora.Minutes.ToString(), "PM");
+                return (hora.Hours.ToString(), minutes, "PM");
             }
             else if (hora.Hours == 24)
             {
-                return (hora.Hours.ToString(), hora.Minutes.ToString(), "AM");
+                return (hora.Hours.ToString(), minutes, "AM");
             }
             else
             {
-                return (hora.Hours.ToString(), hora.Minutes.ToString(), "AM");
+                return (hora.Hours.ToString(), minutes, "AM");
             }
         }
 

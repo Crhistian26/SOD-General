@@ -1,6 +1,6 @@
 ﻿namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
 {
-    partial class VisualOperationsRole
+    partial class EditOperationRole
     {
         /// <summary>
         /// Required designer variable.
