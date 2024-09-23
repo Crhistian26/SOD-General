@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationRevision>35</ApplicationRevision>
     <ApplicationVersion>1.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -800,7 +800,6 @@
     <None Include="Resources\Logo de la app.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Codigo copiable para hacer mas rapido todo.txt" />
     <Content Include="Logo-de-la-app.ico" />
     <None Include="Resources\ojo-con-pestanas.png" />
   </ItemGroup>

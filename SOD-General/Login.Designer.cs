@@ -59,7 +59,7 @@
             this.cr_Textbox2.Location = new System.Drawing.Point(7, 106);
             this.cr_Textbox2.Name = "cr_Textbox2";
             this.cr_Textbox2.PasswordChar = '*';
-            this.cr_Textbox2.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox2.Size = new System.Drawing.Size(359, 25);
             this.cr_Textbox2.TabIndex = 13;
             // 
             // cR_Label2
@@ -84,7 +84,7 @@
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Login.ForeColor = System.Drawing.Color.White;
-            this.btn_Login.Location = new System.Drawing.Point(73, 156);
+            this.btn_Login.Location = new System.Drawing.Point(113, 157);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(150, 41);
             this.btn_Login.TabIndex = 0;
@@ -98,7 +98,7 @@
             this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cr_Textbox1.Location = new System.Drawing.Point(7, 34);
             this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(284, 25);
+            this.cr_Textbox1.Size = new System.Drawing.Size(359, 25);
             this.cr_Textbox1.TabIndex = 12;
             // 
             // cR_Label1
@@ -117,7 +117,7 @@
             // 
             this.button1.BackgroundImage = global::SOD_General.Properties.Resources.ojo_con_pestanas;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Location = new System.Drawing.Point(297, 106);
+            this.button1.Location = new System.Drawing.Point(341, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 14;
