@@ -1,5 +1,6 @@
 ﻿using Modelos.Control_de_usuarios;
 using Modelos.Taller;
+using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,7 +17,27 @@ namespace SOD_General.Controladores
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
 
-        
+
+        public struct EntradaSt
+        {
+            public long ids;
+            public string tipo;
+            public string marca;
+            public string modelo;
+            public string serial;
+            public string falla;
+            public DateTime _date;
+            public EntradaSt(long idst, string tip, string mar, string mod, string ser, string fal, DateTime dat)
+            {
+                ids = idst;
+                tipo = tip;
+                marca = mar;
+                modelo = mod;  
+                serial = ser;
+                falla = fal;
+                _date = dat;
+            }
+        }
 
         AppVistaGeneral view;
 
@@ -139,7 +160,7 @@ namespace SOD_General.Controladores
         }
 
 
-        public void AgregarEntradas(int peticionId, int EquipmentId, int equipStatusId, string serial, string fault, bool counterPrinter)
+        public bool AgregarEntradas(int peticionId, int EquipmentId, int equipStatusId, string serial, string fault, bool counterPrinter)
         {
             try
             {
@@ -162,6 +183,7 @@ namespace SOD_General.Controladores
 
                 MessageBox.Show("Datos ingresados correctamente");
 
+
             }
             catch (SqlException ex)
             {
@@ -181,6 +203,8 @@ namespace SOD_General.Controladores
                 MessageBox.Show(ex.Message);
                 // return null;
             }
+
+            
         }
 
         public List<EntryOrderData> GetEntryOrderData()
@@ -251,9 +275,101 @@ namespace SOD_General.Controladores
             }
         }
 
-        public void tomarEntradas()
+        public bool tomarEntradas(int idAccesories)
         {
+            AgregarAccesorios addAcces = new AgregarAccesorios();
+            addAcces.Show();
 
+            try
+            {
+                //El query.
+                string Query = "exec Add_AccesoriesEntrance @idAccesories";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idAccesories", idAccesories);
+
+                //El proceso
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+
+        public List<EntradaSt> llenarDgvEntrada(int id)
+        {
+            try
+            {
+                List<EntradaSt> listEntrada = new List<EntradaSt>();
+                //El query.
+                string Query = "exec Get_Entrance @idEquipment";
+
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idEquipment", id);
+
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    EntradaSt entry;
+                    long idEntr = reader.GetInt64(0);
+                    string tipo = reader.GetString(1);
+                    string marca = reader.GetString(2);
+                    string modelo = reader.GetString(3);
+                    string serial = reader.GetString(4);
+                    string falla = reader.GetString(5);
+                    DateTime dat = reader.GetDateTime(6);
+                    entry = new EntradaSt(idEntr, tipo, marca, modelo, serial, falla, dat);
+                    listEntrada.Add(entry);
+                }
+
+                conex.Close();
+                return listEntrada;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
     }
 }

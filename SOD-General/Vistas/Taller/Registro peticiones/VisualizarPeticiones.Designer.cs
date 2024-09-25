@@ -88,9 +88,9 @@
             this.cR_LabelUp3.ForeColor = System.Drawing.Color.White;
             this.cR_LabelUp3.Location = new System.Drawing.Point(246, 78);
             this.cR_LabelUp3.Name = "cR_LabelUp3";
-            this.cR_LabelUp3.Size = new System.Drawing.Size(66, 20);
+            this.cR_LabelUp3.Size = new System.Drawing.Size(51, 20);
             this.cR_LabelUp3.TabIndex = 11;
-            this.cR_LabelUp3.Text = "Rnc/Ced";
+            this.cR_LabelUp3.Text = "Orden";
             // 
             // soD_ComboBox2
             // 

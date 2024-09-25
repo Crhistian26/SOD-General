@@ -48,7 +48,8 @@ namespace SOD_General.Vistas_Taller.Taller_Recepcion
 
         public void verEntradas(int id)
         {
-            VisualizarEntradas verEntrys = new VisualizarEntradas(id);    
+            VisualizarEntradas verEntrys = new VisualizarEntradas(id);
+            verEntrys.Show();
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Drawing.Text;
+using System.Linq;
 using System.Windows.Forms;
 
 public class CR_DataGriedViewNormal : DataGridView
@@ -20,6 +23,8 @@ public class CR_DataGriedViewNormal : DataGridView
 
         this.ColumnHeadersDefaultCellStyle = data;
         this.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+       
     }
+
 }
 

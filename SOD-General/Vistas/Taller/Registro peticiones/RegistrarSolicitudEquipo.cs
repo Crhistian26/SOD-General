@@ -268,12 +268,12 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 if (!dgvr.IsNewRow)
                 {
                     EnOrController.AgregarEntradas(Convert.ToInt32(txtIdEntrada.Text), Convert.ToInt32(dgvr.Cells[0].Value), 1, dgvr.Cells[5].Value.ToString(), dgvr.Cells[6].Value.ToString(), true);
-                    dgvEquipoRegistro.Rows.Clear();
+                    
                 }
             }
+            dgvEquipoRegistro.Rows.Clear();
 
-            AgregarAccesorios addAcces = new AgregarAccesorios();
-            addAcces.Show();
+            
         }
     }
 }
