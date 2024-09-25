@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SOD_General.Vistas.Taller.Registro_peticiones;
+using SOD_General.Vistas_Taller.Taller_Recepcion;
+using System;
 using System.Windows.Forms;
 
 namespace SOD_General

@@ -31,10 +31,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_LabelUp1 = new CR_LabelUp();
-            this.dgvAccesorios = new CR_DataGriedViewNormal();
             this.btn = new Diseños.Botones_Nuevos();
+            this.dgvAccesorios = new CR_DataGriedViewNormal();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
@@ -75,28 +76,6 @@
             this.cR_LabelUp1.TabIndex = 0;
             this.cR_LabelUp1.Text = "Accesorios del equipo";
             // 
-            // dgvAccesorios
-            // 
-            this.dgvAccesorios.AllowUserToAddRows = false;
-            this.dgvAccesorios.AllowUserToDeleteRows = false;
-            this.dgvAccesorios.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgvAccesorios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAccesorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccesorios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dgvAccesorios.EnableHeadersVisualStyles = false;
-            this.dgvAccesorios.Location = new System.Drawing.Point(0, 3);
-            this.dgvAccesorios.Name = "dgvAccesorios";
-            this.dgvAccesorios.ReadOnly = true;
-            this.dgvAccesorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAccesorios.Size = new System.Drawing.Size(800, 279);
-            this.dgvAccesorios.TabIndex = 0;
-            // 
             // btn
             // 
             this.btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
@@ -114,6 +93,29 @@
             this.btn.Text = "Agregar Accesorios";
             this.btn.UseVisualStyleBackColor = false;
             // 
+            // dgvAccesorios
+            // 
+            this.dgvAccesorios.AllowUserToAddRows = false;
+            this.dgvAccesorios.AllowUserToDeleteRows = false;
+            this.dgvAccesorios.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dgvAccesorios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAccesorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccesorios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column4,
+            this.Column3});
+            this.dgvAccesorios.EnableHeadersVisualStyles = false;
+            this.dgvAccesorios.Location = new System.Drawing.Point(0, 3);
+            this.dgvAccesorios.Name = "dgvAccesorios";
+            this.dgvAccesorios.ReadOnly = true;
+            this.dgvAccesorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAccesorios.Size = new System.Drawing.Size(800, 279);
+            this.dgvAccesorios.TabIndex = 0;
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "id";
@@ -127,6 +129,13 @@
             this.Column2.HeaderText = "Accesorios";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "enable";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
             // 
             // Column3
             // 
@@ -162,6 +171,7 @@
         private Diseños.Botones_Nuevos btn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
     }
 }

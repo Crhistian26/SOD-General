@@ -16,6 +16,7 @@ namespace SOD_General.Taller.Registro_peticiones
         SizesGenerales _size = new SizesGenerales();
         AppVistaGeneral vista;
         ClientController Ccontroller = new ClientController();
+        EntryOrderController EnOrController = new EntryOrderController();
         int elegido = 0;
         List<ClientContact> ContactList = new List<ClientContact>();
         List<Contact> ctcClient = new List<Contact>();
@@ -168,7 +169,7 @@ namespace SOD_General.Taller.Registro_peticiones
 
         private void btnGuardarEmpre_Click(object sender, EventArgs e)
         {
-            Ccontroller.ordenDeEntrada(txtDetallesContact.Text, IdCliente, IdContact);
+            EnOrController.ordenDeEntrada(txtDetallesContact.Text, IdCliente, IdContact);
 
             cbRncEmpresa.SelectedItem = null;
             txtDetallesContact.Text = null;
@@ -189,7 +190,7 @@ namespace SOD_General.Taller.Registro_peticiones
 
         public void IdUltimo()
         {
-            txtUltimoId.Text = Ccontroller.UltimoId().ToString();
+            txtUltimoId.Text = EnOrController.UltimoId().ToString();
         }
     }
     

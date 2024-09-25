@@ -105,7 +105,50 @@ namespace SOD_General.Controladores
 
         }
 
+        public List<Accesories> ObtenerAccesorios()
+        {
+            try
+            {
+                List<Accesories> listaAccesorios = new List<Accesories>();
+                //El query
+                string Query = "select IdAccesoriesEquipment, Accesories, _Enable from AccesoriesEquipment";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Accesories accesorios;
+                    int id = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    bool enable = reader.GetBoolean(2);
+                    accesorios = new Accesories(id, name, enable);
+                    listaAccesorios.Add(accesorios);
+                }
 
+                conex.Close();
+                return listaAccesorios;
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
 
 
     }

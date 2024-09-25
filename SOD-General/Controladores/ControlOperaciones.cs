@@ -14,6 +14,7 @@ using SOD_General.Vistas.Taller.Control_calidad;
 using SOD_General.Vistas.Taller.Equipos;
 using SOD_General.Vistas.Taller.Pruebadiseño;
 using SOD_General.Vistas.Taller.Registro_peticiones;
+using SOD_General.Vistas_Taller.Taller_Recepcion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -185,7 +186,16 @@ namespace Controladores
                         ("Recepcion","Agregar Entradas"),
                         (object sender, EventArgs e) =>
                         {
-                            RegistrarSolicitudEquipo window = new RegistrarSolicitudEquipo(000);
+                            RegistrarSolicitudEquipo window = new RegistrarSolicitudEquipo(0);
+                            _view.OpenForm(window);
+                        }
+                    },
+
+                     {
+                        ("Recepcion","Ver Ordenes de entrada"),
+                        (object sender, EventArgs e) =>
+                        {
+                            VisualizarPeticiones window = new VisualizarPeticiones();
                             _view.OpenForm(window);
                         }
                     }

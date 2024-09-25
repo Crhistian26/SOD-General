@@ -251,6 +251,7 @@
     <Compile Include="Controladores\ClientController.cs" />
     <Compile Include="Controladores\ControlOperaciones.cs" />
     <Compile Include="Controladores\Empleados_Controller.cs" />
+    <Compile Include="Controladores\EntryOrderController.cs" />
     <Compile Include="Controladores\EquipmentController.cs" />
     <Compile Include="Controladores\ExportsRRHHReports.cs" />
     <Compile Include="Controladores\LoginController.cs" />

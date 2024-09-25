@@ -32,7 +32,7 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_DataGriedView1 = new CR_DataGriedView();
+            this.dgvEntrys = new CR_DataGriedView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,7 @@
             this.cR_SplitContainer1.Panel2.SuspendLayout();
             this.cR_SplitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrys)).BeginInit();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -83,38 +83,38 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cR_DataGriedView1);
+            this.panel1.Controls.Add(this.dgvEntrys);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(635, 366);
             this.panel1.TabIndex = 0;
             // 
-            // cR_DataGriedView1
+            // dgvEntrys
             // 
-            this.cR_DataGriedView1.AllowUserToAddRows = false;
-            this.cR_DataGriedView1.AllowUserToDeleteRows = false;
-            this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEntrys.AllowUserToAddRows = false;
+            this.dgvEntrys.AllowUserToDeleteRows = false;
+            this.dgvEntrys.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEntrys.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEntrys.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntrys.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6});
-            this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
-            this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Name = "cR_DataGriedView1";
-            this.cR_DataGriedView1.ReadOnly = true;
-            this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(635, 366);
-            this.cR_DataGriedView1.TabIndex = 1;
-            this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
+            this.dgvEntrys.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEntrys.EnableHeadersVisualStyles = false;
+            this.dgvEntrys.Location = new System.Drawing.Point(0, 0);
+            this.dgvEntrys.Name = "dgvEntrys";
+            this.dgvEntrys.ReadOnly = true;
+            this.dgvEntrys.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEntrys.Size = new System.Drawing.Size(635, 366);
+            this.dgvEntrys.TabIndex = 1;
+            this.dgvEntrys.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
             // 
             // Column2
             // 
@@ -162,7 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).EndInit();
             this.cR_SplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cR_DataGriedView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntrys)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,7 +172,7 @@
         private CR_SplitContainer cR_SplitContainer1;
         private CR_Subtitulos cR_Subtitulos1;
         private System.Windows.Forms.Panel panel1;
-        private CR_DataGriedView cR_DataGriedView1;
+        private CR_DataGriedView dgvEntrys;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

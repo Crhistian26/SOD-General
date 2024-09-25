@@ -23,6 +23,8 @@ namespace Modelos.Taller
             Date = date;
             Details = details;
         }
+
+
     }
 
 }

@@ -226,14 +226,17 @@
     <Compile Include="Control_de_usuarios\Model_Role.cs" />
     <Compile Include="Control_de_usuarios\Model_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Taller\Accesories.cs" />
     <Compile Include="Taller\Brand.cs" />
     <Compile Include="Taller\Client.cs" />
     <Compile Include="Taller\ClientContact.cs" />
+    <Compile Include="Taller\ClientData.cs" />
     <Compile Include="Taller\Contact.cs" />
     <Compile Include="Taller\Controles.cs" />
     <Compile Include="Taller\ControlQuality.cs" />
     <Compile Include="Taller\DataEquip.cs" />
     <Compile Include="Taller\Entrance.cs" />
+    <Compile Include="Taller\EntryOrderData.cs" />
     <Compile Include="Taller\EquipControl.cs" />
     <Compile Include="Taller\Equipment.cs" />
     <Compile Include="Taller\EquipStatus.cs" />
