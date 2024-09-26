@@ -17,7 +17,6 @@ namespace SOD_General.Controladores
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
 
-
         public struct EntradaSt
         {
             public long ids;
@@ -160,7 +159,7 @@ namespace SOD_General.Controladores
         }
 
 
-        public bool AgregarEntradas(int peticionId, int EquipmentId, int equipStatusId, string serial, string fault, bool counterPrinter)
+        public void AgregarEntradas(int peticionId, int EquipmentId, int equipStatusId, string serial, string fault, bool counterPrinter)
         {
             try
             {
@@ -180,10 +179,10 @@ namespace SOD_General.Controladores
                 conex.Open();
                 cmd.ExecuteNonQuery();
                 conex.Close();
+               // tomarEntradas();
 
                 MessageBox.Show("Datos ingresados correctamente");
-
-
+              
             }
             catch (SqlException ex)
             {
@@ -275,11 +274,8 @@ namespace SOD_General.Controladores
             }
         }
 
-        public bool tomarEntradas(int idAccesories)
+        public void tomarEntradas(int idAccesories)
         {
-            AgregarAccesorios addAcces = new AgregarAccesorios();
-            addAcces.Show();
-
             try
             {
                 //El query.
@@ -294,7 +290,7 @@ namespace SOD_General.Controladores
                 cmd.ExecuteNonQuery();
                 
                 conex.Close();
-                return true;
+                MessageBox.Show("Datos ingresados correctamente");
             }
             catch (SqlException ex)
             {
@@ -303,7 +299,7 @@ namespace SOD_General.Controladores
                     conex.Close();
                 }
                 MessageBox.Show(ex.Message);
-                return false;
+
             }
             catch (Exception ex)
             {
@@ -312,7 +308,7 @@ namespace SOD_General.Controladores
                     conex.Close();
                 }
                 MessageBox.Show(ex.Message);
-                return false;
+
             }
         }
 

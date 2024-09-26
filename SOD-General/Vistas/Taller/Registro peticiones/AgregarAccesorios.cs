@@ -47,7 +47,6 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            bool validar = false;
             foreach (DataGridViewRow dgvr in dgvAccesorios.Rows)
             {
                 if (!dgvr.IsNewRow)
@@ -55,20 +54,12 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                     bool _Checked = Convert.ToBoolean(dgvr.Cells[3].Value);
                     if (_Checked == true)
                     {
-                       validar = enOrController.tomarEntradas(Convert.ToInt32(dgvr.Cells[0].Value));
+                       enOrController.tomarEntradas(Convert.ToInt32(dgvr.Cells[0].Value));
                     }
                 }
             };
-
-            if (validar == true)
-            {
-                MessageBox.Show("Datos agregados correctamente");
-            }
-            else
-            {
-                MessageBox.Show("No se han podido agregar los accesorios");
-            }
             this.Close();
+
         }
 
         private void AgregarAccesorios_Load(object sender, EventArgs e)

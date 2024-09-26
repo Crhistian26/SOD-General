@@ -252,6 +252,15 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 cbTipoEquipo.SelectedIndex = -1;
                 txtSerial.Text = string.Empty;
                 txtFalla.Text = string.Empty;
+
+                cbModelo.Enabled = false;
+                cbLinea.Enabled = false;
+                cbTipoEquipo.Enabled = false;
+                cbMarca.Enabled = false;
+                txtSerial.Enabled = false;
+                txtFalla.Enabled = false;
+
+                btnAgregRegistro.Enabled = false;
             }
             else
             {
@@ -268,12 +277,21 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
                 if (!dgvr.IsNewRow)
                 {
                     EnOrController.AgregarEntradas(Convert.ToInt32(txtIdEntrada.Text), Convert.ToInt32(dgvr.Cells[0].Value), 1, dgvr.Cells[5].Value.ToString(), dgvr.Cells[6].Value.ToString(), true);
-                    
+                    AgregarAccesorios addAcces = new AgregarAccesorios();
+                    addAcces.Show();
                 }
             }
             dgvEquipoRegistro.Rows.Clear();
 
-            
+            cbModelo.Enabled = true;
+            cbLinea.Enabled = true;
+            cbTipoEquipo.Enabled = true;
+            cbMarca.Enabled = true;
+            txtSerial.Enabled = true;
+            txtFalla.Enabled = true;
+
+            btnAgregRegistro.Enabled = true;
+
         }
     }
 }
