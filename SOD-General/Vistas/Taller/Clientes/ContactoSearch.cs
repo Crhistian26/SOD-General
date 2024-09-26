@@ -39,7 +39,7 @@ namespace SOD_General.Vistas.Taller.Clientes
             foreach (Contact ctc in contList)
             {
                 cmbName.Items.Add(ctc.ContactName);
-                cmbCed.Items.Add(ctc.identifier);
+                cmbCed.Items.Add(ctc.ContactName);
             }
         }
 
@@ -50,7 +50,7 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             foreach (Contact ctc in contactClient)
             {
-                dgvContact.Rows.Add(ctc.IdContact, ctc.ContactName, ctc.identifier, ctc.numero1, ctc.numero2);
+                dgvContact.Rows.Add(ctc.IdContact, ctc.ContactName, ctc.ContactName, ctc.numero1);
             }
         }
 
@@ -75,9 +75,7 @@ namespace SOD_General.Vistas.Taller.Clientes
                     dgvContact.Rows.Add(
                         loc.IdContact,
                         loc.ContactName,
-                        loc.identifier,
-                        loc.numero1,
-                        loc.numero2
+                        loc.numero1
                         );
                 }
             }
@@ -104,7 +102,7 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             listLot = clieControl.ContactData();
 
-            var filtro = listLot.Select(a => a).Where(a => a.identifier == cmbCed.Text).ToList();
+            var filtro = listLot.Select(a => a).Where(a => a.ContactName == cmbCed.Text).ToList();
 
             if (filtro.Count > 0)
             {
@@ -113,9 +111,7 @@ namespace SOD_General.Vistas.Taller.Clientes
                     dgvContact.Rows.Add(
                         loc.IdContact,
                         loc.ContactName,
-                        loc.identifier,
-                        loc.numero1,
-                        loc.numero2
+                        loc.numero1
                         );
                 }
             }
@@ -133,7 +129,7 @@ namespace SOD_General.Vistas.Taller.Clientes
                 {
                     DataGridViewRow dgvRows = dgvContact.Rows[e.RowIndex];
 
-                    string iden = dgvRows.Cells[2].Value.ToString();
+                    string iden = dgvRows.Cells[1].Value.ToString();
                     addLoc.CbContact.SelectedItem = iden;
                     this.Close();
                 }
@@ -146,7 +142,7 @@ namespace SOD_General.Vistas.Taller.Clientes
             List<Contact> listado = clieControl.ContactData();
             foreach (var recorrer in listado)
             {
-                dgvContact.Rows.Add(recorrer.IdContact, recorrer.ContactName, recorrer.identifier, recorrer.numero1, recorrer.numero2);
+                dgvContact.Rows.Add(recorrer.IdContact, recorrer.ContactName, recorrer.numero1);
             }
         }
 

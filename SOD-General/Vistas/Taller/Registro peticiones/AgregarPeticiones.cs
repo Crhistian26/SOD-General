@@ -83,7 +83,7 @@ namespace SOD_General.Taller.Registro_peticiones
 
             foreach (var b in ctcClient)
             {
-                cbContactEmpresa.Items.Add(b.identifier);
+                cbContactEmpresa.Items.Add(b.ContactName);
             }
         }
 
@@ -117,12 +117,10 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             if (cbContactEmpresa.SelectedItem != null)
             {
-                string cedula = cbContactEmpresa.SelectedItem.ToString();
+                string nombre = cbContactEmpresa.SelectedItem.ToString();
 
-                IdContact = Convert.ToInt32(ctcClient.Where(a => a.identifier == cedula).Select(b => b.IdContact).First());
-                txtNameContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.ContactName).First().ToString();
-                txttlfnoContact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero1).First().ToString();
-                txtTlfono2Contact.Text = ctcClient.Where(a => a.identifier == cedula).Select(b => b.numero2).First().ToString();
+                IdContact = Convert.ToInt32(ctcClient.Where(a => a.ContactName == nombre).Select(b => b.IdContact).First());
+                txttlfnoContact.Text = ctcClient.Where(a => a.ContactName == nombre).Select(b => b.numero1).First().ToString();
 
             }
 
@@ -154,7 +152,8 @@ namespace SOD_General.Taller.Registro_peticiones
                 string nameEmpresa = cbNombreEmpresa.SelectedItem.ToString();
 
                 IdCliente = Convert.ToInt32(EmpresaName.Where(a => a._Location == nameEmpresa).Select(b => b.IdLocation).First());
-                idClienteCtc = Convert.ToInt32(EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.IdClient).First());
+                //CAMBIO DE ID IDENTIFIER A ID CLIENTE
+                idClienteCtc = Convert.ToInt32(EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.IdLocation).First());
                 txtDireccionEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Addrees).First().ToString();
                 txtTlfnoEmpre.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone1).First().ToString();
                 txtTlfnoSecundario.Text = EmpresaName.Where(b => b._Location == nameEmpresa).Select(a => a.Phone2).First().ToString();
@@ -180,9 +179,6 @@ namespace SOD_General.Taller.Registro_peticiones
             txtTlfnoSecundario.Text = null; 
             cbContactEmpresa.SelectedItem = null;   
             txttlfnoContact.Text = null;
-            txtTlfono2Contact.Text = null;
-            txtNameContact.Text = null;
-
            
                 RegistrarSolicitudEquipo regiEntrada = new RegistrarSolicitudEquipo(Convert.ToInt32(txtUltimoId.Text));
                 vista.OpenForm(regiEntrada);
@@ -192,6 +188,8 @@ namespace SOD_General.Taller.Registro_peticiones
         {
             txtUltimoId.Text = EnOrController.UltimoId().ToString();
         }
+
+        
     }
     
 }

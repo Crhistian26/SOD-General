@@ -69,8 +69,13 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             foreach (var cont in contact)
             {
-                CbContact.Items.Add(cont.identifier);
+                CbContact.Items.Add(cont.ContactName);
             }
+        }
+
+        private void CbContact_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

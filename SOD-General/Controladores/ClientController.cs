@@ -159,9 +159,7 @@ namespace SOD_General.Controladores
                                 ),
                                 new Contact(
                                      Reader.GetString(6),
-                                      Reader.GetString(7),
-                                      Reader.GetString(8),
-                                      Reader.GetString(9)
+                                      Reader.GetString(7)
                                     )
                            ));
 
@@ -246,7 +244,7 @@ namespace SOD_General.Controladores
                 cmd.Parameters.AddWithValue("@Phone1", phone1);
                 cmd.Parameters.AddWithValue("@Phone2", phone2);
                 cmd.Parameters.AddWithValue("@Identifier", identifier);
-                cmd.Parameters.AddWithValue("@ContactIdentifier", contactIdent);
+                cmd.Parameters.AddWithValue("@ContactIdent ifier", contactIdent);
                 cmd.Parameters.AddWithValue("@tipoCliente", tipoCliente);
 
 
@@ -389,11 +387,10 @@ namespace SOD_General.Controladores
                     Contact loc;
                     int IdClient = reader.GetInt32(0);
                     string name = reader.GetString(1);
-                    string identifier = reader.GetString(2);
-                    string phone1 = reader.GetString(3);
-                    string phone2 = reader.GetString(4);
+                    string phone1 = reader.GetString(2);
 
-                    loc = new Contact(name, identifier, phone1, phone2, IdClient);
+
+                    loc = new Contact(name, phone1, IdClient);
                     ListLoc.Add(loc);
                 }
                 conex.Close();
@@ -427,11 +424,10 @@ namespace SOD_General.Controladores
                     Contact loc;
                     int IdClient = reader.GetInt32(0);
                     string name = reader.GetString(1);
-                    string identifier = reader.GetString(2);
-                    string phone1 = reader.GetString(3);
-                    string phone2 = reader.GetString(4);
+                    string phone1 = reader.GetString(2);
 
-                    loc = new Contact(name, identifier, phone1, phone2, IdClient);
+
+                    loc = new Contact(name, phone1, IdClient);
                     ListLoc.Add(loc);
                 }
                 conex.Close();
@@ -639,12 +635,6 @@ namespace SOD_General.Controladores
             }
             return EquipList;
         }
-
-
-
-       
-
-
 
         public List<DataEquip> DatosEquipo()
         {

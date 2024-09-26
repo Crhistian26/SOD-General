@@ -244,8 +244,6 @@ namespace SOD_General.Controladores
                                     new Contact(
                                           Reader.GetString(15),
                                           Reader.GetString(16),
-                                          Reader.GetString(17),
-                                          Reader.GetString(18),
                                           Reader.GetInt32(14)
                                     )))
                     );
