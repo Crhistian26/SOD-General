@@ -183,6 +183,7 @@
             this.btnCrear.TabIndex = 5;
             this.btnCrear.Text = "Crear nuevo";
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // ContactoSearch
             // 

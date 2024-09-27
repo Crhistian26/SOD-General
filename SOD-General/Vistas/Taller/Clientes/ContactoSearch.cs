@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Office2016.Drawing;
 using Modelos.Taller;
 using SOD_General.Controladores;
+using SOD_General.Vistas.Taller.Pruebadiseño;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -149,6 +150,10 @@ namespace SOD_General.Vistas.Taller.Clientes
             }
         }
 
-        
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            AddContact addCont = new AddContact();
+            addCont.Show();
+        }
     }
 }

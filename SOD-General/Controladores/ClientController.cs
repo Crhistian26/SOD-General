@@ -1,5 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
+using DocumentFormat.OpenXml.Wordprocessing;
 using Modelos.Control_de_usuarios;
 using Modelos.Taller;
 using SOD_General.Vistas.Taller.Clientes;
@@ -10,6 +11,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -375,7 +377,7 @@ namespace SOD_General.Controladores
             }
             return ListLoc;
         }
-
+       
         //sirve
         public List<Contact> ContactDataSearch(string iden)
         {
@@ -384,8 +386,10 @@ namespace SOD_General.Controladores
             {
                 string query = "Exec Get_ContactSearch @Identi";
                 SqlCommand cmd = new SqlCommand(query, conex);
+
                 cmd.Parameters.AddWithValue("@Identi", iden);
                 conex.Open();
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
 
@@ -428,8 +432,7 @@ namespace SOD_General.Controladores
                 return null;
             }
         }
-
-
+        
         public List<Contact> ContactData()
         {
             List<Contact> ListLoc = new List<Contact>();
@@ -765,6 +768,10 @@ namespace SOD_General.Controladores
 
            
         }
+
+
+
+         
        
     }
 
