@@ -43,7 +43,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbNmb = new Cr_ComboBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.btnGuardar = new Diseños.Botones_Nuevos();
+            this.btnNuevo = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -72,7 +72,7 @@
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbNmb);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.btnGuardar);
+            this.cR_SplitContainer1.Panel2.Controls.Add(this.btnNuevo);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
             this.cR_SplitContainer1.SplitterDistance = 65;
             this.cR_SplitContainer1.TabIndex = 7;
@@ -219,23 +219,24 @@
             this.cR_LabelDown1.TabIndex = 7;
             this.cR_LabelDown1.Text = "Nombre";
             // 
-            // btnGuardar
+            // btnNuevo
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.Teal;
-            this.btnGuardar.BorderRadius = 40;
-            this.btnGuardar.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(637, 23);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(141, 39);
-            this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnNuevo.BorderColor = System.Drawing.Color.Teal;
+            this.btnNuevo.BorderRadius = 40;
+            this.btnNuevo.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(600, 23);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(178, 39);
+            this.btnNuevo.TabIndex = 5;
+            this.btnNuevo.Text = "Crear Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // RncSearch
             // 
@@ -268,7 +269,7 @@
         private CR_DataGriedView dgvRncSearch;
         private Cr_ComboBox cmbNmb;
         private CR_LabelDown cR_LabelDown1;
-        private Diseños.Botones_Nuevos btnGuardar;
+        private Diseños.Botones_Nuevos btnNuevo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

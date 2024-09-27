@@ -188,6 +188,7 @@
             this.CbRnc.Name = "CbRnc";
             this.CbRnc.Size = new System.Drawing.Size(251, 29);
             this.CbRnc.TabIndex = 76;
+            this.CbRnc.SelectedIndexChanged += new System.EventHandler(this.CbRnc_SelectedIndexChanged);
             // 
             // cR_Subtitulos2
             // 
@@ -280,7 +281,7 @@
             // 
             this.txtNumero2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtNumero2.Location = new System.Drawing.Point(0, 282);
+            this.txtNumero2.Location = new System.Drawing.Point(12, 282);
             this.txtNumero2.Multiline = true;
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(252, 30);
@@ -320,7 +321,7 @@
             // 
             this.txtNumero1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtNumero1.Location = new System.Drawing.Point(0, 201);
+            this.txtNumero1.Location = new System.Drawing.Point(10, 204);
             this.txtNumero1.Multiline = true;
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(252, 30);
@@ -360,6 +361,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddLocations";
             this.Text = "AddLocations";
+            this.Load += new System.EventHandler(this.AddLocations_Load);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);

@@ -60,6 +60,7 @@ namespace Controladores
         /// <returns>Se encarga de regresar un diccionario, la llave es (Modulo,Operacion) y su valor es el evento.<returns>
         public Dictionary<(string, string), EventHandler> DictionaryData()
         {
+            //hola comentado
             return
                 new Dictionary<(string, string), EventHandler>
                 {

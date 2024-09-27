@@ -18,8 +18,6 @@ namespace SOD_General.Vistas.Taller.Clientes
         public AddLocations()
         {
             InitializeComponent();
-            cbRncRelleno();
-            cbCtcRelleno();
         }
 
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
@@ -41,8 +39,16 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void btnBuscarCtc_Click(object sender, EventArgs e)
         {
-            ContactoSearch contactoSearch = new ContactoSearch();
-            contactoSearch.Show();
+            if (CbRnc.SelectedItem != null)
+            {
+                string rnc = CbRnc.SelectedItem.ToString();
+                ContactoSearch contactoSearch = new ContactoSearch(rnc);
+                contactoSearch.Show();
+            }
+            else
+            {
+                MessageBox.Show("Primero seleccione el numero de identificacion de la entidad");
+            }
         }
 
 
@@ -60,22 +66,36 @@ namespace SOD_General.Vistas.Taller.Clientes
             }
         }
 
-        public void cbCtcRelleno()
+        public void cbCtcRelleno(string a)
         {
-            List<Contact> contact = clieControl.ContactData();
-
-            CbContact.Items.Clear();
-            CbContact.SelectedItem = null;
-
-            foreach (var cont in contact)
+            if (CbRnc.SelectedItem != null)
             {
-                CbContact.Items.Add(cont.ContactName);
+                string rnc = a;
+                List<Contact> contact = clieControl.ContactDataSearch(rnc);
+
+                CbContact.Items.Clear();
+                CbContact.SelectedItem = null;
+
+                foreach (var cont in contact)
+                {
+                    CbContact.Items.Add(cont.ContactName);
+                }
             }
         }
 
         private void CbContact_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CbRnc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbCtcRelleno(CbRnc.SelectedItem.ToString());
+        }
+
+        private void AddLocations_Load(object sender, EventArgs e)
+        {
+            cbRncRelleno();
         }
     }
 }

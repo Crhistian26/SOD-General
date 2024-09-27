@@ -32,18 +32,14 @@ namespace SOD_General.Controladores
         /// </summary>
         /// <param name="cli"></param>
         /// 
-        public void AgregarCliente(int _Name, string _Address, string Phone1, string Phone2, string ident )
+        public void AgregarCliente(string ident )
         {
 
             try
             {
-                string Query = "Exec Add_Client @Name, @Address, @Phone1, @Phone2, @Identifier";
+                string Query = "Exec Add_Client @Identifier";
 
                 SqlCommand cmd = new SqlCommand(Query, conex);
-                cmd.Parameters.AddWithValue("@Name", _Name);
-                cmd.Parameters.AddWithValue("@Address", _Address);
-                cmd.Parameters.AddWithValue("@Phone1", Phone1);
-                cmd.Parameters.AddWithValue("@Phone2", Phone2);
                 cmd.Parameters.AddWithValue("@Identifier", ident);
 
                 conex.Open();
@@ -232,7 +228,7 @@ namespace SOD_General.Controladores
         }
 
         //sirve
-        public void AgregarSucursal(string name, string address, string phone1, string phone2, string identifier, string contactIdent, string tipoCliente)
+        public void AgregarSucursal(string name, string address, string phone1, string phone2, string identifier, string contactName, string tipoCliente)
         {
             try
             {
@@ -244,7 +240,7 @@ namespace SOD_General.Controladores
                 cmd.Parameters.AddWithValue("@Phone1", phone1);
                 cmd.Parameters.AddWithValue("@Phone2", phone2);
                 cmd.Parameters.AddWithValue("@Identifier", identifier);
-                cmd.Parameters.AddWithValue("@ContactIdent ifier", contactIdent);
+                cmd.Parameters.AddWithValue("@ContactIdentifier", contactName);
                 cmd.Parameters.AddWithValue("@tipoCliente", tipoCliente);
 
 
@@ -362,15 +358,78 @@ namespace SOD_General.Controladores
             catch (SqlException ex)
             {
                 MessageBox.Show("Error de la base de datos: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error del sistema" + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
             }
             return ListLoc;
         }
 
         //sirve
+        public List<Contact> ContactDataSearch(string iden)
+        {
+            List<Contact> ListLoc = new List<Contact>();
+            try
+            {
+                string query = "Exec Get_ContactSearch @Identi";
+                SqlCommand cmd = new SqlCommand(query, conex);
+                cmd.Parameters.AddWithValue("@Identi", iden);
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Contact loc;
+                    int IdClient = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    string phone1 = reader.GetString(2);
+
+
+                    loc = new Contact(name, phone1, IdClient);
+                    ListLoc.Add(loc);
+                }
+                conex.Close();
+                reader.Close();
+                return ListLoc;
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema" + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+
+                return null;
+            }
+        }
+
+
         public List<Contact> ContactData()
         {
             List<Contact> ListLoc = new List<Contact>();
@@ -378,9 +437,9 @@ namespace SOD_General.Controladores
             {
                 string query = "Exec Get_Contact";
                 SqlCommand cmd = new SqlCommand(query, conex);
-
                 conex.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
+
 
                 while (reader.Read())
                 {
@@ -406,7 +465,6 @@ namespace SOD_General.Controladores
             }
             return ListLoc;
         }
-
         public List<Contact> ContactoCliente(int Rnc)
         {
             List<Contact> ListLoc = new List<Contact>();

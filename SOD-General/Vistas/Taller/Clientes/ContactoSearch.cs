@@ -1,4 +1,5 @@
-﻿using Modelos.Taller;
+﻿using DocumentFormat.OpenXml.Office2016.Drawing;
+using Modelos.Taller;
 using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,11 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         bool cambioSeleccion = false;
         List<Contact> listLot = new List<Contact>();
+        public string idIdentifier {  get; set; } 
 
-        public ContactoSearch()
+        public ContactoSearch(string idIdentifier)
         {
+            this.idIdentifier = idIdentifier;
             InitializeComponent();
             llenarCbRncName();
             llenarGrid();
@@ -39,7 +42,7 @@ namespace SOD_General.Vistas.Taller.Clientes
             foreach (Contact ctc in contList)
             {
                 cmbName.Items.Add(ctc.ContactName);
-                cmbCed.Items.Add(ctc.ContactName);
+               // cmbCed.Items.Add(ctc.ContactName);
             }
         }
 
@@ -61,7 +64,7 @@ namespace SOD_General.Vistas.Taller.Clientes
             if (!cambioSeleccion)
             {
                 cambioSeleccion = true;
-                cmbCed.SelectedItem = null;
+                //cmbCed.SelectedItem = null;
                 cambioSeleccion = false;
             }
             List<Contact> listLot = clieControl.ContactData();
@@ -102,23 +105,23 @@ namespace SOD_General.Vistas.Taller.Clientes
 
             listLot = clieControl.ContactData();
 
-            var filtro = listLot.Select(a => a).Where(a => a.ContactName == cmbCed.Text).ToList();
+           // var filtro = listLot.Select(a => a).Where(a => a.ContactName == cmbCed.Text).ToList();
 
-            if (filtro.Count > 0)
-            {
-                foreach (Contact loc in filtro)
-                {
-                    dgvContact.Rows.Add(
-                        loc.IdContact,
-                        loc.ContactName,
-                        loc.numero1
-                        );
-                }
-            }
-            else
-            {
-                verRnc();
-            }
+            //if (filtro.Count > 0)
+            //{
+            //    foreach (Contact loc in filtro)
+            //    {
+            //        dgvContact.Rows.Add(
+            //            loc.IdContact,
+            //            loc.ContactName,
+            //            loc.numero1
+            //            );
+            //    }
+            //}
+            //else
+            //{
+            //    verRnc();
+            //}
         }
 
         private void dgvContact_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

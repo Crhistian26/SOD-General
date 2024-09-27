@@ -37,9 +37,10 @@
             this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cR_LabelDown3 = new CR_LabelDown();
             this.cr_Textbox3 = new Cr_Textbox();
-            this.cR_LabelDown2 = new CR_LabelDown();
-            this.cr_Textbox2 = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
+            this.CbRnc = new Cr_ComboBox();
+            this.cbRncContact = new CR_LabelDown();
+            this.cR_LabelDown2 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -84,14 +85,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cR_LabelDown2);
+            this.panel1.Controls.Add(this.cbRncContact);
+            this.panel1.Controls.Add(this.CbRnc);
             this.panel1.Controls.Add(this.cr_Textbox4);
             this.panel1.Controls.Add(this.cr_Textbox1);
             this.panel1.Controls.Add(this.cR_LabelDown4);
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_LabelDown3);
             this.panel1.Controls.Add(this.cr_Textbox3);
-            this.panel1.Controls.Add(this.cR_LabelDown2);
-            this.panel1.Controls.Add(this.cr_Textbox2);
             this.panel1.Controls.Add(this.cR_LabelDown1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -105,7 +107,7 @@
             this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cr_Textbox4.Location = new System.Drawing.Point(40, 133);
             this.cr_Textbox4.Name = "cr_Textbox4";
-            this.cr_Textbox4.Size = new System.Drawing.Size(264, 25);
+            this.cr_Textbox4.Size = new System.Drawing.Size(232, 25);
             this.cr_Textbox4.TabIndex = 11;
             // 
             // cr_Textbox1
@@ -150,7 +152,7 @@
             this.cR_LabelDown3.AutoSize = true;
             this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(443, 100);
+            this.cR_LabelDown3.Location = new System.Drawing.Point(430, 11);
             this.cR_LabelDown3.Name = "cR_LabelDown3";
             this.cR_LabelDown3.Size = new System.Drawing.Size(94, 20);
             this.cR_LabelDown3.TabIndex = 5;
@@ -160,30 +162,10 @@
             // 
             this.cr_Textbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cr_Textbox3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox3.Location = new System.Drawing.Point(349, 133);
+            this.cr_Textbox3.Location = new System.Drawing.Point(337, 34);
             this.cr_Textbox3.Name = "cr_Textbox3";
             this.cr_Textbox3.Size = new System.Drawing.Size(264, 25);
             this.cr_Textbox3.TabIndex = 4;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(463, 11);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(56, 20);
-            this.cR_LabelDown2.TabIndex = 3;
-            this.cR_LabelDown2.Text = "Cedula";
-            // 
-            // cr_Textbox2
-            // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(349, 34);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.Size = new System.Drawing.Size(264, 25);
-            this.cr_Textbox2.TabIndex = 2;
             // 
             // cR_LabelDown1
             // 
@@ -195,6 +177,42 @@
             this.cR_LabelDown1.Size = new System.Drawing.Size(64, 20);
             this.cR_LabelDown1.TabIndex = 1;
             this.cR_LabelDown1.Text = "Nombre";
+            // 
+            // CbRnc
+            // 
+            this.CbRnc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CbRnc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CbRnc.BackColor = System.Drawing.Color.White;
+            this.CbRnc.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.CbRnc.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.CbRnc.FormattingEnabled = true;
+            this.CbRnc.Location = new System.Drawing.Point(337, 129);
+            this.CbRnc.Name = "CbRnc";
+            this.CbRnc.Size = new System.Drawing.Size(264, 29);
+            this.CbRnc.TabIndex = 77;
+            this.CbRnc.SelectedIndexChanged += new System.EventHandler(this.CbRnc_SelectedIndexChanged);
+            // 
+            // cbRncContact
+            // 
+            this.cbRncContact.AutoSize = true;
+            this.cbRncContact.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cbRncContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cbRncContact.Location = new System.Drawing.Point(431, 106);
+            this.cbRncContact.Name = "cbRncContact";
+            this.cbRncContact.Size = new System.Drawing.Size(98, 20);
+            this.cbRncContact.TabIndex = 78;
+            this.cbRncContact.Text = "Rnc o Cedula";
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(426, 106);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(98, 20);
+            this.cR_LabelDown2.TabIndex = 78;
+            this.cR_LabelDown2.Text = "Rnc o Cedula";
             // 
             // AddContact
             // 
@@ -225,10 +243,11 @@
         private Diseños.Botones_Nuevos botones_Nuevos1;
         private CR_LabelDown cR_LabelDown3;
         private Cr_Textbox cr_Textbox3;
-        private CR_LabelDown cR_LabelDown2;
-        private Cr_Textbox cr_Textbox2;
         private CR_LabelDown cR_LabelDown1;
         private Cr_Textbox cr_Textbox4;
         private Cr_Textbox cr_Textbox1;
+        private CR_LabelDown cbRncContact;
+        public Cr_ComboBox CbRnc;
+        private CR_LabelDown cR_LabelDown2;
     }
 }
