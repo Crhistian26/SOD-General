@@ -64,12 +64,8 @@ namespace Controladores
                 new Dictionary<(string, string), EventHandler>
                 {
                     {
-                        (("Empleados", "Ver empleados")),
-                        (object sender, EventArgs e) =>
-                        {
-                            Visual_Empleados window = new Visual_Empleados();
-                            _view.OpenForm(window);
-                        }
+                        (("Empleados", "Ver empleados")),  (object sender, EventArgs e) =>{Visual_Empleados window = new Visual_Empleados(); _view.OpenForm(window); }
+
                     },
                     {
                         ("Asistencias","Ver asistencias"),

@@ -29,6 +29,10 @@ namespace SOD_General.Recursos_Humanos.Empleados
             InitializeComponent();
             //operaciones = new ControlOperaciones(app);
             departamentos = controlRegistros.Obtener_Departamentos();
+            if (!user.Confirm_Operation("Agregar empleados"))
+            {
+                botones_Nuevos1.Visible = false;
+            }
         }
 
         public void Reset()
