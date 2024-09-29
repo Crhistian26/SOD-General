@@ -136,12 +136,6 @@ namespace SOD_General.Vistas.Taller.Clientes
                 }
             }
         }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            AddIdentifier addId = new AddIdentifier();
-            addId.Show();
-        }
     }
     
 }

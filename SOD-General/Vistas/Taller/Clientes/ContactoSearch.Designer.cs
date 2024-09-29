@@ -38,7 +38,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbName = new Cr_ComboBox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.btnCrear = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -65,7 +64,6 @@
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cmbName);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown1);
-            this.cR_SplitContainer1.Panel2.Controls.Add(this.btnCrear);
             this.cR_SplitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.cR_SplitContainer1_Panel2_Paint);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 450);
             this.cR_SplitContainer1.SplitterDistance = 65;
@@ -166,25 +164,6 @@
             this.cR_LabelDown1.TabIndex = 7;
             this.cR_LabelDown1.Text = "Nombre";
             // 
-            // btnCrear
-            // 
-            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnCrear.BorderColor = System.Drawing.Color.Teal;
-            this.btnCrear.BorderRadius = 40;
-            this.btnCrear.BorderSize = 0;
-            this.btnCrear.FlatAppearance.BorderSize = 0;
-            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCrear.ForeColor = System.Drawing.Color.White;
-            this.btnCrear.Location = new System.Drawing.Point(637, 23);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(141, 39);
-            this.btnCrear.TabIndex = 5;
-            this.btnCrear.Text = "Crear nuevo";
-            this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
             // ContactoSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,7 +193,6 @@
         private CR_DataGriedView dgvContact;
         private Cr_ComboBox cmbName;
         private CR_LabelDown cR_LabelDown1;
-        private Diseños.Botones_Nuevos btnCrear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

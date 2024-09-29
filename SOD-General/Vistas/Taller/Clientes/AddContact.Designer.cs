@@ -39,8 +39,6 @@
             this.txtNombreCtc = new Cr_Textbox();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.btnAgregContact = new Diseños.Botones_Nuevos();
-            this.cR_LabelDown3 = new CR_LabelDown();
-            this.txtPhone2Ctc = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
@@ -78,7 +76,7 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(234, 26);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(222, 26);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
             this.cR_Subtitulos1.Size = new System.Drawing.Size(229, 31);
             this.cR_Subtitulos1.TabIndex = 0;
@@ -94,8 +92,6 @@
             this.panel1.Controls.Add(this.txtNombreCtc);
             this.panel1.Controls.Add(this.cR_LabelDown4);
             this.panel1.Controls.Add(this.btnAgregContact);
-            this.panel1.Controls.Add(this.cR_LabelDown3);
-            this.panel1.Controls.Add(this.txtPhone2Ctc);
             this.panel1.Controls.Add(this.cR_LabelDown1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -108,7 +104,7 @@
             this.cR_LabelDown6.AutoSize = true;
             this.cR_LabelDown6.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown6.Location = new System.Drawing.Point(126, 172);
+            this.cR_LabelDown6.Location = new System.Drawing.Point(426, 93);
             this.cR_LabelDown6.Name = "cR_LabelDown6";
             this.cR_LabelDown6.Size = new System.Drawing.Size(120, 20);
             this.cR_LabelDown6.TabIndex = 81;
@@ -122,7 +118,7 @@
             this.cbRnc.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cbRnc.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cbRnc.FormattingEnabled = true;
-            this.cbRnc.Location = new System.Drawing.Point(59, 113);
+            this.cbRnc.Location = new System.Drawing.Point(359, 34);
             this.cbRnc.Name = "cbRnc";
             this.cbRnc.Size = new System.Drawing.Size(232, 29);
             this.cbRnc.TabIndex = 80;
@@ -133,7 +129,7 @@
             this.cbRncContact.AutoSize = true;
             this.cbRncContact.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cbRncContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbRncContact.Location = new System.Drawing.Point(131, 90);
+            this.cbRncContact.Location = new System.Drawing.Point(431, 11);
             this.cbRncContact.Name = "cbRncContact";
             this.cbRncContact.Size = new System.Drawing.Size(98, 20);
             this.cbRncContact.TabIndex = 78;
@@ -147,7 +143,7 @@
             this.cbClient.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cbClient.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cbClient.FormattingEnabled = true;
-            this.cbClient.Location = new System.Drawing.Point(59, 196);
+            this.cbClient.Location = new System.Drawing.Point(359, 117);
             this.cbClient.Name = "cbClient";
             this.cbClient.Size = new System.Drawing.Size(232, 29);
             this.cbClient.TabIndex = 77;
@@ -156,7 +152,7 @@
             // 
             this.txtPhone1Ctc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone1Ctc.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtPhone1Ctc.Location = new System.Drawing.Point(360, 37);
+            this.txtPhone1Ctc.Location = new System.Drawing.Point(58, 121);
             this.txtPhone1Ctc.Name = "txtPhone1Ctc";
             this.txtPhone1Ctc.Size = new System.Drawing.Size(232, 25);
             this.txtPhone1Ctc.TabIndex = 11;
@@ -165,7 +161,7 @@
             // 
             this.txtNombreCtc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreCtc.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtNombreCtc.Location = new System.Drawing.Point(59, 37);
+            this.txtNombreCtc.Location = new System.Drawing.Point(58, 36);
             this.txtNombreCtc.Name = "txtNombreCtc";
             this.txtNombreCtc.Size = new System.Drawing.Size(232, 25);
             this.txtNombreCtc.TabIndex = 10;
@@ -175,7 +171,7 @@
             this.cR_LabelDown4.AutoSize = true;
             this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(426, 14);
+            this.cR_LabelDown4.Location = new System.Drawing.Point(124, 98);
             this.cR_LabelDown4.Name = "cR_LabelDown4";
             this.cR_LabelDown4.Size = new System.Drawing.Size(93, 20);
             this.cR_LabelDown4.TabIndex = 8;
@@ -191,7 +187,7 @@
             this.btnAgregContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregContact.ForeColor = System.Drawing.Color.White;
-            this.btnAgregContact.Location = new System.Drawing.Point(360, 184);
+            this.btnAgregContact.Location = new System.Drawing.Point(219, 185);
             this.btnAgregContact.Name = "btnAgregContact";
             this.btnAgregContact.Size = new System.Drawing.Size(232, 41);
             this.btnAgregContact.TabIndex = 6;
@@ -199,32 +195,12 @@
             this.btnAgregContact.UseVisualStyleBackColor = false;
             this.btnAgregContact.Click += new System.EventHandler(this.btnAgregContact_Click);
             // 
-            // cR_LabelDown3
-            // 
-            this.cR_LabelDown3.AutoSize = true;
-            this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(425, 90);
-            this.cR_LabelDown3.Name = "cR_LabelDown3";
-            this.cR_LabelDown3.Size = new System.Drawing.Size(94, 20);
-            this.cR_LabelDown3.TabIndex = 5;
-            this.cR_LabelDown3.Text = "2do Numero";
-            // 
-            // txtPhone2Ctc
-            // 
-            this.txtPhone2Ctc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone2Ctc.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtPhone2Ctc.Location = new System.Drawing.Point(360, 117);
-            this.txtPhone2Ctc.Name = "txtPhone2Ctc";
-            this.txtPhone2Ctc.Size = new System.Drawing.Size(232, 25);
-            this.txtPhone2Ctc.TabIndex = 4;
-            // 
             // cR_LabelDown1
             // 
             this.cR_LabelDown1.AutoSize = true;
             this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(135, 14);
+            this.cR_LabelDown1.Location = new System.Drawing.Point(134, 13);
             this.cR_LabelDown1.Name = "cR_LabelDown1";
             this.cR_LabelDown1.Size = new System.Drawing.Size(64, 20);
             this.cR_LabelDown1.TabIndex = 1;
@@ -258,8 +234,6 @@
         private System.Windows.Forms.Panel panel1;
         private CR_LabelDown cR_LabelDown4;
         private Diseños.Botones_Nuevos btnAgregContact;
-        private CR_LabelDown cR_LabelDown3;
-        private Cr_Textbox txtPhone2Ctc;
         private CR_LabelDown cR_LabelDown1;
         private Cr_Textbox txtPhone1Ctc;
         private Cr_Textbox txtNombreCtc;

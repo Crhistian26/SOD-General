@@ -150,10 +150,6 @@ namespace SOD_General.Vistas.Taller.Clientes
             }
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-            AddContact addCont = new AddContact();
-            addCont.Show();
-        }
+      
     }
 }

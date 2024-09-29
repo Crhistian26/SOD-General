@@ -54,7 +54,7 @@ namespace SOD_General.Vistas.Taller.Pruebadiseño
 
         private void btnAgregContact_Click(object sender, System.EventArgs e)
         {
-
+            cliCont.AgregarContacto(txtNombreCtc.Text.ToString(), cbRnc.SelectedItem.ToString(),cbClient.SelectedItem.ToString(), txtPhone1Ctc.Text.ToString());
         }
 
         private void AddContact_Load(object sender, System.EventArgs e)

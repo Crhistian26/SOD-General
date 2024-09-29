@@ -769,7 +769,42 @@ namespace SOD_General.Controladores
         }
 
 
+        public void AgregarContacto(string name, string rnc, string client, string Numero)
+        {
+            try
+            {
+                string Query = "exec Add_Contact @Name, @Phone1, @Identifier, @Client";
+                SqlCommand cmd = new SqlCommand(Query, conex);
 
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Phone1", Numero);
+                cmd.Parameters.AddWithValue("@Identifier", rnc);
+                cmd.Parameters.AddWithValue("@Client", client);
+
+
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                MessageBox.Show("Agregado exitorsamente");
+            }
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error desde la base de datos: \n" + ex.ToString());
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error desde el sistema: \n" + ex.ToString());
+            }
+        }
          
        
     }
