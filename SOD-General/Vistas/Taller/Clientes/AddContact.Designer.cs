@@ -31,15 +31,16 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_LabelDown2 = new CR_LabelDown();
+            this.cR_LabelDown6 = new CR_LabelDown();
+            this.cbRnc = new Cr_ComboBox();
             this.cbRncContact = new CR_LabelDown();
-            this.CbRnc = new Cr_ComboBox();
-            this.cr_Textbox4 = new Cr_Textbox();
-            this.cr_Textbox1 = new Cr_Textbox();
+            this.cbClient = new Cr_ComboBox();
+            this.txtPhone1Ctc = new Cr_Textbox();
+            this.txtNombreCtc = new Cr_Textbox();
             this.cR_LabelDown4 = new CR_LabelDown();
             this.btnAgregContact = new Diseños.Botones_Nuevos();
             this.cR_LabelDown3 = new CR_LabelDown();
-            this.cr_Textbox3 = new Cr_Textbox();
+            this.txtPhone2Ctc = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
@@ -85,15 +86,16 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cR_LabelDown2);
+            this.panel1.Controls.Add(this.cR_LabelDown6);
+            this.panel1.Controls.Add(this.cbRnc);
             this.panel1.Controls.Add(this.cbRncContact);
-            this.panel1.Controls.Add(this.CbRnc);
-            this.panel1.Controls.Add(this.cr_Textbox4);
-            this.panel1.Controls.Add(this.cr_Textbox1);
+            this.panel1.Controls.Add(this.cbClient);
+            this.panel1.Controls.Add(this.txtPhone1Ctc);
+            this.panel1.Controls.Add(this.txtNombreCtc);
             this.panel1.Controls.Add(this.cR_LabelDown4);
             this.panel1.Controls.Add(this.btnAgregContact);
             this.panel1.Controls.Add(this.cR_LabelDown3);
-            this.panel1.Controls.Add(this.cr_Textbox3);
+            this.panel1.Controls.Add(this.txtPhone2Ctc);
             this.panel1.Controls.Add(this.cR_LabelDown1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -101,66 +103,79 @@
             this.panel1.Size = new System.Drawing.Size(691, 273);
             this.panel1.TabIndex = 1;
             // 
-            // cR_LabelDown2
+            // cR_LabelDown6
             // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(426, 90);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(98, 20);
-            this.cR_LabelDown2.TabIndex = 78;
-            this.cR_LabelDown2.Text = "Rnc o Cedula";
+            this.cR_LabelDown6.AutoSize = true;
+            this.cR_LabelDown6.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown6.Location = new System.Drawing.Point(126, 172);
+            this.cR_LabelDown6.Name = "cR_LabelDown6";
+            this.cR_LabelDown6.Size = new System.Drawing.Size(120, 20);
+            this.cR_LabelDown6.TabIndex = 81;
+            this.cR_LabelDown6.Text = "Cliente asociado";
+            // 
+            // cbRnc
+            // 
+            this.cbRnc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbRnc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbRnc.BackColor = System.Drawing.Color.White;
+            this.cbRnc.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbRnc.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.cbRnc.FormattingEnabled = true;
+            this.cbRnc.Location = new System.Drawing.Point(59, 113);
+            this.cbRnc.Name = "cbRnc";
+            this.cbRnc.Size = new System.Drawing.Size(232, 29);
+            this.cbRnc.TabIndex = 80;
+            this.cbRnc.SelectedIndexChanged += new System.EventHandler(this.CbRnc_SelectedIndexChanged);
             // 
             // cbRncContact
             // 
             this.cbRncContact.AutoSize = true;
             this.cbRncContact.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cbRncContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cbRncContact.Location = new System.Drawing.Point(431, 90);
+            this.cbRncContact.Location = new System.Drawing.Point(131, 90);
             this.cbRncContact.Name = "cbRncContact";
             this.cbRncContact.Size = new System.Drawing.Size(98, 20);
             this.cbRncContact.TabIndex = 78;
             this.cbRncContact.Text = "Rnc o Cedula";
             // 
-            // CbRnc
+            // cbClient
             // 
-            this.CbRnc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CbRnc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CbRnc.BackColor = System.Drawing.Color.White;
-            this.CbRnc.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.CbRnc.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.CbRnc.FormattingEnabled = true;
-            this.CbRnc.Location = new System.Drawing.Point(337, 113);
-            this.CbRnc.Name = "CbRnc";
-            this.CbRnc.Size = new System.Drawing.Size(264, 29);
-            this.CbRnc.TabIndex = 77;
-            this.CbRnc.SelectedIndexChanged += new System.EventHandler(this.CbRnc_SelectedIndexChanged);
+            this.cbClient.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbClient.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbClient.BackColor = System.Drawing.Color.White;
+            this.cbClient.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbClient.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.cbClient.FormattingEnabled = true;
+            this.cbClient.Location = new System.Drawing.Point(59, 196);
+            this.cbClient.Name = "cbClient";
+            this.cbClient.Size = new System.Drawing.Size(232, 29);
+            this.cbClient.TabIndex = 77;
             // 
-            // cr_Textbox4
+            // txtPhone1Ctc
             // 
-            this.cr_Textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox4.Location = new System.Drawing.Point(40, 117);
-            this.cr_Textbox4.Name = "cr_Textbox4";
-            this.cr_Textbox4.Size = new System.Drawing.Size(232, 25);
-            this.cr_Textbox4.TabIndex = 11;
+            this.txtPhone1Ctc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone1Ctc.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtPhone1Ctc.Location = new System.Drawing.Point(360, 37);
+            this.txtPhone1Ctc.Name = "txtPhone1Ctc";
+            this.txtPhone1Ctc.Size = new System.Drawing.Size(232, 25);
+            this.txtPhone1Ctc.TabIndex = 11;
             // 
-            // cr_Textbox1
+            // txtNombreCtc
             // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(40, 34);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(232, 25);
-            this.cr_Textbox1.TabIndex = 10;
+            this.txtNombreCtc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreCtc.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtNombreCtc.Location = new System.Drawing.Point(59, 37);
+            this.txtNombreCtc.Name = "txtNombreCtc";
+            this.txtNombreCtc.Size = new System.Drawing.Size(232, 25);
+            this.txtNombreCtc.TabIndex = 10;
             // 
             // cR_LabelDown4
             // 
             this.cR_LabelDown4.AutoSize = true;
             this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(106, 94);
+            this.cR_LabelDown4.Location = new System.Drawing.Point(426, 14);
             this.cR_LabelDown4.Name = "cR_LabelDown4";
             this.cR_LabelDown4.Size = new System.Drawing.Size(93, 20);
             this.cR_LabelDown4.TabIndex = 8;
@@ -176,39 +191,40 @@
             this.btnAgregContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregContact.ForeColor = System.Drawing.Color.White;
-            this.btnAgregContact.Location = new System.Drawing.Point(166, 168);
+            this.btnAgregContact.Location = new System.Drawing.Point(360, 184);
             this.btnAgregContact.Name = "btnAgregContact";
-            this.btnAgregContact.Size = new System.Drawing.Size(282, 41);
+            this.btnAgregContact.Size = new System.Drawing.Size(232, 41);
             this.btnAgregContact.TabIndex = 6;
             this.btnAgregContact.Text = "Agregar Contacto";
             this.btnAgregContact.UseVisualStyleBackColor = false;
+            this.btnAgregContact.Click += new System.EventHandler(this.btnAgregContact_Click);
             // 
             // cR_LabelDown3
             // 
             this.cR_LabelDown3.AutoSize = true;
             this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(430, 11);
+            this.cR_LabelDown3.Location = new System.Drawing.Point(425, 90);
             this.cR_LabelDown3.Name = "cR_LabelDown3";
             this.cR_LabelDown3.Size = new System.Drawing.Size(94, 20);
             this.cR_LabelDown3.TabIndex = 5;
             this.cR_LabelDown3.Text = "2do Numero";
             // 
-            // cr_Textbox3
+            // txtPhone2Ctc
             // 
-            this.cr_Textbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox3.Location = new System.Drawing.Point(337, 34);
-            this.cr_Textbox3.Name = "cr_Textbox3";
-            this.cr_Textbox3.Size = new System.Drawing.Size(264, 25);
-            this.cr_Textbox3.TabIndex = 4;
+            this.txtPhone2Ctc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone2Ctc.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtPhone2Ctc.Location = new System.Drawing.Point(360, 117);
+            this.txtPhone2Ctc.Name = "txtPhone2Ctc";
+            this.txtPhone2Ctc.Size = new System.Drawing.Size(232, 25);
+            this.txtPhone2Ctc.TabIndex = 4;
             // 
             // cR_LabelDown1
             // 
             this.cR_LabelDown1.AutoSize = true;
             this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(116, 11);
+            this.cR_LabelDown1.Location = new System.Drawing.Point(135, 14);
             this.cR_LabelDown1.Name = "cR_LabelDown1";
             this.cR_LabelDown1.Size = new System.Drawing.Size(64, 20);
             this.cR_LabelDown1.TabIndex = 1;
@@ -220,9 +236,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 357);
             this.Controls.Add(this.cR_SplitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "AddContact";
             this.Text = "AddContact";
+            this.Load += new System.EventHandler(this.AddContact_Load);
             this.cR_SplitContainer1.Panel1.ResumeLayout(false);
             this.cR_SplitContainer1.Panel1.PerformLayout();
             this.cR_SplitContainer1.Panel2.ResumeLayout(false);
@@ -242,12 +259,13 @@
         private CR_LabelDown cR_LabelDown4;
         private Diseños.Botones_Nuevos btnAgregContact;
         private CR_LabelDown cR_LabelDown3;
-        private Cr_Textbox cr_Textbox3;
+        private Cr_Textbox txtPhone2Ctc;
         private CR_LabelDown cR_LabelDown1;
-        private Cr_Textbox cr_Textbox4;
-        private Cr_Textbox cr_Textbox1;
+        private Cr_Textbox txtPhone1Ctc;
+        private Cr_Textbox txtNombreCtc;
         private CR_LabelDown cbRncContact;
-        public Cr_ComboBox CbRnc;
-        private CR_LabelDown cR_LabelDown2;
+        public Cr_ComboBox cbClient;
+        private CR_LabelDown cR_LabelDown6;
+        public Cr_ComboBox cbRnc;
     }
 }

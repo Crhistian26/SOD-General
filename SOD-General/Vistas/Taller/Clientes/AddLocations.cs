@@ -39,16 +39,16 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void btnBuscarCtc_Click(object sender, EventArgs e)
         {
-            if (CbRnc.SelectedItem != null)
-            {
+            //if (CbRnc.SelectedItem != null)
+            //{
                 string rnc = CbRnc.SelectedItem.ToString();
                 ContactoSearch contactoSearch = new ContactoSearch(rnc);
                 contactoSearch.Show();
-            }
-            else
-            {
-                MessageBox.Show("Primero seleccione el numero de identificacion de la entidad");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Primero seleccione el numero de identificacion de la entidad");
+            //}
         }
 
 
