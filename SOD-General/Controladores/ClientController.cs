@@ -769,17 +769,16 @@ namespace SOD_General.Controladores
         }
 
 
-        public void AgregarContacto(string name, string rnc, string client, string Numero)
+        public void AgregarContacto(string name, string rnc, string Numero)
         {
             try
             {
-                string Query = "exec Add_Contact @Name, @Phone1, @Identifier, @Client";
+                string Query = "exec Add_Contact @Name, @Phone1, @Identifier";
                 SqlCommand cmd = new SqlCommand(Query, conex);
 
                 cmd.Parameters.AddWithValue("@Name", name);
                 cmd.Parameters.AddWithValue("@Phone1", Numero);
                 cmd.Parameters.AddWithValue("@Identifier", rnc);
-                cmd.Parameters.AddWithValue("@Client", client);
 
 
                 conex.Open();

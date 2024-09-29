@@ -31,10 +31,8 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cR_LabelDown6 = new CR_LabelDown();
             this.cbRnc = new Cr_ComboBox();
             this.cbRncContact = new CR_LabelDown();
-            this.cbClient = new Cr_ComboBox();
             this.txtPhone1Ctc = new Cr_Textbox();
             this.txtNombreCtc = new Cr_Textbox();
             this.cR_LabelDown4 = new CR_LabelDown();
@@ -84,10 +82,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cR_LabelDown6);
             this.panel1.Controls.Add(this.cbRnc);
             this.panel1.Controls.Add(this.cbRncContact);
-            this.panel1.Controls.Add(this.cbClient);
             this.panel1.Controls.Add(this.txtPhone1Ctc);
             this.panel1.Controls.Add(this.txtNombreCtc);
             this.panel1.Controls.Add(this.cR_LabelDown4);
@@ -98,17 +94,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(691, 273);
             this.panel1.TabIndex = 1;
-            // 
-            // cR_LabelDown6
-            // 
-            this.cR_LabelDown6.AutoSize = true;
-            this.cR_LabelDown6.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown6.Location = new System.Drawing.Point(426, 93);
-            this.cR_LabelDown6.Name = "cR_LabelDown6";
-            this.cR_LabelDown6.Size = new System.Drawing.Size(120, 20);
-            this.cR_LabelDown6.TabIndex = 81;
-            this.cR_LabelDown6.Text = "Cliente asociado";
             // 
             // cbRnc
             // 
@@ -134,19 +119,6 @@
             this.cbRncContact.Size = new System.Drawing.Size(98, 20);
             this.cbRncContact.TabIndex = 78;
             this.cbRncContact.Text = "Rnc o Cedula";
-            // 
-            // cbClient
-            // 
-            this.cbClient.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbClient.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbClient.BackColor = System.Drawing.Color.White;
-            this.cbClient.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cbClient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.cbClient.FormattingEnabled = true;
-            this.cbClient.Location = new System.Drawing.Point(359, 117);
-            this.cbClient.Name = "cbClient";
-            this.cbClient.Size = new System.Drawing.Size(232, 29);
-            this.cbClient.TabIndex = 77;
             // 
             // txtPhone1Ctc
             // 
@@ -187,7 +159,7 @@
             this.btnAgregContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregContact.ForeColor = System.Drawing.Color.White;
-            this.btnAgregContact.Location = new System.Drawing.Point(219, 185);
+            this.btnAgregContact.Location = new System.Drawing.Point(359, 105);
             this.btnAgregContact.Name = "btnAgregContact";
             this.btnAgregContact.Size = new System.Drawing.Size(232, 41);
             this.btnAgregContact.TabIndex = 6;
@@ -238,8 +210,6 @@
         private Cr_Textbox txtPhone1Ctc;
         private Cr_Textbox txtNombreCtc;
         private CR_LabelDown cbRncContact;
-        public Cr_ComboBox cbClient;
-        private CR_LabelDown cR_LabelDown6;
         public Cr_ComboBox cbRnc;
     }
 }

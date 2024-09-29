@@ -26,88 +26,7 @@ namespace SOD_General.Vistas.Taller.Clientes
     public partial class AddLocations : Form
     {
 
-        private void CrearYAbrirPDF()
-        {
-            // Ruta donde se creará el PDF en el escritorio del usuario "DEX"
-            string rutaPDF = @"C:\Users\DEX\Desktop\ArchivoPrueba.pdf";
-
-            // Crear el documento PDF con iTextSharp
-            iTextSharpText.Document documento = new iTextSharpText.Document();
-
-            try
-            {
-                using (FileStream fs = new FileStream(rutaPDF, FileMode.Create, FileAccess.Write, FileShare.None))
-                {
-                    PdfWriter writer = PdfWriter.GetInstance(documento, fs);
-                    documento.Open();
-
-                    // Definir las fuentes utilizando iTextSharp
-                    iTextSharpText.Font tituloFuente = iTextSharpText.FontFactory.GetFont(iTextSharpText.FontFactory.HELVETICA_BOLD, 18, iTextSharpText.BaseColor.BLACK);
-                    iTextSharpText.Font textoFuente = iTextSharpText.FontFactory.GetFont(iTextSharpText.FontFactory.HELVETICA, 12, iTextSharpText.BaseColor.BLACK);
-
-                    // Agregar el título
-                    iTextSharpText.Paragraph titulo = new iTextSharpText.Paragraph("Documento Generado", tituloFuente);
-                    titulo.Alignment = iTextSharpText.Element.ALIGN_CENTER;
-                    documento.Add(titulo);
-
-                    // Salto de línea
-                    documento.Add(new iTextSharpText.Paragraph("\n"));
-
-                    // Agregar el texto
-                    iTextSharpText.Paragraph texto = new iTextSharpText.Paragraph("Prueba1 - Este es un ejemplo de generación de PDF en WinForms.", textoFuente);
-                    documento.Add(texto);
-
-                    // Cerrar el documento
-                    documento.Close();
-                }
-
-                // Abrir el archivo PDF automáticamente
-                AbrirPDF(rutaPDF);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al crear o abrir el archivo PDF: " + ex.Message);
-            }
-        }
-
-        // Método para abrir el archivo PDF
-        private void AbrirPDF(string rutaArchivo)
-        {
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = rutaArchivo,
-                    UseShellExecute = true // Usa el shell del sistema operativo para abrir el archivo con la aplicación predeterminada
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al abrir el archivo PDF: " + ex.Message);
-            }
-        }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ClientController clieControl =  new ClientController();
+     ClientController clieControl =  new ClientController();
         public AddLocations()
         {
             InitializeComponent();
@@ -115,14 +34,13 @@ ClientController clieControl =  new ClientController();
 
         private void btn_AgregarClientes_Click(object sender, EventArgs e)
         {
-            CrearYAbrirPDF();
-        //   clieControl.AgregarSucursal(txtCliente.Text, txtDireccion.Text, txtNumero1.Text, txtNumero2.Text, CbRnc.SelectedItem.ToString(), CbContact.SelectedItem.ToString(), cbTipoCliente.SelectedItem.ToString());
-        //    txtCliente.Text = null;
-        //    txtDireccion.Text = null;
-        //    txtNumero1.Text = null;
-        //    txtNumero2.Text = null;
-        //    CbContact.SelectedItem = null;
-        //    CbRnc.SelectedItem = null;
+            clieControl.AgregarSucursal(txtCliente.Text, txtDireccion.Text, txtNumero1.Text, txtNumero2.Text, CbRnc.SelectedItem.ToString(), CbContact.SelectedItem.ToString(), cbTipoCliente.SelectedItem.ToString());
+            txtCliente.Text = null;
+            txtDireccion.Text = null;
+            txtNumero1.Text = null;
+            txtNumero2.Text = null;
+            CbContact.SelectedItem = null;
+            CbRnc.SelectedItem = null;
         }
 
         private void btnBuscarRnc_Click(object sender, EventArgs e)
@@ -202,6 +120,12 @@ ClientController clieControl =  new ClientController();
         {
             AddIdentifier addId = new AddIdentifier();
             addId.Show();
+        }
+
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            Exportar export = new Exportar();
+            export.PdfCrear();
         }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.btnNuevo = new Diseños.Botones_Nuevos();
+            this.btnCrear = new Diseños.Botones_Nuevos();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelCliente = new System.Windows.Forms.Panel();
@@ -48,8 +50,7 @@
             this.txtNumero1 = new Cr_Textbox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
             this.txtDireccion = new Cr_Textbox();
-            this.btnCrear = new Diseños.Botones_Nuevos();
-            this.btnNuevo = new Diseños.Botones_Nuevos();
+            this.btnPdf = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -69,6 +70,7 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.btnPdf);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.btnNuevo);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.btnCrear);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
@@ -79,6 +81,44 @@
             this.cR_SplitContainer1.Size = new System.Drawing.Size(725, 450);
             this.cR_SplitContainer1.SplitterDistance = 80;
             this.cR_SplitContainer1.TabIndex = 1;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnNuevo.BorderColor = System.Drawing.Color.Teal;
+            this.btnNuevo.BorderRadius = 40;
+            this.btnNuevo.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(572, 39);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(141, 35);
+            this.btnNuevo.TabIndex = 7;
+            this.btnNuevo.Text = "Crear Identidad";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnCrear.BorderColor = System.Drawing.Color.Teal;
+            this.btnCrear.BorderRadius = 40;
+            this.btnCrear.BorderSize = 0;
+            this.btnCrear.FlatAppearance.BorderSize = 0;
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCrear.ForeColor = System.Drawing.Color.White;
+            this.btnCrear.Location = new System.Drawing.Point(572, 0);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(141, 33);
+            this.btnCrear.TabIndex = 6;
+            this.btnCrear.Text = "Crear Contacto";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // cR_Subtitulos1
             // 
@@ -356,43 +396,23 @@
             this.txtDireccion.Size = new System.Drawing.Size(252, 30);
             this.txtDireccion.TabIndex = 66;
             // 
-            // btnCrear
+            // btnPdf
             // 
-            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnCrear.BorderColor = System.Drawing.Color.Teal;
-            this.btnCrear.BorderRadius = 40;
-            this.btnCrear.BorderSize = 0;
-            this.btnCrear.FlatAppearance.BorderSize = 0;
-            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCrear.ForeColor = System.Drawing.Color.White;
-            this.btnCrear.Location = new System.Drawing.Point(572, 0);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(141, 33);
-            this.btnCrear.TabIndex = 6;
-            this.btnCrear.Text = "Crear Contacto";
-            this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnNuevo.BorderColor = System.Drawing.Color.Teal;
-            this.btnNuevo.BorderRadius = 40;
-            this.btnNuevo.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(572, 39);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(141, 35);
-            this.btnNuevo.TabIndex = 7;
-            this.btnNuevo.Text = "Crear Identidad";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.btnPdf.BorderColor = System.Drawing.Color.Teal;
+            this.btnPdf.BorderRadius = 40;
+            this.btnPdf.BorderSize = 0;
+            this.btnPdf.FlatAppearance.BorderSize = 0;
+            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
+            this.btnPdf.Location = new System.Drawing.Point(11, 19);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Size = new System.Drawing.Size(78, 46);
+            this.btnPdf.TabIndex = 80;
+            this.btnPdf.Text = "PDF";
+            this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
             // 
             // AddLocations
             // 
@@ -440,5 +460,6 @@
         private Cr_ComboBox cbTipoCliente;
         private Diseños.Botones_Nuevos btnCrear;
         private Diseños.Botones_Nuevos btnNuevo;
+        private Diseños.Botones_Nuevos btnPdf;
     }
 }

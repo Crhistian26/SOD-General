@@ -590,6 +590,7 @@
     <Compile Include="Vistas\Taller\Equipos\VisualizarMarcas.Designer.cs">
       <DependentUpon>VisualizarMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Taller\Exportar.cs" />
     <Compile Include="Vistas\Taller\Inventario\AgregarPiezas.cs">
       <SubType>Form</SubType>
     </Compile>

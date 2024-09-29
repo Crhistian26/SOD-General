@@ -1,4 +1,6 @@
-﻿using SOD_General.Controladores;
+﻿using Modelos.Taller;
+using SOD_General.Controladores;
+using System;
 using System.Collections.Generic;
 using System.Security.RightsManagement;
 using System.Windows.Forms;
@@ -17,10 +19,7 @@ namespace SOD_General.Vistas.Taller.Registrar_entrada
         }
 
        
-        private void cR_DataGriedView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         public void cargarDgv(int a)
         {
@@ -35,6 +34,23 @@ namespace SOD_General.Vistas.Taller.Registrar_entrada
         private void VisualizarEntradas_Load(object sender, System.EventArgs e)
         {
             cargarDgv(IdPetition);
+        }
+
+        private void dgvEntrys_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow dgvRows = dgvEntrys.Rows[e.RowIndex];
+                int idEntr = Convert.ToInt32(dgvRows.Cells[0].Value);
+
+                List<Accesories> listAcc = entryOrderController.ObtenerAccesorios(idEntr);
+
+                dgvVerAccesorios.Rows.Clear();
+                foreach (var list in listAcc)
+                {
+                    dgvVerAccesorios.Rows.Add(list.idAccesories, list.nameAccesories, list._Enable);
+                }
+            }
         }
     }
 }

@@ -365,5 +365,61 @@ namespace SOD_General.Controladores
                 return null;
             }
         }
+
+        public List<Accesories> ObtenerAccesorios(int id)
+        {
+             try
+            {
+                List<Accesories> listAcces = new List<Accesories>();
+                //El query.
+                string Query = "exec Get_AccesoriesEntrance @idEntrance";
+
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idEntrance", id);
+
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Accesories acces;
+                    int idAc = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    bool enab = reader.GetBoolean(2);
+
+                    acces = new Accesories(idAc, name, enab);
+                    listAcces.Add(acces);
+                }
+
+                conex.Close();
+                return listAcces;
+            }
+
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+
     }
 }
