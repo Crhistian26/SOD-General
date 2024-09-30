@@ -83,6 +83,13 @@ namespace SOD_General.Vistas.Taller
                 //abrir el documento para escribir en el
                 pdfDoc.Open();
 
+                string rutaImagen = "C:\\Users\\DEX\\Documents\\GitHub\\SOD-General\\SOD-General\\SOD-General\\SOD-General\\Resources\\Logo de la app.png"; // Cambia esta ruta a la ubicación de tu imagen
+                Image imagen = Image.GetInstance(rutaImagen);
+
+                // Ajusta la posición de la imagen
+                imagen.SetAbsolutePosition(10, pdfDoc.PageSize.Height - imagen.Height - 10); // 10 unidades de margen
+                pdfDoc.Add(imagen);
+
                 pdfDoc.AddTitle("OrdenDeEntrada");
                 pdfDoc.Add(new iTextSharp.text.Paragraph("Contenido del PDF"));
 
