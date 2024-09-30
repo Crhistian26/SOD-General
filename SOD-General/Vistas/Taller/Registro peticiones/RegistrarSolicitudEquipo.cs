@@ -277,9 +277,9 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         {
             string name = "pedro";
             Exportar export = new Exportar();
-            export.PdfCrear(29);
+            export.PdfCrear(28);
 
-            
+
 
             //foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
             //{

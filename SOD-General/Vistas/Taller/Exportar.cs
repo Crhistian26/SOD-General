@@ -23,20 +23,8 @@ namespace SOD_General.Vistas.Taller
             List<EntryOrderController.DataExport> EDE = new List<EntryOrderController.DataExport>();
             EDE = eoc.exportacion(id);
 
-            var ByName = EDE
-                .Select(e => e.cliente).First().ToString(); // Crea un nuevo objeto con el nombre y la lista de personas
-
-            var ByAddress = EDE
-                .Select(e => e.direccion).First().ToString();
-
-            var ByPhone1 = EDE
-                .Select(e => e.phone1).First().ToString();
-
-            var ByOrden = EDE
-                .Select(e => e.idPeti).First().ToString();
-
-            var ByDate = EDE
-                .Select(e => e.Date).First().ToString();
+            List<EntryOrderController.DataExport> listaDE = new List<EntryOrderController.DataExport>();
+            listaDE = eoc.exportacion(id);
             //ruta de creacion
             // Obtener la ruta del escritorio
 
@@ -66,13 +54,16 @@ namespace SOD_General.Vistas.Taller
             try
             {
                 //inicializar el pdfWriter
-                itstPW.GetInstance(pdfDoc, fs);
+                itstPW writer = PdfWriter.GetInstance(pdfDoc, fs);
+
+               
+                
 
                 //abrir el documento para escribir en el
                 pdfDoc.Open();
 
                 ///Seccion para la imagen del logo
-                    string rutaImagen = "C:\\Users\\DEX\\Documents\\GitHub\\SOD-General\\SOD-General\\SOD-General\\SOD-General\\Resources\\sod.png"; // Cambia esta ruta a la ubicación de tu imagen
+                string rutaImagen = "C:\\Users\\DEX\\Documents\\GitHub\\SOD-General\\SOD-General\\SOD-General\\SOD-General\\Resources\\sod.png"; // Cambia esta ruta a la ubicación de tu imagen
                                                                                                                                                                 // Cargar la imagen
                     Image imagen = Image.GetInstance(rutaImagen);
 
@@ -231,8 +222,10 @@ namespace SOD_General.Vistas.Taller
                 ///Seccion agregar datos
                     Font fontTit4 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
 
-                    // 3. Crear el texto a insertar al lado de la imagen
-                    Paragraph textTit4 = new Paragraph(ByName, fontTit4);
+
+                // 3. Crear el texto a insertar al lado de la imagen
+                string name = listaDE.Select(e => e.cliente).First().ToString();
+                Paragraph textTit4 = new Paragraph(name, fontTit4);
 
                     // 4. Añadir margen al texto (margen derecho de la imagen)
                     // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
@@ -247,7 +240,8 @@ namespace SOD_General.Vistas.Taller
                     Font fontTit5 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
 
                     // 3. Crear el texto a insertar al lado de la imagen
-                    Paragraph textTit5 = new Paragraph(ByAddress, fontTit5);
+                    string address = listaDE.Select(a => a.direccion).First().ToString();
+                    Paragraph textTit5 = new Paragraph(address, fontTit5);
 
                     // 4. Añadir margen al texto (margen derecho de la imagen)
                     // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
@@ -260,8 +254,9 @@ namespace SOD_General.Vistas.Taller
                 ///Seccion agregar datos
                     Font fontTit6 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
 
-                    // 3. Crear el texto a insertar al lado de la imagen
-                    Paragraph textTit6 = new Paragraph(ByPhone1, fontTit6);
+                // 3. Crear el texto a insertar al lado de la imagen
+                    string Phone1 = listaDE.Select(a => a.phone1).First().ToString();
+                    Paragraph textTit6 = new Paragraph(Phone1, fontTit6);
 
                     // 4. Añadir margen al texto (margen derecho de la imagen)
                     // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
@@ -274,8 +269,9 @@ namespace SOD_General.Vistas.Taller
                 ///Seccion agregar datos
                     Font fontTit7 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
 
-                    // 3. Crear el texto a insertar al lado de la imagen
-                    Paragraph textTit7 = new Paragraph(ByOrden, fontTit7);
+                // 3. Crear el texto a insertar al lado de la imagen
+                    string Orden = listaDE.Select(a => a.idPeti).First().ToString();
+                    Paragraph textTit7 = new Paragraph(Orden, fontTit7);
 
                     // 4. Añadir margen al texto (margen derecho de la imagen)
                     // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
@@ -289,8 +285,9 @@ namespace SOD_General.Vistas.Taller
                 ///Seccion agregar datos
                     Font fontTit8 = FontFactory.GetFont("Arial", 11, Font.NORMAL, BaseColor.BLACK);
 
-                    // 3. Crear el texto a insertar al lado de la imagen
-                    Paragraph textTit8 = new Paragraph(ByDate, fontTit8);
+                // 3. Crear el texto a insertar al lado de la imagen
+                    string Date = listaDE.Select(a => a.Date).First().ToString();
+                    Paragraph textTit8 = new Paragraph(Date, fontTit8);
 
                     // 4. Añadir margen al texto (margen derecho de la imagen)
                     // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
@@ -300,13 +297,14 @@ namespace SOD_General.Vistas.Taller
 
                     pdfDoc.Add(textTit8);
 
-
-                //creacion de la tabla
+                // Crear la tabla con 4 columnas
                 PdfPTable tb = new PdfPTable(4);
-                int[] columnWidths = new int[] { 15, 15, 15, 55 }; // Porcentajes para cada columna (suman 100)
 
+                // Porcentajes para cada columna (la suma debe ser 100%)
+                float[] columnWidths = new float[] { 15f, 15f, 15f, 55f };
                 tb.SetWidths(columnWidths);
 
+                // Crear y configurar las celdas
                 PdfPCell clNombre = new PdfPCell(new Phrase("Marca", fontNegrita));
                 clNombre.BorderWidth = 1;
                 clNombre.BorderWidthBottom = 1;
@@ -323,13 +321,71 @@ namespace SOD_General.Vistas.Taller
                 clFallo.BorderWidth = 1;
                 clFallo.BorderWidthBottom = 1;
 
+                // Agregar las celdas a la tabla
                 tb.AddCell(clNombre);
                 tb.AddCell(clModelo);
                 tb.AddCell(clSerie);
                 tb.AddCell(clFallo);
 
+                foreach (var registro in listaDE)
+                {
+                    clNombre = new PdfPCell(new Phrase(registro.marca, fontTit8));
+                    clNombre.BorderWidth = 1;
+
+                    clModelo = new PdfPCell(new Phrase(registro.model, fontTit8));
+                    clModelo.BorderWidth = 1;
+
+                    clSerie = new PdfPCell(new Phrase(registro.serial,fontTit8));
+                    clSerie.BorderWidth = 1;
+
+                    clFallo = new PdfPCell(new Phrase("registro.fallaadsssssssssssadssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", fontTit8));
+                    clFallo.BorderWidth = 1;
+
+                    tb.AddCell(clNombre);
+                    tb.AddCell(clModelo);
+                    tb.AddCell(clSerie);
+                    tb.AddCell(clFallo);
+                }
+
+                // Establecer el ancho total de la tabla
+                tb.TotalWidth = 525f; // Ajusta el ancho según sea necesario
+                tb.PaddingTop = 600;
+                // Obtener el PdfContentByte del PdfWriter
+                PdfContentByte canvas = writer.DirectContent;
+
+                // Definir la posición absoluta de la tabla (por ejemplo, 100 puntos desde la izquierda y 600 desde la parte inferior)
+                float posX = 25f;
+                float posY = 600f;
+
+//Crear la tabla para los accesorios
+                PdfPTable tbAccesorios = new PdfPTable(2);
+                float[] column = new float[5] { 20f,20f,20f,20f,20f };
+
+                tbAccesorios.SetWidths(column);
+
+                foreach (var list in listaDE)
+                {
+                    string serial = list.serial.ToString();
+
+                    PdfPCell clSerial = new PdfPCell(new Phrase($"{serial}", fontNegrita));
+                    clSerial.BorderWidth = 1;
+                    clSerial.BorderWidth = 1;
+
+                    tbAccesorios.AddCell(clSerial);
+
+                    clSerial = new PdfPCell(new Phrase(list.accesories.ToString(), fontTit8));
+                    tbAccesorios.AddCell(clSerial);
+                }
+
+                tbAccesorios.TotalWidth = 525f; // Ajusta el ancho según sea necesario
+                PdfContentByte canvas2 = writer.DirectContent;
+
+                // Definir la posición absoluta de la tabla (por ejemplo, 100 puntos desde la izquierda y 600 desde la parte inferior)
+                float posX2 = 25f;
+                float posY2 = 600f;
 
                 pdfDoc.Add(tb);
+                pdfDoc.Add(tbAccesorios);
                 Process.Start(rutaPDF);
 
             }
