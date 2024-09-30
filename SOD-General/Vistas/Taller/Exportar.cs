@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Bibliography;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using SOD_General.Controladores;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,11 +17,29 @@ namespace SOD_General.Vistas.Taller
 {
     public class Exportar
     {
-        public void PdfCrear(string cliente)
+        EntryOrderController eoc = new EntryOrderController();
+        public void PdfCrear(int id)
         {
+            List<EntryOrderController.DataExport> EDE = new List<EntryOrderController.DataExport>();
+            EDE = eoc.exportacion(id);
+
+            var ByName = EDE
+                .Select(e => e.cliente).First().ToString(); // Crea un nuevo objeto con el nombre y la lista de personas
+
+            var ByAddress = EDE
+                .Select(e => e.direccion).First().ToString();
+
+            var ByPhone1 = EDE
+                .Select(e => e.phone1).First().ToString();
+
+            var ByOrden = EDE
+                .Select(e => e.idPeti).First().ToString();
+
+            var ByDate = EDE
+                .Select(e => e.Date).First().ToString();
             //ruta de creacion
             // Obtener la ruta del escritorio
-            
+
             string rutaEscritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             // Crear la carpeta "MiCarpetaPDF" en el escritorio si no existe
@@ -213,7 +232,7 @@ namespace SOD_General.Vistas.Taller
                     Font fontTit4 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
 
                     // 3. Crear el texto a insertar al lado de la imagen
-                    Paragraph textTit4 = new Paragraph(cliente, fontTit4);
+                    Paragraph textTit4 = new Paragraph(ByName, fontTit4);
 
                     // 4. Añadir margen al texto (margen derecho de la imagen)
                     // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
@@ -228,7 +247,7 @@ namespace SOD_General.Vistas.Taller
                     Font fontTit5 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
 
                     // 3. Crear el texto a insertar al lado de la imagen
-                    Paragraph textTit5 = new Paragraph("calle x y z", fontTit5);
+                    Paragraph textTit5 = new Paragraph(ByAddress, fontTit5);
 
                     // 4. Añadir margen al texto (margen derecho de la imagen)
                     // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
@@ -238,7 +257,79 @@ namespace SOD_General.Vistas.Taller
 
                     pdfDoc.Add(textTit5);
 
-                
+                ///Seccion agregar datos
+                    Font fontTit6 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit6 = new Paragraph(ByPhone1, fontTit6);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit6.IndentationLeft = 70;
+                    textTit6.SpacingBefore = 17;  // Margen superior si se necesita más espacio
+                    textTit6.SpacingAfter = 1;   // Margen inferior
+
+                    pdfDoc.Add(textTit6);
+
+                ///Seccion agregar datos
+                    Font fontTit7 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit7 = new Paragraph(ByOrden, fontTit7);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit7.IndentationLeft = 420;
+                    textTit7.SpacingBefore = -90;  // Margen superior si se necesita más espacio
+                    textTit7.SpacingAfter = 0;   // Margen inferior
+
+                pdfDoc.Add(textTit7);
+
+
+                ///Seccion agregar datos
+                    Font fontTit8 = FontFactory.GetFont("Arial", 11, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit8 = new Paragraph(ByDate, fontTit8);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit8.IndentationLeft = 390;
+                    textTit8.SpacingBefore = 20;  // Margen superior si se necesita más espacio
+                    textTit8.SpacingAfter = 0;   // Margen inferior
+
+                    pdfDoc.Add(textTit8);
+
+
+                //creacion de la tabla
+                PdfPTable tb = new PdfPTable(4);
+                int[] columnWidths = new int[] { 15, 15, 15, 55 }; // Porcentajes para cada columna (suman 100)
+
+                tb.SetWidths(columnWidths);
+
+                PdfPCell clNombre = new PdfPCell(new Phrase("Marca", fontNegrita));
+                clNombre.BorderWidth = 1;
+                clNombre.BorderWidthBottom = 1;
+
+                PdfPCell clModelo = new PdfPCell(new Phrase("Modelo", fontNegrita));
+                clModelo.BorderWidth = 1;
+                clModelo.BorderWidthBottom = 1;
+
+                PdfPCell clSerie = new PdfPCell(new Phrase("Serie", fontNegrita));
+                clSerie.BorderWidth = 1;
+                clSerie.BorderWidthBottom = 1;
+
+                PdfPCell clFallo = new PdfPCell(new Phrase("Fallo", fontNegrita));
+                clFallo.BorderWidth = 1;
+                clFallo.BorderWidthBottom = 1;
+
+                tb.AddCell(clNombre);
+                tb.AddCell(clModelo);
+                tb.AddCell(clSerie);
+                tb.AddCell(clFallo);
+
+
+                pdfDoc.Add(tb);
                 Process.Start(rutaPDF);
 
             }

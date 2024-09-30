@@ -1,4 +1,5 @@
-﻿using Modelos.Control_de_usuarios;
+﻿using DocumentFormat.OpenXml.Office.CoverPageProps;
+using Modelos.Control_de_usuarios;
 using Modelos.Taller;
 using SOD_General.Vistas.Taller.Registro_peticiones;
 using System;
@@ -12,10 +13,49 @@ using System.Windows.Forms;
 
 namespace SOD_General.Controladores
 {
+
+    
+
     public class EntryOrderController
     {
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
+
+        public struct DataExport
+        {
+            public string serial;
+            public string falla;
+            public DateTime Date;
+            public string cliente;
+            public string contact;
+            public string identifier;
+            public string type;
+            public string marca;
+            public string nameEquip;
+            public string model;
+            public string accesories;
+            public int idPeti;
+            public string direccion;
+            public string phone1;
+
+            public DataExport(string serial, string falla, DateTime date, string cliente, string contact, string identifier, string type, string marca, string nameEquip, string model, string accesories, int idPeti, string direccion, string phone1)
+            {
+                this.serial = serial;
+                this.falla = falla;
+                this.Date = date;
+                this.cliente = cliente;
+                this.contact = contact;
+                this.identifier = identifier;
+                this.type = type;
+                this.marca = marca;
+                this.nameEquip = nameEquip;
+                this.model = model;
+                this.accesories = accesories;
+                this.idPeti = idPeti;
+                this.direccion = direccion; 
+                this.phone1 = phone1;   
+            }
+        }
 
         public struct EntradaSt
         {
@@ -419,7 +459,70 @@ namespace SOD_General.Controladores
                 return null;
             }
         }
+        public List<DataExport> exportacion(int id)
+        {
+            try
+            {
+                List<DataExport> listExport = new List<DataExport>();
+                //El query.
+                string Query = "exec Get_DataExport @idPetitions";
 
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+
+                //Los parametros
+                cmd.Parameters.AddWithValue("@idPetitions", id);
+
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    DataExport DE;
+                    string serial = reader.GetString(0);
+                    string falla = reader.GetString(1);
+                    DateTime Date = reader.GetDateTime(2);
+                    string cliente = reader.GetString(3);
+                    string contact = reader.GetString(4);
+                    string identifier = reader.GetString(5); 
+                    string type = reader.GetString(6);
+                    string marca = reader.GetString(7);
+                    string nameEquip = reader.GetString(8);
+                    string model = reader.GetString(9);
+                    string accesories = reader.GetString(10);
+                    int idPeti = reader.GetInt32(11);
+                    string direccion = reader.GetString(12);
+                    string phone1 = reader.GetString(13);
+
+                    DE = new DataExport(serial, falla, Date, cliente, contact, identifier, type, marca, nameEquip, model, accesories, idPeti, direccion, phone1);
+                    listExport.Add(DE);
+                }
+
+                conex.Close();
+                return listExport;
+            }
+
+            catch (SqlException ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error de la base de datos: " + ex.Message.ToString());
+                return null;
+            }
+
+            catch (Exception ex)
+            {
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                MessageBox.Show("Error del sistema: " + ex.Message.ToString());
+                return null;
+            }
+        }
 
     }
 }

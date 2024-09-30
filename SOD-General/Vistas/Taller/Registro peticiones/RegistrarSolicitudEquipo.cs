@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Taller.Registro_peticiones
 {
+
     public partial class RegistrarSolicitudEquipo : Form
     {
+       
+
         AppVistaGeneral vista;
         List<EquipType> TipoEquipo;
         List<Brand> marcas;
@@ -32,6 +35,7 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
         bool bolean = false;
         ClientController ClController = new ClientController();
         EntryOrderController EnOrController = new EntryOrderController();
+        
         
         public RegistrarSolicitudEquipo(int idPeticion)
         {
@@ -271,26 +275,31 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
 
         private void botones_Nuevos2_Click(object sender, System.EventArgs e)
         {
+            string name = "pedro";
+            Exportar export = new Exportar();
+            export.PdfCrear(29);
 
-            foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
-            {
-                if (!dgvr.IsNewRow)
-                {
-                    EnOrController.AgregarEntradas(Convert.ToInt32(txtIdEntrada.Text), Convert.ToInt32(dgvr.Cells[0].Value), 1, dgvr.Cells[5].Value.ToString(), dgvr.Cells[6].Value.ToString(), true);
-                    AgregarAccesorios addAcces = new AgregarAccesorios();
-                    addAcces.Show();
-                }
-            }
-            dgvEquipoRegistro.Rows.Clear();
+            
 
-            cbModelo.Enabled = true;
-            cbLinea.Enabled = true;
-            cbTipoEquipo.Enabled = true;
-            cbMarca.Enabled = true;
-            txtSerial.Enabled = true;
-            txtFalla.Enabled = true;
+            //foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
+            //{
+            //    if (!dgvr.IsNewRow)
+            //    {
+            //        EnOrController.AgregarEntradas(Convert.ToInt32(txtIdEntrada.Text), Convert.ToInt32(dgvr.Cells[0].Value), 1, dgvr.Cells[5].Value.ToString(), dgvr.Cells[6].Value.ToString(), true);
+            //        AgregarAccesorios addAcces = new AgregarAccesorios();
+            //        addAcces.Show();
+            //    }
+            //}
+            //dgvEquipoRegistro.Rows.Clear();
 
-            btnAgregRegistro.Enabled = true;
+            //cbModelo.Enabled = true;
+            //cbLinea.Enabled = true;
+            //cbTipoEquipo.Enabled = true;
+            //cbMarca.Enabled = true;
+            //txtSerial.Enabled = true;
+            //txtFalla.Enabled = true;
+
+            //btnAgregRegistro.Enabled = true;
 
         }
     }
