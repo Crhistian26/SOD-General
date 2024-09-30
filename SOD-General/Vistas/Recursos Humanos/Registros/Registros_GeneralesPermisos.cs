@@ -127,7 +127,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     {
                         win.Close();
                     }
-                    Control_Permisos ver = new Control_Permisos();
+
+                    int h = Convert.ToInt32(cR_DataGriedView1.Rows[e.RowIndex].Cells[0].Value);
+                    Record_Permission permiso = permisos.Where(a => a.IdRecord == h).Select(a => a).First();
+                    Control_Permisos ver = new Control_Permisos(permiso);
                     ver.Show();
                 }
             }

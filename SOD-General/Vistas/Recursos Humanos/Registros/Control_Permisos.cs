@@ -1,9 +1,11 @@
 ﻿using Modelos.AsistenciasYPermisos;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
+using SOD_General.Vistas.Taller.Controles_de_Equipo;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
@@ -20,6 +22,8 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             InitializeComponent();
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
+            this.botones_Nuevos1.Click += Add_Permission;
+            AddPermissionView();
         }
         public Control_Permisos(Record_Permission record)
         {
@@ -27,87 +31,19 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
             this.Permission_Record = record;
-            this.botones_Nuevos1.Click += Add_Permission;
+            this.botones_Nuevos1.Click += Edit_Permission;
+            EditPermissionView();
+            cR_Subtitulos1.Text = "Editar permiso";
+            botones_Nuevos1.Text = "Editar";
         }
 
-        private void AddPermissionView()
-        {
-
-        }
-
-        private void EditPermissionView()
-        {
-
-        }
-        private void CentrarElementos()
-        {
-            Point SubL = cR_Subtitulos1.Location;
-            cR_Subtitulos1.Location = _size.CentrarElementosX(SubL, cR_Subtitulos1.Size, this.Size);
-
-            Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
-            panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
-        }
-
-        private void LlenarCombobox()
-        {
-            foreach (Employee emp in empleados)
-            {
-                cr_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
-            }
-            foreach (Model_Reason rea in motivos)
-            {
-                cr_ComboBox2.Items.Add(rea._Reason);
-            }
-        }
-        private void Agregar_Permiso_Load(object sender, EventArgs e)
-        {
-            CentrarElementos();
-            LlenarCombobox();
-            cR_Checkbox1.Checked = true;
-            cR_Checkbox2.Checked = true;
-        }
-
-        private void Agregar_Permiso_Resize(object sender, EventArgs e)
-        {
-            CentrarElementos();
-        }
-
-        private void soD_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cR_Checkbox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cR_Checkbox1.Checked == true)
-            {
-                panel2.Visible = false;
-            }
-            else
-            {
-                panel2.Visible = true;
-            }
-
-        }
-
-        private void cR_Checkbox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cR_Checkbox2.Checked == true)
-            {
-                panel3.Visible = false;
-            }
-            else
-            {
-                panel3.Visible = true;
-            }
-        }
-
-        private void Add_Permission(object sender, EventArgs e)
+        //Esta funcion es la que se encarga de obtener el reporte en la ventana.
+        private Record_Permission GetPermissionData()
         {
             DateTime Begin = new DateTime();
             DateTime End = new DateTime();
 
-            if(cR_Checkbox1.Checked)
+            if (cR_Checkbox1.Checked)
             {
                 var day = _size.Days[cR_DateTimePicker1.Value.DayOfWeek];
                 var hello = new DateTime
@@ -157,19 +93,169 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 End = hello;
             }
 
+            int id = 0;
+
+            if(Permission_Record != null)
+            {
+                id = Permission_Record.IdRecord;
+            }
+
             Record_Permission record = new Record_Permission(
-                    0,
+                    id,
                     empleados[cr_ComboBox1.SelectedIndex].IdEmployee,
                     motivos[cr_ComboBox2.SelectedIndex].IdReason,
                     soD_TextBox2.Text,
                     Begin,
                     End
                 );
-            if (control.Add_Permission(record))
+
+            return record;
+        }
+
+        private void AddPermissionView()
+        {
+            cr_ComboBox1.Visible = true;
+            cr_Textbox1.Visible = false;
+            LlenarCombobox();
+        }
+
+        private void EditPermissionView()
+        {
+
+            cr_ComboBox1.Visible = false;
+            cr_Textbox1.Visible = true;
+            cr_Textbox1.Text = Permission_Record._Name;
+            soD_TextBox2.Text = Permission_Record._Description;
+            LlenarCombobox();
+
+            cr_ComboBox2.SelectedItem = motivos.Where(a => a._Reason == Permission_Record._Reason)
+                    .Select(a => a._Reason).First();
+
+            SelectHours();
+        }
+
+        private void SelectHours()
+        {
+            TimeSpan start = _size.Days[Permission_Record.Begin_Date.DayOfWeek].JobStart;
+            TimeSpan end = _size.Days[Permission_Record.End_Date.DayOfWeek].JobEnd;
+
+            TimeSpan startPermission = new TimeSpan(
+                Permission_Record.Begin_Date.Hour,
+                Permission_Record.Begin_Date.Minute,
+                0
+                );
+
+            TimeSpan endPermission = new TimeSpan(
+                Permission_Record.End_Date.Hour,
+                Permission_Record.End_Date.Minute,
+                0
+                );
+
+            (cR_TBhora1.Text,cR_TBminutos1.Text,cr_ComboBox3.SelectedItem) = _size.FiltrarHorasComb(startPermission);
+            (cR_TBhora2.Text, cR_TBminutos2.Text, cr_ComboBox4.SelectedItem) = _size.FiltrarHorasComb(endPermission);
+
+            if ( startPermission == start)
+            {
+                cR_Checkbox1.Checked = true;
+            }
+            else
+            {
+                cR_Checkbox1.Checked = false;
+            }
+
+            if (endPermission == end)
+            {
+                cR_Checkbox2.Checked = true;
+            }
+            else
+            {
+                cR_Checkbox2.Checked = false;
+            }
+        }
+
+        private void CentrarElementos()
+        {
+            Point SubL = cR_Subtitulos1.Location;
+            cR_Subtitulos1.Location = _size.CentrarElementosX(SubL, cR_Subtitulos1.Size, this.Size);
+
+            Size panel = new Size(cR_SplitContainer1.Width, (cR_SplitContainer1.Height - cR_SplitContainer1.SplitterDistance));
+            panel1.Location = _size.CentrarElementosXY(panel1.Size, panel);
+        }
+
+        private void LlenarCombobox()
+        {
+            foreach (Employee emp in empleados)
+            {
+                cr_ComboBox1.Items.Add(emp._Name + " " + emp._Lastname);
+            }
+            foreach (Model_Reason rea in motivos)
+            {
+                cr_ComboBox2.Items.Add(rea._Reason);
+            }
+        }
+        private void Agregar_Permiso_Load(object sender, EventArgs e)
+        {
+            CentrarElementos();
+
+            cR_Checkbox1.Checked = true;
+            cR_Checkbox2.Checked = true;
+        }
+
+        private void Agregar_Permiso_Resize(object sender, EventArgs e)
+        {
+            CentrarElementos();
+        }
+
+        private void soD_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cR_Checkbox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cR_Checkbox1.Checked == true)
+            {
+                panel2.Visible = false;
+            }
+            else
+            {
+                panel2.Visible = true;
+            }
+
+        }
+
+        private void cR_Checkbox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cR_Checkbox2.Checked == true)
+            {
+                panel3.Visible = false;
+            }
+            else
+            {
+                panel3.Visible = true;
+            }
+        }
+
+        private void Add_Permission(object sender, EventArgs e)
+        {
+            if (control.Add_Permission(GetPermissionData()))
             {
                 control.Reset_VisualPermisos();
                 this.Close();
             }
+        }
+
+        private void Edit_Permission(object sender, EventArgs e)
+        {
+            if (control.Edit_Permission(GetPermissionData()))
+            {
+                control.Reset_VisualPermisos();
+                this.Close();
+            }
+        }
+
+        private void cr_Textbox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

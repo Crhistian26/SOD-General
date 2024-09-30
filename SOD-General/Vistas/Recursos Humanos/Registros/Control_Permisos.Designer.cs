@@ -32,6 +32,7 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cr_Textbox1 = new Cr_Textbox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cR_LabelDown7 = new CR_LabelDown();
             this.cr_ComboBox4 = new Cr_ComboBox();
@@ -103,6 +104,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cr_Textbox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cR_Checkbox2);
@@ -123,6 +125,16 @@
             this.panel1.Size = new System.Drawing.Size(922, 368);
             this.panel1.TabIndex = 0;
             // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(9, 32);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(348, 25);
+            this.cr_Textbox1.TabIndex = 38;
+            this.cr_Textbox1.TextChanged += new System.EventHandler(this.cr_Textbox1_TextChanged);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.cR_LabelDown7);
@@ -134,6 +146,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 72);
             this.panel3.TabIndex = 37;
+            this.panel3.Visible = false;
             // 
             // cR_LabelDown7
             // 
@@ -209,6 +222,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 72);
             this.panel2.TabIndex = 36;
+            this.panel2.Visible = false;
             // 
             // cR_LabelDown8
             // 
@@ -374,7 +388,6 @@
             this.botones_Nuevos1.TabIndex = 11;
             this.botones_Nuevos1.Text = "Agregar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
-            this.botones_Nuevos1.Click += new System.EventHandler(this.Add_Permission);
             // 
             // cR_DateTimePicker1
             // 
@@ -490,5 +503,6 @@
         private CR_TBminutos cR_TBminutos2;
         private CR_LabelDown cR_LabelDown9;
         private CR_LabelDown cR_LabelDown8;
+        private Cr_Textbox cr_Textbox1;
     }
 }
