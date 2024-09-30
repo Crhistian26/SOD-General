@@ -16,39 +16,8 @@ namespace SOD_General.Vistas.Taller
 {
     public class Exportar
     {
-        public void PdfCrear()
+        public void PdfCrear(string cliente)
         {
-            //    //primer codigo para comparar
-            //    try
-            //    {
-
-            //        // Crear el documento PDF
-            //        itst.Document documento = new itst.Document();
-            //        PdfWriter.GetInstance(documento, new FileStream(rutaPDF, FileMode.Create));
-
-            //        // Abrir el documento para agregar contenido
-            //        documento.Open();
-
-            //        // Agregar un título (opcional)
-            //        documento.AddTitle("Mi Documento PDF de Ejemplo");
-
-            //        // Agregar un párrafo de ejemplo al documento
-            //        documento.Add(new Paragraph("Este es un documento PDF creado usando iTextSharp en C#."));
-
-            //        // Cerrar el documento
-            //        documento.Close();
-            //        Process.Start(rutaPDF);
-
-            //        // Confirmación
-            //        MessageBox.Show("El documento PDF se ha creado y guardado en: " + rutaPDF);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Error: " + ex.Message);
-            //    }
-
-
-            //segundo codigo para comparar
             //ruta de creacion
             // Obtener la ruta del escritorio
             
@@ -83,26 +52,193 @@ namespace SOD_General.Vistas.Taller
                 //abrir el documento para escribir en el
                 pdfDoc.Open();
 
-                string rutaImagen = "C:\\Users\\DEX\\Documents\\GitHub\\SOD-General\\SOD-General\\SOD-General\\SOD-General\\Resources\\sod.png"; // Cambia esta ruta a la ubicación de tu imagen
-                                                                                                                                                            // Cargar la imagen
-                Image imagen = Image.GetInstance(rutaImagen);
+                ///Seccion para la imagen del logo
+                    string rutaImagen = "C:\\Users\\DEX\\Documents\\GitHub\\SOD-General\\SOD-General\\SOD-General\\SOD-General\\Resources\\sod.png"; // Cambia esta ruta a la ubicación de tu imagen
+                                                                                                                                                                // Cargar la imagen
+                    Image imagen = Image.GetInstance(rutaImagen);
 
-                // Establecer el tamaño deseado
-                float width = 100;  // ancho en puntos
-                float height = 100; // alto en puntos
+                    // Establecer el tamaño deseado
+                    float width = 100;  // ancho en puntos
+                    float height = 100; // alto en puntos
 
-                // Escalar la imagen (opcional, pero se recomienda para mantener proporciones)
-                imagen.ScaleToFit(width, height);
+                    // Escalar la imagen (opcional, pero se recomienda para mantener proporciones)
+                    imagen.ScaleToFit(width, height);
 
-                // Establecer la posición de la imagen
-                imagen.SetAbsolutePosition(30, pdfDoc.PageSize.Height - 50 - 30); // 10 puntos de margen desde la parte superior
+                    // Establecer la posición de la imagen
+                    imagen.SetAbsolutePosition(30, pdfDoc.PageSize.Height - 50 - 30); // 10 puntos de margen desde la parte superior
 
-                // Agregar la imagen al documento PDF
-                pdfDoc.Add(imagen);
+                    // Agregar la imagen al documento PDF
+                    pdfDoc.Add(imagen);
+                
+                ///Seccion para el titulo de la empresa
+                    Font fontNegrita = FontFactory.GetFont("Arial", 14, Font.BOLD, BaseColor.BLACK);
 
-                pdfDoc.AddTitle("OrdenDeEntrada");
-               // pdfDoc.Add(new iTextSharp.text.Paragraph("Contenido del PDF"));
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph texto = new Paragraph("SOLUCIONES DE OFICINA DIAZ, SRL", fontNegrita);
 
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    texto.IndentationLeft = 160;
+                    texto.SpacingBefore =-5;  // Margen superior si se necesita más espacio
+                    texto.SpacingAfter = 1;   // Margen inferior
+
+                    // 5. Agregar el texto al documento
+                    pdfDoc.Add(texto);
+
+                ///Seccion para subtitulos
+                    Font fontSub = FontFactory.GetFont("Arial", 11, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textSub = new Paragraph("Ventas y servicios de equipos de oficina", fontSub);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textSub.IndentationLeft = 185;
+                    textSub.SpacingBefore = -2;  // Margen superior si se necesita más espacio
+                    textSub.SpacingAfter = 1;   // Margen inferior
+
+                    pdfDoc.Add(textSub);
+
+                ///Seccion para subtitulos 2
+                    Font fontSub2 = FontFactory.GetFont("Arial", 11, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textSub2 = new Paragraph("RNC 101-86849-1", fontSub);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textSub2.IndentationLeft = 240;
+                    textSub2.SpacingBefore = 0;  // Margen superior si se necesita más espacio
+                    textSub2.SpacingAfter = 1;   // Margen inferior
+
+
+                ///Seccion para subtitulos 3
+                    Font fontSub3 = FontFactory.GetFont("Arial", 18, Font.BOLD, BaseColor.RED);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textSub3 = new Paragraph("ORDEN DE ENTRADA", fontSub3);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textSub3.IndentationLeft = 185;
+                    textSub3.SpacingBefore = 5;  // Margen superior si se necesita más espacio
+                    textSub3.SpacingAfter = 1;   // Margen inferior
+
+                    pdfDoc.Add(textSub3);
+
+                ///Seccion para titulo datos 1
+                    Font fontSub4 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textSub4 = new Paragraph("Cliente: ", fontSub4);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textSub4.IndentationLeft = 0;
+                    textSub4.SpacingBefore = 20;  // Margen superior si se necesita más espacio
+                    textSub4.SpacingAfter = 1;   // Margen inferior
+
+                    pdfDoc.Add(textSub4);
+
+
+                ///Seccion para titulo datos 1
+                Font fontTit = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit = new Paragraph("Direccion: ", fontTit);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit.IndentationLeft = 0;
+                    textTit.SpacingBefore = 15;  // Margen superior si se necesita más espacio
+                    textTit.SpacingAfter = 1;   // Margen inferior
+
+                    pdfDoc.Add(textTit);
+
+
+                    pdfDoc.AddTitle("OrdenDeEntrada");
+                    // pdfDoc.Add(new iTextSharp.text.Paragraph("Contenido del PDF"));
+
+
+                ///Seccion para titulo datos 2
+                    Font fontTit1 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit1 = new Paragraph("Telefono #1: ", fontTit1);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit1.IndentationLeft = 0;
+                    textTit1.SpacingBefore = 15;  // Margen superior si se necesita más espacio
+                    textTit1.SpacingAfter = 0;   // Margen inferior
+
+                    pdfDoc.Add(textTit1);
+
+
+                    pdfDoc.AddTitle("OrdenDeEntrada");
+                    // pdfDoc.Add(new iTextSharp.text.Paragraph("Contenido del PDF"));
+
+
+
+                ///Seccion para titulo datos 3
+                    Font fontTit2 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit2 = new Paragraph("# de orden: ", fontTit2);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit2.IndentationLeft = 350;
+                    textTit2.SpacingBefore = -88;  // Margen superior si se necesita más espacio
+                    textTit2.SpacingAfter = 0;   // Margen inferior
+
+                    pdfDoc.Add(textTit2);
+
+
+                ///Seccion para titulo datos 4
+                    Font fontTit3 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit3 = new Paragraph("Fecha: ", fontTit3);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit3.IndentationLeft = 350;
+                    textTit3.SpacingBefore = 18;  // Margen superior si se necesita más espacio
+                    textTit3.SpacingAfter = 0;   // Margen inferior
+
+                    pdfDoc.Add(textTit3);
+
+                ///Seccion agregar datos
+                    Font fontTit4 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit4 = new Paragraph(cliente, fontTit4);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit4.IndentationLeft = 45;
+                    textTit4.SpacingBefore = -52;  // Margen superior si se necesita más espacio
+                    textTit4.SpacingAfter = 1;   // Margen inferior
+
+                    pdfDoc.Add(textTit4);
+
+
+                ///Seccion agregar datos
+                    Font fontTit5 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+
+                    // 3. Crear el texto a insertar al lado de la imagen
+                    Paragraph textTit5 = new Paragraph("calle x y z", fontTit5);
+
+                    // 4. Añadir margen al texto (margen derecho de la imagen)
+                    // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
+                    textTit5.IndentationLeft = 57;
+                    textTit5.SpacingBefore = 14;  // Margen superior si se necesita más espacio
+                    textTit5.SpacingAfter = 1;   // Margen inferior
+
+                    pdfDoc.Add(textTit5);
+
+                
                 Process.Start(rutaPDF);
 
             }
@@ -124,8 +260,7 @@ namespace SOD_General.Vistas.Taller
                     fs.Dispose();
                 }
             }
-
-
         }
+
     }
 }

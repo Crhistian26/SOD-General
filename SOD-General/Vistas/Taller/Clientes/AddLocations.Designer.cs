@@ -50,7 +50,6 @@
             this.txtNumero1 = new Cr_Textbox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
             this.txtDireccion = new Cr_Textbox();
-            this.btnPdf = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -70,7 +69,6 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.btnPdf);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.btnNuevo);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.btnCrear);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos1);
@@ -396,24 +394,6 @@
             this.txtDireccion.Size = new System.Drawing.Size(252, 30);
             this.txtDireccion.TabIndex = 66;
             // 
-            // btnPdf
-            // 
-            this.btnPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.btnPdf.BorderColor = System.Drawing.Color.Teal;
-            this.btnPdf.BorderRadius = 40;
-            this.btnPdf.BorderSize = 0;
-            this.btnPdf.FlatAppearance.BorderSize = 0;
-            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPdf.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPdf.ForeColor = System.Drawing.Color.White;
-            this.btnPdf.Location = new System.Drawing.Point(11, 19);
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.Size = new System.Drawing.Size(78, 46);
-            this.btnPdf.TabIndex = 80;
-            this.btnPdf.Text = "PDF";
-            this.btnPdf.UseVisualStyleBackColor = false;
-            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
-            // 
             // AddLocations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +440,5 @@
         private Cr_ComboBox cbTipoCliente;
         private Diseños.Botones_Nuevos btnCrear;
         private Diseños.Botones_Nuevos btnNuevo;
-        private Diseños.Botones_Nuevos btnPdf;
     }
 }

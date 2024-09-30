@@ -122,10 +122,5 @@ namespace SOD_General.Vistas.Taller.Clientes
             addId.Show();
         }
 
-        private void btnPdf_Click(object sender, EventArgs e)
-        {
-            Exportar export = new Exportar();
-            export.PdfCrear();
-        }
     }
 }
