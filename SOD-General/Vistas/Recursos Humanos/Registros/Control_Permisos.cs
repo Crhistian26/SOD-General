@@ -197,8 +197,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             CentrarElementos();
 
-            cR_Checkbox1.Checked = true;
-            cR_Checkbox2.Checked = true;
         }
 
         private void Agregar_Permiso_Resize(object sender, EventArgs e)
