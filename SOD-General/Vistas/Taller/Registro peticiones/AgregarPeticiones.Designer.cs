@@ -71,6 +71,10 @@
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
+            this.cr_ComboBox2 = new Cr_ComboBox();
+            this.cR_LabelDown7 = new CR_LabelDown();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_LabelDown11 = new CR_LabelDown();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -421,6 +425,10 @@
             // 
             // pnlCliente
             // 
+            this.pnlCliente.Controls.Add(this.cr_ComboBox2);
+            this.pnlCliente.Controls.Add(this.cR_LabelDown7);
+            this.pnlCliente.Controls.Add(this.cr_Textbox1);
+            this.pnlCliente.Controls.Add(this.cR_LabelDown11);
             this.pnlCliente.Controls.Add(this.cr_ComboBox1);
             this.pnlCliente.Controls.Add(this.txtDireccionCliente);
             this.pnlCliente.Controls.Add(this.cR_Subtitulos8);
@@ -559,10 +567,10 @@
             // 
             this.txtDetallesCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDetallesCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.txtDetallesCliente.Location = new System.Drawing.Point(446, 36);
+            this.txtDetallesCliente.Location = new System.Drawing.Point(446, 186);
             this.txtDetallesCliente.Multiline = true;
             this.txtDetallesCliente.Name = "txtDetallesCliente";
-            this.txtDetallesCliente.Size = new System.Drawing.Size(332, 281);
+            this.txtDetallesCliente.Size = new System.Drawing.Size(332, 131);
             this.txtDetallesCliente.TabIndex = 129;
             // 
             // cR_Subtitulos2
@@ -574,7 +582,7 @@
             this.cR_Subtitulos2.BackColor = System.Drawing.Color.Transparent;
             this.cR_Subtitulos2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cR_Subtitulos2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Subtitulos2.Location = new System.Drawing.Point(447, 11);
+            this.cR_Subtitulos2.Location = new System.Drawing.Point(442, 162);
             this.cR_Subtitulos2.Name = "cR_Subtitulos2";
             this.cR_Subtitulos2.Size = new System.Drawing.Size(70, 21);
             this.cR_Subtitulos2.TabIndex = 130;
@@ -645,6 +653,50 @@
             this.cR_Subtitulos3.Size = new System.Drawing.Size(119, 25);
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
+            // 
+            // cr_ComboBox2
+            // 
+            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox2.FormattingEnabled = true;
+            this.cr_ComboBox2.Location = new System.Drawing.Point(446, 51);
+            this.cr_ComboBox2.Name = "cr_ComboBox2";
+            this.cr_ComboBox2.Size = new System.Drawing.Size(327, 29);
+            this.cr_ComboBox2.TabIndex = 145;
+            // 
+            // cR_LabelDown7
+            // 
+            this.cR_LabelDown7.AutoSize = true;
+            this.cR_LabelDown7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown7.Location = new System.Drawing.Point(441, 97);
+            this.cR_LabelDown7.Name = "cR_LabelDown7";
+            this.cR_LabelDown7.Size = new System.Drawing.Size(81, 20);
+            this.cR_LabelDown7.TabIndex = 144;
+            this.cR_LabelDown7.Text = "Telefono 1";
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(444, 120);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(329, 25);
+            this.cr_Textbox1.TabIndex = 143;
+            // 
+            // cR_LabelDown11
+            // 
+            this.cR_LabelDown11.AutoSize = true;
+            this.cR_LabelDown11.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown11.Location = new System.Drawing.Point(442, 28);
+            this.cR_LabelDown11.Name = "cR_LabelDown11";
+            this.cR_LabelDown11.Size = new System.Drawing.Size(152, 20);
+            this.cR_LabelDown11.TabIndex = 142;
+            this.cR_LabelDown11.Text = "Nombre del contacto";
             // 
             // AgregarPeticiones
             // 
@@ -717,5 +769,9 @@
         private Cr_ComboBox cbContactEmpresa;
         private Cr_ComboBox cbNombreEmpresa;
         private Cr_ComboBox cr_ComboBox1;
+        private Cr_ComboBox cr_ComboBox2;
+        private CR_LabelDown cR_LabelDown7;
+        private Cr_Textbox cr_Textbox1;
+        private CR_LabelDown cR_LabelDown11;
     }
 }

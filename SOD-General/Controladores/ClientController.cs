@@ -805,6 +805,59 @@ namespace SOD_General.Controladores
             }
         }
          
+        public List<Locations> ClientEmpresa()
+        {
+            List<Locations> ListLoc = new List<Locations>();
+            try
+            {
+                string query = "Exec Get_Locations";
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Locations loc;
+                    int IdClient = reader.GetInt32(0);
+                    int contactId = reader.GetInt32(1);
+                    string name = reader.GetString(2);
+                    string address = reader.GetString(3);
+                    string phone1 = reader.GetString(4);
+                    string phone2 = reader.GetString(5);
+                    int IdIdent = reader.GetInt32(6);
+                    string Identifier = reader.GetString(7);
+                    string tipoCliente = reader.GetString(8);
+
+
+                    loc = new Locations(IdClient, IdIdent, null, name, address, phone1, phone2, Identifier);
+                    ListLoc.Add(loc);
+                }
+                conex.Close();
+                reader.Close();
+                return ListLoc;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error del sistema" + ex.ToString());
+
+                if (conex.State != System.Data.ConnectionState.Closed)
+                {
+                    conex.Close();
+                }
+                return null;
+            }
+        }
        
     }
 

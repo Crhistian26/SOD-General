@@ -273,34 +273,40 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
             
         }
 
-        private void botones_Nuevos2_Click(object sender, System.EventArgs e)
+    
+        private void btnRegiEntrada_Click(object sender, EventArgs e)
         {
-            string name = "pedro";
+            string date = DateTime.Now.ToString("yyyy-MM-dd hh-mm-tt");
+
+            int id = Convert.ToInt32(txtIdEntrada.Text);
+
             Exportar export = new Exportar();
-            export.PdfCrear(28);
+            export.CrearExcel(id);
 
 
+            foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
+            {
+                if (!dgvr.IsNewRow)
+                {
+                    EnOrController.AgregarEntradas(Convert.ToInt32(txtIdEntrada.Text), Convert.ToInt32(dgvr.Cells[0].Value), 1, dgvr.Cells[5].Value.ToString(), dgvr.Cells[6].Value.ToString(), true);
+                    AgregarAccesorios addAcces = new AgregarAccesorios();
+                    addAcces.Show();
+                }
+            }
+            dgvEquipoRegistro.Rows.Clear();
 
-            //foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
-            //{
-            //    if (!dgvr.IsNewRow)
-            //    {
-            //        EnOrController.AgregarEntradas(Convert.ToInt32(txtIdEntrada.Text), Convert.ToInt32(dgvr.Cells[0].Value), 1, dgvr.Cells[5].Value.ToString(), dgvr.Cells[6].Value.ToString(), true);
-            //        AgregarAccesorios addAcces = new AgregarAccesorios();
-            //        addAcces.Show();
-            //    }
-            //}
-            //dgvEquipoRegistro.Rows.Clear();
+            cbModelo.Enabled = true;
+            cbLinea.Enabled = true;
+            cbTipoEquipo.Enabled = true;
+            cbMarca.Enabled = true;
+            txtSerial.Enabled = true;
+            txtFalla.Enabled = true;
 
-            //cbModelo.Enabled = true;
-            //cbLinea.Enabled = true;
-            //cbTipoEquipo.Enabled = true;
-            //cbMarca.Enabled = true;
-            //txtSerial.Enabled = true;
-            //txtFalla.Enabled = true;
-
-            //btnAgregRegistro.Enabled = true;
+            btnAgregRegistro.Enabled = true;
 
         }
+
+
+
     }
 }

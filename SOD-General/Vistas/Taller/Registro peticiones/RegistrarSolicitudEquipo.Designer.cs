@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.txtIdEntrada = new CR_LabelUp();
@@ -209,10 +209,10 @@
             this.dgvEquipoRegistro.AllowUserToAddRows = false;
             this.dgvEquipoRegistro.AllowUserToDeleteRows = false;
             this.dgvEquipoRegistro.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.dgvEquipoRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dgvEquipoRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEquipoRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEquipoRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -296,10 +296,10 @@
             this.dgvFiltro.AllowUserToAddRows = false;
             this.dgvFiltro.AllowUserToDeleteRows = false;
             this.dgvFiltro.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.dgvFiltro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.dgvFiltro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFiltro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFiltro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -360,7 +360,7 @@
             this.btnRegiEntrada.TabIndex = 101;
             this.btnRegiEntrada.Text = "Registrar entrada completa";
             this.btnRegiEntrada.UseVisualStyleBackColor = false;
-            this.btnRegiEntrada.Click += new System.EventHandler(this.botones_Nuevos2_Click);
+            this.btnRegiEntrada.Click += new System.EventHandler(this.btnRegiEntrada_Click);
             // 
             // btnAgregRegistro
             // 

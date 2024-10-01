@@ -28,6 +28,7 @@ namespace SOD_General.Taller.Registro_peticiones
         int IdContact = 0;
         int IdIdentififer = 0;
         int IdCliente = 0;
+        int idIdent = 0;
 
         List<Locations> ListLoc = new List<Locations>();
         public AgregarPeticiones()
@@ -92,6 +93,22 @@ namespace SOD_General.Taller.Registro_peticiones
             chbCliente.Checked = false;
             pnlCliente.Visible = false;
             pnlRnc.Visible = true;
+
+
+            if (chbEmpresa.Checked == true)
+            {
+              // List<Locations> locList = Ccontroller.ClientEmpresa();
+
+                IdIdentififer = Convert.ToInt32(ClienteIdentifier.Where(a => a._Identifier == RNC).Select(b => b.IdClient).First());
+                cbNombreEmpresa.Items.Clear();
+
+                EmpresaName = Ccontroller.VerEmpresa(RNC);
+
+                foreach (var EN in EmpresaName)
+                {
+                    cbNombreEmpresa.Items.Add(EN._Location);
+                }
+            }
         }
 
         private void chbCliente_CheckedChanged(object sender, EventArgs e)
