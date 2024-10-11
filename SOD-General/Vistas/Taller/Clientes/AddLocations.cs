@@ -102,7 +102,10 @@ namespace SOD_General.Vistas.Taller.Clientes
 
         private void CbRnc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbCtcRelleno(CbRnc.SelectedItem.ToString());
+            if (CbRnc.SelectedItem != null)
+            {
+                cbCtcRelleno(CbRnc.SelectedItem.ToString());
+            }
         }
 
         private void AddLocations_Load(object sender, EventArgs e)

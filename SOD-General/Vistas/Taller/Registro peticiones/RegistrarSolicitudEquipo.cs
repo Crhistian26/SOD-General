@@ -276,13 +276,6 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
     
         private void btnRegiEntrada_Click(object sender, EventArgs e)
         {
-            string date = DateTime.Now.ToString("yyyy-MM-dd hh-mm-tt");
-
-            int id = Convert.ToInt32(txtIdEntrada.Text);
-
-            Exportar export = new Exportar();
-            export.CrearExcel(id);
-
 
             foreach (DataGridViewRow dgvr in dgvEquipoRegistro.Rows)
             {
@@ -306,7 +299,15 @@ namespace SOD_General.Vistas.Taller.Registro_peticiones
 
         }
 
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            string date = DateTime.Now.ToString("yyyy-MM-dd hh-mm-tt");
 
+            int id = Convert.ToInt32(txtIdEntrada.Text);
 
+            Exportar export = new Exportar();
+            export.CrearExcel(id);
+
+        }
     }
 }

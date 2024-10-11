@@ -9,6 +9,7 @@ namespace SOD_General.Controladores
 {
     public class SizesGenerales
     {
+        //cambio
         public Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = new Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)>
         {
             {DayOfWeek.Monday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},

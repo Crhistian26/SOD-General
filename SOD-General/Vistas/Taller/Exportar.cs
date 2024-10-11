@@ -38,26 +38,26 @@ namespace SOD_General.Vistas.Taller
         List<EntryOrderController.DataExport> EDE = new List<EntryOrderController.DataExport>();
         string date = DateTime.Now.ToString("yyyy-MM-dd hh-mm-tt");
 
-        public void linea(float a, float b, float z, float x)
-        {
-            PdfWriter writer = null;
+        //public void linea(float a, float b, float z, float x)
+        //{
+        //    PdfWriter writer = null;
 
-            PdfContentByte canvas = writer.DirectContent;
+        //    PdfContentByte canvas = writer.DirectContent;
 
-            // Definir las coordenadas de la línea (posición inicial y final)
-            float x1 = 50f; // Posición X inicial
-            float y1 = 750f; // Posición Y inicial
-            float x2 = 550f; // Posición X final
-            float y2 = 750f; // Misma altura para línea horizontal
+        //    Definir las coordenadas de la línea(posición inicial y final)
+        //    float x1 = 50f; // Posición X inicial
+        //    float y1 = 750f; // Posición Y inicial
+        //    float x2 = 550f; // Posición X final
+        //    float y2 = 750f; // Misma altura para línea horizontal
 
-            // Establecer el grosor de la línea
-            canvas.SetLineWidth(1f); // Grosor de la línea (1f para línea delgada)
+        //    Establecer el grosor de la línea
+        //    canvas.SetLineWidth(1f); // Grosor de la línea (1f para línea delgada)
 
-            // Dibujar la línea negra
-            canvas.MoveTo(a, z); // Moverse a la posición inicial
-            canvas.LineTo(b, x); // Definir la posición final
-            canvas.Stroke(); // Dibujar la
-        }
+        //    Dibujar la línea negra
+        //    canvas.MoveTo(a, z); // Moverse a la posición inicial
+        //    canvas.LineTo(b, x); // Definir la posición final
+        //    canvas.Stroke(); // Dibujar la
+        //}
 
         public void CrearExcel(int id)
         {
@@ -476,7 +476,7 @@ namespace SOD_General.Vistas.Taller
                     "4. Su equipo sera colocado en la fila de reparacion una vez que usted apruebe la cotizacion \n" +
                     "3. El tiempo de reparacion de su equipo no excedera los tres dias habiles", fontProd);
 
-                linea(36f, 50f, 200f, 200f);
+               // linea(36f, 50f, 200f, 200f);
                 // 4. Añadir margen al texto (margen derecho de la imagen)
                 // Añadir un margen de 120 puntos a la izquierda para que el texto no se superponga con la imagen
                 procedimientos.IndentationLeft = 12;

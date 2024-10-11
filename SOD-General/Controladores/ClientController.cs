@@ -249,7 +249,7 @@ namespace SOD_General.Controladores
                 conex.Open();
                 cmd.ExecuteNonQuery();
                 conex.Close();
-                MessageBox.Show("Agregado exitorsamente");
+                MessageBox.Show("Agregado exitosamente");
             }
             catch (SqlException ex)
             {
@@ -411,7 +411,7 @@ namespace SOD_General.Controladores
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Error de la base de datos: " + ex.ToString());
+              //  MessageBox.Show("Error de la base de datos: " + ex.ToString());
 
                 if (conex.State != System.Data.ConnectionState.Closed)
                 {
@@ -422,7 +422,7 @@ namespace SOD_General.Controladores
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error del sistema" + ex.ToString());
+             //   MessageBox.Show("Error del sistema" + ex.ToString());
 
                 if (conex.State != System.Data.ConnectionState.Closed)
                 {

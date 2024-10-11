@@ -55,6 +55,10 @@
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_Subtitulos7 = new CR_Subtitulos();
             this.pnlCliente = new System.Windows.Forms.Panel();
+            this.cr_ComboBox2 = new Cr_ComboBox();
+            this.cR_LabelDown7 = new CR_LabelDown();
+            this.cr_Textbox1 = new Cr_Textbox();
+            this.cR_LabelDown11 = new CR_LabelDown();
             this.cr_ComboBox1 = new Cr_ComboBox();
             this.txtDireccionCliente = new Cr_Textbox();
             this.cR_Subtitulos8 = new CR_Subtitulos();
@@ -71,10 +75,7 @@
             this.fR_TextBox4 = new Designer.FR_TextBox();
             this.fR_TextBox7 = new Designer.FR_TextBox();
             this.cR_Subtitulos3 = new CR_Subtitulos();
-            this.cr_ComboBox2 = new Cr_ComboBox();
-            this.cR_LabelDown7 = new CR_LabelDown();
-            this.cr_Textbox1 = new Cr_Textbox();
-            this.cR_LabelDown11 = new CR_LabelDown();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -82,6 +83,7 @@
             this.panel1.SuspendLayout();
             this.pnlRnc.SuspendLayout();
             this.pnlCliente.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cR_SplitContainer1
@@ -94,10 +96,9 @@
             // cR_SplitContainer1.Panel1
             // 
             this.cR_SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_SplitContainer1.Panel1.Controls.Add(this.panel2);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.chbCliente);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.chbEmpresa);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.txtUltimoId);
-            this.cR_SplitContainer1.Panel1.Controls.Add(this.txtNumeral);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.cR_Subtitulos4);
             this.cR_SplitContainer1.Panel1.Controls.Add(this.btnClienteNuevo);
             // 
@@ -113,20 +114,23 @@
             this.chbCliente.AutoSize = true;
             this.chbCliente.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbCliente.ForeColor = System.Drawing.Color.White;
-            this.chbCliente.Location = new System.Drawing.Point(594, 73);
+            this.chbCliente.Location = new System.Drawing.Point(866, 87);
             this.chbCliente.Name = "chbCliente";
             this.chbCliente.Size = new System.Drawing.Size(104, 29);
             this.chbCliente.TabIndex = 102;
             this.chbCliente.Text = "Clientes";
             this.chbCliente.UseVisualStyleBackColor = true;
+            this.chbCliente.Visible = false;
             this.chbCliente.CheckedChanged += new System.EventHandler(this.chbCliente_CheckedChanged);
             // 
             // chbEmpresa
             // 
+            this.chbEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chbEmpresa.AutoSize = true;
             this.chbEmpresa.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbEmpresa.ForeColor = System.Drawing.Color.White;
-            this.chbEmpresa.Location = new System.Drawing.Point(284, 73);
+            this.chbEmpresa.Location = new System.Drawing.Point(625, 49);
             this.chbEmpresa.Name = "chbEmpresa";
             this.chbEmpresa.Size = new System.Drawing.Size(118, 29);
             this.chbEmpresa.TabIndex = 101;
@@ -137,21 +141,21 @@
             // txtUltimoId
             // 
             this.txtUltimoId.AutoSize = true;
-            this.txtUltimoId.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.txtUltimoId.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.txtUltimoId.ForeColor = System.Drawing.Color.White;
-            this.txtUltimoId.Location = new System.Drawing.Point(60, 17);
+            this.txtUltimoId.Location = new System.Drawing.Point(32, 10);
             this.txtUltimoId.Name = "txtUltimoId";
-            this.txtUltimoId.Size = new System.Drawing.Size(17, 20);
+            this.txtUltimoId.Size = new System.Drawing.Size(31, 35);
             this.txtUltimoId.TabIndex = 100;
             this.txtUltimoId.Text = "0";
             // 
             // txtNumeral
             // 
-            this.txtNumeral.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
+            this.txtNumeral.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.txtNumeral.ForeColor = System.Drawing.Color.White;
-            this.txtNumeral.Location = new System.Drawing.Point(29, 15);
+            this.txtNumeral.Location = new System.Drawing.Point(5, 10);
             this.txtNumeral.Name = "txtNumeral";
-            this.txtNumeral.Size = new System.Drawing.Size(36, 20);
+            this.txtNumeral.Size = new System.Drawing.Size(36, 34);
             this.txtNumeral.TabIndex = 98;
             this.txtNumeral.Text = "#:";
             // 
@@ -162,7 +166,7 @@
             this.cR_Subtitulos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos4.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos4.Location = new System.Drawing.Point(325, 9);
+            this.cR_Subtitulos4.Location = new System.Drawing.Point(301, 9);
             this.cR_Subtitulos4.Name = "cR_Subtitulos4";
             this.cR_Subtitulos4.Size = new System.Drawing.Size(332, 28);
             this.cR_Subtitulos4.TabIndex = 99;
@@ -170,6 +174,7 @@
             // 
             // btnClienteNuevo
             // 
+            this.btnClienteNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClienteNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnClienteNuevo.BorderColor = System.Drawing.Color.PaleTurquoise;
             this.btnClienteNuevo.BorderRadius = 40;
@@ -178,7 +183,7 @@
             this.btnClienteNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClienteNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnClienteNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnClienteNuevo.Location = new System.Drawing.Point(848, 32);
+            this.btnClienteNuevo.Location = new System.Drawing.Point(857, 31);
             this.btnClienteNuevo.Name = "btnClienteNuevo";
             this.btnClienteNuevo.Size = new System.Drawing.Size(122, 45);
             this.btnClienteNuevo.TabIndex = 94;
@@ -214,7 +219,7 @@
             this.pnlRnc.Controls.Add(this.txtDetallesContact);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos1);
             this.pnlRnc.Controls.Add(this.cR_Subtitulos7);
-            this.pnlRnc.Location = new System.Drawing.Point(94, 15);
+            this.pnlRnc.Location = new System.Drawing.Point(190, 15);
             this.pnlRnc.Name = "pnlRnc";
             this.pnlRnc.Size = new System.Drawing.Size(792, 426);
             this.pnlRnc.TabIndex = 108;
@@ -448,6 +453,50 @@
             this.pnlCliente.TabIndex = 112;
             this.pnlCliente.Visible = false;
             // 
+            // cr_ComboBox2
+            // 
+            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox2.FormattingEnabled = true;
+            this.cr_ComboBox2.Location = new System.Drawing.Point(446, 51);
+            this.cr_ComboBox2.Name = "cr_ComboBox2";
+            this.cr_ComboBox2.Size = new System.Drawing.Size(327, 29);
+            this.cr_ComboBox2.TabIndex = 145;
+            // 
+            // cR_LabelDown7
+            // 
+            this.cR_LabelDown7.AutoSize = true;
+            this.cR_LabelDown7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown7.Location = new System.Drawing.Point(441, 97);
+            this.cR_LabelDown7.Name = "cR_LabelDown7";
+            this.cR_LabelDown7.Size = new System.Drawing.Size(81, 20);
+            this.cR_LabelDown7.TabIndex = 144;
+            this.cR_LabelDown7.Text = "Telefono 1";
+            // 
+            // cr_Textbox1
+            // 
+            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox1.Location = new System.Drawing.Point(444, 120);
+            this.cr_Textbox1.Name = "cr_Textbox1";
+            this.cr_Textbox1.Size = new System.Drawing.Size(329, 25);
+            this.cr_Textbox1.TabIndex = 143;
+            // 
+            // cR_LabelDown11
+            // 
+            this.cR_LabelDown11.AutoSize = true;
+            this.cR_LabelDown11.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown11.Location = new System.Drawing.Point(442, 28);
+            this.cR_LabelDown11.Name = "cR_LabelDown11";
+            this.cR_LabelDown11.Size = new System.Drawing.Size(152, 20);
+            this.cR_LabelDown11.TabIndex = 142;
+            this.cR_LabelDown11.Text = "Nombre del contacto";
+            // 
             // cr_ComboBox1
             // 
             this.cr_ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -654,49 +703,14 @@
             this.cR_Subtitulos3.TabIndex = 42;
             this.cR_Subtitulos3.Text = "Descripcion";
             // 
-            // cr_ComboBox2
+            // panel2
             // 
-            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
-            this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Location = new System.Drawing.Point(446, 51);
-            this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(327, 29);
-            this.cr_ComboBox2.TabIndex = 145;
-            // 
-            // cR_LabelDown7
-            // 
-            this.cR_LabelDown7.AutoSize = true;
-            this.cR_LabelDown7.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown7.Location = new System.Drawing.Point(441, 97);
-            this.cR_LabelDown7.Name = "cR_LabelDown7";
-            this.cR_LabelDown7.Size = new System.Drawing.Size(81, 20);
-            this.cR_LabelDown7.TabIndex = 144;
-            this.cR_LabelDown7.Text = "Telefono 1";
-            // 
-            // cr_Textbox1
-            // 
-            this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox1.Location = new System.Drawing.Point(444, 120);
-            this.cr_Textbox1.Name = "cr_Textbox1";
-            this.cr_Textbox1.Size = new System.Drawing.Size(329, 25);
-            this.cr_Textbox1.TabIndex = 143;
-            // 
-            // cR_LabelDown11
-            // 
-            this.cR_LabelDown11.AutoSize = true;
-            this.cR_LabelDown11.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown11.Location = new System.Drawing.Point(442, 28);
-            this.cR_LabelDown11.Name = "cR_LabelDown11";
-            this.cR_LabelDown11.Size = new System.Drawing.Size(152, 20);
-            this.cR_LabelDown11.TabIndex = 142;
-            this.cR_LabelDown11.Text = "Nombre del contacto";
+            this.panel2.Controls.Add(this.txtUltimoId);
+            this.panel2.Controls.Add(this.txtNumeral);
+            this.panel2.Location = new System.Drawing.Point(3, 32);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(68, 56);
+            this.panel2.TabIndex = 103;
             // 
             // AgregarPeticiones
             // 
@@ -720,6 +734,8 @@
             this.pnlRnc.PerformLayout();
             this.pnlCliente.ResumeLayout(false);
             this.pnlCliente.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -773,5 +789,6 @@
         private CR_LabelDown cR_LabelDown7;
         private Cr_Textbox cr_Textbox1;
         private CR_LabelDown cR_LabelDown11;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cR_DateTimePicker1 = new CR_DateTimePicker();
             this.txtIdEntrada = new CR_LabelUp();
@@ -65,6 +65,7 @@
             this.cR_Subtitulos6 = new CR_Subtitulos();
             this.cR_Subtitulos3 = new CR_Subtitulos();
             this.cR_Subtitulos5 = new CR_Subtitulos();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -92,6 +93,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
             this.splitContainer1.Panel2.Controls.Add(this.txtFalla);
             this.splitContainer1.Panel2.Controls.Add(this.txtSerial);
             this.splitContainer1.Panel2.Controls.Add(this.cbModelo);
@@ -114,10 +116,11 @@
             // 
             // cR_DateTimePicker1
             // 
+            this.cR_DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Enabled = false;
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(865, 21);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(1119, 23);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
             this.cR_DateTimePicker1.Size = new System.Drawing.Size(255, 24);
             this.cR_DateTimePicker1.TabIndex = 44;
@@ -156,7 +159,7 @@
             this.cR_Subtitulos4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cR_Subtitulos4.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos4.Location = new System.Drawing.Point(417, 17);
+            this.cR_Subtitulos4.Location = new System.Drawing.Point(540, 23);
             this.cR_Subtitulos4.Name = "cR_Subtitulos4";
             this.cR_Subtitulos4.Size = new System.Drawing.Size(247, 28);
             this.cR_Subtitulos4.TabIndex = 27;
@@ -199,9 +202,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvEquipoRegistro);
-            this.panel2.Location = new System.Drawing.Point(17, 343);
+            this.panel2.Location = new System.Drawing.Point(17, 271);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1082, 227);
+            this.panel2.Size = new System.Drawing.Size(869, 299);
             this.panel2.TabIndex = 110;
             // 
             // dgvEquipoRegistro
@@ -209,10 +212,10 @@
             this.dgvEquipoRegistro.AllowUserToAddRows = false;
             this.dgvEquipoRegistro.AllowUserToDeleteRows = false;
             this.dgvEquipoRegistro.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgvEquipoRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            this.dgvEquipoRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvEquipoRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEquipoRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -229,7 +232,7 @@
             this.dgvEquipoRegistro.Name = "dgvEquipoRegistro";
             this.dgvEquipoRegistro.ReadOnly = true;
             this.dgvEquipoRegistro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEquipoRegistro.Size = new System.Drawing.Size(1082, 227);
+            this.dgvEquipoRegistro.Size = new System.Drawing.Size(869, 299);
             this.dgvEquipoRegistro.TabIndex = 4;
             // 
             // Column1
@@ -288,7 +291,7 @@
             this.panel1.Controls.Add(this.dgvFiltro);
             this.panel1.Location = new System.Drawing.Point(17, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(869, 226);
+            this.panel1.Size = new System.Drawing.Size(869, 146);
             this.panel1.TabIndex = 109;
             // 
             // dgvFiltro
@@ -296,10 +299,10 @@
             this.dgvFiltro.AllowUserToAddRows = false;
             this.dgvFiltro.AllowUserToDeleteRows = false;
             this.dgvFiltro.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.dgvFiltro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            this.dgvFiltro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvFiltro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFiltro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -312,7 +315,7 @@
             this.dgvFiltro.Name = "dgvFiltro";
             this.dgvFiltro.ReadOnly = true;
             this.dgvFiltro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFiltro.Size = new System.Drawing.Size(869, 226);
+            this.dgvFiltro.Size = new System.Drawing.Size(869, 146);
             this.dgvFiltro.TabIndex = 5;
             // 
             // Id
@@ -345,7 +348,6 @@
             // 
             // btnRegiEntrada
             // 
-            this.btnRegiEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRegiEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.btnRegiEntrada.BorderColor = System.Drawing.Color.Teal;
             this.btnRegiEntrada.BorderRadius = 40;
@@ -354,9 +356,9 @@
             this.btnRegiEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegiEntrada.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnRegiEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnRegiEntrada.Location = new System.Drawing.Point(1118, 414);
+            this.btnRegiEntrada.Location = new System.Drawing.Point(902, 340);
             this.btnRegiEntrada.Name = "btnRegiEntrada";
-            this.btnRegiEntrada.Size = new System.Drawing.Size(256, 61);
+            this.btnRegiEntrada.Size = new System.Drawing.Size(439, 61);
             this.btnRegiEntrada.TabIndex = 101;
             this.btnRegiEntrada.Text = "Registrar entrada completa";
             this.btnRegiEntrada.UseVisualStyleBackColor = false;
@@ -512,6 +514,25 @@
             this.cR_Subtitulos5.TabIndex = 88;
             this.cR_Subtitulos5.Text = "Tipo de equipo";
             // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(986, 451);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(284, 52);
+            this.botones_Nuevos1.TabIndex = 114;
+            this.botones_Nuevos1.Text = "Exportar";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
+            // 
             // RegistrarSolicitudEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,5 +594,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private Diseños.Botones_Nuevos botones_Nuevos1;
     }
 }

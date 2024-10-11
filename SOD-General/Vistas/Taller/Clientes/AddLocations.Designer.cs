@@ -172,7 +172,7 @@
             this.cbTipoCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbTipoCliente.BackColor = System.Drawing.Color.White;
             this.cbTipoCliente.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cbTipoCliente.ForeColor = System.Drawing.Color.White;
+            this.cbTipoCliente.ForeColor = System.Drawing.Color.Black;
             this.cbTipoCliente.FormattingEnabled = true;
             this.cbTipoCliente.Items.AddRange(new object[] {
             "Cliente",

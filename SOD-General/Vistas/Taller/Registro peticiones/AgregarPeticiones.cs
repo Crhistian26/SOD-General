@@ -99,7 +99,7 @@ namespace SOD_General.Taller.Registro_peticiones
             {
               // List<Locations> locList = Ccontroller.ClientEmpresa();
 
-                IdIdentififer = Convert.ToInt32(ClienteIdentifier.Where(a => a._Identifier == RNC).Select(b => b.IdClient).First());
+           //     IdIdentififer = Convert.ToInt32(ClienteIdentifier.Where(a => a._Identifier == RNC).Select(b => b.IdClient).First());
                 cbNombreEmpresa.Items.Clear();
 
                 EmpresaName = Ccontroller.VerEmpresa(RNC);
