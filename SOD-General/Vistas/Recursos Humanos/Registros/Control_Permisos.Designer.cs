@@ -32,6 +32,8 @@
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botones_Nuevos3 = new Diseños.Botones_Nuevos();
+            this.botones_Nuevos2 = new Diseños.Botones_Nuevos();
             this.cr_Textbox1 = new Cr_Textbox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cR_LabelDown7 = new CR_LabelDown();
@@ -104,6 +106,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.botones_Nuevos3);
+            this.panel1.Controls.Add(this.botones_Nuevos2);
             this.panel1.Controls.Add(this.cr_Textbox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -124,6 +128,41 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(922, 368);
             this.panel1.TabIndex = 0;
+            // 
+            // botones_Nuevos3
+            // 
+            this.botones_Nuevos3.BackColor = System.Drawing.Color.Red;
+            this.botones_Nuevos3.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos3.BorderRadius = 40;
+            this.botones_Nuevos3.BorderSize = 0;
+            this.botones_Nuevos3.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos3.Location = new System.Drawing.Point(632, 304);
+            this.botones_Nuevos3.Name = "botones_Nuevos3";
+            this.botones_Nuevos3.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos3.TabIndex = 40;
+            this.botones_Nuevos3.Text = "Eliminar";
+            this.botones_Nuevos3.UseVisualStyleBackColor = false;
+            this.botones_Nuevos3.Visible = false;
+            // 
+            // botones_Nuevos2
+            // 
+            this.botones_Nuevos2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos2.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos2.BorderRadius = 40;
+            this.botones_Nuevos2.BorderSize = 0;
+            this.botones_Nuevos2.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos2.Location = new System.Drawing.Point(178, 304);
+            this.botones_Nuevos2.Name = "botones_Nuevos2";
+            this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos2.TabIndex = 39;
+            this.botones_Nuevos2.Text = "Editar";
+            this.botones_Nuevos2.UseVisualStyleBackColor = false;
             // 
             // cr_Textbox1
             // 
@@ -382,7 +421,7 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(379, 308);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(396, 304);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
             this.botones_Nuevos1.TabIndex = 11;
@@ -504,5 +543,7 @@
         private CR_LabelDown cR_LabelDown9;
         private CR_LabelDown cR_LabelDown8;
         private Cr_Textbox cr_Textbox1;
+        private Diseños.Botones_Nuevos botones_Nuevos3;
+        private Diseños.Botones_Nuevos botones_Nuevos2;
     }
 }

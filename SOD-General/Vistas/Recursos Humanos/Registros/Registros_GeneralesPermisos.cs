@@ -100,7 +100,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     Record._Reason,
                     Record.Begin_Date.ToString("f"),
                     Record.End_Date.ToString("f"),
-                    Record.Get_Hours_Ausent().ToString(@"hh\:mm")
+                    _sizes.ConvertTSWithDays(Record.Get_Hours_Ausent())
                     );
                 }
             }

@@ -12,6 +12,7 @@ namespace SOD_General.Controladores
 {
     public class Registros_Controller
     {
+        SizesGenerales _size = new SizesGenerales();
         //La cadena de conexion
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
@@ -283,10 +284,7 @@ namespace SOD_General.Controladores
             vista.Show();
         }
 
-        public void EditarPermiso()
-        {
-
-        }
+   
 
         public List<Record_Permission> Obtener_Permisos(DateTime date1, DateTime date2)
         {
@@ -415,6 +413,34 @@ namespace SOD_General.Controladores
                 {
                     conex.Close();
                 }
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool Delete_Permission(int id)
+        {
+            string query = "Delete from Permission_Record where IdRecordPermission = @id";
+            SqlCommand cmd = new SqlCommand(query, conex);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+
+                return true;
+            }
+            catch(SqlException ex)
+            {
+                _size.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch(Exception ex)
+            {
+                _size.ChechekConnection(conex);
                 MessageBox.Show(ex.Message);
                 return false;
             }

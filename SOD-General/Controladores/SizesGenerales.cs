@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Windows.Forms;
 
 namespace SOD_General.Controladores
@@ -12,11 +13,11 @@ namespace SOD_General.Controladores
         //cambio
         public Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = new Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)>
         {
-            {DayOfWeek.Monday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
-            {DayOfWeek.Tuesday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
-            {DayOfWeek.Wednesday,(new TimeSpan(9,0,0),new TimeSpan(17,45,0))},
-            {DayOfWeek.Thursday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
-            {DayOfWeek.Friday,(new TimeSpan(8,30,0),new TimeSpan(17,45,0))},
+            {DayOfWeek.Monday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
+            {DayOfWeek.Tuesday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
+            {DayOfWeek.Wednesday,(new TimeSpan(9,0,0),new TimeSpan(17,30,0))},
+            {DayOfWeek.Thursday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
+            {DayOfWeek.Friday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
             {DayOfWeek.Saturday,(new TimeSpan(8,30,0),new TimeSpan(13,0,0))},
             {DayOfWeek.Sunday,(new TimeSpan(0,0,0),new TimeSpan(0,0,0))},
         };
@@ -58,6 +59,20 @@ namespace SOD_General.Controladores
             Point punto = new Point();
             punto = new Point(posicion, ElementoP.Y);
             return punto;
+        }
+
+        /// <summary>
+        /// Este metodo transforma un <see cref="TimeSpan/> con dias en un texto con las horas totales de los dias y los minutos
+        /// </summary>
+        /// <param name="_hours">El TimeSpan a convertir</param>
+        /// <returns>Un string que te dira la cantidad de horas totales</returns>
+        public string ConvertTSWithDays(TimeSpan _hours)
+        {
+            string Hours = "";
+            int h = _hours.Days * 24;
+            h += _hours.Hours;
+            Hours = $"{h}:{_hours.Minutes}";
+            return Hours;
         }
 
         public string FiltarHoras(TimeSpan hora)
@@ -157,6 +172,11 @@ namespace SOD_General.Controladores
             {
                 return new TimeSpan(hour, minutes, 0);
             }
+        }
+
+        public TimeSpan CreateTS(DateTime date)
+        {
+            return new TimeSpan(date.Hour, date.Minute, 0);
         }
 
         public TimeSpan CreateTS(string hour, string min, string merides)

@@ -25,6 +25,8 @@ namespace Modelos.AsistenciasYPermisos
         public DateTime Begin_Date { get; set; }
         public DateTime End_Date { get; set; }
 
+      
+
         public Record_Permission(int IdRecord, string Reason, string descip, DateTime fecha1, DateTime fecha2)
         {
             this.IdRecord = IdRecord;
@@ -60,33 +62,76 @@ namespace Modelos.AsistenciasYPermisos
 
         public TimeSpan Get_Hours_Ausent()
         {
-
             TimeSpan totalFaltado = TimeSpan.Zero;
-                for (DateTime dia = Begin_Date.Date; dia <= End_Date.Date; dia = dia.AddDays(1))
+            DateTime InicioReal, FinReal;
+            DateTime InicioHorario, FinHorario;
+
+            if (Begin_Date.Date == End_Date.Date)
+            {
+                Days.TryGetValue(Begin_Date.DayOfWeek, out var horario);
+
+                InicioHorario = Begin_Date.Date + horario.JobStart;
+                FinHorario = End_Date.Date + horario.JobEnd;
+
+                InicioReal = Begin_Date > InicioHorario ? Begin_Date : InicioHorario;
+                FinHorario = End_Date > FinHorario ? End_Date : FinHorario;
+
+                var h = End_Date - Begin_Date;
+
+                totalFaltado = new TimeSpan(h.Hours, h.Minutes, 0);
+
+                return totalFaltado;
+            }
+            else
+            {
+                DateTime h = Begin_Date.Date;
+                
+                do
                 {
-                    if (Days.TryGetValue(dia.DayOfWeek, out var horario))
+                    Days.TryGetValue(h.DayOfWeek, out var horario);
+
+                    InicioHorario = h.Date + horario.JobStart;
+                    FinHorario = h.Date + horario.JobEnd;
+
+                    if(InicioHorario.Date == Begin_Date.Date)
                     {
-                        DateTime inicioJornada = dia.Date + horario.JobStart;
-                        DateTime finJornada = dia.Date + horario.JobEnd;
-
-                        if (Begin_Date < finJornada && End_Date > inicioJornada)
-                        {
-
-                            DateTime start = Begin_Date > inicioJornada ? Begin_Date : inicioJornada;
-                            DateTime end = End_Date < finJornada ? End_Date : finJornada;
-                            
-                            totalFaltado += end - start;
-                            
-                            if (end > start)
-                            {
-                                totalFaltado -= new TimeSpan(1, 15, 0);
-                            }
-                        }
+                        InicioReal = Begin_Date > InicioHorario ? Begin_Date : InicioHorario;
                     }
-                }
-            
+                    else
+                    {
+                        InicioReal = InicioHorario;
+                    }
+
+                    if (FinHorario.Date == End_Date.Date)
+                    {
+                        FinReal = End_Date > FinHorario ? End_Date : FinHorario;
+                    }
+                    else
+                    {
+                        FinReal = FinHorario;
+                    }
+                    
+                    var v = FinReal - InicioReal;
+
+                    if(v.Hours > 8)
+                    {
+                        totalFaltado += new TimeSpan(v.Hours - 1, v.Minutes, 0);
+                    }
+                    else
+                    {
+                        totalFaltado += new TimeSpan(v.Hours, v.Minutes, 0);
+                    }
+                    
+
+
+                    h = h.AddDays(1);
+                } while (h.Date < End_Date.Date);
+            }
+
             return totalFaltado;
         }
+
+    
 
         public TimeSpan Get_Hours_Ausent(DateTime FinalDate)
         {
@@ -116,6 +161,36 @@ namespace Modelos.AsistenciasYPermisos
             }
 
             return totalFaltado;
+        }
+
+        public bool ConfirmBeginDate()
+        {
+            TimeSpan begin = new TimeSpan(Begin_Date.Hour, Begin_Date.Minute, 0);
+            if(begin > new TimeSpan(8, 30, 0))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool ConfirmEndDate()
+        {
+            TimeSpan End = new TimeSpan(End_Date.Hour, End_Date.Minute, 0);
+            if (End > new TimeSpan(5, 30, 0) && End_Date.DayOfWeek != DayOfWeek.Sunday && End_Date.DayOfWeek != DayOfWeek.Saturday)
+            {
+                return true;
+            }
+            else if (End > new TimeSpan(5, 30, 0) && End_Date.DayOfWeek == DayOfWeek.Saturday)
+            {
+                return true;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

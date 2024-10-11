@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Recursos_Humanos.Registros
@@ -95,14 +96,20 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             int id = 0;
 
+            int idempleado;
+
             if(Permission_Record != null)
             {
-                id = Permission_Record.IdRecord;
+                idempleado = empleados.Where(a => (a._Name + " " + a._Lastname) == Permission_Record._Name).Select(a => a.IdEmployee).First();
+            }
+            else
+            {
+                idempleado = empleados[cr_ComboBox1.SelectedIndex].IdEmployee;
             }
 
             Record_Permission record = new Record_Permission(
                     id,
-                    empleados[cr_ComboBox1.SelectedIndex].IdEmployee,
+                    idempleado,
                     motivos[cr_ComboBox2.SelectedIndex].IdReason,
                     soD_TextBox2.Text,
                     Begin,
@@ -116,20 +123,48 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         {
             cr_ComboBox1.Visible = true;
             cr_Textbox1.Visible = false;
+            botones_Nuevos1.Visible = true;
+            botones_Nuevos1.Click += Add_Permission;
+            botones_Nuevos2.Visible = false;
+            botones_Nuevos3.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = true;
             LlenarCombobox();
         }
 
         private void EditPermissionView()
         {
-
+            cR_DateTimePicker1.Value = Permission_Record.Begin_Date.Date;
+            cR_DateTimePicker2.Value = Permission_Record.End_Date.Date;
             cr_ComboBox1.Visible = false;
             cr_Textbox1.Visible = true;
             cr_Textbox1.Text = Permission_Record._Name;
+            cr_Textbox1.Enabled = false;
             soD_TextBox2.Text = Permission_Record._Description;
             LlenarCombobox();
-
             cr_ComboBox2.SelectedItem = motivos.Where(a => a._Reason == Permission_Record._Reason)
                     .Select(a => a._Reason).First();
+
+            botones_Nuevos1.Visible = false;
+            botones_Nuevos2.Visible = true;
+            botones_Nuevos2.Click += Edit_Permission;
+            botones_Nuevos3.Visible = true;
+            botones_Nuevos3.Click += Delete_Permission;
+
+            panel2.Visible = true;
+            panel3.Visible = true;
+
+            if(Permission_Record.ConfirmBeginDate())
+            {
+                cR_Checkbox1.Checked = true;
+            }
+
+            if (Permission_Record.ConfirmEndDate())
+            {
+                cR_Checkbox2.Checked = true;
+            }
+
+            
 
             SelectHours();
         }
@@ -249,6 +284,19 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             {
                 control.Reset_VisualPermisos();
                 this.Close();
+            }
+        }
+
+        private void Delete_Permission(object sender, EventArgs e)
+        {
+            var msg = MessageBox.Show("Estas seguro de eliminar este registro?","Confirmacion",MessageBoxButtons.OKCancel);
+            if(msg == DialogResult.OK)
+            {
+                if (control.Delete_Permission(Permission_Record.IdRecord))
+                {
+                    control.Reset_VisualPermisos();
+                    this.Close();
+                }
             }
         }
 
