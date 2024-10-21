@@ -23,7 +23,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             InitializeComponent();
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
-            this.botones_Nuevos1.Click += Add_Permission;
             AddPermissionView();
         }
         public Control_Permisos(Record_Permission record)
@@ -32,7 +31,6 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             empleados = control.Obtener_Empleados_Trabajando();
             motivos = control.Obtener_Razones();
             this.Permission_Record = record;
-            this.botones_Nuevos1.Click += Edit_Permission;
             EditPermissionView();
             cR_Subtitulos1.Text = "Editar permiso";
             botones_Nuevos1.Text = "Editar";
@@ -190,7 +188,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
 
             Record_Permission record = new Record_Permission(
-                    id,
+                    idempleado,
                     idempleado,
                     motivos[cr_ComboBox2.SelectedIndex].IdReason,
                     soD_TextBox2.Text,
@@ -353,47 +351,17 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void Add_Permission(object sender, EventArgs e)
         {
-            if (ConfirmData())
-            {
-                if (control.Add_Permission(GetPermissionData()))
-                {
-                    control.Reset_VisualPermisos();
-                    this.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Hay campos que se deben completar.");
-            }
+
         }
 
         private void Edit_Permission(object sender, EventArgs e)
         {
-            if (ConfirmData())
-            {
-                if (control.Edit_Permission(GetPermissionData()))
-                {
-                    control.Reset_VisualPermisos();
-                    this.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Hay campos que se deben completar.");
-            }
+
         }
 
         private void Delete_Permission(object sender, EventArgs e)
         {
-            var msg = MessageBox.Show("Estas seguro de eliminar este registro?","Confirmacion",MessageBoxButtons.OKCancel);
-            if(msg == DialogResult.OK)
-            {
-                if (control.Delete_Permission(Permission_Record.IdRecord))
-                {
-                    control.Reset_VisualPermisos();
-                    this.Close();
-                }
-            }
+
         }
 
         private void cr_Textbox1_TextChanged(object sender, EventArgs e)
@@ -401,9 +369,5 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         }
 
-        private void botones_Nuevos2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
