@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
 using Modelos.AsistenciasYPermisos;
+using OfficeOpenXml.Drawing.Slicer.Style;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -98,8 +99,8 @@ namespace SOD_General.Controladores
 
         public void ImprimirReporte(List<Record_Attendance> records, List<Record_Permission> permissions, DateTime date1, DateTime date2)
         {
-            try
-            {
+            //try
+            //{
  
                 XLWorkbook LibroExcel = new XLWorkbook();
                 #region Asistencias detalladas
@@ -143,8 +144,23 @@ namespace SOD_General.Controladores
                     hoja1.Cell(row, 1).Value = record._Name;
                     hoja1.Cell(row, 2).Value = record.DateAttendance.ToString("dddd d MMM yyy");
                     hoja1.Cell(row, 3).Value = _size.FiltarHoras(record.Entry);
-                    hoja1.Cell(row, 4).Value = _size.FiltarHoras(record.LunchS.Value);
-                    hoja1.Cell(row, 5).Value = _size.FiltarHoras(record.LunchF.Value);
+                    if(record.LunchS != null)
+                    {
+                        hoja1.Cell(row, 4).Value = _size.FiltarHoras(record.LunchS.Value);
+                    }
+                    else
+                    {
+                        hoja1.Cell(row, 4).Value = "No almorzo";
+                    }
+
+                    if (record.LunchF != null)
+                    {
+                        hoja1.Cell(row, 5).Value = _size.FiltarHoras(record.LunchF.Value);
+                    }
+                    else
+                    {
+                        hoja1.Cell(row, 5).Value = "No almorzo";
+                    }
                     hoja1.Cell(row, 6).Value = _size.FiltarHoras(record.Exit);
                     hoja1.Cell(row, 7).Value = record.Job_Hours.ToString().Substring(0, 5) + " Horas";
                     row++;
@@ -525,11 +541,11 @@ namespace SOD_General.Controladores
                     LibroExcel.SaveAs(saveFileDialog.FileName);
                     Process.Start(saveFileDialog.FileName);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
 
         }
 

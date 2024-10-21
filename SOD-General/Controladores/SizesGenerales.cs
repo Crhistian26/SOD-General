@@ -78,6 +78,10 @@ namespace SOD_General.Controladores
         public string FiltarHoras(TimeSpan hora)
         {
             string minutes = "";
+            if(hora.Minutes == 0 && hora.Hours == 0)
+            {
+                return "No hay hora registrada";
+            }
             if (hora.Minutes > 9)
             {
                 minutes = hora.Minutes.ToString();

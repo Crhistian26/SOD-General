@@ -37,9 +37,81 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             cR_Subtitulos1.Text = "Editar permiso";
             botones_Nuevos1.Text = "Editar";
         }
+        //Esta funcion es la que se encarga de verificar los datos antes de guardarlos
+        private bool ConfirmData()
+        {
+            //Cada uno de estos if llevan la opcion contraria, osea el empleado no esta seleccionado, descripcion vacia etc
+           //esto para que sea mas sencillo el seguimiento
+            if(cR_DateTimePicker1.Value.Date > cR_DateTimePicker2.Value.Date)
+            {
+                return false;
+            }
 
-        //Esta funcion es la que se encarga de obtener el reporte en la ventana.
-        private Record_Permission GetPermissionData()
+            if(Permission_Record != null)
+            {
+                if(cr_Textbox1.Text == null)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if(cr_ComboBox1.SelectedIndex == -1)
+                {
+                    return false;
+                }
+            }
+
+            if(cR_Checkbox1.Checked == false)
+            {
+                if(cR_TBhora1.Text.Trim().Length == 0)
+                {
+                    return false;
+                }
+                if (cR_TBminutos1.Text.Trim().Length == 0)
+                {
+                    return false;
+                }
+                if(cr_ComboBox3.SelectedIndex == -1)
+                {
+                    return false;
+                }
+            }
+
+            if (cR_Checkbox2.Checked == false)
+            {
+                if (cR_TBhora2.Text.Trim().Length == 0)
+                {
+                    return false;
+                }
+                if (cR_TBminutos2.Text.Trim().Length == 0)
+                {
+                    return false;
+                }
+                if (cr_ComboBox4.SelectedIndex == -1)
+                {
+                    return false;
+                }
+            }
+
+            if (cr_ComboBox2.SelectedIndex == -1)
+            {
+                return false;
+            }
+            DateTime Begin, End;
+
+            (Begin, End) = GetTimes();
+
+            if(Begin.Date > End.Date)
+            {
+                return false;
+            }
+
+            return true;
+
+        }
+
+        private (DateTime,DateTime) GetTimes()
         {
             DateTime Begin = new DateTime();
             DateTime End = new DateTime();
@@ -93,6 +165,16 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                         );
                 End = hello;
             }
+
+            return(Begin,End);
+        }
+
+        //Esta funcion es la que se encarga de obtener el reporte en la ventana.
+        private Record_Permission GetPermissionData()
+        {
+            DateTime Begin, End;
+
+            (Begin, End) = GetTimes();
 
             int id = 0;
 
@@ -271,19 +353,33 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void Add_Permission(object sender, EventArgs e)
         {
-            if (control.Add_Permission(GetPermissionData()))
+            if (ConfirmData())
             {
-                control.Reset_VisualPermisos();
-                this.Close();
+                if (control.Add_Permission(GetPermissionData()))
+                {
+                    control.Reset_VisualPermisos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hay campos que se deben completar.");
             }
         }
 
         private void Edit_Permission(object sender, EventArgs e)
         {
-            if (control.Edit_Permission(GetPermissionData()))
+            if (ConfirmData())
             {
-                control.Reset_VisualPermisos();
-                this.Close();
+                if (control.Edit_Permission(GetPermissionData()))
+                {
+                    control.Reset_VisualPermisos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hay campos que se deben completar.");
             }
         }
 
@@ -301,6 +397,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
 
         private void cr_Textbox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botones_Nuevos2_Click(object sender, EventArgs e)
         {
 
         }
