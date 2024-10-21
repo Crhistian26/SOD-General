@@ -90,6 +90,29 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                     .OrderBy(a => a.Begin_Date)
                     .ToList();
             }
+
+            if(cr_ComboBox2.Text == "Todos los motivos")
+            {
+                cR_DataGriedView1.Rows.Clear();
+                data =
+                    data.Select(a => a)
+                    .OrderBy(a => a.Begin_Date)
+                    .ToList();
+            }
+            else
+            {
+                cR_DataGriedView1.Rows.Clear();
+                data =
+                    data.Select(a => a)
+                    .Where
+                    (
+                        a =>
+                        a._Reason == cr_ComboBox2.Text
+                        )
+                    .OrderBy(a => a.Begin_Date)
+                    .ToList();
+            }
+
             if (data.Count > 0)
             {
                 foreach (Record_Permission Record in data)
@@ -105,6 +128,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 }
             }
         }
+
 
         private void Registros_Generales_Load(object sender, EventArgs e)
         {
@@ -235,6 +259,11 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         }
 
         private void cr_ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OrganizarDataGriedFecha();
+        }
+
+        private void cr_ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             OrganizarDataGriedFecha();
         }

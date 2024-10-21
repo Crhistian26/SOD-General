@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cr_ComboBox2 = new Cr_ComboBox();
             this.cr_ComboBox1 = new Cr_ComboBox();
@@ -63,6 +63,7 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -80,8 +81,9 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(960, 490);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(1280, 603);
             this.cR_SplitContainer1.SplitterDistance = 198;
+            this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // cr_ComboBox2
@@ -92,10 +94,12 @@
             this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cr_ComboBox2.ForeColor = System.Drawing.Color.Black;
             this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Location = new System.Drawing.Point(16, 138);
+            this.cr_ComboBox2.Location = new System.Drawing.Point(21, 170);
+            this.cr_ComboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(301, 29);
+            this.cr_ComboBox2.Size = new System.Drawing.Size(400, 35);
             this.cr_ComboBox2.TabIndex = 8;
+            this.cr_ComboBox2.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox2_SelectedIndexChanged);
             // 
             // cr_ComboBox1
             // 
@@ -105,9 +109,10 @@
             this.cr_ComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cr_ComboBox1.ForeColor = System.Drawing.Color.Black;
             this.cr_ComboBox1.FormattingEnabled = true;
-            this.cr_ComboBox1.Location = new System.Drawing.Point(16, 83);
+            this.cr_ComboBox1.Location = new System.Drawing.Point(21, 102);
+            this.cr_ComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cr_ComboBox1.Name = "cr_ComboBox1";
-            this.cr_ComboBox1.Size = new System.Drawing.Size(301, 29);
+            this.cr_ComboBox1.Size = new System.Drawing.Size(400, 35);
             this.cr_ComboBox1.TabIndex = 7;
             this.cr_ComboBox1.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox1_SelectedIndexChanged);
             // 
@@ -121,9 +126,10 @@
             this.botones_Nuevos5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos5.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos5.Location = new System.Drawing.Point(16, 13);
+            this.botones_Nuevos5.Location = new System.Drawing.Point(21, 16);
+            this.botones_Nuevos5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos5.Name = "botones_Nuevos5";
-            this.botones_Nuevos5.Size = new System.Drawing.Size(175, 40);
+            this.botones_Nuevos5.Size = new System.Drawing.Size(233, 49);
             this.botones_Nuevos5.TabIndex = 6;
             this.botones_Nuevos5.Text = "Agregar permisos";
             this.botones_Nuevos5.UseVisualStyleBackColor = false;
@@ -138,9 +144,10 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(350, 9);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(467, 11);
+            this.cR_Subtitulos1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(271, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(337, 40);
             this.cR_Subtitulos1.TabIndex = 5;
             this.cR_Subtitulos1.Text = "Registro de permisos";
             // 
@@ -149,9 +156,10 @@
             this.cR_LabelUp2.AutoSize = true;
             this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(12, 115);
+            this.cR_LabelUp2.Location = new System.Drawing.Point(16, 142);
+            this.cR_LabelUp2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelUp2.Name = "cR_LabelUp2";
-            this.cR_LabelUp2.Size = new System.Drawing.Size(57, 20);
+            this.cR_LabelUp2.Size = new System.Drawing.Size(69, 23);
             this.cR_LabelUp2.TabIndex = 4;
             this.cR_LabelUp2.Text = "Motivo";
             // 
@@ -164,9 +172,10 @@
             this.panel1.Controls.Add(this.botones_Nuevos1);
             this.panel1.Controls.Add(this.cR_DateTimePicker2);
             this.panel1.Controls.Add(this.cR_DateTimePicker1);
-            this.panel1.Location = new System.Drawing.Point(323, 60);
+            this.panel1.Location = new System.Drawing.Point(431, 74);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(625, 91);
+            this.panel1.Size = new System.Drawing.Size(833, 112);
             this.panel1.TabIndex = 2;
             // 
             // botones_Nuevos4
@@ -179,9 +188,10 @@
             this.botones_Nuevos4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos4.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos4.Location = new System.Drawing.Point(472, 4);
+            this.botones_Nuevos4.Location = new System.Drawing.Point(629, 5);
+            this.botones_Nuevos4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos4.Name = "botones_Nuevos4";
-            this.botones_Nuevos4.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos4.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos4.TabIndex = 5;
             this.botones_Nuevos4.Text = "Este año";
             this.botones_Nuevos4.UseVisualStyleBackColor = false;
@@ -197,9 +207,10 @@
             this.botones_Nuevos3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos3.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos3.Location = new System.Drawing.Point(316, 4);
+            this.botones_Nuevos3.Location = new System.Drawing.Point(421, 5);
+            this.botones_Nuevos3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos3.Name = "botones_Nuevos3";
-            this.botones_Nuevos3.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos3.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos3.TabIndex = 4;
             this.botones_Nuevos3.Text = "Estos 3 meses";
             this.botones_Nuevos3.UseVisualStyleBackColor = false;
@@ -215,9 +226,10 @@
             this.botones_Nuevos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos2.Location = new System.Drawing.Point(160, 3);
+            this.botones_Nuevos2.Location = new System.Drawing.Point(213, 4);
+            this.botones_Nuevos2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos2.Name = "botones_Nuevos2";
-            this.botones_Nuevos2.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos2.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos2.TabIndex = 3;
             this.botones_Nuevos2.Text = "Este mes";
             this.botones_Nuevos2.UseVisualStyleBackColor = false;
@@ -233,9 +245,10 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(4, 4);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(5, 5);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos1.TabIndex = 2;
             this.botones_Nuevos1.Text = "Esta semana";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
@@ -245,9 +258,10 @@
             // 
             this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(357, 64);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(476, 79);
+            this.cR_DateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
-            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker2.Size = new System.Drawing.Size(352, 29);
             this.cR_DateTimePicker2.TabIndex = 1;
             this.cR_DateTimePicker2.ValueChanged += new System.EventHandler(this.cR_DateTimePicker2_ValueChanged);
             // 
@@ -255,9 +269,10 @@
             // 
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(3, 64);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(4, 79);
+            this.cR_DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(352, 29);
             this.cR_DateTimePicker1.TabIndex = 0;
             this.cR_DateTimePicker1.ValueChanged += new System.EventHandler(this.cR_DateTimePicker1_ValueChanged);
             // 
@@ -266,9 +281,10 @@
             this.cR_LabelUp1.AutoSize = true;
             this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(12, 60);
+            this.cR_LabelUp1.Location = new System.Drawing.Point(16, 74);
+            this.cR_LabelUp1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(77, 20);
+            this.cR_LabelUp1.Size = new System.Drawing.Size(92, 23);
             this.cR_LabelUp1.TabIndex = 1;
             this.cR_LabelUp1.Text = "Empleado";
             // 
@@ -277,10 +293,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registros_RecordId,
@@ -292,24 +308,29 @@
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.RowHeadersWidth = 51;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(960, 288);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(1280, 400);
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
             // 
             // Registros_RecordId
             // 
             this.Registros_RecordId.HeaderText = "Id";
+            this.Registros_RecordId.MinimumWidth = 6;
             this.Registros_RecordId.Name = "Registros_RecordId";
             this.Registros_RecordId.ReadOnly = true;
             this.Registros_RecordId.Visible = false;
+            this.Registros_RecordId.Width = 125;
             // 
             // Registros_Employee
             // 
             this.Registros_Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Registros_Employee.HeaderText = "Empleado";
+            this.Registros_Employee.MinimumWidth = 6;
             this.Registros_Employee.Name = "Registros_Employee";
             this.Registros_Employee.ReadOnly = true;
             // 
@@ -317,6 +338,7 @@
             // 
             this.Registros_Reason.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Registros_Reason.HeaderText = "Motivo";
+            this.Registros_Reason.MinimumWidth = 6;
             this.Registros_Reason.Name = "Registros_Reason";
             this.Registros_Reason.ReadOnly = true;
             // 
@@ -324,6 +346,7 @@
             // 
             this.Registros_Date1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Registros_Date1.HeaderText = "Desde el";
+            this.Registros_Date1.MinimumWidth = 6;
             this.Registros_Date1.Name = "Registros_Date1";
             this.Registros_Date1.ReadOnly = true;
             // 
@@ -331,6 +354,7 @@
             // 
             this.Registros_Date2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Registros_Date2.HeaderText = "Hasta el";
+            this.Registros_Date2.MinimumWidth = 6;
             this.Registros_Date2.Name = "Registros_Date2";
             this.Registros_Date2.ReadOnly = true;
             // 
@@ -338,17 +362,19 @@
             // 
             this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Cantidad.HeaderText = "Total de horas";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 
             // Registros_GeneralesPermisos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 490);
+            this.ClientSize = new System.Drawing.Size(1280, 603);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(905, 472);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1207, 581);
             this.Name = "Registros_GeneralesPermisos";
             this.Text = "Registros_Generales";
             this.Load += new System.EventHandler(this.Registros_Generales_Load);
