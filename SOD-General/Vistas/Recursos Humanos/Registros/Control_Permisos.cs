@@ -351,16 +351,48 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void Add_Permission(object sender, EventArgs e)
         {
+            if (ConfirmData())
+            {
+                if (control.Add_Permission(GetPermissionData()))
+                {
+                    control.Reset_VisualPermisos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hay campos que se deben completar.");
+            }
 
         }
 
         private void Edit_Permission(object sender, EventArgs e)
         {
-
+            if (ConfirmData())
+            {
+                if (control.Edit_Permission(GetPermissionData()))
+                {
+                    control.Reset_VisualPermisos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hay campos que se deben completar.");
+            }
         }
 
         private void Delete_Permission(object sender, EventArgs e)
         {
+            var msg = MessageBox.Show("Estas seguro de eliminar este registro?", "Confirmacion", MessageBoxButtons.OKCancel);
+            if (msg == DialogResult.OK)
+            {
+                if (control.Delete_Permission(Permission_Record.IdRecord))
+                {
+                    control.Reset_VisualPermisos();
+                    this.Close();
+                }
+            }
 
         }
 
