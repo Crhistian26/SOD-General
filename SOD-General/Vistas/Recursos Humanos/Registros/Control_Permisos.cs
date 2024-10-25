@@ -174,7 +174,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             (Begin, End) = GetTimes();
 
-            int id = 0;
+            int id = Permission_Record == null ? 0 : Permission_Record.IdRecord; 
 
             int idempleado;
 
