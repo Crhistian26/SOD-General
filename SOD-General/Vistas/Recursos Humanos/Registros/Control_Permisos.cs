@@ -188,7 +188,7 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
             }
 
             Record_Permission record = new Record_Permission(
-                    idempleado,
+                    id,
                     idempleado,
                     motivos[cr_ComboBox2.SelectedIndex].IdReason,
                     soD_TextBox2.Text,
