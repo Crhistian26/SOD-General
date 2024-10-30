@@ -40,7 +40,7 @@ namespace SOD_General.Controladores
 
                 if (day_schedule._dayOfWeek != DayOfWeek.Sunday)
                 {
-                    totalFaltado += day_schedule._EndHour - day_schedule._LunchHours - day_schedule._StartHour;
+                    totalFaltado += day_schedule._EndHour - (day_schedule._StartHour - day_schedule._LunchHours);
                 }
             }
 
@@ -360,7 +360,7 @@ namespace SOD_General.Controladores
                     string TotalHours;
                     foreach (var record in grupo)
                     {
-                        if(record.Begin_Date <= date1 &&  record.End_Date >= date2)
+                        if(record.Begin_Date >= date1 &&  record.End_Date <= date2)
                         {
                             HoursAusent += record.Get_Hours_Ausent();
                         }
