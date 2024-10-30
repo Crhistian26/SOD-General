@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
 using Modelos.AsistenciasYPermisos;
+using Modelos.AsistenciasYPermisos.Count_hours;
 using OfficeOpenXml.Drawing.Slicer.Style;
 using System;
 using System.Collections.Generic;
@@ -21,32 +22,25 @@ namespace SOD_General.Controladores
         SizesGenerales _size = new SizesGenerales();
         Registros_Controller Registros_Controller = new Registros_Controller();
 
-        static Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = _size2.Days;
+        List<Schedule> schedules = new List<Schedule>();
 
         public TimeSpan CountHoursPendent(DateTime Begin, DateTime End)
         {
-            DateTime Begin_Date = new DateTime(Begin.Year, Begin.Month, Begin.Day);
-            DateTime End_Date = new DateTime(End.Year, End.Month, End.Day);
-
             TimeSpan totalFaltado = TimeSpan.Zero;
+            var schels = Registros_Controller.Get_Schedules(Begin, End);
 
-            for (DateTime dia = Begin_Date.Date; dia <= End_Date.Date; dia = dia.AddDays(1))
+            for (DateTime date = Begin; date <= End; date = date.AddDays(1))
             {
-                if (Days.TryGetValue(dia.DayOfWeek, out var horario))
+                Schedule schedule =
+                   schels.Where(a => a.StartDate <= date.Date).ToList()
+                   .OrderBy(a => a.StartDate).FirstOrDefault();
+
+                //selecciono el dia en especifico de los horarios que tengo.
+                DailySchedule day_schedule = schedule.DailySchedules.Where(a => a._dayOfWeek == date.DayOfWeek).First();
+
+                if (day_schedule._dayOfWeek != DayOfWeek.Sunday)
                 {
-                    if (dia.DayOfWeek == DayOfWeek.Sunday)
-                    {
-                        continue;
-                    }
-                    totalFaltado += horario.JobEnd - horario.JobStart;
-
-                    if (dia.DayOfWeek == DayOfWeek.Saturday)
-                    {
-                        continue;
-                    }
-                    totalFaltado -= new TimeSpan(1, 15, 0);
-
-
+                    totalFaltado += day_schedule._EndHour - day_schedule._LunchHours - day_schedule._StartHour;
                 }
             }
 
@@ -101,7 +95,7 @@ namespace SOD_General.Controladores
         {
             //try
             //{
- 
+
                 XLWorkbook LibroExcel = new XLWorkbook();
                 #region Asistencias detalladas
                 int row = 1;
@@ -298,29 +292,14 @@ namespace SOD_General.Controladores
                 row++;
 
                 foreach (Record_Permission permission in permissions)
-                {
-                    DateTime EndPermission;
-                    string CountPermissionHour;
-
-                    if(permission.End_Date > date2)
-                    {
-                        var TimerLimit = Days[date2.DayOfWeek].JobEnd;
-                        EndPermission = date2 + TimerLimit;
-                        CountPermissionHour = ConvertTimeSpan(permission.Get_Hours_Ausent(date2)).Item1;
-                    }
-                    else
-                    {
-                        EndPermission = permission.End_Date;
-                        CountPermissionHour = ConvertTimeSpan(permission.Get_Hours_Ausent()).Item1;
-                    }
-                    
+                {                   
 
                     DetailedPermission.Cell(row, 1).Value = permission._Name;
                     DetailedPermission.Cell(row, 2).Value = permission._Reason;
                     DetailedPermission.Cell(row, 3).Value = permission._Description;
                     DetailedPermission.Cell(row, 4).Value = permission.Begin_Date.ToString("f");
-                    DetailedPermission.Cell(row, 5).Value = EndPermission.ToString("f");
-                    DetailedPermission.Cell(row, 6).Value = CountPermissionHour;
+                    DetailedPermission.Cell(row, 5).Value = permission.End_Date.ToString("f");
+                    DetailedPermission.Cell(row, 6).Value = ConvertTimeSpan(permission.Get_Hours_Ausent()).Item1;
                     row++;
                 }
                 DetailedPermission.Columns().AdjustToContents();
@@ -330,6 +309,7 @@ namespace SOD_General.Controladores
                 DetPer_range.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                 DetPer_range.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
                 DetPer_range = DetailedPermission.Range($"A3:F{row - 1}").CreateTable();
+
                 #endregion
 
                 #region Calculo de horas de permisos
@@ -380,13 +360,13 @@ namespace SOD_General.Controladores
                     string TotalHours;
                     foreach (var record in grupo)
                     {
-                        if (record.End_Date > date2)
+                        if(record.Begin_Date <= date1 &&  record.End_Date >= date2)
                         {
-                            HoursAusent += record.Get_Hours_Ausent(date2);
+                            HoursAusent += record.Get_Hours_Ausent();
                         }
                         else
                         {
-                            HoursAusent += record.Get_Hours_Ausent();
+                            HoursAusent += record.Get_Hours_Ausent(date1,date2);
                         }
                     }
                     
@@ -483,7 +463,14 @@ namespace SOD_General.Controladores
                     {
                         foreach (var permission in Permissions)
                         {
-                            TimerPermission += permission.Get_Hours_Ausent();
+                            if (permission.Begin_Date <= date1 && permission.End_Date >= date2)
+                            {
+                                TimerPermission += permission.Get_Hours_Ausent();
+                            }
+                            else
+                            {
+                                TimerPermission += permission.Get_Hours_Ausent(date1, date2);
+                            }
                         }
 
                         CountPermissionHours = ConvertTimeSpan(TimerPermission).Item1;
@@ -493,7 +480,6 @@ namespace SOD_General.Controladores
                     if (TimerAttendance.TotalMinutes <= 0)
                     {
                         CountHoursString = "No es posible calcular";
-
                     }
                     else
                     {
@@ -525,9 +511,9 @@ namespace SOD_General.Controladores
                 CountHours_range2.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                 CountHours_range2.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
                 CountHours.Columns().AdjustToContents();
-            #endregion
+                #endregion
 
-           
+
                 //Esta es la parte encargada de guardar el archivo
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
 

@@ -1,5 +1,6 @@
 ﻿using Controladores;
 using Modelos.AsistenciasYPermisos;
+using Modelos.AsistenciasYPermisos.Count_hours;
 using Modelos.Control_de_usuarios;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Controladores;
@@ -19,9 +20,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
         List<Employee> empleados;
         List<Model_Reason> motivos;
         List<Record_Permission> permisos;
+        List<Schedule> horarios;
         Model_User user;
 
-        public Registros_GeneralesPermisos(AppVistaGeneral app)
+        public Registros_GeneralesPermisos()
         {
             InitializeComponent();
             user = Application.OpenForms.OfType<AppVistaGeneral>().First().user;

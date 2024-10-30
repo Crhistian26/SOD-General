@@ -400,14 +400,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controladores\Administrator_Controller.cs" />
     <Compile Include="Controladores\BrandController.cs" />
     <Compile Include="Controladores\ClientController.cs" />
     <Compile Include="Controladores\ControlOperaciones.cs" />
+    <Compile Include="Controladores\Control_UsersController.cs" />
     <Compile Include="Controladores\Empleados_Controller.cs" />
     <Compile Include="Controladores\EntryOrderController.cs" />
     <Compile Include="Controladores\EquipmentController.cs" />
     <Compile Include="Controladores\ExportsRRHHReports.cs" />
+    <Compile Include="Controladores\General_Controller.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\Motivos_Controller.cs" />
     <Compile Include="Controladores\QualityControlController.cs" />

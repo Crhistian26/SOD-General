@@ -1,4 +1,6 @@
-﻿using Modelos.AsistenciasYPermisos;
+﻿using iText.IO.Util;
+using Modelos.AsistenciasYPermisos;
+using Modelos.AsistenciasYPermisos.Count_hours;
 using Modelos.Usuarios_Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Registros;
 using System;
@@ -16,6 +18,7 @@ namespace SOD_General.Controladores
         //La cadena de conexion
         static string cadena = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
         SqlConnection conex = new SqlConnection(cadena);
+        General_Controller control = new General_Controller();
 
         #region Asistencias
         public void AgregarAsistencia(DateTime fecha)
@@ -313,8 +316,46 @@ namespace SOD_General.Controladores
                     record = new Record_Permission(IdRecord,  Name, Reason, Det, Begin, End);
                     permisos.Add(record);
                 }
-                conex.Close();
+                
 
+                reader.Close();
+                conex.Close();
+                if (permisos.Count > 0)
+                {
+                    conex.Open();
+                    Query = "exec Get_Schedules_Between @date1,@date2";
+                    //La consulta
+                    SqlCommand cmd2 = new SqlCommand(Query, conex);
+                    cmd2.Parameters.AddWithValue("@date1", permisos.Min(a => a.Begin_Date.Date));
+                    cmd2.Parameters.AddWithValue("@date2", permisos.Max(a => a.End_Date.Date));
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    List<Schedule> schedules = new List<Schedule>();
+                    while (reader2.Read())
+                    {
+                        string paramt1 = reader2.GetString(0);
+                        DateTime paramt2 = reader2.GetDateTime(1);
+                        Schedule schedule = new Schedule(paramt2, paramt1);
+                        schedules.Add(schedule);
+                    }
+
+                    reader2.Close();
+                    
+
+                    foreach (Record_Permission permission in permisos)
+                    {
+                        var s = schedules.OrderByDescending(a => a.StartDate).First();
+                        var s2 = schedules
+                            .Where(a => a.StartDate <= permission.End_Date && a.StartDate > permission.Begin_Date).ToList();
+                        List<Schedule> list = new List<Schedule>();
+                        list.Add(s);
+
+
+                        List<Schedule> SchedulesForPermission = list.Union(s2).ToList();
+                        permission.schedules = SchedulesForPermission;
+                    }
+                    conex.Close();
+                }
 
                 return permisos;
             }
@@ -327,15 +368,7 @@ namespace SOD_General.Controladores
                 MessageBox.Show(ex.Message);
                 return null;
             }
-            catch (Exception ex)
-            {
-                if (conex.State != System.Data.ConnectionState.Closed)
-                {
-                    conex.Close();
-                }
-                MessageBox.Show(ex.Message);
-                return null;
-            }
+            
         }
 
         public bool Add_Permission(Record_Permission record)
@@ -583,6 +616,88 @@ namespace SOD_General.Controladores
             }
         }
 
+        /// <summary>
+        /// Este metodo se encarga de retornar una lista de horarios entre estas dos fechas.
+        /// </summary>
+        /// <param name="date1">La primera fecha</param>
+        /// <param name="date2">La segunda fecha</param>
+        /// <returns></returns>
+        public List<Schedule> Get_Schedules(DateTime date1, DateTime date2)
+        {
+            try
+            {
+                List<Schedule> schecules = new List<Schedule>();
+
+                string query = "exec Get_Schedules_Between @date1,@date2";
+
+                SqlCommand cmd = new SqlCommand(query, conex);
+                cmd.Parameters.AddWithValue("@date1", date1);
+                cmd.Parameters.AddWithValue("@date2", date2);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Schedule _schedule = new Schedule
+                        (
+                            reader.GetDateTime(1),
+                            reader.GetString(0)
+                        );
+                    schecules.Add(_schedule);
+                }
+                conex.Close();
+
+                return schecules;
+            }
+            catch (SqlException ex)
+            {
+                control.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                control.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            
+        }
+
+        /// <summary>
+        /// Metodo encargado de introducir un horario a la base de datos y revisar si el mismo dia al que se llevara a cabo no tiene otro horario establecido.
+        /// </summary>
+        /// <param name="schecule"></param>
+        public bool Insert_Schedules(Schedule schecule)
+        {
+            try
+            {
+                string query = "exec Insert_Schedule @startdate, @data";
+
+                SqlCommand cmd = new SqlCommand(query, conex);
+
+                cmd.Parameters.AddWithValue("@startdate", schecule.StartDate.Date);
+                cmd.Parameters.AddWithValue("@data", schecule.Get_JSON_DailySchedules());
+
+                conex.Open();
+                cmd.ExecuteNonQuery();
+                conex.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                control.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                control.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
         public void Reset_VisualRegistors()
         {
             var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
@@ -598,7 +713,7 @@ namespace SOD_General.Controladores
         public void Reset_VisualPermisos()
         {
             var h = Application.OpenForms.OfType<AppVistaGeneral>().First();
-            h.OpenForm(new Registros_GeneralesPermisos(h));
+            h.OpenForm(new Registros_GeneralesPermisos());
         }
     }
 }

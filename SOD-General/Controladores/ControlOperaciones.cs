@@ -80,7 +80,7 @@ namespace Controladores
                         ("Permisos","Ver permisos"),
                         (object sender, EventArgs e) =>
                         {
-                            Registros_GeneralesPermisos window = new Registros_GeneralesPermisos(_view);
+                            Registros_GeneralesPermisos window = new Registros_GeneralesPermisos();
                             _view.OpenForm(window);
                         }
                     },
