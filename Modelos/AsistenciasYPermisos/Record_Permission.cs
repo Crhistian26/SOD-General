@@ -1,21 +1,12 @@
-﻿using System;
+﻿using Modelos.AsistenciasYPermisos.Count_hours;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Modelos.AsistenciasYPermisos
 {
     public class Record_Permission
     {
-        public Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)> Days = new Dictionary<DayOfWeek, (TimeSpan JobStart, TimeSpan JobEnd)>
-        {
-            {DayOfWeek.Monday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Tuesday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Wednesday,(new TimeSpan(9,0,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Thursday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Friday,(new TimeSpan(8,30,0),new TimeSpan(17,30,0))},
-            {DayOfWeek.Saturday,(new TimeSpan(8,30,0),new TimeSpan(13,0,0))},
-            {DayOfWeek.Sunday,(new TimeSpan(0,0,0),new TimeSpan(0,0,0))},
-        };
-
         public int IdRecord { get; set; }
         public int IdEmployee { get; set; }
         public string _Name { get; set; }
@@ -24,8 +15,7 @@ namespace Modelos.AsistenciasYPermisos
         public string _Description { get; set; }
         public DateTime Begin_Date { get; set; }
         public DateTime End_Date { get; set; }
-
-      
+        public List<Schedule> schedules { get; set; }
 
         public Record_Permission(int IdRecord, string Reason, string descip, DateTime fecha1, DateTime fecha2)
         {
@@ -36,7 +26,7 @@ namespace Modelos.AsistenciasYPermisos
             this.End_Date = fecha2;
         }
 
-        public Record_Permission(int IdRecord, int idEmployee , int idReason, string descip, DateTime fecha1, DateTime fecha2)
+        public Record_Permission(int IdRecord, int idEmployee, int idReason, string descip, DateTime fecha1, DateTime fecha2)
         {
             this.IdRecord = IdRecord;
             this.IdEmployee = idEmployee;
@@ -46,7 +36,7 @@ namespace Modelos.AsistenciasYPermisos
             this.End_Date = fecha2;
         }
 
-        public Record_Permission(int IdRecord, string Name, string Reason,  string descip, DateTime fecha1, DateTime fecha2)
+        public Record_Permission(int IdRecord, string Name, string Reason, string descip, DateTime fecha1, DateTime fecha2)
             : this(IdRecord, Reason, descip, fecha1, fecha2)
         {
             this._Name = Name;
@@ -60,136 +50,129 @@ namespace Modelos.AsistenciasYPermisos
             this.End_Date = fecha2;
         }
 
+        private DailySchedule GetDailySchedule(DateTime date)
+        {
+            //Selecciono el horario correspondiente de la lista de horarios.
+            Schedule schedule =
+                schedules.Where(a => a.StartDate <= date.Date).ToList()
+                .OrderBy(a => a.StartDate).FirstOrDefault();
+
+            //selecciono el dia en especifico de los horarios que tengo.
+            DailySchedule day_schedule = schedule.DailySchedules.Where(a => a._dayOfWeek == date.DayOfWeek).First();
+
+            return day_schedule;
+        }
+
         public TimeSpan Get_Hours_Ausent()
         {
             TimeSpan totalFaltado = TimeSpan.Zero;
-            DateTime InicioReal, FinReal;
-            DateTime InicioHorario, FinHorario;
+            TimeSpan _start, _end;
 
-            if (Begin_Date.Date == End_Date.Date)
+
+            for (DateTime date = Begin_Date; date.Date <= End_Date.Date; date = date.AddDays(1))
             {
-                Days.TryGetValue(Begin_Date.DayOfWeek, out var horario);
+                TimeSpan hours = TimeSpan.Zero;
 
-                InicioHorario = Begin_Date.Date + horario.JobStart;
-                FinHorario = End_Date.Date + horario.JobEnd;
+                DailySchedule day_schedule = GetDailySchedule(date);
 
-                InicioReal = Begin_Date > InicioHorario ? Begin_Date : InicioHorario;
-                FinHorario = End_Date > FinHorario ? End_Date : FinHorario;
+                TimeSpan start = new TimeSpan(date.Hour, date.Minute, 0);
 
-                var h = End_Date - Begin_Date;
+                _start = start > day_schedule._StartHour && date.Date == Begin_Date.Date? start : day_schedule._StartHour;
 
-                totalFaltado = new TimeSpan(h.Hours, h.Minutes, 0);
+                TimeSpan end = new TimeSpan(End_Date.Hour, End_Date.Minute, 0);
 
-                return totalFaltado;
-            }
-            else
-            {
-                DateTime h = Begin_Date.Date;
-                
-                do
+                _end = end < day_schedule._EndHour && date.Date == End_Date.Date? end : day_schedule._EndHour;
+
+                hours = _end - _start;
+
+                if (_start.Hours <= 12 && _end.Hours >= 3 && Begin_Date.Date == End_Date.Date)
                 {
-                    Days.TryGetValue(h.DayOfWeek, out var horario);
-
-                    InicioHorario = h.Date + horario.JobStart;
-                    FinHorario = h.Date + horario.JobEnd;
-
-                    if(InicioHorario.Date == Begin_Date.Date)
-                    {
-                        InicioReal = Begin_Date > InicioHorario ? Begin_Date : InicioHorario;
-                    }
-                    else
-                    {
-                        InicioReal = InicioHorario;
-                    }
-
-                    if (FinHorario.Date == End_Date.Date)
-                    {
-                        FinReal = End_Date > FinHorario ? End_Date : FinHorario;
-                    }
-                    else
-                    {
-                        FinReal = FinHorario;
-                    }
-                    
-                    var v = FinReal - InicioReal;
-
-                    if(v.Hours > 8)
-                    {
-                        totalFaltado += new TimeSpan(v.Hours - 1, v.Minutes, 0);
-                    }
-                    else
-                    {
-                        totalFaltado += new TimeSpan(v.Hours, v.Minutes, 0);
-                    }
-                    
-
-
-                    h = h.AddDays(1);
-                } while (h.Date < End_Date.Date);
-            }
-
-            return totalFaltado;
-        }
-
-    
-
-        public TimeSpan Get_Hours_Ausent(DateTime FinalDate)
-        {
-
-            TimeSpan totalFaltado = TimeSpan.Zero;
-            for (DateTime dia = Begin_Date.Date; dia <= FinalDate; dia = dia.AddDays(1))
-            {
-                if (Days.TryGetValue(dia.DayOfWeek, out var horario))
+                    hours -= day_schedule._LunchHours;
+                }
+                else if (_start.Hours <= 12 && End_Date.Date != Begin_Date.Date)
                 {
-                    DateTime inicioJornada = dia.Date + horario.JobStart;
-                    DateTime finJornada = dia.Date + horario.JobEnd;
+                    hours -= day_schedule._LunchHours;
+                }
 
-                    if (Begin_Date < finJornada && End_Date > inicioJornada)
-                    {
-
-                        DateTime start = Begin_Date > inicioJornada ? Begin_Date : inicioJornada;
-                        DateTime end = End_Date < finJornada ? End_Date : finJornada;
-
-                        totalFaltado += end - start;
-
-                        if (end > start)
-                        {
-                            totalFaltado -= new TimeSpan(1, 15, 0);
-                        }
-                    }
+                if (date.DayOfWeek != DayOfWeek.Sunday)
+                {
+                    totalFaltado += hours;
                 }
             }
 
             return totalFaltado;
         }
 
-        public bool ConfirmBeginDate()
+        public TimeSpan Get_Hours_Ausent(DateTime _date, DateTime _date2)
         {
-            TimeSpan begin = new TimeSpan(Begin_Date.Hour, Begin_Date.Minute, 0);
-            if(begin > new TimeSpan(8, 30, 0))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+            //_date2.Hours = 0; _date2.Minutes = 0;
+            TimeSpan totalFaltado = TimeSpan.Zero;
+            TimeSpan _start, _end;
+            var iterador = _date.Date <= Begin_Date.Date ? Begin_Date : _date;
+            var desicion = _date2.Date >= End_Date.Date ? End_Date : _date2;
 
+            for (
+                    DateTime date = iterador;
+                    date.Date <= desicion;
+                    date = date.AddDays(1)
+                )
+            {
+                TimeSpan hours = TimeSpan.Zero;
+
+                DailySchedule day_schedule = GetDailySchedule(date);
+
+                TimeSpan start = new TimeSpan(date.Hour, date.Minute, 0);
+
+                _start = start > day_schedule._StartHour && date.Date == Begin_Date.Date ? start : day_schedule._StartHour;
+
+                TimeSpan end = new TimeSpan(End_Date.Hour, End_Date.Minute, 0);
+
+                _end = end < day_schedule._EndHour && date.Date == End_Date.Date ? end : day_schedule._EndHour;
+
+                hours = _end - _start;
+
+                if (_start.Hours <= 12 && _end.Hours >= 3 && Begin_Date.Date == End_Date.Date)
+                {
+                    hours -= day_schedule._LunchHours;
+                }
+                else if (_start.Hours <= 12 && End_Date.Date != Begin_Date.Date)
+                {
+                    hours -= day_schedule._LunchHours;
+                }
+
+                if (date.DayOfWeek != DayOfWeek.Sunday)
+                {
+                    totalFaltado += hours;
+                }
+            }
+
+            return totalFaltado;
+        }
         public bool ConfirmEndDate()
         {
             TimeSpan End = new TimeSpan(End_Date.Hour, End_Date.Minute, 0);
-            if (End > new TimeSpan(5, 30, 0) && End_Date.DayOfWeek != DayOfWeek.Sunday && End_Date.DayOfWeek != DayOfWeek.Saturday)
-            {
-                return true;
-            }
-            else if (End > new TimeSpan(5, 30, 0) && End_Date.DayOfWeek == DayOfWeek.Saturday)
+            DailySchedule day_schedule = GetDailySchedule(End_Date);
+            if (End == day_schedule._EndHour)
             {
                 return true;
             }
             else
             {
+                return false;
+            }
+        }
+
+        public bool ConfirmBeginDate()
+        {
+            TimeSpan Begin = new TimeSpan(Begin_Date.Hour, Begin_Date.Minute, 0);
+            DailySchedule day_schedule = GetDailySchedule(Begin_Date);
+            if (Begin == day_schedule._EndHour)
+            {
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
