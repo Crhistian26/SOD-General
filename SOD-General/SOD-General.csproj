@@ -536,6 +536,12 @@
     <Compile Include="Vistas\Recursos Humanos\Registros\Control_Asistencias.Designer.cs">
       <DependentUpon>Control_Asistencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Ponchador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Recursos Humanos\Registros\Ponchador.Designer.cs">
+      <DependentUpon>Ponchador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -817,6 +823,9 @@
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Control_Asistencias.resx">
       <DependentUpon>Control_Asistencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Ponchador.resx">
+      <DependentUpon>Ponchador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.resx">
       <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>
     </EmbeddedResource>
@@ -967,7 +976,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo-de-la-app.ico" />
+    <Content Include="zkemkeeper.dll" />
     <None Include="Resources\ojo-con-pestanas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
