@@ -58,7 +58,7 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(516, 277);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(512, 273);
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // cR_LabelUp1
@@ -124,6 +124,7 @@
             this.btnCargar.TabIndex = 7;
             this.btnCargar.Text = "Cargar ";
             this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnComprobar
             // 
@@ -147,9 +148,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(516, 277);
             this.Controls.Add(this.cR_SplitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(532, 316);
             this.Name = "Ponchador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

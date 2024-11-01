@@ -136,14 +136,14 @@ namespace Controladores
                         }
                     },
 
-                    //  {
-                    //    ("Equipos","Añadir Marcas"),
-                    //    (object sender, EventArgs e) =>
-                    //    {
-                    //        AgregarMarcas window = new AgregarMarcas();
-                    //        _view.OpenForm(window);
-                    //    }
-                    //},
+                      {
+                        ("Ponchador","Conexion y registro"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Ponchador window = new Ponchador();
+                            window.Show();
+                        }
+                    },
 
                       {
                         ("Equipos","Ver Marcas"),
@@ -260,11 +260,11 @@ namespace Controladores
             _view.cR_MenuStrip1.Items.Add(login_back);
             _view.cR_MenuStrip1.ForeColor = System.Drawing.Color.White;
 
-            ToolStripMenuItem ponchador_Open = new ToolStripMenuItem();
-            ponchador_Open.Text = "Ponchador";
-            ponchador_Open.Click += Poncho_Click;
-            _view.cR_MenuStrip1.Items.Add(ponchador_Open);
-            _view.cR_MenuStrip1.ForeColor = System.Drawing.Color.White;
+            //ToolStripMenuItem ponchador_Open = new ToolStripMenuItem();
+            //ponchador_Open.Text = "Ponchador";
+            //ponchador_Open.Click += Poncho_Click;
+            //_view.cR_MenuStrip1.Items.Add(ponchador_Open);
+            //_view.cR_MenuStrip1.ForeColor = System.Drawing.Color.White;
         }
 
         private void Login_Click(object sender, EventArgs e)
@@ -272,11 +272,11 @@ namespace Controladores
             Application.Restart();
         }
 
-        private void Poncho_Click(object sender, EventArgs e)
-        {
-            Ponchador ponchador = new Ponchador();
-            ponchador.Show();
-        }
+        //private void Poncho_Click(object sender, EventArgs e)
+        //{
+        //    Ponchador ponchador = new Ponchador();
+        //    ponchador.Show();
+        //}
 
         #endregion
     }

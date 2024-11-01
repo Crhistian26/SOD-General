@@ -463,7 +463,7 @@ namespace SOD_General.Controladores
                     {
                         foreach (var permission in Permissions)
                         {
-                            if (permission.Begin_Date <= date1 && permission.End_Date >= date2)
+                            if (permission.Begin_Date >= date1 && permission.End_Date <= date2)
                             {
                                 TimerPermission += permission.Get_Hours_Ausent();
                             }

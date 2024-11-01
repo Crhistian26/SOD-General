@@ -53,7 +53,6 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -67,9 +66,8 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView2);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(1067, 578);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(800, 470);
             this.cR_SplitContainer1.SplitterDistance = 102;
-            this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // botones_Nuevos1
@@ -82,10 +80,9 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(16, 15);
-            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 12);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(235, 49);
+            this.botones_Nuevos1.Size = new System.Drawing.Size(176, 40);
             this.botones_Nuevos1.TabIndex = 2;
             this.botones_Nuevos1.Text = "Agregar asistencias";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
@@ -95,10 +92,9 @@
             // 
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(352, 81);
-            this.cR_DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(264, 66);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(352, 29);
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
             this.cR_DateTimePicker1.TabIndex = 1;
             this.cR_DateTimePicker1.ValueChanged += new System.EventHandler(this.cR_DateTimePicker1_ValueChanged);
             // 
@@ -111,10 +107,9 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(332, 11);
-            this.cR_Subtitulos1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(249, 9);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(360, 40);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(290, 31);
             this.cR_Subtitulos1.TabIndex = 0;
             this.cR_Subtitulos1.Text = "Registro de asistencias";
             // 
@@ -139,12 +134,11 @@
             this.cR_DataGriedView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView2.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView2.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DataGriedView2.Name = "cR_DataGriedView2";
             this.cR_DataGriedView2.ReadOnly = true;
             this.cR_DataGriedView2.RowHeadersWidth = 51;
             this.cR_DataGriedView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView2.Size = new System.Drawing.Size(1067, 471);
+            this.cR_DataGriedView2.Size = new System.Drawing.Size(800, 364);
             this.cR_DataGriedView2.TabIndex = 3;
             this.cR_DataGriedView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView2_CellDoubleClick);
             // 
@@ -207,13 +201,12 @@
             // 
             // Registros_GeneralesAsistencias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 578);
+            this.ClientSize = new System.Drawing.Size(800, 470);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(960, 578);
+            this.MinimumSize = new System.Drawing.Size(720, 470);
             this.Name = "Registros_GeneralesAsistencias";
             this.Text = "Registro_Asistencias";
             this.Load += new System.EventHandler(this.Registros_GeneralesAsistencias_Load);
