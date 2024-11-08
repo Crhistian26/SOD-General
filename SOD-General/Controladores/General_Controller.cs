@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using SOD_General.Vistas.Recursos_Humanos.Empleados;
 namespace SOD_General.Controladores
 {
     public class General_Controller
@@ -58,6 +59,7 @@ namespace SOD_General.Controladores
             }
         }
 
+        
         
     }
 }

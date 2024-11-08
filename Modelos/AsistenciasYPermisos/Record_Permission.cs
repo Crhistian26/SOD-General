@@ -78,7 +78,7 @@ namespace Modelos.AsistenciasYPermisos
 
                 TimeSpan start = new TimeSpan(date.Hour, date.Minute, 0);
 
-                _start = start > day_schedule._StartHour && date.Date == Begin_Date.Date? start : day_schedule._StartHour;
+                _start = start > day_schedule._StartHour && date.Date == Begin_Date.Date ? start : day_schedule._StartHour;
 
                 TimeSpan end = new TimeSpan(End_Date.Hour, End_Date.Minute, 0);
 
@@ -86,7 +86,7 @@ namespace Modelos.AsistenciasYPermisos
 
                 hours = _end - _start;
 
-                if (_start.Hours <= 12 && _end.Hours >= 3 && Begin_Date.Date == End_Date.Date)
+                if (_start.Hours <= 12 && _end.Hours >= 15 && Begin_Date.Date == End_Date.Date)
                 {
                     hours -= day_schedule._LunchHours;
                 }

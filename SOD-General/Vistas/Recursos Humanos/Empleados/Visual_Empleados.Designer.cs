@@ -53,6 +53,7 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -68,8 +69,9 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(770, 340);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(1027, 418);
             this.cR_SplitContainer1.SplitterDistance = 116;
+            this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // comboBox1
@@ -80,9 +82,10 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 72);
+            this.comboBox1.Location = new System.Drawing.Point(16, 89);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(310, 29);
+            this.comboBox1.Size = new System.Drawing.Size(412, 35);
             this.comboBox1.TabIndex = 8;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -96,9 +99,10 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(12, 8);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(16, 10);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(183, 40);
+            this.botones_Nuevos1.Size = new System.Drawing.Size(244, 49);
             this.botones_Nuevos1.TabIndex = 7;
             this.botones_Nuevos1.Text = "Agregar empleado";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
@@ -113,9 +117,10 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(319, 9);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(425, 11);
+            this.cR_Subtitulos1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(244, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(303, 40);
             this.cR_Subtitulos1.TabIndex = 2;
             this.cR_Subtitulos1.Text = "Empleados de SOD";
             // 
@@ -124,9 +129,10 @@
             this.cR_LabelUp1.AutoSize = true;
             this.cR_LabelUp1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelUp1.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp1.Location = new System.Drawing.Point(12, 49);
+            this.cR_LabelUp1.Location = new System.Drawing.Point(16, 60);
+            this.cR_LabelUp1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelUp1.Name = "cR_LabelUp1";
-            this.cR_LabelUp1.Size = new System.Drawing.Size(107, 20);
+            this.cR_LabelUp1.Size = new System.Drawing.Size(127, 23);
             this.cR_LabelUp1.TabIndex = 1;
             this.cR_LabelUp1.Text = "Departamento";
             // 
@@ -150,10 +156,12 @@
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.RowHeadersWidth = 51;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(770, 220);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(1027, 297);
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
@@ -161,14 +169,17 @@
             // Empleados_Id
             // 
             this.Empleados_Id.HeaderText = "Id";
+            this.Empleados_Id.MinimumWidth = 6;
             this.Empleados_Id.Name = "Empleados_Id";
             this.Empleados_Id.ReadOnly = true;
             this.Empleados_Id.Visible = false;
+            this.Empleados_Id.Width = 125;
             // 
             // Empleados_Names
             // 
             this.Empleados_Names.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Empleados_Names.HeaderText = "Nombres";
+            this.Empleados_Names.MinimumWidth = 6;
             this.Empleados_Names.Name = "Empleados_Names";
             this.Empleados_Names.ReadOnly = true;
             // 
@@ -176,6 +187,7 @@
             // 
             this.Empleados_Lastname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Empleados_Lastname.HeaderText = "Apellidos";
+            this.Empleados_Lastname.MinimumWidth = 6;
             this.Empleados_Lastname.Name = "Empleados_Lastname";
             this.Empleados_Lastname.ReadOnly = true;
             // 
@@ -183,33 +195,36 @@
             // 
             this.Empleados_Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Empleados_Department.HeaderText = "Departamento";
+            this.Empleados_Department.MinimumWidth = 6;
             this.Empleados_Department.Name = "Empleados_Department";
             this.Empleados_Department.ReadOnly = true;
-            this.Empleados_Department.Width = 132;
+            this.Empleados_Department.Width = 156;
             // 
             // Empleados_Entry
             // 
             this.Empleados_Entry.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Empleados_Entry.HeaderText = "Ingreso";
+            this.Empleados_Entry.MinimumWidth = 6;
             this.Empleados_Entry.Name = "Empleados_Entry";
             this.Empleados_Entry.ReadOnly = true;
-            this.Empleados_Entry.Width = 84;
             // 
             // Trabajando
             // 
             this.Trabajando.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Trabajando.HeaderText = "Estado";
+            this.Trabajando.MinimumWidth = 6;
             this.Trabajando.Name = "Trabajando";
             this.Trabajando.ReadOnly = true;
             // 
             // Visual_Empleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 340);
+            this.ClientSize = new System.Drawing.Size(1027, 418);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(770, 340);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1027, 418);
             this.Name = "Visual_Empleados";
             this.Text = "Visual_Empleados";
             this.Load += new System.EventHandler(this.Visual_Empleados_Load);

@@ -60,6 +60,7 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -71,8 +72,9 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.panel1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(704, 381);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(939, 469);
             this.cR_SplitContainer1.SplitterDistance = 77;
+            this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // cR_Subtitulos1
@@ -84,9 +86,10 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(269, 24);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(359, 30);
+            this.cR_Subtitulos1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(158, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(195, 40);
             this.cR_Subtitulos1.TabIndex = 1;
             this.cR_Subtitulos1.Text = "Encabezado";
             // 
@@ -102,9 +105,10 @@
             this.panel1.Controls.Add(this.cR_LabelDown3);
             this.panel1.Controls.Add(this.soD_TextBox1);
             this.panel1.Controls.Add(this.cR_LabelDown1);
-            this.panel1.Location = new System.Drawing.Point(12, 3);
+            this.panel1.Location = new System.Drawing.Point(16, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(680, 275);
+            this.panel1.Size = new System.Drawing.Size(907, 338);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -115,9 +119,10 @@
             this.cR_ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_ComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.cR_ComboBox.ForeColor = System.Drawing.Color.White;
-            this.cR_ComboBox.Location = new System.Drawing.Point(359, 31);
+            this.cR_ComboBox.Location = new System.Drawing.Point(479, 38);
+            this.cR_ComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_ComboBox.Name = "cR_ComboBox";
-            this.cR_ComboBox.Size = new System.Drawing.Size(286, 29);
+            this.cR_ComboBox.Size = new System.Drawing.Size(380, 35);
             this.cR_ComboBox.TabIndex = 16;
             // 
             // botones_Nuevos1
@@ -130,9 +135,10 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(265, 216);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(353, 266);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos1.TabIndex = 10;
             this.botones_Nuevos1.Text = "botones_Nuevos1";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
@@ -142,9 +148,10 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.cR_Checkbox2);
             this.panel2.Controls.Add(this.cR_Checkbox1);
-            this.panel2.Location = new System.Drawing.Point(19, 131);
+            this.panel2.Location = new System.Drawing.Point(25, 161);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(643, 125);
+            this.panel2.Size = new System.Drawing.Size(857, 154);
             this.panel2.TabIndex = 15;
             this.panel2.Visible = false;
             // 
@@ -152,9 +159,10 @@
             // 
             this.panel3.Controls.Add(this.cR_LabelDown5);
             this.panel3.Controls.Add(this.cR_DateTimePicker2);
-            this.panel3.Location = new System.Drawing.Point(340, 3);
+            this.panel3.Location = new System.Drawing.Point(453, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(286, 63);
+            this.panel3.Size = new System.Drawing.Size(381, 78);
             this.panel3.TabIndex = 16;
             this.panel3.Visible = false;
             // 
@@ -163,9 +171,10 @@
             this.cR_LabelDown5.AutoSize = true;
             this.cR_LabelDown5.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown5.Location = new System.Drawing.Point(8, 8);
+            this.cR_LabelDown5.Location = new System.Drawing.Point(11, 10);
+            this.cR_LabelDown5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelDown5.Name = "cR_LabelDown5";
-            this.cR_LabelDown5.Size = new System.Drawing.Size(127, 20);
+            this.cR_LabelDown5.Size = new System.Drawing.Size(155, 23);
             this.cR_LabelDown5.TabIndex = 16;
             this.cR_LabelDown5.Text = "Fecha de despido";
             // 
@@ -174,9 +183,10 @@
             this.cR_DateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker2.Enabled = false;
             this.cR_DateTimePicker2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker2.Location = new System.Drawing.Point(8, 31);
+            this.cR_DateTimePicker2.Location = new System.Drawing.Point(11, 38);
+            this.cR_DateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DateTimePicker2.Name = "cR_DateTimePicker2";
-            this.cR_DateTimePicker2.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker2.Size = new System.Drawing.Size(352, 29);
             this.cR_DateTimePicker2.TabIndex = 16;
             // 
             // cR_Checkbox2
@@ -184,9 +194,10 @@
             this.cR_Checkbox2.AutoSize = true;
             this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox2.Location = new System.Drawing.Point(188, 29);
+            this.cR_Checkbox2.Location = new System.Drawing.Point(251, 36);
+            this.cR_Checkbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_Checkbox2.Name = "cR_Checkbox2";
-            this.cR_Checkbox2.Size = new System.Drawing.Size(101, 24);
+            this.cR_Checkbox2.Size = new System.Drawing.Size(122, 27);
             this.cR_Checkbox2.TabIndex = 1;
             this.cR_Checkbox2.Text = "Despedido";
             this.cR_Checkbox2.UseVisualStyleBackColor = true;
@@ -197,9 +208,10 @@
             this.cR_Checkbox1.AutoSize = true;
             this.cR_Checkbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_Checkbox1.Location = new System.Drawing.Point(16, 29);
+            this.cR_Checkbox1.Location = new System.Drawing.Point(21, 36);
+            this.cR_Checkbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_Checkbox1.Name = "cR_Checkbox1";
-            this.cR_Checkbox1.Size = new System.Drawing.Size(105, 24);
+            this.cR_Checkbox1.Size = new System.Drawing.Size(123, 27);
             this.cR_Checkbox1.TabIndex = 0;
             this.cR_Checkbox1.Text = "Trabajando";
             this.cR_Checkbox1.UseVisualStyleBackColor = true;
@@ -210,9 +222,10 @@
             this.cR_LabelDown4.AutoSize = true;
             this.cR_LabelDown4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown4.Location = new System.Drawing.Point(359, 65);
+            this.cR_LabelDown4.Location = new System.Drawing.Point(479, 80);
+            this.cR_LabelDown4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelDown4.Name = "cR_LabelDown4";
-            this.cR_LabelDown4.Size = new System.Drawing.Size(225, 20);
+            this.cR_LabelDown4.Size = new System.Drawing.Size(271, 23);
             this.cR_LabelDown4.TabIndex = 14;
             this.cR_LabelDown4.Text = "Fecha de ingreso a la compañia:";
             // 
@@ -220,9 +233,10 @@
             // 
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
-            this.cR_DateTimePicker1.Location = new System.Drawing.Point(359, 89);
+            this.cR_DateTimePicker1.Location = new System.Drawing.Point(479, 110);
+            this.cR_DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
-            this.cR_DateTimePicker1.Size = new System.Drawing.Size(265, 24);
+            this.cR_DateTimePicker1.Size = new System.Drawing.Size(352, 29);
             this.cR_DateTimePicker1.TabIndex = 13;
             // 
             // soD_TextBox2
@@ -232,9 +246,10 @@
             this.soD_TextBox2.BorderSize = 2;
             this.soD_TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.soD_TextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox2.Location = new System.Drawing.Point(19, 89);
+            this.soD_TextBox2.Location = new System.Drawing.Point(25, 110);
+            this.soD_TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.soD_TextBox2.Name = "soD_TextBox2";
-            this.soD_TextBox2.Size = new System.Drawing.Size(312, 21);
+            this.soD_TextBox2.Size = new System.Drawing.Size(416, 26);
             this.soD_TextBox2.TabIndex = 12;
             // 
             // cR_LabelDown2
@@ -242,9 +257,10 @@
             this.cR_LabelDown2.AutoSize = true;
             this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(15, 66);
+            this.cR_LabelDown2.Location = new System.Drawing.Point(20, 81);
+            this.cR_LabelDown2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(72, 20);
+            this.cR_LabelDown2.Size = new System.Drawing.Size(88, 23);
             this.cR_LabelDown2.TabIndex = 11;
             this.cR_LabelDown2.Text = "Apellidos";
             // 
@@ -253,9 +269,10 @@
             this.cR_LabelDown3.AutoSize = true;
             this.cR_LabelDown3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown3.Location = new System.Drawing.Point(355, 8);
+            this.cR_LabelDown3.Location = new System.Drawing.Point(473, 10);
+            this.cR_LabelDown3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelDown3.Name = "cR_LabelDown3";
-            this.cR_LabelDown3.Size = new System.Drawing.Size(110, 20);
+            this.cR_LabelDown3.Size = new System.Drawing.Size(131, 23);
             this.cR_LabelDown3.TabIndex = 5;
             this.cR_LabelDown3.Text = "Departamento:";
             // 
@@ -266,9 +283,10 @@
             this.soD_TextBox1.BorderSize = 2;
             this.soD_TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.soD_TextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.soD_TextBox1.Location = new System.Drawing.Point(19, 31);
+            this.soD_TextBox1.Location = new System.Drawing.Point(25, 38);
+            this.soD_TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.soD_TextBox1.Name = "soD_TextBox1";
-            this.soD_TextBox1.Size = new System.Drawing.Size(312, 21);
+            this.soD_TextBox1.Size = new System.Drawing.Size(416, 26);
             this.soD_TextBox1.TabIndex = 1;
             // 
             // cR_LabelDown1
@@ -276,19 +294,21 @@
             this.cR_LabelDown1.AutoSize = true;
             this.cR_LabelDown1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_LabelDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown1.Location = new System.Drawing.Point(15, 8);
+            this.cR_LabelDown1.Location = new System.Drawing.Point(20, 10);
+            this.cR_LabelDown1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_LabelDown1.Name = "cR_LabelDown1";
-            this.cR_LabelDown1.Size = new System.Drawing.Size(70, 20);
+            this.cR_LabelDown1.Size = new System.Drawing.Size(86, 23);
             this.cR_LabelDown1.TabIndex = 0;
             this.cR_LabelDown1.Text = "Nombres";
             // 
             // Control_Empleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 381);
+            this.ClientSize = new System.Drawing.Size(939, 469);
             this.Controls.Add(this.cR_SplitContainer1);
-            this.MinimumSize = new System.Drawing.Size(720, 420);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(954, 506);
             this.Name = "Control_Empleados";
             this.Text = "Control de empleados";
             this.Load += new System.EventHandler(this.AgregarEditar_Empleados_Load);

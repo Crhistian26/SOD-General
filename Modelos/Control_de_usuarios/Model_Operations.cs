@@ -12,6 +12,12 @@
             this._Operation = operation;
         }
 
+        public Model_Operations(int id, string operation)
+        {
+            this.Id_Operation = id;
+            this._Operation = operation;
+        }
+
         public Model_Operations(int id, string module, string operation)
             :this (module,operation)
         {

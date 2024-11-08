@@ -30,9 +30,9 @@
         {
             this.cR_SplitContainer1 = new CR_SplitContainer();
             this.cR_Subtitulos1 = new CR_Subtitulos();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cr_Textbox2 = new Cr_Textbox();
             this.cR_LabelDown2 = new CR_LabelDown();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -44,6 +44,7 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -57,8 +58,9 @@
             this.cR_SplitContainer1.Panel2.Controls.Add(this.botones_Nuevos1);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cr_Textbox2);
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_LabelDown2);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(350, 223);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(467, 274);
             this.cR_SplitContainer1.SplitterDistance = 60;
+            this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // cR_Subtitulos1
@@ -70,31 +72,12 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(57, 9);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(76, 11);
+            this.cR_Subtitulos1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(233, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(286, 40);
             this.cR_Subtitulos1.TabIndex = 0;
             this.cR_Subtitulos1.Text = "Nueva contraseña";
-            // 
-            // cr_Textbox2
-            // 
-            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cr_Textbox2.Location = new System.Drawing.Point(63, 38);
-            this.cr_Textbox2.Name = "cr_Textbox2";
-            this.cr_Textbox2.Size = new System.Drawing.Size(212, 25);
-            this.cr_Textbox2.TabIndex = 6;
-            // 
-            // cR_LabelDown2
-            // 
-            this.cR_LabelDown2.AutoSize = true;
-            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cR_LabelDown2.Location = new System.Drawing.Point(75, 15);
-            this.cR_LabelDown2.Name = "cR_LabelDown2";
-            this.cR_LabelDown2.Size = new System.Drawing.Size(133, 20);
-            this.cR_LabelDown2.TabIndex = 7;
-            this.cR_LabelDown2.Text = "Contraseña nueva:";
             // 
             // botones_Nuevos1
             // 
@@ -106,20 +89,45 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(79, 82);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(105, 101);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(185, 40);
+            this.botones_Nuevos1.Size = new System.Drawing.Size(247, 49);
             this.botones_Nuevos1.TabIndex = 8;
             this.botones_Nuevos1.Text = "Guardar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.Change_Password);
+            // 
+            // cr_Textbox2
+            // 
+            this.cr_Textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cr_Textbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cr_Textbox2.Location = new System.Drawing.Point(84, 47);
+            this.cr_Textbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cr_Textbox2.Name = "cr_Textbox2";
+            this.cr_Textbox2.Size = new System.Drawing.Size(282, 29);
+            this.cr_Textbox2.TabIndex = 6;
+            // 
+            // cR_LabelDown2
+            // 
+            this.cR_LabelDown2.AutoSize = true;
+            this.cR_LabelDown2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cR_LabelDown2.Location = new System.Drawing.Point(100, 18);
+            this.cR_LabelDown2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cR_LabelDown2.Name = "cR_LabelDown2";
+            this.cR_LabelDown2.Size = new System.Drawing.Size(157, 23);
+            this.cR_LabelDown2.TabIndex = 7;
+            this.cR_LabelDown2.Text = "Contraseña nueva:";
             // 
             // ChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 223);
+            this.ClientSize = new System.Drawing.Size(467, 274);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ChangePassword";
             this.Text = "ChangePassword";
             this.Load += new System.EventHandler(this.ChangePassword_Load);

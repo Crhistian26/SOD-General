@@ -50,6 +50,7 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -62,8 +63,9 @@
             // cR_SplitContainer1.Panel2
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
-            this.cR_SplitContainer1.Size = new System.Drawing.Size(720, 470);
+            this.cR_SplitContainer1.Size = new System.Drawing.Size(960, 578);
             this.cR_SplitContainer1.SplitterDistance = 110;
+            this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
             // botones_Nuevos1
@@ -76,9 +78,10 @@
             this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(308, 53);
+            this.botones_Nuevos1.Location = new System.Drawing.Point(411, 65);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(150, 40);
+            this.botones_Nuevos1.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos1.TabIndex = 1;
             this.botones_Nuevos1.Text = "Agregar";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
@@ -93,9 +96,10 @@
             this.cR_Subtitulos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Subtitulos1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cR_Subtitulos1.ForeColor = System.Drawing.Color.White;
-            this.cR_Subtitulos1.Location = new System.Drawing.Point(232, 9);
+            this.cR_Subtitulos1.Location = new System.Drawing.Point(309, 11);
+            this.cR_Subtitulos1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cR_Subtitulos1.Name = "cR_Subtitulos1";
-            this.cR_Subtitulos1.Size = new System.Drawing.Size(114, 31);
+            this.cR_Subtitulos1.Size = new System.Drawing.Size(141, 40);
             this.cR_Subtitulos1.TabIndex = 0;
             this.cR_Subtitulos1.Text = "Motivos";
             // 
@@ -118,24 +122,29 @@
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
+            this.cR_DataGriedView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
+            this.cR_DataGriedView1.RowHeadersWidth = 51;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(720, 356);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(960, 463);
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
             // 
             // Motivos_Id
             // 
             this.Motivos_Id.HeaderText = "Id";
+            this.Motivos_Id.MinimumWidth = 6;
             this.Motivos_Id.Name = "Motivos_Id";
             this.Motivos_Id.ReadOnly = true;
             this.Motivos_Id.Visible = false;
+            this.Motivos_Id.Width = 125;
             // 
             // Motivo
             // 
             this.Motivo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Motivo.HeaderText = "Motivo";
+            this.Motivo.MinimumWidth = 6;
             this.Motivo.Name = "Motivo";
             this.Motivo.ReadOnly = true;
             // 
@@ -143,6 +152,7 @@
             // 
             this.Descrip.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Descrip.HeaderText = "Descripcion";
+            this.Descrip.MinimumWidth = 6;
             this.Descrip.Name = "Descrip";
             this.Descrip.ReadOnly = true;
             // 
@@ -150,6 +160,7 @@
             // 
             this.Motivos_Limit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Motivos_Limit.HeaderText = "Limite";
+            this.Motivos_Limit.MinimumWidth = 6;
             this.Motivos_Limit.Name = "Motivos_Limit";
             this.Motivos_Limit.ReadOnly = true;
             // 
@@ -157,17 +168,19 @@
             // 
             this.Motivos_Each.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Motivos_Each.HeaderText = "Cada";
+            this.Motivos_Each.MinimumWidth = 6;
             this.Motivos_Each.Name = "Motivos_Each";
             this.Motivos_Each.ReadOnly = true;
             // 
             // Visual_Motivos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 470);
+            this.ClientSize = new System.Drawing.Size(960, 578);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(720, 470);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(960, 578);
             this.Name = "Visual_Motivos";
             this.Text = "Visual_Motivos";
             this.Load += new System.EventHandler(this.Visual_Motivos_Load);

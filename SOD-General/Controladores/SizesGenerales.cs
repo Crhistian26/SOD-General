@@ -71,7 +71,28 @@ namespace SOD_General.Controladores
             string Hours = "";
             int h = _hours.Days * 24;
             h += _hours.Hours;
-            Hours = $"{h}:{_hours.Minutes}";
+            int m = _hours.Minutes;
+            string H, M;
+
+            if(h < 10)
+            {
+                H = "0" + h;
+            }
+            else
+            {
+                H = $"{h}";
+            }
+
+            if(m < 10)
+            {
+                M = "0" + m;
+            }
+            else
+            {
+                M = $"{m}";
+            }
+
+            Hours = $"{H}:{M}";
             return Hours;
         }
 

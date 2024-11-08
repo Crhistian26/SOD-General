@@ -429,6 +429,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Control de usuarios\Modulos\VisualModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Control de usuarios\Modulos\VisualModule.Designer.cs">
+      <DependentUpon>VisualModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Control de usuarios\Operaciones\VisualOperaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,12 +542,6 @@
     </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Control_Asistencias.Designer.cs">
       <DependentUpon>Control_Asistencias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Ponchador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Recursos Humanos\Registros\Ponchador.Designer.cs">
-      <DependentUpon>Ponchador.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesPermisos.cs">
       <SubType>Form</SubType>
@@ -770,6 +770,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\Control de usuarios\Modulos\VisualModule.resx">
+      <DependentUpon>VisualModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Control de usuarios\Operaciones\VisualOperaciones.resx">
       <DependentUpon>VisualOperaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -823,9 +826,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Control_Asistencias.resx">
       <DependentUpon>Control_Asistencias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Ponchador.resx">
-      <DependentUpon>Ponchador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Recursos Humanos\Registros\Registros_GeneralesAsistencias.resx">
       <DependentUpon>Registros_GeneralesAsistencias.cs</DependentUpon>

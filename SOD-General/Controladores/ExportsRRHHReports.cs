@@ -40,7 +40,7 @@ namespace SOD_General.Controladores
 
                 if (day_schedule._dayOfWeek != DayOfWeek.Sunday)
                 {
-                    totalFaltado += day_schedule._EndHour - (day_schedule._StartHour - day_schedule._LunchHours);
+                    totalFaltado += (day_schedule._EndHour - day_schedule._StartHour) - day_schedule._LunchHours;
                 }
             }
 
@@ -52,32 +52,32 @@ namespace SOD_General.Controladores
             string Diferent = "";
             XLColor color = XLColor.Black;
 
-            if (Convert.ToInt32(timespan.TotalHours) > 0 && timespan.Minutes > 0)
+            if (Math.Floor(Convert.ToDecimal(timespan.TotalHours)) > 0 && timespan.Minutes > 0)
             {
-                Diferent = $"{Convert.ToInt32(timespan.TotalHours)} horas y {timespan.Minutes} minutos";
+                Diferent = $"{Math.Floor(Convert.ToDecimal(timespan.TotalHours))} horas y {timespan.Minutes} minutos";
                 color = XLColor.Green;
             }
-            else if (Convert.ToInt32(timespan.TotalHours) > 0 && timespan.Minutes == 0)
+            else if (Math.Floor(Convert.ToDecimal(timespan.TotalHours)) > 0 && timespan.Minutes == 0)
             {
-                Diferent = $"{Convert.ToInt32(timespan.TotalHours)} horas";
+                Diferent = $"{Math.Floor(Convert.ToDecimal(timespan.TotalHours))} horas";
                 color = XLColor.Green;
             }
-            else if (Convert.ToInt32(timespan.TotalHours) == 0 && timespan.Minutes > 0)
+            else if (Math.Floor(Convert.ToDecimal(timespan.TotalHours)) == 0 && timespan.Minutes > 0)
             {
-                Diferent = $"{Convert.ToInt32(timespan.Minutes)} minutos";
+                Diferent = $"{Math.Floor(Convert.ToDecimal(timespan.Minutes))} minutos";
                 color = XLColor.Green;
             }
-            else if (Convert.ToInt32(timespan.TotalHours) <= 0 && timespan.Minutes == 0)
+            else if (Math.Floor(Convert.ToDecimal(timespan.TotalHours)) <= 0 && timespan.Minutes == 0)
             {
-                Diferent = $"{System.Math.Abs(Convert.ToInt32(timespan.TotalHours))} horas";
+                Diferent = $"{System.Math.Abs(Math.Floor(Convert.ToDecimal(timespan.TotalHours)))} horas";
                 color = XLColor.Red;
             }
-            else if (Convert.ToInt32(timespan.TotalHours) == 0 && timespan.Minutes <= 0)
+            else if (Math.Floor(Convert.ToDecimal(timespan.TotalHours)) == 0 && timespan.Minutes <= 0)
             {
                 Diferent = $"{System.Math.Abs(timespan.Minutes)} minutos";
                 color = XLColor.Red;
             }
-            else if (Convert.ToInt32(timespan.TotalHours) == 0 && timespan.Minutes == 0)
+            else if (Math.Floor(Convert.ToDecimal(timespan.TotalHours)) == 0 && timespan.Minutes == 0)
             {
                 Diferent = "Justo.";
                 color = XLColor.Black;
@@ -230,8 +230,8 @@ namespace SOD_General.Controladores
                     TimeSpan horasEsperadas = CountHoursPendent(date1, date2);
                     TimeSpan diferencia = horasTrabajadas - horasEsperadas;
 
-                    string HoursJob = $"{Convert.ToInt32(horasTrabajadas.TotalHours)} horas y {horasTrabajadas.Minutes}  minutos";
-                    string StimateHours = $"{Convert.ToInt32(horasEsperadas.TotalHours)} horas y {horasEsperadas.Minutes} minutos";
+                    string HoursJob = $"{Math.Floor(Convert.ToDecimal(horasTrabajadas.TotalHours))} horas y {horasTrabajadas.Minutes}  minutos";
+                    string StimateHours = $"{Math.Floor(Convert.ToDecimal(horasEsperadas.TotalHours))} horas y {horasEsperadas.Minutes} minutos";
                     string Diferent; XLColor color;
 
                     (Diferent, color) = ConvertTimeSpan(diferencia);
@@ -491,8 +491,8 @@ namespace SOD_General.Controladores
                         }
                         else
                         {
-                            CountHoursString = "No dispone de horas extra";
-                            color= XLColor.BlueGray;
+                            CountHoursString = "Faltan horas por registrar.";
+                            color= XLColor.Red;
                         }
                     }
 

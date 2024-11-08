@@ -3,6 +3,7 @@ using SOD_General;
 using SOD_General.Recursos_Humanos.Empleados;
 using SOD_General.Taller.Control_calidad;
 using SOD_General.Taller.Registro_peticiones;
+using SOD_General.Vistas.Control_de_usuarios.Modulos;
 using SOD_General.Vistas.Control_de_usuarios.Operaciones;
 using SOD_General.Vistas.Control_de_usuarios.Roles;
 using SOD_General.Vistas.Control_de_usuarios.Usuarios;
@@ -46,8 +47,6 @@ namespace Controladores
             this._view = view;
             this.OperationsEvents = DictionaryData();
         }
-
-
 
         #region agregar eventos nuevos
 
@@ -137,15 +136,6 @@ namespace Controladores
                     },
 
                       {
-                        ("Ponchador","Conexion y registro"),
-                        (object sender, EventArgs e) =>
-                        {
-                            Ponchador window = new Ponchador();
-                            window.Show();
-                        }
-                    },
-
-                      {
                         ("Equipos","Ver Marcas"),
                         (object sender, EventArgs e) =>
                         {
@@ -195,6 +185,38 @@ namespace Controladores
                             VisualizarPeticiones window = new VisualizarPeticiones();
                             _view.OpenForm(window);
                         }
+                    },
+                    {
+                        ("Operaciones","Ver operaciones"),
+                        (object sender, EventArgs e) =>
+                        {
+                            VisualOperations window = new VisualOperations();
+                            _view.OpenForm(window);
+                        }
+                    },
+                    {
+                        ("Usuarios","Ver usuarios"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Visual_Usuarios window = new Visual_Usuarios();
+                            _view.OpenForm(window);
+                        }
+                    },
+                    {
+                        ("Modulos","Ver modulos"),
+                        (object sender, EventArgs e) =>
+                        {
+                            VisualModule window = new VisualModule();
+                            _view.OpenForm(window);
+                        }
+                    },
+                    {
+                        ("Roles","Ver roles"),
+                        (object sender, EventArgs e) =>
+                        {
+                            Visual_Roles window = new Visual_Roles();
+                            _view.OpenForm(window);
+                        }
                     }
                 };
 
@@ -207,22 +229,73 @@ namespace Controladores
         /// </summary>
         public void AddItemsInMenustrip()
         {
-            List<Model_Operations> operations = this.Role._Operations;
+            List<Model_Operations> operationsAdmin = new List<Model_Operations>();
+            List<Model_Operations> operationsUsers = new List<Model_Operations>();
+
+
+            ToolStripMenuItem head_users = new ToolStripMenuItem();
+            head_users.Text = "Diferentes modulos";
+
+            ToolStripMenuItem head_admin = new ToolStripMenuItem();
+            head_admin.Text = "Opciones de administrador";
+
 
             if (this.Role.Name == "Administrador")
             {
+                operationsAdmin = this.Role._Operations;
+
                 List<Model_Operations> data = new List<Model_Operations>();
-                foreach (var ope in DictionaryData())
+                var group = DictionaryData()
+                    .Where
+                    ( a=> 
+                    a.Key != ("Operaciones", "Ver operaciones") &&
+                    a.Key != ("Usuarios", "Ver usuarios") &&
+                    a.Key != ("Modulos", "Ver modulos") &&
+                    a.Key != ("Roles", "Ver roles")
+                    );
+
+                
+                foreach (var ope in group)
                 {
+                    
                     data.Add(
                         new Model_Operations(0, ope.Key.Item1, ope.Key.Item2)
                         );
                 }
-                operations = data;
+                operationsUsers = data;
+            }
+            else
+            {
+                operationsUsers = this.Role._Operations;
             }
 
-            var GroupOperations = operations.GroupBy(a => a._Module).Select(a => a).ToList();
+            var GroupOperations = operationsUsers.GroupBy(a => a._Module).Select(a => a).ToList();
+            var GroupAdminOperations = operationsAdmin.GroupBy(a => a._Module).Select(a => a).ToList();
 
+
+            if (this.Role.Name == "Administrador")
+            {
+                GetMenuStripWithOperations(GroupAdminOperations, head_admin);
+                GetMenuStripWithOperations(GroupOperations, head_users);
+
+                _view.cR_MenuStrip1.Items.Add(head_admin);
+                _view.cR_MenuStrip1.Items.Add(head_users);
+            }
+            else
+            {
+                GetMenuStripWithOperations(GroupOperations, _view.cR_MenuStrip1);
+            }
+            
+            ToolStripMenuItem login_back = new ToolStripMenuItem();
+            login_back.Text = "Volver al login";
+            login_back.Click += Login_Click;
+            _view.cR_MenuStrip1.Items.Add(login_back);
+            _view.cR_MenuStrip1.ForeColor = System.Drawing.Color.White;
+        }
+
+
+        public void GetMenuStripWithOperations(List<IGrouping<string,Model_Operations>> GroupOperations, CR_MenuStrip menu)
+        {
             foreach (var operations1 in GroupOperations)
             {
                 ToolStripMenuItem head_item = new ToolStripMenuItem();
@@ -250,22 +323,45 @@ namespace Controladores
                 }
                 else
                 {
-                    _view.cR_MenuStrip1.Items.Add(head_item);
+                    menu.Items.Add(head_item);
                 }
             }
-            
-            ToolStripMenuItem login_back = new ToolStripMenuItem();
-            login_back.Text = "Volver al login";
-            login_back.Click += Login_Click;
-            _view.cR_MenuStrip1.Items.Add(login_back);
-            _view.cR_MenuStrip1.ForeColor = System.Drawing.Color.White;
-
-            //ToolStripMenuItem ponchador_Open = new ToolStripMenuItem();
-            //ponchador_Open.Text = "Ponchador";
-            //ponchador_Open.Click += Poncho_Click;
-            //_view.cR_MenuStrip1.Items.Add(ponchador_Open);
-            //_view.cR_MenuStrip1.ForeColor = System.Drawing.Color.White;
         }
+
+        public void GetMenuStripWithOperations(List<IGrouping<string, Model_Operations>> GroupOperations, ToolStripMenuItem head)
+        {
+            foreach (var operations1 in GroupOperations)
+            {
+                ToolStripMenuItem head_item = new ToolStripMenuItem();
+                head_item.Text = operations1.Key;
+
+                foreach (Model_Operations operation in operations1)
+                {
+                    EventHandler _event = OperationsEvents.Where(a => a.Key == (operation._Module, operation._Operation)).Select(a => a.Value).FirstOrDefault();
+
+                    if (_event == null)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        ToolStripMenuItem item = new ToolStripMenuItem();
+                        item.Text = operation._Operation;
+                        item.Click += _event;
+                        head_item.DropDownItems.Add(item);
+                    }
+                }
+                if (head_item.DropDownItems.Count <= 0)
+                {
+                    continue;
+                }
+                else
+                {
+                    head.DropDownItems.Add(head_item);
+                }
+            }
+        }
+
 
         private void Login_Click(object sender, EventArgs e)
         {
