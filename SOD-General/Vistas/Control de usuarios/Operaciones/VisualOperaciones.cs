@@ -65,6 +65,7 @@ namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
             modules = Control_UsersController.Get_Modules();
             if (modules != null)
             {
+                cr_ComboBox2.Items.Add("Todas las operaciones");
                 foreach (Model_Module role in modules)
                 {
                     cr_ComboBox2.Items.Add(role._Module);
@@ -74,8 +75,13 @@ namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
 
         private void ChangeRoleComboBox()
         {
+            var list = operations;
             string module = cr_ComboBox2.SelectedItem.ToString();
-            var list = operations.Where(a => a._Module == module).ToList();
+            if(module != "Todas las operaciones")
+            {
+                list = operations.Where(a => a._Module == module).ToList();
+            }
+            
             Load_DataGriedView(list);
         }
 

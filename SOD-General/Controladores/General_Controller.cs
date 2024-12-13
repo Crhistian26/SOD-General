@@ -59,7 +59,21 @@ namespace SOD_General.Controladores
             }
         }
 
-        
-        
+        public void ResetForm(Form formulario)
+        {
+            var windows = Application.OpenForms.OfType<Form>().Where(f => f.GetType() == formulario.GetType()).First();
+
+            if (windows is IResetForm window)
+            {
+                window.Reset();
+            }
+        }
+
+        public Form GetForm(Form formulario)
+        {
+            var windows = Application.OpenForms.OfType<Form>().Where(f => f.GetType() == formulario.GetType()).First();
+            return windows;
+        }
+
     }
 }

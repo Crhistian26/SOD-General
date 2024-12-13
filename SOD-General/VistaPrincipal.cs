@@ -13,7 +13,9 @@ namespace SOD_General
         public Model_User user;
         public VistaPrincipal()
         {
+            formu = new Login(this);
             InitializeComponent();
+            
         }
 
         private void VistaPrincipal_Load(object sender, EventArgs e)
@@ -23,9 +25,8 @@ namespace SOD_General
 
         public void AbrirLogin()
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
             AbrirFormulario(new Login(this));
+
             this.Size = new Size(463, 284);
 
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -38,7 +39,7 @@ namespace SOD_General
                 panel1.Tag = null;
             }
 
-            Form formula = formulario;
+            var formula = formulario;
             formula.TopLevel = false;
             formula.Dock = DockStyle.Fill;
             this.formu = formula;
@@ -62,8 +63,8 @@ namespace SOD_General
 
         private void VistaPrincipal_Resize(object sender, EventArgs e)
         {
-            this.formu.Size = panel1.Size;
             AbrirFormulario(formu);
+            this.formu.Size = panel1.Size;
         }
     }
 }

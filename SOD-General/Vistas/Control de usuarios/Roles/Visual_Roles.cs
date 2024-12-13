@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
 using Modelos.Control_de_usuarios;
 using SOD_General.Controladores;
+using SOD_General.Vistas.Control_de_usuarios.Operaciones;
 using SOD_General.Vistas.Control_de_usuarios.Usuarios;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SOD_General.Vistas.Control_de_usuarios.Roles
 {
-    public partial class Visual_Roles : Form
+    public partial class Visual_Roles : Form, IResetForm
     {
         General_Controller General_Controller = new General_Controller();
         Control_UsersController Control_UsersController = new Control_UsersController();
@@ -18,7 +19,7 @@ namespace SOD_General.Vistas.Control_de_usuarios.Roles
             InitializeComponent();
         }
 
-        private void Load_DataGried()
+        public void Load_DataGried()
         {
             Roles = Control_UsersController.Get_RolesBasicWithCount();
             cR_DataGriedView1.Rows.Clear();
@@ -53,5 +54,22 @@ namespace SOD_General.Vistas.Control_de_usuarios.Roles
         {
             Load_DataGried();
         }
+
+        public void Reset()
+        {
+            Load_DataGried();
+            MessageBox.Show("klk funciono");
+        }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            ControlRoles view = new ControlRoles();
+            view.Show();
+            General_Controller.CloseForm(view);
+            EditOperationRole v = new EditOperationRole();
+            General_Controller.CloseForm(v);
+        }
+
+        
     }
 }

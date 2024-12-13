@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             this.cr_ComboBox2 = new Cr_ComboBox();
             this.cR_LabelUp2 = new CR_LabelUp();
             this.cR_Subtitulos1 = new CR_Subtitulos();
@@ -38,7 +39,6 @@
             this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botones_Nuevos1 = new Diseños.Botones_Nuevos();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -71,6 +71,25 @@
             this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
+            // botones_Nuevos1
+            // 
+            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
+            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
+            this.botones_Nuevos1.BorderRadius = 40;
+            this.botones_Nuevos1.BorderSize = 0;
+            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
+            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
+            this.botones_Nuevos1.Location = new System.Drawing.Point(13, 9);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4);
+            this.botones_Nuevos1.Name = "botones_Nuevos1";
+            this.botones_Nuevos1.Size = new System.Drawing.Size(239, 49);
+            this.botones_Nuevos1.TabIndex = 6;
+            this.botones_Nuevos1.Text = "Agregar usuario";
+            this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
+            // 
             // cr_ComboBox2
             // 
             this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -82,7 +101,7 @@
             this.cr_ComboBox2.Location = new System.Drawing.Point(13, 113);
             this.cr_ComboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(229, 35);
+            this.cr_ComboBox2.Size = new System.Drawing.Size(454, 35);
             this.cr_ComboBox2.TabIndex = 4;
             this.cr_ComboBox2.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox2_SelectedIndexChanged);
             // 
@@ -119,10 +138,10 @@
             this.cR_DataGriedView1.AllowUserToAddRows = false;
             this.cR_DataGriedView1.AllowUserToDeleteRows = false;
             this.cR_DataGriedView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.cR_DataGriedView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cR_DataGriedView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cR_DataGriedView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -173,24 +192,6 @@
             this.Rol.MinimumWidth = 6;
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
-            // 
-            // botones_Nuevos1
-            // 
-            this.botones_Nuevos1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(118)))));
-            this.botones_Nuevos1.BorderColor = System.Drawing.Color.Teal;
-            this.botones_Nuevos1.BorderRadius = 40;
-            this.botones_Nuevos1.BorderSize = 0;
-            this.botones_Nuevos1.FlatAppearance.BorderSize = 0;
-            this.botones_Nuevos1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
-            this.botones_Nuevos1.Location = new System.Drawing.Point(13, 9);
-            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4);
-            this.botones_Nuevos1.Name = "botones_Nuevos1";
-            this.botones_Nuevos1.Size = new System.Drawing.Size(239, 49);
-            this.botones_Nuevos1.TabIndex = 6;
-            this.botones_Nuevos1.Text = "Agregar usuario";
-            this.botones_Nuevos1.UseVisualStyleBackColor = false;
             // 
             // Visual_Usuarios
             // 

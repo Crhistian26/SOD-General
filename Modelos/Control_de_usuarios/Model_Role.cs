@@ -8,6 +8,7 @@ namespace Modelos.Control_de_usuarios
         public string Name { get; set; }
         public List<Model_Operations> _Operations { get; set; }
 
+        public Model_Role() { }
         public Model_Role(string name)
         {
             this.Name = name;

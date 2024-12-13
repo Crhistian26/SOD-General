@@ -62,6 +62,7 @@ namespace SOD_General.Vistas.Control_de_usuarios.Usuarios
             Roles = Control_UsersController.Get_Roles_ForCombobox();
             if (Roles != null)
             {
+                cr_ComboBox2.Items.Add("Todos los roles");
                 foreach (Model_Role role in Roles)
                 {
                     cr_ComboBox2.Items.Add(role.Name);
@@ -78,8 +79,12 @@ namespace SOD_General.Vistas.Control_de_usuarios.Usuarios
 
         private void ChangeRoleComboBox()
         {
+            var list = Users;
             string namerole = cr_ComboBox2.SelectedItem.ToString();
-            var list = Users.Where(a=> a._Role.Name == namerole).ToList();
+            if (namerole != "Todos los roles")
+            {
+                list = Users.Where(a => a._Role.Name == namerole).ToList();
+            }
             Load_DataGried(list);
         }
 
@@ -99,6 +104,13 @@ namespace SOD_General.Vistas.Control_de_usuarios.Usuarios
         private void cr_ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeRoleComboBox();
+        }
+
+        private void botones_Nuevos1_Click(object sender, EventArgs e)
+        {
+            ControlUsuario view = new ControlUsuario();
+            view.Show();
+            General_Controller.CloseForm(view);
         }
     }
 }

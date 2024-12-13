@@ -53,7 +53,7 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -70,7 +70,7 @@
             // 
             this.cR_SplitContainer1.Panel2.Controls.Add(this.cR_DataGriedView1);
             this.cR_SplitContainer1.Size = new System.Drawing.Size(1027, 418);
-            this.cR_SplitContainer1.SplitterDistance = 116;
+            this.cR_SplitContainer1.SplitterDistance = 137;
             this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
             // 
@@ -83,7 +83,7 @@
             this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(16, 89);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(412, 35);
             this.comboBox1.TabIndex = 8;
@@ -100,7 +100,7 @@
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
             this.botones_Nuevos1.Location = new System.Drawing.Point(16, 10);
-            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(244, 49);
             this.botones_Nuevos1.TabIndex = 7;
@@ -156,12 +156,12 @@
             this.cR_DataGriedView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_DataGriedView1.EnableHeadersVisualStyles = false;
             this.cR_DataGriedView1.Location = new System.Drawing.Point(0, 0);
-            this.cR_DataGriedView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_DataGriedView1.Margin = new System.Windows.Forms.Padding(4);
             this.cR_DataGriedView1.Name = "cR_DataGriedView1";
             this.cR_DataGriedView1.ReadOnly = true;
             this.cR_DataGriedView1.RowHeadersWidth = 51;
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cR_DataGriedView1.Size = new System.Drawing.Size(1027, 297);
+            this.cR_DataGriedView1.Size = new System.Drawing.Size(1027, 276);
             this.cR_DataGriedView1.TabIndex = 0;
             this.cR_DataGriedView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellContentClick);
             this.cR_DataGriedView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cR_DataGriedView1_CellDoubleClick);
@@ -223,7 +223,7 @@
             this.ClientSize = new System.Drawing.Size(1027, 418);
             this.Controls.Add(this.cR_SplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1027, 418);
             this.Name = "Visual_Empleados";
             this.Text = "Visual_Empleados";

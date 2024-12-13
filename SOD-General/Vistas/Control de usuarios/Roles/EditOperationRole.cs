@@ -22,6 +22,11 @@ namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
         public EditOperationRole()
         {
             InitializeComponent();
+            Load_DataGriedView_Operations();
+        }
+        public EditOperationRole(List<Model_Operations> op)
+        {
+            InitializeComponent();
         }
 
         public void Load_DataGriedView_Operations()
@@ -44,22 +49,6 @@ namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
         public void Load_DataGriedView_Operations(List<Model_Operations> list)
         {
             cR_DataGriedView1.Rows.Clear();
-            list = list.OrderBy(a => a._Module).ToList();
-            if (operations != null)
-            {
-                foreach (Model_Operations op in list)
-                {
-                    cR_DataGriedView1.Rows.Add(
-                        op.Id_Operation,
-                        op._Operation,
-                        op._Module
-                        );
-                }
-            }
-        }
-        public void Load_DataGriedView_UserOperations(List<Model_Operations> list)
-        {
-            cR_DataGriedView2.Rows.Clear();
             list = list.OrderBy(a => a._Module).ToList();
             if (operations != null)
             {
@@ -101,8 +90,7 @@ namespace SOD_General.Vistas.Control_de_usuarios.Operaciones
 
         private void EditOperationRole_Load(object sender, EventArgs e)
         {
-            Load_DataGriedView_Operations();
-            Load_DataGriedView_UserOperations(User._Role._Operations);
+            
         }
 
         private void cR_SplitContainer1_Panel1_Resize(object sender, EventArgs e)

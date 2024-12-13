@@ -34,6 +34,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cr_ComboBox1 = new Cr_ComboBox();
             this.cR_DataGriedView1 = new CR_DataGriedViewNormal();
+            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cR_LabelDown5 = new CR_LabelDown();
             this.cr_Textbox4 = new Cr_Textbox();
             this.cR_LabelDown4 = new CR_LabelDown();
@@ -46,8 +48,7 @@
             this.cR_LabelDown2 = new CR_LabelDown();
             this.cr_Textbox1 = new Cr_Textbox();
             this.cR_LabelDown1 = new CR_LabelDown();
-            this.Operacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cr_ComboBox2 = new Cr_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -96,6 +97,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cr_ComboBox2);
             this.panel1.Controls.Add(this.cr_ComboBox1);
             this.panel1.Controls.Add(this.cR_DataGriedView1);
             this.panel1.Controls.Add(this.cR_LabelDown5);
@@ -128,6 +130,7 @@
             this.cr_ComboBox1.Name = "cr_ComboBox1";
             this.cr_ComboBox1.Size = new System.Drawing.Size(499, 35);
             this.cr_ComboBox1.TabIndex = 18;
+            this.cr_ComboBox1.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox1_SelectedIndexChanged);
             // 
             // cR_DataGriedView1
             // 
@@ -151,6 +154,22 @@
             this.cR_DataGriedView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cR_DataGriedView1.Size = new System.Drawing.Size(781, 361);
             this.cR_DataGriedView1.TabIndex = 17;
+            // 
+            // Operacion
+            // 
+            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operacion.HeaderText = "Operacion";
+            this.Operacion.MinimumWidth = 6;
+            this.Operacion.Name = "Operacion";
+            this.Operacion.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Modulo";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // cR_LabelDown5
             // 
@@ -308,21 +327,19 @@
             this.cR_LabelDown1.TabIndex = 3;
             this.cR_LabelDown1.Text = "Nombre de usuario:";
             // 
-            // Operacion
+            // cr_ComboBox2
             // 
-            this.Operacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Operacion.HeaderText = "Operacion";
-            this.Operacion.MinimumWidth = 6;
-            this.Operacion.Name = "Operacion";
-            this.Operacion.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Modulo";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.White;
+            this.cr_ComboBox2.FormattingEnabled = true;
+            this.cr_ComboBox2.Location = new System.Drawing.Point(4, 366);
+            this.cr_ComboBox2.Name = "cr_ComboBox2";
+            this.cr_ComboBox2.Size = new System.Drawing.Size(502, 35);
+            this.cr_ComboBox2.TabIndex = 19;
+            this.cr_ComboBox2.Visible = false;
             // 
             // ControlUsuario
             // 
@@ -367,5 +384,6 @@
         private Cr_ComboBox cr_ComboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Operacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private Cr_ComboBox cr_ComboBox2;
     }
 }

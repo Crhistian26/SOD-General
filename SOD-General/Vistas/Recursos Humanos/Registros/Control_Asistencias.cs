@@ -336,5 +336,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
                 panel5.Visible = false;
             }
         }
+
+        private void botones_Nuevos2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

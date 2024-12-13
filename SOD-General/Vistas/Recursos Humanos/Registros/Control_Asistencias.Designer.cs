@@ -80,7 +80,7 @@
             this.cR_SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cR_SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.cR_SplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_SplitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.cR_SplitContainer1.Name = "cR_SplitContainer1";
             this.cR_SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -128,7 +128,7 @@
             this.panel1.Controls.Add(this.cR_LabelDown1);
             this.panel1.Controls.Add(this.soD_ComboBox1);
             this.panel1.Location = new System.Drawing.Point(16, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(665, 498);
             this.panel1.TabIndex = 3;
@@ -139,7 +139,7 @@
             this.cR_Checkbox2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_Checkbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
             this.cR_Checkbox2.Location = new System.Drawing.Point(273, 272);
-            this.cR_Checkbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_Checkbox2.Margin = new System.Windows.Forms.Padding(4);
             this.cR_Checkbox2.Name = "cR_Checkbox2";
             this.cR_Checkbox2.Size = new System.Drawing.Size(101, 27);
             this.cR_Checkbox2.TabIndex = 29;
@@ -152,7 +152,7 @@
             this.cr_Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cr_Textbox1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cr_Textbox1.Location = new System.Drawing.Point(21, 114);
-            this.cr_Textbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cr_Textbox1.Margin = new System.Windows.Forms.Padding(4);
             this.cr_Textbox1.Name = "cr_Textbox1";
             this.cr_Textbox1.Size = new System.Drawing.Size(622, 29);
             this.cr_Textbox1.TabIndex = 27;
@@ -169,12 +169,13 @@
             this.botones_Nuevos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos2.ForeColor = System.Drawing.Color.White;
             this.botones_Nuevos2.Location = new System.Drawing.Point(444, 432);
-            this.botones_Nuevos2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botones_Nuevos2.Margin = new System.Windows.Forms.Padding(4);
             this.botones_Nuevos2.Name = "botones_Nuevos2";
             this.botones_Nuevos2.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos2.TabIndex = 26;
             this.botones_Nuevos2.Text = "Eliminar ";
             this.botones_Nuevos2.UseVisualStyleBackColor = false;
+            this.botones_Nuevos2.Click += new System.EventHandler(this.botones_Nuevos2_Click);
             // 
             // botones_Nuevos1
             // 
@@ -187,7 +188,7 @@
             this.botones_Nuevos1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.botones_Nuevos1.ForeColor = System.Drawing.Color.White;
             this.botones_Nuevos1.Location = new System.Drawing.Point(231, 432);
-            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botones_Nuevos1.Margin = new System.Windows.Forms.Padding(4);
             this.botones_Nuevos1.Name = "botones_Nuevos1";
             this.botones_Nuevos1.Size = new System.Drawing.Size(200, 49);
             this.botones_Nuevos1.TabIndex = 25;
@@ -203,7 +204,7 @@
             this.panel5.Controls.Add(this.cR_LabelDown9);
             this.panel5.Controls.Add(this.cR_LabelDown10);
             this.panel5.Location = new System.Drawing.Point(377, 321);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(267, 81);
             this.panel5.TabIndex = 24;
@@ -213,7 +214,7 @@
             this.cR_TBminutos4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBminutos4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBminutos4.Location = new System.Drawing.Point(104, 38);
-            this.cR_TBminutos4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBminutos4.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBminutos4.MaxLength = 2;
             this.cR_TBminutos4.Name = "cR_TBminutos4";
             this.cR_TBminutos4.Size = new System.Drawing.Size(55, 29);
@@ -224,7 +225,7 @@
             this.cR_TBhora4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBhora4.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBhora4.Location = new System.Drawing.Point(16, 38);
-            this.cR_TBhora4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBhora4.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBhora4.MaxLength = 2;
             this.cR_TBhora4.Name = "cR_TBhora4";
             this.cR_TBhora4.Size = new System.Drawing.Size(55, 29);
@@ -239,7 +240,7 @@
             "AM",
             "PM"});
             this.soD_ComboBox5.Location = new System.Drawing.Point(168, 37);
-            this.soD_ComboBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soD_ComboBox5.Margin = new System.Windows.Forms.Padding(4);
             this.soD_ComboBox5.Name = "soD_ComboBox5";
             this.soD_ComboBox5.Size = new System.Drawing.Size(80, 31);
             this.soD_ComboBox5.TabIndex = 21;
@@ -276,7 +277,7 @@
             this.panel4.Controls.Add(this.soD_ComboBox4);
             this.panel4.Controls.Add(this.cR_LabelDown8);
             this.panel4.Location = new System.Drawing.Point(21, 321);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(267, 81);
             this.panel4.TabIndex = 24;
@@ -286,7 +287,7 @@
             this.cR_TBminutos3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBminutos3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBminutos3.Location = new System.Drawing.Point(104, 38);
-            this.cR_TBminutos3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBminutos3.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBminutos3.MaxLength = 2;
             this.cR_TBminutos3.Name = "cR_TBminutos3";
             this.cR_TBminutos3.Size = new System.Drawing.Size(55, 29);
@@ -297,7 +298,7 @@
             this.cR_TBhora3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBhora3.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBhora3.Location = new System.Drawing.Point(16, 38);
-            this.cR_TBhora3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBhora3.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBhora3.MaxLength = 2;
             this.cR_TBhora3.Name = "cR_TBhora3";
             this.cR_TBhora3.Size = new System.Drawing.Size(55, 29);
@@ -324,7 +325,7 @@
             "AM",
             "PM"});
             this.soD_ComboBox4.Location = new System.Drawing.Point(168, 37);
-            this.soD_ComboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soD_ComboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.soD_ComboBox4.Name = "soD_ComboBox4";
             this.soD_ComboBox4.Size = new System.Drawing.Size(80, 31);
             this.soD_ComboBox4.TabIndex = 21;
@@ -349,7 +350,7 @@
             this.panel3.Controls.Add(this.cR_LabelDown3);
             this.panel3.Controls.Add(this.cR_LabelDown4);
             this.panel3.Location = new System.Drawing.Point(377, 165);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(267, 81);
             this.panel3.TabIndex = 24;
@@ -359,7 +360,7 @@
             this.cR_TBminutos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBminutos2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBminutos2.Location = new System.Drawing.Point(104, 39);
-            this.cR_TBminutos2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBminutos2.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBminutos2.MaxLength = 2;
             this.cR_TBminutos2.Name = "cR_TBminutos2";
             this.cR_TBminutos2.Size = new System.Drawing.Size(55, 29);
@@ -370,7 +371,7 @@
             this.cR_TBhora2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBhora2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBhora2.Location = new System.Drawing.Point(16, 41);
-            this.cR_TBhora2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBhora2.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBhora2.MaxLength = 2;
             this.cR_TBhora2.Name = "cR_TBhora2";
             this.cR_TBhora2.Size = new System.Drawing.Size(55, 29);
@@ -385,7 +386,7 @@
             "AM",
             "PM"});
             this.soD_ComboBox3.Location = new System.Drawing.Point(168, 37);
-            this.soD_ComboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soD_ComboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.soD_ComboBox3.Name = "soD_ComboBox3";
             this.soD_ComboBox3.Size = new System.Drawing.Size(80, 31);
             this.soD_ComboBox3.TabIndex = 21;
@@ -422,7 +423,7 @@
             this.panel2.Controls.Add(this.cR_LabelDown7);
             this.panel2.Controls.Add(this.cR_LabelDown6);
             this.panel2.Location = new System.Drawing.Point(21, 165);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 81);
             this.panel2.TabIndex = 23;
@@ -432,7 +433,7 @@
             this.cR_TBminutos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBminutos1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBminutos1.Location = new System.Drawing.Point(104, 39);
-            this.cR_TBminutos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBminutos1.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBminutos1.MaxLength = 2;
             this.cR_TBminutos1.Name = "cR_TBminutos1";
             this.cR_TBminutos1.Size = new System.Drawing.Size(55, 29);
@@ -443,7 +444,7 @@
             this.cR_TBhora1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cR_TBhora1.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
             this.cR_TBhora1.Location = new System.Drawing.Point(16, 39);
-            this.cR_TBhora1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_TBhora1.Margin = new System.Windows.Forms.Padding(4);
             this.cR_TBhora1.MaxLength = 2;
             this.cR_TBhora1.Name = "cR_TBhora1";
             this.cR_TBhora1.Size = new System.Drawing.Size(55, 29);
@@ -458,7 +459,7 @@
             "AM",
             "PM"});
             this.soD_ComboBox2.Location = new System.Drawing.Point(168, 37);
-            this.soD_ComboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soD_ComboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.soD_ComboBox2.Name = "soD_ComboBox2";
             this.soD_ComboBox2.Size = new System.Drawing.Size(80, 31);
             this.soD_ComboBox2.TabIndex = 21;
@@ -504,7 +505,7 @@
             this.cR_DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 11F);
             this.cR_DateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.cR_DateTimePicker1.Location = new System.Drawing.Point(21, 33);
-            this.cR_DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cR_DateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.cR_DateTimePicker1.Name = "cR_DateTimePicker1";
             this.cR_DateTimePicker1.Size = new System.Drawing.Size(352, 29);
             this.cR_DateTimePicker1.TabIndex = 1;
@@ -532,7 +533,7 @@
             this.soD_ComboBox1.Items.AddRange(new object[] {
             "Todos los empleados"});
             this.soD_ComboBox1.Location = new System.Drawing.Point(21, 111);
-            this.soD_ComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soD_ComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.soD_ComboBox1.Name = "soD_ComboBox1";
             this.soD_ComboBox1.Size = new System.Drawing.Size(621, 35);
             this.soD_ComboBox1.TabIndex = 28;
@@ -544,7 +545,7 @@
             this.ClientSize = new System.Drawing.Size(960, 636);
             this.Controls.Add(this.cR_SplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(954, 566);
             this.Name = "Control_Asistencias";
             this.Text = "Control de asistencias";

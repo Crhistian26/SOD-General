@@ -30,13 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cR_SplitContainer1 = new CR_SplitContainer();
+            this.cr_ComboBox2 = new Cr_ComboBox();
+            this.cR_LabelUp2 = new CR_LabelUp();
             this.cR_Subtitulos1 = new CR_Subtitulos();
             this.cR_DataGriedView1 = new CR_DataGriedView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Operaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cr_ComboBox2 = new Cr_ComboBox();
-            this.cR_LabelUp2 = new CR_LabelUp();
             ((System.ComponentModel.ISupportInitialize)(this.cR_SplitContainer1)).BeginInit();
             this.cR_SplitContainer1.Panel1.SuspendLayout();
             this.cR_SplitContainer1.Panel2.SuspendLayout();
@@ -68,6 +68,33 @@
             this.cR_SplitContainer1.SplitterDistance = 106;
             this.cR_SplitContainer1.SplitterWidth = 5;
             this.cR_SplitContainer1.TabIndex = 0;
+            // 
+            // cr_ComboBox2
+            // 
+            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cr_ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
+            this.cr_ComboBox2.FormattingEnabled = true;
+            this.cr_ComboBox2.Location = new System.Drawing.Point(22, 57);
+            this.cr_ComboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.cr_ComboBox2.Name = "cr_ComboBox2";
+            this.cr_ComboBox2.Size = new System.Drawing.Size(364, 35);
+            this.cr_ComboBox2.TabIndex = 6;
+            this.cr_ComboBox2.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox2_SelectedIndexChanged);
+            // 
+            // cR_LabelUp2
+            // 
+            this.cR_LabelUp2.AutoSize = true;
+            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
+            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
+            this.cR_LabelUp2.Location = new System.Drawing.Point(20, 28);
+            this.cR_LabelUp2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cR_LabelUp2.Name = "cR_LabelUp2";
+            this.cR_LabelUp2.Size = new System.Drawing.Size(75, 23);
+            this.cR_LabelUp2.TabIndex = 5;
+            this.cR_LabelUp2.Text = "Modulo";
             // 
             // cR_Subtitulos1
             // 
@@ -134,33 +161,6 @@
             this.Modulo.MinimumWidth = 6;
             this.Modulo.Name = "Modulo";
             this.Modulo.ReadOnly = true;
-            // 
-            // cr_ComboBox2
-            // 
-            this.cr_ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cr_ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cr_ComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cr_ComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.cr_ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(168)))));
-            this.cr_ComboBox2.FormattingEnabled = true;
-            this.cr_ComboBox2.Location = new System.Drawing.Point(22, 57);
-            this.cr_ComboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.cr_ComboBox2.Name = "cr_ComboBox2";
-            this.cr_ComboBox2.Size = new System.Drawing.Size(229, 35);
-            this.cr_ComboBox2.TabIndex = 6;
-            this.cr_ComboBox2.SelectedIndexChanged += new System.EventHandler(this.cr_ComboBox2_SelectedIndexChanged);
-            // 
-            // cR_LabelUp2
-            // 
-            this.cR_LabelUp2.AutoSize = true;
-            this.cR_LabelUp2.Font = new System.Drawing.Font("Microsoft YaHei", 10F);
-            this.cR_LabelUp2.ForeColor = System.Drawing.Color.White;
-            this.cR_LabelUp2.Location = new System.Drawing.Point(20, 28);
-            this.cR_LabelUp2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cR_LabelUp2.Name = "cR_LabelUp2";
-            this.cR_LabelUp2.Size = new System.Drawing.Size(75, 23);
-            this.cR_LabelUp2.TabIndex = 5;
-            this.cR_LabelUp2.Text = "Modulo";
             // 
             // VisualOperations
             // 

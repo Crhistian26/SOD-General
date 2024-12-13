@@ -83,6 +83,7 @@
             this.botones_Nuevos1.TabIndex = 5;
             this.botones_Nuevos1.Text = "Agregar rol";
             this.botones_Nuevos1.UseVisualStyleBackColor = false;
+            this.botones_Nuevos1.Click += new System.EventHandler(this.botones_Nuevos1_Click);
             // 
             // cR_Subtitulos1
             // 

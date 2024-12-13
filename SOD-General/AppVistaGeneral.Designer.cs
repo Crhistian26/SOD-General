@@ -42,26 +42,24 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1173, 548);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::SOD_General.Properties.Resources.logo_sod_soluciones_diaz_fixed;
             this.pictureBox1.Location = new System.Drawing.Point(385, 223);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(400, 94);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(400, 94);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(400, 94);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cR_MenuStrip1
             // 
@@ -89,7 +87,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cR_MenuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AppVistaGeneral";
             this.Text = "AppVistaGeneal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -1,4 +1,5 @@
 ﻿using Modelos.Control_de_usuarios;
+using Modelos.Usuarios_Empleados;
 using SOD_General.Vistas.Recursos_Humanos.Empleados;
 using System;
 using System.Collections.Generic;
@@ -72,6 +73,44 @@ namespace SOD_General.Controladores
             try
             {
                 List<Model_Role> list = new List<Model_Role>();
+                //El query.
+                string Query = "select IdRole,_Role from Roles";
+                //La consulta
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                //El proceso
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
+                    string Role = reader.GetString(1);
+
+                    Model_Role role = new Model_Role(id, Role);
+                    list.Add(role);
+                }
+                conex.Close();
+                return list;
+
+            }
+            catch (SqlException ex)
+            {
+                _general.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                _general.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public List<Employee> Get_EmployeesWithNoUser()
+        {
+            try
+            {
+                List<Employee> list = new List<Employee>();
                 //El query.
                 string Query = "select IdRole,_Role from Roles";
                 //La consulta
@@ -320,6 +359,59 @@ namespace SOD_General.Controladores
                 }
                 conex.Close();
                 return user;
+            }
+            catch (SqlException ex)
+            {
+                _general.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                _general.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public Model_Role Get_RoleDetailed(int id)
+        {
+            try
+            {
+                var role = new Model_Role();
+                List<Model_Operations> operations = new List<Model_Operations>();
+                string Query = "exec Get_OperationsForRoleId @id";
+                SqlCommand cmd = new SqlCommand(Query, conex);
+                cmd.Parameters.AddWithValue("@id", id);
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int Oid = reader.GetInt32(0);
+                    string Operation = reader.GetString(1);
+                    string Module = reader.GetString(2);
+                    operations.Add(new Model_Operations(Oid, Module, Operation));
+                }
+                conex.Close();
+
+
+                conex.Open();
+                Query = "select * from Roles where IdRole = @id;";
+                cmd = new SqlCommand(Query, conex);
+                cmd.Parameters.AddWithValue("@id", id);
+                SqlDataReader reader2 = cmd.ExecuteReader();
+                if (reader2.Read())
+                {
+                    role = new Model_Role
+                        (
+                        reader2.GetInt32(0),
+                        reader2.GetString(1),
+                        operations
+                        );
+                }
+                conex.Close();
+
+                return role;
             }
             catch (SqlException ex)
             {

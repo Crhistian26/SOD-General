@@ -617,6 +617,51 @@ namespace SOD_General.Controladores
         }
 
         /// <summary>
+        /// Este es un metodo que se encarga de optener un solo Schedule.
+        /// </summary>
+        /// <param name="date">Introduce la fecha para saber el schedule de esa fecha</param>
+        /// <returns>El schedule de la fecha ingresada.</returns>
+        public Schedule Get_Schedule(DateTime date)
+        {
+            try
+            {
+                Schedule schedule = null;
+
+                string query = "exec Get_Schedule @date1";
+
+                SqlCommand cmd = new SqlCommand(query, conex);
+                cmd.Parameters.AddWithValue("@date1", date);
+
+                conex.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    schedule = new Schedule
+                    (
+                        reader.GetDateTime(1),
+                        reader.GetString(0)
+                    );
+                }
+                conex.Close();
+
+                return schedule;
+            }
+            catch (SqlException ex)
+            {
+                control.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                control.ChechekConnection(conex);
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+
+        /// <summary>
         /// Este metodo se encarga de retornar una lista de horarios entre estas dos fechas.
         /// </summary>
         /// <param name="date1">La primera fecha</param>

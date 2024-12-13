@@ -53,6 +53,11 @@ namespace SOD_General
         {
             pictureBox1.Location = _size.CentrarElementosXY(pictureBox1.Size, panel1.Size);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

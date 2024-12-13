@@ -116,12 +116,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             if (cR_Checkbox1.Checked)
             {
-                var day = _size.Days[cR_DateTimePicker1.Value.DayOfWeek];
+                var day = control.Get_Schedule(cR_DateTimePicker1.Value);
                 var hello = new DateTime
                     (cR_DateTimePicker1.Value.Year,
                     cR_DateTimePicker1.Value.Month,
                     cR_DateTimePicker1.Value.Day)
-                    + day.JobStart
+                    + day.GetDailySchedule(cR_DateTimePicker1.Value.DayOfWeek)._StartHour;
                     ;
                 Begin = hello;
             }
@@ -141,12 +141,12 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
             if (cR_Checkbox2.Checked)
             {
-                var day = _size.Days[cR_DateTimePicker2.Value.DayOfWeek];
+                var day = control.Get_Schedule(cR_DateTimePicker2.Value);
                 var hello = new DateTime
                     (cR_DateTimePicker2.Value.Year,
                     cR_DateTimePicker2.Value.Month,
                     cR_DateTimePicker2.Value.Day)
-                    + day.JobEnd
+                    + day.GetDailySchedule(cR_DateTimePicker2.Value.DayOfWeek)._EndHour;
                     ;
                 End = hello;
             }
@@ -251,8 +251,10 @@ namespace SOD_General.Vistas.Recursos_Humanos.Registros
 
         private void SelectHours()
         {
-            TimeSpan start = _size.Days[Permission_Record.Begin_Date.DayOfWeek].JobStart;
-            TimeSpan end = _size.Days[Permission_Record.End_Date.DayOfWeek].JobEnd;
+            var scheduleS = control.Get_Schedule(Permission_Record.Begin_Date);
+            var scheduleF = control.Get_Schedule(Permission_Record.End_Date);
+            TimeSpan start = scheduleS.GetDailySchedule(Permission_Record.Begin_Date.DayOfWeek)._StartHour;
+            TimeSpan end = scheduleF.GetDailySchedule(Permission_Record.End_Date.DayOfWeek)._EndHour;
 
             TimeSpan startPermission = new TimeSpan(
                 Permission_Record.Begin_Date.Hour,

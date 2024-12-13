@@ -38,6 +38,11 @@ namespace Modelos.AsistenciasYPermisos.Count_hours
             return DailySchedules;
         }
 
+        public DailySchedule GetDailySchedule(DayOfWeek day)
+        {
+            return DailySchedules.Where(a=>a._dayOfWeek == day).FirstOrDefault();
+        }
+
         public string Get_JSON_DailySchedules()
         {
             return JsonSerializer.Serialize<List<DailySchedule>>(DailySchedules);
