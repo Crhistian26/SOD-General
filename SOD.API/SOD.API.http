@@ -1,0 +1,6 @@
+@SOD.API_HostAddress = http://localhost:5017
+
+GET {{SOD.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
